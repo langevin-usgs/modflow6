@@ -1,0 +1,7 @@
+<map id="gwfstomodule::sto_fn" name="gwfstomodule::sto_fn">
+<area shape="rect" id="node1" title="@ brief Fill Newton&#45;Raphson terms in A and right&#45;hand side for the package" alt="" coords="5,85,168,112"/>
+<area shape="rect" id="node2" href="$namespacesmoothingmodule.html#a4be083cd9964c682d55802ff9bc436bc" title=" " alt="" coords="249,5,531,32"/>
+<area shape="rect" id="node3" href="$namespacesmoothingmodule.html#a0ee42e035a1831565d3132d8929eb67c" title=" " alt="" coords="216,56,564,83"/>
+<area shape="rect" id="node4" href="$namespacegwfstorageutilsmodule.html#ad0a1ef63059b5b016feca7cbb978b3bd" title="Calculate the specific storage capacity." alt="" coords="304,107,476,149"/>
+<area shape="rect" id="node5" href="$namespacegwfstorageutilsmodule.html#a472a281b8bb5723a001f761bfe8a51e8" title="Calculate the specific yield capacity." alt="" coords="304,173,476,214"/>
+</map>

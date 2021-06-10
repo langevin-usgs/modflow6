@@ -1,0 +1,11 @@
+<map id="memorymanagermodule::get_mem_rank" name="memorymanagermodule::get_mem_rank">
+<area shape="rect" id="node1" title="@ brief Get the variable rank" alt="" coords="249,191,433,233"/>
+<area shape="rect" id="node2" href="$namespacemf6bmi.html#a8e2d2eff520317a6077f5930a16ee879" title="Copy the double precision values of a variable into the array." alt="" coords="5,5,201,32"/>
+<area shape="rect" id="node3" href="$namespacemf6bmi.html#a8480a9859452c90d4d6e6b0ac426cd37" title="Copy the integer values of a variable into the array." alt="" coords="19,56,188,83"/>
+<area shape="rect" id="node4" href="$namespacemf6bmi.html#a153a9442109bd76c780fee6c9df0b98f" title="Get a pointer to the array of double precision numbers." alt="" coords="18,107,189,149"/>
+<area shape="rect" id="node5" href="$namespacemf6bmi.html#a28ea5f7ea56d55ff4f5c3ffebce9542a" title="Get a pointer to the array of integer numbers." alt="" coords="6,173,201,200"/>
+<area shape="rect" id="node6" href="$namespacemf6bmi.html#a3265848af6c1473c9efac7e1ad33fc55" title="Get the variable rank (non&#45;BMI)" alt="" coords="20,224,187,251"/>
+<area shape="rect" id="node7" href="$namespacemf6bmi.html#aa6b446de7c8c4e4eb1fc5f02d227367e" title="Get the shape of the array for the variable (non&#45;BMI)" alt="" coords="15,275,191,301"/>
+<area shape="rect" id="node8" href="$namespacemf6bmi.html#afa45f28dfaf37edf75461c09f40fe874" title="Set new values for a variable of type double." alt="" coords="6,325,201,352"/>
+<area shape="rect" id="node9" href="$namespacemf6bmi.html#a7554abf91ce887ebd01374f20f760f22" title="Set new values for a variable of type integer." alt="" coords="19,376,187,403"/>
+</map>

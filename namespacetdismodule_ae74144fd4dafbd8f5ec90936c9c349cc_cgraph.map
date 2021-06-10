@@ -1,0 +1,6 @@
+<map id="tdismodule::tdis_delt_reset" name="tdismodule::tdis_delt_reset">
+<area shape="rect" id="node1" title=" " alt="" coords="5,71,164,112"/>
+<area shape="rect" id="node2" href="$namespaceadaptivetimestepmodule.html#a1ef7ceed3d7cd5e91a9f407b788fc92f" title="@ brief Set time step" alt="" coords="212,5,399,47"/>
+<area shape="rect" id="node3" href="$namespaceadaptivetimestepmodule.html#a4ee46460f38cadb79cf7a253368850c0" title="@ brief Set end of period indicator" alt="" coords="212,71,399,112"/>
+<area shape="rect" id="node4" href="$namespaceadaptivetimestepmodule.html#a95cd63bed2962fac3da7f09aaddbf7de" title="@ brief Determine if period is adaptive" alt="" coords="212,136,399,177"/>
+</map>

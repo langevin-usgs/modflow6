@@ -1,0 +1,4 @@
+<map id="memorymanagermodule::get_mem_type" name="memorymanagermodule::get_mem_type">
+<area shape="rect" id="node1" title="@ brief Get the variable memory type" alt="" coords="220,5,404,47"/>
+<area shape="rect" id="node2" href="$namespacemf6bmi.html#ac054346ad15babb77f682681763822fc" title="Get the variable type as a string." alt="" coords="5,13,172,39"/>
+</map>

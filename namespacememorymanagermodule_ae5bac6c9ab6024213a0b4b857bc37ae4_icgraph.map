@@ -1,0 +1,5 @@
+<map id="memorymanagermodule::get_mem_elem_size" name="memorymanagermodule::get_mem_elem_size">
+<area shape="rect" id="node1" title="@ brief Get the memory size of a single element of the stored variable" alt="" coords="247,23,431,65"/>
+<area shape="rect" id="node2" href="$namespacemf6bmi.html#a7577d21a969c2b60a882ce5eeae541ba" title="Get the size (in bytes) of a single element of a variable." alt="" coords="5,5,199,32"/>
+<area shape="rect" id="node3" href="$namespacemf6bmi.html#a66624bcfe63949d6338d7df22b2c4da8" title="Get size of the variable, in bytes." alt="" coords="11,56,193,83"/>
+</map>

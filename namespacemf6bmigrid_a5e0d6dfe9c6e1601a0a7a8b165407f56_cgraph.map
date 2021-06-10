@@ -1,0 +1,10 @@
+<map id="mf6bmigrid::get_grid_type" name="mf6bmigrid::get_grid_type">
+<area shape="rect" id="node1" title=" " alt="" coords="5,71,200,98"/>
+<area shape="rect" id="node2" href="$namespacemf6bmiutil.html#a2ef21d868daa6d14dc9b752210e49fae" title="Get the grid type for a named model as a fortran string." alt="" coords="278,5,433,47"/>
+<area shape="rect" id="node4" href="$namespacemf6bmiutil.html#a1e8692c600f23ba6b0468dff63f2b29b" title="Get the model name from the grid id." alt="" coords="248,71,463,98"/>
+<area shape="rect" id="node8" href="$namespacemf6bmiutil.html#aa74929c0ef09b51a9d623d04322fff96" title="Convert Fortran string to C&#45;style character string." alt="" coords="286,123,425,164"/>
+<area shape="rect" id="node3" href="$namespacenumericalmodelmodule.html#a4d031f0a98348529066eef37676f018d" title=" " alt="" coords="554,5,762,47"/>
+<area shape="rect" id="node5" href="$namespacebasemodelmodule.html#a79adefc92f4f7d0d032babb551c571f8" title=" " alt="" coords="511,71,805,98"/>
+<area shape="rect" id="node7" href="$namespacegenericutilitiesmodule.html#a34492cca79f70174fd015808be8b7ebf" title=" " alt="" coords="574,123,742,164"/>
+<area shape="rect" id="node6" href="$namespacebasemodelmodule.html#a6612a181104601a56b8227e88e5dc8f5" title=" " alt="" coords="853,71,1152,98"/>
+</map>

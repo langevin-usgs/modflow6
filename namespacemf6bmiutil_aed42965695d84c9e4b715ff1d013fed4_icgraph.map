@@ -1,0 +1,6 @@
+<map id="mf6bmiutil::getsolution" name="mf6bmiutil::getsolution">
+<area shape="rect" id="node1" title="Get the solution object for this index." alt="" coords="216,78,391,105"/>
+<area shape="rect" id="node2" href="$namespacemf6xmi.html#acf0c5a0b42fa9e0423156b713b22761b" title="Finalize the solve of the system." alt="" coords="7,5,167,47"/>
+<area shape="rect" id="node3" href="$namespacemf6xmi.html#aacc5f2206867e41a039b174c491b5fca" title="Prepare for solving the system." alt="" coords="5,71,168,112"/>
+<area shape="rect" id="node4" href="$namespacemf6xmi.html#a9f45fa8ef43555f9fbb049977c1e0de9" title="Build and solve the linear system." alt="" coords="13,137,161,163"/>
+</map>

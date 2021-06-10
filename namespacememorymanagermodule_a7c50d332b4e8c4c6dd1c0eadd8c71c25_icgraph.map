@@ -1,0 +1,4 @@
+<map id="memorymanagermodule::get_mem_shape" name="memorymanagermodule::get_mem_shape">
+<area shape="rect" id="node1" title="@ brief Get the variable memory shape" alt="" coords="229,5,413,47"/>
+<area shape="rect" id="node2" href="$namespacemf6bmi.html#aa6b446de7c8c4e4eb1fc5f02d227367e" title="Get the shape of the array for the variable (non&#45;BMI)" alt="" coords="5,13,181,39"/>
+</map>

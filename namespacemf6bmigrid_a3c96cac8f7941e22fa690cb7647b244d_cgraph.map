@@ -1,0 +1,10 @@
+<map id="mf6bmigrid::get_grid_face_count" name="mf6bmigrid::get_grid_face_count">
+<area shape="rect" id="node1" title=" " alt="" coords="5,49,164,91"/>
+<area shape="rect" id="node2" href="$namespacemf6bmiutil.html#a8d588c1efe402b6494a19948bdb67a85" title="Confirm that grid is of an expected type." alt="" coords="212,49,363,91"/>
+<area shape="rect" id="node4" href="$namespacenumericalmodelmodule.html#a4d031f0a98348529066eef37676f018d" title=" " alt="" coords="717,5,925,47"/>
+<area shape="rect" id="node5" href="$namespacemf6bmiutil.html#a1e8692c600f23ba6b0468dff63f2b29b" title="Get the model name from the grid id." alt="" coords="411,115,625,142"/>
+<area shape="rect" id="node3" href="$namespacemf6bmiutil.html#a2ef21d868daa6d14dc9b752210e49fae" title="Get the grid type for a named model as a fortran string." alt="" coords="441,49,595,91"/>
+<area shape="rect" id="node6" href="$namespacebasemodelmodule.html#a79adefc92f4f7d0d032babb551c571f8" title=" " alt="" coords="673,101,968,127"/>
+<area shape="rect" id="node8" href="$namespacegenericutilitiesmodule.html#a34492cca79f70174fd015808be8b7ebf" title=" " alt="" coords="737,152,905,193"/>
+<area shape="rect" id="node7" href="$namespacebasemodelmodule.html#a6612a181104601a56b8227e88e5dc8f5" title=" " alt="" coords="1016,101,1315,127"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="memorysethandlermodule::on_memory_set" name="memorysethandlermodule::on_memory_set">
+<area shape="rect" id="node1" title="Triggers the calling of the side effect handler for this variable." alt="" coords="249,74,444,115"/>
+<area shape="rect" id="node2" href="$namespacemf6bmi.html#a8e2d2eff520317a6077f5930a16ee879" title="Copy the double precision values of a variable into the array." alt="" coords="5,5,201,32"/>
+<area shape="rect" id="node3" href="$namespacemf6bmi.html#a8480a9859452c90d4d6e6b0ac426cd37" title="Copy the integer values of a variable into the array." alt="" coords="19,56,188,83"/>
+<area shape="rect" id="node4" href="$namespacemf6bmi.html#afa45f28dfaf37edf75461c09f40fe874" title="Set new values for a variable of type double." alt="" coords="6,107,201,133"/>
+<area shape="rect" id="node5" href="$namespacemf6bmi.html#a7554abf91ce887ebd01374f20f760f22" title="Set new values for a variable of type integer." alt="" coords="19,157,187,184"/>
+</map>
