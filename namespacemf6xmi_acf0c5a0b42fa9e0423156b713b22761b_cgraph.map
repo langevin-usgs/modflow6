@@ -1,7 +1,9 @@
 <map id="mf6xmi::xmi_finalize_solve" name="mf6xmi::xmi_finalize_solve">
 <area shape="rect" id="node1" title="Finalize the solve of the system." alt="" coords="5,68,165,109"/>
 <area shape="rect" id="node2" href="$namespacemf6bmiutil.html#aed42965695d84c9e4b715ff1d013fed4" title="Get the solution object for this index." alt="" coords="213,46,388,73"/>
-<area shape="rect" id="node5" href="$namespacemf6bmierror.html#aa84ed04ce427bbe4950da84bbff88db0" title="Sets the last BMI error message and copies it to an exported C&#45;string." alt="" coords="225,97,376,139"/>
-<area shape="rect" id="node3" href="$namespacenumericalsolutionmodule.html#acc653881da580b6418122bb466276f63" title=" " alt="" coords="436,5,655,47"/>
-<area shape="rect" id="node4" href="$namespacesolutiongroupmodule.html#a7adf638009121f69976a00aa98c604b5" title=" " alt="" coords="450,71,641,112"/>
+<area shape="rect" id="node7" href="$namespacemf6bmierror.html#aa84ed04ce427bbe4950da84bbff88db0" title="Sets the last BMI error message and copies it to an exported C&#45;string." alt="" coords="225,97,376,139"/>
+<area shape="rect" id="node3" href="$namespacenumericalsolutionmodule.html#acc653881da580b6418122bb466276f63" title="@ brief Get a numerical solution" alt="" coords="436,5,655,47"/>
+<area shape="rect" id="node5" href="$namespacesolutiongroupmodule.html#a7adf638009121f69976a00aa98c604b5" title=" " alt="" coords="450,71,641,112"/>
+<area shape="rect" id="node4" href="$namespacenumericalsolutionmodule.html#aefead85b912cfb79e860d6fe3cb2069c" title="@ brief Cast a object as a Numerical Solution" alt="" coords="703,5,925,47"/>
+<area shape="rect" id="node6" href="$namespacesolutiongroupmodule.html#a24edb8f47b612f3c62752756210e9cca" title=" " alt="" coords="717,71,911,112"/>
 </map>

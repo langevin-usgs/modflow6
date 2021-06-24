@@ -1,9 +1,9 @@
 <map id="smoothingmodule::sqsaturation" name="smoothingmodule::sqsaturation">
-<area shape="rect" id="node1" title=" " alt="" coords="475,107,704,133"/>
-<area shape="rect" id="node2" href="$namespacedrnmodule.html#a4b10ec979b34357f2eef95678fb3639d" title=" " alt="" coords="257,5,397,32"/>
-<area shape="rect" id="node3" href="$namespacemawmodule.html#a55595c64389a58df94a0b19ea1993302" title=" " alt="" coords="245,56,408,83"/>
-<area shape="rect" id="node4" href="$namespacemawmodule.html#a696d09cb232e3ffb444db61e9f839062" title=" " alt="" coords="245,107,408,133"/>
-<area shape="rect" id="node5" href="$namespacemawmodule.html#af39015154df128789df86fce4d63d0d7" title=" " alt="" coords="227,158,427,199"/>
-<area shape="rect" id="node7" href="$namespacewelmodule.html#a8437fc114c52ba645fb2b3ec368baaa0" title=" " alt="" coords="255,224,399,251"/>
-<area shape="rect" id="node6" href="$namespacemawmodule.html#a8223d4b65bb7f68e2bbece3212d2cead" title=" " alt="" coords="5,158,179,199"/>
+<area shape="rect" id="node1" title=" " alt="" coords="299,159,528,186"/>
+<area shape="rect" id="node2" href="$namespacedrnmodule.html#a6e47d7ba1de5e5a60add4248ef3a3169" title=" " alt="" coords="47,5,209,47"/>
+<area shape="rect" id="node3" href="$namespacemawmodule.html#a59e07099d3eebfbdc33068ba6b4e7f87" title=" " alt="" coords="5,71,251,98"/>
+<area shape="rect" id="node4" href="$namespacemawmodule.html#a44cf00ad025a428675387dfe814da35e" title=" " alt="" coords="23,123,233,164"/>
+<area shape="rect" id="node5" href="$namespacemawmodule.html#ad34482786ff58a0a42e1823c409cc3c8" title=" " alt="" coords="47,189,209,215"/>
+<area shape="rect" id="node6" href="$namespacemawmodule.html#a696d09cb232e3ffb444db61e9f839062" title=" " alt="" coords="47,239,209,266"/>
+<area shape="rect" id="node7" href="$namespacewelmodule.html#a8437fc114c52ba645fb2b3ec368baaa0" title=" " alt="" coords="56,290,200,317"/>
 </map>

@@ -5,13 +5,22 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MODFLOW 6 Code Documentation: /home/runner/work/modflow6/modflow6/src/Utilities/Observation/ObsUtility.f90 Source File</title>
+<title>MODFLOW 6: /home/runner/work/modflow6/modflow6/src/Utilities/Observation/ObsUtility.f90 Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="CustomDoxygen.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -21,9 +30,12 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="mf6-triangular-grid.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">MODFLOW 6 Code Documentation
+   <div id="projectname">MODFLOW 6
+   &#160;<span id="projectnumber">version 6.2.2</span>
    </div>
+   <div id="projectbrief">MODFLOW 6 Code Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -36,16 +48,54 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Modules</span></a></li>
+      <li><a href="annotated.html"><span>Data&#160;Types&#160;List</span></a></li>
+      <li class="current"><a href="files.html"><span>Files</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('_obs_utility_8f90_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,11 +110,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_ff383ddf1aa4eab0c4ce7910366d05a5.html">Utilities</a></li><li class="navelem"><a class="el" href="dir_77e0984581d4d49dab8f9e4942a73c12.html">Observation</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">ObsUtility.f90</div>  </div>
@@ -79,9 +124,9 @@ $(function() {
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacekindmodule.html">kindmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>, <a class="code" href="namespacekindmodule.html#a2f6861418b5e7d3d602b77228232a470">i4b</a></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespaceconstantsmodule.html">constantsmodule</a>,     <span class="keywordtype">only</span>: <a class="code" href="namespaceconstantsmodule.html#aa7666dc20f64af0be4dc11ebf6759841">lenobsname</a>, <a class="code" href="namespaceconstantsmodule.html#a5a5bc481197413bb50013a92490ffa14">lenbigline</a></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespaceobservemodule.html">observemodule</a>,       <span class="keywordtype">only</span>: observetype</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespaceobsoutputlistmodule.html">obsoutputlistmodule</a>, <span class="keywordtype">only</span>: obsoutputlisttype</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespaceobsoutputmodule.html">obsoutputmodule</a>,     <span class="keywordtype">only</span>: obsoutputtype</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespaceobservemodule.html">observemodule</a>,       <span class="keywordtype">only</span>: <a class="code" href="structobservemodule_1_1observetype.html">observetype</a></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespaceobsoutputlistmodule.html">obsoutputlistmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="structobsoutputlistmodule_1_1obsoutputlisttype.html">obsoutputlisttype</a></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespaceobsoutputmodule.html">obsoutputmodule</a>,     <span class="keywordtype">only</span>: <a class="code" href="structobsoutputmodule_1_1obsoutputtype.html">obsoutputtype</a></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacetdismodule.html">tdismodule</a>,          <span class="keywordtype">only</span>: <a class="code" href="namespacetdismodule.html#a5f22ad41ccf3be8d4bb899e8a1834ff4">totim</a></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <span class="keywordtype">implicit none</span></div>
@@ -105,15 +150,15 @@ $(function() {
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">implicit none</span></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="comment">! -- dummy</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">character(len=*)</span>,                 <span class="keywordtype">intent(in)</span>    :: fmtc</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">type</span>(observetype),                <span class="keywordtype">intent(inout)</span> :: obsrv</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">type</span>(obsoutputlisttype), <span class="keywordtype">pointer</span>, <span class="keywordtype">intent(inout)</span> :: obsoutputlist</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structobservemodule_1_1observetype.html">observetype</a>),                <span class="keywordtype">intent(inout)</span> :: obsrv</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structobsoutputlistmodule_1_1obsoutputlisttype.html">obsoutputlisttype</a>), <span class="keywordtype">pointer</span>, <span class="keywordtype">intent(inout)</span> :: obsoutputlist</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>),                         <span class="keywordtype">intent(in)</span>    :: value</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">integer(I4B)</span>                       :: indx</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">integer(I4B)</span>                       :: nunit</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">character(len=50)</span>                  :: cval</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">character(len=LENOBSNAME)</span>, <span class="keywordtype">pointer</span> :: linout =&gt; null()</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">type</span>(obsoutputtype),       <span class="keywordtype">pointer</span> :: obsoutput =&gt; null()</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structobsoutputmodule_1_1obsoutputtype.html">obsoutputtype</a>),       <span class="keywordtype">pointer</span> :: obsoutput =&gt; null()</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="comment">!---------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="comment">! -- format</span></div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;10  <span class="keyword">format</span>(g20.13)</div>
@@ -151,16 +196,16 @@ $(function() {
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">use </span>iso_fortran_env, <span class="keywordtype">only</span>: real32, real64</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">implicit none</span></div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">type</span>(observetype), <span class="keywordtype">intent(inout)</span> :: obsrv</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structobservemodule_1_1observetype.html">observetype</a>), <span class="keywordtype">intent(inout)</span> :: obsrv</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: iprec</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordtype">type</span>(obsoutputlisttype), <span class="keywordtype">pointer</span>, <span class="keywordtype">intent(inout)</span> :: obsoutputlist</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structobsoutputlistmodule_1_1obsoutputlisttype.html">obsoutputlisttype</a>), <span class="keywordtype">pointer</span>, <span class="keywordtype">intent(inout)</span> :: obsoutputlist</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">intent(in)</span> :: value</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordtype">integer(I4B)</span>                       :: indx, nunit</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">character(len=LENOBSNAME)</span>, <span class="keywordtype">pointer</span> :: linout =&gt; null()</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keywordtype">    real</span>(real32)                       :: totimsngl, valsngl</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keywordtype">    real</span>(real64)                       :: totimdbl, valdbl</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordtype">type</span>(obsoutputtype), <span class="keywordtype">pointer</span>       :: obsoutput =&gt; null()</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structobsoutputmodule_1_1obsoutputtype.html">obsoutputtype</a>), <span class="keywordtype">pointer</span>       :: obsoutput =&gt; null()</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="comment">!---------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="comment">! -- formats</span></div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;10  <span class="keyword">format</span>(g20.13)</div>
@@ -193,8 +238,12 @@ $(function() {
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="keyword">end module </span><a class="code" href="namespaceobsutilitymodule.html">obsutilitymodule</a></div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <div class="ttc" id="anamespacekindmodule_html"><div class="ttname"><a href="namespacekindmodule.html">kindmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="kind_8f90_source.html#l00001">kind.f90:1</a></div></div>
+<div class="ttc" id="astructobsoutputmodule_1_1obsoutputtype_html"><div class="ttname"><a href="structobsoutputmodule_1_1obsoutputtype.html">obsoutputmodule::obsoutputtype</a></div><div class="ttdef"><b>Definition:</b> <a href="_obs_output_8f90_source.html#l00021">ObsOutput.f90:21</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_a5a5bc481197413bb50013a92490ffa14"><div class="ttname"><a href="namespaceconstantsmodule.html#a5a5bc481197413bb50013a92490ffa14">constantsmodule::lenbigline</a></div><div class="ttdeci">integer(i4b), parameter lenbigline</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00007">Constants.f90:7</a></div></div>
+<div class="ttc" id="astructobservemodule_1_1observetype_html"><div class="ttname"><a href="structobservemodule_1_1observetype.html">observemodule::observetype</a></div><div class="ttdef"><b>Definition:</b> <a href="_observe_8f90_source.html#l00032">Observe.f90:32</a></div></div>
+<div class="ttc" id="astructobsoutputlistmodule_1_1obsoutputlisttype_html"><div class="ttname"><a href="structobsoutputlistmodule_1_1obsoutputlisttype.html">obsoutputlistmodule::obsoutputlisttype</a></div><div class="ttdef"><b>Definition:</b> <a href="_obs_output_list_8f90_source.html#l00021">ObsOutputList.f90:21</a></div></div>
 <div class="ttc" id="anamespaceobservemodule_html"><div class="ttname"><a href="namespaceobservemodule.html">observemodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_observe_8f90_source.html#l00012">Observe.f90:12</a></div></div>
 <div class="ttc" id="anamespacetdismodule_html_a5f22ad41ccf3be8d4bb899e8a1834ff4"><div class="ttname"><a href="namespacetdismodule.html#a5f22ad41ccf3be8d4bb899e8a1834ff4">tdismodule::totim</a></div><div class="ttdeci">real(dp), pointer, public totim</div><div class="ttdoc">time relative to start of simulation</div><div class="ttdef"><b>Definition:</b> <a href="tdis_8f90_source.html#l00032">tdis.f90:32</a></div></div>
 <div class="ttc" id="anamespacekindmodule_html_a2f6861418b5e7d3d602b77228232a470"><div class="ttname"><a href="namespacekindmodule.html#a2f6861418b5e7d3d602b77228232a470">kindmodule::i4b</a></div><div class="ttdeci">integer, parameter i4b</div><div class="ttdef"><b>Definition:</b> <a href="kind_8f90_source.html#l00009">kind.f90:9</a></div></div>
@@ -208,10 +257,13 @@ $(function() {
 <div class="ttc" id="anamespaceobsutilitymodule_html_a4b9408947a92a0c103a43c84a874f20c"><div class="ttname"><a href="namespaceobsutilitymodule.html#a4b9408947a92a0c103a43c84a874f20c">obsutilitymodule::write_fmtd_cont</a></div><div class="ttdeci">subroutine, public write_fmtd_cont(fmtc, obsrv, obsOutputList, value)</div><div class="ttdef"><b>Definition:</b> <a href="_obs_utility_8f90_source.html#l00023">ObsUtility.f90:23</a></div></div>
 <div class="ttc" id="anamespaceobsoutputmodule_html"><div class="ttname"><a href="namespaceobsoutputmodule.html">obsoutputmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_obs_output_8f90_source.html#l00009">ObsOutput.f90:9</a></div></div>
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_ff383ddf1aa4eab0c4ce7910366d05a5.html">Utilities</a></li><li class="navelem"><a class="el" href="dir_77e0984581d4d49dab8f9e4942a73c12.html">Observation</a></li><li class="navelem"><a class="el" href="_obs_utility_8f90.html">ObsUtility.f90</a></li>
+    <li class="footer">Generated on Thu Jun 24 2021 19:50:09 for MODFLOW 6 by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
 </body>
 </html>

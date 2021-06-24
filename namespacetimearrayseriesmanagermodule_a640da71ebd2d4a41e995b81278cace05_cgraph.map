@@ -1,13 +1,5 @@
 <map id="timearrayseriesmanagermodule::reset" name="timearrayseriesmanagermodule::reset">
-<area shape="rect" id="node1" title=" " alt="" coords="5,165,237,207"/>
-<area shape="rect" id="node2" href="$namespacetimearrayserieslinkmodule.html#afa4f353fa0b0728f349d9ec78d52535e" title=" " alt="" coords="293,5,507,47"/>
-<area shape="rect" id="node3" href="$namespacetimearrayserieslinkmodule.html#afc99a91da5788dc510bdfb25be102a6c" title=" " alt="" coords="291,71,509,112"/>
-<area shape="rect" id="node5" href="$namespacetimearrayserieslinkmodule.html#a1d0b1671976ee395ad8f476bad247a64" title=" " alt="" coords="285,136,515,177"/>
-<area shape="rect" id="node6" href="$namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a" title=" " alt="" coords="313,202,487,229"/>
-<area shape="rect" id="node7" href="$namespacesimmodule.html#a1c78a6fda06b630c738bb654aa6bd816" title=" " alt="" coords="297,253,503,279"/>
-<area shape="rect" id="node8" href="$namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61" title=" " alt="" coords="331,303,469,330"/>
-<area shape="rect" id="node4" href="$namespaceinputoutputmodule.html#a3418ad9e27e9d9caac6f541863e1c522" title=" " alt="" coords="583,71,737,112"/>
-<area shape="rect" id="node9" href="$namespacesimmodule.html#a5feb4a39fb3f3dc66c03cc13b11e2297" title=" " alt="" coords="563,245,757,271"/>
-<area shape="rect" id="node10" href="$namespacegenericutilitiesmodule.html#a34492cca79f70174fd015808be8b7ebf" title=" " alt="" coords="576,296,744,337"/>
-<area shape="rect" id="node11" href="$namespacegenericutilitiesmodule.html#a3af5fcf48dcd06255d9bc07f6a25db59" title=" " alt="" coords="576,361,744,403"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,237,47"/>
+<area shape="rect" id="node2" href="$namespacetimearrayserieslinkmodule.html#a1d0b1671976ee395ad8f476bad247a64" title=" " alt="" coords="285,5,515,47"/>
+<area shape="rect" id="node3" href="$namespacetimearrayserieslinkmodule.html#a2aff5d1fb6012e99f7605d855eda56f0" title=" " alt="" coords="563,5,791,47"/>
 </map>

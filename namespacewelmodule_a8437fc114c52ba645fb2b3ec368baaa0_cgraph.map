@@ -1,15 +1,4 @@
 <map id="welmodule::wel_cf" name="welmodule::wel_cf">
-<area shape="rect" id="node1" title=" " alt="" coords="5,195,149,221"/>
-<area shape="rect" id="node2" href="$namespaceobsmodule.html#a7dbce254f60ae2f0925c07136365ce91" title=" " alt="" coords="221,107,468,133"/>
-<area shape="rect" id="node11" href="$namespacetimeserieslinkmodule.html#ab7e38e1f45871cf48de54cc179ee9ac7" title=" " alt="" coords="247,158,442,199"/>
-<area shape="rect" id="node12" href="$namespacesmoothingmodule.html#ac917ac98a436377f53e3663cba1947da" title=" " alt="" coords="230,224,459,251"/>
-<area shape="rect" id="node13" href="$namespacesmoothingmodule.html#a94b38075d35baa46f2c3fa81072bd0e6" title=" " alt="" coords="197,275,492,301"/>
-<area shape="rect" id="node3" href="$namespacesimmodule.html#a4c46e49de78d4498dd4ec106357775e6" title=" " alt="" coords="551,5,735,32"/>
-<area shape="rect" id="node4" href="$namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a" title=" " alt="" coords="556,56,731,83"/>
-<area shape="rect" id="node5" href="$namespacesimmodule.html#a1c78a6fda06b630c738bb654aa6bd816" title=" " alt="" coords="540,107,747,133"/>
-<area shape="rect" id="node6" href="$namespaceinputoutputmodule.html#a3418ad9e27e9d9caac6f541863e1c522" title=" " alt="" coords="566,158,721,199"/>
-<area shape="rect" id="node7" href="$namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61" title=" " alt="" coords="574,224,713,251"/>
-<area shape="rect" id="node8" href="$namespacesimmodule.html#a5feb4a39fb3f3dc66c03cc13b11e2297" title=" " alt="" coords="795,165,989,192"/>
-<area shape="rect" id="node9" href="$namespacegenericutilitiesmodule.html#a34492cca79f70174fd015808be8b7ebf" title=" " alt="" coords="808,217,976,258"/>
-<area shape="rect" id="node10" href="$namespacegenericutilitiesmodule.html#a3af5fcf48dcd06255d9bc07f6a25db59" title=" " alt="" coords="808,282,976,323"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,149,32"/>
+<area shape="rect" id="node2" href="$namespacesmoothingmodule.html#ac917ac98a436377f53e3663cba1947da" title=" " alt="" coords="197,5,427,32"/>
 </map>

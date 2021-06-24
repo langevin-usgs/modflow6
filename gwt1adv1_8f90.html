@@ -5,13 +5,22 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MODFLOW 6 Code Documentation: /home/runner/work/modflow6/modflow6/src/Model/GroundWaterTransport/gwt1adv1.f90 File Reference</title>
+<title>MODFLOW 6: /home/runner/work/modflow6/modflow6/src/Model/GroundWaterTransport/gwt1adv1.f90 File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="CustomDoxygen.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -21,9 +30,12 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="mf6-triangular-grid.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">MODFLOW 6 Code Documentation
+   <div id="projectname">MODFLOW 6
+   &#160;<span id="projectnumber">version 6.2.2</span>
    </div>
+   <div id="projectbrief">MODFLOW 6 Code Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -36,16 +48,54 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Modules</span></a></li>
+      <li><a href="annotated.html"><span>Data&#160;Types&#160;List</span></a></li>
+      <li class="current"><a href="files.html"><span>Files</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('gwt1adv1_8f90.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,11 +110,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_32e188284d239da8bb14ec1dabb0c35f.html">Model</a></li><li class="navelem"><a class="el" href="dir_5ac382e795535087161f2a8b7f95a830.html">GroundWaterTransport</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Data Types</a> &#124;
@@ -77,6 +122,11 @@ $(function() {
 
 <p><a href="gwt1adv1_8f90_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Data Types</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">type &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgwtadvmodule_1_1gwtadvtype.html">gwtadvmodule::gwtadvtype</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Modules</h2></td></tr>
 <tr class="memitem:namespacegwtadvmodule"><td class="memItemLeft" align="right" valign="top">module &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegwtadvmodule.html">gwtadvmodule</a></td></tr>
@@ -86,8 +136,20 @@ Modules</h2></td></tr>
 Functions/Subroutines</h2></td></tr>
 <tr class="memitem:a2a94f744a44db545111a1e12f175089a"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegwtadvmodule.html#a2a94f744a44db545111a1e12f175089a">gwtadvmodule::adv_cr</a> (advobj, name_model, inunit, iout, fmi)</td></tr>
 <tr class="separator:a2a94f744a44db545111a1e12f175089a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09074e093eb9cef59e920541f01ff0ed"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegwtadvmodule.html#a09074e093eb9cef59e920541f01ff0ed">gwtadvmodule::adv_ar</a> (this, dis, ibound)</td></tr>
+<tr class="separator:a09074e093eb9cef59e920541f01ff0ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63be4757708df54170abc7722c66d947"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegwtadvmodule.html#a63be4757708df54170abc7722c66d947">gwtadvmodule::adv_fc</a> (this, nodes, amatsln, idxglo, cnew, rhs)</td></tr>
+<tr class="separator:a63be4757708df54170abc7722c66d947"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94fb540b06d186fe9b22cdbf3ff1bf69"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegwtadvmodule.html#a94fb540b06d186fe9b22cdbf3ff1bf69">gwtadvmodule::advtvd</a> (this, n, cnew, rhs)</td></tr>
+<tr class="separator:a94fb540b06d186fe9b22cdbf3ff1bf69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2262a340542f316ebd1c1313f809fc55"><td class="memItemLeft" align="right" valign="top">real(dp) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegwtadvmodule.html#a2262a340542f316ebd1c1313f809fc55">gwtadvmodule::advqtvd</a> (this, n, m, iposnm, cnew)</td></tr>
+<tr class="separator:a2262a340542f316ebd1c1313f809fc55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6323cfcc79e7da66167a167791b62667"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegwtadvmodule.html#a6323cfcc79e7da66167a167791b62667">gwtadvmodule::adv_cq</a> (this, cnew, flowja)</td></tr>
 <tr class="separator:a6323cfcc79e7da66167a167791b62667"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac02f0bacc3cdb778523e7c5a8c799018"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegwtadvmodule.html#ac02f0bacc3cdb778523e7c5a8c799018">gwtadvmodule::advtvd_bd</a> (this, cnew, flowja)</td></tr>
+<tr class="separator:ac02f0bacc3cdb778523e7c5a8c799018"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27de1c25215e32bf0789975679dbbde3"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegwtadvmodule.html#a27de1c25215e32bf0789975679dbbde3">gwtadvmodule::adv_da</a> (this)</td></tr>
+<tr class="separator:a27de1c25215e32bf0789975679dbbde3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a650d7284c1ee933191671181ce5a9ef8"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegwtadvmodule.html#a650d7284c1ee933191671181ce5a9ef8">gwtadvmodule::allocate_scalars</a> (this)</td></tr>
 <tr class="separator:a650d7284c1ee933191671181ce5a9ef8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0d17c27f26209a66903eacaaf1402d2"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegwtadvmodule.html#ac0d17c27f26209a66903eacaaf1402d2">gwtadvmodule::read_options</a> (this)</td></tr>
@@ -96,11 +158,15 @@ Functions/Subroutines</h2></td></tr>
 <tr class="separator:a678e6d916fa71c39306d50b2533b5797"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_32e188284d239da8bb14ec1dabb0c35f.html">Model</a></li><li class="navelem"><a class="el" href="dir_5ac382e795535087161f2a8b7f95a830.html">GroundWaterTransport</a></li><li class="navelem"><a class="el" href="gwt1adv1_8f90.html">gwt1adv1.f90</a></li>
+    <li class="footer">Generated on Thu Jun 24 2021 19:50:10 for MODFLOW 6 by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
 </body>
 </html>

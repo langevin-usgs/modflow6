@@ -1,24 +1,52 @@
 <map id="memorymanagermodule::get_from_memorylist" name="memorymanagermodule::get_from_memorylist">
-<area shape="rect" id="node1" title="@ brief Get a memory type entry from the memory list" alt="" coords="735,397,919,438"/>
-<area shape="rect" id="node2" href="$namespacemf6bmiutil.html#a9d74c428aa6181d56c7fedc6955289a8" title="Check if the variable exists in the memory manager." alt="" coords="499,278,680,319"/>
-<area shape="rect" id="node15" href="$namespacememorymanagermodule.html#ae072fa90880d62debf453a1a1428fa93" title="Copy values from a 1&#45;dimensional real array in the memory." alt="" coords="497,586,681,627"/>
-<area shape="rect" id="node16" href="$namespacememorymanagermodule.html#ad0c684aa838f08c32710dbd0da08a520" title="@ brief Get the number of elements for this variable" alt="" coords="497,455,681,497"/>
-<area shape="rect" id="node17" href="$namespacememorymanagermodule.html#ae5bac6c9ab6024213a0b4b857bc37ae4" title="@ brief Get the memory size of a single element of the stored variable" alt="" coords="255,411,439,453"/>
-<area shape="rect" id="node18" href="$namespacememorymanagermodule.html#ad59d62832cbff0a81e1fca5ff4ee6d5d" title="@ brief Get the variable rank" alt="" coords="255,209,439,250"/>
-<area shape="rect" id="node19" href="$namespacememorymanagermodule.html#a7c50d332b4e8c4c6dd1c0eadd8c71c25" title="@ brief Get the variable memory shape" alt="" coords="255,346,439,387"/>
-<area shape="rect" id="node20" href="$namespacememorymanagermodule.html#a4842389f89cc6c6b63e4b28ed69c0fa7" title="@ brief Get the variable memory type" alt="" coords="497,521,681,562"/>
-<area shape="rect" id="node21" href="$namespacememorysethandlermodule.html#a22298f4c80fed5e929971b29d4c57a7b" title="Register the event handler and context for this variable." alt="" coords="492,651,687,693"/>
-<area shape="rect" id="node22" href="$namespacememorysethandlermodule.html#a696105cae7404befd7025d5757933bb5" title="Triggers the calling of the side effect handler for this variable." alt="" coords="249,99,444,141"/>
-<area shape="rect" id="node3" href="$namespacemf6bmiutil.html#a256d287805312986af53c44ca371c4bc" title="Split the variable address string." alt="" coords="253,280,441,307"/>
-<area shape="rect" id="node4" href="$namespacemf6bmi.html#a8e2d2eff520317a6077f5930a16ee879" title="Copy the double precision values of a variable into the array." alt="" coords="5,157,201,184"/>
-<area shape="rect" id="node5" href="$namespacemf6bmi.html#a8480a9859452c90d4d6e6b0ac426cd37" title="Copy the integer values of a variable into the array." alt="" coords="19,5,188,32"/>
-<area shape="rect" id="node6" href="$namespacemf6bmi.html#a153a9442109bd76c780fee6c9df0b98f" title="Get a pointer to the array of double precision numbers." alt="" coords="18,209,189,250"/>
-<area shape="rect" id="node7" href="$namespacemf6bmi.html#a28ea5f7ea56d55ff4f5c3ffebce9542a" title="Get a pointer to the array of integer numbers." alt="" coords="6,275,201,301"/>
-<area shape="rect" id="node8" href="$namespacemf6bmi.html#a7577d21a969c2b60a882ce5eeae541ba" title="Get the size (in bytes) of a single element of a variable." alt="" coords="7,427,200,453"/>
-<area shape="rect" id="node9" href="$namespacemf6bmi.html#a66624bcfe63949d6338d7df22b2c4da8" title="Get size of the variable, in bytes." alt="" coords="13,477,194,504"/>
-<area shape="rect" id="node10" href="$namespacemf6bmi.html#a3265848af6c1473c9efac7e1ad33fc55" title="Get the variable rank (non&#45;BMI)" alt="" coords="20,325,187,352"/>
-<area shape="rect" id="node11" href="$namespacemf6bmi.html#aa6b446de7c8c4e4eb1fc5f02d227367e" title="Get the shape of the array for the variable (non&#45;BMI)" alt="" coords="15,376,191,403"/>
-<area shape="rect" id="node12" href="$namespacemf6bmi.html#ac054346ad15babb77f682681763822fc" title="Get the variable type as a string." alt="" coords="20,528,187,555"/>
-<area shape="rect" id="node13" href="$namespacemf6bmi.html#afa45f28dfaf37edf75461c09f40fe874" title="Set new values for a variable of type double." alt="" coords="6,56,201,83"/>
-<area shape="rect" id="node14" href="$namespacemf6bmi.html#a7554abf91ce887ebd01374f20f760f22" title="Set new values for a variable of type integer." alt="" coords="19,107,187,133"/>
+<area shape="rect" id="node1" title="@ brief Get a memory type entry from the memory list" alt="" coords="735,1293,919,1334"/>
+<area shape="rect" id="node2" href="$namespacemf6bmiutil.html#a9d74c428aa6181d56c7fedc6955289a8" title="Check if the variable exists in the memory manager." alt="" coords="499,223,680,265"/>
+<area shape="rect" id="node13" href="$namespacememorymanagermodule.html#ae072fa90880d62debf453a1a1428fa93" title="Copy values from a 1&#45;dimensional real array in the memory." alt="" coords="497,443,681,485"/>
+<area shape="rect" id="node14" href="$namespacememorymanagermodule.html#ac28c89286eb411da67b21c078f480cc9" title="Make a copy of a 1&#45;dimensional real array." alt="" coords="497,509,681,550"/>
+<area shape="rect" id="node15" href="$namespacememorymanagermodule.html#a6810f04c0c6531d4d8a82ac5b0c2f036" title="Make a copy of a 2&#45;dimensional real array." alt="" coords="497,574,681,615"/>
+<area shape="rect" id="node16" href="$namespacememorymanagermodule.html#a43788091085873dc85edae3786201d78" title="Make a copy of a 1&#45;dimensional integer array." alt="" coords="497,639,681,681"/>
+<area shape="rect" id="node17" href="$namespacememorymanagermodule.html#a586f55600a71156ec280dd00027a0b29" title="Make a copy of a 2&#45;dimensional integer array." alt="" coords="497,705,681,746"/>
+<area shape="rect" id="node18" href="$namespacememorymanagermodule.html#a455e02c8bcd327c70e7dd1e698c9e2a2" title="Deallocate a 1&#45;dimensional real array." alt="" coords="497,770,681,811"/>
+<area shape="rect" id="node19" href="$namespacememorymanagermodule.html#a869ebd3d547582e53512c5166e586043" title="Deallocate a 2&#45;dimensional real array." alt="" coords="497,835,681,877"/>
+<area shape="rect" id="node20" href="$namespacememorymanagermodule.html#aa62917fb44417da4e80132e65f6db3db" title="Deallocate a 3&#45;dimensional real array." alt="" coords="497,901,681,942"/>
+<area shape="rect" id="node21" href="$namespacememorymanagermodule.html#a53c6c62418aa62ef1d09976e44ae7049" title="Deallocate a 1&#45;dimensional integer array." alt="" coords="497,966,681,1007"/>
+<area shape="rect" id="node22" href="$namespacememorymanagermodule.html#a7049f4eecd31d511dbf351b06517e398" title="Deallocate a 2&#45;dimensional integer array." alt="" coords="497,1031,681,1073"/>
+<area shape="rect" id="node23" href="$namespacememorymanagermodule.html#a6c5469ceb27feb4b31c4ccd7106ebefa" title="Deallocate a 3&#45;dimensional integer array." alt="" coords="497,1097,681,1138"/>
+<area shape="rect" id="node24" href="$namespacememorymanagermodule.html#ad2d3e314c67f87d4d955cd5a8441266b" title="Deallocate a variable&#45;length character string." alt="" coords="497,1162,681,1203"/>
+<area shape="rect" id="node25" href="$namespacememorymanagermodule.html#af8d43ac5b8236a26c69546ae9a5e1d62" title="Deallocate an array of variable&#45;length character strings." alt="" coords="497,1227,681,1269"/>
+<area shape="rect" id="node26" href="$namespacememorymanagermodule.html#ad0c684aa838f08c32710dbd0da08a520" title="@ brief Get the number of elements for this variable" alt="" coords="255,419,439,461"/>
+<area shape="rect" id="node27" href="$namespacememorymanagermodule.html#ae5bac6c9ab6024213a0b4b857bc37ae4" title="@ brief Get the memory size of a single element of the stored variable" alt="" coords="255,354,439,395"/>
+<area shape="rect" id="node28" href="$namespacememorymanagermodule.html#ad59d62832cbff0a81e1fca5ff4ee6d5d" title="@ brief Get the variable rank" alt="" coords="255,162,439,203"/>
+<area shape="rect" id="node29" href="$namespacememorymanagermodule.html#a7c50d332b4e8c4c6dd1c0eadd8c71c25" title="@ brief Get the variable memory shape" alt="" coords="255,283,439,325"/>
+<area shape="rect" id="node30" href="$namespacememorymanagermodule.html#a4842389f89cc6c6b63e4b28ed69c0fa7" title="@ brief Get the variable memory type" alt="" coords="497,1293,681,1334"/>
+<area shape="rect" id="node31" href="$namespacememorysethandlermodule.html#a22298f4c80fed5e929971b29d4c57a7b" title="Register the event handler and context for this variable." alt="" coords="492,1358,687,1399"/>
+<area shape="rect" id="node32" href="$namespacememorysethandlermodule.html#a696105cae7404befd7025d5757933bb5" title="Triggers the calling of the side effect handler for this variable." alt="" coords="249,95,444,137"/>
+<area shape="rect" id="node33" href="$namespacememorymanagermodule.html#a9b60924f8d1eaab5ebc4a7077734626c" title="Reallocate a 1&#45;dimensional real array." alt="" coords="497,1423,681,1465"/>
+<area shape="rect" id="node34" href="$namespacememorymanagermodule.html#a3b2c7bfb9930cdb9485650491a5450b1" title="Reallocate a 2&#45;dimensional real array." alt="" coords="497,1489,681,1530"/>
+<area shape="rect" id="node35" href="$namespacememorymanagermodule.html#aa7056374019a32e8fe81a20244180431" title="Reallocate a 1&#45;dimensional integer array." alt="" coords="497,1554,681,1595"/>
+<area shape="rect" id="node36" href="$namespacememorymanagermodule.html#a05562b5d22dbf816eef799c99651b027" title="Reallocate a 2&#45;dimensional integer array." alt="" coords="497,1619,681,1661"/>
+<area shape="rect" id="node37" href="$namespacememorymanagermodule.html#abf1a3c790b0f50e9a0084728c961bbd1" title="Reallocate a 1&#45;dimensional defined length string array." alt="" coords="497,1685,681,1726"/>
+<area shape="rect" id="node38" href="$namespacememorymanagermodule.html#a70613d0cd4560dd677e3329a8ad3c79d" title="Set the pointer for a 1&#45;dimensional real array to." alt="" coords="497,1750,681,1791"/>
+<area shape="rect" id="node39" href="$namespacememorymanagermodule.html#ac47296c614674d278c88c53ba687c8b1" title="Set the pointer for a 2&#45;dimensional real array to." alt="" coords="497,1815,681,1857"/>
+<area shape="rect" id="node40" href="$namespacememorymanagermodule.html#acec3ecf0b919282a8fc932ac08585357" title="Set the pointer for a 1&#45;dimensional integer array to." alt="" coords="497,1881,681,1922"/>
+<area shape="rect" id="node41" href="$namespacememorymanagermodule.html#a6a3cb628133de899280f6ad67daf5f93" title="Set the pointer for a 2&#45;dimensional integer array to." alt="" coords="497,1946,681,1987"/>
+<area shape="rect" id="node42" href="$namespacememorymanagermodule.html#a6c03fdc7796c6e28b17b3253c9d50afc" title="Set pointer to a real scalar." alt="" coords="497,2011,681,2053"/>
+<area shape="rect" id="node43" href="$namespacememorymanagermodule.html#ae616b669ee4b25fc2ea0b3456ccf6fcb" title="Set pointer to a 1d real array." alt="" coords="497,2077,681,2118"/>
+<area shape="rect" id="node44" href="$namespacememorymanagermodule.html#a9be2d2af9c989aff846dc24ee3f37c18" title="Set pointer to a 2d real array." alt="" coords="497,2142,681,2183"/>
+<area shape="rect" id="node45" href="$namespacememorymanagermodule.html#ae28bf6692479e10fc49d2b08f423d7bb" title="Set pointer to a 3d real array." alt="" coords="497,2207,681,2249"/>
+<area shape="rect" id="node46" href="$namespacememorymanagermodule.html#a414be91ca92a21afe6be2e1d8789bc5a" title="Set pointer to integer scalar." alt="" coords="497,2273,681,2314"/>
+<area shape="rect" id="node47" href="$namespacememorymanagermodule.html#a893117da5c3368afba56f1b481a48efe" title="Set pointer to 1d integer array." alt="" coords="497,2338,681,2379"/>
+<area shape="rect" id="node48" href="$namespacememorymanagermodule.html#a4858811fe2b26dc0932f5cf6cd79428a" title="Set pointer to 2d integer array." alt="" coords="497,2403,681,2445"/>
+<area shape="rect" id="node49" href="$namespacememorymanagermodule.html#a25adb6caf1476bc95b420642cb828c28" title="Set pointer to 3d integer array." alt="" coords="497,2469,681,2510"/>
+<area shape="rect" id="node50" href="$namespacememorymanagermodule.html#aefa833a64722dc48b1dcd5120b5d2cf0" title="Set pointer to a logical scalar." alt="" coords="497,2534,681,2575"/>
+<area shape="rect" id="node3" href="$namespacemf6bmiutil.html#a256d287805312986af53c44ca371c4bc" title="Split the variable address string." alt="" coords="253,231,441,257"/>
+<area shape="rect" id="node4" href="$namespacemf6bmi.html#a8e2d2eff520317a6077f5930a16ee879" title="Copy the double precision values of a variable into the array." alt="" coords="5,5,201,32"/>
+<area shape="rect" id="node5" href="$namespacemf6bmi.html#a8480a9859452c90d4d6e6b0ac426cd37" title="Copy the integer values of a variable into the array." alt="" coords="19,56,188,83"/>
+<area shape="rect" id="node6" href="$namespacemf6bmi.html#a153a9442109bd76c780fee6c9df0b98f" title="Get a pointer to the array of double precision numbers." alt="" coords="18,158,189,199"/>
+<area shape="rect" id="node7" href="$namespacemf6bmi.html#a28ea5f7ea56d55ff4f5c3ffebce9542a" title="Get a pointer to the array of integer numbers." alt="" coords="6,224,201,251"/>
+<area shape="rect" id="node8" href="$namespacemf6bmi.html#a7577d21a969c2b60a882ce5eeae541ba" title="Get the size (in bytes) of a single element of a variable." alt="" coords="7,376,200,403"/>
+<area shape="rect" id="node9" href="$namespacemf6bmi.html#a66624bcfe63949d6338d7df22b2c4da8" title="Get size of the variable, in bytes." alt="" coords="13,427,194,453"/>
+<area shape="rect" id="node10" href="$namespacemf6bmi.html#a3265848af6c1473c9efac7e1ad33fc55" title="Get the variable rank (non&#45;BMI)" alt="" coords="20,275,187,301"/>
+<area shape="rect" id="node11" href="$namespacemf6bmi.html#aa6b446de7c8c4e4eb1fc5f02d227367e" title="Get the shape of the array for the variable (non&#45;BMI)" alt="" coords="15,325,191,352"/>
+<area shape="rect" id="node12" href="$namespacemf6bmi.html#afa45f28dfaf37edf75461c09f40fe874" title="Set new values for a variable of type double." alt="" coords="6,107,201,133"/>
 </map>

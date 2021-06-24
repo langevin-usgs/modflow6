@@ -5,13 +5,22 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MODFLOW 6 Code Documentation: /home/runner/work/modflow6/modflow6/src/Utilities/Memory/MemorySetHandler.f90 Source File</title>
+<title>MODFLOW 6: /home/runner/work/modflow6/modflow6/src/Utilities/Memory/MemorySetHandler.f90 Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="CustomDoxygen.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -21,9 +30,12 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="mf6-triangular-grid.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">MODFLOW 6 Code Documentation
+   <div id="projectname">MODFLOW 6
+   &#160;<span id="projectnumber">version 6.2.2</span>
    </div>
+   <div id="projectbrief">MODFLOW 6 Code Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -36,16 +48,54 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Modules</span></a></li>
+      <li><a href="annotated.html"><span>Data&#160;Types&#160;List</span></a></li>
+      <li class="current"><a href="files.html"><span>Files</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('_memory_set_handler_8f90_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,11 +110,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_ff383ddf1aa4eab0c4ce7910366d05a5.html">Utilities</a></li><li class="navelem"><a class="el" href="dir_21ddf0b5f18acd5e64826f246466c9e1.html">Memory</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">MemorySetHandler.f90</div>  </div>
@@ -72,28 +117,28 @@ $(function() {
 <div class="contents">
 <a href="_memory_set_handler_8f90.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="namespacememorysethandlermodule.html">    1</a></span>&#160;<span class="keyword">module</span> <a class="code" href="namespacememorysethandlermodule.html">memorysethandlermodule</a> </div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacekindmodule.html">kindmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespacekindmodule.html#a2f6861418b5e7d3d602b77228232a470">i4b</a>, <a class="code" href="namespacekindmodule.html#aab86cc631d886fd4042b11df419be9ee">lgp</a> </div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacelistmodule.html">listmodule</a>, <span class="keywordtype">only</span>: listtype  </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacememorytypemodule.html">memorytypemodule</a>, <span class="keywordtype">only</span>: memorytype</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacelistmodule.html">listmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="structlistmodule_1_1listtype.html">listtype</a>  </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacememorytypemodule.html">memorytypemodule</a>, <span class="keywordtype">only</span>: <a class="code" href="structmemorytypemodule_1_1memorytype.html">memorytype</a></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacememorymanagermodule.html">memorymanagermodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespacememorymanagermodule.html#a8e6f199b7218d6ec1ab68f383cb6e20f">get_from_memorylist</a></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespaceconstantsmodule.html">constantsmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespaceconstantsmodule.html#ae1ec6380bd0e8e6c89a40d3b97306586">lenmempath</a>, <a class="code" href="namespaceconstantsmodule.html#a8a23c620a738ea7c5a9b5c4893b6bfbb">lenvarname</a></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  <span class="keywordtype">implicit none</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  <span class="keywordtype">private</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <span class="keywordtype">public</span> :: set_handler_iface</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <span class="keywordtype">public</span> :: <a class="code" href="interfacememorysethandlermodule_1_1set__handler__iface.html">set_handler_iface</a></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <span class="keywordtype">public</span> :: <a class="code" href="namespacememorysethandlermodule.html#a22298f4c80fed5e929971b29d4c57a7b">mem_register_handler</a></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <span class="keywordtype">public</span> :: <a class="code" href="namespacememorysethandlermodule.html#a696105cae7404befd7025d5757933bb5">on_memory_set</a></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <span class="keyword">type</span> eventhandlerdatatype</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">procedure</span>(set_handler_iface), <span class="keywordtype">nopass</span>, <span class="keywordtype">pointer</span> :: handler =&gt; null()</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">class</span>(*), <span class="keywordtype">pointer</span> :: handlerContext =&gt; null()</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="structmemorysethandlermodule_1_1eventhandlerdatatype.html">   15</a></span>&#160;  <span class="keyword">type</span> <a class="code" href="structmemorysethandlermodule_1_1eventhandlerdatatype.html">eventhandlerdatatype</a></div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="structmemorysethandlermodule_1_1eventhandlerdatatype.html#aefaeeadd6f7af988e61765ebc389f2b6">   16</a></span>&#160;    <span class="keywordtype">procedure</span>(<a class="code" href="interfacememorysethandlermodule_1_1set__handler__iface.html">set_handler_iface</a>), <span class="keywordtype">nopass</span>, <span class="keywordtype">pointer</span> :: handler =&gt; null()</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="structmemorysethandlermodule_1_1eventhandlerdatatype.html#a207640ecc05191c064ef27c1d5af58fb">   17</a></span>&#160;    <span class="keywordtype">class</span>(*), <span class="keywordtype">pointer</span> :: handlercontext =&gt; null()</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <span class="keyword">end type</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keywordtype">type</span>(ListType) :: handler_list</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="namespacememorysethandlermodule.html#a92d89d35116dc4a2f903fc377171d1a2">   20</a></span>&#160;  <span class="keywordtype">type</span>(<a class="code" href="structlistmodule_1_1listtype.html">listtype</a>) :: <a class="code" href="namespacememorysethandlermodule.html#a92d89d35116dc4a2f903fc377171d1a2">handler_list</a></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  abstract <span class="keyword">interface</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">subroutine </span>set_handler_iface(owner, status)</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;      <span class="keywordtype">import </span><a class="code" href="namespacekindmodule.html#a2f6861418b5e7d3d602b77228232a470">i4b</a></div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="interfacememorysethandlermodule_1_1set__handler__iface.html">   23</a></span>&#160;    <span class="keyword">subroutine </span><a class="code" href="interfacememorysethandlermodule_1_1set__handler__iface.html">set_handler_iface</a>(owner, status)</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="interfacememorysethandlermodule_1_1set__handler__iface.html#a6988aea923bedd270bbac4a51efc3d67">   24</a></span>&#160;      <span class="keywordtype">import </span><a class="code" href="namespacekindmodule.html#a2f6861418b5e7d3d602b77228232a470">i4b</a></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;      <span class="keywordtype">class</span>(*), <span class="keywordtype">pointer</span>, <span class="keywordtype">intent(inout)</span> :: owner</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;      <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(out)</span> :: status</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">end subroutine</span></div>
@@ -111,13 +156,13 @@ $(function() {
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacememorysethandlermodule.html#a22298f4c80fed5e929971b29d4c57a7b">mem_register_handler</a>(var_name, mem_path, handler, ctx)</div>
 <div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="namespacememorysethandlermodule.html#a22298f4c80fed5e929971b29d4c57a7b">   40</a></span>&#160;    <span class="keywordtype">character(len=*)</span>, <span class="keywordtype">intent(in)</span> :: var_name<span class="comment">            !&lt; the variable name</span></div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">character(len=*)</span>, <span class="keywordtype">intent(in)</span> :: mem_path<span class="comment">            !&lt; the memory path</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">procedure</span>(set_handler_iface), <span class="keywordtype">pointer</span> :: handler<span class="comment">    !&lt; called after memory is set</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">procedure</span>(<a class="code" href="interfacememorysethandlermodule_1_1set__handler__iface.html">set_handler_iface</a>), <span class="keywordtype">pointer</span> :: handler<span class="comment">    !&lt; called after memory is set</span></div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">class</span>(*), <span class="keywordtype">pointer</span> :: ctx<span class="comment">                            !&lt; the context with which the handler should be called</span></div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="comment">! local</span></div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: handler_idx</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">class</span>(eventhandlerdatatype), <span class="keywordtype">pointer</span> :: handler_data =&gt; null()</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structmemorysethandlermodule_1_1eventhandlerdatatype.html">eventhandlerdatatype</a>), <span class="keywordtype">pointer</span> :: handler_data =&gt; null()</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">class</span>(*), <span class="keywordtype">pointer</span> :: handler_data_genptr</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">type</span>(memorytype), <span class="keywordtype">pointer</span> :: mt</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structmemorytypemodule_1_1memorytype.html">memorytype</a>), <span class="keywordtype">pointer</span> :: mt</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">logical(LGP)</span> :: found</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="comment">! first store the handler data</span></div>
@@ -126,10 +171,10 @@ $(function() {
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    handler_data%handlerContext =&gt; ctx</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    handler_data_genptr =&gt; handler_data</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keyword">call </span>handler_list%Add(handler_data_genptr)</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keyword">call </span><a class="code" href="namespacememorysethandlermodule.html#a92d89d35116dc4a2f903fc377171d1a2">handler_list</a>%Add(handler_data_genptr)</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="comment">! this is the index for the current handler</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    handler_idx = handler_list%Count()</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    handler_idx = <a class="code" href="namespacememorysethandlermodule.html#a92d89d35116dc4a2f903fc377171d1a2">handler_list</a>%Count()</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="comment">! now set it to the memory item</span></div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    mt =&gt; null()</div>
@@ -150,10 +195,10 @@ $(function() {
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">character(len=*)</span>, <span class="keywordtype">intent(in)</span> :: mem_path<span class="comment">  !&lt; the memory path</span></div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(out)</span> :: status<span class="comment">       !&lt; status: 0 for success, -1 when failed</span></div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="comment">! local</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">type</span>(memorytype), <span class="keywordtype">pointer</span> :: mt</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structmemorytypemodule_1_1memorytype.html">memorytype</a>), <span class="keywordtype">pointer</span> :: mt</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">logical(LGP)</span> :: found</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">class</span>(*), <span class="keywordtype">pointer</span> :: handler_data_genptr =&gt; null()</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordtype">class</span>(eventhandlerdatatype), <span class="keywordtype">pointer</span> :: evt_handler_data =&gt; null()</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structmemorysethandlermodule_1_1eventhandlerdatatype.html">eventhandlerdatatype</a>), <span class="keywordtype">pointer</span> :: evt_handler_data =&gt; null()</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="comment">! get the handler data and cast</span></div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    mt =&gt; null()</div>
@@ -165,9 +210,9 @@ $(function() {
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;      <span class="keywordflow">return</span></div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="keywordflow">    end if</span></div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    </div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    handler_data_genptr =&gt; handler_list%GetItem(mt%set_handler_idx)</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    handler_data_genptr =&gt; <a class="code" href="namespacememorysethandlermodule.html#a92d89d35116dc4a2f903fc377171d1a2">handler_list</a>%GetItem(mt%set_handler_idx)</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">select type</span>(handler_data_genptr)</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="keywordflow">    class is</span> (eventhandlerdatatype)</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="keywordflow">    class is</span> (<a class="code" href="structmemorysethandlermodule_1_1eventhandlerdatatype.html">eventhandlerdatatype</a>)</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;      evt_handler_data =&gt; handler_data_genptr</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="keywordflow">    end select</span></div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  </div>
@@ -177,9 +222,15 @@ $(function() {
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="keyword">end module</span></div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <div class="ttc" id="anamespacekindmodule_html"><div class="ttname"><a href="namespacekindmodule.html">kindmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="kind_8f90_source.html#l00001">kind.f90:1</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_ae1ec6380bd0e8e6c89a40d3b97306586"><div class="ttname"><a href="namespaceconstantsmodule.html#ae1ec6380bd0e8e6c89a40d3b97306586">constantsmodule::lenmempath</a></div><div class="ttdeci">integer(i4b), parameter lenmempath</div><div class="ttdoc">maximum length of the memory path</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00016">Constants.f90:16</a></div></div>
+<div class="ttc" id="astructmemorytypemodule_1_1memorytype_html"><div class="ttname"><a href="structmemorytypemodule_1_1memorytype.html">memorytypemodule::memorytype</a></div><div class="ttdef"><b>Definition:</b> <a href="_memory_8f90_source.html#l00015">Memory.f90:15</a></div></div>
+<div class="ttc" id="anamespacememorysethandlermodule_html_a92d89d35116dc4a2f903fc377171d1a2"><div class="ttname"><a href="namespacememorysethandlermodule.html#a92d89d35116dc4a2f903fc377171d1a2">memorysethandlermodule::handler_list</a></div><div class="ttdeci">type(listtype) handler_list</div><div class="ttdef"><b>Definition:</b> <a href="_memory_set_handler_8f90_source.html#l00020">MemorySetHandler.f90:20</a></div></div>
+<div class="ttc" id="astructmemorysethandlermodule_1_1eventhandlerdatatype_html"><div class="ttname"><a href="structmemorysethandlermodule_1_1eventhandlerdatatype.html">memorysethandlermodule::eventhandlerdatatype</a></div><div class="ttdef"><b>Definition:</b> <a href="_memory_set_handler_8f90_source.html#l00015">MemorySetHandler.f90:15</a></div></div>
 <div class="ttc" id="anamespacememorytypemodule_html"><div class="ttname"><a href="namespacememorytypemodule.html">memorytypemodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_memory_8f90_source.html#l00001">Memory.f90:1</a></div></div>
+<div class="ttc" id="ainterfacememorysethandlermodule_1_1set__handler__iface_html"><div class="ttname"><a href="interfacememorysethandlermodule_1_1set__handler__iface.html">memorysethandlermodule::set_handler_iface</a></div><div class="ttdef"><b>Definition:</b> <a href="_memory_set_handler_8f90_source.html#l00023">MemorySetHandler.f90:23</a></div></div>
+<div class="ttc" id="astructlistmodule_1_1listtype_html"><div class="ttname"><a href="structlistmodule_1_1listtype.html">listmodule::listtype</a></div><div class="ttdef"><b>Definition:</b> <a href="_list_8f90_source.html#l00009">List.f90:9</a></div></div>
 <div class="ttc" id="anamespacekindmodule_html_aab86cc631d886fd4042b11df419be9ee"><div class="ttname"><a href="namespacekindmodule.html#aab86cc631d886fd4042b11df419be9ee">kindmodule::lgp</a></div><div class="ttdeci">integer, parameter lgp</div><div class="ttdef"><b>Definition:</b> <a href="kind_8f90_source.html#l00008">kind.f90:8</a></div></div>
 <div class="ttc" id="anamespacememorymanagermodule_html_a8e6f199b7218d6ec1ab68f383cb6e20f"><div class="ttname"><a href="namespacememorymanagermodule.html#a8e6f199b7218d6ec1ab68f383cb6e20f">memorymanagermodule::get_from_memorylist</a></div><div class="ttdeci">subroutine, public get_from_memorylist(name, mem_path, mt, found, check)</div><div class="ttdoc">@ brief Get a memory type entry from the memory list</div><div class="ttdef"><b>Definition:</b> <a href="_memory_manager_8f90_source.html#l00264">MemoryManager.f90:264</a></div></div>
 <div class="ttc" id="anamespacekindmodule_html_a2f6861418b5e7d3d602b77228232a470"><div class="ttname"><a href="namespacekindmodule.html#a2f6861418b5e7d3d602b77228232a470">kindmodule::i4b</a></div><div class="ttdeci">integer, parameter i4b</div><div class="ttdef"><b>Definition:</b> <a href="kind_8f90_source.html#l00009">kind.f90:9</a></div></div>
@@ -191,10 +242,13 @@ $(function() {
 <div class="ttc" id="anamespacememorysethandlermodule_html_a22298f4c80fed5e929971b29d4c57a7b"><div class="ttname"><a href="namespacememorysethandlermodule.html#a22298f4c80fed5e929971b29d4c57a7b">memorysethandlermodule::mem_register_handler</a></div><div class="ttdeci">subroutine, public mem_register_handler(var_name, mem_path, handler, ctx)</div><div class="ttdoc">Register the event handler and context for this variable.</div><div class="ttdef"><b>Definition:</b> <a href="_memory_set_handler_8f90_source.html#l00040">MemorySetHandler.f90:40</a></div></div>
 <div class="ttc" id="anamespacelistmodule_html"><div class="ttname"><a href="namespacelistmodule.html">listmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_list_8f90_source.html#l00001">List.f90:1</a></div></div>
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_ff383ddf1aa4eab0c4ce7910366d05a5.html">Utilities</a></li><li class="navelem"><a class="el" href="dir_21ddf0b5f18acd5e64826f246466c9e1.html">Memory</a></li><li class="navelem"><a class="el" href="_memory_set_handler_8f90.html">MemorySetHandler.f90</a></li>
+    <li class="footer">Generated on Thu Jun 24 2021 19:50:09 for MODFLOW 6 by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
 </body>
 </html>

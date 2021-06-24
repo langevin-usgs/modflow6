@@ -5,13 +5,22 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MODFLOW 6 Code Documentation: /home/runner/work/modflow6/modflow6/src/Utilities/NameFile.f90 Source File</title>
+<title>MODFLOW 6: /home/runner/work/modflow6/modflow6/src/Utilities/NameFile.f90 Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="CustomDoxygen.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -21,9 +30,12 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="mf6-triangular-grid.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">MODFLOW 6 Code Documentation
+   <div id="projectname">MODFLOW 6
+   &#160;<span id="projectnumber">version 6.2.2</span>
    </div>
+   <div id="projectbrief">MODFLOW 6 Code Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -36,16 +48,54 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Modules</span></a></li>
+      <li><a href="annotated.html"><span>Data&#160;Types&#160;List</span></a></li>
+      <li class="current"><a href="files.html"><span>Files</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('_name_file_8f90_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,11 +110,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_ff383ddf1aa4eab0c4ce7910366d05a5.html">Utilities</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">NameFile.f90</div>  </div>
@@ -75,35 +120,35 @@ $(function() {
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacekindmodule.html">kindmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>, <a class="code" href="namespacekindmodule.html#a2f6861418b5e7d3d602b77228232a470">i4b</a></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespaceinputoutputmodule.html">inputoutputmodule</a>,   <span class="keywordtype">only</span>: <a class="code" href="namespaceinputoutputmodule.html#a6c54d102f5c67defd36241a197a7ca56">parseline</a>, <a class="code" href="namespaceinputoutputmodule.html#ae97851e3edae8d9809e384058a1a4d52">openfile</a>, <a class="code" href="namespaceinputoutputmodule.html#a535bdfca3d31ebc3a8e4bd5af6890d55">getunit</a></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespaceconstantsmodule.html">constantsmodule</a>,     <span class="keywordtype">only</span>: <a class="code" href="namespaceconstantsmodule.html#a060d310ded5535ce2dc85bd1ca1afd3d">linelength</a>, <a class="code" href="namespaceconstantsmodule.html#a2e75f10abe62e57d87d7d468c2bf763d">lenpackagename</a></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacearrayhandlersmodule.html">arrayhandlersmodule</a>, <span class="keywordtype">only</span>: expandarray, <a class="code" href="namespacearrayhandlersmodule.html#a6f3ceef8df3f4f56d24d45fdf6685050">remove_character</a></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespaceiunitmodule.html">iunitmodule</a>,         <span class="keywordtype">only</span>: iunittype</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespaceblockparsermodule.html">blockparsermodule</a>,   <span class="keywordtype">only</span>: blockparsertype</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacearrayhandlersmodule.html">arrayhandlersmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="interfacearrayhandlersmodule_1_1expandarray.html">expandarray</a>, <a class="code" href="namespacearrayhandlersmodule.html#a6f3ceef8df3f4f56d24d45fdf6685050">remove_character</a></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespaceiunitmodule.html">iunitmodule</a>,         <span class="keywordtype">only</span>: <a class="code" href="structiunitmodule_1_1iunittype.html">iunittype</a></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespaceblockparsermodule.html">blockparsermodule</a>,   <span class="keywordtype">only</span>: <a class="code" href="structblockparsermodule_1_1blockparsertype.html">blockparsertype</a></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  <span class="keywordtype">implicit none</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  <span class="keywordtype">private</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <span class="keywordtype">public</span> :: namefiletype</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <span class="keywordtype">public</span> :: <a class="code" href="structnamefilemodule_1_1namefiletype.html">namefiletype</a></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <span class="keyword">type</span> :: namefiletype</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">character(len=LINELENGTH)</span> :: filename</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">logical</span> :: opened_listfile = .false.</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">character(len=LINELENGTH)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">allocatable</span> :: opts</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">character(len=LINELENGTH)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">allocatable</span> :: input_files</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">type</span>(IunitType) :: iunit_obj</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">type</span>(BlockParserType) :: parser</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="structnamefilemodule_1_1namefiletype.html">   13</a></span>&#160;  <span class="keyword">type</span> :: <a class="code" href="structnamefilemodule_1_1namefiletype.html">namefiletype</a></div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="structnamefilemodule_1_1namefiletype.html#a9392e0c583080ce711e791c61802f40d">   14</a></span>&#160;    <span class="keywordtype">character(len=LINELENGTH)</span> :: filename</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="structnamefilemodule_1_1namefiletype.html#a8eddb53e226f92d363c091771f948310">   15</a></span>&#160;    <span class="keywordtype">logical</span> :: opened_listfile = .false.</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="structnamefilemodule_1_1namefiletype.html#aec722816183cb5054e2fbda9d50c60e4">   16</a></span>&#160;    <span class="keywordtype">character(len=LINELENGTH)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">allocatable</span> :: opts</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="structnamefilemodule_1_1namefiletype.html#adfaa7bf80ec49f7782e40596a0d64054">   17</a></span>&#160;    <span class="keywordtype">character(len=LINELENGTH)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">allocatable</span> :: input_files</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="structnamefilemodule_1_1namefiletype.html#a07a055e11283a672f499309761698292">   18</a></span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structiunitmodule_1_1iunittype.html">iunittype</a>) :: iunit_obj</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="structnamefilemodule_1_1namefiletype.html#a457f90f8248a4801e987429e742f2c8b">   19</a></span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structblockparsermodule_1_1blockparsertype.html">blockparsertype</a>) :: parser</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keyword">contains</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">procedure</span> :: init                  =&gt; namefile_init</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">procedure</span> :: add_cunit             =&gt; <a class="code" href="namespacenamefilemodule.html#a9d57bc8164ef82ddfc24a7dc6a0c46be">namefile_add_cunit</a></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">procedure</span> :: openlistfile          =&gt; namefile_openlistfile</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">procedure</span> :: openfiles             =&gt; <a class="code" href="namespacenamefilemodule.html#a557a3b9fe5867a78d612a11b998dc81d">namefile_openfiles</a></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">procedure</span> :: get_unitnumber        =&gt; <a class="code" href="namespacenamefilemodule.html#aaed3d86f91afe2fbd9281db5f4a2b6c8">namefile_get_unitnumber</a></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">procedure</span> :: get_nval_for_row      =&gt; namefile_get_nval_for_row</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">procedure</span> :: get_unitnumber_rowcol =&gt; namefile_get_unitnumber_rowcol</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">procedure</span> :: get_pakname           =&gt; namefile_get_pakname</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keyword">end type </span>namefiletype</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="structnamefilemodule_1_1namefiletype.html#a22b0625a63931b92d65f951112415e4d">   21</a></span>&#160;    <span class="keywordtype">procedure</span> :: init                  =&gt; <a class="code" href="namespacenamefilemodule.html#a8447d145db7cfa2ee7c6820b406fe005">namefile_init</a></div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="structnamefilemodule_1_1namefiletype.html#a1dd54aa8592f283ee3d617dd7f5d3a7d">   22</a></span>&#160;    <span class="keywordtype">procedure</span> :: add_cunit             =&gt; <a class="code" href="namespacenamefilemodule.html#a9d57bc8164ef82ddfc24a7dc6a0c46be">namefile_add_cunit</a></div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="structnamefilemodule_1_1namefiletype.html#a78a6f56da6f912ad96a6cd4d2c8d7eb9">   23</a></span>&#160;    <span class="keywordtype">procedure</span> :: openlistfile          =&gt; <a class="code" href="namespacenamefilemodule.html#a2fcd31b122268848c427692d0290d7e7">namefile_openlistfile</a></div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="structnamefilemodule_1_1namefiletype.html#ad77c5b129484aa5734a77c10908acb61">   24</a></span>&#160;    <span class="keywordtype">procedure</span> :: openfiles             =&gt; <a class="code" href="namespacenamefilemodule.html#a557a3b9fe5867a78d612a11b998dc81d">namefile_openfiles</a></div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="structnamefilemodule_1_1namefiletype.html#a0a8a1cb52f11895a9b5dfe49a7e673d9">   25</a></span>&#160;    <span class="keywordtype">procedure</span> :: get_unitnumber        =&gt; <a class="code" href="namespacenamefilemodule.html#aaed3d86f91afe2fbd9281db5f4a2b6c8">namefile_get_unitnumber</a></div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="structnamefilemodule_1_1namefiletype.html#acab798c6754d428caa1825a840d3087f">   26</a></span>&#160;    <span class="keywordtype">procedure</span> :: get_nval_for_row      =&gt; <a class="code" href="namespacenamefilemodule.html#a6f20d77ce862862d4d1fa711a1ee7d30">namefile_get_nval_for_row</a></div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="structnamefilemodule_1_1namefiletype.html#ad83be21cc7b6d5c7f7f76be0d9c6b9fa">   27</a></span>&#160;    <span class="keywordtype">procedure</span> :: get_unitnumber_rowcol =&gt; <a class="code" href="namespacenamefilemodule.html#ad2f4b6417f843b2ad0dc88f9ee6e66ae">namefile_get_unitnumber_rowcol</a></div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="structnamefilemodule_1_1namefiletype.html#a755c12df8d2f32c846bbad8fedb44980">   28</a></span>&#160;    <span class="keywordtype">procedure</span> :: get_pakname           =&gt; <a class="code" href="namespacenamefilemodule.html#a48943659df9116b2d66118d8fefc9977">namefile_get_pakname</a></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keyword">end type </span><a class="code" href="structnamefilemodule_1_1namefiletype.html">namefiletype</a></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keyword">contains</span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keyword">subroutine </span>namefile_init(this, filename, iout)</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacenamefilemodule.html#a8447d145db7cfa2ee7c6820b406fe005">namefile_init</a>(this, filename, iout)</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="namespacenamefilemodule.html#a8447d145db7cfa2ee7c6820b406fe005">   34</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">! namefile_init -- initialize the namefile object using the filename.  if iout</span></div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">!   is non-zero, then the block information will be written to iout.</span></div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">! ******************************************************************************</span></div>
@@ -113,7 +158,7 @@ $(function() {
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="comment">! -- modules</span></div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacesimmodule.html">simmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a">store_error</a>, <a class="code" href="namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61">ustop</a></div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">class</span>(NameFileType) :: this</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structnamefilemodule_1_1namefiletype.html">namefiletype</a>) :: this</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">character(len=*)</span>, <span class="keywordtype">intent(in)</span> :: filename</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: iout</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="comment">! -- local</span></div>
@@ -151,7 +196,7 @@ $(function() {
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keyword">call </span>this%parser%GetNextLine(endofblock)</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordflow">if</span> (endofblock) <span class="keywordflow">exit</span> getopts</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keyword">call </span>this%parser%GetCurrentLine(line)</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keyword">call </span>expandarray(this%opts)</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keyword">call </span><a class="code" href="interfacearrayhandlersmodule_1_1expandarray.html">expandarray</a>(this%opts)</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        n = n + 1</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        this%opts(n) = adjustl(line)</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="keywordflow">      enddo</span> getopts</div>
@@ -181,7 +226,7 @@ $(function() {
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keyword">call </span>this%parser%GetNextLine(endofblock)</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="keywordflow">if</span> (endofblock) <span class="keywordflow">exit</span> getpaks</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="keyword">call </span>this%parser%GetCurrentLine(line)</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="keyword">call </span>expandarray(this%input_files)</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="keyword">call </span><a class="code" href="interfacearrayhandlersmodule_1_1expandarray.html">expandarray</a>(this%input_files)</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        n = n + 1</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        this%input_files(n) = adjustl(line)</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="keywordflow">      enddo</span> getpaks</div>
@@ -206,7 +251,7 @@ $(function() {
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="comment">! -- return</span></div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;  <span class="keyword">end subroutine </span>namefile_init</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacenamefilemodule.html#a8447d145db7cfa2ee7c6820b406fe005">namefile_init</a></div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacenamefilemodule.html#a9d57bc8164ef82ddfc24a7dc6a0c46be">namefile_add_cunit</a>(this, niunit, cunit)</div>
 <div class="line"><a name="l00140"></a><span class="lineno"><a class="line" href="namespacenamefilemodule.html#a9d57bc8164ef82ddfc24a7dc6a0c46be">  140</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
@@ -216,7 +261,7 @@ $(function() {
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="comment">!    SPECIFICATIONS:</span></div>
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="keywordtype">class</span>(namefiletype) :: this</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structnamefilemodule_1_1namefiletype.html">namefiletype</a>) :: this</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: niunit</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keywordtype">character(len=*)</span>, <span class="keywordtype">dimension(niunit)</span>, <span class="keywordtype">intent(in)</span> :: cunit</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
@@ -227,8 +272,8 @@ $(function() {
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keywordflow">return</span></div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacenamefilemodule.html#a9d57bc8164ef82ddfc24a7dc6a0c46be">namefile_add_cunit</a></div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  <span class="keyword">subroutine </span>namefile_openlistfile(this, iout)</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacenamefilemodule.html#a2fcd31b122268848c427692d0290d7e7">namefile_openlistfile</a>(this, iout)</div>
+<div class="line"><a name="l00159"></a><span class="lineno"><a class="line" href="namespacenamefilemodule.html#a2fcd31b122268848c427692d0290d7e7">  159</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="comment">! namefile_openlistfile -- Open the list file and set iout.</span></div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="comment">!</span></div>
@@ -238,7 +283,7 @@ $(function() {
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacesimmodule.html">simmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a">store_error</a>, <a class="code" href="namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61">ustop</a></div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespaceinputoutputmodule.html">inputoutputmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespaceinputoutputmodule.html#a535bdfca3d31ebc3a8e4bd5af6890d55">getunit</a>, <a class="code" href="namespaceinputoutputmodule.html#a3418ad9e27e9d9caac6f541863e1c522">upcase</a></div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keywordtype">class</span>(namefiletype) :: this</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structnamefilemodule_1_1namefiletype.html">namefiletype</a>) :: this</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(inout)</span> :: iout</div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keywordtype">logical</span> :: found</div>
@@ -295,7 +340,7 @@ $(function() {
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <span class="comment">! -- return</span></div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;  <span class="keyword">end subroutine </span>namefile_openlistfile</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacenamefilemodule.html#a2fcd31b122268848c427692d0290d7e7">namefile_openlistfile</a></div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160; </div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacenamefilemodule.html#a557a3b9fe5867a78d612a11b998dc81d">namefile_openfiles</a>(this, iout)</div>
 <div class="line"><a name="l00229"></a><span class="lineno"><a class="line" href="namespacenamefilemodule.html#a557a3b9fe5867a78d612a11b998dc81d">  229</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
@@ -308,7 +353,7 @@ $(function() {
 <div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacesimmodule.html">simmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a">store_error</a>, <a class="code" href="namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61">ustop</a></div>
 <div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespaceinputoutputmodule.html">inputoutputmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespaceinputoutputmodule.html#a535bdfca3d31ebc3a8e4bd5af6890d55">getunit</a>, <a class="code" href="namespaceinputoutputmodule.html#a3418ad9e27e9d9caac6f541863e1c522">upcase</a></div>
 <div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    <span class="keywordtype">class</span>(namefiletype) :: this</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structnamefilemodule_1_1namefiletype.html">namefiletype</a>) :: this</div>
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: iout</div>
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="keywordtype">character(len=20)</span> :: ftype, accarg, fmtarg, filstat</div>
@@ -349,7 +394,7 @@ $(function() {
 <div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;<span class="comment">!</span></div>
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;<span class="comment">!    SPECIFICATIONS:</span></div>
 <div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <span class="keywordtype">class</span>(namefiletype) :: this</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structnamefilemodule_1_1namefiletype.html">namefiletype</a>) :: this</div>
 <div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    <span class="keywordtype">character(len=*)</span>, <span class="keywordtype">intent(in)</span> :: ftype</div>
 <div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(inout)</span> :: inunit</div>
 <div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: iremove</div>
@@ -361,8 +406,8 @@ $(function() {
 <div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    <span class="keywordflow">return</span></div>
 <div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacenamefilemodule.html#aaed3d86f91afe2fbd9281db5f4a2b6c8">namefile_get_unitnumber</a></div>
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160; </div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;  <span class="keyword">function </span>namefile_get_nval_for_row(this, irow) <span class="keyword">result</span>(nval)</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;  <span class="keyword">function </span><a class="code" href="namespacenamefilemodule.html#a6f20d77ce862862d4d1fa711a1ee7d30">namefile_get_nval_for_row</a>(this, irow) <span class="keyword">result</span>(nval)</div>
+<div class="line"><a name="l00293"></a><span class="lineno"><a class="line" href="namespacenamefilemodule.html#a6f20d77ce862862d4d1fa711a1ee7d30">  293</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;<span class="comment">! namefile_get_nval_for_row -- Get the number of entries for the cunit type in</span></div>
 <div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;<span class="comment">!   row irow.  For example, return the number of well packages that were</span></div>
 <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;<span class="comment">!   read from the name file.</span></div>
@@ -372,7 +417,7 @@ $(function() {
 <div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    <span class="comment">! -- return</span></div>
 <div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: nval</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <span class="keywordtype">class</span>(namefiletype) :: this</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structnamefilemodule_1_1namefiletype.html">namefiletype</a>) :: this</div>
 <div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: irow</div>
 <div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    <span class="comment">!</span></div>
@@ -380,11 +425,11 @@ $(function() {
 <div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    <span class="comment">! -- return</span></div>
 <div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;  <span class="keyword">end function </span>namefile_get_nval_for_row</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;  <span class="keyword">end function </span><a class="code" href="namespacenamefilemodule.html#a6f20d77ce862862d4d1fa711a1ee7d30">namefile_get_nval_for_row</a></div>
 <div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160; </div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;  <span class="keyword">function </span>namefile_get_unitnumber_rowcol(this, irow, jcol)            &amp;</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;  <span class="keyword">function </span><a class="code" href="namespacenamefilemodule.html#ad2f4b6417f843b2ad0dc88f9ee6e66ae">namefile_get_unitnumber_rowcol</a>(this, irow, jcol)            &amp;</div>
 <div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;          result(iu)</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00315"></a><span class="lineno"><a class="line" href="namespacenamefilemodule.html#ad2f4b6417f843b2ad0dc88f9ee6e66ae">  315</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;<span class="comment">! namefile_get_unitnumber_rowcol -- Get the unit number for entries in</span></div>
 <div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;<span class="comment">!   cunit(irow) and columns (icol).  For example, return the unit number for</span></div>
 <div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;<span class="comment">!   the first, second, or third well package.</span></div>
@@ -394,7 +439,7 @@ $(function() {
 <div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    <span class="comment">! -- return</span></div>
 <div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: iu</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    <span class="keywordtype">class</span>(namefiletype) :: this</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structnamefilemodule_1_1namefiletype.html">namefiletype</a>) :: this</div>
 <div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: irow</div>
 <div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: jcol</div>
 <div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
@@ -403,10 +448,10 @@ $(function() {
 <div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    <span class="comment">! -- return</span></div>
 <div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;  <span class="keyword">end function </span>namefile_get_unitnumber_rowcol</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;  <span class="keyword">end function </span><a class="code" href="namespacenamefilemodule.html#ad2f4b6417f843b2ad0dc88f9ee6e66ae">namefile_get_unitnumber_rowcol</a></div>
 <div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160; </div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;  <span class="keyword">subroutine </span>namefile_get_pakname(this, irow, jcol, pakname)</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacenamefilemodule.html#a48943659df9116b2d66118d8fefc9977">namefile_get_pakname</a>(this, irow, jcol, pakname)</div>
+<div class="line"><a name="l00337"></a><span class="lineno"><a class="line" href="namespacenamefilemodule.html#a48943659df9116b2d66118d8fefc9977">  337</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;<span class="comment">! namefile_get_pakname -- Assign the unit number for the ftype to inunit.</span></div>
 <div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;<span class="comment">!   If iremove &gt; 0, then remove this file from iunit_obj.</span></div>
 <div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;<span class="comment">! ******************************************************************************</span></div>
@@ -417,7 +462,7 @@ $(function() {
 <div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacesimmodule.html">simmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a">store_error</a>, <a class="code" href="namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61">ustop</a></div>
 <div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespaceinputoutputmodule.html">inputoutputmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespaceinputoutputmodule.html#a3418ad9e27e9d9caac6f541863e1c522">upcase</a></div>
 <div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    <span class="keywordtype">class</span>(namefiletype) :: this</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structnamefilemodule_1_1namefiletype.html">namefiletype</a>) :: this</div>
 <div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: irow</div>
 <div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: jcol</div>
 <div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    <span class="keywordtype">character(len=*)</span>, <span class="keywordtype">intent(inout)</span> :: pakname</div>
@@ -450,16 +495,21 @@ $(function() {
 <div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;    <span class="comment">! -- return</span></div>
 <div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;  <span class="keyword">end subroutine </span>namefile_get_pakname</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacenamefilemodule.html#a48943659df9116b2d66118d8fefc9977">namefile_get_pakname</a></div>
 <div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160; </div>
 <div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160; </div>
 <div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;<span class="keyword">end module </span><a class="code" href="namespacenamefilemodule.html">namefilemodule</a></div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <div class="ttc" id="anamespacenamefilemodule_html_a557a3b9fe5867a78d612a11b998dc81d"><div class="ttname"><a href="namespacenamefilemodule.html#a557a3b9fe5867a78d612a11b998dc81d">namefilemodule::namefile_openfiles</a></div><div class="ttdeci">subroutine namefile_openfiles(this, iout)</div><div class="ttdef"><b>Definition:</b> <a href="_name_file_8f90_source.html#l00229">NameFile.f90:229</a></div></div>
+<div class="ttc" id="anamespacenamefilemodule_html_a48943659df9116b2d66118d8fefc9977"><div class="ttname"><a href="namespacenamefilemodule.html#a48943659df9116b2d66118d8fefc9977">namefilemodule::namefile_get_pakname</a></div><div class="ttdeci">subroutine namefile_get_pakname(this, irow, jcol, pakname)</div><div class="ttdef"><b>Definition:</b> <a href="_name_file_8f90_source.html#l00337">NameFile.f90:337</a></div></div>
 <div class="ttc" id="anamespacenamefilemodule_html_aaed3d86f91afe2fbd9281db5f4a2b6c8"><div class="ttname"><a href="namespacenamefilemodule.html#aaed3d86f91afe2fbd9281db5f4a2b6c8">namefilemodule::namefile_get_unitnumber</a></div><div class="ttdeci">subroutine namefile_get_unitnumber(this, ftype, inunit, iremove)</div><div class="ttdef"><b>Definition:</b> <a href="_name_file_8f90_source.html#l00273">NameFile.f90:273</a></div></div>
 <div class="ttc" id="anamespacekindmodule_html"><div class="ttname"><a href="namespacekindmodule.html">kindmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="kind_8f90_source.html#l00001">kind.f90:1</a></div></div>
 <div class="ttc" id="anamespacesimmodule_html_a536cb6f0e13fcd33755e414641ff931a"><div class="ttname"><a href="namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a">simmodule::store_error</a></div><div class="ttdeci">subroutine, public store_error(msg)</div><div class="ttdef"><b>Definition:</b> <a href="_sim_8f90_source.html#l00107">Sim.f90:107</a></div></div>
+<div class="ttc" id="anamespacenamefilemodule_html_a2fcd31b122268848c427692d0290d7e7"><div class="ttname"><a href="namespacenamefilemodule.html#a2fcd31b122268848c427692d0290d7e7">namefilemodule::namefile_openlistfile</a></div><div class="ttdeci">subroutine namefile_openlistfile(this, iout)</div><div class="ttdef"><b>Definition:</b> <a href="_name_file_8f90_source.html#l00159">NameFile.f90:159</a></div></div>
 <div class="ttc" id="anamespacesimmodule_html"><div class="ttname"><a href="namespacesimmodule.html">simmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_sim_8f90_source.html#l00001">Sim.f90:1</a></div></div>
+<div class="ttc" id="anamespacenamefilemodule_html_ad2f4b6417f843b2ad0dc88f9ee6e66ae"><div class="ttname"><a href="namespacenamefilemodule.html#ad2f4b6417f843b2ad0dc88f9ee6e66ae">namefilemodule::namefile_get_unitnumber_rowcol</a></div><div class="ttdeci">integer(i4b) function namefile_get_unitnumber_rowcol(this, irow, jcol)</div><div class="ttdef"><b>Definition:</b> <a href="_name_file_8f90_source.html#l00315">NameFile.f90:315</a></div></div>
+<div class="ttc" id="ainterfacearrayhandlersmodule_1_1expandarray_html"><div class="ttname"><a href="interfacearrayhandlersmodule_1_1expandarray.html">arrayhandlersmodule::expandarray</a></div><div class="ttdef"><b>Definition:</b> <a href="_array_handlers_8f90_source.html#l00016">ArrayHandlers.f90:16</a></div></div>
 <div class="ttc" id="anamespaceblockparsermodule_html"><div class="ttname"><a href="namespaceblockparsermodule.html">blockparsermodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_block_parser_8f90_source.html#l00001">BlockParser.f90:1</a></div></div>
 <div class="ttc" id="anamespaceinputoutputmodule_html_a3418ad9e27e9d9caac6f541863e1c522"><div class="ttname"><a href="namespaceinputoutputmodule.html#a3418ad9e27e9d9caac6f541863e1c522">inputoutputmodule::upcase</a></div><div class="ttdeci">subroutine, public upcase(WORD)</div><div class="ttdef"><b>Definition:</b> <a href="_input_output_8f90_source.html#l00581">InputOutput.f90:581</a></div></div>
 <div class="ttc" id="anamespacenamefilemodule_html"><div class="ttname"><a href="namespacenamefilemodule.html">namefilemodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_name_file_8f90_source.html#l00001">NameFile.f90:1</a></div></div>
@@ -469,19 +519,27 @@ $(function() {
 <div class="ttc" id="anamespacesimmodule_html_a0be97214c1d4fcf42bc4ddc27b111b61"><div class="ttname"><a href="namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61">simmodule::ustop</a></div><div class="ttdeci">subroutine, public ustop(stopmess, ioutlocal)</div><div class="ttdef"><b>Definition:</b> <a href="_sim_8f90_source.html#l00324">Sim.f90:324</a></div></div>
 <div class="ttc" id="anamespaceinputoutputmodule_html_a535bdfca3d31ebc3a8e4bd5af6890d55"><div class="ttname"><a href="namespaceinputoutputmodule.html#a535bdfca3d31ebc3a8e4bd5af6890d55">inputoutputmodule::getunit</a></div><div class="ttdeci">integer(i4b) function, public getunit()</div><div class="ttdef"><b>Definition:</b> <a href="_input_output_8f90_source.html#l00208">InputOutput.f90:208</a></div></div>
 <div class="ttc" id="anamespaceinputoutputmodule_html"><div class="ttname"><a href="namespaceinputoutputmodule.html">inputoutputmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_input_output_8f90_source.html#l00003">InputOutput.f90:3</a></div></div>
+<div class="ttc" id="astructnamefilemodule_1_1namefiletype_html"><div class="ttname"><a href="structnamefilemodule_1_1namefiletype.html">namefilemodule::namefiletype</a></div><div class="ttdef"><b>Definition:</b> <a href="_name_file_8f90_source.html#l00013">NameFile.f90:13</a></div></div>
+<div class="ttc" id="astructiunitmodule_1_1iunittype_html"><div class="ttname"><a href="structiunitmodule_1_1iunittype.html">iunitmodule::iunittype</a></div><div class="ttdef"><b>Definition:</b> <a href="_iunit_8f90_source.html#l00026">Iunit.f90:26</a></div></div>
 <div class="ttc" id="anamespaceinputoutputmodule_html_a6c54d102f5c67defd36241a197a7ca56"><div class="ttname"><a href="namespaceinputoutputmodule.html#a6c54d102f5c67defd36241a197a7ca56">inputoutputmodule::parseline</a></div><div class="ttdeci">subroutine, public parseline(line, nwords, words, inunit, filename)</div><div class="ttdef"><b>Definition:</b> <a href="_input_output_8f90_source.html#l01559">InputOutput.f90:1559</a></div></div>
 <div class="ttc" id="anamespacekindmodule_html_a2f6861418b5e7d3d602b77228232a470"><div class="ttname"><a href="namespacekindmodule.html#a2f6861418b5e7d3d602b77228232a470">kindmodule::i4b</a></div><div class="ttdeci">integer, parameter i4b</div><div class="ttdef"><b>Definition:</b> <a href="kind_8f90_source.html#l00009">kind.f90:9</a></div></div>
 <div class="ttc" id="anamespacenamefilemodule_html_a9d57bc8164ef82ddfc24a7dc6a0c46be"><div class="ttname"><a href="namespacenamefilemodule.html#a9d57bc8164ef82ddfc24a7dc6a0c46be">namefilemodule::namefile_add_cunit</a></div><div class="ttdeci">subroutine namefile_add_cunit(this, niunit, cunit)</div><div class="ttdef"><b>Definition:</b> <a href="_name_file_8f90_source.html#l00140">NameFile.f90:140</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html"><div class="ttname"><a href="namespaceconstantsmodule.html">constantsmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00001">Constants.f90:1</a></div></div>
+<div class="ttc" id="anamespacenamefilemodule_html_a8447d145db7cfa2ee7c6820b406fe005"><div class="ttname"><a href="namespacenamefilemodule.html#a8447d145db7cfa2ee7c6820b406fe005">namefilemodule::namefile_init</a></div><div class="ttdeci">subroutine namefile_init(this, filename, iout)</div><div class="ttdef"><b>Definition:</b> <a href="_name_file_8f90_source.html#l00034">NameFile.f90:34</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_a2e75f10abe62e57d87d7d468c2bf763d"><div class="ttname"><a href="namespaceconstantsmodule.html#a2e75f10abe62e57d87d7d468c2bf763d">constantsmodule::lenpackagename</a></div><div class="ttdeci">integer(i4b), parameter lenpackagename</div><div class="ttdoc">maximum length of the package name</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00013">Constants.f90:13</a></div></div>
+<div class="ttc" id="astructblockparsermodule_1_1blockparsertype_html"><div class="ttname"><a href="structblockparsermodule_1_1blockparsertype.html">blockparsermodule::blockparsertype</a></div><div class="ttdef"><b>Definition:</b> <a href="_block_parser_8f90_source.html#l00016">BlockParser.f90:16</a></div></div>
 <div class="ttc" id="anamespacekindmodule_html_ae38bd3a7dfaf151094c26e1529259639"><div class="ttname"><a href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">kindmodule::dp</a></div><div class="ttdeci">integer, parameter dp</div><div class="ttdef"><b>Definition:</b> <a href="kind_8f90_source.html#l00007">kind.f90:7</a></div></div>
 <div class="ttc" id="anamespaceinputoutputmodule_html_ae97851e3edae8d9809e384058a1a4d52"><div class="ttname"><a href="namespaceinputoutputmodule.html#ae97851e3edae8d9809e384058a1a4d52">inputoutputmodule::openfile</a></div><div class="ttdeci">subroutine, public openfile(iu, iout, fname, ftype, fmtarg_opt, accarg_opt, filstat_opt, mode_opt)</div><div class="ttdef"><b>Definition:</b> <a href="_input_output_8f90_source.html#l00034">InputOutput.f90:34</a></div></div>
+<div class="ttc" id="anamespacenamefilemodule_html_a6f20d77ce862862d4d1fa711a1ee7d30"><div class="ttname"><a href="namespacenamefilemodule.html#a6f20d77ce862862d4d1fa711a1ee7d30">namefilemodule::namefile_get_nval_for_row</a></div><div class="ttdeci">integer(i4b) function namefile_get_nval_for_row(this, irow)</div><div class="ttdef"><b>Definition:</b> <a href="_name_file_8f90_source.html#l00293">NameFile.f90:293</a></div></div>
 <div class="ttc" id="anamespacearrayhandlersmodule_html_a6f3ceef8df3f4f56d24d45fdf6685050"><div class="ttname"><a href="namespacearrayhandlersmodule.html#a6f3ceef8df3f4f56d24d45fdf6685050">arrayhandlersmodule::remove_character</a></div><div class="ttdeci">subroutine, public remove_character(array, ipos)</div><div class="ttdef"><b>Definition:</b> <a href="_array_handlers_8f90_source.html#l00384">ArrayHandlers.f90:384</a></div></div>
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_ff383ddf1aa4eab0c4ce7910366d05a5.html">Utilities</a></li><li class="navelem"><a class="el" href="_name_file_8f90.html">NameFile.f90</a></li>
+    <li class="footer">Generated on Thu Jun 24 2021 19:50:09 for MODFLOW 6 by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
 </body>
 </html>

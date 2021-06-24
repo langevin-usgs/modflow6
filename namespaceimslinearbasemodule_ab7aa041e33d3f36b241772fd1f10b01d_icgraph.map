@@ -1,0 +1,6 @@
+<map id="imslinearbasemodule::ims_base_dotp" name="imslinearbasemodule::ims_base_dotp">
+<area shape="rect" id="node1" title="Calculate the dot product." alt="" coords="488,39,651,80"/>
+<area shape="rect" id="node2" href="$namespaceimslinearbasemodule.html#a4ea318d12fd3c9a9157e9d9105dcc0e2" title="@ brief Preconditioned BiConjugate Gradient Stabilized linear accelerator" alt="" coords="277,5,440,47"/>
+<area shape="rect" id="node4" href="$namespaceimslinearbasemodule.html#afbf0c8cb5e5b740b9ff34f7c7141f251" title="@ brief Preconditioned Conjugate Gradient linear accelerator" alt="" coords="277,71,440,112"/>
+<area shape="rect" id="node3" href="$namespaceimslinearmodule.html#a7c756a5435a1749f8b81d2c0148f756c" title="@ brief Base linear accelerator subroutine" alt="" coords="5,46,229,73"/>
+</map>

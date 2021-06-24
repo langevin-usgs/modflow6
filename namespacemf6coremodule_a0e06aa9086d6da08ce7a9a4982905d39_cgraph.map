@@ -1,11 +1,12 @@
 <map id="mf6coremodule::mf6dotimestep" name="mf6coremodule::mf6dotimestep">
-<area shape="rect" id="node1" title=" " alt="" coords="5,46,239,73"/>
-<area shape="rect" id="node2" href="$namespacesolutiongroupmodule.html#a7adf638009121f69976a00aa98c604b5" title=" " alt="" coords="287,5,477,47"/>
-<area shape="rect" id="node3" href="$namespacemf6coremodule.html#aa3df08d0706463a5a6574eac307a6636" title=" " alt="" coords="303,71,461,112"/>
-<area shape="rect" id="node4" href="$namespaceadaptivetimestepmodule.html#ac42ef52366c6713c5f75da5329f87cad" title="@ brief Reset time step because failure has occurred" alt="" coords="525,5,712,47"/>
-<area shape="rect" id="node6" href="$namespacesimmodule.html#a38f8eef6986861e5b90802678e34879c" title=" " alt="" coords="537,71,700,112"/>
-<area shape="rect" id="node7" href="$namespacetdismodule.html#ae74144fd4dafbd8f5ec90936c9c349cc" title=" " alt="" coords="539,136,698,177"/>
-<area shape="rect" id="node5" href="$namespaceadaptivetimestepmodule.html#a95cd63bed2962fac3da7f09aaddbf7de" title="@ brief Determine if period is adaptive" alt="" coords="760,21,947,63"/>
-<area shape="rect" id="node8" href="$namespaceadaptivetimestepmodule.html#a1ef7ceed3d7cd5e91a9f407b788fc92f" title="@ brief Set time step" alt="" coords="760,103,947,144"/>
-<area shape="rect" id="node9" href="$namespaceadaptivetimestepmodule.html#a4ee46460f38cadb79cf7a253368850c0" title="@ brief Set end of period indicator" alt="" coords="760,168,947,209"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,79,239,106"/>
+<area shape="rect" id="node2" href="$namespacesolutiongroupmodule.html#a7adf638009121f69976a00aa98c604b5" title=" " alt="" coords="287,23,477,64"/>
+<area shape="rect" id="node4" href="$namespacemf6coremodule.html#aa3df08d0706463a5a6574eac307a6636" title=" " alt="" coords="303,104,461,145"/>
+<area shape="rect" id="node3" href="$namespacesolutiongroupmodule.html#a24edb8f47b612f3c62752756210e9cca" title=" " alt="" coords="525,5,720,47"/>
+<area shape="rect" id="node5" href="$namespaceadaptivetimestepmodule.html#ac42ef52366c6713c5f75da5329f87cad" title="@ brief Reset time step because failure has occurred" alt="" coords="529,71,716,112"/>
+<area shape="rect" id="node7" href="$namespacesimmodule.html#a38f8eef6986861e5b90802678e34879c" title=" " alt="" coords="541,136,704,177"/>
+<area shape="rect" id="node8" href="$namespacetdismodule.html#ae74144fd4dafbd8f5ec90936c9c349cc" title=" " alt="" coords="543,201,702,243"/>
+<area shape="rect" id="node6" href="$namespaceadaptivetimestepmodule.html#a95cd63bed2962fac3da7f09aaddbf7de" title="@ brief Determine if period is adaptive" alt="" coords="768,87,955,128"/>
+<area shape="rect" id="node9" href="$namespaceadaptivetimestepmodule.html#a1ef7ceed3d7cd5e91a9f407b788fc92f" title="@ brief Set time step" alt="" coords="768,168,955,209"/>
+<area shape="rect" id="node10" href="$namespaceadaptivetimestepmodule.html#a4ee46460f38cadb79cf7a253368850c0" title="@ brief Set end of period indicator" alt="" coords="768,233,955,275"/>
 </map>

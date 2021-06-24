@@ -5,13 +5,22 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MODFLOW 6 Code Documentation: /home/runner/work/modflow6/modflow6/src/Utilities/OutputControl/OutputControlData.f90 Source File</title>
+<title>MODFLOW 6: /home/runner/work/modflow6/modflow6/src/Utilities/OutputControl/OutputControlData.f90 Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="CustomDoxygen.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -21,9 +30,12 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="mf6-triangular-grid.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">MODFLOW 6 Code Documentation
+   <div id="projectname">MODFLOW 6
+   &#160;<span id="projectnumber">version 6.2.2</span>
    </div>
+   <div id="projectbrief">MODFLOW 6 Code Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -36,16 +48,54 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Modules</span></a></li>
+      <li><a href="annotated.html"><span>Data&#160;Types&#160;List</span></a></li>
+      <li class="current"><a href="files.html"><span>Files</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('_output_control_data_8f90_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,11 +110,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_ff383ddf1aa4eab0c4ce7910366d05a5.html">Utilities</a></li><li class="navelem"><a class="el" href="dir_999e2359dc7886edabb368f39392551b.html">OutputControl</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">OutputControlData.f90</div>  </div>
@@ -75,34 +120,34 @@ $(function() {
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacebasedismodule.html">basedismodule</a>,          <span class="keywordtype">only</span>: disbasetype</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespaceinputoutputmodule.html">inputoutputmodule</a>,      <span class="keywordtype">only</span>: <a class="code" href="namespaceinputoutputmodule.html#a98f6deb576ab4d90ea3ddf849aa1ec8d">print_format</a></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacekindmodule.html">kindmodule</a>,             <span class="keywordtype">only</span>: <a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>, <a class="code" href="namespacekindmodule.html#a2f6861418b5e7d3d602b77228232a470">i4b</a></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespaceprintsavemanagermodule.html">printsavemanagermodule</a>, <span class="keywordtype">only</span>: printsavemanagertype</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespaceprintsavemanagermodule.html">printsavemanagermodule</a>, <span class="keywordtype">only</span>: <a class="code" href="structprintsavemanagermodule_1_1printsavemanagertype.html">printsavemanagertype</a></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  </div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  <span class="keywordtype">implicit none</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  <span class="keywordtype">private</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  <span class="keywordtype">public</span> outputcontroldatatype, <a class="code" href="namespaceoutputcontroldata.html#a225600f84ec8c95252f9f5a9bd305024">ocd_cr</a></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  <span class="keywordtype">public</span> <a class="code" href="structoutputcontroldata_1_1outputcontroldatatype.html">outputcontroldatatype</a>, <a class="code" href="namespaceoutputcontroldata.html#a225600f84ec8c95252f9f5a9bd305024">ocd_cr</a></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <span class="keyword">type</span> outputcontroldatatype</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordtype">character(len=16)</span>, <span class="keywordtype">pointer</span>              :: cname    =&gt; null()</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">character(len=60)</span>, <span class="keywordtype">pointer</span>              :: cdatafmp =&gt; null()</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">pointer</span>                   :: idataun  =&gt; null()</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">character(len=1)</span>, <span class="keywordtype">pointer</span>               :: editdesc =&gt; null()</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">pointer</span>                   :: nvaluesp =&gt; null()</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">pointer</span>                   :: nwidthp  =&gt; null()</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">pointer</span>                       :: dnodata  =&gt; null()</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">pointer</span>                   :: inodata  =&gt; null()</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span>         :: dblvec   =&gt; null()</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span>     :: intvec   =&gt; null()</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">class</span>(DisBaseType), <span class="keywordtype">pointer</span>             :: dis      =&gt; null()</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">type</span>(PrintSaveManagerType), <span class="keywordtype">pointer</span>     :: psmobj   =&gt; null()</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="structoutputcontroldata_1_1outputcontroldatatype.html">   12</a></span>&#160;  <span class="keyword">type</span> <a class="code" href="structoutputcontroldata_1_1outputcontroldatatype.html">outputcontroldatatype</a></div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="structoutputcontroldata_1_1outputcontroldatatype.html#a304f5cf8a1e182fdf9a3a979b8fee2fb">   13</a></span>&#160;    <span class="keywordtype">character(len=16)</span>, <span class="keywordtype">pointer</span>              :: cname    =&gt; null()</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="structoutputcontroldata_1_1outputcontroldatatype.html#a230d6241612687d6879322b1c31bebaa">   14</a></span>&#160;    <span class="keywordtype">character(len=60)</span>, <span class="keywordtype">pointer</span>              :: cdatafmp =&gt; null()</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="structoutputcontroldata_1_1outputcontroldatatype.html#ab7cf627546a9551f8f4430ff21d0c141">   15</a></span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">pointer</span>                   :: idataun  =&gt; null()</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="structoutputcontroldata_1_1outputcontroldatatype.html#acb5cc7020cdbbed3ee069f0d1ba788f1">   16</a></span>&#160;    <span class="keywordtype">character(len=1)</span>, <span class="keywordtype">pointer</span>               :: editdesc =&gt; null()</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="structoutputcontroldata_1_1outputcontroldatatype.html#addc8c6349e4cdbd8604bf9c358738939">   17</a></span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">pointer</span>                   :: nvaluesp =&gt; null()</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="structoutputcontroldata_1_1outputcontroldatatype.html#aa2983aed025db46e3a442417c1b16a58">   18</a></span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">pointer</span>                   :: nwidthp  =&gt; null()</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="structoutputcontroldata_1_1outputcontroldatatype.html#a82cdea31807c17f877f7b17f28f291d4">   19</a></span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">pointer</span>                       :: dnodata  =&gt; null()</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="structoutputcontroldata_1_1outputcontroldatatype.html#a79c928e3959d9f74e601917aaf1bae20">   20</a></span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">pointer</span>                   :: inodata  =&gt; null()</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="structoutputcontroldata_1_1outputcontroldatatype.html#ab3b8f09a262d424bfb1c1570b3e558a3">   21</a></span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span>         :: dblvec   =&gt; null()</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="structoutputcontroldata_1_1outputcontroldatatype.html#a9be20e6b092202e9805909e9ff7ac141">   22</a></span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span>     :: intvec   =&gt; null()</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="structoutputcontroldata_1_1outputcontroldatatype.html#a20b06a4b7f3c38798c9cff98c2a29bf2">   23</a></span>&#160;    <span class="keywordtype">class</span>(disbasetype), <span class="keywordtype">pointer</span>             :: dis      =&gt; null()</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="structoutputcontroldata_1_1outputcontroldatatype.html#aa7b7d25d16aff071a40d9507f160feae">   24</a></span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structprintsavemanagermodule_1_1printsavemanagertype.html">printsavemanagertype</a>), <span class="keywordtype">pointer</span>     :: psmobj   =&gt; null()</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keyword">contains</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">procedure</span> :: allocate_scalars</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">procedure</span> :: init_int</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">procedure</span> :: init_dbl</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">procedure</span> :: set_option</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">procedure</span> :: ocd_rp_check</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">procedure</span> :: ocd_ot</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">procedure</span> :: ocd_da</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keyword">end type </span>outputcontroldatatype</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="structoutputcontroldata_1_1outputcontroldatatype.html#aaa57fc5742b1c643f727208c07ed99db">   26</a></span>&#160;    <span class="keywordtype">procedure</span> :: <a class="code" href="namespaceoutputcontroldata.html#a69850a5dd17695a5b642e9d3446dbe79">allocate_scalars</a></div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="structoutputcontroldata_1_1outputcontroldatatype.html#ad0e91190e906ef4eef09c10419c27f0b">   27</a></span>&#160;    <span class="keywordtype">procedure</span> :: <a class="code" href="namespaceoutputcontroldata.html#a69d34d636f2fa29e0e0272ae85c3d38a">init_int</a></div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="structoutputcontroldata_1_1outputcontroldatatype.html#ae0eac0480969e0c7053ccf7d7ad71557">   28</a></span>&#160;    <span class="keywordtype">procedure</span> :: <a class="code" href="namespaceoutputcontroldata.html#a54e147b3c97b9472f11daca3907158ab">init_dbl</a></div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="structoutputcontroldata_1_1outputcontroldatatype.html#a8122bfe24827ad6937a3de6a2d940619">   29</a></span>&#160;    <span class="keywordtype">procedure</span> :: <a class="code" href="namespaceoutputcontroldata.html#a8d39d48b1dc0a811cd35b7e283a22f65">set_option</a></div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="structoutputcontroldata_1_1outputcontroldatatype.html#ae08bc22ec5d4d1756f44475a8bfded5b">   30</a></span>&#160;    <span class="keywordtype">procedure</span> :: <a class="code" href="namespaceoutputcontroldata.html#a1c9afaae8cb986a0c0acfdfe2d5e0e06">ocd_rp_check</a></div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="structoutputcontroldata_1_1outputcontroldatatype.html#aaf3b5f704f0c647754c69a7c43d44464">   31</a></span>&#160;    <span class="keywordtype">procedure</span> :: <a class="code" href="namespaceoutputcontroldata.html#a593492d10b998e7d9a0ec887d74eebcc">ocd_ot</a></div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="structoutputcontroldata_1_1outputcontroldatatype.html#a191cf53f8ebd2ee34d08fa0240098d20">   32</a></span>&#160;    <span class="keywordtype">procedure</span> :: <a class="code" href="namespaceoutputcontroldata.html#a1911736821bd0439fe6d95a51925e7af">ocd_da</a></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keyword">end type </span><a class="code" href="structoutputcontroldata_1_1outputcontroldatatype.html">outputcontroldatatype</a></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  </div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keyword">contains</span></div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  </div>
@@ -114,7 +159,7 @@ $(function() {
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">!    SPECIFICATIONS:</span></div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">type</span>(outputcontroldatatype), <span class="keywordtype">pointer</span> :: ocdobj</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structoutputcontroldata_1_1outputcontroldatatype.html">outputcontroldatatype</a>), <span class="keywordtype">pointer</span> :: ocdobj</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="comment">! -- Create the object</span></div>
@@ -127,8 +172,8 @@ $(function() {
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">return</span></div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespaceoutputcontroldata.html#a225600f84ec8c95252f9f5a9bd305024">ocd_cr</a></div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keyword">subroutine </span>ocd_rp_check(this, inunit)</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespaceoutputcontroldata.html#a1c9afaae8cb986a0c0acfdfe2d5e0e06">ocd_rp_check</a>(this, inunit)</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="namespaceoutputcontroldata.html#a1c9afaae8cb986a0c0acfdfe2d5e0e06">   59</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">! ocd_rp_check -- Check to make sure settings are consistent</span></div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">!</span></div>
@@ -138,7 +183,7 @@ $(function() {
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespaceconstantsmodule.html">constantsmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespaceconstantsmodule.html#a060d310ded5535ce2dc85bd1ca1afd3d">linelength</a></div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacesimmodule.html">simmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a">store_error</a>, <a class="code" href="namespacesimmodule.html#a4c46e49de78d4498dd4ec106357775e6">count_errors</a>, <a class="code" href="namespacesimmodule.html#a1c78a6fda06b630c738bb654aa6bd816">store_error_unit</a>, <a class="code" href="namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61">ustop</a></div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">class</span>(outputcontroldatatype) :: this</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structoutputcontroldata_1_1outputcontroldatatype.html">outputcontroldatatype</a>) :: this</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: inunit</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="comment">! -- locals</span></div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">character(len=LINELENGTH)</span> :: errmsg</div>
@@ -165,7 +210,7 @@ $(function() {
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="comment">! -- return</span></div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <span class="keyword">end subroutine </span>ocd_rp_check</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespaceoutputcontroldata.html#a1c9afaae8cb986a0c0acfdfe2d5e0e06">ocd_rp_check</a></div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespaceoutputcontroldata.html#a593492d10b998e7d9a0ec887d74eebcc">ocd_ot</a>(this, ipflg, kstp, nstp, iout, iprint_opt, isav_opt)</div>
 <div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="namespaceoutputcontroldata.html#a593492d10b998e7d9a0ec887d74eebcc">   99</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
@@ -175,7 +220,7 @@ $(function() {
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment">!    SPECIFICATIONS:</span></div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordtype">class</span>(outputcontroldatatype) :: this</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structoutputcontroldata_1_1outputcontroldatatype.html">outputcontroldatatype</a>) :: this</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(inout)</span> :: ipflg</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: kstp</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: nstp</div>
@@ -231,8 +276,8 @@ $(function() {
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keywordflow">return</span></div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespaceoutputcontroldata.html#a593492d10b998e7d9a0ec887d74eebcc">ocd_ot</a></div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  </div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  <span class="keyword">subroutine </span>ocd_da(this)</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespaceoutputcontroldata.html#a1911736821bd0439fe6d95a51925e7af">ocd_da</a>(this)</div>
+<div class="line"><a name="l00163"></a><span class="lineno"><a class="line" href="namespaceoutputcontroldata.html#a1911736821bd0439fe6d95a51925e7af">  163</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="comment">! ocd_da --deallocate</span></div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="comment">!</span></div>
@@ -241,7 +286,7 @@ $(function() {
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="comment">! -- modules</span></div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespaceconstantsmodule.html">constantsmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespaceconstantsmodule.html#abab5757666b9ddd2726c20ce48dd0050">dzero</a></div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keywordtype">class</span>(outputcontroldatatype) :: this</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structoutputcontroldata_1_1outputcontroldatatype.html">outputcontroldatatype</a>) :: this</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="comment">! -- deallocate </span></div>
@@ -257,7 +302,7 @@ $(function() {
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <span class="comment">! -- return</span></div>
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  <span class="keyword">end subroutine </span>ocd_da  </div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespaceoutputcontroldata.html#a1911736821bd0439fe6d95a51925e7af">ocd_da</a>  </div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;  </div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespaceoutputcontroldata.html#a54e147b3c97b9472f11daca3907158ab">init_dbl</a>(this, cname, dblvec, dis, cdefpsm, cdeffmp, iout,    &amp;</div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                      dnodata)</div>
@@ -268,7 +313,7 @@ $(function() {
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;<span class="comment">!    SPECIFICATIONS:</span></div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <span class="keywordtype">class</span>(outputcontroldatatype) :: this</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structoutputcontroldata_1_1outputcontroldatatype.html">outputcontroldatatype</a>) :: this</div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="keywordtype">character(len=*)</span>, <span class="keywordtype">intent(in)</span> :: cname</div>
 <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span>, <span class="keywordtype">intent(in)</span> :: dblvec</div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <span class="keywordtype">class</span>(disbasetype), <span class="keywordtype">pointer</span>, <span class="keywordtype">intent(in)</span> :: dis</div>
@@ -291,16 +336,16 @@ $(function() {
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <span class="keywordflow">return</span></div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespaceoutputcontroldata.html#a54e147b3c97b9472f11daca3907158ab">init_dbl</a></div>
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;  </div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;  <span class="keyword">subroutine </span>init_int(this, cname, intvec, dis, cdefpsm, cdeffmp, iout,    &amp;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespaceoutputcontroldata.html#a69d34d636f2fa29e0e0272ae85c3d38a">init_int</a>(this, cname, intvec, dis, cdefpsm, cdeffmp, iout,    &amp;</div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;                      inodata)</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00224"></a><span class="lineno"><a class="line" href="namespaceoutputcontroldata.html#a69d34d636f2fa29e0e0272ae85c3d38a">  224</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;<span class="comment">! init_int -- Initialize integer variable</span></div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;<span class="comment">!</span></div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;<span class="comment">!    SPECIFICATIONS:</span></div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <span class="keywordtype">class</span>(outputcontroldatatype) :: this</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structoutputcontroldata_1_1outputcontroldatatype.html">outputcontroldatatype</a>) :: this</div>
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    <span class="keywordtype">character(len=*)</span>, <span class="keywordtype">intent(in)</span> :: cname</div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span>, <span class="keywordtype">intent(in)</span> :: intvec</div>
 <div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <span class="keywordtype">class</span>(disbasetype), <span class="keywordtype">pointer</span>, <span class="keywordtype">intent(in)</span> :: dis</div>
@@ -322,10 +367,10 @@ $(function() {
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <span class="comment">! -- return</span></div>
 <div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;  <span class="keyword">end subroutine </span>init_int  </div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespaceoutputcontroldata.html#a69d34d636f2fa29e0e0272ae85c3d38a">init_int</a>  </div>
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;  </div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;  <span class="keyword">subroutine </span>allocate_scalars(this)</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespaceoutputcontroldata.html#a69850a5dd17695a5b642e9d3446dbe79">allocate_scalars</a>(this)</div>
+<div class="line"><a name="l00256"></a><span class="lineno"><a class="line" href="namespaceoutputcontroldata.html#a69850a5dd17695a5b642e9d3446dbe79">  256</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;<span class="comment">! allocate_scalars -- Allocate scalars</span></div>
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;<span class="comment">!</span></div>
@@ -334,7 +379,7 @@ $(function() {
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <span class="comment">! -- modules</span></div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespaceconstantsmodule.html">constantsmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespaceconstantsmodule.html#abab5757666b9ddd2726c20ce48dd0050">dzero</a></div>
 <div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    <span class="keywordtype">class</span>(outputcontroldatatype) :: this</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structoutputcontroldata_1_1outputcontroldatatype.html">outputcontroldatatype</a>) :: this</div>
 <div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="keyword">allocate</span>(this%cname)</div>
@@ -358,7 +403,7 @@ $(function() {
 <div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    <span class="comment">! -- return</span></div>
 <div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;  <span class="keyword">end subroutine </span>allocate_scalars  </div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespaceoutputcontroldata.html#a69850a5dd17695a5b642e9d3446dbe79">allocate_scalars</a>  </div>
 <div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;  </div>
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespaceoutputcontroldata.html#a8d39d48b1dc0a811cd35b7e283a22f65">set_option</a>(this, linein, inunit, iout)</div>
 <div class="line"><a name="l00292"></a><span class="lineno"><a class="line" href="namespaceoutputcontroldata.html#a8d39d48b1dc0a811cd35b7e283a22f65">  292</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
@@ -373,7 +418,7 @@ $(function() {
 <div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespaceinputoutputmodule.html">inputoutputmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespaceinputoutputmodule.html#a653efe7e8a111c5e477fea26e0b04fe5">urword</a>, <a class="code" href="namespaceinputoutputmodule.html#a535bdfca3d31ebc3a8e4bd5af6890d55">getunit</a>, <a class="code" href="namespaceinputoutputmodule.html#ae97851e3edae8d9809e384058a1a4d52">openfile</a></div>
 <div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacesimmodule.html">simmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a">store_error</a>, <a class="code" href="namespacesimmodule.html#a1c78a6fda06b630c738bb654aa6bd816">store_error_unit</a>, <a class="code" href="namespacesimmodule.html#a4c46e49de78d4498dd4ec106357775e6">count_errors</a>, <a class="code" href="namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61">ustop</a></div>
 <div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    <span class="keywordtype">class</span>(outputcontroldatatype) :: this</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structoutputcontroldata_1_1outputcontroldatatype.html">outputcontroldatatype</a>) :: this</div>
 <div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    <span class="keywordtype">character(len=*)</span>, <span class="keywordtype">intent(in)</span> :: linein</div>
 <div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: inunit</div>
 <div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: iout</div>
@@ -415,6 +460,7 @@ $(function() {
 <div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;  </div>
 <div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;<span class="keyword">end module </span><a class="code" href="namespaceoutputcontroldata.html">outputcontroldata</a></div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <div class="ttc" id="anamespacekindmodule_html"><div class="ttname"><a href="namespacekindmodule.html">kindmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="kind_8f90_source.html#l00001">kind.f90:1</a></div></div>
 <div class="ttc" id="anamespaceoutputcontroldata_html_a593492d10b998e7d9a0ec887d74eebcc"><div class="ttname"><a href="namespaceoutputcontroldata.html#a593492d10b998e7d9a0ec887d74eebcc">outputcontroldata::ocd_ot</a></div><div class="ttdeci">subroutine ocd_ot(this, ipflg, kstp, nstp, iout, iprint_opt, isav_opt)</div><div class="ttdef"><b>Definition:</b> <a href="_output_control_data_8f90_source.html#l00099">OutputControlData.f90:99</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_abab5757666b9ddd2726c20ce48dd0050"><div class="ttname"><a href="namespaceconstantsmodule.html#abab5757666b9ddd2726c20ce48dd0050">constantsmodule::dzero</a></div><div class="ttdeci">real(dp), parameter dzero</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00045">Constants.f90:45</a></div></div>
@@ -427,6 +473,7 @@ $(function() {
 <div class="ttc" id="anamespacesimmodule_html"><div class="ttname"><a href="namespacesimmodule.html">simmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_sim_8f90_source.html#l00001">Sim.f90:1</a></div></div>
 <div class="ttc" id="anamespaceoutputcontroldata_html_a8d39d48b1dc0a811cd35b7e283a22f65"><div class="ttname"><a href="namespaceoutputcontroldata.html#a8d39d48b1dc0a811cd35b7e283a22f65">outputcontroldata::set_option</a></div><div class="ttdeci">subroutine set_option(this, linein, inunit, iout)</div><div class="ttdef"><b>Definition:</b> <a href="_output_control_data_8f90_source.html#l00292">OutputControlData.f90:292</a></div></div>
 <div class="ttc" id="anamespaceoutputcontroldata_html_a54e147b3c97b9472f11daca3907158ab"><div class="ttname"><a href="namespaceoutputcontroldata.html#a54e147b3c97b9472f11daca3907158ab">outputcontroldata::init_dbl</a></div><div class="ttdeci">subroutine init_dbl(this, cname, dblvec, dis, cdefpsm, cdeffmp, iout, dnodata)</div><div class="ttdef"><b>Definition:</b> <a href="_output_control_data_8f90_source.html#l00192">OutputControlData.f90:192</a></div></div>
+<div class="ttc" id="astructoutputcontroldata_1_1outputcontroldatatype_html"><div class="ttname"><a href="structoutputcontroldata_1_1outputcontroldatatype.html">outputcontroldata::outputcontroldatatype</a></div><div class="ttdef"><b>Definition:</b> <a href="_output_control_data_8f90_source.html#l00012">OutputControlData.f90:12</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_a060d310ded5535ce2dc85bd1ca1afd3d"><div class="ttname"><a href="namespaceconstantsmodule.html#a060d310ded5535ce2dc85bd1ca1afd3d">constantsmodule::linelength</a></div><div class="ttdeci">integer(i4b), parameter linelength</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00028">Constants.f90:28</a></div></div>
 <div class="ttc" id="anamespacesimmodule_html_a0be97214c1d4fcf42bc4ddc27b111b61"><div class="ttname"><a href="namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61">simmodule::ustop</a></div><div class="ttdeci">subroutine, public ustop(stopmess, ioutlocal)</div><div class="ttdef"><b>Definition:</b> <a href="_sim_8f90_source.html#l00324">Sim.f90:324</a></div></div>
 <div class="ttc" id="anamespaceinputoutputmodule_html_a535bdfca3d31ebc3a8e4bd5af6890d55"><div class="ttname"><a href="namespaceinputoutputmodule.html#a535bdfca3d31ebc3a8e4bd5af6890d55">inputoutputmodule::getunit</a></div><div class="ttdeci">integer(i4b) function, public getunit()</div><div class="ttdef"><b>Definition:</b> <a href="_input_output_8f90_source.html#l00208">InputOutput.f90:208</a></div></div>
@@ -434,19 +481,27 @@ $(function() {
 <div class="ttc" id="anamespaceoutputcontroldata_html"><div class="ttname"><a href="namespaceoutputcontroldata.html">outputcontroldata</a></div><div class="ttdef"><b>Definition:</b> <a href="_output_control_data_8f90_source.html#l00001">OutputControlData.f90:1</a></div></div>
 <div class="ttc" id="anamespacekindmodule_html_a2f6861418b5e7d3d602b77228232a470"><div class="ttname"><a href="namespacekindmodule.html#a2f6861418b5e7d3d602b77228232a470">kindmodule::i4b</a></div><div class="ttdeci">integer, parameter i4b</div><div class="ttdef"><b>Definition:</b> <a href="kind_8f90_source.html#l00009">kind.f90:9</a></div></div>
 <div class="ttc" id="anamespaceprintsavemanagermodule_html"><div class="ttname"><a href="namespaceprintsavemanagermodule.html">printsavemanagermodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_print_save_manager_8f90_source.html#l00027">PrintSaveManager.f90:27</a></div></div>
+<div class="ttc" id="astructprintsavemanagermodule_1_1printsavemanagertype_html"><div class="ttname"><a href="structprintsavemanagermodule_1_1printsavemanagertype.html">printsavemanagermodule::printsavemanagertype</a></div><div class="ttdef"><b>Definition:</b> <a href="_print_save_manager_8f90_source.html#l00037">PrintSaveManager.f90:37</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_a8f91ce3a7d9214a7dd504a557c9302cbad1cabe51afa7f9201930acec652dc51f"><div class="ttname"><a href="namespaceconstantsmodule.html#a8f91ce3a7d9214a7dd504a557c9302cbad1cabe51afa7f9201930acec652dc51f">constantsmodule::mnormal</a></div><div class="ttdeci">@ mnormal</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00140">Constants.f90:140</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html"><div class="ttname"><a href="namespaceconstantsmodule.html">constantsmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00001">Constants.f90:1</a></div></div>
+<div class="ttc" id="anamespaceoutputcontroldata_html_a69850a5dd17695a5b642e9d3446dbe79"><div class="ttname"><a href="namespaceoutputcontroldata.html#a69850a5dd17695a5b642e9d3446dbe79">outputcontroldata::allocate_scalars</a></div><div class="ttdeci">subroutine allocate_scalars(this)</div><div class="ttdef"><b>Definition:</b> <a href="_output_control_data_8f90_source.html#l00256">OutputControlData.f90:256</a></div></div>
 <div class="ttc" id="anamespacekindmodule_html_ae38bd3a7dfaf151094c26e1529259639"><div class="ttname"><a href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">kindmodule::dp</a></div><div class="ttdeci">integer, parameter dp</div><div class="ttdef"><b>Definition:</b> <a href="kind_8f90_source.html#l00007">kind.f90:7</a></div></div>
+<div class="ttc" id="anamespaceoutputcontroldata_html_a1911736821bd0439fe6d95a51925e7af"><div class="ttname"><a href="namespaceoutputcontroldata.html#a1911736821bd0439fe6d95a51925e7af">outputcontroldata::ocd_da</a></div><div class="ttdeci">subroutine ocd_da(this)</div><div class="ttdef"><b>Definition:</b> <a href="_output_control_data_8f90_source.html#l00163">OutputControlData.f90:163</a></div></div>
 <div class="ttc" id="anamespaceopenspecmodule_html_ade3198b3fa7a2972dae70d888f866536"><div class="ttname"><a href="namespaceopenspecmodule.html#ade3198b3fa7a2972dae70d888f866536">openspecmodule::form</a></div><div class="ttdeci">character(len=20) form</div><div class="ttdef"><b>Definition:</b> <a href="_open_spec_8f90_source.html#l00007">OpenSpec.f90:7</a></div></div>
 <div class="ttc" id="anamespaceinputoutputmodule_html_a653efe7e8a111c5e477fea26e0b04fe5"><div class="ttname"><a href="namespaceinputoutputmodule.html#a653efe7e8a111c5e477fea26e0b04fe5">inputoutputmodule::urword</a></div><div class="ttdeci">subroutine, public urword(LINE, ICOL, ISTART, ISTOP, NCODE, N, R, IOUT, IN)</div><div class="ttdef"><b>Definition:</b> <a href="_input_output_8f90_source.html#l00747">InputOutput.f90:747</a></div></div>
+<div class="ttc" id="anamespaceoutputcontroldata_html_a69d34d636f2fa29e0e0272ae85c3d38a"><div class="ttname"><a href="namespaceoutputcontroldata.html#a69d34d636f2fa29e0e0272ae85c3d38a">outputcontroldata::init_int</a></div><div class="ttdeci">subroutine init_int(this, cname, intvec, dis, cdefpsm, cdeffmp, iout, inodata)</div><div class="ttdef"><b>Definition:</b> <a href="_output_control_data_8f90_source.html#l00224">OutputControlData.f90:224</a></div></div>
 <div class="ttc" id="anamespaceopenspecmodule_html_a5cd9b8ccff306158f81ed8cc744b1e46"><div class="ttname"><a href="namespaceopenspecmodule.html#a5cd9b8ccff306158f81ed8cc744b1e46">openspecmodule::access</a></div><div class="ttdeci">character(len=20) access</div><div class="ttdef"><b>Definition:</b> <a href="_open_spec_8f90_source.html#l00007">OpenSpec.f90:7</a></div></div>
 <div class="ttc" id="anamespaceinputoutputmodule_html_ae97851e3edae8d9809e384058a1a4d52"><div class="ttname"><a href="namespaceinputoutputmodule.html#ae97851e3edae8d9809e384058a1a4d52">inputoutputmodule::openfile</a></div><div class="ttdeci">subroutine, public openfile(iu, iout, fname, ftype, fmtarg_opt, accarg_opt, filstat_opt, mode_opt)</div><div class="ttdef"><b>Definition:</b> <a href="_input_output_8f90_source.html#l00034">InputOutput.f90:34</a></div></div>
+<div class="ttc" id="anamespaceoutputcontroldata_html_a1c9afaae8cb986a0c0acfdfe2d5e0e06"><div class="ttname"><a href="namespaceoutputcontroldata.html#a1c9afaae8cb986a0c0acfdfe2d5e0e06">outputcontroldata::ocd_rp_check</a></div><div class="ttdeci">subroutine ocd_rp_check(this, inunit)</div><div class="ttdef"><b>Definition:</b> <a href="_output_control_data_8f90_source.html#l00059">OutputControlData.f90:59</a></div></div>
 <div class="ttc" id="anamespaceoutputcontroldata_html_a225600f84ec8c95252f9f5a9bd305024"><div class="ttname"><a href="namespaceoutputcontroldata.html#a225600f84ec8c95252f9f5a9bd305024">outputcontroldata::ocd_cr</a></div><div class="ttdeci">subroutine, public ocd_cr(ocdobj)</div><div class="ttdef"><b>Definition:</b> <a href="_output_control_data_8f90_source.html#l00038">OutputControlData.f90:38</a></div></div>
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_ff383ddf1aa4eab0c4ce7910366d05a5.html">Utilities</a></li><li class="navelem"><a class="el" href="dir_999e2359dc7886edabb368f39392551b.html">OutputControl</a></li><li class="navelem"><a class="el" href="_output_control_data_8f90.html">OutputControlData.f90</a></li>
+    <li class="footer">Generated on Thu Jun 24 2021 19:50:09 for MODFLOW 6 by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
 </body>
 </html>

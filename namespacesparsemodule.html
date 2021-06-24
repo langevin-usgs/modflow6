@@ -5,13 +5,22 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MODFLOW 6 Code Documentation: sparsemodule Module Reference</title>
+<title>MODFLOW 6: sparsemodule Module Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="CustomDoxygen.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -21,9 +30,12 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="mf6-triangular-grid.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">MODFLOW 6 Code Documentation
+   <div id="projectname">MODFLOW 6
+   &#160;<span id="projectnumber">version 6.2.2</span>
    </div>
+   <div id="projectbrief">MODFLOW 6 Code Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -36,16 +48,54 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li class="current"><a href="namespaces.html"><span>Modules</span></a></li>
+      <li><a href="annotated.html"><span>Data&#160;Types&#160;List</span></a></li>
+      <li><a href="files.html"><span>Files</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="namespaces.html"><span>Modules&#160;List</span></a></li>
+      <li><a href="namespacemembers.html"><span>Module&#160;Members</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('namespacesparsemodule.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,7 +110,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Data Types</a> &#124;
@@ -142,7 +191,23 @@ Functions/Subroutines</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_sparse_8f90_source.html#l00122">122</a> of file <a class="el" href="_sparse_8f90_source.html">Sparse.f90</a>.</p>
-<div class="dynheader">
+<div class="fragment"><div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;      <span class="comment">!add a connection to the sparsematrix.  if inodup</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;      <span class="comment">!(for no duplicates) is 1, then j is added only</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;      <span class="comment">!if it is unique.</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;      <span class="comment">! -- dummy</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;      <span class="keywordtype">class</span>(sparsematrix), <span class="keywordtype">intent(inout)</span> :: this</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;      <span class="keywordtype">integer(I4B)</span>,<span class="keywordtype">intent(in)</span> :: i, j, inodup</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;      <span class="keywordtype">integer(I4B)</span>,<span class="keywordtype">optional</span>,<span class="keywordtype">intent(inout)</span> :: iaddop</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;      <span class="comment">! -- local</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;      <span class="keywordtype">integer(I4B)</span> :: iadded</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;      <span class="comment">! -- code</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;      <span class="keyword">call </span>insert(j, this%row(i), inodup, iadded)</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;      this%nnz = this%nnz+iadded</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;      <span class="keywordflow">if</span> (<span class="keyword">present</span>(iaddop)) iaddop = iadded</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;      <span class="comment">!</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;      <span class="comment">! -- return</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;      <span class="keywordflow">return</span></div>
+</div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacesparsemodule_ad8cc00a8d85258913c71aee8d6628396_cgraph.png" border="0" usemap="#namespacesparsemodule_ad8cc00a8d85258913c71aee8d6628396_cgraph" alt=""/></div>
@@ -181,14 +246,33 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_sparse_8f90_source.html#l00235">235</a> of file <a class="el" href="_sparse_8f90_source.html">Sparse.f90</a>.</p>
-<div class="dynheader">
+<div class="fragment"><div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;      <span class="comment">!Add up the off diagonal terms and put the sum in the</span></div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;      <span class="comment">!diagonal position</span></div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;      <span class="comment">! -- dummy</span></div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;      <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">contiguous</span> :: ia</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;<span class="keywordtype">      real</span>(DP), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">contiguous</span> :: flowja</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;      <span class="comment">! -- local</span></div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;      <span class="keywordtype">integer(I4B)</span> :: nodes</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;      <span class="keywordtype">integer(I4B)</span> :: n</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;      <span class="keywordtype">integer(I4B)</span> :: iposdiag</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;      <span class="keywordtype">integer(I4B)</span> :: ipos</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;      <span class="comment">! -- code</span></div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;      nodes = <span class="keyword">size</span>(ia) - 1</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;      <span class="keywordflow">do</span> n = 1, nodes</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        iposdiag = ia(n)</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        <span class="keywordflow">do</span> ipos = ia(n) + 1, ia(n + 1) - 1</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;          flowja(iposdiag) = flowja(iposdiag) + flowja(ipos)</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;<span class="keywordflow">        end do</span></div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;<span class="keywordflow">      end do</span></div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;      <span class="keywordflow">return</span></div>
+</div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacesparsemodule_a1940b7ace4255340f0a5157e61c73974_icgraph.png" border="0" usemap="#namespacesparsemodule_a1940b7ace4255340f0a5157e61c73974_icgraph" alt=""/></div>
 <map name="namespacesparsemodule_a1940b7ace4255340f0a5157e61c73974_icgraph" id="namespacesparsemodule_a1940b7ace4255340f0a5157e61c73974_icgraph">
 <area shape="rect" title=" " alt="" coords="203,31,407,57"/>
 <area shape="rect" href="namespacegwfmodule.html#ad32fec8d701c2c448249dae4287fd789" title=" " alt="" coords="5,5,155,32"/>
-<area shape="rect" href="namespacegwtmodule.html#ac1a81e0927a08f13fdda82d1b58d8fb5" title=" " alt="" coords="7,56,153,83"/>
+<area shape="rect" href="namespacegwtmodule.html#a4698db21bd75128d104e34be9480c2cd" title=" " alt="" coords="5,56,155,83"/>
 </map>
 </div>
 
@@ -211,7 +295,9 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_sparse_8f90_source.html#l00030">30</a> of file <a class="el" href="_sparse_8f90_source.html">Sparse.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;      <span class="keywordtype">class</span>(sparsematrix), <span class="keywordtype">intent(inout)</span> :: this</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;      <span class="keyword">deallocate</span>(this%row)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a3a78257d15427fc5956ec95d2f1d0be8"></a>
@@ -259,7 +345,63 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_sparse_8f90_source.html#l00063">63</a> of file <a class="el" href="_sparse_8f90_source.html">Sparse.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;      <span class="comment">!allocate and fill the ia and ja arrays using information</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      <span class="comment">!from the sparsematrix.</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      <span class="comment">!ierror is returned as:</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      <span class="comment">!  0 if no error</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      <span class="comment">!  1 if ia is not the correct size</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;      <span class="comment">!  2 if ja is not the correct size</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;      <span class="comment">!  3 if both ia and ja are not correct size</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      <span class="comment">! -- dummy</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;      <span class="keywordtype">class</span>(sparsematrix), <span class="keywordtype">intent(inout)</span> :: this</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;      <span class="keywordtype">integer(I4B)</span>,<span class="keywordtype">dimension(:)</span>,<span class="keywordtype">intent(inout)</span> :: ia, ja</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      <span class="keywordtype">integer(I4B)</span>,<span class="keywordtype">intent(inout)</span> :: ierror</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      <span class="keywordtype">logical</span>, <span class="keywordtype">intent(in)</span>, <span class="keywordtype">optional</span> :: sort</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;      <span class="comment">! -- local</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      <span class="keywordtype">logical</span> :: sortja</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      <span class="keywordtype">integer(I4B)</span> :: i,j,ipos</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      <span class="comment">! -- code</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;      <span class="comment">!</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;      <span class="comment">! -- process optional dummy variables</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;      <span class="keywordflow">if</span> (<span class="keyword">present</span>(sort)) <span class="keywordflow">then</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        sortja = sort</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;      <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        sortja = .false.</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="keywordflow">      end if</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;      <span class="comment">!</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;      <span class="comment">! -- initialize error variable</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;      ierror = 0</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;      <span class="comment">!</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;      <span class="comment">! -- check for error conditions</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;      <span class="keywordflow">if</span> (ubound(ia,dim=1) /= this%nrow+1) <span class="keywordflow">then</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        ierror = 1</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="keywordflow">      end if</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;      <span class="keywordflow">if</span> (ubound(ja,dim=1) /= this%nnz) <span class="keywordflow">then</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        ierror = ierror + 2</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="keywordflow">      end if</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;      <span class="keywordflow">if</span> (ierror/=0) <span class="keywordflow">then</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keywordflow">return</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="keywordflow">      end if</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;      <span class="comment">!</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;      <span class="comment">! -- sort this</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;      <span class="keywordflow">if</span> (sortja) <span class="keywordflow">then</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keyword">call </span>this%sort()</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="keywordflow">      end if</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;      <span class="comment">!</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;      <span class="comment">! -- fill ia and ja</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;      ipos = 1</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;      ia(1) = ipos</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;      <span class="keywordflow">do</span> i = 1, this%nrow</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="keywordflow">do</span> j = 1, this%row(i)%nnz</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            ja(ipos) = this%row(i)%icolarray(j)</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            ipos = ipos + 1</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="keywordflow">        end do</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        ia(i+1) = ipos</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="keywordflow">      end do</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;      <span class="comment">!</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;      <span class="comment">! -- return</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;      <span class="keywordflow">return</span></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa628f8a01b0365f233b64b866a1b17ed"></a>
@@ -301,7 +443,32 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_sparse_8f90_source.html#l00035">35</a> of file <a class="el" href="_sparse_8f90_source.html">Sparse.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;      <span class="comment">!initial the sparse matrix.  This subroutine</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;      <span class="comment">!acts a method for a sparse matrix by initializing</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;      <span class="comment">!the row data.  It presently requires one maximum</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;      <span class="comment">!value for all rows, however, this can be changed</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;      <span class="comment">!to a vector of maximum values with one value for</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;      <span class="comment">!each row.</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      <span class="comment">! -- dummy        </span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      <span class="keywordtype">class</span>(sparsematrix), <span class="keywordtype">intent(inout)</span> :: this</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;      <span class="keywordtype">integer(I4B)</span>,<span class="keywordtype">intent(in)</span> :: nrow,ncol</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      <span class="keywordtype">integer(I4B)</span>,<span class="keywordtype">intent(in)</span>,<span class="keywordtype">dimension(nrow)</span> :: rowmaxnnz</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      <span class="comment">! -- local</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;      <span class="keywordtype">integer(I4B)</span> :: i</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;      <span class="comment">! -- code</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;      this%nrow = nrow</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      this%ncol = ncol</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      this%nnz = 0</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      <span class="keyword">allocate</span>(this%row(nrow))</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      <span class="keywordflow">do</span> i = 1, nrow</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keyword">allocate</span>(this%row(i)%icolarray(rowmaxnnz(i)))</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        this%row(i)%icolarray=0</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        this%row(i)%nnz=0</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keywordflow">      end do</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      <span class="comment">!</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      <span class="comment">! -- return</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;      <span class="keywordflow">return</span></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae0d273f0115396a4a6bd95f21a4e9af1"></a>
@@ -343,7 +510,56 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_sparse_8f90_source.html#l00141">141</a> of file <a class="el" href="_sparse_8f90_source.html">Sparse.f90</a>.</p>
-<div class="dynheader">
+<div class="fragment"><div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;      <span class="comment">!insert j into thisrow (for row i)</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;      <span class="comment">!inodup=1 means do not include duplicate connections</span></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;      <span class="comment">!iadded is 1 if a new entry was added (meaning that nnz for the row was increased)</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;      <span class="comment">!iadded is 0 if duplicate and not added.  Used to track total number of connections</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;      <span class="comment">! -- dummy</span></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;      <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: j, inodup</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;      <span class="keywordtype">type</span>(rowtype), <span class="keywordtype">intent(inout)</span> :: thisrow</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;      <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">allocatable</span>,<span class="keywordtype">dimension(:)</span> :: iwk</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;      <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(inout)</span> :: iadded</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;      <span class="comment">! -- local</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;      <span class="keywordtype">integer(I4B)</span> :: jj, maxnnz</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;      <span class="comment">! -- code</span></div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;      iadded = 0</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;      maxnnz = ubound(thisrow%icolarray,dim=1)</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;      <span class="keywordflow">if</span> (thisrow%icolarray(1) == 0) <span class="keywordflow">then</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        thisrow%icolarray(1) = j</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        thisrow%nnz = thisrow%nnz + 1</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        iadded = 1</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <span class="keywordflow">return</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="keywordflow">      end if</span></div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;      <span class="keywordflow">if</span> (thisrow%nnz == maxnnz) <span class="keywordflow">then</span></div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <span class="comment">! -- increase size of the row</span></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <span class="keyword">allocate</span>(iwk(thisrow%nnz))</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        iwk = thisrow%icolarray</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        <span class="keyword">deallocate</span>(thisrow%icolarray)</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        <span class="comment">! -- Specify how to increase the size of the icolarray.  Adding 1</span></div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        <span class="comment">!    will be most memory conservative, but may be a little slower</span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        <span class="comment">!    due to frequent allocate/deallocate.  Another option would be</span></div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        <span class="comment">!    to double the size: maxnnz=maxnnz*2</span></div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        maxnnz = maxnnz + 1</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        <span class="keyword">allocate</span>(thisrow%icolarray(maxnnz))</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        thisrow%icolarray(1:thisrow%nnz) = iwk(1:thisrow%nnz)</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        thisrow%icolarray(thisrow%nnz+1:maxnnz) = 0</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="keywordflow">      end if</span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;      <span class="keywordflow">if</span> (inodup == 1) <span class="keywordflow">then</span></div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        <span class="keywordflow">do</span> jj = 1, thisrow%nnz</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;          <span class="keywordflow">if</span> (thisrow%icolarray(jj)==j) <span class="keywordflow">then</span></div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;            <span class="keywordflow">return</span></div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;<span class="keywordflow">          end if</span></div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;<span class="keywordflow">        end do</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;<span class="keywordflow">      end if</span></div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;      <span class="comment">!</span></div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;      <span class="comment">! -- add the connection to end</span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;      thisrow%nnz = thisrow%nnz + 1</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;      thisrow%icolarray(thisrow%nnz) = j</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;      iadded = 1</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;      <span class="comment">!</span></div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;      <span class="comment">! -- return</span></div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;      <span class="keywordflow">return</span></div>
+</div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacesparsemodule_ae0d273f0115396a4a6bd95f21a4e9af1_icgraph.png" border="0" usemap="#namespacesparsemodule_ae0d273f0115396a4a6bd95f21a4e9af1_icgraph" alt=""/></div>
@@ -372,7 +588,22 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_sparse_8f90_source.html#l00193">193</a> of file <a class="el" href="_sparse_8f90_source.html">Sparse.f90</a>.</p>
-<div class="dynheader">
+<div class="fragment"><div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;      <span class="comment">!sort the icolarray for each row, but do not include</span></div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;      <span class="comment">!the diagonal position in the sort so that it stays in front</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;      <span class="comment">! -- dummy</span></div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;      <span class="keywordtype">class</span>(sparsematrix), <span class="keywordtype">intent(inout)</span> :: this</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;      <span class="comment">! -- local</span></div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;      <span class="keywordtype">integer(I4B)</span> :: i, nval</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;      <span class="comment">! -- code</span></div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;      <span class="keywordflow">do</span> i = 1, this%nrow</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        nval = this%row(i)%nnz</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        <span class="keyword">call </span>sortintarray(nval-1,                                                &amp;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;                          this%row(i)%icolarray(2:nval)) </div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="keywordflow">      end do</span></div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;      <span class="comment">!</span></div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;      <span class="comment">! -- return</span></div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;      <span class="keywordflow">return</span></div>
+</div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacesparsemodule_aa05a62deb3797461ae0494c0c8a0d6f5_cgraph.png" border="0" usemap="#namespacesparsemodule_aa05a62deb3797461ae0494c0c8a0d6f5_cgraph" alt=""/></div>
@@ -411,7 +642,28 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_sparse_8f90_source.html#l00211">211</a> of file <a class="el" href="_sparse_8f90_source.html">Sparse.f90</a>.</p>
-<div class="dynheader">
+<div class="fragment"><div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;      <span class="comment">!simple subroutine for sorting an array</span></div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;      <span class="comment">!in place.  It is not the fastest sort function</span></div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;      <span class="comment">!but should suffice for relatively short nodelists.</span></div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;      <span class="comment">! -- dummy</span></div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;      <span class="keywordtype">integer(I4B)</span>,<span class="keywordtype">intent(in)</span> :: nval</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;      <span class="keywordtype">integer(I4B)</span>,<span class="keywordtype">intent(inout)</span>,<span class="keywordtype">dimension(nval)</span> :: iarray</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;      <span class="comment">! -- local</span></div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;      <span class="keywordtype">integer(I4B)</span> :: i, j, itemp</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;      <span class="comment">! -- code</span></div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;      <span class="keywordflow">do</span> i = 1, nval-1</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        <span class="keywordflow">do</span> j = i+1, nval</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;          <span class="keywordflow">if</span> (iarray(i) &gt; iarray(j)) <span class="keywordflow">then</span></div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;              itemp = iarray(j)</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;              iarray(j) = iarray(i)</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;              iarray(i) = itemp</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;<span class="keywordflow">          end if</span></div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;<span class="keywordflow">        end do</span></div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;<span class="keywordflow">      end do</span></div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;      <span class="comment">!</span></div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;      <span class="comment">! -- return</span></div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;      <span class="keywordflow">return</span></div>
+</div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacesparsemodule_ad38801a59ac4d54d1fe62c5d34f30461_icgraph.png" border="0" usemap="#namespacesparsemodule_ad38801a59ac4d54d1fe62c5d34f30461_icgraph" alt=""/></div>
@@ -424,11 +676,15 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacesparsemodule.html">sparsemodule</a></li>
+    <li class="footer">Generated on Thu Jun 24 2021 19:50:21 for MODFLOW 6 by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
 </body>
 </html>

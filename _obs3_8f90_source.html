@@ -5,13 +5,22 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MODFLOW 6 Code Documentation: /home/runner/work/modflow6/modflow6/src/Utilities/Observation/Obs3.f90 Source File</title>
+<title>MODFLOW 6: /home/runner/work/modflow6/modflow6/src/Utilities/Observation/Obs3.f90 Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="CustomDoxygen.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -21,9 +30,12 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="mf6-triangular-grid.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">MODFLOW 6 Code Documentation
+   <div id="projectname">MODFLOW 6
+   &#160;<span id="projectnumber">version 6.2.2</span>
    </div>
+   <div id="projectbrief">MODFLOW 6 Code Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -36,16 +48,54 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Modules</span></a></li>
+      <li><a href="annotated.html"><span>Data&#160;Types&#160;List</span></a></li>
+      <li class="current"><a href="files.html"><span>Files</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('_obs3_8f90_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,11 +110,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_ff383ddf1aa4eab0c4ce7910366d05a5.html">Utilities</a></li><li class="navelem"><a class="el" href="dir_77e0984581d4d49dab8f9e4942a73c12.html">Observation</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">Obs3.f90</div>  </div>
@@ -199,9 +244,9 @@ $(function() {
 <div class="line"><a name="l00127"></a><span class="lineno"><a class="line" href="namespaceobsmodule.html">  127</a></span>&#160;<span class="keyword">module</span> <a class="code" href="namespaceobsmodule.html">obsmodule</a></div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacekindmodule.html">kindmodule</a>,          <span class="keywordtype">only</span>: <a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>, <a class="code" href="namespacekindmodule.html#a2f6861418b5e7d3d602b77228232a470">i4b</a></div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacearrayhandlersmodule.html">arrayhandlersmodule</a>, <span class="keywordtype">only</span>: expandarray</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacearrayhandlersmodule.html">arrayhandlersmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="interfacearrayhandlersmodule_1_1expandarray.html">expandarray</a></div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacebasedismodule.html">basedismodule</a>,       <span class="keywordtype">only</span>: disbasetype</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespaceblockparsermodule.html">blockparsermodule</a>,   <span class="keywordtype">only</span>: blockparsertype</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespaceblockparsermodule.html">blockparsermodule</a>,   <span class="keywordtype">only</span>: <a class="code" href="structblockparsermodule_1_1blockparsertype.html">blockparsertype</a></div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespaceconstantsmodule.html">constantsmodule</a>,     <span class="keywordtype">only</span>: <a class="code" href="namespaceconstantsmodule.html#a5a5bc481197413bb50013a92490ffa14">lenbigline</a>, <a class="code" href="namespaceconstantsmodule.html#a96baa989fd4e29721a7756b985c18b30">lenftype</a>, <a class="code" href="namespaceconstantsmodule.html#aa7666dc20f64af0be4dc11ebf6759841">lenobsname</a>,               &amp;</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                                 <a class="code" href="namespaceconstantsmodule.html#ad1f6ef2448de9c1b27af4212ea587085">lenobstype</a>, <a class="code" href="namespaceconstantsmodule.html#a2e75f10abe62e57d87d7d468c2bf763d">lenpackagename</a>, <a class="code" href="namespaceconstantsmodule.html#aa63ca3273e52df46471c4746566f46bd">lenboundname</a>,       &amp;</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                                 <a class="code" href="namespaceconstantsmodule.html#a060d310ded5535ce2dc85bd1ca1afd3d">linelength</a>, <a class="code" href="namespaceconstantsmodule.html#a46161975c953f015e2fda2bc089cfa94">namedboundflag</a>, <a class="code" href="namespaceconstantsmodule.html#ac9c1da291f7c6bfb35a47957c588ab20">maxcharlen</a>,         &amp;</div>
@@ -209,13 +254,13 @@ $(function() {
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                                 <a class="code" href="namespaceconstantsmodule.html#a71ca6c4361b908f3fc476b67e1ea3558add793922614b244e637762bb8590cc4a">tableft</a></div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacetablemodule.html">tablemodule</a>,         <span class="keywordtype">only</span>: <a class="code" href="structtablemodule_1_1tabletype.html">tabletype</a>, <a class="code" href="namespacetablemodule.html#a7632d784ec9e94277a76705ef56725f2">table_cr</a></div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespaceinputoutputmodule.html">inputoutputmodule</a>,   <span class="keywordtype">only</span>: <a class="code" href="namespaceinputoutputmodule.html#a3418ad9e27e9d9caac6f541863e1c522">upcase</a>, <a class="code" href="namespaceinputoutputmodule.html#ae97851e3edae8d9809e384058a1a4d52">openfile</a>, <a class="code" href="namespaceinputoutputmodule.html#a535bdfca3d31ebc3a8e4bd5af6890d55">getunit</a>, <a class="code" href="namespaceinputoutputmodule.html#a23290af3b67b515f8452e48a56ed2955">getfilefrompath</a></div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacelistmodule.html">listmodule</a>,          <span class="keywordtype">only</span>: listtype</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespaceobscontainermodule.html">obscontainermodule</a>,  <span class="keywordtype">only</span>: obscontainertype</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespaceobservemodule.html">observemodule</a>,       <span class="keywordtype">only</span>: <a class="code" href="namespaceobservemodule.html#a3e5c964746ce5cff6f99f9ad771f0fe9">constructobservation</a>, obsdatatype,              &amp;</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;                                 observetype, <a class="code" href="namespaceobservemodule.html#a9027456caa8ff096f72b8c9547b8da98">getobsfromlist</a>,                    &amp;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacelistmodule.html">listmodule</a>,          <span class="keywordtype">only</span>: <a class="code" href="structlistmodule_1_1listtype.html">listtype</a></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespaceobscontainermodule.html">obscontainermodule</a>,  <span class="keywordtype">only</span>: <a class="code" href="structobscontainermodule_1_1obscontainertype.html">obscontainertype</a></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespaceobservemodule.html">observemodule</a>,       <span class="keywordtype">only</span>: <a class="code" href="namespaceobservemodule.html#a3e5c964746ce5cff6f99f9ad771f0fe9">constructobservation</a>, <a class="code" href="structobservemodule_1_1obsdatatype.html">obsdatatype</a>,              &amp;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;                                 <a class="code" href="structobservemodule_1_1observetype.html">observetype</a>, <a class="code" href="namespaceobservemodule.html#a9027456caa8ff096f72b8c9547b8da98">getobsfromlist</a>,                    &amp;</div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;                                 <a class="code" href="namespaceobservemodule.html#a9c9d0f13a665d00e24040a9ba9046e7e">addobstolist</a></div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespaceobsoutputlistmodule.html">obsoutputlistmodule</a>, <span class="keywordtype">only</span>: obsoutputlisttype</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespaceobsoutputmodule.html">obsoutputmodule</a>,     <span class="keywordtype">only</span>: obsoutputtype</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespaceobsoutputlistmodule.html">obsoutputlistmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="structobsoutputlistmodule_1_1obsoutputlisttype.html">obsoutputlisttype</a></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespaceobsoutputmodule.html">obsoutputmodule</a>,     <span class="keywordtype">only</span>: <a class="code" href="structobsoutputmodule_1_1obsoutputtype.html">obsoutputtype</a></div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespaceobsutilitymodule.html">obsutilitymodule</a>,    <span class="keywordtype">only</span>: <a class="code" href="namespaceobsutilitymodule.html#a4b9408947a92a0c103a43c84a874f20c">write_fmtd_cont</a>, <a class="code" href="namespaceobsutilitymodule.html#a522d11d695fca92807a340186ed0b2f6">write_unfmtd_cont</a></div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespaceopenspecmodule.html">openspecmodule</a>,      <span class="keywordtype">only</span>: <a class="code" href="namespaceopenspecmodule.html#a5cd9b8ccff306158f81ed8cc744b1e46">access</a>, <a class="code" href="namespaceopenspecmodule.html#ade3198b3fa7a2972dae70d888f866536">form</a></div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacesimmodule.html">simmodule</a>,           <span class="keywordtype">only</span>: <a class="code" href="namespacesimmodule.html#a4c46e49de78d4498dd4ec106357775e6">count_errors</a>, <a class="code" href="namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a">store_error</a>, <a class="code" href="namespacesimmodule.html#a1c78a6fda06b630c738bb654aa6bd816">store_error_unit</a>,    &amp;</div>
@@ -227,57 +272,57 @@ $(function() {
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  <span class="keywordtype">private</span></div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  <span class="keywordtype">public</span> :: obstype, <a class="code" href="namespaceobsmodule.html#a7dbce254f60ae2f0925c07136365ce91">defaultobsidprocessor</a>,  <a class="code" href="namespaceobsmodule.html#a57372fbf202fe90e2d12383ce1b15eee">obs_cr</a></div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  <span class="keyword">type</span> :: obstype</div>
+<div class="line"><a name="l00158"></a><span class="lineno"><a class="line" href="structobsmodule_1_1obstype.html">  158</a></span>&#160;  <span class="keyword">type</span> :: obstype</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="comment">! -- Public members</span></div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">public</span> :: iout = 0</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">public</span> :: npakobs = 0</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">public</span> :: inUnitObs =&gt; null()</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="keywordtype">character(len=LINELENGTH)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">public</span> :: inputFilename =&gt; null()</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="keywordtype">character(len=2*LENPACKAGENAME+4)</span>, <span class="keywordtype">public</span> :: pkgName = <span class="stringliteral">&#39;&#39;</span></div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keywordtype">character(len=LENFTYPE)</span>, <span class="keywordtype">public</span> :: filtyp = <span class="stringliteral">&#39;&#39;</span></div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keywordtype">logical</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">public</span> :: active =&gt; null()</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keywordtype">type</span>(ObsContainerType), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">public</span> :: pakobs =&gt; null()</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="keywordtype">type</span>(ObsDataType), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">public</span> :: obsData =&gt; null()</div>
+<div class="line"><a name="l00160"></a><span class="lineno"><a class="line" href="structobsmodule_1_1obstype.html#aa34c1f7149b71075bffc0a5d833c9184">  160</a></span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">public</span> :: iout = 0</div>
+<div class="line"><a name="l00161"></a><span class="lineno"><a class="line" href="structobsmodule_1_1obstype.html#a2fc7921c47c4f8ffbab099a1190ea7b4">  161</a></span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">public</span> :: npakobs = 0</div>
+<div class="line"><a name="l00162"></a><span class="lineno"><a class="line" href="structobsmodule_1_1obstype.html#ae390b57d302aa80a5a0210e143f860fa">  162</a></span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">public</span> :: inunitobs =&gt; null()</div>
+<div class="line"><a name="l00163"></a><span class="lineno"><a class="line" href="structobsmodule_1_1obstype.html#a9fecaa6deb68541286462f38dcad3953">  163</a></span>&#160;    <span class="keywordtype">character(len=LINELENGTH)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">public</span> :: inputfilename =&gt; null()</div>
+<div class="line"><a name="l00164"></a><span class="lineno"><a class="line" href="structobsmodule_1_1obstype.html#a78809b2e7675c24de384de4060b43dae">  164</a></span>&#160;    <span class="keywordtype">character(len=2*LENPACKAGENAME+4)</span>, <span class="keywordtype">public</span> :: pkgname = <span class="stringliteral">&#39;&#39;</span></div>
+<div class="line"><a name="l00165"></a><span class="lineno"><a class="line" href="structobsmodule_1_1obstype.html#a6e7f47da76e35743a4f7031346507bab">  165</a></span>&#160;    <span class="keywordtype">character(len=LENFTYPE)</span>, <span class="keywordtype">public</span> :: filtyp = <span class="stringliteral">&#39;&#39;</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno"><a class="line" href="structobsmodule_1_1obstype.html#aca1eda9b37addfc32b1987497a0ee2e5">  166</a></span>&#160;    <span class="keywordtype">logical</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">public</span> :: active =&gt; null()</div>
+<div class="line"><a name="l00167"></a><span class="lineno"><a class="line" href="structobsmodule_1_1obstype.html#a8c80c9fdc59b74dfd523908482ef01ed">  167</a></span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structobscontainermodule_1_1obscontainertype.html">obscontainertype</a>), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">public</span> :: pakobs =&gt; null()</div>
+<div class="line"><a name="l00168"></a><span class="lineno"><a class="line" href="structobsmodule_1_1obstype.html#aef985e9886f6fd752a429b37fe136f4c">  168</a></span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structobservemodule_1_1obsdatatype.html">obsdatatype</a>), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">public</span> :: obsdata =&gt; null()</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="comment">! -- Private members</span></div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">private</span> :: iprecision = 2                                      <span class="comment">! 2=double; 1=single</span></div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">private</span> :: idigits = 5</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keywordtype">character(len=LINELENGTH)</span>, <span class="keywordtype">private</span> :: outputFilename = <span class="stringliteral">&#39;&#39;</span></div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keywordtype">character(len=LINELENGTH)</span>, <span class="keywordtype">private</span> :: blockTypeFound = <span class="stringliteral">&#39;&#39;</span></div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="keywordtype">character(len=20)</span>, <span class="keywordtype">private</span>:: obsfmtcont = <span class="stringliteral">&#39;&#39;</span></div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="keywordtype">logical</span>, <span class="keywordtype">private</span> :: echo = .false.</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keywordtype">logical</span>, <span class="keywordtype">private</span> :: more</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keywordtype">type</span>(ListType), <span class="keywordtype">private</span> :: obsList</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="keywordtype">type</span>(ObsOutputListType), <span class="keywordtype">pointer</span>, <span class="keywordtype">private</span> :: obsOutputList =&gt; null()</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keywordtype">class</span>(DisBaseType), <span class="keywordtype">pointer</span>, <span class="keywordtype">private</span> :: dis =&gt; null()</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="keywordtype">type</span>(BlockParserType), <span class="keywordtype">private</span> :: parser</div>
+<div class="line"><a name="l00170"></a><span class="lineno"><a class="line" href="structobsmodule_1_1obstype.html#a5aeb5b50fd9fcdbc78447064924241a4">  170</a></span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">private</span> :: iprecision = 2                                      <span class="comment">! 2=double; 1=single</span></div>
+<div class="line"><a name="l00171"></a><span class="lineno"><a class="line" href="structobsmodule_1_1obstype.html#a3530171134ae8bbf6629021ec62d4ec9">  171</a></span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">private</span> :: idigits = 5</div>
+<div class="line"><a name="l00172"></a><span class="lineno"><a class="line" href="structobsmodule_1_1obstype.html#a103b2d5382609957818f437ca145659f">  172</a></span>&#160;    <span class="keywordtype">character(len=LINELENGTH)</span>, <span class="keywordtype">private</span> :: outputfilename = <span class="stringliteral">&#39;&#39;</span></div>
+<div class="line"><a name="l00173"></a><span class="lineno"><a class="line" href="structobsmodule_1_1obstype.html#a6edc5faf614bc80df9cab6b9f76f1e12">  173</a></span>&#160;    <span class="keywordtype">character(len=LINELENGTH)</span>, <span class="keywordtype">private</span> :: blocktypefound = <span class="stringliteral">&#39;&#39;</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno"><a class="line" href="structobsmodule_1_1obstype.html#a2a61d1de4715faa21b47a4e36f3cd777">  174</a></span>&#160;    <span class="keywordtype">character(len=20)</span>, <span class="keywordtype">private</span>:: obsfmtcont = <span class="stringliteral">&#39;&#39;</span></div>
+<div class="line"><a name="l00175"></a><span class="lineno"><a class="line" href="structobsmodule_1_1obstype.html#a2a14845f82611981b3943d06aee2e455">  175</a></span>&#160;    <span class="keywordtype">logical</span>, <span class="keywordtype">private</span> :: echo = .false.</div>
+<div class="line"><a name="l00176"></a><span class="lineno"><a class="line" href="structobsmodule_1_1obstype.html#a3059fd32129b4e2158610c78f63d1899">  176</a></span>&#160;    <span class="keywordtype">logical</span>, <span class="keywordtype">private</span> :: more</div>
+<div class="line"><a name="l00177"></a><span class="lineno"><a class="line" href="structobsmodule_1_1obstype.html#a1e5c2c6753362fcb29cd79aa3c98e99f">  177</a></span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structlistmodule_1_1listtype.html">listtype</a>), <span class="keywordtype">private</span> :: obslist</div>
+<div class="line"><a name="l00178"></a><span class="lineno"><a class="line" href="structobsmodule_1_1obstype.html#a7a835c67b67b523501f6c8ef91090a80">  178</a></span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structobsoutputlistmodule_1_1obsoutputlisttype.html">obsoutputlisttype</a>), <span class="keywordtype">pointer</span>, <span class="keywordtype">private</span> :: obsoutputlist =&gt; null()</div>
+<div class="line"><a name="l00179"></a><span class="lineno"><a class="line" href="structobsmodule_1_1obstype.html#a478dee0b5d690978ea7dcd7ede6d8c33">  179</a></span>&#160;    <span class="keywordtype">class</span>(disbasetype), <span class="keywordtype">pointer</span>, <span class="keywordtype">private</span> :: dis =&gt; null()</div>
+<div class="line"><a name="l00180"></a><span class="lineno"><a class="line" href="structobsmodule_1_1obstype.html#aae23e78e2497a62832fe62e340254fbc">  180</a></span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structblockparsermodule_1_1blockparsertype.html">blockparsertype</a>), <span class="keywordtype">private</span> :: parser</div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <span class="comment">! -- table object</span></div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="keywordtype">type</span>(TableType), <span class="keywordtype">pointer</span> :: obstab =&gt; null()</div>
+<div class="line"><a name="l00183"></a><span class="lineno"><a class="line" href="structobsmodule_1_1obstype.html#a2fdf016a1e701e0f2a7ce4c2444eaec4">  183</a></span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structtablemodule_1_1tabletype.html">tabletype</a>), <span class="keywordtype">pointer</span> :: obstab =&gt; null()</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;  <span class="keyword">contains</span></div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="comment">! -- Public procedures</span></div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">public</span>  :: obs_df</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">public</span>  :: obs_ar</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">public</span>  :: obs_ad</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">public</span>  :: obs_bd_clear</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">public</span>  :: obs_ot</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">public</span>  :: obs_da</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">public</span>  :: SaveOneSimval</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">public</span>  :: StoreObsType</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">public</span>  :: allocate_scalars</div>
+<div class="line"><a name="l00186"></a><span class="lineno"><a class="line" href="structobsmodule_1_1obstype.html#ac262729540099d1338c9f300a7e17739">  186</a></span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">public</span>  :: <a class="code" href="namespaceobsmodule.html#aa5578ffb3710b8c02aac33ff970f6b44">obs_df</a></div>
+<div class="line"><a name="l00187"></a><span class="lineno"><a class="line" href="structobsmodule_1_1obstype.html#a279ef496337c7eb07d48301089e68ef4">  187</a></span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">public</span>  :: <a class="code" href="namespaceobsmodule.html#a4de474f34c3b0446f6e3ef6c6725ae8d">obs_ar</a></div>
+<div class="line"><a name="l00188"></a><span class="lineno"><a class="line" href="structobsmodule_1_1obstype.html#a081817bf63ddba82610472d4b388d9f6">  188</a></span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">public</span>  :: <a class="code" href="namespaceobsmodule.html#a536bbd2e5167a100114ec4556e347e1a">obs_ad</a></div>
+<div class="line"><a name="l00189"></a><span class="lineno"><a class="line" href="structobsmodule_1_1obstype.html#a4f9e7f26e04e5d56b20f591030fe0031">  189</a></span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">public</span>  :: <a class="code" href="namespaceobsmodule.html#a37c57e0e1cd8e621c9fa80ac697227dd">obs_bd_clear</a></div>
+<div class="line"><a name="l00190"></a><span class="lineno"><a class="line" href="structobsmodule_1_1obstype.html#a7fef810ea43bcd43f53f94e66871076d">  190</a></span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">public</span>  :: <a class="code" href="namespaceobsmodule.html#adae8cf444bda36ffe55b9ab78f0f14b3">obs_ot</a></div>
+<div class="line"><a name="l00191"></a><span class="lineno"><a class="line" href="structobsmodule_1_1obstype.html#a34c4f7b7f1a36c35aaa3d31a5dad23ca">  191</a></span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">public</span>  :: <a class="code" href="namespaceobsmodule.html#a268c01aaa4ae9950ec82420b416e13b3">obs_da</a></div>
+<div class="line"><a name="l00192"></a><span class="lineno"><a class="line" href="structobsmodule_1_1obstype.html#af6ff948e406d0cdfffccb2c11f49d8ec">  192</a></span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">public</span>  :: <a class="code" href="namespaceobsmodule.html#ac6cdbd7ac6e357c628fe803a4dbd8d2c">saveonesimval</a></div>
+<div class="line"><a name="l00193"></a><span class="lineno"><a class="line" href="structobsmodule_1_1obstype.html#a22e498aecb2b7b2912629e0bbb64048c">  193</a></span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">public</span>  :: <a class="code" href="namespaceobsmodule.html#aa798af6bf30f959ddea76b5581fbefcb">storeobstype</a></div>
+<div class="line"><a name="l00194"></a><span class="lineno"><a class="line" href="structobsmodule_1_1obstype.html#a123c948ea8bad2fd808892047ff0bddc">  194</a></span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">public</span>  :: <a class="code" href="namespaceobsmodule.html#ad918f221e65761c46614ed11cbb83dac">allocate_scalars</a></div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="comment">! -- Private procedures</span></div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: build_headers</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: define_fmts</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: get_num</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: get_obs</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: get_obs_array</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: get_obs_datum</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: obs_ar1</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: obs_ar2</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: populate_obs_array</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: read_observations</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: read_obs_blocks</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: read_obs_options</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: write_continuous_simvals</div>
+<div class="line"><a name="l00196"></a><span class="lineno"><a class="line" href="structobsmodule_1_1obstype.html#ac27d15d33c9eb83923b999322eac734b">  196</a></span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: <a class="code" href="namespaceobsmodule.html#ab207c4278b47e96ab80e4614a8ed4856">build_headers</a></div>
+<div class="line"><a name="l00197"></a><span class="lineno"><a class="line" href="structobsmodule_1_1obstype.html#a8e401d3965ebf9e375dc907f651175a6">  197</a></span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: <a class="code" href="namespaceobsmodule.html#a952ac4b026bc683dbfcedd8da24220bb">define_fmts</a></div>
+<div class="line"><a name="l00198"></a><span class="lineno"><a class="line" href="structobsmodule_1_1obstype.html#a111e696ed8faeffa797565d5b9123492">  198</a></span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: <a class="code" href="namespaceobsmodule.html#aa716217a44f18c7a825f084a15e2cbe5">get_num</a></div>
+<div class="line"><a name="l00199"></a><span class="lineno"><a class="line" href="structobsmodule_1_1obstype.html#af0a4aa05b57b412ead40296636690c49">  199</a></span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: <a class="code" href="namespaceobsmodule.html#aeb1621db37eb5c9e8621cd0fd55247ae">get_obs</a></div>
+<div class="line"><a name="l00200"></a><span class="lineno"><a class="line" href="structobsmodule_1_1obstype.html#a359f775696a44eab2b781b94143b0ce1">  200</a></span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: <a class="code" href="namespaceobsmodule.html#a5d458629a33ffafd940a178c1b778a72">get_obs_array</a></div>
+<div class="line"><a name="l00201"></a><span class="lineno"><a class="line" href="structobsmodule_1_1obstype.html#a3aadfcaf12769b5dd0b7ab04be99a88c">  201</a></span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: <a class="code" href="namespaceobsmodule.html#a26a16acf4e670e4702053e5114434328">get_obs_datum</a></div>
+<div class="line"><a name="l00202"></a><span class="lineno"><a class="line" href="structobsmodule_1_1obstype.html#a6b109bdad192152402827ea94c166970">  202</a></span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: <a class="code" href="namespaceobsmodule.html#a4e08c4a00b4774dbe59e849c8820bd22">obs_ar1</a></div>
+<div class="line"><a name="l00203"></a><span class="lineno"><a class="line" href="structobsmodule_1_1obstype.html#a3b2c559eecbb1d64c61d5240a6c5663b">  203</a></span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: <a class="code" href="namespaceobsmodule.html#af536a2aa67c795faa46e96ba457a6f62">obs_ar2</a></div>
+<div class="line"><a name="l00204"></a><span class="lineno"><a class="line" href="structobsmodule_1_1obstype.html#aa1d5a6e44d441304d8b8caaf1c414257">  204</a></span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: <a class="code" href="namespaceobsmodule.html#a0fd1cb02953abfdd6554807a8d15ccad">populate_obs_array</a></div>
+<div class="line"><a name="l00205"></a><span class="lineno"><a class="line" href="structobsmodule_1_1obstype.html#a2ae027a6b71efc3582f65477d35c7d85">  205</a></span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: <a class="code" href="namespaceobsmodule.html#a5020e6a1e691cbed308108acbb813f9e">read_observations</a></div>
+<div class="line"><a name="l00206"></a><span class="lineno"><a class="line" href="structobsmodule_1_1obstype.html#a57442246d4af6d28b2dbeb4ace028b28">  206</a></span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: <a class="code" href="namespaceobsmodule.html#a0e39fd82e1d2b282f8789b064f750f72">read_obs_blocks</a></div>
+<div class="line"><a name="l00207"></a><span class="lineno"><a class="line" href="structobsmodule_1_1obstype.html#aa7bb52d8f06bb7cf5b968a7161e72a8e">  207</a></span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: <a class="code" href="namespaceobsmodule.html#a6b8183302027550598aa7123044222ed">read_obs_options</a></div>
+<div class="line"><a name="l00208"></a><span class="lineno"><a class="line" href="structobsmodule_1_1obstype.html#ac9c4daf8078f879e64966e65dde0ba78">  208</a></span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: <a class="code" href="namespaceobsmodule.html#ac53e5a4563db4c57b4f8ef488b1ad482">write_continuous_simvals</a></div>
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;  <span class="keyword">end type </span>obstype</div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160; </div>
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;<span class="keyword">contains</span></div>
@@ -319,7 +364,7 @@ $(function() {
 <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;<span class="comment">!    SPECIFICATIONS:</span></div>
 <div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="keywordtype">type</span>(observetype), <span class="keywordtype">intent(inout)</span> :: obsrv</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structobservemodule_1_1observetype.html">observetype</a>), <span class="keywordtype">intent(inout)</span> :: obsrv</div>
 <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <span class="keywordtype">class</span>(disbasetype), <span class="keywordtype">intent(in)</span> :: dis</div>
 <div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: inunitobs</div>
 <div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: iout</div>
@@ -360,8 +405,8 @@ $(function() {
 <div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160; </div>
 <div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;  <span class="comment">! Type-bound public procedures</span></div>
 <div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160; </div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;  <span class="keyword">subroutine </span>obs_df(this, iout, pkgname, filtyp, dis)</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespaceobsmodule.html#aa5578ffb3710b8c02aac33ff970f6b44">obs_df</a>(this, iout, pkgname, filtyp, dis)</div>
+<div class="line"><a name="l00292"></a><span class="lineno"><a class="line" href="namespaceobsmodule.html#aa5578ffb3710b8c02aac33ff970f6b44">  292</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;<span class="comment">! obs_df -- Define some members of an ObsType object</span></div>
 <div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;<span class="comment">!</span></div>
@@ -384,10 +429,10 @@ $(function() {
 <div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    <span class="keyword">call </span>this%parser%Initialize(this%inUnitObs, this%iout)</div>
 <div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;  <span class="keyword">end subroutine </span>obs_df</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespaceobsmodule.html#aa5578ffb3710b8c02aac33ff970f6b44">obs_df</a></div>
 <div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160; </div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;  <span class="keyword">subroutine </span>obs_ar(this)</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespaceobsmodule.html#a4de474f34c3b0446f6e3ef6c6725ae8d">obs_ar</a>(this)</div>
+<div class="line"><a name="l00318"></a><span class="lineno"><a class="line" href="namespaceobsmodule.html#a4de474f34c3b0446f6e3ef6c6725ae8d">  318</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;<span class="comment">! obs_ar -- ObsType Allocate and Read</span></div>
 <div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;<span class="comment">! Subroutine: (1) reads OPTIONS block of OBS input file</span></div>
 <div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;<span class="comment">!             (2) reads CONTINUOUS blocks of OBS input file</span></div>
@@ -405,10 +450,10 @@ $(function() {
 <div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;<span class="keywordflow">    endif</span></div>
 <div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;  <span class="keyword">end subroutine </span>obs_ar</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespaceobsmodule.html#a4de474f34c3b0446f6e3ef6c6725ae8d">obs_ar</a></div>
 <div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160; </div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;  <span class="keyword">subroutine </span>obs_ad(this)</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespaceobsmodule.html#a536bbd2e5167a100114ec4556e347e1a">obs_ad</a>(this)</div>
+<div class="line"><a name="l00339"></a><span class="lineno"><a class="line" href="namespaceobsmodule.html#a536bbd2e5167a100114ec4556e347e1a">  339</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;<span class="comment">! obs_ad -- Observation Time Step Advance</span></div>
 <div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;<span class="comment">! Subroutine: (1) For each observation, resets &quot;current&quot; value</span></div>
 <div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;<span class="comment">! ******************************************************************************</span></div>
@@ -419,7 +464,7 @@ $(function() {
 <div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;    <span class="keywordtype">class</span>(obstype) :: this</div>
 <div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: i, n</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    <span class="keywordtype">class</span>(observetype), <span class="keywordtype">pointer</span> :: obsrv =&gt; null()</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structobservemodule_1_1observetype.html">observetype</a>), <span class="keywordtype">pointer</span> :: obsrv =&gt; null()</div>
 <div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;    n = this%get_num()</div>
@@ -429,10 +474,10 @@ $(function() {
 <div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;<span class="keywordflow">    enddo</span></div>
 <div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;  <span class="keyword">end subroutine </span>obs_ad</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespaceobsmodule.html#a536bbd2e5167a100114ec4556e347e1a">obs_ad</a></div>
 <div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160; </div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;  <span class="keyword">subroutine </span>obs_bd_clear(this)</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespaceobsmodule.html#a37c57e0e1cd8e621c9fa80ac697227dd">obs_bd_clear</a>(this)</div>
+<div class="line"><a name="l00363"></a><span class="lineno"><a class="line" href="namespaceobsmodule.html#a37c57e0e1cd8e621c9fa80ac697227dd">  363</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;<span class="comment">! obs_bd_clear -- Clear output lines in preparation for new rows of</span></div>
 <div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;<span class="comment">!                 continuous observations</span></div>
 <div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;<span class="comment">! Subroutine: (1) Clears contents of all lineout members of obsOutputList</span></div>
@@ -448,10 +493,10 @@ $(function() {
 <div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    <span class="keyword">call </span>this%obsOutputList%ClearOutputLines()</div>
 <div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;  <span class="keyword">end subroutine </span>obs_bd_clear</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespaceobsmodule.html#a37c57e0e1cd8e621c9fa80ac697227dd">obs_bd_clear</a></div>
 <div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160; </div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;  <span class="keyword">subroutine </span>obs_ot(this)</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespaceobsmodule.html#adae8cf444bda36ffe55b9ab78f0f14b3">obs_ot</a>(this)</div>
+<div class="line"><a name="l00382"></a><span class="lineno"><a class="line" href="namespaceobsmodule.html#adae8cf444bda36ffe55b9ab78f0f14b3">  382</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;<span class="comment">! obs_ot -- Observation Output</span></div>
 <div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;<span class="comment">! Subroutine: (1) stores each simulated value into its ObserveType object</span></div>
 <div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;<span class="comment">!             (2) writes each simulated value to it ObsOutputList object</span></div>
@@ -472,10 +517,10 @@ $(function() {
 <div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;<span class="keywordflow">    endif</span></div>
 <div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;  <span class="keyword">end subroutine </span>obs_ot</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespaceobsmodule.html#adae8cf444bda36ffe55b9ab78f0f14b3">obs_ot</a></div>
 <div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160; </div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;  <span class="keyword">subroutine </span>obs_da(this)</div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespaceobsmodule.html#a268c01aaa4ae9950ec82420b416e13b3">obs_da</a>(this)</div>
+<div class="line"><a name="l00406"></a><span class="lineno"><a class="line" href="namespaceobsmodule.html#a268c01aaa4ae9950ec82420b416e13b3">  406</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;<span class="comment">! obs_da -- Observation Output</span></div>
 <div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;<span class="comment">!</span></div>
@@ -524,10 +569,10 @@ $(function() {
 <div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;    <span class="keyword">nullify</span>(this%inUnitObs)</div>
 <div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;  <span class="keyword">end subroutine </span>obs_da</div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespaceobsmodule.html#a268c01aaa4ae9950ec82420b416e13b3">obs_da</a></div>
 <div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160; </div>
-<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;  <span class="keyword">subroutine </span>saveonesimval(this, obsrv, simval)</div>
-<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespaceobsmodule.html#ac6cdbd7ac6e357c628fe803a4dbd8d2c">saveonesimval</a>(this, obsrv, simval)</div>
+<div class="line"><a name="l00458"></a><span class="lineno"><a class="line" href="namespaceobsmodule.html#ac6cdbd7ac6e357c628fe803a4dbd8d2c">  458</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;<span class="comment">! SaveOneSimval</span></div>
 <div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;<span class="comment">! Subroutine: (1) saves or accumulates a simulated value to its ObserveType</span></div>
 <div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;<span class="comment">!                 object</span></div>
@@ -537,11 +582,11 @@ $(function() {
 <div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;    <span class="comment">! -- dummy</span></div>
 <div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;    <span class="keywordtype">class</span>(obstype)         :: this</div>
-<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;    <span class="keywordtype">class</span>(observetype), <span class="keywordtype">intent(inout)</span> :: obsrv</div>
-<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">intent(in)</span>  :: simval</div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structobservemodule_1_1observetype.html">observetype</a>), <span class="keywordtype">intent(inout)</span> :: obsrv</div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">intent(in)</span>  :: simval</div>
 <div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;    <span class="comment">! -- local</span></div>
-<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;    <span class="keywordtype">character(len=LENOBSTYPE)</span> :: obstypeid</div>
-<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;    <span class="keywordtype">type</span>(obsdatatype), <span class="keywordtype">pointer</span> :: obsdatum =&gt; null()</div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;    <span class="keywordtype">character(len=LENOBSTYPE)</span> :: obsTypeID</div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structobservemodule_1_1obsdatatype.html">obsdatatype</a>), <span class="keywordtype">pointer</span> :: obsDatum =&gt; null()</div>
 <div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;    <span class="comment">! -- initialize variables</span></div>
@@ -559,10 +604,10 @@ $(function() {
 <div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;<span class="keywordflow">    endif</span></div>
 <div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;  <span class="keyword">end subroutine </span>saveonesimval</div>
+<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespaceobsmodule.html#ac6cdbd7ac6e357c628fe803a4dbd8d2c">saveonesimval</a></div>
 <div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160; </div>
-<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;  <span class="keyword">subroutine </span>storeobstype(this, obsrvType, cumulative, indx)</div>
-<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespaceobsmodule.html#aa798af6bf30f959ddea76b5581fbefcb">storeobstype</a>(this, obsrvType, cumulative, indx)</div>
+<div class="line"><a name="l00493"></a><span class="lineno"><a class="line" href="namespaceobsmodule.html#aa798af6bf30f959ddea76b5581fbefcb">  493</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;<span class="comment">! StoreObsType</span></div>
 <div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;<span class="comment">! Subroutine: (1) stores type name and related information for an</span></div>
 <div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;<span class="comment">!                 observation type that belongs to a package or model in</span></div>
@@ -573,13 +618,13 @@ $(function() {
 <div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;    <span class="comment">! -- dummy</span></div>
 <div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;    <span class="keywordtype">class</span>(obstype), <span class="keywordtype">intent(inout)</span> :: this</div>
-<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;    <span class="keywordtype">character(len=*)</span>, <span class="keywordtype">intent(in)</span>  :: obsrvtype</div>
+<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;    <span class="keywordtype">character(len=*)</span>, <span class="keywordtype">intent(in)</span>  :: obsrvType</div>
 <div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;    <span class="comment">! cumulative:  Accumulate simulated values for multiple boundaries</span></div>
 <div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;    <span class="keywordtype">logical</span>,          <span class="keywordtype">intent(in)</span>  :: cumulative</div>
 <div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;    <span class="keywordtype">integer(I4B)</span>,     <span class="keywordtype">intent(out)</span> :: indx</div>
 <div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: i</div>
-<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;    <span class="keywordtype">character(len=LENOBSTYPE)</span>  :: obstypeupper</div>
+<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;    <span class="keywordtype">character(len=LENOBSTYPE)</span>  :: obsTypeUpper</div>
 <div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;    <span class="keywordtype">character(len=100)</span> :: msg</div>
 <div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;    <span class="comment">!</span></div>
@@ -616,12 +661,12 @@ $(function() {
 <div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;    this%obsData(indx)%Cumulative = cumulative</div>
 <div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;  <span class="keyword">end subroutine </span>storeobstype</div>
+<div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespaceobsmodule.html#aa798af6bf30f959ddea76b5581fbefcb">storeobstype</a></div>
 <div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160; </div>
 <div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;  <span class="comment">! Type-bound private procedures</span></div>
 <div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160; </div>
-<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;  <span class="keyword">subroutine </span>allocate_scalars(this)</div>
-<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespaceobsmodule.html#ad918f221e65761c46614ed11cbb83dac">allocate_scalars</a>(this)</div>
+<div class="line"><a name="l00552"></a><span class="lineno"><a class="line" href="namespaceobsmodule.html#ad918f221e65761c46614ed11cbb83dac">  552</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;<span class="comment">! allocate_scalars -- Allocate memory for non-allocatable members</span></div>
 <div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;<span class="comment">!</span></div>
@@ -642,10 +687,10 @@ $(function() {
 <div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;    <span class="comment">! -- Return</span></div>
 <div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;  <span class="keyword">end subroutine </span>allocate_scalars</div>
+<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespaceobsmodule.html#ad918f221e65761c46614ed11cbb83dac">allocate_scalars</a></div>
 <div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160; </div>
-<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;  <span class="keyword">subroutine </span>obs_ar1(this, pkgname)</div>
-<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespaceobsmodule.html#a4e08c4a00b4774dbe59e849c8820bd22">obs_ar1</a>(this, pkgname)</div>
+<div class="line"><a name="l00576"></a><span class="lineno"><a class="line" href="namespaceobsmodule.html#a4e08c4a00b4774dbe59e849c8820bd22">  576</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;<span class="comment">! obs_ar1</span></div>
 <div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;<span class="comment">!   -- read OPTIONS block of OBS input file and define output formats.</span></div>
 <div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;<span class="comment">! ******************************************************************************</span></div>
@@ -673,10 +718,10 @@ $(function() {
 <div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;<span class="keywordflow">    endif</span></div>
 <div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;  <span class="keyword">end subroutine </span>obs_ar1</div>
+<div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespaceobsmodule.html#a4e08c4a00b4774dbe59e849c8820bd22">obs_ar1</a></div>
 <div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160; </div>
-<div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;  <span class="keyword">subroutine </span>obs_ar2(this, dis)</div>
-<div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespaceobsmodule.html#af536a2aa67c795faa46e96ba457a6f62">obs_ar2</a>(this, dis)</div>
+<div class="line"><a name="l00607"></a><span class="lineno"><a class="line" href="namespaceobsmodule.html#af536a2aa67c795faa46e96ba457a6f62">  607</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;<span class="comment">! obs_ar2</span></div>
 <div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;<span class="comment">!   -- Call procedure provided by package to interpret IDstring and</span></div>
 <div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;<span class="comment">!      store required data.</span></div>
@@ -689,9 +734,9 @@ $(function() {
 <div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;    <span class="keywordtype">class</span>(disbasetype)            :: dis</div>
 <div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: i</div>
-<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;    <span class="keywordtype">type</span>(obsdatatype), <span class="keywordtype">pointer</span>  :: obsdat =&gt; null()</div>
-<div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;    <span class="keywordtype">character(len=LENOBSTYPE)</span>   :: obstypeid</div>
-<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;    <span class="keywordtype">class</span>(observetype), <span class="keywordtype">pointer</span> :: obsrv =&gt; null()</div>
+<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structobservemodule_1_1obsdatatype.html">obsdatatype</a>), <span class="keywordtype">pointer</span>  :: obsDat =&gt; null()</div>
+<div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;    <span class="keywordtype">character(len=LENOBSTYPE)</span>   :: obsTypeID</div>
+<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structobservemodule_1_1observetype.html">observetype</a>), <span class="keywordtype">pointer</span> :: obsrv =&gt; null()</div>
 <div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;    <span class="keyword">call </span>this%read_observations()</div>
@@ -718,10 +763,10 @@ $(function() {
 <div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;<span class="keywordflow">    end if</span></div>
 <div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;  <span class="keyword">end subroutine </span>obs_ar2</div>
+<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespaceobsmodule.html#af536a2aa67c795faa46e96ba457a6f62">obs_ar2</a></div>
 <div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160; </div>
-<div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;  <span class="keyword">subroutine </span>read_obs_options(this)</div>
-<div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespaceobsmodule.html#a6b8183302027550598aa7123044222ed">read_obs_options</a>(this)</div>
+<div class="line"><a name="l00652"></a><span class="lineno"><a class="line" href="namespaceobsmodule.html#a6b8183302027550598aa7123044222ed">  652</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;<span class="comment">! read_obs_options</span></div>
 <div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160;<span class="comment">!   -- read OPTIONS block of OBS input file</span></div>
 <div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;<span class="comment">! ******************************************************************************</span></div>
@@ -738,8 +783,8 @@ $(function() {
 <div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;    <span class="keywordtype">character(len=40)</span> :: keyword</div>
 <div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160;    <span class="keywordtype">character(len=LINELENGTH)</span> :: ermsg</div>
 <div class="line"><a name="l00668"></a><span class="lineno">  668</span>&#160;    <span class="keywordtype">character(len=LINELENGTH)</span> :: errormessage, fname</div>
-<div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;    <span class="keywordtype">type</span>(listtype), <span class="keywordtype">pointer</span> :: linelist =&gt; null()</div>
-<div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;    <span class="keywordtype">logical</span> :: continueread, found, endofblock</div>
+<div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structlistmodule_1_1listtype.html">listtype</a>), <span class="keywordtype">pointer</span> :: lineList =&gt; null()</div>
+<div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;    <span class="keywordtype">logical</span> :: continueread, found, endOfBlock</div>
 <div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;    <span class="comment">! -- formats</span></div>
 <div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;10  <span class="keyword">format</span>(<span class="stringliteral">&#39;No options block found in OBS input. Defaults will be used.&#39;</span>)</div>
 <div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;40  <span class="keyword">format</span>(<span class="stringliteral">&#39;Text output number of digits of precision set to: &#39;</span>,i2)</div>
@@ -825,10 +870,10 @@ $(function() {
 <div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;    <span class="keywordflow">if</span> (localdigits&gt;0) this%idigits = localdigits</div>
 <div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;  <span class="keyword">end subroutine </span>read_obs_options</div>
+<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespaceobsmodule.html#a6b8183302027550598aa7123044222ed">read_obs_options</a></div>
 <div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160; </div>
-<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;  <span class="keyword">subroutine </span>define_fmts(this)</div>
-<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespaceobsmodule.html#a952ac4b026bc683dbfcedd8da24220bb">define_fmts</a>(this)</div>
+<div class="line"><a name="l00759"></a><span class="lineno"><a class="line" href="namespaceobsmodule.html#a952ac4b026bc683dbfcedd8da24220bb">  759</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;<span class="comment">! define_fmts</span></div>
 <div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;<span class="comment">!   -- define output formats for single and continuous observations</span></div>
 <div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;<span class="comment">! ******************************************************************************</span></div>
@@ -843,10 +888,10 @@ $(function() {
 <div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;    <span class="keyword">write</span>(this%obsfmtcont,50)this%idigits+7, this%idigits</div>
 <div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;  <span class="keyword">end subroutine </span>define_fmts</div>
+<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespaceobsmodule.html#a952ac4b026bc683dbfcedd8da24220bb">define_fmts</a></div>
 <div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160; </div>
-<div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;  <span class="keyword">subroutine </span>read_observations(this)</div>
-<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespaceobsmodule.html#a5020e6a1e691cbed308108acbb813f9e">read_observations</a>(this)</div>
+<div class="line"><a name="l00777"></a><span class="lineno"><a class="line" href="namespaceobsmodule.html#a5020e6a1e691cbed308108acbb813f9e">  777</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160;<span class="comment">! read_observations</span></div>
 <div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160;<span class="comment">!   -- read CONTINUOUS blocks from OBS input file</span></div>
 <div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;<span class="comment">! ******************************************************************************</span></div>
@@ -865,10 +910,10 @@ $(function() {
 <div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;    <span class="keyword">call </span>this%build_headers()</div>
 <div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;  <span class="keyword">end subroutine </span>read_observations</div>
+<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespaceobsmodule.html#a5020e6a1e691cbed308108acbb813f9e">read_observations</a></div>
 <div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160; </div>
-<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;  <span class="keyword">function </span>get_num(this)</div>
-<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;  <span class="keyword">function </span><a class="code" href="namespaceobsmodule.html#aa716217a44f18c7a825f084a15e2cbe5">get_num</a>(this)</div>
+<div class="line"><a name="l00799"></a><span class="lineno"><a class="line" href="namespaceobsmodule.html#aa716217a44f18c7a825f084a15e2cbe5">  799</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;<span class="comment">! get_num</span></div>
 <div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;<span class="comment">!   -- Return the number of observations contained in this ObsType object</span></div>
 <div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;<span class="comment">! ******************************************************************************</span></div>
@@ -876,17 +921,17 @@ $(function() {
 <div class="line"><a name="l00804"></a><span class="lineno">  804</span>&#160;<span class="comment">!    SPECIFICATIONS:</span></div>
 <div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160;    <span class="comment">! -- return</span></div>
-<div class="line"><a name="l00807"></a><span class="lineno">  807</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: get_num</div>
+<div class="line"><a name="l00807"></a><span class="lineno">  807</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: <a class="code" href="namespaceobsmodule.html#aa716217a44f18c7a825f084a15e2cbe5">get_num</a></div>
 <div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160;    <span class="comment">! -- dummy</span></div>
 <div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160;    <span class="keywordtype">class</span>(obstype) :: this</div>
 <div class="line"><a name="l00810"></a><span class="lineno">  810</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00811"></a><span class="lineno">  811</span>&#160;    <span class="comment">!</span></div>
-<div class="line"><a name="l00812"></a><span class="lineno">  812</span>&#160;    get_num = this%obsList%Count()</div>
+<div class="line"><a name="l00812"></a><span class="lineno">  812</span>&#160;    <a class="code" href="namespaceobsmodule.html#aa716217a44f18c7a825f084a15e2cbe5">get_num</a> = this%obsList%Count()</div>
 <div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00814"></a><span class="lineno">  814</span>&#160;  <span class="keyword">end function </span>get_num</div>
+<div class="line"><a name="l00814"></a><span class="lineno">  814</span>&#160;  <span class="keyword">end function </span><a class="code" href="namespaceobsmodule.html#aa716217a44f18c7a825f084a15e2cbe5">get_num</a></div>
 <div class="line"><a name="l00815"></a><span class="lineno">  815</span>&#160; </div>
-<div class="line"><a name="l00816"></a><span class="lineno">  816</span>&#160;  <span class="keyword">subroutine </span>build_headers(this)</div>
-<div class="line"><a name="l00817"></a><span class="lineno">  817</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00816"></a><span class="lineno">  816</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespaceobsmodule.html#ab207c4278b47e96ab80e4614a8ed4856">build_headers</a>(this)</div>
+<div class="line"><a name="l00817"></a><span class="lineno"><a class="line" href="namespaceobsmodule.html#ab207c4278b47e96ab80e4614a8ed4856">  817</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00818"></a><span class="lineno">  818</span>&#160;<span class="comment">! build_headers</span></div>
 <div class="line"><a name="l00819"></a><span class="lineno">  819</span>&#160;<span class="comment">! -- Build headers for CSV-formatted and unformatted continuous-observation</span></div>
 <div class="line"><a name="l00820"></a><span class="lineno">  820</span>&#160;<span class="comment">! output files and write them to those files.</span></div>
@@ -907,8 +952,8 @@ $(function() {
 <div class="line"><a name="l00835"></a><span class="lineno">  835</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: num</div>
 <div class="line"><a name="l00836"></a><span class="lineno">  836</span>&#160;    <span class="keywordtype">integer(int32)</span> :: nobs</div>
 <div class="line"><a name="l00837"></a><span class="lineno">  837</span>&#160;    <span class="keywordtype">character(len=4)</span>                   :: clenobsname</div>
-<div class="line"><a name="l00838"></a><span class="lineno">  838</span>&#160;    <span class="keywordtype">type</span>(observetype),         <span class="keywordtype">pointer</span> :: obsrv =&gt; null()</div>
-<div class="line"><a name="l00839"></a><span class="lineno">  839</span>&#160;    <span class="keywordtype">type</span>(obsoutputtype),       <span class="keywordtype">pointer</span> :: obsoutput =&gt; null()</div>
+<div class="line"><a name="l00838"></a><span class="lineno">  838</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structobservemodule_1_1observetype.html">observetype</a>),         <span class="keywordtype">pointer</span> :: obsrv =&gt; null()</div>
+<div class="line"><a name="l00839"></a><span class="lineno">  839</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structobsoutputmodule_1_1obsoutputtype.html">obsoutputtype</a>),       <span class="keywordtype">pointer</span> :: obsOutput =&gt; null()</div>
 <div class="line"><a name="l00840"></a><span class="lineno">  840</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00841"></a><span class="lineno">  841</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00842"></a><span class="lineno">  842</span>&#160;    <span class="comment">! -- Cycle through ObsOutputList to write headers</span></div>
@@ -963,7 +1008,7 @@ $(function() {
 <div class="line"><a name="l00891"></a><span class="lineno">  891</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00892"></a><span class="lineno">  892</span>&#160;    <span class="comment">! -- return</span></div>
 <div class="line"><a name="l00893"></a><span class="lineno">  893</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00894"></a><span class="lineno">  894</span>&#160;  <span class="keyword">end subroutine </span>build_headers</div>
+<div class="line"><a name="l00894"></a><span class="lineno">  894</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespaceobsmodule.html#ab207c4278b47e96ab80e4614a8ed4856">build_headers</a></div>
 <div class="line"><a name="l00895"></a><span class="lineno">  895</span>&#160; </div>
 <div class="line"><a name="l00896"></a><span class="lineno">  896</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespaceobsmodule.html#a5d458629a33ffafd940a178c1b778a72">get_obs_array</a>(this, nObs, obsArray)</div>
 <div class="line"><a name="l00897"></a><span class="lineno"><a class="line" href="namespaceobsmodule.html#a5d458629a33ffafd940a178c1b778a72">  897</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
@@ -976,7 +1021,7 @@ $(function() {
 <div class="line"><a name="l00904"></a><span class="lineno">  904</span>&#160;    <span class="comment">! -- dummy</span></div>
 <div class="line"><a name="l00905"></a><span class="lineno">  905</span>&#160;    <span class="keywordtype">class</span>(obstype), <span class="keywordtype">intent(inout)</span> :: this</div>
 <div class="line"><a name="l00906"></a><span class="lineno">  906</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(out)</span>   :: nObs</div>
-<div class="line"><a name="l00907"></a><span class="lineno">  907</span>&#160;    <span class="keywordtype">type</span>(obscontainertype), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">intent(inout)</span> :: obsArray</div>
+<div class="line"><a name="l00907"></a><span class="lineno">  907</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structobscontainermodule_1_1obscontainertype.html">obscontainertype</a>), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">intent(inout)</span> :: obsArray</div>
 <div class="line"><a name="l00908"></a><span class="lineno">  908</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00909"></a><span class="lineno">  909</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00910"></a><span class="lineno">  910</span>&#160;    <span class="comment">!</span></div>
@@ -992,8 +1037,8 @@ $(function() {
 <div class="line"><a name="l00920"></a><span class="lineno">  920</span>&#160;    <span class="keywordflow">return</span></div>
 <div class="line"><a name="l00921"></a><span class="lineno">  921</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespaceobsmodule.html#a5d458629a33ffafd940a178c1b778a72">get_obs_array</a></div>
 <div class="line"><a name="l00922"></a><span class="lineno">  922</span>&#160; </div>
-<div class="line"><a name="l00923"></a><span class="lineno">  923</span>&#160;  <span class="keyword">function </span>get_obs_datum(this, obsTypeID) <span class="keyword">result</span>(obsDatum)</div>
-<div class="line"><a name="l00924"></a><span class="lineno">  924</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00923"></a><span class="lineno">  923</span>&#160;  <span class="keyword">function </span><a class="code" href="namespaceobsmodule.html#a26a16acf4e670e4702053e5114434328">get_obs_datum</a>(this, obsTypeID) <span class="keyword">result</span>(obsDatum)</div>
+<div class="line"><a name="l00924"></a><span class="lineno"><a class="line" href="namespaceobsmodule.html#a26a16acf4e670e4702053e5114434328">  924</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00925"></a><span class="lineno">  925</span>&#160;<span class="comment">! get_obs_datum</span></div>
 <div class="line"><a name="l00926"></a><span class="lineno">  926</span>&#160;<span class="comment">!   -- Return an ObsDataType object for the specified observation type</span></div>
 <div class="line"><a name="l00927"></a><span class="lineno">  927</span>&#160;<span class="comment">! ******************************************************************************</span></div>
@@ -1002,8 +1047,8 @@ $(function() {
 <div class="line"><a name="l00930"></a><span class="lineno">  930</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00931"></a><span class="lineno">  931</span>&#160;    <span class="comment">! -- dummy</span></div>
 <div class="line"><a name="l00932"></a><span class="lineno">  932</span>&#160;    <span class="keywordtype">class</span>(obstype) :: this</div>
-<div class="line"><a name="l00933"></a><span class="lineno">  933</span>&#160;    <span class="keywordtype">character(len=*)</span>, <span class="keywordtype">intent(in)</span> :: obsTypeID</div>
-<div class="line"><a name="l00934"></a><span class="lineno">  934</span>&#160;    <span class="keywordtype">type</span>(obsdatatype), <span class="keywordtype">pointer</span> :: obsDatum</div>
+<div class="line"><a name="l00933"></a><span class="lineno">  933</span>&#160;    <span class="keywordtype">character(len=*)</span>, <span class="keywordtype">intent(in)</span> :: obstypeid</div>
+<div class="line"><a name="l00934"></a><span class="lineno">  934</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structobservemodule_1_1obsdatatype.html">obsdatatype</a>), <span class="keywordtype">pointer</span> :: obsdatum</div>
 <div class="line"><a name="l00935"></a><span class="lineno">  935</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00936"></a><span class="lineno">  936</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: i</div>
 <div class="line"><a name="l00937"></a><span class="lineno">  937</span>&#160;    <span class="keywordtype">character( len=MAXCHARLEN)</span> :: ermsg</div>
@@ -1025,10 +1070,10 @@ $(function() {
 <div class="line"><a name="l00953"></a><span class="lineno">  953</span>&#160;<span class="keywordflow">    endif</span></div>
 <div class="line"><a name="l00954"></a><span class="lineno">  954</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00955"></a><span class="lineno">  955</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00956"></a><span class="lineno">  956</span>&#160;  <span class="keyword">end function </span>get_obs_datum</div>
+<div class="line"><a name="l00956"></a><span class="lineno">  956</span>&#160;  <span class="keyword">end function </span><a class="code" href="namespaceobsmodule.html#a26a16acf4e670e4702053e5114434328">get_obs_datum</a></div>
 <div class="line"><a name="l00957"></a><span class="lineno">  957</span>&#160; </div>
-<div class="line"><a name="l00958"></a><span class="lineno">  958</span>&#160;  <span class="keyword">subroutine </span>populate_obs_array(this, nObs, obsArray)</div>
-<div class="line"><a name="l00959"></a><span class="lineno">  959</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00958"></a><span class="lineno">  958</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespaceobsmodule.html#a0fd1cb02953abfdd6554807a8d15ccad">populate_obs_array</a>(this, nObs, obsArray)</div>
+<div class="line"><a name="l00959"></a><span class="lineno"><a class="line" href="namespaceobsmodule.html#a0fd1cb02953abfdd6554807a8d15ccad">  959</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00960"></a><span class="lineno">  960</span>&#160;<span class="comment">! populate_obs_array</span></div>
 <div class="line"><a name="l00961"></a><span class="lineno">  961</span>&#160;<span class="comment">!   -- Populate obsArray with observations for specified package</span></div>
 <div class="line"><a name="l00962"></a><span class="lineno">  962</span>&#160;<span class="comment">! ******************************************************************************</span></div>
@@ -1038,12 +1083,12 @@ $(function() {
 <div class="line"><a name="l00966"></a><span class="lineno">  966</span>&#160;    <span class="comment">! -- dummy</span></div>
 <div class="line"><a name="l00967"></a><span class="lineno">  967</span>&#160;    <span class="keywordtype">class</span>(obstype), <span class="keywordtype">intent(inout)</span> :: this</div>
 <div class="line"><a name="l00968"></a><span class="lineno">  968</span>&#160;    <span class="keywordtype">integer(I4B)</span>,               <span class="keywordtype">intent(in)</span>    :: nObs</div>
-<div class="line"><a name="l00969"></a><span class="lineno">  969</span>&#160;    <span class="keywordtype">type</span>(obscontainertype), <span class="keywordtype">dimension(nObs)</span>, <span class="keywordtype">intent(inout)</span> :: obsArray</div>
+<div class="line"><a name="l00969"></a><span class="lineno">  969</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structobscontainermodule_1_1obscontainertype.html">obscontainertype</a>), <span class="keywordtype">dimension(nObs)</span>, <span class="keywordtype">intent(inout)</span> :: obsArray</div>
 <div class="line"><a name="l00970"></a><span class="lineno">  970</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00971"></a><span class="lineno">  971</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00972"></a><span class="lineno">  972</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00973"></a><span class="lineno">  973</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: i, n</div>
-<div class="line"><a name="l00974"></a><span class="lineno">  974</span>&#160;    <span class="keywordtype">type</span>(observetype), <span class="keywordtype">pointer</span> :: obsrv =&gt; null()</div>
+<div class="line"><a name="l00974"></a><span class="lineno">  974</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structobservemodule_1_1observetype.html">observetype</a>), <span class="keywordtype">pointer</span> :: obsrv =&gt; null()</div>
 <div class="line"><a name="l00975"></a><span class="lineno">  975</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00976"></a><span class="lineno">  976</span>&#160;    n = this%get_num()</div>
 <div class="line"><a name="l00977"></a><span class="lineno">  977</span>&#160;    <span class="keywordflow">do</span> i=1,n</div>
@@ -1052,10 +1097,10 @@ $(function() {
 <div class="line"><a name="l00980"></a><span class="lineno">  980</span>&#160;<span class="keywordflow">    enddo</span></div>
 <div class="line"><a name="l00981"></a><span class="lineno">  981</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00982"></a><span class="lineno">  982</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00983"></a><span class="lineno">  983</span>&#160;  <span class="keyword">end subroutine </span>populate_obs_array</div>
+<div class="line"><a name="l00983"></a><span class="lineno">  983</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespaceobsmodule.html#a0fd1cb02953abfdd6554807a8d15ccad">populate_obs_array</a></div>
 <div class="line"><a name="l00984"></a><span class="lineno">  984</span>&#160; </div>
-<div class="line"><a name="l00985"></a><span class="lineno">  985</span>&#160;  <span class="keyword">function </span>get_obs(this, indx) <span class="keyword">result</span>(obsrv)</div>
-<div class="line"><a name="l00986"></a><span class="lineno">  986</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00985"></a><span class="lineno">  985</span>&#160;  <span class="keyword">function </span><a class="code" href="namespaceobsmodule.html#aeb1621db37eb5c9e8621cd0fd55247ae">get_obs</a>(this, indx) <span class="keyword">result</span>(obsrv)</div>
+<div class="line"><a name="l00986"></a><span class="lineno"><a class="line" href="namespaceobsmodule.html#aeb1621db37eb5c9e8621cd0fd55247ae">  986</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00987"></a><span class="lineno">  987</span>&#160;<span class="comment">! get_obs</span></div>
 <div class="line"><a name="l00988"></a><span class="lineno">  988</span>&#160;<span class="comment">!   -- Return the specified ObserveType object from the list of observations</span></div>
 <div class="line"><a name="l00989"></a><span class="lineno">  989</span>&#160;<span class="comment">! ******************************************************************************</span></div>
@@ -1065,17 +1110,17 @@ $(function() {
 <div class="line"><a name="l00993"></a><span class="lineno">  993</span>&#160;    <span class="comment">! -- dummy</span></div>
 <div class="line"><a name="l00994"></a><span class="lineno">  994</span>&#160;    <span class="keywordtype">class</span>(obstype) :: this</div>
 <div class="line"><a name="l00995"></a><span class="lineno">  995</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span>   :: indx</div>
-<div class="line"><a name="l00996"></a><span class="lineno">  996</span>&#160;    <span class="keywordtype">class</span>(observetype), <span class="keywordtype">pointer</span> :: obsrv</div>
+<div class="line"><a name="l00996"></a><span class="lineno">  996</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structobservemodule_1_1observetype.html">observetype</a>), <span class="keywordtype">pointer</span> :: obsrv</div>
 <div class="line"><a name="l00997"></a><span class="lineno">  997</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00998"></a><span class="lineno">  998</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00999"></a><span class="lineno">  999</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l01000"></a><span class="lineno"> 1000</span>&#160;    obsrv =&gt; <a class="code" href="namespaceobservemodule.html#a9027456caa8ff096f72b8c9547b8da98">getobsfromlist</a>(this%obsList, indx)</div>
 <div class="line"><a name="l01001"></a><span class="lineno"> 1001</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l01002"></a><span class="lineno"> 1002</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l01003"></a><span class="lineno"> 1003</span>&#160;  <span class="keyword">end function </span>get_obs</div>
+<div class="line"><a name="l01003"></a><span class="lineno"> 1003</span>&#160;  <span class="keyword">end function </span><a class="code" href="namespaceobsmodule.html#aeb1621db37eb5c9e8621cd0fd55247ae">get_obs</a></div>
 <div class="line"><a name="l01004"></a><span class="lineno"> 1004</span>&#160; </div>
-<div class="line"><a name="l01005"></a><span class="lineno"> 1005</span>&#160;  <span class="keyword">subroutine </span>read_obs_blocks(this, fname)</div>
-<div class="line"><a name="l01006"></a><span class="lineno"> 1006</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l01005"></a><span class="lineno"> 1005</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespaceobsmodule.html#a0e39fd82e1d2b282f8789b064f750f72">read_obs_blocks</a>(this, fname)</div>
+<div class="line"><a name="l01006"></a><span class="lineno"><a class="line" href="namespaceobsmodule.html#a0e39fd82e1d2b282f8789b064f750f72"> 1006</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l01007"></a><span class="lineno"> 1007</span>&#160;<span class="comment">! read_obs_blocks</span></div>
 <div class="line"><a name="l01008"></a><span class="lineno"> 1008</span>&#160;<span class="comment">!   -- read CONTINUOUS blocks from the OBS input file</span></div>
 <div class="line"><a name="l01009"></a><span class="lineno"> 1009</span>&#160;<span class="comment">! ******************************************************************************</span></div>
@@ -1094,8 +1139,8 @@ $(function() {
 <div class="line"><a name="l01022"></a><span class="lineno"> 1022</span>&#160;    <span class="keywordtype">character(len=LINELENGTH)</span> :: title</div>
 <div class="line"><a name="l01023"></a><span class="lineno"> 1023</span>&#160;    <span class="keywordtype">character(len=LINELENGTH)</span> :: tag</div>
 <div class="line"><a name="l01024"></a><span class="lineno"> 1024</span>&#160;    <span class="keywordtype">character(len=20)</span> :: accarg, bin, fmtarg</div>
-<div class="line"><a name="l01025"></a><span class="lineno"> 1025</span>&#160;    <span class="keywordtype">type</span>(observetype),     <span class="keywordtype">pointer</span> :: obsrv =&gt; null()</div>
-<div class="line"><a name="l01026"></a><span class="lineno"> 1026</span>&#160;    <span class="keywordtype">type</span>(obsoutputtype),   <span class="keywordtype">pointer</span> :: obsOutput =&gt; null()</div>
+<div class="line"><a name="l01025"></a><span class="lineno"> 1025</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structobservemodule_1_1observetype.html">observetype</a>),     <span class="keywordtype">pointer</span> :: obsrv =&gt; null()</div>
+<div class="line"><a name="l01026"></a><span class="lineno"> 1026</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structobsoutputmodule_1_1obsoutputtype.html">obsoutputtype</a>),   <span class="keywordtype">pointer</span> :: obsOutput =&gt; null()</div>
 <div class="line"><a name="l01027"></a><span class="lineno"> 1027</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: ntabrows</div>
 <div class="line"><a name="l01028"></a><span class="lineno"> 1028</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: ntabcols</div>
 <div class="line"><a name="l01029"></a><span class="lineno"> 1029</span>&#160;    <span class="comment">! -- formats</span></div>
@@ -1233,10 +1278,10 @@ $(function() {
 <div class="line"><a name="l01161"></a><span class="lineno"> 1161</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l01162"></a><span class="lineno"> 1162</span>&#160;    <span class="comment">! -- return</span></div>
 <div class="line"><a name="l01163"></a><span class="lineno"> 1163</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l01164"></a><span class="lineno"> 1164</span>&#160;  <span class="keyword">end subroutine </span>read_obs_blocks</div>
+<div class="line"><a name="l01164"></a><span class="lineno"> 1164</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespaceobsmodule.html#a0e39fd82e1d2b282f8789b064f750f72">read_obs_blocks</a></div>
 <div class="line"><a name="l01165"></a><span class="lineno"> 1165</span>&#160; </div>
-<div class="line"><a name="l01166"></a><span class="lineno"> 1166</span>&#160;  <span class="keyword">subroutine </span>write_continuous_simvals(this)</div>
-<div class="line"><a name="l01167"></a><span class="lineno"> 1167</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l01166"></a><span class="lineno"> 1166</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespaceobsmodule.html#ac53e5a4563db4c57b4f8ef488b1ad482">write_continuous_simvals</a>(this)</div>
+<div class="line"><a name="l01167"></a><span class="lineno"><a class="line" href="namespaceobsmodule.html#ac53e5a4563db4c57b4f8ef488b1ad482"> 1167</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l01168"></a><span class="lineno"> 1168</span>&#160;<span class="comment">! write_continuous_simvals</span></div>
 <div class="line"><a name="l01169"></a><span class="lineno"> 1169</span>&#160;<span class="comment">! Subroutine: (1) for each continuous observation, writes value to output</span></div>
 <div class="line"><a name="l01170"></a><span class="lineno"> 1170</span>&#160;<span class="comment">! ******************************************************************************</span></div>
@@ -1249,7 +1294,7 @@ $(function() {
 <div class="line"><a name="l01177"></a><span class="lineno"> 1177</span>&#160;    <span class="keywordtype">integer(I4B)</span>                :: i, iprec, numobs</div>
 <div class="line"><a name="l01178"></a><span class="lineno"> 1178</span>&#160;    <span class="keywordtype">character(len=20)</span>           :: fmtc</div>
 <div class="line"><a name="l01179"></a><span class="lineno"> 1179</span>&#160;<span class="keywordtype">    real</span>(DP)                    :: simval</div>
-<div class="line"><a name="l01180"></a><span class="lineno"> 1180</span>&#160;    <span class="keywordtype">class</span>(observetype), <span class="keywordtype">pointer</span> :: obsrv =&gt; null()</div>
+<div class="line"><a name="l01180"></a><span class="lineno"> 1180</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structobservemodule_1_1observetype.html">observetype</a>), <span class="keywordtype">pointer</span> :: obsrv =&gt; null()</div>
 <div class="line"><a name="l01181"></a><span class="lineno"> 1181</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l01182"></a><span class="lineno"> 1182</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l01183"></a><span class="lineno"> 1183</span>&#160;    <span class="comment">! Write simulated values for observations</span></div>
@@ -1269,34 +1314,54 @@ $(function() {
 <div class="line"><a name="l01197"></a><span class="lineno"> 1197</span>&#160;<span class="keywordflow">    enddo</span></div>
 <div class="line"><a name="l01198"></a><span class="lineno"> 1198</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l01199"></a><span class="lineno"> 1199</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l01200"></a><span class="lineno"> 1200</span>&#160;  <span class="keyword">end subroutine </span>write_continuous_simvals</div>
+<div class="line"><a name="l01200"></a><span class="lineno"> 1200</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespaceobsmodule.html#ac53e5a4563db4c57b4f8ef488b1ad482">write_continuous_simvals</a></div>
 <div class="line"><a name="l01201"></a><span class="lineno"> 1201</span>&#160; </div>
 <div class="line"><a name="l01202"></a><span class="lineno"> 1202</span>&#160;<span class="keyword">end module </span><a class="code" href="namespaceobsmodule.html">obsmodule</a></div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="anamespaceobsmodule_html_a5020e6a1e691cbed308108acbb813f9e"><div class="ttname"><a href="namespaceobsmodule.html#a5020e6a1e691cbed308108acbb813f9e">obsmodule::read_observations</a></div><div class="ttdeci">subroutine read_observations(this)</div><div class="ttdef"><b>Definition:</b> <a href="_obs3_8f90_source.html#l00777">Obs3.f90:777</a></div></div>
 <div class="ttc" id="anamespaceobservemodule_html_a9c9d0f13a665d00e24040a9ba9046e7e"><div class="ttname"><a href="namespaceobservemodule.html#a9c9d0f13a665d00e24040a9ba9046e7e">observemodule::addobstolist</a></div><div class="ttdeci">subroutine, public addobstolist(list, obs)</div><div class="ttdef"><b>Definition:</b> <a href="_observe_8f90_source.html#l00309">Observe.f90:309</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_ad1f6ef2448de9c1b27af4212ea587085"><div class="ttname"><a href="namespaceconstantsmodule.html#ad1f6ef2448de9c1b27af4212ea587085">constantsmodule::lenobstype</a></div><div class="ttdeci">integer(i4b), parameter lenobstype</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00024">Constants.f90:24</a></div></div>
 <div class="ttc" id="anamespacekindmodule_html"><div class="ttname"><a href="namespacekindmodule.html">kindmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="kind_8f90_source.html#l00001">kind.f90:1</a></div></div>
+<div class="ttc" id="astructobservemodule_1_1obsdatatype_html"><div class="ttname"><a href="structobservemodule_1_1obsdatatype.html">observemodule::obsdatatype</a></div><div class="ttdef"><b>Definition:</b> <a href="_observe_8f90_source.html#l00077">Observe.f90:77</a></div></div>
 <div class="ttc" id="anamespaceobsmodule_html"><div class="ttname"><a href="namespaceobsmodule.html">obsmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_obs3_8f90_source.html#l00127">Obs3.f90:127</a></div></div>
 <div class="ttc" id="anamespacesimmodule_html_a1c78a6fda06b630c738bb654aa6bd816"><div class="ttname"><a href="namespacesimmodule.html#a1c78a6fda06b630c738bb654aa6bd816">simmodule::store_error_unit</a></div><div class="ttdeci">subroutine, public store_error_unit(iunit)</div><div class="ttdef"><b>Definition:</b> <a href="_sim_8f90_source.html#l00177">Sim.f90:177</a></div></div>
 <div class="ttc" id="anamespacebasedismodule_html"><div class="ttname"><a href="namespacebasedismodule.html">basedismodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_discretization_base_8f90_source.html#l00001">DiscretizationBase.f90:1</a></div></div>
+<div class="ttc" id="anamespaceobsmodule_html_a952ac4b026bc683dbfcedd8da24220bb"><div class="ttname"><a href="namespaceobsmodule.html#a952ac4b026bc683dbfcedd8da24220bb">obsmodule::define_fmts</a></div><div class="ttdeci">subroutine define_fmts(this)</div><div class="ttdef"><b>Definition:</b> <a href="_obs3_8f90_source.html#l00759">Obs3.f90:759</a></div></div>
+<div class="ttc" id="astructobsoutputmodule_1_1obsoutputtype_html"><div class="ttname"><a href="structobsoutputmodule_1_1obsoutputtype.html">obsoutputmodule::obsoutputtype</a></div><div class="ttdef"><b>Definition:</b> <a href="_obs_output_8f90_source.html#l00021">ObsOutput.f90:21</a></div></div>
 <div class="ttc" id="anamespacesimmodule_html_a536cb6f0e13fcd33755e414641ff931a"><div class="ttname"><a href="namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a">simmodule::store_error</a></div><div class="ttdeci">subroutine, public store_error(msg)</div><div class="ttdef"><b>Definition:</b> <a href="_sim_8f90_source.html#l00107">Sim.f90:107</a></div></div>
+<div class="ttc" id="anamespaceobsmodule_html_aeb1621db37eb5c9e8621cd0fd55247ae"><div class="ttname"><a href="namespaceobsmodule.html#aeb1621db37eb5c9e8621cd0fd55247ae">obsmodule::get_obs</a></div><div class="ttdeci">class(observetype) function, pointer get_obs(this, indx)</div><div class="ttdef"><b>Definition:</b> <a href="_obs3_8f90_source.html#l00986">Obs3.f90:986</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_a5a5bc481197413bb50013a92490ffa14"><div class="ttname"><a href="namespaceconstantsmodule.html#a5a5bc481197413bb50013a92490ffa14">constantsmodule::lenbigline</a></div><div class="ttdeci">integer(i4b), parameter lenbigline</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00007">Constants.f90:7</a></div></div>
+<div class="ttc" id="astructobservemodule_1_1observetype_html"><div class="ttname"><a href="structobservemodule_1_1observetype.html">observemodule::observetype</a></div><div class="ttdef"><b>Definition:</b> <a href="_observe_8f90_source.html#l00032">Observe.f90:32</a></div></div>
 <div class="ttc" id="anamespaceinputoutputmodule_html_a23290af3b67b515f8452e48a56ed2955"><div class="ttname"><a href="namespaceinputoutputmodule.html#a23290af3b67b515f8452e48a56ed2955">inputoutputmodule::getfilefrompath</a></div><div class="ttdeci">subroutine, public getfilefrompath(pathname, filename)</div><div class="ttdef"><b>Definition:</b> <a href="_input_output_8f90_source.html#l01741">InputOutput.f90:1741</a></div></div>
+<div class="ttc" id="anamespaceobsmodule_html_ad918f221e65761c46614ed11cbb83dac"><div class="ttname"><a href="namespaceobsmodule.html#ad918f221e65761c46614ed11cbb83dac">obsmodule::allocate_scalars</a></div><div class="ttdeci">subroutine allocate_scalars(this)</div><div class="ttdef"><b>Definition:</b> <a href="_obs3_8f90_source.html#l00552">Obs3.f90:552</a></div></div>
+<div class="ttc" id="anamespaceobsmodule_html_aa5578ffb3710b8c02aac33ff970f6b44"><div class="ttname"><a href="namespaceobsmodule.html#aa5578ffb3710b8c02aac33ff970f6b44">obsmodule::obs_df</a></div><div class="ttdeci">subroutine obs_df(this, iout, pkgname, filtyp, dis)</div><div class="ttdef"><b>Definition:</b> <a href="_obs3_8f90_source.html#l00292">Obs3.f90:292</a></div></div>
+<div class="ttc" id="astructlistmodule_1_1listtype_html"><div class="ttname"><a href="structlistmodule_1_1listtype.html">listmodule::listtype</a></div><div class="ttdef"><b>Definition:</b> <a href="_list_8f90_source.html#l00009">List.f90:9</a></div></div>
 <div class="ttc" id="anamespaceopenspecmodule_html"><div class="ttname"><a href="namespaceopenspecmodule.html">openspecmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_open_spec_8f90_source.html#l00001">OpenSpec.f90:1</a></div></div>
 <div class="ttc" id="anamespacesimmodule_html_a4c46e49de78d4498dd4ec106357775e6"><div class="ttname"><a href="namespacesimmodule.html#a4c46e49de78d4498dd4ec106357775e6">simmodule::count_errors</a></div><div class="ttdeci">integer(i4b) function, public count_errors()</div><div class="ttdef"><b>Definition:</b> <a href="_sim_8f90_source.html#l00043">Sim.f90:43</a></div></div>
 <div class="ttc" id="anamespaceobscontainermodule_html"><div class="ttname"><a href="namespaceobscontainermodule.html">obscontainermodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_obs_container_8f90_source.html#l00007">ObsContainer.f90:7</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_a96baa989fd4e29721a7756b985c18b30"><div class="ttname"><a href="namespaceconstantsmodule.html#a96baa989fd4e29721a7756b985c18b30">constantsmodule::lenftype</a></div><div class="ttdeci">integer(i4b), parameter lenftype</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00022">Constants.f90:22</a></div></div>
+<div class="ttc" id="astructobscontainermodule_1_1obscontainertype_html"><div class="ttname"><a href="structobscontainermodule_1_1obscontainertype.html">obscontainermodule::obscontainertype</a></div><div class="ttdef"><b>Definition:</b> <a href="_obs_container_8f90_source.html#l00017">ObsContainer.f90:17</a></div></div>
+<div class="ttc" id="anamespaceobsmodule_html_a4e08c4a00b4774dbe59e849c8820bd22"><div class="ttname"><a href="namespaceobsmodule.html#a4e08c4a00b4774dbe59e849c8820bd22">obsmodule::obs_ar1</a></div><div class="ttdeci">subroutine obs_ar1(this, pkgname)</div><div class="ttdef"><b>Definition:</b> <a href="_obs3_8f90_source.html#l00576">Obs3.f90:576</a></div></div>
+<div class="ttc" id="astructobsoutputlistmodule_1_1obsoutputlisttype_html"><div class="ttname"><a href="structobsoutputlistmodule_1_1obsoutputlisttype.html">obsoutputlistmodule::obsoutputlisttype</a></div><div class="ttdef"><b>Definition:</b> <a href="_obs_output_list_8f90_source.html#l00021">ObsOutputList.f90:21</a></div></div>
 <div class="ttc" id="anamespacesimmodule_html"><div class="ttname"><a href="namespacesimmodule.html">simmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_sim_8f90_source.html#l00001">Sim.f90:1</a></div></div>
+<div class="ttc" id="ainterfacearrayhandlersmodule_1_1expandarray_html"><div class="ttname"><a href="interfacearrayhandlersmodule_1_1expandarray.html">arrayhandlersmodule::expandarray</a></div><div class="ttdef"><b>Definition:</b> <a href="_array_handlers_8f90_source.html#l00016">ArrayHandlers.f90:16</a></div></div>
+<div class="ttc" id="anamespaceobsmodule_html_adae8cf444bda36ffe55b9ab78f0f14b3"><div class="ttname"><a href="namespaceobsmodule.html#adae8cf444bda36ffe55b9ab78f0f14b3">obsmodule::obs_ot</a></div><div class="ttdeci">subroutine obs_ot(this)</div><div class="ttdef"><b>Definition:</b> <a href="_obs3_8f90_source.html#l00382">Obs3.f90:382</a></div></div>
 <div class="ttc" id="anamespaceblockparsermodule_html"><div class="ttname"><a href="namespaceblockparsermodule.html">blockparsermodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_block_parser_8f90_source.html#l00001">BlockParser.f90:1</a></div></div>
 <div class="ttc" id="anamespaceobservemodule_html_a3e5c964746ce5cff6f99f9ad771f0fe9"><div class="ttname"><a href="namespaceobservemodule.html#a3e5c964746ce5cff6f99f9ad771f0fe9">observemodule::constructobservation</a></div><div class="ttdeci">subroutine, public constructobservation(newObservation, defLine, numunit, formatted, indx, obsData, inunit)</div><div class="ttdef"><b>Definition:</b> <a href="_observe_8f90_source.html#l00222">Observe.f90:222</a></div></div>
+<div class="ttc" id="anamespaceobsmodule_html_a26a16acf4e670e4702053e5114434328"><div class="ttname"><a href="namespaceobsmodule.html#a26a16acf4e670e4702053e5114434328">obsmodule::get_obs_datum</a></div><div class="ttdeci">type(obsdatatype) function, pointer get_obs_datum(this, obsTypeID)</div><div class="ttdef"><b>Definition:</b> <a href="_obs3_8f90_source.html#l00924">Obs3.f90:924</a></div></div>
+<div class="ttc" id="anamespaceobsmodule_html_ac6cdbd7ac6e357c628fe803a4dbd8d2c"><div class="ttname"><a href="namespaceobsmodule.html#ac6cdbd7ac6e357c628fe803a4dbd8d2c">obsmodule::saveonesimval</a></div><div class="ttdeci">subroutine saveonesimval(this, obsrv, simval)</div><div class="ttdef"><b>Definition:</b> <a href="_obs3_8f90_source.html#l00458">Obs3.f90:458</a></div></div>
 <div class="ttc" id="anamespaceinputoutputmodule_html_a3418ad9e27e9d9caac6f541863e1c522"><div class="ttname"><a href="namespaceinputoutputmodule.html#a3418ad9e27e9d9caac6f541863e1c522">inputoutputmodule::upcase</a></div><div class="ttdeci">subroutine, public upcase(WORD)</div><div class="ttdef"><b>Definition:</b> <a href="_input_output_8f90_source.html#l00581">InputOutput.f90:581</a></div></div>
+<div class="ttc" id="anamespaceobsmodule_html_a268c01aaa4ae9950ec82420b416e13b3"><div class="ttname"><a href="namespaceobsmodule.html#a268c01aaa4ae9950ec82420b416e13b3">obsmodule::obs_da</a></div><div class="ttdeci">subroutine obs_da(this)</div><div class="ttdef"><b>Definition:</b> <a href="_obs3_8f90_source.html#l00406">Obs3.f90:406</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_a060d310ded5535ce2dc85bd1ca1afd3d"><div class="ttname"><a href="namespaceconstantsmodule.html#a060d310ded5535ce2dc85bd1ca1afd3d">constantsmodule::linelength</a></div><div class="ttdeci">integer(i4b), parameter linelength</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00028">Constants.f90:28</a></div></div>
 <div class="ttc" id="anamespacearrayhandlersmodule_html"><div class="ttname"><a href="namespacearrayhandlersmodule.html">arrayhandlersmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_array_handlers_8f90_source.html#l00001">ArrayHandlers.f90:1</a></div></div>
+<div class="ttc" id="anamespaceobsmodule_html_a0e39fd82e1d2b282f8789b064f750f72"><div class="ttname"><a href="namespaceobsmodule.html#a0e39fd82e1d2b282f8789b064f750f72">obsmodule::read_obs_blocks</a></div><div class="ttdeci">subroutine read_obs_blocks(this, fname)</div><div class="ttdef"><b>Definition:</b> <a href="_obs3_8f90_source.html#l01006">Obs3.f90:1006</a></div></div>
 <div class="ttc" id="anamespacesimmodule_html_a0be97214c1d4fcf42bc4ddc27b111b61"><div class="ttname"><a href="namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61">simmodule::ustop</a></div><div class="ttdeci">subroutine, public ustop(stopmess, ioutlocal)</div><div class="ttdef"><b>Definition:</b> <a href="_sim_8f90_source.html#l00324">Sim.f90:324</a></div></div>
 <div class="ttc" id="anamespaceinputoutputmodule_html_a535bdfca3d31ebc3a8e4bd5af6890d55"><div class="ttname"><a href="namespaceinputoutputmodule.html#a535bdfca3d31ebc3a8e4bd5af6890d55">inputoutputmodule::getunit</a></div><div class="ttdeci">integer(i4b) function, public getunit()</div><div class="ttdef"><b>Definition:</b> <a href="_input_output_8f90_source.html#l00208">InputOutput.f90:208</a></div></div>
 <div class="ttc" id="anamespaceobservemodule_html"><div class="ttname"><a href="namespaceobservemodule.html">observemodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_observe_8f90_source.html#l00012">Observe.f90:12</a></div></div>
 <div class="ttc" id="anamespaceinputoutputmodule_html"><div class="ttname"><a href="namespaceinputoutputmodule.html">inputoutputmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_input_output_8f90_source.html#l00003">InputOutput.f90:3</a></div></div>
 <div class="ttc" id="anamespacetdismodule_html_a5f22ad41ccf3be8d4bb899e8a1834ff4"><div class="ttname"><a href="namespacetdismodule.html#a5f22ad41ccf3be8d4bb899e8a1834ff4">tdismodule::totim</a></div><div class="ttdeci">real(dp), pointer, public totim</div><div class="ttdoc">time relative to start of simulation</div><div class="ttdef"><b>Definition:</b> <a href="tdis_8f90_source.html#l00032">tdis.f90:32</a></div></div>
+<div class="ttc" id="anamespaceobsmodule_html_aa716217a44f18c7a825f084a15e2cbe5"><div class="ttname"><a href="namespaceobsmodule.html#aa716217a44f18c7a825f084a15e2cbe5">obsmodule::get_num</a></div><div class="ttdeci">integer(i4b) function get_num(this)</div><div class="ttdef"><b>Definition:</b> <a href="_obs3_8f90_source.html#l00799">Obs3.f90:799</a></div></div>
 <div class="ttc" id="anamespaceobsmodule_html_a7dbce254f60ae2f0925c07136365ce91"><div class="ttname"><a href="namespaceobsmodule.html#a7dbce254f60ae2f0925c07136365ce91">obsmodule::defaultobsidprocessor</a></div><div class="ttdeci">subroutine, public defaultobsidprocessor(obsrv, dis, inunitobs, iout)</div><div class="ttdef"><b>Definition:</b> <a href="_obs3_8f90_source.html#l00238">Obs3.f90:238</a></div></div>
 <div class="ttc" id="anamespacekindmodule_html_a2f6861418b5e7d3d602b77228232a470"><div class="ttname"><a href="namespacekindmodule.html#a2f6861418b5e7d3d602b77228232a470">kindmodule::i4b</a></div><div class="ttdeci">integer, parameter i4b</div><div class="ttdef"><b>Definition:</b> <a href="kind_8f90_source.html#l00009">kind.f90:9</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_aa63ca3273e52df46471c4746566f46bd"><div class="ttname"><a href="namespaceconstantsmodule.html#aa63ca3273e52df46471c4746566f46bd">constantsmodule::lenboundname</a></div><div class="ttdeci">integer(i4b), parameter lenboundname</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00019">Constants.f90:19</a></div></div>
@@ -1307,11 +1372,16 @@ $(function() {
 <div class="ttc" id="anamespacetablemodule_html_a7632d784ec9e94277a76705ef56725f2"><div class="ttname"><a href="namespacetablemodule.html#a7632d784ec9e94277a76705ef56725f2">tablemodule::table_cr</a></div><div class="ttdeci">subroutine, public table_cr(this, name, title)</div><div class="ttdef"><b>Definition:</b> <a href="_table_8f90_source.html#l00084">Table.f90:84</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_aa7666dc20f64af0be4dc11ebf6759841"><div class="ttname"><a href="namespaceconstantsmodule.html#aa7666dc20f64af0be4dc11ebf6759841">constantsmodule::lenobsname</a></div><div class="ttdeci">integer(i4b), parameter lenobsname</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00023">Constants.f90:23</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html"><div class="ttname"><a href="namespaceconstantsmodule.html">constantsmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00001">Constants.f90:1</a></div></div>
+<div class="ttc" id="anamespaceobsmodule_html_a37c57e0e1cd8e621c9fa80ac697227dd"><div class="ttname"><a href="namespaceobsmodule.html#a37c57e0e1cd8e621c9fa80ac697227dd">obsmodule::obs_bd_clear</a></div><div class="ttdeci">subroutine obs_bd_clear(this)</div><div class="ttdef"><b>Definition:</b> <a href="_obs3_8f90_source.html#l00363">Obs3.f90:363</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_a4ee8967493137bb95d5b78dc3a77feba"><div class="ttname"><a href="namespaceconstantsmodule.html#a4ee8967493137bb95d5b78dc3a77feba">constantsmodule::dnodata</a></div><div class="ttdeci">real(dp), parameter dnodata</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00074">Constants.f90:74</a></div></div>
 <div class="ttc" id="anamespacetdismodule_html"><div class="ttname"><a href="namespacetdismodule.html">tdismodule</a></div><div class="ttdef"><b>Definition:</b> <a href="tdis_8f90_source.html#l00005">tdis.f90:5</a></div></div>
 <div class="ttc" id="astructtablemodule_1_1tabletype_html"><div class="ttname"><a href="structtablemodule_1_1tabletype.html">tablemodule::tabletype</a></div><div class="ttdef"><b>Definition:</b> <a href="_table_8f90_source.html#l00020">Table.f90:20</a></div></div>
 <div class="ttc" id="anamespaceobsutilitymodule_html_a522d11d695fca92807a340186ed0b2f6"><div class="ttname"><a href="namespaceobsutilitymodule.html#a522d11d695fca92807a340186ed0b2f6">obsutilitymodule::write_unfmtd_cont</a></div><div class="ttdeci">subroutine, public write_unfmtd_cont(obsrv, iprec, obsOutputList, value)</div><div class="ttdef"><b>Definition:</b> <a href="_obs_utility_8f90_source.html#l00066">ObsUtility.f90:66</a></div></div>
+<div class="ttc" id="anamespaceobsmodule_html_aa798af6bf30f959ddea76b5581fbefcb"><div class="ttname"><a href="namespaceobsmodule.html#aa798af6bf30f959ddea76b5581fbefcb">obsmodule::storeobstype</a></div><div class="ttdeci">subroutine storeobstype(this, obsrvType, cumulative, indx)</div><div class="ttdef"><b>Definition:</b> <a href="_obs3_8f90_source.html#l00493">Obs3.f90:493</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_a2e75f10abe62e57d87d7d468c2bf763d"><div class="ttname"><a href="namespaceconstantsmodule.html#a2e75f10abe62e57d87d7d468c2bf763d">constantsmodule::lenpackagename</a></div><div class="ttdeci">integer(i4b), parameter lenpackagename</div><div class="ttdoc">maximum length of the package name</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00013">Constants.f90:13</a></div></div>
+<div class="ttc" id="astructblockparsermodule_1_1blockparsertype_html"><div class="ttname"><a href="structblockparsermodule_1_1blockparsertype.html">blockparsermodule::blockparsertype</a></div><div class="ttdef"><b>Definition:</b> <a href="_block_parser_8f90_source.html#l00016">BlockParser.f90:16</a></div></div>
+<div class="ttc" id="anamespaceobsmodule_html_ab207c4278b47e96ab80e4614a8ed4856"><div class="ttname"><a href="namespaceobsmodule.html#ab207c4278b47e96ab80e4614a8ed4856">obsmodule::build_headers</a></div><div class="ttdeci">subroutine build_headers(this)</div><div class="ttdef"><b>Definition:</b> <a href="_obs3_8f90_source.html#l00817">Obs3.f90:817</a></div></div>
+<div class="ttc" id="anamespaceobsmodule_html_ac53e5a4563db4c57b4f8ef488b1ad482"><div class="ttname"><a href="namespaceobsmodule.html#ac53e5a4563db4c57b4f8ef488b1ad482">obsmodule::write_continuous_simvals</a></div><div class="ttdeci">subroutine write_continuous_simvals(this)</div><div class="ttdef"><b>Definition:</b> <a href="_obs3_8f90_source.html#l01167">Obs3.f90:1167</a></div></div>
 <div class="ttc" id="anamespaceobsmodule_html_a5d458629a33ffafd940a178c1b778a72"><div class="ttname"><a href="namespaceobsmodule.html#a5d458629a33ffafd940a178c1b778a72">obsmodule::get_obs_array</a></div><div class="ttdeci">subroutine get_obs_array(this, nObs, obsArray)</div><div class="ttdef"><b>Definition:</b> <a href="_obs3_8f90_source.html#l00897">Obs3.f90:897</a></div></div>
 <div class="ttc" id="anamespaceobservemodule_html_a9027456caa8ff096f72b8c9547b8da98"><div class="ttname"><a href="namespaceobservemodule.html#a9027456caa8ff096f72b8c9547b8da98">observemodule::getobsfromlist</a></div><div class="ttdeci">type(observetype) function, pointer, public getobsfromlist(list, idx)</div><div class="ttdef"><b>Definition:</b> <a href="_observe_8f90_source.html#l00322">Observe.f90:322</a></div></div>
 <div class="ttc" id="anamespacekindmodule_html_ae38bd3a7dfaf151094c26e1529259639"><div class="ttname"><a href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">kindmodule::dp</a></div><div class="ttdeci">integer, parameter dp</div><div class="ttdef"><b>Definition:</b> <a href="kind_8f90_source.html#l00007">kind.f90:7</a></div></div>
@@ -1320,17 +1390,25 @@ $(function() {
 <div class="ttc" id="anamespaceobsutilitymodule_html"><div class="ttname"><a href="namespaceobsutilitymodule.html">obsutilitymodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_obs_utility_8f90_source.html#l00006">ObsUtility.f90:6</a></div></div>
 <div class="ttc" id="anamespaceopenspecmodule_html_a5cd9b8ccff306158f81ed8cc744b1e46"><div class="ttname"><a href="namespaceopenspecmodule.html#a5cd9b8ccff306158f81ed8cc744b1e46">openspecmodule::access</a></div><div class="ttdeci">character(len=20) access</div><div class="ttdef"><b>Definition:</b> <a href="_open_spec_8f90_source.html#l00007">OpenSpec.f90:7</a></div></div>
 <div class="ttc" id="anamespaceobsutilitymodule_html_a4b9408947a92a0c103a43c84a874f20c"><div class="ttname"><a href="namespaceobsutilitymodule.html#a4b9408947a92a0c103a43c84a874f20c">obsutilitymodule::write_fmtd_cont</a></div><div class="ttdeci">subroutine, public write_fmtd_cont(fmtc, obsrv, obsOutputList, value)</div><div class="ttdef"><b>Definition:</b> <a href="_obs_utility_8f90_source.html#l00023">ObsUtility.f90:23</a></div></div>
+<div class="ttc" id="anamespaceobsmodule_html_a6b8183302027550598aa7123044222ed"><div class="ttname"><a href="namespaceobsmodule.html#a6b8183302027550598aa7123044222ed">obsmodule::read_obs_options</a></div><div class="ttdeci">subroutine read_obs_options(this)</div><div class="ttdef"><b>Definition:</b> <a href="_obs3_8f90_source.html#l00652">Obs3.f90:652</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_a71ca6c4361b908f3fc476b67e1ea3558add793922614b244e637762bb8590cc4a"><div class="ttname"><a href="namespaceconstantsmodule.html#a71ca6c4361b908f3fc476b67e1ea3558add793922614b244e637762bb8590cc4a">constantsmodule::tableft</a></div><div class="ttdeci">@ tableft</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00120">Constants.f90:120</a></div></div>
+<div class="ttc" id="anamespaceobsmodule_html_a0fd1cb02953abfdd6554807a8d15ccad"><div class="ttname"><a href="namespaceobsmodule.html#a0fd1cb02953abfdd6554807a8d15ccad">obsmodule::populate_obs_array</a></div><div class="ttdeci">subroutine populate_obs_array(this, nObs, obsArray)</div><div class="ttdef"><b>Definition:</b> <a href="_obs3_8f90_source.html#l00959">Obs3.f90:959</a></div></div>
 <div class="ttc" id="anamespaceinputoutputmodule_html_ae97851e3edae8d9809e384058a1a4d52"><div class="ttname"><a href="namespaceinputoutputmodule.html#ae97851e3edae8d9809e384058a1a4d52">inputoutputmodule::openfile</a></div><div class="ttdeci">subroutine, public openfile(iu, iout, fname, ftype, fmtarg_opt, accarg_opt, filstat_opt, mode_opt)</div><div class="ttdef"><b>Definition:</b> <a href="_input_output_8f90_source.html#l00034">InputOutput.f90:34</a></div></div>
+<div class="ttc" id="anamespaceobsmodule_html_af536a2aa67c795faa46e96ba457a6f62"><div class="ttname"><a href="namespaceobsmodule.html#af536a2aa67c795faa46e96ba457a6f62">obsmodule::obs_ar2</a></div><div class="ttdeci">subroutine obs_ar2(this, dis)</div><div class="ttdef"><b>Definition:</b> <a href="_obs3_8f90_source.html#l00607">Obs3.f90:607</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_ac9c1da291f7c6bfb35a47957c588ab20"><div class="ttname"><a href="namespaceconstantsmodule.html#ac9c1da291f7c6bfb35a47957c588ab20">constantsmodule::maxcharlen</a></div><div class="ttdeci">integer(i4b), parameter maxcharlen</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00030">Constants.f90:30</a></div></div>
+<div class="ttc" id="anamespaceobsmodule_html_a536bbd2e5167a100114ec4556e347e1a"><div class="ttname"><a href="namespaceobsmodule.html#a536bbd2e5167a100114ec4556e347e1a">obsmodule::obs_ad</a></div><div class="ttdeci">subroutine obs_ad(this)</div><div class="ttdef"><b>Definition:</b> <a href="_obs3_8f90_source.html#l00339">Obs3.f90:339</a></div></div>
 <div class="ttc" id="anamespaceobsoutputmodule_html"><div class="ttname"><a href="namespaceobsoutputmodule.html">obsoutputmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_obs_output_8f90_source.html#l00009">ObsOutput.f90:9</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_a7bc1680f8ee7a7b1b5d8ad6927951da7"><div class="ttname"><a href="namespaceconstantsmodule.html#a7bc1680f8ee7a7b1b5d8ad6927951da7">constantsmodule::maxobstypes</a></div><div class="ttdeci">integer(i4b), parameter maxobstypes</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00031">Constants.f90:31</a></div></div>
+<div class="ttc" id="anamespaceobsmodule_html_a4de474f34c3b0446f6e3ef6c6725ae8d"><div class="ttname"><a href="namespaceobsmodule.html#a4de474f34c3b0446f6e3ef6c6725ae8d">obsmodule::obs_ar</a></div><div class="ttdeci">subroutine obs_ar(this)</div><div class="ttdef"><b>Definition:</b> <a href="_obs3_8f90_source.html#l00318">Obs3.f90:318</a></div></div>
 <div class="ttc" id="anamespacelistmodule_html"><div class="ttname"><a href="namespacelistmodule.html">listmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_list_8f90_source.html#l00001">List.f90:1</a></div></div>
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_ff383ddf1aa4eab0c4ce7910366d05a5.html">Utilities</a></li><li class="navelem"><a class="el" href="dir_77e0984581d4d49dab8f9e4942a73c12.html">Observation</a></li><li class="navelem"><a class="el" href="_obs3_8f90.html">Obs3.f90</a></li>
+    <li class="footer">Generated on Thu Jun 24 2021 19:50:09 for MODFLOW 6 by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
 </body>
 </html>

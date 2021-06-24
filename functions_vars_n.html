@@ -5,13 +5,22 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MODFLOW 6 Code Documentation: Data Fields - Variables</title>
+<title>MODFLOW 6: Data Fields - Variables</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="CustomDoxygen.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -21,9 +30,12 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="mf6-triangular-grid.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">MODFLOW 6 Code Documentation
+   <div id="projectname">MODFLOW 6
+   &#160;<span id="projectnumber">version 6.2.2</span>
    </div>
+   <div id="projectbrief">MODFLOW 6 Code Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -36,17 +48,93 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Modules</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Data&#160;Types&#160;List</span></a></li>
+      <li><a href="files.html"><span>Files</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Data&#160;Types&#160;List</span></a></li>
+      <li><a href="classes.html"><span>Data&#160;Types</span></a></li>
+      <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li class="current"><a href="functions.html"><span>Data&#160;Fields</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow3" class="tabs2">
+    <ul class="tablist">
+      <li><a href="functions.html"><span>All</span></a></li>
+      <li><a href="functions_func.html"><span>Functions/Subroutines</span></a></li>
+      <li class="current"><a href="functions_vars.html"><span>Variables</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow4" class="tabs3">
+    <ul class="tablist">
+      <li><a href="functions_vars.html#index_a"><span>a</span></a></li>
+      <li><a href="functions_vars_b.html#index_b"><span>b</span></a></li>
+      <li><a href="functions_vars_c.html#index_c"><span>c</span></a></li>
+      <li><a href="functions_vars_d.html#index_d"><span>d</span></a></li>
+      <li><a href="functions_vars_e.html#index_e"><span>e</span></a></li>
+      <li><a href="functions_vars_f.html#index_f"><span>f</span></a></li>
+      <li><a href="functions_vars_g.html#index_g"><span>g</span></a></li>
+      <li><a href="functions_vars_h.html#index_h"><span>h</span></a></li>
+      <li><a href="functions_vars_i.html#index_i"><span>i</span></a></li>
+      <li><a href="functions_vars_j.html#index_j"><span>j</span></a></li>
+      <li><a href="functions_vars_k.html#index_k"><span>k</span></a></li>
+      <li><a href="functions_vars_l.html#index_l"><span>l</span></a></li>
+      <li><a href="functions_vars_m.html#index_m"><span>m</span></a></li>
+      <li class="current"><a href="functions_vars_n.html#index_n"><span>n</span></a></li>
+      <li><a href="functions_vars_o.html#index_o"><span>o</span></a></li>
+      <li><a href="functions_vars_p.html#index_p"><span>p</span></a></li>
+      <li><a href="functions_vars_q.html#index_q"><span>q</span></a></li>
+      <li><a href="functions_vars_r.html#index_r"><span>r</span></a></li>
+      <li><a href="functions_vars_s.html#index_s"><span>s</span></a></li>
+      <li><a href="functions_vars_t.html#index_t"><span>t</span></a></li>
+      <li><a href="functions_vars_u.html#index_u"><span>u</span></a></li>
+      <li><a href="functions_vars_v.html#index_v"><span>v</span></a></li>
+      <li><a href="functions_vars_w.html#index_w"><span>w</span></a></li>
+      <li><a href="functions_vars_x.html#index_x"><span>x</span></a></li>
+      <li><a href="functions_vars_y.html#index_y"><span>y</span></a></li>
+      <li><a href="functions_vars_z.html#index_z"><span>z</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
-</div><!-- top -->
+$(document).ready(function(){initNavTree('functions_vars_n.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -66,15 +154,45 @@ $(function() {
 
 <h3><a id="index_n"></a>- n -</h3><ul>
 <li>name
-: <a class="el" href="structbudgetobjectmodule_1_1budgetobjecttype.html#aa1c7c39226466036f645372d72c8e728">budgetobjectmodule::budgetobjecttype</a>
+: <a class="el" href="structbaseexchangemodule_1_1baseexchangetype.html#a856b65a0fafc0ff269f4e2c78bdc2221">baseexchangemodule::baseexchangetype</a>
+, <a class="el" href="structbasegeometrymodule_1_1basegeometrytype.html#a2d79436fe94dafcf091c712c23907414">basegeometrymodule::basegeometrytype</a>
+, <a class="el" href="structbasemodelmodule_1_1basemodeltype.html#a68d8d5b3b231a9359787e186f9e19c64">basemodelmodule::basemodeltype</a>
+, <a class="el" href="structbasesolutionmodule_1_1basesolutiontype.html#aee3c9eabab4322ffef38e0bbdf0bf084">basesolutionmodule::basesolutiontype</a>
+, <a class="el" href="structbudgetobjectmodule_1_1budgetobjecttype.html#aa1c7c39226466036f645372d72c8e728">budgetobjectmodule::budgetobjecttype</a>
+, <a class="el" href="structlistmodule_1_1listtype.html#af665331622c80e896e68a38866718c68">listmodule::listtype</a>
+, <a class="el" href="structmemorytypemodule_1_1memorytype.html#a28b0e66a7ef8a77f2b1b0ecf26b419b0">memorytypemodule::memorytype</a>
 , <a class="el" href="structmessagemodule_1_1messagetype.html#aaf197a6edee92af440d0fbb91f7188e9">messagemodule::messagetype</a>
+, <a class="el" href="structobservemodule_1_1observetype.html#a7da7adb3365eecc75ab44b056817ce6d">observemodule::observetype</a>
+, <a class="el" href="structpackagebudgetmodule_1_1packagebudgettype.html#ae4149556d97e817714dd3bac2bdf5e87">packagebudgetmodule::packagebudgettype</a>
 , <a class="el" href="structtablemodule_1_1tabletype.html#afebc462fd9160b008cbbe312b2b425ab">tablemodule::tabletype</a>
+, <a class="el" href="structtimearrayseriesmodule_1_1timearrayseriestype.html#a94c051283312f1bc47d0d4b5bd0a842f">timearrayseriesmodule::timearrayseriestype</a>
+, <a class="el" href="structtimeseriesmodule_1_1timeseriestype.html#a4985e5f59264b7d6d12c99ccc593a239">timeseriesmodule::timeseriestype</a>
+</li>
+<li>name_model
+: <a class="el" href="structbasedismodule_1_1disbasetype.html#ad08a7463f8765bedb540ba8271efa26b">basedismodule::disbasetype</a>
+, <a class="el" href="structconnectionsmodule_1_1connectionstype.html#ae8ad61e82cf0e89b5d7ba673a9871f38">connectionsmodule::connectionstype</a>
+, <a class="el" href="structnumericalpackagemodule_1_1numericalpackagetype.html#a4c6847a30a4501fec8543832c239f764">numericalpackagemodule::numericalpackagetype</a>
+, <a class="el" href="structoutputcontrolmodule_1_1outputcontroltype.html#adb9a0728cd4608fd219ebc9ac66c8c0c">outputcontrolmodule::outputcontroltype</a>
 </li>
 <li>naux
-: <a class="el" href="structbudgettermmodule_1_1budgettermtype.html#a3490361847dfb5cc8bdddb4a06e631ed">budgettermmodule::budgettermtype</a>
+: <a class="el" href="structbndmodule_1_1bndtype.html#adaee70acd7949fe83b3fae6cee240fed">bndmodule::bndtype</a>
+, <a class="el" href="structbudgetfilereadermodule_1_1budgetfilereadertype.html#a770f2a84f9effbdcd47f994e61932107">budgetfilereadermodule::budgetfilereadertype</a>
+, <a class="el" href="structbudgettermmodule_1_1budgettermtype.html#a3490361847dfb5cc8bdddb4a06e631ed">budgettermmodule::budgettermtype</a>
+, <a class="el" href="structdisconnexchangemodule_1_1disconnexchangetype.html#ab7253d01e4a85176f8b6072f4eefab31">disconnexchangemodule::disconnexchangetype</a>
+, <a class="el" href="structgwfcsubmodule_1_1gwfcsubtype.html#aa09ddd23bb6897d46d61a6eb992d8f33">gwfcsubmodule::gwfcsubtype</a>
+, <a class="el" href="structpackagebudgetmodule_1_1packagebudgettype.html#a252e46fe72c0da9472f2e898a48ff28e">packagebudgetmodule::packagebudgettype</a>
+</li>
+<li>nauxarray
+: <a class="el" href="structbudgetfilereadermodule_1_1budgetfilereadertype.html#a8ca11960eca28efa3996d81dae7118bb">budgetfilereadermodule::budgetfilereadertype</a>
+</li>
+<li>nbdtxt
+: <a class="el" href="structuzfmodule_1_1uzftype.html#a5ae615ebb7cb287b5bdd3946992c623c">uzfmodule::uzftype</a>
 </li>
 <li>nbound
-: <a class="el" href="structgwtssmmodule_1_1gwtssmtype.html#a3ab153fba8be986b3a3e0b3625d7de87">gwtssmmodule::gwtssmtype</a>
+: <a class="el" href="structbndmodule_1_1bndtype.html#ae807dfb7d88bf4b17ce00fa0fc696ea9">bndmodule::bndtype</a>
+, <a class="el" href="structgwfcsubmodule_1_1gwfcsubtype.html#a41bb83d57d67b95592e84cfc17ece745">gwfcsubmodule::gwfcsubtype</a>
+, <a class="el" href="structgwtssmmodule_1_1gwtssmtype.html#a3ab153fba8be986b3a3e0b3625d7de87">gwtssmmodule::gwtssmtype</a>
+, <a class="el" href="structpackagebudgetmodule_1_1packagebudgettype.html#a5a14d51bdee604bfe1f4aaf3fcba342d">packagebudgetmodule::packagebudgettype</a>
 </li>
 <li>nbrmax
 : <a class="el" href="structxt3dmodule_1_1xt3dtype.html#a43e577c118aca53e2adb2fa9c61c9048">xt3dmodule::xt3dtype</a>
@@ -82,21 +200,79 @@ $(function() {
 <li>nbudterm
 : <a class="el" href="structbudgetobjectmodule_1_1budgetobjecttype.html#a12b3bc28882705b8371b6f395477766e">budgetobjectmodule::budgetobjecttype</a>
 </li>
+<li>nbudterms
+: <a class="el" href="structbudgetfilereadermodule_1_1budgetfilereadertype.html#adde07b3a9332e3a59259815849655170">budgetfilereadermodule::budgetfilereadertype</a>
+</li>
+<li>ncncvr
+: <a class="el" href="structlakmodule_1_1laktype.html#a4a481459ee3b72916db63eb903046ec8">lakmodule::laktype</a>
+</li>
 <li>ncol
-: <a class="el" href="structsparsemodule_1_1sparsematrix.html#aa8375f7547a61916adfabf7d84b4208a">sparsemodule::sparsematrix</a>
+: <a class="el" href="structgwfdismodule_1_1gwfdistype.html#a5a6e013dc40b7ed7fb762803d151e0a5">gwfdismodule::gwfdistype</a>
+, <a class="el" href="structsparsemodule_1_1sparsematrix.html#aa8375f7547a61916adfabf7d84b4208a">sparsemodule::sparsematrix</a>
+</li>
+<li>ncolbnd
+: <a class="el" href="structbndmodule_1_1bndtype.html#a7e47c283787529bf6d39130acc6e101d">bndmodule::bndtype</a>
 </li>
 <li>nconcbudssm
 : <a class="el" href="structgwtaptmodule_1_1gwtapttype.html#a779905046fc366e5ba52c7cdb3529843">gwtaptmodule::gwtapttype</a>
+</li>
+<li>nconn
+: <a class="el" href="structsfrmodule_1_1sfrtype.html#adb74a647e8331b80b7cc8ad13a2609dd">sfrmodule::sfrtype</a>
+</li>
+<li>nconnreach
+: <a class="el" href="structsfrmodule_1_1sfrtype.html#a1e89116485ea175e5729548f5d284a4b">sfrmodule::sfrtype</a>
+</li>
+<li>ncpl
+: <a class="el" href="structdisvgeom_1_1disvgeomtype.html#a7d24be5a0fff9347253cb43c0c1d6ef8">disvgeom::disvgeomtype</a>
+, <a class="el" href="structgwfdisvmodule_1_1gwfdisvtype.html#a72dc949d3524b39378b610f8050bf684">gwfdisvmodule::gwfdisvtype</a>
 </li>
 <li>ncv
 : <a class="el" href="structbudgetobjectmodule_1_1budgetobjecttype.html#a52b8546298382687a95e40c0576ce0fc">budgetobjectmodule::budgetobjecttype</a>
 , <a class="el" href="structgwtaptmodule_1_1gwtapttype.html#a4f46a54a19fec1b13b7199c9a29dec86">gwtaptmodule::gwtapttype</a>
 </li>
+<li>ndat
+: <a class="el" href="structbudgetfilereadermodule_1_1budgetfilereadertype.html#a688d4642ef699730c2ad381b963904ef">budgetfilereadermodule::budgetfilereadertype</a>
+</li>
+<li>ndelaybeds
+: <a class="el" href="structgwfcsubmodule_1_1gwfcsubtype.html#ae1fc844dfa176b3e567fc24156e7fefd">gwfcsubmodule::gwfcsubtype</a>
+</li>
+<li>ndelaycells
+: <a class="el" href="structgwfcsubmodule_1_1gwfcsubtype.html#aa8ac6f0dfc60e63f284dcebc319458be">gwfcsubmodule::gwfcsubtype</a>
+</li>
+<li>ndim
+: <a class="el" href="structbasedismodule_1_1disbasetype.html#a9f415425772acfd494a3fa95c8326389">basedismodule::disbasetype</a>
+, <a class="el" href="structlistreadermodule_1_1listreadertype.html#a5721061fb24087b4f34f076b847ffbb1">listreadermodule::listreadertype</a>
+</li>
+<li>ndiv
+: <a class="el" href="structsfrmodule_1_1sfrtype.html#ae6113145bebc0a9f3dfa624cf22136c4">sfrmodule::sfrtype</a>
+</li>
+<li>nedges
+: <a class="el" href="structgwfnpfmodule_1_1gwfnpftype.html#a1c7219f4909e19f8831d7cc48fc8c1b0">gwfnpfmodule::gwfnpftype</a>
+</li>
 <li>neq
-: <a class="el" href="structimslinearmodule_1_1imslineardatatype.html#a2e996a387812b252b3b1a360c471e601">imslinearmodule::imslineardatatype</a>
+: <a class="el" href="structbndmodule_1_1bndtype.html#a2d74ed8e17e6a52832876b219b74140f">bndmodule::bndtype</a>
+, <a class="el" href="structimslinearmodule_1_1imslineardatatype.html#a2e996a387812b252b3b1a360c471e601">imslinearmodule::imslineardatatype</a>
+, <a class="el" href="structnumericalmodelmodule_1_1numericalmodeltype.html#a8e3edb6143d9f27f6dbe27f60b73a79b">numericalmodelmodule::numericalmodeltype</a>
+, <a class="el" href="structnumericalsolutionmodule_1_1numericalsolutiontype.html#a0b0f71bc0d2ab382ac41f05d7f03a106">numericalsolutionmodule::numericalsolutiontype</a>
+</li>
+<li>nexg
+: <a class="el" href="structdisconnexchangemodule_1_1disconnexchangetype.html#a5e01052b9798f76b79abbea4ba0310f3">disconnexchangemodule::disconnexchangetype</a>
+, <a class="el" href="structghostnodemodule_1_1ghostnodetype.html#a9e97c09c548246ebf6b1f83f26aff04f">ghostnodemodule::ghostnodetype</a>
+</li>
+<li>next
+: <a class="el" href="structhashtablemodule_1_1listtype.html#afed9b929ed74d976a1b5514193a63704">hashtablemodule::listtype</a>
+</li>
+<li>nextnode
+: <a class="el" href="structlistmodule_1_1listnodetype.html#ac3d540b7e204b777a54355e2552ee4c6">listmodule::listnodetype</a>
+</li>
+<li>nflowpack
+: <a class="el" href="structgwtfmimodule_1_1gwtfmitype.html#a0f6b823fa032a93677316c089426236d">gwtfmimodule::gwtfmitype</a>
 </li>
 <li>nflowterms
 : <a class="el" href="structbudgetobjectmodule_1_1budgetobjecttype.html#ab155058a2514d925bdc9744d65ac3be7">budgetobjectmodule::budgetobjecttype</a>
+</li>
+<li>ngwfnodes
+: <a class="el" href="structmawmodule_1_1mawtype.html#a3dcf3eabb4d992b91bef68bdd6b02e35">mawmodule::mawtype</a>
 </li>
 <li>nheader_lines
 : <a class="el" href="structtabletermmodule_1_1tabletermtype.html#a3dd0946f24efd208f24ac11652ff4ca3">tabletermmodule::tabletermtype</a>
@@ -104,20 +280,43 @@ $(function() {
 <li>nheaderlines
 : <a class="el" href="structtablemodule_1_1tabletype.html#a6e7d203eefa6fdab3db69e29a4a6cb4f">tablemodule::tabletype</a>
 </li>
+<li>nhfb
+: <a class="el" href="structgwfhfbmodule_1_1gwfhfbtype.html#a3e6883860eb8dbf3a3a8d04581055888">gwfhfbmodule::gwfhfbtype</a>
+</li>
 <li>niabcgs
 : <a class="el" href="structimslinearmodule_1_1imslineardatatype.html#a2493177d189a19b5f71075f4e9a0ee36">imslinearmodule::imslineardatatype</a>
 </li>
 <li>niapc
 : <a class="el" href="structimslinearmodule_1_1imslineardatatype.html#aa5e8bdf0027ad8e78954de7e09c6afba">imslinearmodule::imslineardatatype</a>
 </li>
+<li>ninterbeds
+: <a class="el" href="structgwfcsubmodule_1_1gwfcsubtype.html#a4580127a8c8d77653107c7fd9106a1d1">gwfcsubmodule::gwfcsubtype</a>
+</li>
 <li>niterc
 : <a class="el" href="structimslinearmodule_1_1imslineardatatype.html#a020228c4077607ca7432345a1dcfa6b9">imslinearmodule::imslineardatatype</a>
 </li>
+<li>nitermax
+: <a class="el" href="structnumericalsolutionmodule_1_1numericalsolutiontype.html#ad5f9aeaf4a534fa56af47cb74739c647">numericalsolutionmodule::numericalsolutiontype</a>
+</li>
+<li>niunit
+: <a class="el" href="structiunitmodule_1_1iunittype.html#a76fcd0287b3f1c3bf1c3fb45bd7aa4af">iunitmodule::iunittype</a>
+</li>
 <li>nja
-: <a class="el" href="structimslinearmodule_1_1imslineardatatype.html#a987d83e79450ad673dd0f3ed66813332">imslinearmodule::imslineardatatype</a>
+: <a class="el" href="structbasedismodule_1_1disbasetype.html#a0be18f59a14ba18e35f7b058380c2fab">basedismodule::disbasetype</a>
+, <a class="el" href="structconnectionsmodule_1_1connectionstype.html#ac660a6bc2f6b173f2e6adc3475870c4e">connectionsmodule::connectionstype</a>
+, <a class="el" href="structimslinearmodule_1_1imslineardatatype.html#a987d83e79450ad673dd0f3ed66813332">imslinearmodule::imslineardatatype</a>
+, <a class="el" href="structnumericalmodelmodule_1_1numericalmodeltype.html#abcc1ad38942006129fdcb0f317e4bbbb">numericalmodelmodule::numericalmodeltype</a>
+, <a class="el" href="structnumericalsolutionmodule_1_1numericalsolutiontype.html#acbd74649943445fce91db12a37a31e9a">numericalsolutionmodule::numericalsolutiontype</a>
 </li>
 <li>njapc
 : <a class="el" href="structimslinearmodule_1_1imslineardatatype.html#aa9cec3344cd31583e90a6bd2451eb354">imslinearmodule::imslineardatatype</a>
+</li>
+<li>njas
+: <a class="el" href="structbasedismodule_1_1disbasetype.html#ab8911e35cc9e6d5c4fd3365ef1730d0e">basedismodule::disbasetype</a>
+, <a class="el" href="structconnectionsmodule_1_1connectionstype.html#a4658995c6157308707e5fd79ca4bd080">connectionsmodule::connectionstype</a>
+</li>
+<li>njausr
+: <a class="el" href="structgwfdisumodule_1_1gwfdisutype.html#a261cd67882dbe0fc83461192f3be709b">gwfdisumodule::gwfdisutype</a>
 </li>
 <li>njlu
 : <a class="el" href="structimslinearmodule_1_1imslineardatatype.html#abe7cf1dc248442a527c40ac1bd3ed2b7">imslinearmodule::imslineardatatype</a>
@@ -125,47 +324,246 @@ $(function() {
 <li>njw
 : <a class="el" href="structimslinearmodule_1_1imslineardatatype.html#a5edb9952ef028a56df518184df56b690">imslinearmodule::imslineardatatype</a>
 </li>
+<li>nlakeconn
+: <a class="el" href="structlakmodule_1_1laktype.html#a09fb831b4cba83c2025c58a060957e54">lakmodule::laktype</a>
+</li>
+<li>nlakes
+: <a class="el" href="structlakmodule_1_1laktype.html#a8cceebebe16b8a5e1321f099d2e33579">lakmodule::laktype</a>
+</li>
+<li>nlay
+: <a class="el" href="structdisvgeom_1_1disvgeomtype.html#afe5086505d7809b81d377c0caf031b67">disvgeom::disvgeomtype</a>
+, <a class="el" href="structgwfdismodule_1_1gwfdistype.html#a77a5576eeb0d48b6ee611b7b1de8c5d3">gwfdismodule::gwfdistype</a>
+, <a class="el" href="structgwfdisvmodule_1_1gwfdisvtype.html#aa29f7a1dad76a8d8950920d7e4fa3b84">gwfdisvmodule::gwfdisvtype</a>
+, <a class="el" href="structheadfilereadermodule_1_1headfilereadertype.html#a253e26ca6076dab89feaa4bfdd52002b">headfilereadermodule::headfilereadertype</a>
+</li>
 <li>nlinewidth
 : <a class="el" href="structtablemodule_1_1tabletype.html#a316b863372ab2f61be18d65cc469f3be">tablemodule::tabletype</a>
 </li>
 <li>nlist
-: <a class="el" href="structbudgettermmodule_1_1budgettermtype.html#abcf43bb1a9caa7f646e03751cf7838b4">budgettermmodule::budgettermtype</a>
+: <a class="el" href="structbudgetfilereadermodule_1_1budgetfilereadertype.html#a9a18ea7dd2875c5581e25bbc32390a52">budgetfilereadermodule::budgetfilereadertype</a>
+, <a class="el" href="structbudgettermmodule_1_1budgettermtype.html#abcf43bb1a9caa7f646e03751cf7838b4">budgettermmodule::budgettermtype</a>
+, <a class="el" href="structlistreadermodule_1_1listreadertype.html#ae682a298abdfdc6e2827baf8e3a513d8">listreadermodule::listreadertype</a>
+</li>
+<li>nmawwells
+: <a class="el" href="structmawmodule_1_1mawtype.html#a342cf9f317c8ccfba493d2cb7fb8119e">mawmodule::mawtype</a>
 </li>
 <li>nmessage
 : <a class="el" href="structmessagemodule_1_1messagetype.html#ac8a94b2763ecabdedd02431eb4b66323">messagemodule::messagetype</a>
+</li>
+<li>nmvr
+: <a class="el" href="structgwfmvrmodule_1_1gwfmvrtype.html#a43b8e09deede2e5a21a39619c49b3975">gwfmvrmodule::gwfmvrtype</a>
 </li>
 <li>nnz
 : <a class="el" href="structsparsemodule_1_1rowtype.html#aed10d6b43854e8e80afb8f348c93df56">sparsemodule::rowtype</a>
 , <a class="el" href="structsparsemodule_1_1sparsematrix.html#a52cb660f68fdc33f7c4eca698d29eaec">sparsemodule::sparsematrix</a>
 </li>
+<li>nobs
+: <a class="el" href="structobsoutputmodule_1_1obsoutputtype.html#a3cd06c744aa6870d8841d763ba4b2006">obsoutputmodule::obsoutputtype</a>
+</li>
+<li>nodecount
+: <a class="el" href="structlistmodule_1_1listtype.html#a6da9ad48fcf70ab6633dfcdeba7903a2">listmodule::listtype</a>
+</li>
+<li>nodedge
+: <a class="el" href="structgwfnpfmodule_1_1gwfnpftype.html#a47a6c53d7beb7803e9084897b1ae01f3">gwfnpfmodule::gwfnpftype</a>
+</li>
+<li>nodedst
+: <a class="el" href="structbudgetfilereadermodule_1_1budgetfilereadertype.html#a7ed543fe157d1edc8ed4e7378e0194b4">budgetfilereadermodule::budgetfilereadertype</a>
+</li>
+<li>nodelist
+: <a class="el" href="structbndmodule_1_1bndtype.html#aafb0d12a1e31676d360089f1db4f87e4">bndmodule::bndtype</a>
+, <a class="el" href="structgwfcsubmodule_1_1gwfcsubtype.html#ad20b511ae92f3fc3fc1ae2f4b11858af">gwfcsubmodule::gwfcsubtype</a>
+, <a class="el" href="structlistreadermodule_1_1listreadertype.html#af1f04a4bbe995a19e53cddc9694d1a8b">listreadermodule::listreadertype</a>
+, <a class="el" href="structpackagebudgetmodule_1_1packagebudgettype.html#a76c75bf8e6a084b663bf945f2bd326a1">packagebudgetmodule::packagebudgettype</a>
+, <a class="el" href="structtimearrayserieslinkmodule_1_1timearrayserieslinktype.html#a6286a69e7150ee6e7d2d1a166a1cef80">timearrayserieslinkmodule::timearrayserieslinktype</a>
+</li>
+<li>nodelistsig0
+: <a class="el" href="structgwfcsubmodule_1_1gwfcsubtype.html#a5a64edad6dfdaf5eb9c81a34ff40c04e">gwfcsubmodule::gwfcsubtype</a>
+</li>
+<li>nodem
+: <a class="el" href="structgwfhfbmodule_1_1gwfhfbtype.html#a6920a379dfb6366f0e63a2a1223d9f99">gwfhfbmodule::gwfhfbtype</a>
+</li>
+<li>nodem1
+: <a class="el" href="structdisconnexchangemodule_1_1disconnexchangetype.html#a1108ebb9f67849cedc8a5eea5410097c">disconnexchangemodule::disconnexchangetype</a>
+, <a class="el" href="structghostnodemodule_1_1ghostnodetype.html#aee72d988fac3153c8ea30234dbb66e06">ghostnodemodule::ghostnodetype</a>
+</li>
+<li>nodem2
+: <a class="el" href="structdisconnexchangemodule_1_1disconnexchangetype.html#aa62559e283a8f1ba637312b06effcd8b">disconnexchangemodule::disconnexchangetype</a>
+, <a class="el" href="structghostnodemodule_1_1ghostnodetype.html#a4f0eb0a38dcc11b197232ff54fe2d435">ghostnodemodule::ghostnodetype</a>
+</li>
+<li>noden
+: <a class="el" href="structgwfhfbmodule_1_1gwfhfbtype.html#a8447a662607345efa6106f868c76a17b">gwfhfbmodule::gwfhfbtype</a>
+</li>
+<li>nodenumber
+: <a class="el" href="structobservemodule_1_1observetype.html#ad8b655af7cb665840997d94eb560d4e7">observemodule::observetype</a>
+</li>
+<li>nodenumber2
+: <a class="el" href="structobservemodule_1_1observetype.html#ae5fbb4753014cf0ae4ff29a20bf40bd5">observemodule::observetype</a>
+</li>
+<li>nodered
+: <a class="el" href="structdisvgeom_1_1disvgeomtype.html#a5bda1949cd32f082a6180726951b06be">disvgeom::disvgeomtype</a>
+</li>
+<li>nodereduced
+: <a class="el" href="structbasedismodule_1_1disbasetype.html#ae30e20fe8e741c4795ed9f42f0a7b8b4">basedismodule::disbasetype</a>
+, <a class="el" href="structdisvgeom_1_1disvgeomtype.html#acd986d5f8ba295ed1980a6ddbd6fa0c8">disvgeom::disvgeomtype</a>
+</li>
+<li>nodes
+: <a class="el" href="structbasedismodule_1_1disbasetype.html#a272a12194edf7cac18e6515e1bcbba4b">basedismodule::disbasetype</a>
+, <a class="el" href="structconnectionsmodule_1_1connectionstype.html#a9e38acef7d38c7562d0ac385cd0ab11e">connectionsmodule::connectionstype</a>
+, <a class="el" href="structdisvgeom_1_1disvgeomtype.html#aaf15ec3a2424257087d31219b8602e68">disvgeom::disvgeomtype</a>
+, <a class="el" href="structuzfmodule_1_1uzftype.html#a563daba245bdd4743ec68323613eebcc">uzfmodule::uzftype</a>
+</li>
+<li>nodesj
+: <a class="el" href="structghostnodemodule_1_1ghostnodetype.html#a27785c48a415dca788dba388deabc76a">ghostnodemodule::ghostnodetype</a>
+</li>
+<li>nodesontop
+: <a class="el" href="structevtmodule_1_1evttype.html#a6c457a23a21a4cf6d1d9ff113707806a">evtmodule::evttype</a>
+, <a class="el" href="structlakmodule_1_1laktype.html#a2459b8d67f9e6f36fa8cef36a7753cfb">lakmodule::laktype</a>
+, <a class="el" href="structrchmodule_1_1rchtype.html#ab22ff82a2b1f9753454595b08d403f57">rchmodule::rchtype</a>
+</li>
+<li>nodesrc
+: <a class="el" href="structbudgetfilereadermodule_1_1budgetfilereadertype.html#aa61bca946fa624a3169c0e4eb40e7522">budgetfilereadermodule::budgetfilereadertype</a>
+</li>
+<li>nodesuser
+: <a class="el" href="structbasedismodule_1_1disbasetype.html#ab80a8855200679bed036d524fa5825ae">basedismodule::disbasetype</a>
+</li>
+<li>nodeuser
+: <a class="el" href="structbasedismodule_1_1disbasetype.html#a8857035eb0ad77fc489a4be7b2889390">basedismodule::disbasetype</a>
+, <a class="el" href="structdisvgeom_1_1disvgeomtype.html#a9ca32f9b98bb5ed864e4d90e8d7a278c">disvgeom::disvgeomtype</a>
+</li>
+<li>nodeusr
+: <a class="el" href="structdisvgeom_1_1disvgeomtype.html#a829a4f00d7e55350aa82ddbfe3fac11c">disvgeom::disvgeomtype</a>
+</li>
+<li>nonmeth
+: <a class="el" href="structnumericalsolutionmodule_1_1numericalsolutiontype.html#a687cb7ce867a70e02ba630f48a8c7ac8">numericalsolutionmodule::numericalsolutiontype</a>
+</li>
 <li>north
 : <a class="el" href="structimslinearmodule_1_1imslineardatatype.html#a245d304e092ca853b9b688ee6ef4ac93">imslinearmodule::imslineardatatype</a>
+</li>
+<li>noupdateauxvar
+: <a class="el" href="structbndmodule_1_1bndtype.html#a30c1567418f9f38e55d762cfdaf3ab15">bndmodule::bndtype</a>
+</li>
+<li>noutlets
+: <a class="el" href="structlakmodule_1_1laktype.html#acf0dc2ee2bc9c02ac218f38cdf2a05b6">lakmodule::laktype</a>
 </li>
 <li>nozee
 : <a class="el" href="structxt3dmodule_1_1xt3dtype.html#a7eb5ba8f3e9fbe40cd697a2c1e1193ea">xt3dmodule::xt3dtype</a>
 </li>
+<li>npakeq
+: <a class="el" href="structbndmodule_1_1bndtype.html#a1d65649d828472fb611a6f578b2fe9c4">bndmodule::bndtype</a>
+</li>
+<li>npakobs
+: <a class="el" href="structobsmodule_1_1obstype.html#a2fc7921c47c4f8ffbab099a1190ea7b4">obsmodule::obstype</a>
+</li>
+<li>nper
+: <a class="el" href="structuzfmodule_1_1uzftype.html#a073a8bc9355e2dac22a93704dd9f26fb">uzfmodule::uzftype</a>
+</li>
+<li>npf
+: <a class="el" href="structgwfbuymodule_1_1gwfbuytype.html#a53bf774f3aa55aac565b5c020a4ac5f4">gwfbuymodule::gwfbuytype</a>
+, <a class="el" href="structgwfmodule_1_1gwfmodeltype.html#af4f7353a512f3543613deb6eacfbb22a">gwfmodule::gwfmodeltype</a>
+</li>
+<li>nproviders
+: <a class="el" href="structpackagemovermodule_1_1packagemovertype.html#afaf6e743a92a4aeb51b44897b19f5e77">packagemovermodule::packagemovertype</a>
+</li>
+<li>nrealloc
+: <a class="el" href="structmemorytypemodule_1_1memorytype.html#aa25da257d1e9c0c021cf96c51c00cbb2">memorytypemodule::memorytype</a>
+</li>
+<li>nreceivers
+: <a class="el" href="structpackagemovermodule_1_1packagemovertype.html#a4dc7eb7d6fc988878ceded4a96b8f4b9">packagemovermodule::packagemovertype</a>
+</li>
+<li>nrhospecies
+: <a class="el" href="structgwfbuymodule_1_1gwfbuytype.html#a88f4ea44c6cf01ed874a7e6646aa8c42">gwfbuymodule::gwfbuytype</a>
+</li>
 <li>nrow
-: <a class="el" href="structsparsemodule_1_1sparsematrix.html#a34016ce15a9c7ccb196f40eb8b9a5b18">sparsemodule::sparsematrix</a>
+: <a class="el" href="structgwfdismodule_1_1gwfdistype.html#ae8baf3f0a8b7c1000180ee5b2e394cdc">gwfdismodule::gwfdistype</a>
+, <a class="el" href="structsparsemodule_1_1sparsematrix.html#a34016ce15a9c7ccb196f40eb8b9a5b18">sparsemodule::sparsematrix</a>
+</li>
+<li>nseg
+: <a class="el" href="structevtmodule_1_1evttype.html#afcdb922ddb2aec7bf74ab6b9511a0f21">evtmodule::evttype</a>
+</li>
+<li>nsets
+: <a class="el" href="structuzfmodule_1_1uzftype.html#afac7d5e18d5702d9b98678e955e4826f">uzfmodule::uzftype</a>
+</li>
+<li>nsolutions
+: <a class="el" href="structsolutiongroupmodule_1_1solutiongrouptype.html#aa33ca04359d57a5d576f0ddbcb488048">solutiongroupmodule::solutiongrouptype</a>
 </li>
 <li>nsto
 : <a class="el" href="structbudgetobjectmodule_1_1budgetobjecttype.html#a45d396b9c2b926846efb3680b42fbadb">budgetobjectmodule::budgetobjecttype</a>
 </li>
+<li>nstp
+: <a class="el" href="structuzfmodule_1_1uzftype.html#a95801001f16a19a7b73c0248bd5c1b0c">uzfmodule::uzftype</a>
+</li>
+<li>ntables
+: <a class="el" href="structlakmodule_1_1laktype.html#af894843be30083020c9b99468ddfa242">lakmodule::laktype</a>
+</li>
 <li>ntableterm
 : <a class="el" href="structtablemodule_1_1tabletype.html#a4f559d0225eabceccb8af228b5f26cfd">tablemodule::tabletype</a>
 </li>
+<li>ntabrow
+: <a class="el" href="structlakmodule_1_1laktype.html#ae58a8aed83f1126031498170d372a52c">lakmodule::laktype</a>
+</li>
+<li>ntimeseries
+: <a class="el" href="structtimeseriesmodule_1_1timeseriesfiletype.html#accbc49403c5c286a55020eb07e4cfa48">timeseriesmodule::timeseriesfiletype</a>
+</li>
+<li>ntrail
+: <a class="el" href="structuzfcellgroupmodule_1_1uzfcellgrouptype.html#adf50d17584c3e9cd33f7d1e2ff46e4eb">uzfcellgroupmodule::uzfcellgrouptype</a>
+, <a class="el" href="structuzfmodule_1_1uzftype.html#a792c45b3fed0d317664d5f22859ea28e">uzfmodule::uzftype</a>
+</li>
+<li>ntxtauxvar
+: <a class="el" href="structlistreadermodule_1_1listreadertype.html#ae43390859e11b1189aacec8847f5319c">listreadermodule::listreadertype</a>
+</li>
+<li>ntxtrlist
+: <a class="el" href="structlistreadermodule_1_1listreadertype.html#a979129e91de01690a830ae2a6d8fdfb1">listreadermodule::listreadertype</a>
+</li>
 <li>numextnbrs
 : <a class="el" href="structxt3dmodule_1_1xt3dtype.html#ab02d2924d43cd0b7f2f6b59ba12c799b">xt3dmodule::xt3dtype</a>
+</li>
+<li>numjs
+: <a class="el" href="structghostnodemodule_1_1ghostnodetype.html#a67c05eb0e1ecdacf8283decb968e21bc">ghostnodemodule::ghostnodetype</a>
+</li>
+<li>numtrack
+: <a class="el" href="structnumericalsolutionmodule_1_1numericalsolutiontype.html#a2c079ffbe4ae3e41923c0b087089c174">numericalsolutionmodule::numericalsolutiontype</a>
+</li>
+<li>numtsfiles
+: <a class="el" href="structtimeseriesfilelistmodule_1_1timeseriesfilelisttype.html#ad14e923d8a7e0a08e1f49432581bafd9">timeseriesfilelistmodule::timeseriesfilelisttype</a>
+, <a class="el" href="structtimeseriesmanagermodule_1_1timeseriesmanagertype.html#ac949c99f6c08d34dffc5ae688a068d1d">timeseriesmanagermodule::timeseriesmanagertype</a>
+</li>
+<li>nunit
+: <a class="el" href="structobsoutputmodule_1_1obsoutputtype.html#a7048f0479b75e9d8479541c8cdb704a0">obsoutputmodule::obsoutputtype</a>
+</li>
+<li>nval
+: <a class="el" href="structbudgetfilereadermodule_1_1budgetfilereadertype.html#a2d9e9b982edd049674ed2496803a2484">budgetfilereadermodule::budgetfilereadertype</a>
+, <a class="el" href="structiunitmodule_1_1iunitrowtype.html#a91ecb26c00c67b870318b48c13b5fe43">iunitmodule::iunitrowtype</a>
+</li>
+<li>nvaluesp
+: <a class="el" href="structoutputcontroldata_1_1outputcontroldatatype.html#addc8c6349e4cdbd8604bf9c358738939">outputcontroldata::outputcontroldatatype</a>
+</li>
+<li>nvert
+: <a class="el" href="structgwfdisumodule_1_1gwfdisutype.html#a859a0e22b75560c5bcbeb1b0ee85f125">gwfdisumodule::gwfdisutype</a>
+, <a class="el" href="structgwfdisvmodule_1_1gwfdisvtype.html#a332a967c9271d9a7218681a6788ebd43">gwfdisvmodule::gwfdisvtype</a>
+</li>
+<li>nwav
+: <a class="el" href="structuzfcellgroupmodule_1_1uzfcellgrouptype.html#a30cfb061dfa723e0b0097ebc69e59b63">uzfcellgroupmodule::uzfcellgrouptype</a>
+, <a class="el" href="structuzfmodule_1_1uzftype.html#a4e55bf96db3cb0968b37c20f08dc598f">uzfmodule::uzftype</a>
+</li>
+<li>nwavst
+: <a class="el" href="structuzfcellgroupmodule_1_1uzfcellgrouptype.html#abbc5fd043f56d9e9e5af230842f79dcf">uzfcellgroupmodule::uzfcellgrouptype</a>
+</li>
+<li>nwidthp
+: <a class="el" href="structoutputcontroldata_1_1outputcontroldatatype.html#aa2983aed025db46e3a442417c1b16a58">outputcontroldata::outputcontroldatatype</a>
 </li>
 <li>nwlu
 : <a class="el" href="structimslinearmodule_1_1imslineardatatype.html#a363e75e63a42e14d65fc761725777c44">imslinearmodule::imslineardatatype</a>
 </li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated on Thu Jun 24 2021 19:50:24 for MODFLOW 6 by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
 </body>
 </html>

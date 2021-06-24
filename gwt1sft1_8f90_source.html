@@ -5,13 +5,22 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MODFLOW 6 Code Documentation: /home/runner/work/modflow6/modflow6/src/Model/GroundWaterTransport/gwt1sft1.f90 Source File</title>
+<title>MODFLOW 6: /home/runner/work/modflow6/modflow6/src/Model/GroundWaterTransport/gwt1sft1.f90 Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="CustomDoxygen.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -21,9 +30,12 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="mf6-triangular-grid.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">MODFLOW 6 Code Documentation
+   <div id="projectname">MODFLOW 6
+   &#160;<span id="projectnumber">version 6.2.2</span>
    </div>
+   <div id="projectbrief">MODFLOW 6 Code Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -36,16 +48,54 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Modules</span></a></li>
+      <li><a href="annotated.html"><span>Data&#160;Types&#160;List</span></a></li>
+      <li class="current"><a href="files.html"><span>Files</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('gwt1sft1_8f90_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,11 +110,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_32e188284d239da8bb14ec1dabb0c35f.html">Model</a></li><li class="navelem"><a class="el" href="dir_5ac382e795535087161f2a8b7f95a830.html">GroundWaterTransport</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">gwt1sft1.f90</div>  </div>
@@ -108,8 +153,8 @@ $(function() {
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespaceconstantsmodule.html">constantsmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespaceconstantsmodule.html#abab5757666b9ddd2726c20ce48dd0050">dzero</a>, <a class="code" href="namespaceconstantsmodule.html#af918ac22cd0b232deea67660bfbc9ce1">done</a>, <a class="code" href="namespaceconstantsmodule.html#a060d310ded5535ce2dc85bd1ca1afd3d">linelength</a></div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacesimmodule.html">simmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a">store_error</a>, <a class="code" href="namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61">ustop</a></div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacebndmodule.html">bndmodule</a>, <span class="keywordtype">only</span>: bndtype, <a class="code" href="namespacebndmodule.html#a7ac2e1c143722a28d1f0ecb4c67a4a0a">getbndfromlist</a></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacegwtfmimodule.html">gwtfmimodule</a>, <span class="keywordtype">only</span>: gwtfmitype</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacesfrmodule.html">sfrmodule</a>, <span class="keywordtype">only</span>: sfrtype</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacegwtfmimodule.html">gwtfmimodule</a>, <span class="keywordtype">only</span>: <a class="code" href="structgwtfmimodule_1_1gwtfmitype.html">gwtfmitype</a></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacesfrmodule.html">sfrmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="structsfrmodule_1_1sfrtype.html">sfrtype</a></div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacegwtaptmodule.html">gwtaptmodule</a>, <span class="keywordtype">only</span>: gwtapttype</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  </div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keywordtype">implicit none</span></div>
@@ -173,7 +218,7 @@ $(function() {
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordtype">integer(I4B)</span>,<span class="keywordtype">intent(in)</span> :: iout</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordtype">character(len=*)</span>, <span class="keywordtype">intent(in)</span> :: namemodel</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordtype">character(len=*)</span>, <span class="keywordtype">intent(in)</span> :: pakname</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordtype">type</span>(gwtfmitype), <span class="keywordtype">pointer</span> :: fmi</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structgwtfmimodule_1_1gwtfmitype.html">gwtfmitype</a>), <span class="keywordtype">pointer</span> :: fmi</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structgwtsftmodule_1_1gwtsfttype.html">gwtsfttype</a>), <span class="keywordtype">pointer</span> :: lktobj</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
@@ -216,7 +261,7 @@ $(function() {
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="comment">!    SPECIFICATIONS:</span></div>
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="comment">! -- modules</span></div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacememorymanagermodule.html">memorymanagermodule</a>, <span class="keywordtype">only</span>: mem_allocate</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacememorymanagermodule.html">memorymanagermodule</a>, <span class="keywordtype">only</span>: <a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a></div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="comment">! -- dummy</span></div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structgwtsftmodule_1_1gwtsfttype.html">gwtsfttype</a>) :: this</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="comment">! -- local</span></div>
@@ -251,7 +296,7 @@ $(function() {
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            <span class="comment">!    use the select type to point to the budobj in flow package</span></div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            this%flowpackagebnd =&gt; packobj</div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            <span class="keywordflow">select type</span> (packobj)</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;<span class="keywordflow">              type is</span> (sfrtype)</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;<span class="keywordflow">              type is</span> (<a class="code" href="structsfrmodule_1_1sfrtype.html">sfrtype</a>)</div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;                this%flowbudptr =&gt; packobj%budobj</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;<span class="keywordflow">            end select</span></div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<span class="keywordflow">          end if</span></div>
@@ -272,7 +317,7 @@ $(function() {
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="comment">! -- allocate space for idxbudssm, which indicates whether this is a </span></div>
 <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <span class="comment">!    special budget term or one that is a general source and sink</span></div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    nbudterm = this%flowbudptr%nbudterm</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="keyword">call </span>mem_allocate(this%idxbudssm, nbudterm, <span class="stringliteral">&#39;IDXBUDSSM&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%idxbudssm, nbudterm, <span class="stringliteral">&#39;IDXBUDSSM&#39;</span>, this%memoryPath)</div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="comment">! -- Process budget terms and identify special budget terms</span></div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="keyword">write</span>(this%iout, <span class="stringliteral">&#39;(/, a, a)&#39;</span>) &amp;</div>
@@ -673,7 +718,7 @@ $(function() {
 <div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;<span class="comment">!    SPECIFICATIONS:</span></div>
 <div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;    <span class="comment">! -- modules</span></div>
-<div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacememorymanagermodule.html">memorymanagermodule</a>, <span class="keywordtype">only</span>: mem_allocate</div>
+<div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacememorymanagermodule.html">memorymanagermodule</a>, <span class="keywordtype">only</span>: <a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a></div>
 <div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;    <span class="comment">! -- dummy</span></div>
 <div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structgwtsftmodule_1_1gwtsfttype.html">gwtsfttype</a>) :: this</div>
 <div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;    <span class="comment">! -- local</span></div>
@@ -683,11 +728,11 @@ $(function() {
 <div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160;    <span class="keyword">call </span>this%GwtAptType%allocate_scalars()</div>
 <div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160;    <span class="comment">! -- Allocate</span></div>
-<div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;    <span class="keyword">call </span>mem_allocate(this%idxbudrain, <span class="stringliteral">&#39;IDXBUDRAIN&#39;</span>, this%memoryPath)</div>
-<div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;    <span class="keyword">call </span>mem_allocate(this%idxbudevap, <span class="stringliteral">&#39;IDXBUDEVAP&#39;</span>, this%memoryPath)</div>
-<div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;    <span class="keyword">call </span>mem_allocate(this%idxbudroff, <span class="stringliteral">&#39;IDXBUDROFF&#39;</span>, this%memoryPath)</div>
-<div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;    <span class="keyword">call </span>mem_allocate(this%idxbudiflw, <span class="stringliteral">&#39;IDXBUDIFLW&#39;</span>, this%memoryPath)</div>
-<div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;    <span class="keyword">call </span>mem_allocate(this%idxbudoutf, <span class="stringliteral">&#39;IDXBUDOUTF&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%idxbudrain, <span class="stringliteral">&#39;IDXBUDRAIN&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%idxbudevap, <span class="stringliteral">&#39;IDXBUDEVAP&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%idxbudroff, <span class="stringliteral">&#39;IDXBUDROFF&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%idxbudiflw, <span class="stringliteral">&#39;IDXBUDIFLW&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%idxbudoutf, <span class="stringliteral">&#39;IDXBUDOUTF&#39;</span>, this%memoryPath)</div>
 <div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;    <span class="comment">! </span></div>
 <div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;    <span class="comment">! -- Initialize</span></div>
 <div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;    this%idxbudrain = 0</div>
@@ -708,7 +753,7 @@ $(function() {
 <div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;<span class="comment">!    SPECIFICATIONS:</span></div>
 <div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;    <span class="comment">! -- modules</span></div>
-<div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacememorymanagermodule.html">memorymanagermodule</a>, <span class="keywordtype">only</span>: mem_allocate</div>
+<div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacememorymanagermodule.html">memorymanagermodule</a>, <span class="keywordtype">only</span>: <a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a></div>
 <div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;    <span class="comment">! -- dummy</span></div>
 <div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structgwtsftmodule_1_1gwtsfttype.html">gwtsfttype</a>), <span class="keywordtype">intent(inout)</span> :: this</div>
 <div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;    <span class="comment">! -- local</span></div>
@@ -716,10 +761,10 @@ $(function() {
 <div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;    <span class="comment">!    </span></div>
 <div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;    <span class="comment">! -- time series</span></div>
-<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;    <span class="keyword">call </span>mem_allocate(this%concrain, this%ncv, <span class="stringliteral">&#39;CONCRAIN&#39;</span>, this%memoryPath)</div>
-<div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;    <span class="keyword">call </span>mem_allocate(this%concevap, this%ncv, <span class="stringliteral">&#39;CONCEVAP&#39;</span>, this%memoryPath)</div>
-<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;    <span class="keyword">call </span>mem_allocate(this%concroff, this%ncv, <span class="stringliteral">&#39;CONCROFF&#39;</span>, this%memoryPath)</div>
-<div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;    <span class="keyword">call </span>mem_allocate(this%conciflw, this%ncv, <span class="stringliteral">&#39;CONCIFLW&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%concrain, this%ncv, <span class="stringliteral">&#39;CONCRAIN&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%concevap, this%ncv, <span class="stringliteral">&#39;CONCEVAP&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%concroff, this%ncv, <span class="stringliteral">&#39;CONCROFF&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%conciflw, this%ncv, <span class="stringliteral">&#39;CONCIFLW&#39;</span>, this%memoryPath)</div>
 <div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160;    <span class="comment">! -- call standard GwtApttype allocate arrays</span></div>
 <div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;    <span class="keyword">call </span>this%GwtAptType%apt_allocate_arrays()</div>
@@ -745,24 +790,24 @@ $(function() {
 <div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;<span class="comment">!    SPECIFICATIONS:</span></div>
 <div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;    <span class="comment">! -- modules</span></div>
-<div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacememorymanagermodule.html">memorymanagermodule</a>, <span class="keywordtype">only</span>: mem_deallocate</div>
+<div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacememorymanagermodule.html">memorymanagermodule</a>, <span class="keywordtype">only</span>: <a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a></div>
 <div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;    <span class="comment">! -- dummy</span></div>
 <div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structgwtsftmodule_1_1gwtsfttype.html">gwtsfttype</a>) :: this</div>
 <div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;    <span class="comment">! -- deallocate scalars</span></div>
-<div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;    <span class="keyword">call </span>mem_deallocate(this%idxbudrain)</div>
-<div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;    <span class="keyword">call </span>mem_deallocate(this%idxbudevap)</div>
-<div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;    <span class="keyword">call </span>mem_deallocate(this%idxbudroff)</div>
-<div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;    <span class="keyword">call </span>mem_deallocate(this%idxbudiflw)</div>
-<div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;    <span class="keyword">call </span>mem_deallocate(this%idxbudoutf)</div>
+<div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%idxbudrain)</div>
+<div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%idxbudevap)</div>
+<div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%idxbudroff)</div>
+<div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%idxbudiflw)</div>
+<div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%idxbudoutf)</div>
 <div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160;    <span class="comment">! -- deallocate time series</span></div>
-<div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;    <span class="keyword">call </span>mem_deallocate(this%concrain)</div>
-<div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;    <span class="keyword">call </span>mem_deallocate(this%concevap)</div>
-<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;    <span class="keyword">call </span>mem_deallocate(this%concroff)</div>
-<div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;    <span class="keyword">call </span>mem_deallocate(this%conciflw)</div>
+<div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%concrain)</div>
+<div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%concevap)</div>
+<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%concroff)</div>
+<div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%conciflw)</div>
 <div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;    <span class="comment">! -- deallocate scalars in GwtAptType</span></div>
 <div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;    <span class="keyword">call </span>this%GwtAptType%bnd_da()</div>
@@ -1119,8 +1164,10 @@ $(function() {
 <div class="line"><a name="l01047"></a><span class="lineno"> 1047</span>&#160; </div>
 <div class="line"><a name="l01048"></a><span class="lineno"> 1048</span>&#160;<span class="keyword">end module </span><a class="code" href="namespacegwtsftmodule.html">gwtsftmodule</a></div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <div class="ttc" id="anamespacebndmodule_html"><div class="ttname"><a href="namespacebndmodule.html">bndmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_boundary_package_8f90_source.html#l00001">BoundaryPackage.f90:1</a></div></div>
 <div class="ttc" id="anamespacegwtsftmodule_html_a2c45024123565a41c71197bf9e93a12f"><div class="ttname"><a href="namespacegwtsftmodule.html#a2c45024123565a41c71197bf9e93a12f">gwtsftmodule::sft_fc_expanded</a></div><div class="ttdeci">subroutine sft_fc_expanded(this, rhs, ia, idxglo, amatsln)</div><div class="ttdef"><b>Definition:</b> <a href="gwt1sft1_8f90_source.html#l00265">gwt1sft1.f90:265</a></div></div>
+<div class="ttc" id="astructgwtfmimodule_1_1gwtfmitype_html"><div class="ttname"><a href="structgwtfmimodule_1_1gwtfmitype.html">gwtfmimodule::gwtfmitype</a></div><div class="ttdef"><b>Definition:</b> <a href="gwt1fmi1_8f90_source.html#l00033">gwt1fmi1.f90:33</a></div></div>
 <div class="ttc" id="anamespacekindmodule_html"><div class="ttname"><a href="namespacekindmodule.html">kindmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="kind_8f90_source.html#l00001">kind.f90:1</a></div></div>
 <div class="ttc" id="anamespacegwtsftmodule_html_ad7974d49c81091439884179962e49f97"><div class="ttname"><a href="namespacegwtsftmodule.html#ad7974d49c81091439884179962e49f97">gwtsftmodule::sft_get_nbudterms</a></div><div class="ttdeci">integer(i4b) function sft_get_nbudterms(this)</div><div class="ttdef"><b>Definition:</b> <a href="gwt1sft1_8f90_source.html#l00407">gwt1sft1.f90:407</a></div></div>
 <div class="ttc" id="anamespacegwtsftmodule_html_ae83df6965eb366f498e79345cbda12f0"><div class="ttname"><a href="namespacegwtsftmodule.html#ae83df6965eb366f498e79345cbda12f0">gwtsftmodule::sft_df_obs</a></div><div class="ttdeci">subroutine sft_df_obs(this)</div><div class="ttdef"><b>Definition:</b> <a href="gwt1sft1_8f90_source.html#l00872">gwt1sft1.f90:872</a></div></div>
@@ -1140,6 +1187,7 @@ $(function() {
 <div class="ttc" id="anamespacetimeseriesmanagermodule_html_a2075a4c123cb1167bfbdaaf4ceae7666"><div class="ttname"><a href="namespacetimeseriesmanagermodule.html#a2075a4c123cb1167bfbdaaf4ceae7666">timeseriesmanagermodule::read_value_or_time_series_adv</a></div><div class="ttdeci">subroutine, public read_value_or_time_series_adv(textInput, ii, jj, bndElem, pkgName, auxOrBnd, tsManager, iprpak, varName)</div><div class="ttdef"><b>Definition:</b> <a href="_time_series_manager_8f90_source.html#l00658">TimeSeriesManager.f90:658</a></div></div>
 <div class="ttc" id="astructgwtsftmodule_1_1gwtsfttype_html"><div class="ttname"><a href="structgwtsftmodule_1_1gwtsfttype.html">gwtsftmodule::gwtsfttype</a></div><div class="ttdef"><b>Definition:</b> <a href="gwt1sft1_8f90_source.html#l00051">gwt1sft1.f90:51</a></div></div>
 <div class="ttc" id="anamespacesimmodule_html_a0be97214c1d4fcf42bc4ddc27b111b61"><div class="ttname"><a href="namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61">simmodule::ustop</a></div><div class="ttdeci">subroutine, public ustop(stopmess, ioutlocal)</div><div class="ttdef"><b>Definition:</b> <a href="_sim_8f90_source.html#l00324">Sim.f90:324</a></div></div>
+<div class="ttc" id="ainterfacememorymanagermodule_1_1mem__allocate_html"><div class="ttname"><a href="interfacememorymanagermodule_1_1mem__allocate.html">memorymanagermodule::mem_allocate</a></div><div class="ttdef"><b>Definition:</b> <a href="_memory_manager_8f90_source.html#l00050">MemoryManager.f90:50</a></div></div>
 <div class="ttc" id="anamespacegwtsftmodule_html_a82cdac4544a05dfdf08455fb2cf7db12"><div class="ttname"><a href="namespacegwtsftmodule.html#a82cdac4544a05dfdf08455fb2cf7db12">gwtsftmodule::find_sft_package</a></div><div class="ttdeci">subroutine find_sft_package(this)</div><div class="ttdef"><b>Definition:</b> <a href="gwt1sft1_8f90_source.html#l00140">gwt1sft1.f90:140</a></div></div>
 <div class="ttc" id="anamespacegwtsftmodule_html_ac7de136e2ed4a73f8ca03d97de548305"><div class="ttname"><a href="namespacegwtsftmodule.html#ac7de136e2ed4a73f8ca03d97de548305">gwtsftmodule::ftype</a></div><div class="ttdeci">character(len= *), parameter ftype</div><div class="ttdef"><b>Definition:</b> <a href="gwt1sft1_8f90_source.html#l00047">gwt1sft1.f90:47</a></div></div>
 <div class="ttc" id="anamespacegwtsftmodule_html_a7c427fb2651c7e9b0f5f4211013bdefd"><div class="ttname"><a href="namespacegwtsftmodule.html#a7c427fb2651c7e9b0f5f4211013bdefd">gwtsftmodule::sft_roff_term</a></div><div class="ttdeci">subroutine sft_roff_term(this, ientry, n1, n2, rrate, rhsval, hcofval)</div><div class="ttdef"><b>Definition:</b> <a href="gwt1sft1_8f90_source.html#l00777">gwt1sft1.f90:777</a></div></div>
@@ -1155,18 +1203,23 @@ $(function() {
 <div class="ttc" id="anamespaceconstantsmodule_html"><div class="ttname"><a href="namespaceconstantsmodule.html">constantsmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00001">Constants.f90:1</a></div></div>
 <div class="ttc" id="anamespacesfrmodule_html"><div class="ttname"><a href="namespacesfrmodule.html">sfrmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="gwf3sfr8_8f90_source.html#l00001">gwf3sfr8.f90:1</a></div></div>
 <div class="ttc" id="anamespacegwtsftmodule_html"><div class="ttname"><a href="namespacegwtsftmodule.html">gwtsftmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="gwt1sft1_8f90_source.html#l00033">gwt1sft1.f90:33</a></div></div>
+<div class="ttc" id="ainterfacememorymanagermodule_1_1mem__deallocate_html"><div class="ttname"><a href="interfacememorymanagermodule_1_1mem__deallocate.html">memorymanagermodule::mem_deallocate</a></div><div class="ttdef"><b>Definition:</b> <a href="_memory_manager_8f90_source.html#l00085">MemoryManager.f90:85</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_adda4cd91b9096b31d5e48d2215359311"><div class="ttname"><a href="namespaceconstantsmodule.html#adda4cd91b9096b31d5e48d2215359311">constantsmodule::lenbudtxt</a></div><div class="ttdeci">integer(i4b), parameter lenbudtxt</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00020">Constants.f90:20</a></div></div>
 <div class="ttc" id="anamespacegwtsftmodule_html_ae3f805f378eb13853c129b2b3b5d0838"><div class="ttname"><a href="namespacegwtsftmodule.html#ae3f805f378eb13853c129b2b3b5d0838">gwtsftmodule::sft_evap_term</a></div><div class="ttdeci">subroutine sft_evap_term(this, ientry, n1, n2, rrate, rhsval, hcofval)</div><div class="ttdef"><b>Definition:</b> <a href="gwt1sft1_8f90_source.html#l00736">gwt1sft1.f90:736</a></div></div>
 <div class="ttc" id="anamespacememorymanagermodule_html"><div class="ttname"><a href="namespacememorymanagermodule.html">memorymanagermodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_memory_manager_8f90_source.html#l00001">MemoryManager.f90:1</a></div></div>
 <div class="ttc" id="anamespacekindmodule_html_ae38bd3a7dfaf151094c26e1529259639"><div class="ttname"><a href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">kindmodule::dp</a></div><div class="ttdeci">integer, parameter dp</div><div class="ttdef"><b>Definition:</b> <a href="kind_8f90_source.html#l00007">kind.f90:7</a></div></div>
 <div class="ttc" id="anamespacegwtsftmodule_html_ac8f22fc28635eace83c9b1adf6d52901"><div class="ttname"><a href="namespacegwtsftmodule.html#ac8f22fc28635eace83c9b1adf6d52901">gwtsftmodule::sft_setup_budobj</a></div><div class="ttdeci">subroutine sft_setup_budobj(this, idx)</div><div class="ttdef"><b>Definition:</b> <a href="gwt1sft1_8f90_source.html#l00430">gwt1sft1.f90:430</a></div></div>
+<div class="ttc" id="astructsfrmodule_1_1sfrtype_html"><div class="ttname"><a href="structsfrmodule_1_1sfrtype.html">sfrmodule::sfrtype</a></div><div class="ttdef"><b>Definition:</b> <a href="gwf3sfr8_8f90_source.html#l00036">gwf3sfr8.f90:36</a></div></div>
 <div class="ttc" id="anamespacegwtsftmodule_html_a1e0cbb9432d88b3f4e6365d923ff13d3"><div class="ttname"><a href="namespacegwtsftmodule.html#a1e0cbb9432d88b3f4e6365d923ff13d3">gwtsftmodule::allocate_scalars</a></div><div class="ttdeci">subroutine allocate_scalars(this)</div><div class="ttdef"><b>Definition:</b> <a href="gwt1sft1_8f90_source.html#l00597">gwt1sft1.f90:597</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_af918ac22cd0b232deea67660bfbc9ce1"><div class="ttname"><a href="namespaceconstantsmodule.html#af918ac22cd0b232deea67660bfbc9ce1">constantsmodule::done</a></div><div class="ttdeci">real(dp), parameter done</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00056">Constants.f90:56</a></div></div>
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_32e188284d239da8bb14ec1dabb0c35f.html">Model</a></li><li class="navelem"><a class="el" href="dir_5ac382e795535087161f2a8b7f95a830.html">GroundWaterTransport</a></li><li class="navelem"><a class="el" href="gwt1sft1_8f90.html">gwt1sft1.f90</a></li>
+    <li class="footer">Generated on Thu Jun 24 2021 19:50:09 for MODFLOW 6 by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
 </body>
 </html>

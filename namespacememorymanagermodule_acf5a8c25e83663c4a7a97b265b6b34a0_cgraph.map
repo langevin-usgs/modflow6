@@ -1,0 +1,6 @@
+<map id="memorymanagermodule::mem_summary_total" name="memorymanagermodule::mem_summary_total">
+<area shape="rect" id="node1" title="Create and fill a table with the total allocated memory." alt="" coords="5,71,189,112"/>
+<area shape="rect" id="node2" href="$namespacememorymanagermodule.html#a430466a5feab54cd89c60302f87a3740" title="Generic function to clean a memory manager table." alt="" coords="237,5,421,47"/>
+<area shape="rect" id="node3" href="$namespacememorymanagermodule.html#a87b7f4b50d3bc870febbc95f79bd9a2e" title="Determine appropriate memory unit and conversion factor." alt="" coords="237,71,421,112"/>
+<area shape="rect" id="node4" href="$namespacetablemodule.html#a7632d784ec9e94277a76705ef56725f2" title=" " alt="" coords="247,137,411,163"/>
+</map>

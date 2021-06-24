@@ -5,13 +5,22 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MODFLOW 6 Code Documentation: /home/runner/work/modflow6/modflow6/src/Solution/NumericalSolution.f90 File Reference</title>
+<title>MODFLOW 6: /home/runner/work/modflow6/modflow6/src/Solution/NumericalSolution.f90 File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="CustomDoxygen.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -21,9 +30,12 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="mf6-triangular-grid.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">MODFLOW 6 Code Documentation
+   <div id="projectname">MODFLOW 6
+   &#160;<span id="projectnumber">version 6.2.2</span>
    </div>
+   <div id="projectbrief">MODFLOW 6 Code Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -36,16 +48,54 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Modules</span></a></li>
+      <li><a href="annotated.html"><span>Data&#160;Types&#160;List</span></a></li>
+      <li class="current"><a href="files.html"><span>Files</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('_numerical_solution_8f90.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,11 +110,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_45e973df69963bbfe985a1f7e6db2b6f.html">Solution</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Data Types</a> &#124;
@@ -77,6 +122,11 @@ $(function() {
 
 <p><a href="_numerical_solution_8f90_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Data Types</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">type &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnumericalsolutionmodule_1_1numericalsolutiontype.html">numericalsolutionmodule::numericalsolutiontype</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Modules</h2></td></tr>
 <tr class="memitem:namespacenumericalsolutionmodule"><td class="memItemLeft" align="right" valign="top">module &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenumericalsolutionmodule.html">numericalsolutionmodule</a></td></tr>
@@ -85,44 +135,127 @@ Modules</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions/Subroutines</h2></td></tr>
 <tr class="memitem:afe1d36406e23aa824de7b49f7a96a543"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenumericalsolutionmodule.html#afe1d36406e23aa824de7b49f7a96a543">numericalsolutionmodule::solution_create</a> (filename, id)</td></tr>
+<tr class="memdesc:afe1d36406e23aa824de7b49f7a96a543"><td class="mdescLeft">&#160;</td><td class="mdescRight">@ brief Create a new solution  <a href="namespacenumericalsolutionmodule.html#afe1d36406e23aa824de7b49f7a96a543">More...</a><br /></td></tr>
 <tr class="separator:afe1d36406e23aa824de7b49f7a96a543"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed3ab97a33364c36ba3d9395e30b81f1"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenumericalsolutionmodule.html#aed3ab97a33364c36ba3d9395e30b81f1">numericalsolutionmodule::allocate_scalars</a> (this)</td></tr>
+<tr class="memdesc:aed3ab97a33364c36ba3d9395e30b81f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">@ brief Allocate scalars  <a href="namespacenumericalsolutionmodule.html#aed3ab97a33364c36ba3d9395e30b81f1">More...</a><br /></td></tr>
 <tr class="separator:aed3ab97a33364c36ba3d9395e30b81f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2518d004a3f094cc01c98f915b3c225"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenumericalsolutionmodule.html#ad2518d004a3f094cc01c98f915b3c225">numericalsolutionmodule::allocate_arrays</a> (this)</td></tr>
+<tr class="memdesc:ad2518d004a3f094cc01c98f915b3c225"><td class="mdescLeft">&#160;</td><td class="mdescRight">@ brief Allocate arrays  <a href="namespacenumericalsolutionmodule.html#ad2518d004a3f094cc01c98f915b3c225">More...</a><br /></td></tr>
 <tr class="separator:ad2518d004a3f094cc01c98f915b3c225"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b3255995926f4887838220f0ea12c40"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenumericalsolutionmodule.html#a4b3255995926f4887838220f0ea12c40">numericalsolutionmodule::sln_df</a> (this)</td></tr>
+<tr class="memdesc:a4b3255995926f4887838220f0ea12c40"><td class="mdescLeft">&#160;</td><td class="mdescRight">@ brief Define the solution  <a href="namespacenumericalsolutionmodule.html#a4b3255995926f4887838220f0ea12c40">More...</a><br /></td></tr>
 <tr class="separator:a4b3255995926f4887838220f0ea12c40"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe804dcafea9bef2ef528e68475ac3ec"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenumericalsolutionmodule.html#abe804dcafea9bef2ef528e68475ac3ec">numericalsolutionmodule::sln_ar</a> (this)</td></tr>
+<tr class="memdesc:abe804dcafea9bef2ef528e68475ac3ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">@ brief Allocate and read data  <a href="namespacenumericalsolutionmodule.html#abe804dcafea9bef2ef528e68475ac3ec">More...</a><br /></td></tr>
 <tr class="separator:abe804dcafea9bef2ef528e68475ac3ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0532bb986b3da12da5b753fc999bbe0e"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenumericalsolutionmodule.html#a0532bb986b3da12da5b753fc999bbe0e">numericalsolutionmodule::sln_calculate_delt</a> (this)</td></tr>
+<tr class="memdesc:a0532bb986b3da12da5b753fc999bbe0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">@ brief Calculate delt  <a href="namespacenumericalsolutionmodule.html#a0532bb986b3da12da5b753fc999bbe0e">More...</a><br /></td></tr>
 <tr class="separator:a0532bb986b3da12da5b753fc999bbe0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7eac961b7084de083212f76fc6515dff"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenumericalsolutionmodule.html#a7eac961b7084de083212f76fc6515dff">numericalsolutionmodule::sln_ad</a> (this)</td></tr>
+<tr class="memdesc:a7eac961b7084de083212f76fc6515dff"><td class="mdescLeft">&#160;</td><td class="mdescRight">@ brief Advance solution  <a href="namespacenumericalsolutionmodule.html#a7eac961b7084de083212f76fc6515dff">More...</a><br /></td></tr>
 <tr class="separator:a7eac961b7084de083212f76fc6515dff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4632e3dda1e8c84713288749c18d1b40"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenumericalsolutionmodule.html#a4632e3dda1e8c84713288749c18d1b40">numericalsolutionmodule::sln_ot</a> (this)</td></tr>
+<tr class="memdesc:a4632e3dda1e8c84713288749c18d1b40"><td class="mdescLeft">&#160;</td><td class="mdescRight">@ brief Output solution  <a href="namespacenumericalsolutionmodule.html#a4632e3dda1e8c84713288749c18d1b40">More...</a><br /></td></tr>
 <tr class="separator:a4632e3dda1e8c84713288749c18d1b40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f9158456ae05512c728b125a9c877e1"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenumericalsolutionmodule.html#a2f9158456ae05512c728b125a9c877e1">numericalsolutionmodule::sln_fp</a> (this)</td></tr>
+<tr class="memdesc:a2f9158456ae05512c728b125a9c877e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">@ brief Finalize solution  <a href="namespacenumericalsolutionmodule.html#a2f9158456ae05512c728b125a9c877e1">More...</a><br /></td></tr>
+<tr class="separator:a2f9158456ae05512c728b125a9c877e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a748042c7737328020b0453d734a83a7c"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenumericalsolutionmodule.html#a748042c7737328020b0453d734a83a7c">numericalsolutionmodule::sln_da</a> (this)</td></tr>
+<tr class="memdesc:a748042c7737328020b0453d734a83a7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">@ brief Deallocate solution  <a href="namespacenumericalsolutionmodule.html#a748042c7737328020b0453d734a83a7c">More...</a><br /></td></tr>
+<tr class="separator:a748042c7737328020b0453d734a83a7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1c7daf42e56a62cccf6625801a30dcb"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenumericalsolutionmodule.html#ac1c7daf42e56a62cccf6625801a30dcb">numericalsolutionmodule::sln_ca</a> (this, isgcnvg, isuppress_output)</td></tr>
+<tr class="memdesc:ac1c7daf42e56a62cccf6625801a30dcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">@ brief Solve solution  <a href="namespacenumericalsolutionmodule.html#ac1c7daf42e56a62cccf6625801a30dcb">More...</a><br /></td></tr>
 <tr class="separator:ac1c7daf42e56a62cccf6625801a30dcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45a269ecfdf5d4ba92cb06b49f83c93e"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenumericalsolutionmodule.html#a45a269ecfdf5d4ba92cb06b49f83c93e">numericalsolutionmodule::writecsvheader</a> (this)</td></tr>
+<tr class="memdesc:a45a269ecfdf5d4ba92cb06b49f83c93e"><td class="mdescLeft">&#160;</td><td class="mdescRight">@ brief CSV header  <a href="namespacenumericalsolutionmodule.html#a45a269ecfdf5d4ba92cb06b49f83c93e">More...</a><br /></td></tr>
+<tr class="separator:a45a269ecfdf5d4ba92cb06b49f83c93e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae96796cf48dfa4040e98467780719861"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenumericalsolutionmodule.html#ae96796cf48dfa4040e98467780719861">numericalsolutionmodule::writeptcinfotofile</a> (this, kper)</td></tr>
+<tr class="memdesc:ae96796cf48dfa4040e98467780719861"><td class="mdescLeft">&#160;</td><td class="mdescRight">@ brief PTC header  <a href="namespacenumericalsolutionmodule.html#ae96796cf48dfa4040e98467780719861">More...</a><br /></td></tr>
+<tr class="separator:ae96796cf48dfa4040e98467780719861"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad38d2c1f3ad4cdb32b3e9e51329d5913"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenumericalsolutionmodule.html#ad38d2c1f3ad4cdb32b3e9e51329d5913">numericalsolutionmodule::preparesolve</a> (this)</td></tr>
+<tr class="memdesc:ad38d2c1f3ad4cdb32b3e9e51329d5913"><td class="mdescLeft">&#160;</td><td class="mdescRight">@ brief prepare to solve  <a href="namespacenumericalsolutionmodule.html#ad38d2c1f3ad4cdb32b3e9e51329d5913">More...</a><br /></td></tr>
+<tr class="separator:ad38d2c1f3ad4cdb32b3e9e51329d5913"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a964262851ef62c07577f4b3bbf384e15"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenumericalsolutionmodule.html#a964262851ef62c07577f4b3bbf384e15">numericalsolutionmodule::solve</a> (this, kiter)</td></tr>
+<tr class="memdesc:a964262851ef62c07577f4b3bbf384e15"><td class="mdescLeft">&#160;</td><td class="mdescRight">@ brief Build and solve the simulation  <a href="namespacenumericalsolutionmodule.html#a964262851ef62c07577f4b3bbf384e15">More...</a><br /></td></tr>
+<tr class="separator:a964262851ef62c07577f4b3bbf384e15"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7fcf392bb98599ca511fdf62749e9447"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenumericalsolutionmodule.html#a7fcf392bb98599ca511fdf62749e9447">numericalsolutionmodule::finalizesolve</a> (this, kiter, isgcnvg, isuppress_output)</td></tr>
+<tr class="memdesc:a7fcf392bb98599ca511fdf62749e9447"><td class="mdescLeft">&#160;</td><td class="mdescRight">@ brief finalize a solution  <a href="namespacenumericalsolutionmodule.html#a7fcf392bb98599ca511fdf62749e9447">More...</a><br /></td></tr>
 <tr class="separator:a7fcf392bb98599ca511fdf62749e9447"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a049b24b9778d68a7ba2d6f7e7cd29ac7"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenumericalsolutionmodule.html#a049b24b9778d68a7ba2d6f7e7cd29ac7">numericalsolutionmodule::convergence_summary</a> (this, iu, im, itertot_timestep)</td></tr>
+<tr class="memdesc:a049b24b9778d68a7ba2d6f7e7cd29ac7"><td class="mdescLeft">&#160;</td><td class="mdescRight">@ brief Solution convergence summary  <a href="namespacenumericalsolutionmodule.html#a049b24b9778d68a7ba2d6f7e7cd29ac7">More...</a><br /></td></tr>
 <tr class="separator:a049b24b9778d68a7ba2d6f7e7cd29ac7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2c51dfe927f5da25fea34cf68b4a2ee"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenumericalsolutionmodule.html#ac2c51dfe927f5da25fea34cf68b4a2ee">numericalsolutionmodule::csv_convergence_summary</a> (this, iu, totim, kper, kstp, kouter, niter, istart, kstart)</td></tr>
+<tr class="memdesc:ac2c51dfe927f5da25fea34cf68b4a2ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">@ brief Solution convergence CSV summary  <a href="namespacenumericalsolutionmodule.html#ac2c51dfe927f5da25fea34cf68b4a2ee">More...</a><br /></td></tr>
 <tr class="separator:ac2c51dfe927f5da25fea34cf68b4a2ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a137719ffc7e35092e3c4bd7437443f72"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenumericalsolutionmodule.html#a137719ffc7e35092e3c4bd7437443f72">numericalsolutionmodule::save</a> (this, filename)</td></tr>
+<tr class="memdesc:a137719ffc7e35092e3c4bd7437443f72"><td class="mdescLeft">&#160;</td><td class="mdescRight">@ brief Save solution data to a file  <a href="namespacenumericalsolutionmodule.html#a137719ffc7e35092e3c4bd7437443f72">More...</a><br /></td></tr>
 <tr class="separator:a137719ffc7e35092e3c4bd7437443f72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af0e2dfd5e0ff41ab84ee2829d01b9b83"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenumericalsolutionmodule.html#af0e2dfd5e0ff41ab84ee2829d01b9b83">numericalsolutionmodule::add_model</a> (this, mp)</td></tr>
+<tr class="memdesc:af0e2dfd5e0ff41ab84ee2829d01b9b83"><td class="mdescLeft">&#160;</td><td class="mdescRight">@ brief Add a model  <a href="namespacenumericalsolutionmodule.html#af0e2dfd5e0ff41ab84ee2829d01b9b83">More...</a><br /></td></tr>
 <tr class="separator:af0e2dfd5e0ff41ab84ee2829d01b9b83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ed5ffb5b1c97828ad2f0cb2c8035da0"><td class="memItemLeft" align="right" valign="top">type(listtype) function, pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenumericalsolutionmodule.html#a7ed5ffb5b1c97828ad2f0cb2c8035da0">numericalsolutionmodule::get_models</a> (this)</td></tr>
+<tr class="memdesc:a7ed5ffb5b1c97828ad2f0cb2c8035da0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a list of models.  <a href="namespacenumericalsolutionmodule.html#a7ed5ffb5b1c97828ad2f0cb2c8035da0">More...</a><br /></td></tr>
+<tr class="separator:a7ed5ffb5b1c97828ad2f0cb2c8035da0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af02235be2396e91532acce9a36abee97"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenumericalsolutionmodule.html#af02235be2396e91532acce9a36abee97">numericalsolutionmodule::add_exchange</a> (this, exchange)</td></tr>
+<tr class="memdesc:af02235be2396e91532acce9a36abee97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add exchange.  <a href="namespacenumericalsolutionmodule.html#af02235be2396e91532acce9a36abee97">More...</a><br /></td></tr>
+<tr class="separator:af02235be2396e91532acce9a36abee97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3af64aed80e4521475b814733555b327"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenumericalsolutionmodule.html#a3af64aed80e4521475b814733555b327">numericalsolutionmodule::sln_connect</a> (this)</td></tr>
+<tr class="memdesc:a3af64aed80e4521475b814733555b327"><td class="mdescLeft">&#160;</td><td class="mdescRight">@ brief Assign solution connections  <a href="namespacenumericalsolutionmodule.html#a3af64aed80e4521475b814733555b327">More...</a><br /></td></tr>
+<tr class="separator:a3af64aed80e4521475b814733555b327"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6bb33e0aaff92c1244857513eedf312"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenumericalsolutionmodule.html#ac6bb33e0aaff92c1244857513eedf312">numericalsolutionmodule::sln_reset</a> (this)</td></tr>
+<tr class="memdesc:ac6bb33e0aaff92c1244857513eedf312"><td class="mdescLeft">&#160;</td><td class="mdescRight">@ brief Reset the solution  <a href="namespacenumericalsolutionmodule.html#ac6bb33e0aaff92c1244857513eedf312">More...</a><br /></td></tr>
 <tr class="separator:ac6bb33e0aaff92c1244857513eedf312"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3e6fe297bd0318f1d628ce549bca68d"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenumericalsolutionmodule.html#aa3e6fe297bd0318f1d628ce549bca68d">numericalsolutionmodule::sln_ls</a> (this, kiter, kstp, kper, in_iter, iptc, ptcf)</td></tr>
+<tr class="memdesc:aa3e6fe297bd0318f1d628ce549bca68d"><td class="mdescLeft">&#160;</td><td class="mdescRight">@ brief Solve the linear system of equations  <a href="namespacenumericalsolutionmodule.html#aa3e6fe297bd0318f1d628ce549bca68d">More...</a><br /></td></tr>
+<tr class="separator:aa3e6fe297bd0318f1d628ce549bca68d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90145df172cfa4ef4e2e3505659d454e"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenumericalsolutionmodule.html#a90145df172cfa4ef4e2e3505659d454e">numericalsolutionmodule::sln_setouter</a> (this, ifdparam)</td></tr>
+<tr class="memdesc:a90145df172cfa4ef4e2e3505659d454e"><td class="mdescLeft">&#160;</td><td class="mdescRight">@ brief Set default Picard iteration variables  <a href="namespacenumericalsolutionmodule.html#a90145df172cfa4ef4e2e3505659d454e">More...</a><br /></td></tr>
+<tr class="separator:a90145df172cfa4ef4e2e3505659d454e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61e4b4c1609f9833296260d4a9deefdd"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenumericalsolutionmodule.html#a61e4b4c1609f9833296260d4a9deefdd">numericalsolutionmodule::sln_backtracking</a> (this, mp, cp, kiter)</td></tr>
+<tr class="memdesc:a61e4b4c1609f9833296260d4a9deefdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">@ brief Perform backtracking  <a href="namespacenumericalsolutionmodule.html#a61e4b4c1609f9833296260d4a9deefdd">More...</a><br /></td></tr>
+<tr class="separator:a61e4b4c1609f9833296260d4a9deefdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbd46eaed7689801fb0a957d25939225"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenumericalsolutionmodule.html#acbd46eaed7689801fb0a957d25939225">numericalsolutionmodule::sln_backtracking_xupdate</a> (this, btflag)</td></tr>
+<tr class="memdesc:acbd46eaed7689801fb0a957d25939225"><td class="mdescLeft">&#160;</td><td class="mdescRight">@ brief Backtracking update of the dependent variable  <a href="namespacenumericalsolutionmodule.html#acbd46eaed7689801fb0a957d25939225">More...</a><br /></td></tr>
+<tr class="separator:acbd46eaed7689801fb0a957d25939225"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0d6d46a24e32901def02a0b6b553248"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenumericalsolutionmodule.html#ab0d6d46a24e32901def02a0b6b553248">numericalsolutionmodule::sln_l2norm</a> (this, neq, nja, ia, ja, active, amat, rhs, x, l2norm)</td></tr>
+<tr class="memdesc:ab0d6d46a24e32901def02a0b6b553248"><td class="mdescLeft">&#160;</td><td class="mdescRight">@ brief Calculate the solution L-2 norm  <a href="namespacenumericalsolutionmodule.html#ab0d6d46a24e32901def02a0b6b553248">More...</a><br /></td></tr>
+<tr class="separator:ab0d6d46a24e32901def02a0b6b553248"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a475b3a3dafa811568f0ca944fc69d066"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenumericalsolutionmodule.html#a475b3a3dafa811568f0ca944fc69d066">numericalsolutionmodule::sln_maxval</a> (this, nsize, v, vmax)</td></tr>
+<tr class="memdesc:a475b3a3dafa811568f0ca944fc69d066"><td class="mdescLeft">&#160;</td><td class="mdescRight">@ brief Get the maximum value from a vector  <a href="namespacenumericalsolutionmodule.html#a475b3a3dafa811568f0ca944fc69d066">More...</a><br /></td></tr>
+<tr class="separator:a475b3a3dafa811568f0ca944fc69d066"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9b69ce721f9271042d955ac6d21c35f"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenumericalsolutionmodule.html#aa9b69ce721f9271042d955ac6d21c35f">numericalsolutionmodule::sln_calcdx</a> (this, neq, active, x, xtemp, dx)</td></tr>
+<tr class="memdesc:aa9b69ce721f9271042d955ac6d21c35f"><td class="mdescLeft">&#160;</td><td class="mdescRight">@ brief Calculate dependent-variable change  <a href="namespacenumericalsolutionmodule.html#aa9b69ce721f9271042d955ac6d21c35f">More...</a><br /></td></tr>
+<tr class="separator:aa9b69ce721f9271042d955ac6d21c35f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a714a62a841f370b7472eeed70f030f77"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenumericalsolutionmodule.html#a714a62a841f370b7472eeed70f030f77">numericalsolutionmodule::sln_underrelax</a> (this, kiter, bigch, neq, active, x, xtemp)</td></tr>
+<tr class="memdesc:a714a62a841f370b7472eeed70f030f77"><td class="mdescLeft">&#160;</td><td class="mdescRight">@ brief Under-relaxation  <a href="namespacenumericalsolutionmodule.html#a714a62a841f370b7472eeed70f030f77">More...</a><br /></td></tr>
+<tr class="separator:a714a62a841f370b7472eeed70f030f77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a3d89607aaac24faece4e0decc96a1e"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenumericalsolutionmodule.html#a8a3d89607aaac24faece4e0decc96a1e">numericalsolutionmodule::sln_outer_check</a> (this, hncg, lrch)</td></tr>
+<tr class="memdesc:a8a3d89607aaac24faece4e0decc96a1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">@ brief Determine maximum dependent-variable change  <a href="namespacenumericalsolutionmodule.html#a8a3d89607aaac24faece4e0decc96a1e">More...</a><br /></td></tr>
+<tr class="separator:a8a3d89607aaac24faece4e0decc96a1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e536e8da68c7f8a12f3731f27b409c0"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenumericalsolutionmodule.html#a3e536e8da68c7f8a12f3731f27b409c0">numericalsolutionmodule::sln_get_loc</a> (this, nodesln, str)</td></tr>
+<tr class="memdesc:a3e536e8da68c7f8a12f3731f27b409c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">@ brief Get cell location string  <a href="namespacenumericalsolutionmodule.html#a3e536e8da68c7f8a12f3731f27b409c0">More...</a><br /></td></tr>
+<tr class="separator:a3e536e8da68c7f8a12f3731f27b409c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0673b47847b9b33923ecc11dbc2d8359"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenumericalsolutionmodule.html#a0673b47847b9b33923ecc11dbc2d8359">numericalsolutionmodule::sln_get_nodeu</a> (this, nodesln, im, nodeu)</td></tr>
+<tr class="memdesc:a0673b47847b9b33923ecc11dbc2d8359"><td class="mdescLeft">&#160;</td><td class="mdescRight">@ brief Get user node number  <a href="namespacenumericalsolutionmodule.html#a0673b47847b9b33923ecc11dbc2d8359">More...</a><br /></td></tr>
+<tr class="separator:a0673b47847b9b33923ecc11dbc2d8359"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefead85b912cfb79e860d6fe3cb2069c"><td class="memItemLeft" align="right" valign="top">class(numericalsolutiontype) function, pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenumericalsolutionmodule.html#aefead85b912cfb79e860d6fe3cb2069c">numericalsolutionmodule::castasnumericalsolutionclass</a> (obj)</td></tr>
+<tr class="memdesc:aefead85b912cfb79e860d6fe3cb2069c"><td class="mdescLeft">&#160;</td><td class="mdescRight">@ brief Cast a object as a Numerical Solution  <a href="namespacenumericalsolutionmodule.html#aefead85b912cfb79e860d6fe3cb2069c">More...</a><br /></td></tr>
+<tr class="separator:aefead85b912cfb79e860d6fe3cb2069c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc653881da580b6418122bb466276f63"><td class="memItemLeft" align="right" valign="top">class(numericalsolutiontype) function, pointer, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenumericalsolutionmodule.html#acc653881da580b6418122bb466276f63">numericalsolutionmodule::getnumericalsolutionfromlist</a> (list, idx)</td></tr>
+<tr class="memdesc:acc653881da580b6418122bb466276f63"><td class="mdescLeft">&#160;</td><td class="mdescRight">@ brief Get a numerical solution  <a href="namespacenumericalsolutionmodule.html#acc653881da580b6418122bb466276f63">More...</a><br /></td></tr>
 <tr class="separator:acc653881da580b6418122bb466276f63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_45e973df69963bbfe985a1f7e6db2b6f.html">Solution</a></li><li class="navelem"><a class="el" href="_numerical_solution_8f90.html">NumericalSolution.f90</a></li>
+    <li class="footer">Generated on Thu Jun 24 2021 19:50:10 for MODFLOW 6 by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
 </body>
 </html>

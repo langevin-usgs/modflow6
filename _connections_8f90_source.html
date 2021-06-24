@@ -5,13 +5,22 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MODFLOW 6 Code Documentation: /home/runner/work/modflow6/modflow6/src/Model/ModelUtilities/Connections.f90 Source File</title>
+<title>MODFLOW 6: /home/runner/work/modflow6/modflow6/src/Model/ModelUtilities/Connections.f90 Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="CustomDoxygen.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -21,9 +30,12 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="mf6-triangular-grid.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">MODFLOW 6 Code Documentation
+   <div id="projectname">MODFLOW 6
+   &#160;<span id="projectnumber">version 6.2.2</span>
    </div>
+   <div id="projectbrief">MODFLOW 6 Code Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -36,16 +48,54 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Modules</span></a></li>
+      <li><a href="annotated.html"><span>Data&#160;Types&#160;List</span></a></li>
+      <li class="current"><a href="files.html"><span>Files</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('_connections_8f90_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,11 +110,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_32e188284d239da8bb14ec1dabb0c35f.html">Model</a></li><li class="navelem"><a class="el" href="dir_c1f30da02202fb3f19a3c29076dafee1.html">ModelUtilities</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">Connections.f90</div>  </div>
@@ -72,108 +117,108 @@ $(function() {
 <div class="contents">
 <a href="_connections_8f90.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="namespaceconnectionsmodule.html">    1</a></span>&#160;<span class="keyword">module</span> <a class="code" href="namespaceconnectionsmodule.html">connectionsmodule</a></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacearrayreadersmodule.html">arrayreadersmodule</a>, <span class="keywordtype">only</span>: readarray</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacearrayreadersmodule.html">arrayreadersmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="interfacearrayreadersmodule_1_1readarray.html">readarray</a></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacekindmodule.html">kindmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>, <a class="code" href="namespacekindmodule.html#a2f6861418b5e7d3d602b77228232a470">i4b</a></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespaceconstantsmodule.html">constantsmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespaceconstantsmodule.html#a2371bf2667814198ff255350fa3e3edd">lenmodelname</a>, <a class="code" href="namespaceconstantsmodule.html#ae1ec6380bd0e8e6c89a40d3b97306586">lenmempath</a></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacegenericutilitiesmodule.html">genericutilitiesmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespacegenericutilitiesmodule.html#a34492cca79f70174fd015808be8b7ebf">sim_message</a></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespaceblockparsermodule.html">blockparsermodule</a>, <span class="keywordtype">only</span>: blockparsertype</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespaceblockparsermodule.html">blockparsermodule</a>, <span class="keywordtype">only</span>: <a class="code" href="structblockparsermodule_1_1blockparsertype.html">blockparsertype</a></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  </div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  <span class="keywordtype">implicit none</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  <span class="keywordtype">private</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <span class="keywordtype">public</span> :: connectionstype</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <span class="keywordtype">public</span> :: <a class="code" href="structconnectionsmodule_1_1connectionstype.html">connectionstype</a></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <span class="keywordtype">public</span> :: <a class="code" href="namespaceconnectionsmodule.html#ae5ec77a2e261fe49e2a68eaea281ad5f">iac_to_ia</a></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <span class="keyword">type</span> connectionstype</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">character(len=LENMEMPATH)</span>                       :: memoryPath<span class="comment">                !&lt; memory path of the connections data</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">character(len=LENMODELNAME)</span>, <span class="keywordtype">pointer</span>            :: name_model =&gt; null()      <span class="comment">!&lt; name of the model    </span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">pointer</span>                           :: nodes      =&gt; null()      <span class="comment">!&lt; number of nodes</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">pointer</span>                           :: nja        =&gt; null()      <span class="comment">!&lt; number of connections</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">pointer</span>                           :: njas       =&gt; null()      <span class="comment">!&lt; number of symmetric connections</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">pointer</span>                           :: ianglex    =&gt; null()      <span class="comment">!&lt; indicates whether or not anglex was read</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span> :: ia         =&gt; null()      <span class="comment">!&lt; (size:nodes+1) csr index array</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span> :: ja         =&gt; null()      <span class="comment">!&lt; (size:nja) csr pointer array</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span> :: mask       =&gt; null()      <span class="comment">!&lt; (size:nja) to mask certain connections: ==0 means masked. Do not set the mask directly, use set_mask instead!    </span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span>     :: cl1        =&gt; null()      <span class="comment">!&lt; (size:njas) connection length between node n and shared face with node m</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span>     :: cl2        =&gt; null()      <span class="comment">!&lt; (size:njas) connection length between node m and shared face with node n</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span>     :: hwva       =&gt; null()      <span class="comment">!&lt; (size:njas) horizontal perpendicular width (ihc&gt;0) or vertical flow area (ihc=0)</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span>     :: anglex     =&gt; null()      <span class="comment">!&lt; (size:njas) connection angle of face normal with x axis (read in degrees, stored as radians)</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span> :: isym       =&gt; null()      <span class="comment">!&lt; (size:nja) returns csr index of symmetric counterpart</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span> :: jas        =&gt; null()      <span class="comment">!&lt; (size:nja) map any connection to upper triangle (for pulling out of symmetric array)</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span> :: ihc        =&gt; null()      <span class="comment">!&lt; (size:njas) horizontal connection (0:vertical, 1:mean thickness, 2:staggered)</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span> :: iausr      =&gt; null()      <span class="comment">!&lt; (size:nodesusr+1) </span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span> :: jausr      =&gt; null()      <span class="comment">!&lt; (size:nja)</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">type</span>(BlockParserType)                           :: parser<span class="comment">                    !&lt; block parser</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="structconnectionsmodule_1_1connectionstype.html">   14</a></span>&#160;  <span class="keyword">type</span> <a class="code" href="structconnectionsmodule_1_1connectionstype.html">connectionstype</a></div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="structconnectionsmodule_1_1connectionstype.html#aca15c158267589b6892d5e106830f3e3">   15</a></span>&#160;    <span class="keywordtype">character(len=LENMEMPATH)</span>                       :: memorypath<span class="comment">                !&lt; memory path of the connections data</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="structconnectionsmodule_1_1connectionstype.html#ae8ad61e82cf0e89b5d7ba673a9871f38">   16</a></span>&#160;    <span class="keywordtype">character(len=LENMODELNAME)</span>, <span class="keywordtype">pointer</span>            :: name_model =&gt; null()      <span class="comment">!&lt; name of the model    </span></div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="structconnectionsmodule_1_1connectionstype.html#a9e38acef7d38c7562d0ac385cd0ab11e">   17</a></span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">pointer</span>                           :: nodes      =&gt; null()      <span class="comment">!&lt; number of nodes</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="structconnectionsmodule_1_1connectionstype.html#ac660a6bc2f6b173f2e6adc3475870c4e">   18</a></span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">pointer</span>                           :: nja        =&gt; null()      <span class="comment">!&lt; number of connections</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="structconnectionsmodule_1_1connectionstype.html#a4658995c6157308707e5fd79ca4bd080">   19</a></span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">pointer</span>                           :: njas       =&gt; null()      <span class="comment">!&lt; number of symmetric connections</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="structconnectionsmodule_1_1connectionstype.html#a7e17fa749284f60e49bdf6ab978fa8ab">   20</a></span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">pointer</span>                           :: ianglex    =&gt; null()      <span class="comment">!&lt; indicates whether or not anglex was read</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="structconnectionsmodule_1_1connectionstype.html#af0806737f344df184eeab25f09933cd8">   21</a></span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span> :: ia         =&gt; null()      <span class="comment">!&lt; (size:nodes+1) csr index array</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="structconnectionsmodule_1_1connectionstype.html#ab1a3093d67408ecf98c9f57ecfbb584f">   22</a></span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span> :: ja         =&gt; null()      <span class="comment">!&lt; (size:nja) csr pointer array</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="structconnectionsmodule_1_1connectionstype.html#adbd4b8c7ffe91116ccb8fdcc060b534e">   23</a></span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span> :: mask       =&gt; null()      <span class="comment">!&lt; (size:nja) to mask certain connections: ==0 means masked. Do not set the mask directly, use set_mask instead!    </span></div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="structconnectionsmodule_1_1connectionstype.html#acd30b8ed8a50ca53b87eadf8fd7ab3c3">   24</a></span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span>     :: cl1        =&gt; null()      <span class="comment">!&lt; (size:njas) connection length between node n and shared face with node m</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="structconnectionsmodule_1_1connectionstype.html#ae0693becea58b49a9e36f9e9e2cc3456">   25</a></span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span>     :: cl2        =&gt; null()      <span class="comment">!&lt; (size:njas) connection length between node m and shared face with node n</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="structconnectionsmodule_1_1connectionstype.html#ac1883d1e6668a2150103809acaa85061">   26</a></span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span>     :: hwva       =&gt; null()      <span class="comment">!&lt; (size:njas) horizontal perpendicular width (ihc&gt;0) or vertical flow area (ihc=0)</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="structconnectionsmodule_1_1connectionstype.html#a3d496402d1fe5e8fc1a3de3ac6a7532a">   27</a></span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span>     :: anglex     =&gt; null()      <span class="comment">!&lt; (size:njas) connection angle of face normal with x axis (read in degrees, stored as radians)</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="structconnectionsmodule_1_1connectionstype.html#ae4a0580a4656455c2904e160ec988cbe">   28</a></span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span> :: isym       =&gt; null()      <span class="comment">!&lt; (size:nja) returns csr index of symmetric counterpart</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="structconnectionsmodule_1_1connectionstype.html#affd132f7b4754754ff696ff869d71708">   29</a></span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span> :: jas        =&gt; null()      <span class="comment">!&lt; (size:nja) map any connection to upper triangle (for pulling out of symmetric array)</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="structconnectionsmodule_1_1connectionstype.html#a764a33148cab7519f4b7dcc38e7a7435">   30</a></span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span> :: ihc        =&gt; null()      <span class="comment">!&lt; (size:njas) horizontal connection (0:vertical, 1:mean thickness, 2:staggered)</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="structconnectionsmodule_1_1connectionstype.html#a4e09b40f6d818d7e36364050b311d3c3">   31</a></span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span> :: iausr      =&gt; null()      <span class="comment">!&lt; (size:nodesusr+1) </span></div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="structconnectionsmodule_1_1connectionstype.html#a796be797d7f43ffe4e5741006f36a188">   32</a></span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span> :: jausr      =&gt; null()      <span class="comment">!&lt; (size:nja)</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="structconnectionsmodule_1_1connectionstype.html#adcf6a5267e021f077a3f5a058326a923">   33</a></span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structblockparsermodule_1_1blockparsertype.html">blockparsertype</a>)                           :: parser<span class="comment">                    !&lt; block parser</span></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keyword">contains</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">procedure</span> :: con_da</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">procedure</span> :: allocate_scalars</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">procedure</span> :: allocate_arrays</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">procedure</span> :: con_finalize</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">procedure</span> :: read_connectivity_from_block</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">procedure</span> :: set_cl1_cl2_from_fleng</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">procedure</span> :: disconnections</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">procedure</span> :: disvconnections</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">procedure</span> :: disuconnections</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">procedure</span> :: iajausr</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">procedure</span> :: getjaindex</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">procedure</span> :: set_mask</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keyword">end type </span>connectionstype</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="structconnectionsmodule_1_1connectionstype.html#a5ad7dae4d4df517894db06156d752574">   35</a></span>&#160;    <span class="keywordtype">procedure</span> :: <a class="code" href="namespaceconnectionsmodule.html#a37f14e8712a0abef95e67c9c9031f106">con_da</a></div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="structconnectionsmodule_1_1connectionstype.html#acbf50c0f8c015db96ccea1972eda44bd">   36</a></span>&#160;    <span class="keywordtype">procedure</span> :: <a class="code" href="namespaceconnectionsmodule.html#ae71d867478877b7cfc5e2fd0a8147d49">allocate_scalars</a></div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="structconnectionsmodule_1_1connectionstype.html#a8f9f0e708521935f73833f03bd53457e">   37</a></span>&#160;    <span class="keywordtype">procedure</span> :: <a class="code" href="namespaceconnectionsmodule.html#a78886dfcef7b94849091918b0f650a94">allocate_arrays</a></div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="structconnectionsmodule_1_1connectionstype.html#a9df4eb648be3b89f04acbb44e921479b">   38</a></span>&#160;    <span class="keywordtype">procedure</span> :: <a class="code" href="namespaceconnectionsmodule.html#ac427af443b37d33ee88fc5de0c7d0ff9">con_finalize</a></div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="structconnectionsmodule_1_1connectionstype.html#aa9107d015b32efc228041f824ce39d85">   39</a></span>&#160;    <span class="keywordtype">procedure</span> :: <a class="code" href="namespaceconnectionsmodule.html#a273c9cbc7baade6a9ab2538605ffd6ce">read_connectivity_from_block</a></div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="structconnectionsmodule_1_1connectionstype.html#ae902cc5af376eae3c3240909ff06649b">   40</a></span>&#160;    <span class="keywordtype">procedure</span> :: <a class="code" href="namespaceconnectionsmodule.html#a44356dfb02f6196f697408ce24060fef">set_cl1_cl2_from_fleng</a></div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="structconnectionsmodule_1_1connectionstype.html#aa4cb716a43025cc9a59f14544c6255a9">   41</a></span>&#160;    <span class="keywordtype">procedure</span> :: <a class="code" href="namespaceconnectionsmodule.html#a9459bae88913d19f1c19bb8c04df43f4">disconnections</a></div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="structconnectionsmodule_1_1connectionstype.html#a2ab944bed2c27007260115991dbb22f1">   42</a></span>&#160;    <span class="keywordtype">procedure</span> :: <a class="code" href="namespaceconnectionsmodule.html#a078c5f33c8dd03ddbcfae0a8c1deb657">disvconnections</a></div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="structconnectionsmodule_1_1connectionstype.html#a1f6a1bd458c93f4797c3fc315cc6fb1b">   43</a></span>&#160;    <span class="keywordtype">procedure</span> :: <a class="code" href="namespaceconnectionsmodule.html#a93cd5dc1cc29a9b54a46804ffba3d3ed">disuconnections</a></div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="structconnectionsmodule_1_1connectionstype.html#aae3afc013536ea5b67f842ed51be98cf">   44</a></span>&#160;    <span class="keywordtype">procedure</span> :: <a class="code" href="namespaceconnectionsmodule.html#a194825fd009056b56fe0254591c40992">iajausr</a></div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="structconnectionsmodule_1_1connectionstype.html#a92babf14b02dd0c622f8490dbbd4c33a">   45</a></span>&#160;    <span class="keywordtype">procedure</span> :: <a class="code" href="namespaceconnectionsmodule.html#a82845712a56a7b20d495ddfb2d6cf7a3">getjaindex</a></div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="structconnectionsmodule_1_1connectionstype.html#a405da449c2ed42f48a8e7d36cc4d7e26">   46</a></span>&#160;    <span class="keywordtype">procedure</span> :: <a class="code" href="namespaceconnectionsmodule.html#a21d880222e0a0fc5ed3406d88455bd9f">set_mask</a></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keyword">end type </span><a class="code" href="structconnectionsmodule_1_1connectionstype.html">connectionstype</a></div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keyword">contains</span></div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keyword">subroutine </span>con_da(this)</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespaceconnectionsmodule.html#a37f14e8712a0abef95e67c9c9031f106">con_da</a>(this)</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="namespaceconnectionsmodule.html#a37f14e8712a0abef95e67c9c9031f106">   52</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">! con_da -- Deallocate connection variables</span></div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">!</span></div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">!    SPECIFICATIONS:</span></div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="comment">! -- modules</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacememorymanagermodule.html">memorymanagermodule</a>, <span class="keywordtype">only</span>: mem_deallocate</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacememorymanagermodule.html">memorymanagermodule</a>, <span class="keywordtype">only</span>: <a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a></div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">class</span>(ConnectionsType) :: this</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structconnectionsmodule_1_1connectionstype.html">connectionstype</a>) :: this</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="comment">! -- Strings</span></div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">deallocate</span>(this%name_model)</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="comment">! -- Scalars</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">call </span>mem_deallocate(this%nodes)</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">call </span>mem_deallocate(this%nja)</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keyword">call </span>mem_deallocate(this%njas)</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keyword">call </span>mem_deallocate(this%ianglex)</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%nodes)</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%nja)</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%njas)</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%ianglex)</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="comment">! -- iausr and jausr</span></div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">if</span>(<span class="keyword">associated</span>(this%iausr, this%ia)) <span class="keywordflow">then</span></div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;      <span class="keyword">nullify</span>(this%iausr)</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      <span class="keyword">call </span>mem_deallocate(this%iausr)</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%iausr)</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="keywordflow">    endif</span></div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">if</span>(<span class="keyword">associated</span>(this%jausr, this%ja)) <span class="keywordflow">then</span></div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;      <span class="keyword">nullify</span>(this%jausr)</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;      <span class="keyword">call </span>mem_deallocate(this%jausr)</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%jausr)</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="keywordflow">    endif</span></div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="comment">! -- mask</span></div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">associated</span>(this%mask, this%ja)) <span class="keywordflow">then</span></div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;      <span class="keyword">nullify</span>(this%mask)</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;      <span class="keyword">call </span>mem_deallocate(this%mask)</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%mask)</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keywordflow">    end if</span> </div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="comment">! -- Arrays</span></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keyword">call </span>mem_deallocate(this%ia)</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keyword">call </span>mem_deallocate(this%ja)  </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keyword">call </span>mem_deallocate(this%isym)</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keyword">call </span>mem_deallocate(this%jas)</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keyword">call </span>mem_deallocate(this%hwva)</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keyword">call </span>mem_deallocate(this%anglex)</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keyword">call </span>mem_deallocate(this%ihc)</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keyword">call </span>mem_deallocate(this%cl1)</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keyword">call </span>mem_deallocate(this%cl2)     </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%ia)</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%ja)  </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%isym)</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%jas)</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%hwva)</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%anglex)</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%ihc)</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%cl1)</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%cl2)     </div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="comment">! -- return</span></div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <span class="keyword">end subroutine </span>con_da</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespaceconnectionsmodule.html#a37f14e8712a0abef95e67c9c9031f106">con_da</a></div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  </div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespaceconnectionsmodule.html#ae71d867478877b7cfc5e2fd0a8147d49">allocate_scalars</a>(this, name_model)</div>
 <div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="namespaceconnectionsmodule.html#ae71d867478877b7cfc5e2fd0a8147d49">  107</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
@@ -183,10 +228,10 @@ $(function() {
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="comment">!    SPECIFICATIONS:</span></div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="comment">! -- modules</span></div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacememorymanagermodule.html">memorymanagermodule</a>, <span class="keywordtype">only</span>: mem_allocate</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacememorymanagermodule.html">memorymanagermodule</a>, <span class="keywordtype">only</span>: <a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a></div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacememoryhelpermodule.html">memoryhelpermodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespacememoryhelpermodule.html#a3791dbc2d4a06a0b9112158cff21f738">create_mem_path</a></div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordtype">class</span>(connectionstype) :: this</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structconnectionsmodule_1_1connectionstype.html">connectionstype</a>) :: this</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordtype">character(len=*)</span>, <span class="keywordtype">intent(in)</span> :: name_model</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="comment">!</span></div>
@@ -194,10 +239,10 @@ $(function() {
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keyword">allocate</span>(this%name_model)</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    </div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    this%memoryPath = <a class="code" href="namespacememoryhelpermodule.html#a3791dbc2d4a06a0b9112158cff21f738">create_mem_path</a>(name_model, <span class="stringliteral">&#39;CON&#39;</span>)</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keyword">call </span>mem_allocate(this%nodes, <span class="stringliteral">&#39;NODES&#39;</span>, this%memoryPath)</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keyword">call </span>mem_allocate(this%nja, <span class="stringliteral">&#39;NJA&#39;</span>, this%memoryPath)</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keyword">call </span>mem_allocate(this%njas, <span class="stringliteral">&#39;NJAS&#39;</span>, this%memoryPath)</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keyword">call </span>mem_allocate(this%ianglex, <span class="stringliteral">&#39;IANGLEX&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%nodes, <span class="stringliteral">&#39;NODES&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%nja, <span class="stringliteral">&#39;NJA&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%njas, <span class="stringliteral">&#39;NJAS&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%ianglex, <span class="stringliteral">&#39;IANGLEX&#39;</span>, this%memoryPath)</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    this%name_model = name_model</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    this%nodes = 0</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    this%nja = 0</div>
@@ -215,23 +260,23 @@ $(function() {
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="comment">!</span></div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="comment">!    SPECIFICATIONS:</span></div>
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacememorymanagermodule.html">memorymanagermodule</a>, <span class="keywordtype">only</span>: mem_allocate</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacememorymanagermodule.html">memorymanagermodule</a>, <span class="keywordtype">only</span>: <a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a></div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keywordtype">class</span>(connectionstype) :: this</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structconnectionsmodule_1_1connectionstype.html">connectionstype</a>) :: this</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="comment">! -- allocate space for connection arrays</span></div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keyword">call </span>mem_allocate(this%ia, this%nodes+1, <span class="stringliteral">&#39;IA&#39;</span>, this%memoryPath)</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keyword">call </span>mem_allocate(this%ja, this%nja, <span class="stringliteral">&#39;JA&#39;</span>, this%memoryPath)</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keyword">call </span>mem_allocate(this%isym, this%nja, <span class="stringliteral">&#39;ISYM&#39;</span>, this%memoryPath)</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keyword">call </span>mem_allocate(this%jas, this%nja, <span class="stringliteral">&#39;JAS&#39;</span>, this%memoryPath)</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="keyword">call </span>mem_allocate(this%hwva, this%njas, <span class="stringliteral">&#39;HWVA&#39;</span>, this%memoryPath)</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keyword">call </span>mem_allocate(this%anglex, this%njas, <span class="stringliteral">&#39;ANGLEX&#39;</span>, this%memoryPath)</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keyword">call </span>mem_allocate(this%ihc, this%njas, <span class="stringliteral">&#39;IHC&#39;</span>, this%memoryPath)</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keyword">call </span>mem_allocate(this%cl1, this%njas, <span class="stringliteral">&#39;CL1&#39;</span>, this%memoryPath)</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keyword">call </span>mem_allocate(this%cl2, this%njas, <span class="stringliteral">&#39;CL2&#39;</span>, this%memoryPath)</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keyword">call </span>mem_allocate(this%iausr, 1, <span class="stringliteral">&#39;IAUSR&#39;</span>, this%memoryPath)</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keyword">call </span>mem_allocate(this%jausr, 1, <span class="stringliteral">&#39;JAUSR&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%ia, this%nodes+1, <span class="stringliteral">&#39;IA&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%ja, this%nja, <span class="stringliteral">&#39;JA&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%isym, this%nja, <span class="stringliteral">&#39;ISYM&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%jas, this%nja, <span class="stringliteral">&#39;JAS&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%hwva, this%njas, <span class="stringliteral">&#39;HWVA&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%anglex, this%njas, <span class="stringliteral">&#39;ANGLEX&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%ihc, this%njas, <span class="stringliteral">&#39;IHC&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%cl1, this%njas, <span class="stringliteral">&#39;CL1&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%cl2, this%njas, <span class="stringliteral">&#39;CL2&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%iausr, 1, <span class="stringliteral">&#39;IAUSR&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%jausr, 1, <span class="stringliteral">&#39;JAUSR&#39;</span>, this%memoryPath)</div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="comment">! </span></div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="comment">! -- let mask point to ja, which is always nonzero, </span></div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="comment">!    until someone decides to do a &#39;set_mask&#39;</span></div>
@@ -252,7 +297,7 @@ $(function() {
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespaceconstantsmodule.html">constantsmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespaceconstantsmodule.html#a060d310ded5535ce2dc85bd1ca1afd3d">linelength</a>, <a class="code" href="namespaceconstantsmodule.html#af918ac22cd0b232deea67660bfbc9ce1">done</a>, <a class="code" href="namespaceconstantsmodule.html#a9262b16d485352c5d369c6cb86232c60">dhalf</a>, <a class="code" href="namespaceconstantsmodule.html#aa782c151085f5c3c4892ecb72cdda2ce">dpio180</a>, <a class="code" href="namespaceconstantsmodule.html#a4ee8967493137bb95d5b78dc3a77feba">dnodata</a></div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacesimmodule.html">simmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61">ustop</a>, <a class="code" href="namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a">store_error</a>, <a class="code" href="namespacesimmodule.html#a4c46e49de78d4498dd4ec106357775e6">count_errors</a>, <a class="code" href="namespacesimmodule.html#a1c78a6fda06b630c738bb654aa6bd816">store_error_unit</a></div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="keywordtype">class</span>(connectionstype) :: this</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structconnectionsmodule_1_1connectionstype.html">connectionstype</a>) :: this</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">intent(in)</span> :: ihctemp</div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">intent(in)</span> :: cl12temp</div>
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">intent(in)</span> :: hwvatemp</div>
@@ -318,7 +363,7 @@ $(function() {
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;<span class="keywordflow">    endif</span></div>
 <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <span class="comment">! -- fill the isym arrays</span></div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <span class="keyword">call </span>fillisym(this%nodes, this%nja, this%ia, this%ja, this%isym)</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <span class="keyword">call </span><a class="code" href="namespaceconnectionsmodule.html#af8c5d449b3e604c095d4700caab019d3">fillisym</a>(this%nodes, this%nja, this%ia, this%ja, this%isym)</div>
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <span class="comment">! -- check for symmetry in ja (isym value of zero indicates there is no</span></div>
 <div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    <span class="comment">!    symmetric connection</span></div>
@@ -337,7 +382,7 @@ $(function() {
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;<span class="keywordflow">    endif</span></div>
 <div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    <span class="comment">! -- Fill the jas array, which maps any connection to upper triangle</span></div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="keyword">call </span>filljas(this%nodes, this%nja, this%ia, this%ja, this%isym, this%jas)</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="keyword">call </span><a class="code" href="namespaceconnectionsmodule.html#a84e9340a64579d7b5637f22ea5e7f576">filljas</a>(this%nodes, this%nja, this%ia, this%ja, this%isym, this%jas)</div>
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    <span class="comment">! -- Put into symmetric array</span></div>
 <div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    <span class="keywordflow">do</span> n = 1, this%nodes</div>
@@ -426,7 +471,7 @@ $(function() {
 <div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespaceconstantsmodule.html">constantsmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespaceconstantsmodule.html#a060d310ded5535ce2dc85bd1ca1afd3d">linelength</a></div>
 <div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacesimmodule.html">simmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61">ustop</a>, <a class="code" href="namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a">store_error</a>, <a class="code" href="namespacesimmodule.html#a4c46e49de78d4498dd4ec106357775e6">count_errors</a></div>
 <div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;    <span class="keywordtype">class</span>(connectionstype) :: this</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structconnectionsmodule_1_1connectionstype.html">connectionstype</a>) :: this</div>
 <div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;    <span class="keywordtype">character(len=*)</span>, <span class="keywordtype">intent(in)</span> :: name_model</div>
 <div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: nodes</div>
 <div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: nja</div>
@@ -473,11 +518,11 @@ $(function() {
 <div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;        <span class="keyword">call </span>this%parser%GetStringCaps(keyword)</div>
 <div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;        <span class="keywordflow">select case</span> (keyword)</div>
 <div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;          <span class="keywordflow">case</span> (<span class="stringliteral">&#39;IAC&#39;</span>)</div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;            <span class="keyword">call </span>readarray(this%parser%iuactive, this%ia, aname(1), 1, &amp;</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;            <span class="keyword">call </span><a class="code" href="interfacearrayreadersmodule_1_1readarray.html">readarray</a>(this%parser%iuactive, this%ia, aname(1), 1, &amp;</div>
 <div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;                            this%nodes, iout, 0)</div>
 <div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;            lname(1) = .true.</div>
 <div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;          <span class="keywordflow">case</span> (<span class="stringliteral">&#39;JA&#39;</span>)</div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;            <span class="keyword">call </span>readarray(this%parser%iuactive, this%ja, aname(2), 1, &amp;</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;            <span class="keyword">call </span><a class="code" href="interfacearrayreadersmodule_1_1readarray.html">readarray</a>(this%parser%iuactive, this%ja, aname(2), 1, &amp;</div>
 <div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;                            this%nja, iout, 0)</div>
 <div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;            lname(2) = .true.</div>
 <div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;<span class="keywordflow">          case default</span></div>
@@ -523,8 +568,8 @@ $(function() {
 <div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;<span class="keywordflow">    enddo</span></div>
 <div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;    <span class="comment">! -- fill the isym and jas arrays</span></div>
-<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;    <span class="keyword">call </span>fillisym(this%nodes, this%nja, this%ia, this%ja, this%isym)</div>
-<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;    <span class="keyword">call </span>filljas(this%nodes, this%nja, this%ia, this%ja, this%isym, &amp;</div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;    <span class="keyword">call </span><a class="code" href="namespaceconnectionsmodule.html#af8c5d449b3e604c095d4700caab019d3">fillisym</a>(this%nodes, this%nja, this%ia, this%ja, this%isym)</div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;    <span class="keyword">call </span><a class="code" href="namespaceconnectionsmodule.html#a84e9340a64579d7b5637f22ea5e7f576">filljas</a>(this%nodes, this%nja, this%ia, this%ja, this%isym, &amp;</div>
 <div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;                 this%jas)</div>
 <div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;    <span class="comment">! -- check for symmetry in ja</span></div>
@@ -561,7 +606,7 @@ $(function() {
 <div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;    <span class="comment">! -- modules</span></div>
 <div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespaceconstantsmodule.html">constantsmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespaceconstantsmodule.html#a9262b16d485352c5d369c6cb86232c60">dhalf</a></div>
 <div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;    <span class="keywordtype">class</span>(connectionstype) :: this</div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structconnectionsmodule_1_1connectionstype.html">connectionstype</a>) :: this</div>
 <div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">intent(in)</span> :: fleng</div>
 <div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: n, m, ii</div>
@@ -595,7 +640,7 @@ $(function() {
 <div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacesparsemodule.html">sparsemodule</a>, <span class="keywordtype">only</span>: <a class="code" href="structsparsemodule_1_1sparsematrix.html">sparsematrix</a></div>
 <div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespaceinputoutputmodule.html">inputoutputmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespaceinputoutputmodule.html#a22620cf6624502feca9621056c5c161a">get_node</a></div>
 <div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;    <span class="keywordtype">class</span>(connectionstype) :: this</div>
+<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structconnectionsmodule_1_1connectionstype.html">connectionstype</a>) :: this</div>
 <div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;    <span class="keywordtype">character(len=*)</span>, <span class="keywordtype">intent(in)</span> :: name_model</div>
 <div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: nodes</div>
 <div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: ncol</div>
@@ -743,8 +788,8 @@ $(function() {
 <div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;    <span class="keyword">call </span>sparse%destroy()</div>
 <div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;    <span class="comment">! -- fill the isym and jas arrays</span></div>
-<div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;    <span class="keyword">call </span>fillisym(this%nodes, this%nja, this%ia, this%ja, this%isym)</div>
-<div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;    <span class="keyword">call </span>filljas(this%nodes, this%nja, this%ia, this%ja, this%isym, this%jas)</div>
+<div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;    <span class="keyword">call </span><a class="code" href="namespaceconnectionsmodule.html#af8c5d449b3e604c095d4700caab019d3">fillisym</a>(this%nodes, this%nja, this%ia, this%ja, this%isym)</div>
+<div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;    <span class="keyword">call </span><a class="code" href="namespaceconnectionsmodule.html#a84e9340a64579d7b5637f22ea5e7f576">filljas</a>(this%nodes, this%nja, this%ia, this%ja, this%isym, this%jas)</div>
 <div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;    <span class="comment">! -- Fill symmetric discretization arrays (ihc,cl1,cl2,hwva,anglex)</span></div>
 <div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;    isympos = 1</div>
@@ -843,10 +888,10 @@ $(function() {
 <div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespaceconstantsmodule.html">constantsmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespaceconstantsmodule.html#a9262b16d485352c5d369c6cb86232c60">dhalf</a>, <a class="code" href="namespaceconstantsmodule.html#abab5757666b9ddd2726c20ce48dd0050">dzero</a>, <a class="code" href="namespaceconstantsmodule.html#af78a42d4fd58cef4835c0bbd973ccf59">dthree</a>, <a class="code" href="namespaceconstantsmodule.html#adc3d56c06695509e95078d706508e83f">dtwo</a>, <a class="code" href="namespaceconstantsmodule.html#aa190ea61b44b2ef628329833de6543a9">dpi</a></div>
 <div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacesparsemodule.html">sparsemodule</a>, <span class="keywordtype">only</span>: <a class="code" href="structsparsemodule_1_1sparsematrix.html">sparsematrix</a></div>
 <div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespaceinputoutputmodule.html">inputoutputmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespaceinputoutputmodule.html#a22620cf6624502feca9621056c5c161a">get_node</a></div>
-<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacedisvgeom.html">disvgeom</a>, <span class="keywordtype">only</span>: disvgeomtype</div>
-<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacememorymanagermodule.html">memorymanagermodule</a>, <span class="keywordtype">only</span>: mem_reallocate</div>
+<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacedisvgeom.html">disvgeom</a>, <span class="keywordtype">only</span>: <a class="code" href="structdisvgeom_1_1disvgeomtype.html">disvgeomtype</a></div>
+<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacememorymanagermodule.html">memorymanagermodule</a>, <span class="keywordtype">only</span>: <a class="code" href="interfacememorymanagermodule_1_1mem__reallocate.html">mem_reallocate</a></div>
 <div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;    <span class="keywordtype">class</span>(connectionstype)                              :: this</div>
+<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structconnectionsmodule_1_1connectionstype.html">connectionstype</a>)                              :: this</div>
 <div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160;    <span class="keywordtype">character(len=*)</span>,                        <span class="keywordtype">intent(in)</span> :: name_model</div>
 <div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160;    <span class="keywordtype">integer(I4B)</span>,                                 <span class="keywordtype">intent(in)</span> :: nodes</div>
 <div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;    <span class="keywordtype">integer(I4B)</span>,                                 <span class="keywordtype">intent(in)</span> :: ncpl</div>
@@ -865,7 +910,7 @@ $(function() {
 <div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">allocatable</span> :: itemp</div>
 <div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structsparsemodule_1_1sparsematrix.html">sparsematrix</a>) :: sparse, vertcellspm</div>
 <div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: n, m, ipos, i, j, ierror, nodesuser</div>
-<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;    <span class="keywordtype">type</span>(disvgeomtype) :: cell1, cell2</div>
+<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structdisvgeom_1_1disvgeomtype.html">disvgeomtype</a>) :: cell1, cell2</div>
 <div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;    <span class="comment">! -- Allocate scalars</span></div>
@@ -897,7 +942,7 @@ $(function() {
 <div class="line"><a name="l00825"></a><span class="lineno">  825</span>&#160;<span class="keywordflow">    enddo</span></div>
 <div class="line"><a name="l00826"></a><span class="lineno">  826</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00827"></a><span class="lineno">  827</span>&#160;    <span class="comment">! -- Call routine to build a sparse matrix of the connections</span></div>
-<div class="line"><a name="l00828"></a><span class="lineno">  828</span>&#160;    <span class="keyword">call </span>vertexconnect(this%nodes, nrsize, 6, nlay, ncpl, sparse,              &amp;</div>
+<div class="line"><a name="l00828"></a><span class="lineno">  828</span>&#160;    <span class="keyword">call </span><a class="code" href="namespaceconnectionsmodule.html#a5ec816424541c14a28fb1519227337be">vertexconnect</a>(this%nodes, nrsize, 6, nlay, ncpl, sparse,              &amp;</div>
 <div class="line"><a name="l00829"></a><span class="lineno">  829</span>&#160;                       vertcellspm, cell1, cell2, nodereduced)</div>
 <div class="line"><a name="l00830"></a><span class="lineno">  830</span>&#160;    this%nja = sparse%nnz</div>
 <div class="line"><a name="l00831"></a><span class="lineno">  831</span>&#160;    this%njas = (this%nja - this%nodes) / 2</div>
@@ -911,8 +956,8 @@ $(function() {
 <div class="line"><a name="l00839"></a><span class="lineno">  839</span>&#160;    <span class="keyword">call </span>sparse%destroy()</div>
 <div class="line"><a name="l00840"></a><span class="lineno">  840</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00841"></a><span class="lineno">  841</span>&#160;    <span class="comment">! -- fill the isym and jas arrays</span></div>
-<div class="line"><a name="l00842"></a><span class="lineno">  842</span>&#160;    <span class="keyword">call </span>fillisym(this%nodes, this%nja, this%ia, this%ja, this%isym)</div>
-<div class="line"><a name="l00843"></a><span class="lineno">  843</span>&#160;    <span class="keyword">call </span>filljas(this%nodes, this%nja, this%ia, this%ja, this%isym, this%jas)</div>
+<div class="line"><a name="l00842"></a><span class="lineno">  842</span>&#160;    <span class="keyword">call </span><a class="code" href="namespaceconnectionsmodule.html#af8c5d449b3e604c095d4700caab019d3">fillisym</a>(this%nodes, this%nja, this%ia, this%ja, this%isym)</div>
+<div class="line"><a name="l00843"></a><span class="lineno">  843</span>&#160;    <span class="keyword">call </span><a class="code" href="namespaceconnectionsmodule.html#a84e9340a64579d7b5637f22ea5e7f576">filljas</a>(this%nodes, this%nja, this%ia, this%ja, this%isym, this%jas)</div>
 <div class="line"><a name="l00844"></a><span class="lineno">  844</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00845"></a><span class="lineno">  845</span>&#160;    <span class="comment">! -- Fill symmetric discretization arrays (ihc,cl1,cl2,hwva,anglex)</span></div>
 <div class="line"><a name="l00846"></a><span class="lineno">  846</span>&#160;    <span class="keywordflow">do</span> n = 1, this%nodes</div>
@@ -950,9 +995,9 @@ $(function() {
 <div class="line"><a name="l00878"></a><span class="lineno">  878</span>&#160;    <span class="comment">! -- modules</span></div>
 <div class="line"><a name="l00879"></a><span class="lineno">  879</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespaceconstantsmodule.html">constantsmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespaceconstantsmodule.html#a9262b16d485352c5d369c6cb86232c60">dhalf</a>, <a class="code" href="namespaceconstantsmodule.html#abab5757666b9ddd2726c20ce48dd0050">dzero</a>, <a class="code" href="namespaceconstantsmodule.html#af78a42d4fd58cef4835c0bbd973ccf59">dthree</a>, <a class="code" href="namespaceconstantsmodule.html#adc3d56c06695509e95078d706508e83f">dtwo</a>, <a class="code" href="namespaceconstantsmodule.html#aa190ea61b44b2ef628329833de6543a9">dpi</a></div>
 <div class="line"><a name="l00880"></a><span class="lineno">  880</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacesparsemodule.html">sparsemodule</a>, <span class="keywordtype">only</span>: <a class="code" href="structsparsemodule_1_1sparsematrix.html">sparsematrix</a></div>
-<div class="line"><a name="l00881"></a><span class="lineno">  881</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacememorymanagermodule.html">memorymanagermodule</a>, <span class="keywordtype">only</span>: mem_reallocate</div>
+<div class="line"><a name="l00881"></a><span class="lineno">  881</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacememorymanagermodule.html">memorymanagermodule</a>, <span class="keywordtype">only</span>: <a class="code" href="interfacememorymanagermodule_1_1mem__reallocate.html">mem_reallocate</a></div>
 <div class="line"><a name="l00882"></a><span class="lineno">  882</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00883"></a><span class="lineno">  883</span>&#160;    <span class="keywordtype">class</span>(connectionstype) :: this</div>
+<div class="line"><a name="l00883"></a><span class="lineno">  883</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structconnectionsmodule_1_1connectionstype.html">connectionstype</a>) :: this</div>
 <div class="line"><a name="l00884"></a><span class="lineno">  884</span>&#160;    <span class="keywordtype">character(len=*)</span>, <span class="keywordtype">intent(in)</span> :: name_model</div>
 <div class="line"><a name="l00885"></a><span class="lineno">  885</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: nodes</div>
 <div class="line"><a name="l00886"></a><span class="lineno">  886</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: nodesuser</div>
@@ -1084,9 +1129,9 @@ $(function() {
 <div class="line"><a name="l01012"></a><span class="lineno"> 1012</span>&#160;<span class="comment">!    SPECIFICATIONS:</span></div>
 <div class="line"><a name="l01013"></a><span class="lineno"> 1013</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l01014"></a><span class="lineno"> 1014</span>&#160;    <span class="comment">! -- modules</span></div>
-<div class="line"><a name="l01015"></a><span class="lineno"> 1015</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacememorymanagermodule.html">memorymanagermodule</a>, <span class="keywordtype">only</span>: mem_reallocate, mem_deallocate, mem_setptr</div>
+<div class="line"><a name="l01015"></a><span class="lineno"> 1015</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacememorymanagermodule.html">memorymanagermodule</a>, <span class="keywordtype">only</span>: <a class="code" href="interfacememorymanagermodule_1_1mem__reallocate.html">mem_reallocate</a>, <a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>, <a class="code" href="interfacememorymanagermodule_1_1mem__setptr.html">mem_setptr</a></div>
 <div class="line"><a name="l01016"></a><span class="lineno"> 1016</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l01017"></a><span class="lineno"> 1017</span>&#160;    <span class="keywordtype">class</span>(connectionstype) :: this</div>
+<div class="line"><a name="l01017"></a><span class="lineno"> 1017</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structconnectionsmodule_1_1connectionstype.html">connectionstype</a>) :: this</div>
 <div class="line"><a name="l01018"></a><span class="lineno"> 1018</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: nrsize</div>
 <div class="line"><a name="l01019"></a><span class="lineno"> 1019</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: nodesuser</div>
 <div class="line"><a name="l01020"></a><span class="lineno"> 1020</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">intent(in)</span> :: nodereduced</div>
@@ -1101,7 +1146,7 @@ $(function() {
 <div class="line"><a name="l01029"></a><span class="lineno"> 1029</span>&#160;      <span class="comment">!</span></div>
 <div class="line"><a name="l01030"></a><span class="lineno"> 1030</span>&#160;      <span class="comment">! -- Create the iausr array of size nodesuser + 1.  For excluded cells,</span></div>
 <div class="line"><a name="l01031"></a><span class="lineno"> 1031</span>&#160;      <span class="comment">!    iausr(n) and iausr(n + 1) should be equal to indicate no connections.</span></div>
-<div class="line"><a name="l01032"></a><span class="lineno"> 1032</span>&#160;      <span class="keyword">call </span>mem_reallocate(this%iausr, nodesuser+1, <span class="stringliteral">&#39;IAUSR&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l01032"></a><span class="lineno"> 1032</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__reallocate.html">mem_reallocate</a>(this%iausr, nodesuser+1, <span class="stringliteral">&#39;IAUSR&#39;</span>, this%memoryPath)</div>
 <div class="line"><a name="l01033"></a><span class="lineno"> 1033</span>&#160;      this%iausr(nodesuser + 1) = this%ia(this%nodes + 1)</div>
 <div class="line"><a name="l01034"></a><span class="lineno"> 1034</span>&#160;      <span class="keywordflow">do</span> n = nodesuser, 1, -1</div>
 <div class="line"><a name="l01035"></a><span class="lineno"> 1035</span>&#160;        nr = nodereduced(n)</div>
@@ -1114,7 +1159,7 @@ $(function() {
 <div class="line"><a name="l01042"></a><span class="lineno"> 1042</span>&#160;      <span class="comment">!</span></div>
 <div class="line"><a name="l01043"></a><span class="lineno"> 1043</span>&#160;      <span class="comment">! -- Create the jausr array, which is the same size as ja, but it</span></div>
 <div class="line"><a name="l01044"></a><span class="lineno"> 1044</span>&#160;      <span class="comment">!    contains user node numbers instead of reduced node numbers</span></div>
-<div class="line"><a name="l01045"></a><span class="lineno"> 1045</span>&#160;      <span class="keyword">call </span>mem_reallocate(this%jausr, this%nja, <span class="stringliteral">&#39;JAUSR&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l01045"></a><span class="lineno"> 1045</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__reallocate.html">mem_reallocate</a>(this%jausr, this%nja, <span class="stringliteral">&#39;JAUSR&#39;</span>, this%memoryPath)</div>
 <div class="line"><a name="l01046"></a><span class="lineno"> 1046</span>&#160;      <span class="keywordflow">do</span> ipos = 1, this%nja</div>
 <div class="line"><a name="l01047"></a><span class="lineno"> 1047</span>&#160;        nr = this%ja(ipos)</div>
 <div class="line"><a name="l01048"></a><span class="lineno"> 1048</span>&#160;        n = nodeuser(nr)</div>
@@ -1122,10 +1167,10 @@ $(function() {
 <div class="line"><a name="l01050"></a><span class="lineno"> 1050</span>&#160;<span class="keywordflow">      enddo</span></div>
 <div class="line"><a name="l01051"></a><span class="lineno"> 1051</span>&#160;    <span class="keywordflow">else</span></div>
 <div class="line"><a name="l01052"></a><span class="lineno"> 1052</span>&#160;      <span class="comment">! -- iausr and jausr will be pointers</span></div>
-<div class="line"><a name="l01053"></a><span class="lineno"> 1053</span>&#160;      <span class="keyword">call </span>mem_deallocate(this%iausr)</div>
-<div class="line"><a name="l01054"></a><span class="lineno"> 1054</span>&#160;      <span class="keyword">call </span>mem_deallocate(this%jausr)</div>
-<div class="line"><a name="l01055"></a><span class="lineno"> 1055</span>&#160;      <span class="keyword">call </span>mem_setptr(this%iausr, <span class="stringliteral">&#39;IA&#39;</span>, this%memoryPath)</div>
-<div class="line"><a name="l01056"></a><span class="lineno"> 1056</span>&#160;      <span class="keyword">call </span>mem_setptr(this%jausr, <span class="stringliteral">&#39;JA&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l01053"></a><span class="lineno"> 1053</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%iausr)</div>
+<div class="line"><a name="l01054"></a><span class="lineno"> 1054</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%jausr)</div>
+<div class="line"><a name="l01055"></a><span class="lineno"> 1055</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__setptr.html">mem_setptr</a>(this%iausr, <span class="stringliteral">&#39;IA&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l01056"></a><span class="lineno"> 1056</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__setptr.html">mem_setptr</a>(this%jausr, <span class="stringliteral">&#39;JA&#39;</span>, this%memoryPath)</div>
 <div class="line"><a name="l01057"></a><span class="lineno"> 1057</span>&#160;<span class="keywordflow">    endif</span></div>
 <div class="line"><a name="l01058"></a><span class="lineno"> 1058</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l01059"></a><span class="lineno"> 1059</span>&#160;    <span class="comment">! -- Return</span></div>
@@ -1148,7 +1193,7 @@ $(function() {
 <div class="line"><a name="l01076"></a><span class="lineno"> 1076</span>&#160;    <span class="comment">! -- return</span></div>
 <div class="line"><a name="l01077"></a><span class="lineno"> 1077</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: <a class="code" href="namespaceconnectionsmodule.html#a82845712a56a7b20d495ddfb2d6cf7a3">getjaindex</a></div>
 <div class="line"><a name="l01078"></a><span class="lineno"> 1078</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l01079"></a><span class="lineno"> 1079</span>&#160;    <span class="keywordtype">class</span>(connectionstype) :: this</div>
+<div class="line"><a name="l01079"></a><span class="lineno"> 1079</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structconnectionsmodule_1_1connectionstype.html">connectionstype</a>) :: this</div>
 <div class="line"><a name="l01080"></a><span class="lineno"> 1080</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span>       :: node1, node2 <span class="comment">! nodes of interest</span></div>
 <div class="line"><a name="l01081"></a><span class="lineno"> 1081</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l01082"></a><span class="lineno"> 1082</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: i</div>
@@ -1180,8 +1225,8 @@ $(function() {
 <div class="line"><a name="l01108"></a><span class="lineno"> 1108</span>&#160;    <span class="keywordflow">return</span></div>
 <div class="line"><a name="l01109"></a><span class="lineno"> 1109</span>&#160;  <span class="keyword">end function </span><a class="code" href="namespaceconnectionsmodule.html#a82845712a56a7b20d495ddfb2d6cf7a3">getjaindex</a></div>
 <div class="line"><a name="l01110"></a><span class="lineno"> 1110</span>&#160; </div>
-<div class="line"><a name="l01111"></a><span class="lineno"> 1111</span>&#160;  <span class="keyword">subroutine </span>fillisym(neq, nja, ia, ja, isym)</div>
-<div class="line"><a name="l01112"></a><span class="lineno"> 1112</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l01111"></a><span class="lineno"> 1111</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespaceconnectionsmodule.html#af8c5d449b3e604c095d4700caab019d3">fillisym</a>(neq, nja, ia, ja, isym)</div>
+<div class="line"><a name="l01112"></a><span class="lineno"><a class="line" href="namespaceconnectionsmodule.html#af8c5d449b3e604c095d4700caab019d3"> 1112</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l01113"></a><span class="lineno"> 1113</span>&#160;<span class="comment">! fillisym -- Private function to fill the isym array</span></div>
 <div class="line"><a name="l01114"></a><span class="lineno"> 1114</span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l01115"></a><span class="lineno"> 1115</span>&#160;<span class="comment">!</span></div>
@@ -1216,10 +1261,10 @@ $(function() {
 <div class="line"><a name="l01144"></a><span class="lineno"> 1144</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l01145"></a><span class="lineno"> 1145</span>&#160;    <span class="comment">! -- Return</span></div>
 <div class="line"><a name="l01146"></a><span class="lineno"> 1146</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l01147"></a><span class="lineno"> 1147</span>&#160;  <span class="keyword">end subroutine </span>fillisym</div>
+<div class="line"><a name="l01147"></a><span class="lineno"> 1147</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespaceconnectionsmodule.html#af8c5d449b3e604c095d4700caab019d3">fillisym</a></div>
 <div class="line"><a name="l01148"></a><span class="lineno"> 1148</span>&#160; </div>
-<div class="line"><a name="l01149"></a><span class="lineno"> 1149</span>&#160;  <span class="keyword">subroutine </span>filljas(neq, nja, ia, ja, isym, jas)</div>
-<div class="line"><a name="l01150"></a><span class="lineno"> 1150</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l01149"></a><span class="lineno"> 1149</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespaceconnectionsmodule.html#a84e9340a64579d7b5637f22ea5e7f576">filljas</a>(neq, nja, ia, ja, isym, jas)</div>
+<div class="line"><a name="l01150"></a><span class="lineno"><a class="line" href="namespaceconnectionsmodule.html#a84e9340a64579d7b5637f22ea5e7f576"> 1150</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l01151"></a><span class="lineno"> 1151</span>&#160;<span class="comment">! fillisym -- Private function to fill the jas array</span></div>
 <div class="line"><a name="l01152"></a><span class="lineno"> 1152</span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l01153"></a><span class="lineno"> 1153</span>&#160;<span class="comment">!</span></div>
@@ -1261,12 +1306,12 @@ $(function() {
 <div class="line"><a name="l01189"></a><span class="lineno"> 1189</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l01190"></a><span class="lineno"> 1190</span>&#160;    <span class="comment">! -- Return</span></div>
 <div class="line"><a name="l01191"></a><span class="lineno"> 1191</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l01192"></a><span class="lineno"> 1192</span>&#160;  <span class="keyword">end subroutine </span>filljas</div>
+<div class="line"><a name="l01192"></a><span class="lineno"> 1192</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespaceconnectionsmodule.html#a84e9340a64579d7b5637f22ea5e7f576">filljas</a></div>
 <div class="line"><a name="l01193"></a><span class="lineno"> 1193</span>&#160; </div>
 <div class="line"><a name="l01194"></a><span class="lineno"> 1194</span>&#160; </div>
-<div class="line"><a name="l01195"></a><span class="lineno"> 1195</span>&#160;  <span class="keyword">subroutine </span>vertexconnect(nodes, nrsize, maxnnz, nlay, ncpl, sparse,          &amp;</div>
+<div class="line"><a name="l01195"></a><span class="lineno"> 1195</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespaceconnectionsmodule.html#a5ec816424541c14a28fb1519227337be">vertexconnect</a>(nodes, nrsize, maxnnz, nlay, ncpl, sparse,          &amp;</div>
 <div class="line"><a name="l01196"></a><span class="lineno"> 1196</span>&#160;                           vertcellspm, cell1, cell2, nodereduced)</div>
-<div class="line"><a name="l01197"></a><span class="lineno"> 1197</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l01197"></a><span class="lineno"><a class="line" href="namespaceconnectionsmodule.html#a5ec816424541c14a28fb1519227337be"> 1197</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l01198"></a><span class="lineno"> 1198</span>&#160;<span class="comment">! vertexconnect -- routine to make cell connections from vertices</span></div>
 <div class="line"><a name="l01199"></a><span class="lineno"> 1199</span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l01200"></a><span class="lineno"> 1200</span>&#160;<span class="comment">!</span></div>
@@ -1275,7 +1320,7 @@ $(function() {
 <div class="line"><a name="l01203"></a><span class="lineno"> 1203</span>&#160;    <span class="comment">! -- modules</span></div>
 <div class="line"><a name="l01204"></a><span class="lineno"> 1204</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacesparsemodule.html">sparsemodule</a>, <span class="keywordtype">only</span>: <a class="code" href="structsparsemodule_1_1sparsematrix.html">sparsematrix</a></div>
 <div class="line"><a name="l01205"></a><span class="lineno"> 1205</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespaceinputoutputmodule.html">inputoutputmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespaceinputoutputmodule.html#a22620cf6624502feca9621056c5c161a">get_node</a></div>
-<div class="line"><a name="l01206"></a><span class="lineno"> 1206</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacedisvgeom.html">disvgeom</a>, <span class="keywordtype">only</span>: disvgeomtype</div>
+<div class="line"><a name="l01206"></a><span class="lineno"> 1206</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacedisvgeom.html">disvgeom</a>, <span class="keywordtype">only</span>: <a class="code" href="structdisvgeom_1_1disvgeomtype.html">disvgeomtype</a></div>
 <div class="line"><a name="l01207"></a><span class="lineno"> 1207</span>&#160;    <span class="comment">! -- dummy</span></div>
 <div class="line"><a name="l01208"></a><span class="lineno"> 1208</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: nodes</div>
 <div class="line"><a name="l01209"></a><span class="lineno"> 1209</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: nrsize</div>
@@ -1285,7 +1330,7 @@ $(function() {
 <div class="line"><a name="l01213"></a><span class="lineno"> 1213</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structsparsemodule_1_1sparsematrix.html">sparsematrix</a>), <span class="keywordtype">intent(inout)</span> :: sparse</div>
 <div class="line"><a name="l01214"></a><span class="lineno"> 1214</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structsparsemodule_1_1sparsematrix.html">sparsematrix</a>), <span class="keywordtype">intent(inout)</span> :: vertcellspm</div>
 <div class="line"><a name="l01215"></a><span class="lineno"> 1215</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">intent(in)</span> :: nodereduced</div>
-<div class="line"><a name="l01216"></a><span class="lineno"> 1216</span>&#160;    <span class="keywordtype">type</span>(disvgeomtype), <span class="keywordtype">intent(inout)</span> :: cell1, cell2</div>
+<div class="line"><a name="l01216"></a><span class="lineno"> 1216</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structdisvgeom_1_1disvgeomtype.html">disvgeomtype</a>), <span class="keywordtype">intent(inout)</span> :: cell1, cell2</div>
 <div class="line"><a name="l01217"></a><span class="lineno"> 1217</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l01218"></a><span class="lineno"> 1218</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">allocatable</span> :: rowmaxnnz</div>
 <div class="line"><a name="l01219"></a><span class="lineno"> 1219</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: i, j, k, kk, nr, mr, j1, j2, icol1, icol2, nvert</div>
@@ -1364,7 +1409,7 @@ $(function() {
 <div class="line"><a name="l01292"></a><span class="lineno"> 1292</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l01293"></a><span class="lineno"> 1293</span>&#160;    <span class="comment">! -- return</span></div>
 <div class="line"><a name="l01294"></a><span class="lineno"> 1294</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l01295"></a><span class="lineno"> 1295</span>&#160;  <span class="keyword">end subroutine </span>vertexconnect</div>
+<div class="line"><a name="l01295"></a><span class="lineno"> 1295</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespaceconnectionsmodule.html#a5ec816424541c14a28fb1519227337be">vertexconnect</a></div>
 <div class="line"><a name="l01296"></a><span class="lineno"> 1296</span>&#160;  </div>
 <div class="line"><a name="l01297"></a><span class="lineno"> 1297</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespaceconnectionsmodule.html#a21d880222e0a0fc5ed3406d88455bd9f">set_mask</a>(this, ipos, maskval)</div>
 <div class="line"><a name="l01298"></a><span class="lineno"><a class="line" href="namespaceconnectionsmodule.html#a21d880222e0a0fc5ed3406d88455bd9f"> 1298</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
@@ -1374,8 +1419,8 @@ $(function() {
 <div class="line"><a name="l01302"></a><span class="lineno"> 1302</span>&#160;<span class="comment">!</span></div>
 <div class="line"><a name="l01303"></a><span class="lineno"> 1303</span>&#160;<span class="comment">!    SPECIFICATIONS:</span></div>
 <div class="line"><a name="l01304"></a><span class="lineno"> 1304</span>&#160;<span class="comment">! ------------------------------------------------------------------------------ </span></div>
-<div class="line"><a name="l01305"></a><span class="lineno"> 1305</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacememorymanagermodule.html">memorymanagermodule</a>, <span class="keywordtype">only</span>: mem_allocate</div>
-<div class="line"><a name="l01306"></a><span class="lineno"> 1306</span>&#160;    <span class="keywordtype">class</span>(connectionstype) :: this</div>
+<div class="line"><a name="l01305"></a><span class="lineno"> 1305</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacememorymanagermodule.html">memorymanagermodule</a>, <span class="keywordtype">only</span>: <a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a></div>
+<div class="line"><a name="l01306"></a><span class="lineno"> 1306</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structconnectionsmodule_1_1connectionstype.html">connectionstype</a>) :: this</div>
 <div class="line"><a name="l01307"></a><span class="lineno"> 1307</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: ipos</div>
 <div class="line"><a name="l01308"></a><span class="lineno"> 1308</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: maskval</div>
 <div class="line"><a name="l01309"></a><span class="lineno"> 1309</span>&#160;    <span class="comment">! local</span></div>
@@ -1384,7 +1429,7 @@ $(function() {
 <div class="line"><a name="l01312"></a><span class="lineno"> 1312</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l01313"></a><span class="lineno"> 1313</span>&#160;    <span class="comment">! if we still point to this%ja, we first need to allocate space</span></div>
 <div class="line"><a name="l01314"></a><span class="lineno"> 1314</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">associated</span>(this%mask, this%ja)) <span class="keywordflow">then</span></div>
-<div class="line"><a name="l01315"></a><span class="lineno"> 1315</span>&#160;      <span class="keyword">call </span>mem_allocate(this%mask, this%nja, <span class="stringliteral">&#39;MASK&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l01315"></a><span class="lineno"> 1315</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%mask, this%nja, <span class="stringliteral">&#39;MASK&#39;</span>, this%memoryPath)</div>
 <div class="line"><a name="l01316"></a><span class="lineno"> 1316</span>&#160;      <span class="comment">! and initialize with unmasked</span></div>
 <div class="line"><a name="l01317"></a><span class="lineno"> 1317</span>&#160;      <span class="keywordflow">do</span> i = 1, this%nja</div>
 <div class="line"><a name="l01318"></a><span class="lineno"> 1318</span>&#160;        this%mask(i) = 1 </div>
@@ -1427,10 +1472,14 @@ $(function() {
 <div class="line"><a name="l01355"></a><span class="lineno"> 1355</span>&#160; </div>
 <div class="line"><a name="l01356"></a><span class="lineno"> 1356</span>&#160;<span class="keyword">end module </span><a class="code" href="namespaceconnectionsmodule.html">connectionsmodule</a></div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="ainterfacememorymanagermodule_1_1mem__reallocate_html"><div class="ttname"><a href="interfacememorymanagermodule_1_1mem__reallocate.html">memorymanagermodule::mem_reallocate</a></div><div class="ttdef"><b>Definition:</b> <a href="_memory_manager_8f90_source.html#l00064">MemoryManager.f90:64</a></div></div>
 <div class="ttc" id="anamespacekindmodule_html"><div class="ttname"><a href="namespacekindmodule.html">kindmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="kind_8f90_source.html#l00001">kind.f90:1</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_ae1ec6380bd0e8e6c89a40d3b97306586"><div class="ttname"><a href="namespaceconstantsmodule.html#ae1ec6380bd0e8e6c89a40d3b97306586">constantsmodule::lenmempath</a></div><div class="ttdeci">integer(i4b), parameter lenmempath</div><div class="ttdoc">maximum length of the memory path</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00016">Constants.f90:16</a></div></div>
+<div class="ttc" id="anamespaceconnectionsmodule_html_af8c5d449b3e604c095d4700caab019d3"><div class="ttname"><a href="namespaceconnectionsmodule.html#af8c5d449b3e604c095d4700caab019d3">connectionsmodule::fillisym</a></div><div class="ttdeci">subroutine fillisym(neq, nja, ia, ja, isym)</div><div class="ttdef"><b>Definition:</b> <a href="_connections_8f90_source.html#l01112">Connections.f90:1112</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_af78a42d4fd58cef4835c0bbd973ccf59"><div class="ttname"><a href="namespaceconstantsmodule.html#af78a42d4fd58cef4835c0bbd973ccf59">constantsmodule::dthree</a></div><div class="ttdeci">real(dp), parameter dthree</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00060">Constants.f90:60</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_abab5757666b9ddd2726c20ce48dd0050"><div class="ttname"><a href="namespaceconstantsmodule.html#abab5757666b9ddd2726c20ce48dd0050">constantsmodule::dzero</a></div><div class="ttdeci">real(dp), parameter dzero</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00045">Constants.f90:45</a></div></div>
+<div class="ttc" id="anamespaceconnectionsmodule_html_a37f14e8712a0abef95e67c9c9031f106"><div class="ttname"><a href="namespaceconnectionsmodule.html#a37f14e8712a0abef95e67c9c9031f106">connectionsmodule::con_da</a></div><div class="ttdeci">subroutine con_da(this)</div><div class="ttdef"><b>Definition:</b> <a href="_connections_8f90_source.html#l00052">Connections.f90:52</a></div></div>
 <div class="ttc" id="anamespacegenericutilitiesmodule_html_a34492cca79f70174fd015808be8b7ebf"><div class="ttname"><a href="namespacegenericutilitiesmodule.html#a34492cca79f70174fd015808be8b7ebf">genericutilitiesmodule::sim_message</a></div><div class="ttdeci">subroutine, public sim_message(message, iunit, fmt, level, skipbefore, skipafter, advance)</div><div class="ttdef"><b>Definition:</b> <a href="genericutils_8f90_source.html#l00020">genericutils.f90:20</a></div></div>
 <div class="ttc" id="anamespacesimmodule_html_a1c78a6fda06b630c738bb654aa6bd816"><div class="ttname"><a href="namespacesimmodule.html#a1c78a6fda06b630c738bb654aa6bd816">simmodule::store_error_unit</a></div><div class="ttdeci">subroutine, public store_error_unit(iunit)</div><div class="ttdef"><b>Definition:</b> <a href="_sim_8f90_source.html#l00177">Sim.f90:177</a></div></div>
 <div class="ttc" id="anamespacedisvgeom_html"><div class="ttname"><a href="namespacedisvgeom.html">disvgeom</a></div><div class="ttdef"><b>Definition:</b> <a href="_disv_geom_8f90_source.html#l00001">DisvGeom.f90:1</a></div></div>
@@ -1438,9 +1487,11 @@ $(function() {
 <div class="ttc" id="anamespaceconstantsmodule_html_a9262b16d485352c5d369c6cb86232c60"><div class="ttname"><a href="namespaceconstantsmodule.html#a9262b16d485352c5d369c6cb86232c60">constantsmodule::dhalf</a></div><div class="ttdeci">real(dp), parameter dhalf</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00048">Constants.f90:48</a></div></div>
 <div class="ttc" id="anamespaceconnectionsmodule_html"><div class="ttname"><a href="namespaceconnectionsmodule.html">connectionsmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_connections_8f90_source.html#l00001">Connections.f90:1</a></div></div>
 <div class="ttc" id="anamespacesimmodule_html_a4c46e49de78d4498dd4ec106357775e6"><div class="ttname"><a href="namespacesimmodule.html#a4c46e49de78d4498dd4ec106357775e6">simmodule::count_errors</a></div><div class="ttdeci">integer(i4b) function, public count_errors()</div><div class="ttdef"><b>Definition:</b> <a href="_sim_8f90_source.html#l00043">Sim.f90:43</a></div></div>
+<div class="ttc" id="astructconnectionsmodule_1_1connectionstype_html"><div class="ttname"><a href="structconnectionsmodule_1_1connectionstype.html">connectionsmodule::connectionstype</a></div><div class="ttdef"><b>Definition:</b> <a href="_connections_8f90_source.html#l00014">Connections.f90:14</a></div></div>
 <div class="ttc" id="anamespacesimmodule_html"><div class="ttname"><a href="namespacesimmodule.html">simmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_sim_8f90_source.html#l00001">Sim.f90:1</a></div></div>
 <div class="ttc" id="anamespacearrayreadersmodule_html"><div class="ttname"><a href="namespacearrayreadersmodule.html">arrayreadersmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_array_readers_8f90_source.html#l00001">ArrayReaders.f90:1</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_adc3d56c06695509e95078d706508e83f"><div class="ttname"><a href="namespaceconstantsmodule.html#adc3d56c06695509e95078d706508e83f">constantsmodule::dtwo</a></div><div class="ttdeci">real(dp), parameter dtwo</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00059">Constants.f90:59</a></div></div>
+<div class="ttc" id="anamespaceconnectionsmodule_html_a84e9340a64579d7b5637f22ea5e7f576"><div class="ttname"><a href="namespaceconnectionsmodule.html#a84e9340a64579d7b5637f22ea5e7f576">connectionsmodule::filljas</a></div><div class="ttdeci">subroutine filljas(neq, nja, ia, ja, isym, jas)</div><div class="ttdef"><b>Definition:</b> <a href="_connections_8f90_source.html#l01150">Connections.f90:1150</a></div></div>
 <div class="ttc" id="astructsparsemodule_1_1sparsematrix_html"><div class="ttname"><a href="structsparsemodule_1_1sparsematrix.html">sparsemodule::sparsematrix</a></div><div class="ttdef"><b>Definition:</b> <a href="_sparse_8f90_source.html#l00014">Sparse.f90:14</a></div></div>
 <div class="ttc" id="anamespaceblockparsermodule_html"><div class="ttname"><a href="namespaceblockparsermodule.html">blockparsermodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_block_parser_8f90_source.html#l00001">BlockParser.f90:1</a></div></div>
 <div class="ttc" id="anamespacememoryhelpermodule_html"><div class="ttname"><a href="namespacememoryhelpermodule.html">memoryhelpermodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_memory_helper_8f90_source.html#l00001">MemoryHelper.f90:1</a></div></div>
@@ -1450,11 +1501,15 @@ $(function() {
 <div class="ttc" id="anamespaceconstantsmodule_html_aa190ea61b44b2ef628329833de6543a9"><div class="ttname"><a href="namespaceconstantsmodule.html#aa190ea61b44b2ef628329833de6543a9">constantsmodule::dpi</a></div><div class="ttdeci">real(dp), parameter dpi</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00099">Constants.f90:99</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_a060d310ded5535ce2dc85bd1ca1afd3d"><div class="ttname"><a href="namespaceconstantsmodule.html#a060d310ded5535ce2dc85bd1ca1afd3d">constantsmodule::linelength</a></div><div class="ttdeci">integer(i4b), parameter linelength</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00028">Constants.f90:28</a></div></div>
 <div class="ttc" id="anamespacesimmodule_html_a0be97214c1d4fcf42bc4ddc27b111b61"><div class="ttname"><a href="namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61">simmodule::ustop</a></div><div class="ttdeci">subroutine, public ustop(stopmess, ioutlocal)</div><div class="ttdef"><b>Definition:</b> <a href="_sim_8f90_source.html#l00324">Sim.f90:324</a></div></div>
+<div class="ttc" id="ainterfacememorymanagermodule_1_1mem__allocate_html"><div class="ttname"><a href="interfacememorymanagermodule_1_1mem__allocate.html">memorymanagermodule::mem_allocate</a></div><div class="ttdef"><b>Definition:</b> <a href="_memory_manager_8f90_source.html#l00050">MemoryManager.f90:50</a></div></div>
 <div class="ttc" id="anamespaceinputoutputmodule_html"><div class="ttname"><a href="namespaceinputoutputmodule.html">inputoutputmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_input_output_8f90_source.html#l00003">InputOutput.f90:3</a></div></div>
+<div class="ttc" id="anamespaceconnectionsmodule_html_a5ec816424541c14a28fb1519227337be"><div class="ttname"><a href="namespaceconnectionsmodule.html#a5ec816424541c14a28fb1519227337be">connectionsmodule::vertexconnect</a></div><div class="ttdeci">subroutine vertexconnect(nodes, nrsize, maxnnz, nlay, ncpl, sparse, vertcellspm, cell1, cell2, nodereduced)</div><div class="ttdef"><b>Definition:</b> <a href="_connections_8f90_source.html#l01197">Connections.f90:1197</a></div></div>
+<div class="ttc" id="ainterfacearrayreadersmodule_1_1readarray_html"><div class="ttname"><a href="interfacearrayreadersmodule_1_1readarray.html">arrayreadersmodule::readarray</a></div><div class="ttdef"><b>Definition:</b> <a href="_array_readers_8f90_source.html#l00019">ArrayReaders.f90:19</a></div></div>
 <div class="ttc" id="anamespaceconnectionsmodule_html_a93cd5dc1cc29a9b54a46804ffba3d3ed"><div class="ttname"><a href="namespaceconnectionsmodule.html#a93cd5dc1cc29a9b54a46804ffba3d3ed">connectionsmodule::disuconnections</a></div><div class="ttdeci">subroutine disuconnections(this, name_model, nodes, nodesuser, nrsize, nodereduced, nodeuser, iainp, jainp, ihcinp, cl12inp, hwvainp, angldegxinp)</div><div class="ttdef"><b>Definition:</b> <a href="_connections_8f90_source.html#l00871">Connections.f90:871</a></div></div>
 <div class="ttc" id="anamespacegenericutilitiesmodule_html"><div class="ttname"><a href="namespacegenericutilitiesmodule.html">genericutilitiesmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="genericutils_8f90_source.html#l00001">genericutils.f90:1</a></div></div>
 <div class="ttc" id="anamespaceconnectionsmodule_html_a82845712a56a7b20d495ddfb2d6cf7a3"><div class="ttname"><a href="namespaceconnectionsmodule.html#a82845712a56a7b20d495ddfb2d6cf7a3">connectionsmodule::getjaindex</a></div><div class="ttdeci">integer(i4b) function getjaindex(this, node1, node2)</div><div class="ttdef"><b>Definition:</b> <a href="_connections_8f90_source.html#l01064">Connections.f90:1064</a></div></div>
 <div class="ttc" id="anamespacekindmodule_html_a2f6861418b5e7d3d602b77228232a470"><div class="ttname"><a href="namespacekindmodule.html#a2f6861418b5e7d3d602b77228232a470">kindmodule::i4b</a></div><div class="ttdeci">integer, parameter i4b</div><div class="ttdef"><b>Definition:</b> <a href="kind_8f90_source.html#l00009">kind.f90:9</a></div></div>
+<div class="ttc" id="ainterfacememorymanagermodule_1_1mem__setptr_html"><div class="ttname"><a href="interfacememorymanagermodule_1_1mem__setptr.html">memorymanagermodule::mem_setptr</a></div><div class="ttdef"><b>Definition:</b> <a href="_memory_manager_8f90_source.html#l00069">MemoryManager.f90:69</a></div></div>
 <div class="ttc" id="anamespaceconnectionsmodule_html_a78886dfcef7b94849091918b0f650a94"><div class="ttname"><a href="namespaceconnectionsmodule.html#a78886dfcef7b94849091918b0f650a94">connectionsmodule::allocate_arrays</a></div><div class="ttdeci">subroutine allocate_arrays(this)</div><div class="ttdef"><b>Definition:</b> <a href="_connections_8f90_source.html#l00140">Connections.f90:140</a></div></div>
 <div class="ttc" id="anamespaceconnectionsmodule_html_a078c5f33c8dd03ddbcfae0a8c1deb657"><div class="ttname"><a href="namespaceconnectionsmodule.html#a078c5f33c8dd03ddbcfae0a8c1deb657">connectionsmodule::disvconnections</a></div><div class="ttdeci">subroutine disvconnections(this, name_model, nodes, ncpl, nlay, nrsize, nvert, vertex, iavert, javert, cellxy, top, bot, nodereduced, nodeuser)</div><div class="ttdef"><b>Definition:</b> <a href="_connections_8f90_source.html#l00763">Connections.f90:763</a></div></div>
 <div class="ttc" id="anamespaceconnectionsmodule_html_a273c9cbc7baade6a9ab2538605ffd6ce"><div class="ttname"><a href="namespaceconnectionsmodule.html#a273c9cbc7baade6a9ab2538605ffd6ce">connectionsmodule::read_connectivity_from_block</a></div><div class="ttdeci">subroutine read_connectivity_from_block(this, name_model, nodes, nja, iout)</div><div class="ttdef"><b>Definition:</b> <a href="_connections_8f90_source.html#l00346">Connections.f90:346</a></div></div>
@@ -1463,6 +1518,8 @@ $(function() {
 <div class="ttc" id="anamespaceconstantsmodule_html"><div class="ttname"><a href="namespaceconstantsmodule.html">constantsmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00001">Constants.f90:1</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_a4ee8967493137bb95d5b78dc3a77feba"><div class="ttname"><a href="namespaceconstantsmodule.html#a4ee8967493137bb95d5b78dc3a77feba">constantsmodule::dnodata</a></div><div class="ttdeci">real(dp), parameter dnodata</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00074">Constants.f90:74</a></div></div>
 <div class="ttc" id="anamespaceconnectionsmodule_html_a44356dfb02f6196f697408ce24060fef"><div class="ttname"><a href="namespaceconnectionsmodule.html#a44356dfb02f6196f697408ce24060fef">connectionsmodule::set_cl1_cl2_from_fleng</a></div><div class="ttdeci">subroutine set_cl1_cl2_from_fleng(this, fleng)</div><div class="ttdef"><b>Definition:</b> <a href="_connections_8f90_source.html#l00482">Connections.f90:482</a></div></div>
+<div class="ttc" id="ainterfacememorymanagermodule_1_1mem__deallocate_html"><div class="ttname"><a href="interfacememorymanagermodule_1_1mem__deallocate.html">memorymanagermodule::mem_deallocate</a></div><div class="ttdef"><b>Definition:</b> <a href="_memory_manager_8f90_source.html#l00085">MemoryManager.f90:85</a></div></div>
+<div class="ttc" id="astructblockparsermodule_1_1blockparsertype_html"><div class="ttname"><a href="structblockparsermodule_1_1blockparsertype.html">blockparsermodule::blockparsertype</a></div><div class="ttdef"><b>Definition:</b> <a href="_block_parser_8f90_source.html#l00016">BlockParser.f90:16</a></div></div>
 <div class="ttc" id="anamespacememorymanagermodule_html"><div class="ttname"><a href="namespacememorymanagermodule.html">memorymanagermodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_memory_manager_8f90_source.html#l00001">MemoryManager.f90:1</a></div></div>
 <div class="ttc" id="anamespacekindmodule_html_ae38bd3a7dfaf151094c26e1529259639"><div class="ttname"><a href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">kindmodule::dp</a></div><div class="ttdeci">integer, parameter dp</div><div class="ttdef"><b>Definition:</b> <a href="kind_8f90_source.html#l00007">kind.f90:7</a></div></div>
 <div class="ttc" id="anamespaceconnectionsmodule_html_ac427af443b37d33ee88fc5de0c7d0ff9"><div class="ttname"><a href="namespaceconnectionsmodule.html#ac427af443b37d33ee88fc5de0c7d0ff9">connectionsmodule::con_finalize</a></div><div class="ttdeci">subroutine con_finalize(this, ihctemp, cl12temp, hwvatemp, angldegx)</div><div class="ttdef"><b>Definition:</b> <a href="_connections_8f90_source.html#l00173">Connections.f90:173</a></div></div>
@@ -1471,12 +1528,16 @@ $(function() {
 <div class="ttc" id="anamespaceconnectionsmodule_html_ae71d867478877b7cfc5e2fd0a8147d49"><div class="ttname"><a href="namespaceconnectionsmodule.html#ae71d867478877b7cfc5e2fd0a8147d49">connectionsmodule::allocate_scalars</a></div><div class="ttdeci">subroutine allocate_scalars(this, name_model)</div><div class="ttdef"><b>Definition:</b> <a href="_connections_8f90_source.html#l00107">Connections.f90:107</a></div></div>
 <div class="ttc" id="anamespacesparsemodule_html"><div class="ttname"><a href="namespacesparsemodule.html">sparsemodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_sparse_8f90_source.html#l00001">Sparse.f90:1</a></div></div>
 <div class="ttc" id="anamespaceconnectionsmodule_html_a21d880222e0a0fc5ed3406d88455bd9f"><div class="ttname"><a href="namespaceconnectionsmodule.html#a21d880222e0a0fc5ed3406d88455bd9f">connectionsmodule::set_mask</a></div><div class="ttdeci">subroutine set_mask(this, ipos, maskval)</div><div class="ttdef"><b>Definition:</b> <a href="_connections_8f90_source.html#l01298">Connections.f90:1298</a></div></div>
+<div class="ttc" id="astructdisvgeom_1_1disvgeomtype_html"><div class="ttname"><a href="structdisvgeom_1_1disvgeomtype.html">disvgeom::disvgeomtype</a></div><div class="ttdef"><b>Definition:</b> <a href="_disv_geom_8f90_source.html#l00010">DisvGeom.f90:10</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_af918ac22cd0b232deea67660bfbc9ce1"><div class="ttname"><a href="namespaceconstantsmodule.html#af918ac22cd0b232deea67660bfbc9ce1">constantsmodule::done</a></div><div class="ttdeci">real(dp), parameter done</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00056">Constants.f90:56</a></div></div>
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_32e188284d239da8bb14ec1dabb0c35f.html">Model</a></li><li class="navelem"><a class="el" href="dir_c1f30da02202fb3f19a3c29076dafee1.html">ModelUtilities</a></li><li class="navelem"><a class="el" href="_connections_8f90.html">Connections.f90</a></li>
+    <li class="footer">Generated on Thu Jun 24 2021 19:50:09 for MODFLOW 6 by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
 </body>
 </html>

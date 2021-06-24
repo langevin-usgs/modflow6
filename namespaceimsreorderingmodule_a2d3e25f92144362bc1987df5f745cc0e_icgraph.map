@@ -1,5 +1,5 @@
 <map id="imsreorderingmodule::ims_genrcm" name="imsreorderingmodule::ims_genrcm">
-<area shape="rect" id="node1" title=" " alt="" coords="584,5,747,47"/>
-<area shape="rect" id="node2" href="$namespaceimslinearmodule.html#a5b685c3a21ca3310a8d64e4fc8575a1a" title=" " alt="" coords="312,5,536,47"/>
-<area shape="rect" id="node3" href="$structimslinearmodule_1_1imslineardatatype.html#a32d18809581264644bd6a3f15a029b3c" title=" " alt="" coords="5,5,264,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="489,5,652,47"/>
+<area shape="rect" id="node2" href="$namespaceimslinearbasemodule.html#a9d54501991afe15edfff277da7f3b193" title="@ brief Calculate LORDER AND IORDER" alt="" coords="275,5,441,47"/>
+<area shape="rect" id="node3" href="$namespaceimslinearmodule.html#a6a11a0465c3b3e411da5afab1b06241a" title="@ brief Allocate storage and read data" alt="" coords="5,13,227,39"/>
 </map>

@@ -5,13 +5,22 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MODFLOW 6 Code Documentation: /home/runner/work/modflow6/modflow6/src/Utilities/compilerversion.f90 File Reference</title>
+<title>MODFLOW 6: /home/runner/work/modflow6/modflow6/src/Utilities/compilerversion.f90 File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="CustomDoxygen.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -21,9 +30,12 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="mf6-triangular-grid.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">MODFLOW 6 Code Documentation
+   <div id="projectname">MODFLOW 6
+   &#160;<span id="projectnumber">version 6.2.2</span>
    </div>
+   <div id="projectbrief">MODFLOW 6 Code Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -36,16 +48,54 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Modules</span></a></li>
+      <li><a href="annotated.html"><span>Data&#160;Types&#160;List</span></a></li>
+      <li class="current"><a href="files.html"><span>Files</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('compilerversion_8f90.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,15 +110,11 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_ff383ddf1aa4eab0c4ce7910366d05a5.html">Utilities</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#namespaces">Modules</a> &#124;
-<a href="#func-members">Functions/Subroutines</a>  </div>
+<a href="#func-members">Functions/Subroutines</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">compilerversion.f90 File Reference</div>  </div>
 </div><!--header-->
@@ -89,13 +135,44 @@ Functions/Subroutines</h2></td></tr>
 <tr class="memitem:abda76dfdbd7ce79d98c5432a2b764acb"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecompilerversion.html#abda76dfdbd7ce79d98c5432a2b764acb">compilerversion::get_compile_date</a> (txt)</td></tr>
 <tr class="memdesc:abda76dfdbd7ce79d98c5432a2b764acb"><td class="mdescLeft">&#160;</td><td class="mdescRight">@ brief Get compilation date  <a href="namespacecompilerversion.html#abda76dfdbd7ce79d98c5432a2b764acb">More...</a><br /></td></tr>
 <tr class="separator:abda76dfdbd7ce79d98c5432a2b764acb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ab0ce4594b3f055b9fece2cbaedd703df"><td class="memItemLeft" align="right" valign="top">character(len=10)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecompilerversion.html#ab0ce4594b3f055b9fece2cbaedd703df">compilerversion::ccompiler</a></td></tr>
+<tr class="memdesc:ab0ce4594b3f055b9fece2cbaedd703df"><td class="mdescLeft">&#160;</td><td class="mdescRight">compiler string  <a href="namespacecompilerversion.html#ab0ce4594b3f055b9fece2cbaedd703df">More...</a><br /></td></tr>
+<tr class="separator:ab0ce4594b3f055b9fece2cbaedd703df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a711fdceff4c11f2baf2222830306187f"><td class="memItemLeft" align="right" valign="top">character(len=10)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecompilerversion.html#a711fdceff4c11f2baf2222830306187f">compilerversion::cversion</a></td></tr>
+<tr class="memdesc:a711fdceff4c11f2baf2222830306187f"><td class="mdescLeft">&#160;</td><td class="mdescRight">compiler version string  <a href="namespacecompilerversion.html#a711fdceff4c11f2baf2222830306187f">More...</a><br /></td></tr>
+<tr class="separator:a711fdceff4c11f2baf2222830306187f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf7c19dd306bf485fefc86767459c4fe"><td class="memItemLeft" align="right" valign="top">character(len=20)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecompilerversion.html#abf7c19dd306bf485fefc86767459c4fe">compilerversion::cdate</a></td></tr>
+<tr class="memdesc:abf7c19dd306bf485fefc86767459c4fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">compilation date  <a href="namespacecompilerversion.html#abf7c19dd306bf485fefc86767459c4fe">More...</a><br /></td></tr>
+<tr class="separator:abf7c19dd306bf485fefc86767459c4fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b907913d73905d5597ca05769f21462"><td class="memItemLeft" align="right" valign="top">integer(i4b)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecompilerversion.html#a6b907913d73905d5597ca05769f21462">compilerversion::icompiler</a> = 0</td></tr>
+<tr class="memdesc:a6b907913d73905d5597ca05769f21462"><td class="mdescLeft">&#160;</td><td class="mdescRight">compiler enum  <a href="namespacecompilerversion.html#a6b907913d73905d5597ca05769f21462">More...</a><br /></td></tr>
+<tr class="separator:a6b907913d73905d5597ca05769f21462"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2944467c55327a5d88ce28edfaffa1a6"><td class="memItemLeft" align="right" valign="top">integer(i4b)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecompilerversion.html#a2944467c55327a5d88ce28edfaffa1a6">compilerversion::iversion</a> = 0</td></tr>
+<tr class="memdesc:a2944467c55327a5d88ce28edfaffa1a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">compiler version number  <a href="namespacecompilerversion.html#a2944467c55327a5d88ce28edfaffa1a6">More...</a><br /></td></tr>
+<tr class="separator:a2944467c55327a5d88ce28edfaffa1a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a540b665177716f3fb4891f7b12ae9c58"><td class="memItemLeft" align="right" valign="top">integer(i4b)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecompilerversion.html#a540b665177716f3fb4891f7b12ae9c58">compilerversion::imajor</a> = 0</td></tr>
+<tr class="memdesc:a540b665177716f3fb4891f7b12ae9c58"><td class="mdescLeft">&#160;</td><td class="mdescRight">compiler major version number  <a href="namespacecompilerversion.html#a540b665177716f3fb4891f7b12ae9c58">More...</a><br /></td></tr>
+<tr class="separator:a540b665177716f3fb4891f7b12ae9c58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadf2f3470cccba0eecdaadc49443475e"><td class="memItemLeft" align="right" valign="top">integer(i4b)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecompilerversion.html#aadf2f3470cccba0eecdaadc49443475e">compilerversion::iminor</a> = 0</td></tr>
+<tr class="memdesc:aadf2f3470cccba0eecdaadc49443475e"><td class="mdescLeft">&#160;</td><td class="mdescRight">compiler minor version number  <a href="namespacecompilerversion.html#aadf2f3470cccba0eecdaadc49443475e">More...</a><br /></td></tr>
+<tr class="separator:aadf2f3470cccba0eecdaadc49443475e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6da112e241c335b64a8bfd1a291ef7ec"><td class="memItemLeft" align="right" valign="top">integer(i4b)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecompilerversion.html#a6da112e241c335b64a8bfd1a291ef7ec">compilerversion::imicro</a> = 0</td></tr>
+<tr class="memdesc:a6da112e241c335b64a8bfd1a291ef7ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">compiler micro version number  <a href="namespacecompilerversion.html#a6da112e241c335b64a8bfd1a291ef7ec">More...</a><br /></td></tr>
+<tr class="separator:a6da112e241c335b64a8bfd1a291ef7ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_ff383ddf1aa4eab0c4ce7910366d05a5.html">Utilities</a></li><li class="navelem"><a class="el" href="compilerversion_8f90.html">compilerversion.f90</a></li>
+    <li class="footer">Generated on Thu Jun 24 2021 19:50:10 for MODFLOW 6 by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
 </body>
 </html>

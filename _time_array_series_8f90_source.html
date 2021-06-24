@@ -5,13 +5,22 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MODFLOW 6 Code Documentation: /home/runner/work/modflow6/modflow6/src/Utilities/TimeSeries/TimeArraySeries.f90 Source File</title>
+<title>MODFLOW 6: /home/runner/work/modflow6/modflow6/src/Utilities/TimeSeries/TimeArraySeries.f90 Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="CustomDoxygen.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -21,9 +30,12 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="mf6-triangular-grid.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">MODFLOW 6 Code Documentation
+   <div id="projectname">MODFLOW 6
+   &#160;<span id="projectnumber">version 6.2.2</span>
    </div>
+   <div id="projectbrief">MODFLOW 6 Code Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -36,16 +48,54 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Modules</span></a></li>
+      <li><a href="annotated.html"><span>Data&#160;Types&#160;List</span></a></li>
+      <li class="current"><a href="files.html"><span>Files</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('_time_array_series_8f90_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,11 +110,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_ff383ddf1aa4eab0c4ce7910366d05a5.html">Utilities</a></li><li class="navelem"><a class="el" href="dir_19b8b60e5053332b863d300b1b14b656.html">TimeSeries</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">TimeArraySeries.f90</div>  </div>
@@ -72,17 +117,17 @@ $(function() {
 <div class="contents">
 <a href="_time_array_series_8f90.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="namespacetimearrayseriesmodule.html">    1</a></span>&#160;<span class="keyword">module</span> <a class="code" href="namespacetimearrayseriesmodule.html">timearrayseriesmodule</a></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacearrayreadersmodule.html">arrayreadersmodule</a>, <span class="keywordtype">only</span>: readarray</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespaceblockparsermodule.html">blockparsermodule</a>,  <span class="keywordtype">only</span>: blockparsertype</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacearrayreadersmodule.html">arrayreadersmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="interfacearrayreadersmodule_1_1readarray.html">readarray</a></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespaceblockparsermodule.html">blockparsermodule</a>,  <span class="keywordtype">only</span>: <a class="code" href="structblockparsermodule_1_1blockparsertype.html">blockparsertype</a></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespaceconstantsmodule.html">constantsmodule</a>,    <span class="keywordtype">only</span>: <a class="code" href="namespaceconstantsmodule.html#a060d310ded5535ce2dc85bd1ca1afd3d">linelength</a>, <a class="code" href="namespaceconstantsmodule.html#a896fdc3ba8703eb14cd44af957f6954da7c3f00430abcc1ab3cdade46c8e5ef44">undefined</a>, <a class="code" href="namespaceconstantsmodule.html#a896fdc3ba8703eb14cd44af957f6954dabef93d9514beed308224dc3f9f35324e">stepwise</a>, <a class="code" href="namespaceconstantsmodule.html#a896fdc3ba8703eb14cd44af957f6954da9efa1b67cd180d0542dce6b5e5706dd5">linear</a>,        &amp;</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;                                <a class="code" href="namespaceconstantsmodule.html#a72b9f98f14e6bc10dae320dfd4f56dfb">lentimeseriesname</a>, <a class="code" href="namespaceconstantsmodule.html#a5a5bc481197413bb50013a92490ffa14">lenbigline</a>, <a class="code" href="namespaceconstantsmodule.html#abab5757666b9ddd2726c20ce48dd0050">dzero</a>, <a class="code" href="namespaceconstantsmodule.html#af918ac22cd0b232deea67660bfbc9ce1">done</a></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacegenericutilitiesmodule.html">genericutilitiesmodule</a>,   <span class="keywordtype">only</span>: <a class="code" href="namespacegenericutilitiesmodule.html#aa6f1e09d5f419107a1e51aeecc9c12b4">is_same</a></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespaceinputoutputmodule.html">inputoutputmodule</a>,  <span class="keywordtype">only</span>: <a class="code" href="namespaceinputoutputmodule.html#a535bdfca3d31ebc3a8e4bd5af6890d55">getunit</a>, <a class="code" href="namespaceinputoutputmodule.html#ae97851e3edae8d9809e384058a1a4d52">openfile</a></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacekindmodule.html">kindmodule</a>,         <span class="keywordtype">only</span>: <a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>, <a class="code" href="namespacekindmodule.html#a2f6861418b5e7d3d602b77228232a470">i4b</a></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacelistmodule.html">listmodule</a>,         <span class="keywordtype">only</span>: listtype, listnodetype</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacelistmodule.html">listmodule</a>,         <span class="keywordtype">only</span>: <a class="code" href="structlistmodule_1_1listtype.html">listtype</a>, <a class="code" href="structlistmodule_1_1listnodetype.html">listnodetype</a></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacesimmodule.html">simmodule</a>,          <span class="keywordtype">only</span>: <a class="code" href="namespacesimmodule.html#a4c46e49de78d4498dd4ec106357775e6">count_errors</a>, <a class="code" href="namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a">store_error</a>, <a class="code" href="namespacesimmodule.html#a1c78a6fda06b630c738bb654aa6bd816">store_error_unit</a>, &amp;</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;                                <a class="code" href="namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61">ustop</a></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacetimearraymodule.html">timearraymodule</a>,    <span class="keywordtype">only</span>: timearraytype, <a class="code" href="namespacetimearraymodule.html#ab2b139f44766d733b52a72052cf67296">constructtimearray</a>, &amp;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacetimearraymodule.html">timearraymodule</a>,    <span class="keywordtype">only</span>: <a class="code" href="structtimearraymodule_1_1timearraytype.html">timearraytype</a>, <a class="code" href="namespacetimearraymodule.html#ab2b139f44766d733b52a72052cf67296">constructtimearray</a>, &amp;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;                                <a class="code" href="namespacetimearraymodule.html#ae6d622af2204c4ec58b99dcba5ad9ccf">addtimearraytolist</a>, <a class="code" href="namespacetimearraymodule.html#a6fad270bd1e8d556d0564174f3d524c7">castastimearraytype</a>, &amp;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;                                <a class="code" href="namespacetimearraymodule.html#a765063d01bc77d1d5d396208114c3cdf">gettimearrayfromlist</a></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacebasedismodule.html">basedismodule</a>,      <span class="keywordtype">only</span>: disbasetype</div>
@@ -90,36 +135,36 @@ $(function() {
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <span class="keywordtype">implicit none</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keywordtype">private</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="keywordtype">public</span>  :: timearrayseriestype, <a class="code" href="namespacetimearrayseriesmodule.html#a004382aa24e9fa0a567bcc06590cbaf2">constructtimearrayseries</a>, &amp;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="keywordtype">public</span>  :: <a class="code" href="structtimearrayseriesmodule_1_1timearrayseriestype.html">timearrayseriestype</a>, <a class="code" href="namespacetimearrayseriesmodule.html#a004382aa24e9fa0a567bcc06590cbaf2">constructtimearrayseries</a>, &amp;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;             <a class="code" href="namespacetimearrayseriesmodule.html#aa1c34e894d3d92bdb54bdd494a439d0c">castastimearrayseriestype</a>, <a class="code" href="namespacetimearrayseriesmodule.html#a8e1138e86cda83ad88936fa4dc1eeecf">gettimearrayseriesfromlist</a></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keyword">type</span> timearrayseriestype</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="structtimearrayseriesmodule_1_1timearrayseriestype.html">   24</a></span>&#160;  <span class="keyword">type</span> <a class="code" href="structtimearrayseriesmodule_1_1timearrayseriestype.html">timearrayseriestype</a></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="comment">! -- Public members</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">character(len=LENTIMESERIESNAME)</span>, <span class="keywordtype">public</span> :: Name = <span class="stringliteral">&#39;&#39;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="structtimearrayseriesmodule_1_1timearrayseriestype.html#a94c051283312f1bc47d0d4b5bd0a842f">   26</a></span>&#160;    <span class="keywordtype">character(len=LENTIMESERIESNAME)</span>, <span class="keywordtype">public</span> :: name = <span class="stringliteral">&#39;&#39;</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="comment">! -- Private members</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">private</span> :: inunit = 0</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">private</span> :: iout = 0</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">private</span> :: iMethod = <a class="code" href="namespaceconstantsmodule.html#a896fdc3ba8703eb14cd44af957f6954da7c3f00430abcc1ab3cdade46c8e5ef44">undefined</a></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">private</span> :: sfac = <a class="code" href="namespaceconstantsmodule.html#af918ac22cd0b232deea67660bfbc9ce1">done</a></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">character(len=LINELENGTH)</span>, <span class="keywordtype">private</span> :: dataFile = <span class="stringliteral">&#39;&#39;</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">logical</span>, <span class="keywordtype">private</span> :: autoDeallocate = .true.</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">type</span>(ListType), <span class="keywordtype">pointer</span>, <span class="keywordtype">private</span> :: list =&gt; null()</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">class</span>(DisBaseType), <span class="keywordtype">pointer</span>, <span class="keywordtype">private</span> :: dis =&gt; null()</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">type</span>(BlockParserType), <span class="keywordtype">private</span> :: parser</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="structtimearrayseriesmodule_1_1timearrayseriestype.html#adf1befb631474e81e3722d657f15d84d">   28</a></span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">private</span> :: inunit = 0</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="structtimearrayseriesmodule_1_1timearrayseriestype.html#ab9bcd28aad18061339d24e9214ff48d2">   29</a></span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">private</span> :: iout = 0</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="structtimearrayseriesmodule_1_1timearrayseriestype.html#a048b0dcb315a6d79cde2e3609a58aaff">   30</a></span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">private</span> :: imethod = <a class="code" href="namespaceconstantsmodule.html#a896fdc3ba8703eb14cd44af957f6954da7c3f00430abcc1ab3cdade46c8e5ef44">undefined</a></div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="structtimearrayseriesmodule_1_1timearrayseriestype.html#a6f16e227075c3c26b6789ee5cbbf89de">   31</a></span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">private</span> :: sfac = <a class="code" href="namespaceconstantsmodule.html#af918ac22cd0b232deea67660bfbc9ce1">done</a></div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="structtimearrayseriesmodule_1_1timearrayseriestype.html#a4c5453f5254e8eabde3021529ef55fbf">   32</a></span>&#160;    <span class="keywordtype">character(len=LINELENGTH)</span>, <span class="keywordtype">private</span> :: datafile = <span class="stringliteral">&#39;&#39;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="structtimearrayseriesmodule_1_1timearrayseriestype.html#aa2fc0a0b439d968c1bab0ff5abac7c63">   33</a></span>&#160;    <span class="keywordtype">logical</span>, <span class="keywordtype">private</span> :: autodeallocate = .true.</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="structtimearrayseriesmodule_1_1timearrayseriestype.html#a9dd52def077eb44d50b9880ef4020187">   34</a></span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structlistmodule_1_1listtype.html">listtype</a>), <span class="keywordtype">pointer</span>, <span class="keywordtype">private</span> :: list =&gt; null()</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="structtimearrayseriesmodule_1_1timearrayseriestype.html#aa5417ee5fc159b8fe021c24ccdef8006">   35</a></span>&#160;    <span class="keywordtype">class</span>(disbasetype), <span class="keywordtype">pointer</span>, <span class="keywordtype">private</span> :: dis =&gt; null()</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="structtimearrayseriesmodule_1_1timearrayseriestype.html#ae25a77bbb91e37d6925c69ed9109bdc1">   36</a></span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structblockparsermodule_1_1blockparsertype.html">blockparsertype</a>), <span class="keywordtype">private</span> :: parser</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keyword">contains</span></div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="comment">! -- Public procedures</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">public</span> :: tas_init</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">public</span> :: GetAverageValues</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">public</span> :: GetInunit</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">public</span> :: da =&gt; tas_da</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="structtimearrayseriesmodule_1_1timearrayseriestype.html#ade02ca5ff6bae8d3201307f8b10eb124">   39</a></span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">public</span> :: <a class="code" href="namespacetimearrayseriesmodule.html#aac9d83d41cc060b42576b0f8794b82df">tas_init</a></div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="structtimearrayseriesmodule_1_1timearrayseriestype.html#a509e16613309e058bf1589d9246f92d8">   40</a></span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">public</span> :: <a class="code" href="namespacetimearrayseriesmodule.html#a367b83bf2841153a6f3902a16cc4c69e">getaveragevalues</a></div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="structtimearrayseriesmodule_1_1timearrayseriestype.html#a9f53350387781466e5afae6cd16f0156">   41</a></span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">public</span> :: <a class="code" href="namespacetimearrayseriesmodule.html#aa417120d2b81c6ff78d6c600f041ad6f">getinunit</a></div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="structtimearrayseriesmodule_1_1timearrayseriestype.html#a207e53182db62aae419ba576c231fe22">   42</a></span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">public</span> :: da =&gt; <a class="code" href="namespacetimearrayseriesmodule.html#a418576393b4b4f3510ea91b980f886dd">tas_da</a></div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="comment">! -- Private procedures</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: get_integrated_values</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: get_latest_preceding_node</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: get_values_at_time</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: get_surrounding_records</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: read_next_array</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: DeallocateBackward</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keyword">end type </span>timearrayseriestype</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="structtimearrayseriesmodule_1_1timearrayseriestype.html#aa0cc84816828b9644c910a89deb793ec">   44</a></span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: <a class="code" href="namespacetimearrayseriesmodule.html#a998dcb9c88356cbcb08c16da194c3b72">get_integrated_values</a></div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="structtimearrayseriesmodule_1_1timearrayseriestype.html#ad3eaf460f39de63288590a48104fe5d3">   45</a></span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: <a class="code" href="namespacetimearrayseriesmodule.html#a2a8b1422980be6a3865e3178d5fe18f0">get_latest_preceding_node</a></div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="structtimearrayseriesmodule_1_1timearrayseriestype.html#ae722a1380c64f16a5a7373be27ed5d4d">   46</a></span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: <a class="code" href="namespacetimearrayseriesmodule.html#a60c28da68c9f3d0ca2e1995e879e3c11">get_values_at_time</a></div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="structtimearrayseriesmodule_1_1timearrayseriestype.html#a58286fa5c2e292c23f5449581d73d54c">   47</a></span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: <a class="code" href="namespacetimearrayseriesmodule.html#a70bfd9f7ba5024ba190bfd478ee5a638">get_surrounding_records</a></div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="structtimearrayseriesmodule_1_1timearrayseriestype.html#a7e64dab351bdec46d616e3e64f22a491">   48</a></span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: <a class="code" href="namespacetimearrayseriesmodule.html#af399b6cee23350fd68efb635dd8cf7cf">read_next_array</a></div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="structtimearrayseriesmodule_1_1timearrayseriestype.html#aa9dab7649a8fc4404b0873638d80ae95">   49</a></span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: <a class="code" href="namespacetimearrayseriesmodule.html#a63ac8203ed041ce51280ec279d6fab1b">deallocatebackward</a></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keyword">end type </span><a class="code" href="structtimearrayseriesmodule_1_1timearrayseriestype.html">timearrayseriestype</a></div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">contains</span></div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
@@ -133,7 +178,7 @@ $(function() {
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">!    SPECIFICATIONS:</span></div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">type</span>(timearrayseriestype), <span class="keywordtype">pointer</span>, <span class="keywordtype">intent(out)</span> :: newtas</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structtimearrayseriesmodule_1_1timearrayseriestype.html">timearrayseriestype</a>), <span class="keywordtype">pointer</span>, <span class="keywordtype">intent(out)</span> :: newtas</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">character(len=*)</span>, <span class="keywordtype">intent(in)</span> :: filename</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">character(len=LINELENGTH)</span> :: ermsg</div>
@@ -160,27 +205,27 @@ $(function() {
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <span class="comment">! -- Public procedures</span></div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <span class="keyword">subroutine </span>tas_init(this, fname, dis, iout, tasname, autoDeallocate)</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacetimearrayseriesmodule.html#aac9d83d41cc060b42576b0f8794b82df">tas_init</a>(this, fname, dis, iout, tasname, autoDeallocate)</div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="namespacetimearrayseriesmodule.html#aac9d83d41cc060b42576b0f8794b82df">   92</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment">! tas_init -- initialize the time array series</span></div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment">!</span></div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="comment">!    SPECIFICATIONS:</span></div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordtype">class</span>(timearrayseriestype), <span class="keywordtype">intent(inout)</span> :: this</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structtimearrayseriesmodule_1_1timearrayseriestype.html">timearrayseriestype</a>), <span class="keywordtype">intent(inout)</span> :: this</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordtype">character(len=*)</span>, <span class="keywordtype">intent(in)</span> :: fname</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordtype">class</span>(disbasetype), <span class="keywordtype">pointer</span>, <span class="keywordtype">intent(inout)</span> :: dis</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: iout</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordtype">character(len=*)</span>, <span class="keywordtype">intent(inout)</span> :: tasname</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordtype">logical</span>, <span class="keywordtype">optional</span>,          <span class="keywordtype">intent(in)</span>    :: autodeallocate</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordtype">logical</span>, <span class="keywordtype">optional</span>,          <span class="keywordtype">intent(in)</span>    :: autoDeallocate</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: istatus</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: ierr</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: inunit</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordtype">character(len=40)</span> :: keyword, keyvalue</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordtype">character(len=LINELENGTH)</span> :: ermsg</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordtype">logical</span> :: found, continueread, endofblock</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordtype">logical</span> :: found, continueread, endOfBlock</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="comment">! -- initialize some variables</span></div>
@@ -297,10 +342,10 @@ $(function() {
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;<span class="keywordflow">    endif</span></div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;  <span class="keyword">end subroutine </span>tas_init</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacetimearrayseriesmodule.html#aac9d83d41cc060b42576b0f8794b82df">tas_init</a></div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160; </div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;  <span class="keyword">subroutine </span>getaveragevalues(this, nvals, values, time0, time1)</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacetimearrayseriesmodule.html#a367b83bf2841153a6f3902a16cc4c69e">getaveragevalues</a>(this, nvals, values, time0, time1)</div>
+<div class="line"><a name="l00231"></a><span class="lineno"><a class="line" href="namespacetimearrayseriesmodule.html#a367b83bf2841153a6f3902a16cc4c69e">  231</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;<span class="comment">! GetAverageValues -- populate an array time-weighted average value for a </span></div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;<span class="comment">!   specified time span.</span></div>
 <div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;<span class="comment">! ******************************************************************************</span></div>
@@ -308,14 +353,14 @@ $(function() {
 <div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;<span class="comment">!    SPECIFICATIONS:</span></div>
 <div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    <span class="keywordtype">class</span>(timearrayseriestype), <span class="keywordtype">intent(inout)</span> :: this</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structtimearrayseriesmodule_1_1timearrayseriestype.html">timearrayseriestype</a>), <span class="keywordtype">intent(inout)</span> :: this</div>
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <span class="keywordtype">integer(I4B)</span>,                    <span class="keywordtype">intent(in)</span>    :: nvals</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">dimension(nvals)</span>, <span class="keywordtype">intent(inout)</span> :: values</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>),           <span class="keywordtype">intent(in)</span>    :: time0</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>),           <span class="keywordtype">intent(in)</span>    :: time1</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">dimension(nvals)</span>, <span class="keywordtype">intent(inout)</span> :: values</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;<span class="keywordtype">    real</span>(DP),           <span class="keywordtype">intent(in)</span>    :: time0</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;<span class="keywordtype">    real</span>(DP),           <span class="keywordtype">intent(in)</span>    :: time1</div>
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: i</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>) :: timediff</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;<span class="keywordtype">    real</span>(DP) :: timediff</div>
 <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    timediff = time1 - time0</div>
@@ -330,46 +375,46 @@ $(function() {
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;<span class="keywordflow">    endif</span></div>
 <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;  <span class="keyword">end subroutine </span>getaveragevalues</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacetimearrayseriesmodule.html#a367b83bf2841153a6f3902a16cc4c69e">getaveragevalues</a></div>
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160; </div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;  <span class="keyword">function </span>getinunit(this)</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;  <span class="keyword">function </span><a class="code" href="namespacetimearrayseriesmodule.html#aa417120d2b81c6ff78d6c600f041ad6f">getinunit</a>(this)</div>
+<div class="line"><a name="l00264"></a><span class="lineno"><a class="line" href="namespacetimearrayseriesmodule.html#aa417120d2b81c6ff78d6c600f041ad6f">  264</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;<span class="comment">! GetInunit -- return unit number</span></div>
 <div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;<span class="comment">!</span></div>
 <div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;<span class="comment">!    SPECIFICATIONS:</span></div>
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    <span class="comment">! -- return</span></div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: getinunit</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: <a class="code" href="namespacetimearrayseriesmodule.html#aa417120d2b81c6ff78d6c600f041ad6f">getinunit</a></div>
 <div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <span class="keywordtype">class</span>(timearrayseriestype) :: this</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structtimearrayseriesmodule_1_1timearrayseriestype.html">timearrayseriestype</a>) :: this</div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <span class="comment">!</span></div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    getinunit = this%inunit</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <a class="code" href="namespacetimearrayseriesmodule.html#aa417120d2b81c6ff78d6c600f041ad6f">getinunit</a> = this%inunit</div>
 <div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;  <span class="keyword">end function </span>getinunit</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;  <span class="keyword">end function </span><a class="code" href="namespacetimearrayseriesmodule.html#aa417120d2b81c6ff78d6c600f041ad6f">getinunit</a></div>
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160; </div>
 <div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;  <span class="comment">! -- Private procedures</span></div>
 <div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160; </div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;  <span class="keyword">subroutine </span>get_surrounding_records(this, time, taEarlier, taLater)</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacetimearrayseriesmodule.html#a70bfd9f7ba5024ba190bfd478ee5a638">get_surrounding_records</a>(this, time, taEarlier, taLater)</div>
+<div class="line"><a name="l00284"></a><span class="lineno"><a class="line" href="namespacetimearrayseriesmodule.html#a70bfd9f7ba5024ba190bfd478ee5a638">  284</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;<span class="comment">! get_surrounding_records -- get_surrounding_records</span></div>
 <div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;<span class="comment">!</span></div>
 <div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;<span class="comment">!    SPECIFICATIONS:</span></div>
 <div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    <span class="keywordtype">class</span>(timearrayseriestype), <span class="keywordtype">intent(inout)</span> :: this</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>),      <span class="keywordtype">intent(in)</span>    :: time</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    <span class="keywordtype">type</span>(timearraytype), <span class="keywordtype">pointer</span>, <span class="keywordtype">intent(inout)</span> :: taearlier</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    <span class="keywordtype">type</span>(timearraytype), <span class="keywordtype">pointer</span>, <span class="keywordtype">intent(inout)</span> :: talater</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structtimearrayseriesmodule_1_1timearrayseriestype.html">timearrayseriestype</a>), <span class="keywordtype">intent(inout)</span> :: this</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;<span class="keywordtype">    real</span>(DP),      <span class="keywordtype">intent(in)</span>    :: time</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structtimearraymodule_1_1timearraytype.html">timearraytype</a>), <span class="keywordtype">pointer</span>, <span class="keywordtype">intent(inout)</span> :: taEarlier</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structtimearraymodule_1_1timearraytype.html">timearraytype</a>), <span class="keywordtype">pointer</span>, <span class="keywordtype">intent(inout)</span> :: taLater</div>
 <div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    <span class="comment">! -- local</span></div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>) :: time0, time1</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <span class="keywordtype">type</span>(listnodetype), <span class="keywordtype">pointer</span> :: currnode =&gt; null()</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    <span class="keywordtype">type</span>(listnodetype), <span class="keywordtype">pointer</span> :: node0 =&gt; null()</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    <span class="keywordtype">type</span>(listnodetype), <span class="keywordtype">pointer</span> :: node1 =&gt; null()</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    <span class="keywordtype">type</span>(timearraytype), <span class="keywordtype">pointer</span> :: ta =&gt; null(), ta0 =&gt; null(), ta1 =&gt; null()</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;<span class="keywordtype">    real</span>(DP) :: time0, time1</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structlistmodule_1_1listnodetype.html">listnodetype</a>), <span class="keywordtype">pointer</span> :: currNode =&gt; null()</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structlistmodule_1_1listnodetype.html">listnodetype</a>), <span class="keywordtype">pointer</span> :: node0 =&gt; null()</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structlistmodule_1_1listnodetype.html">listnodetype</a>), <span class="keywordtype">pointer</span> :: node1 =&gt; null()</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structtimearraymodule_1_1timearraytype.html">timearraytype</a>), <span class="keywordtype">pointer</span> :: ta =&gt; null(), ta0 =&gt; null(), ta1 =&gt; null()</div>
 <div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    <span class="keywordtype">class</span>(*), <span class="keywordtype">pointer</span> :: obj</div>
 <div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <span class="comment">!</span></div>
@@ -445,22 +490,22 @@ $(function() {
 <div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    <span class="keywordflow">if</span> (time1 &gt;= time) talater =&gt; ta1</div>
 <div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;  <span class="keyword">end subroutine </span>get_surrounding_records</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacetimearrayseriesmodule.html#a70bfd9f7ba5024ba190bfd478ee5a638">get_surrounding_records</a></div>
 <div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160; </div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;  <span class="keyword">logical </span><span class="keyword">function </span>read_next_array(this)</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;  <span class="keyword">logical </span><span class="keyword">function </span><a class="code" href="namespacetimearrayseriesmodule.html#af399b6cee23350fd68efb635dd8cf7cf">read_next_array</a>(this)</div>
+<div class="line"><a name="l00379"></a><span class="lineno"><a class="line" href="namespacetimearrayseriesmodule.html#af399b6cee23350fd68efb635dd8cf7cf">  379</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;<span class="comment">! read_next_array -- Read next time array from input file and append to list.</span></div>
 <div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;<span class="comment">!</span></div>
 <div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;<span class="comment">!    SPECIFICATIONS:</span></div>
 <div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    <span class="keywordtype">class</span>(timearrayseriestype), <span class="keywordtype">intent(inout)</span> :: this</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structtimearrayseriesmodule_1_1timearrayseriestype.html">timearrayseriestype</a>), <span class="keywordtype">intent(inout)</span> :: this</div>
 <div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: i, ierr, istart, istat, istop, lloc, nrow, ncol, nodesperlayer</div>
 <div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    <span class="keywordtype">logical</span> :: lopen, isfound</div>
 <div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;    <span class="keywordtype">character(len=LINELENGTH)</span>     :: ermsg</div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;    <span class="keywordtype">type</span>(timearraytype), <span class="keywordtype">pointer</span>  :: ta =&gt; null()</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structtimearraymodule_1_1timearraytype.html">timearraytype</a>), <span class="keywordtype">pointer</span>  :: ta =&gt; null()</div>
 <div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;    istart = 1</div>
@@ -484,7 +529,7 @@ $(function() {
 <div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;      <span class="keyword">call </span><a class="code" href="namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61">ustop</a>()</div>
 <div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;<span class="keywordflow">    endif</span></div>
 <div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;    <span class="comment">!</span></div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;    read_next_array = .false.</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;    <a class="code" href="namespacetimearrayseriesmodule.html#af399b6cee23350fd68efb635dd8cf7cf">read_next_array</a> = .false.</div>
 <div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;    <span class="keyword">inquire</span>(unit=this%inunit,opened=lopen)</div>
 <div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;    <span class="keywordflow">if</span> (lopen) <span class="keywordflow">then</span></div>
 <div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;      <span class="keyword">call </span><a class="code" href="namespacetimearraymodule.html#ab2b139f44766d733b52a72052cf67296">constructtimearray</a>(ta, this%dis)</div>
@@ -495,7 +540,7 @@ $(function() {
 <div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;      <span class="keywordflow">if</span> (isfound) <span class="keywordflow">then</span></div>
 <div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;        ta%taTime = this%parser%GetDouble()</div>
 <div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;        <span class="comment">! -- Read the array</span></div>
-<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;        <span class="keyword">call </span>readarray(this%parser%iuactive, ta%taArray, this%Name, &amp;</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;        <span class="keyword">call </span><a class="code" href="interfacearrayreadersmodule_1_1readarray.html">readarray</a>(this%parser%iuactive, ta%taArray, this%Name, &amp;</div>
 <div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;                        this%dis%ndim, ncol, nrow, 1, nodesperlayer, &amp;</div>
 <div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;                        this%iout, 0, 0)</div>
 <div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;        <span class="comment">!</span></div>
@@ -506,7 +551,7 @@ $(function() {
 <div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;        <span class="comment">!</span></div>
 <div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;        <span class="comment">! -- append the new time array to the list</span></div>
 <div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;        <span class="keyword">call </span><a class="code" href="namespacetimearraymodule.html#ae6d622af2204c4ec58b99dcba5ad9ccf">addtimearraytolist</a>(this%list, ta)</div>
-<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;        read_next_array = .true.</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;        <a class="code" href="namespacetimearrayseriesmodule.html#af399b6cee23350fd68efb635dd8cf7cf">read_next_array</a> = .true.</div>
 <div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;        <span class="comment">!</span></div>
 <div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;        <span class="comment">! -- make sure block is closed</span></div>
 <div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;        <span class="keyword">call </span>this%parser%terminateblock()</div>
@@ -515,10 +560,10 @@ $(function() {
 <div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;    <span class="keywordflow">return</span> <span class="comment">! Normal return</span></div>
 <div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;  <span class="keyword">end function </span>read_next_array</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;  <span class="keyword">end function </span><a class="code" href="namespacetimearrayseriesmodule.html#af399b6cee23350fd68efb635dd8cf7cf">read_next_array</a></div>
 <div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160; </div>
-<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;  <span class="keyword">subroutine </span>get_values_at_time(this, nvals, values, time)</div>
-<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacetimearrayseriesmodule.html#a60c28da68c9f3d0ca2e1995e879e3c11">get_values_at_time</a>(this, nvals, values, time)</div>
+<div class="line"><a name="l00449"></a><span class="lineno"><a class="line" href="namespacetimearrayseriesmodule.html#a60c28da68c9f3d0ca2e1995e879e3c11">  449</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;<span class="comment">! get_values_at_time -- Return an array of values for a specified time, same </span></div>
 <div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;<span class="comment">!   units as time-series values.</span></div>
 <div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;<span class="comment">! ******************************************************************************</span></div>
@@ -526,17 +571,17 @@ $(function() {
 <div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;<span class="comment">!    SPECIFICATIONS:</span></div>
 <div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;    <span class="keywordtype">class</span>(timearrayseriestype), <span class="keywordtype">intent(inout)</span> :: this</div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structtimearrayseriesmodule_1_1timearrayseriestype.html">timearrayseriestype</a>), <span class="keywordtype">intent(inout)</span> :: this</div>
 <div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: nvals</div>
-<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">dimension(nvals)</span>, <span class="keywordtype">intent(inout)</span> :: values</div>
-<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">intent(in)</span> :: time <span class="comment">! time of interest</span></div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">dimension(nvals)</span>, <span class="keywordtype">intent(inout)</span> :: values</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">intent(in)</span> :: time <span class="comment">! time of interest</span></div>
 <div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: i, ierr</div>
-<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>) :: ratio, time0, time1, timediff, timediffi, val0, val1, &amp;</div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;<span class="keywordtype">    real</span>(DP) :: ratio, time0, time1, timediff, timediffi, val0, val1, &amp;</div>
 <div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;                        valdiff</div>
 <div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;    <span class="keywordtype">character(len=LINELENGTH)</span>    :: ermsg</div>
-<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;    <span class="keywordtype">type</span>(timearraytype), <span class="keywordtype">pointer</span> :: taearlier =&gt; null()</div>
-<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;    <span class="keywordtype">type</span>(timearraytype), <span class="keywordtype">pointer</span> :: talater =&gt; null()</div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structtimearraymodule_1_1timearraytype.html">timearraytype</a>), <span class="keywordtype">pointer</span> :: taEarlier =&gt; null()</div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structtimearraymodule_1_1timearraytype.html">timearraytype</a>), <span class="keywordtype">pointer</span> :: taLater =&gt; null()</div>
 <div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;    <span class="comment">! formats</span></div>
 <div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;    10 <span class="keyword">format</span>(<span class="stringliteral">&#39;Error getting array at time &#39;</span>,g10.3, &amp;</div>
 <div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;              <span class="stringliteral">&#39; for time-array series &quot;&#39;</span>,a,<span class="stringliteral">&#39;&quot;&#39;</span>)</div>
@@ -608,10 +653,10 @@ $(function() {
 <div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;<span class="keywordflow">    endif</span></div>
 <div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;  <span class="keyword">end subroutine </span>get_values_at_time</div>
+<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacetimearrayseriesmodule.html#a60c28da68c9f3d0ca2e1995e879e3c11">get_values_at_time</a></div>
 <div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160; </div>
-<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;  <span class="keyword">subroutine </span>get_integrated_values(this, nvals, values, time0, time1)</div>
-<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacetimearrayseriesmodule.html#a998dcb9c88356cbcb08c16da194c3b72">get_integrated_values</a>(this, nvals, values, time0, time1)</div>
+<div class="line"><a name="l00542"></a><span class="lineno"><a class="line" href="namespacetimearrayseriesmodule.html#a998dcb9c88356cbcb08c16da194c3b72">  542</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;<span class="comment">! get_integrated_values -- Populates an array with integrated values for a </span></div>
 <div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;<span class="comment">!    specified time span.  Units: (ts-value-unit)*time</span></div>
 <div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;<span class="comment">! ******************************************************************************</span></div>
@@ -619,21 +664,21 @@ $(function() {
 <div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;<span class="comment">!    SPECIFICATIONS:</span></div>
 <div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;    <span class="keywordtype">class</span>(timearrayseriestype), <span class="keywordtype">intent(inout)</span> :: this</div>
+<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structtimearrayseriesmodule_1_1timearrayseriestype.html">timearrayseriestype</a>), <span class="keywordtype">intent(inout)</span> :: this</div>
 <div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;    <span class="keywordtype">integer(I4B)</span>,                    <span class="keywordtype">intent(in)</span>    :: nvals</div>
-<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">dimension(nvals)</span>, <span class="keywordtype">intent(inout)</span> :: values</div>
-<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>),           <span class="keywordtype">intent(in)</span>    :: time0</div>
-<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>),           <span class="keywordtype">intent(in)</span>    :: time1</div>
+<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">dimension(nvals)</span>, <span class="keywordtype">intent(inout)</span> :: values</div>
+<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;<span class="keywordtype">    real</span>(DP),           <span class="keywordtype">intent(in)</span>    :: time0</div>
+<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;<span class="keywordtype">    real</span>(DP),           <span class="keywordtype">intent(in)</span>    :: time1</div>
 <div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: i</div>
-<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>) :: area, currtime, nexttime, ratio0, ratio1, t0, &amp;</div>
+<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;<span class="keywordtype">    real</span>(DP) :: area, currTime, nextTime, ratio0, ratio1, t0, &amp;</div>
 <div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;                        t01, t1, timediff, <span class="keywordtype">value</span>, value0, value1, valuediff</div>
 <div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;    <span class="keywordtype">logical</span> :: ldone</div>
 <div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;    <span class="keywordtype">character(len=LINELENGTH)</span> :: ermsg</div>
-<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;    <span class="keywordtype">type</span>(listnodetype), <span class="keywordtype">pointer</span> :: precnode =&gt; null()</div>
-<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;    <span class="keywordtype">type</span>(listnodetype), <span class="keywordtype">pointer</span> :: currnode =&gt; null(), nextnode =&gt; null()</div>
-<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;    <span class="keywordtype">type</span>(timearraytype), <span class="keywordtype">pointer</span> :: currrecord =&gt; null(), nextrecord =&gt; null()</div>
-<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;    <span class="keywordtype">class</span>(*), <span class="keywordtype">pointer</span> :: currobj =&gt; null(), nextobj =&gt; null()</div>
+<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structlistmodule_1_1listnodetype.html">listnodetype</a>), <span class="keywordtype">pointer</span> :: precNode =&gt; null()</div>
+<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structlistmodule_1_1listnodetype.html">listnodetype</a>), <span class="keywordtype">pointer</span> :: currNode =&gt; null(), nextnode =&gt; null()</div>
+<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structtimearraymodule_1_1timearraytype.html">timearraytype</a>), <span class="keywordtype">pointer</span> :: currRecord =&gt; null(), nextrecord =&gt; null()</div>
+<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;    <span class="keywordtype">class</span>(*), <span class="keywordtype">pointer</span> :: currObj =&gt; null(), nextobj =&gt; null()</div>
 <div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;    <span class="comment">! -- formats</span></div>
 <div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;10  <span class="keyword">format</span>(<span class="stringliteral">&#39;Error encountered while performing integration&#39;</span>, &amp;</div>
 <div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;        <span class="stringliteral">&#39; for time-array series &quot;&#39;</span>,a,<span class="stringliteral">&#39;&quot; for time interval: &#39;</span>, &amp;</div>
@@ -749,10 +794,10 @@ $(function() {
 <div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;<span class="keywordflow">    endif</span></div>
 <div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160;  <span class="keyword">end subroutine </span>get_integrated_values</div>
+<div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacetimearrayseriesmodule.html#a998dcb9c88356cbcb08c16da194c3b72">get_integrated_values</a></div>
 <div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160; </div>
-<div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;  <span class="keyword">subroutine </span>deallocatebackward(this, fromNode)</div>
-<div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacetimearrayseriesmodule.html#a63ac8203ed041ce51280ec279d6fab1b">deallocatebackward</a>(this, fromNode)</div>
+<div class="line"><a name="l00683"></a><span class="lineno"><a class="line" href="namespacetimearrayseriesmodule.html#a63ac8203ed041ce51280ec279d6fab1b">  683</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;<span class="comment">! DeallocateBackward -- Deallocate fromNode and all previous nodes in list; </span></div>
 <div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;<span class="comment">!   reassign firstNode.</span></div>
 <div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;<span class="comment">! ******************************************************************************</span></div>
@@ -760,13 +805,13 @@ $(function() {
 <div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;<span class="comment">!    SPECIFICATIONS:</span></div>
 <div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;    <span class="keywordtype">class</span>(timearrayseriestype),  <span class="keywordtype">intent(inout)</span> :: this</div>
-<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;    <span class="keywordtype">type</span>(listnodetype), <span class="keywordtype">pointer</span>, <span class="keywordtype">intent(inout)</span> :: fromnode</div>
+<div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structtimearrayseriesmodule_1_1timearrayseriestype.html">timearrayseriestype</a>),  <span class="keywordtype">intent(inout)</span> :: this</div>
+<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structlistmodule_1_1listnodetype.html">listnodetype</a>), <span class="keywordtype">pointer</span>, <span class="keywordtype">intent(inout)</span> :: fromNode</div>
 <div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;    <span class="comment">! -- local</span></div>
-<div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;    <span class="keywordtype">type</span>(listnodetype),  <span class="keywordtype">pointer</span> :: current =&gt; null()</div>
-<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;    <span class="keywordtype">type</span>(listnodetype),  <span class="keywordtype">pointer</span> :: prev =&gt; null()</div>
-<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;    <span class="keywordtype">type</span>(timearraytype), <span class="keywordtype">pointer</span> :: ta =&gt; null()</div>
+<div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structlistmodule_1_1listnodetype.html">listnodetype</a>),  <span class="keywordtype">pointer</span> :: current =&gt; null()</div>
+<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structlistmodule_1_1listnodetype.html">listnodetype</a>),  <span class="keywordtype">pointer</span> :: prev =&gt; null()</div>
+<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structtimearraymodule_1_1timearraytype.html">timearraytype</a>), <span class="keywordtype">pointer</span> :: ta =&gt; null()</div>
 <div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;    <span class="keywordtype">class</span>(*),            <span class="keywordtype">pointer</span> :: obj =&gt; null()</div>
 <div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;    <span class="comment">!</span></div>
@@ -793,10 +838,10 @@ $(function() {
 <div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;<span class="keywordflow">    endif</span></div>
 <div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;  <span class="keyword">end subroutine </span>deallocatebackward</div>
+<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacetimearrayseriesmodule.html#a63ac8203ed041ce51280ec279d6fab1b">deallocatebackward</a></div>
 <div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160; </div>
-<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;  <span class="keyword">subroutine </span>get_latest_preceding_node(this, time, tslNode)</div>
-<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacetimearrayseriesmodule.html#a2a8b1422980be6a3865e3178d5fe18f0">get_latest_preceding_node</a>(this, time, tslNode)</div>
+<div class="line"><a name="l00727"></a><span class="lineno"><a class="line" href="namespacetimearrayseriesmodule.html#a2a8b1422980be6a3865e3178d5fe18f0">  727</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;<span class="comment">! get_latest_preceding_node -- Return pointer to ListNodeType object for the </span></div>
 <div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;<span class="comment">!    node representing the latest preceding time in the time series</span></div>
 <div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;<span class="comment">! ******************************************************************************</span></div>
@@ -804,15 +849,15 @@ $(function() {
 <div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;<span class="comment">!    SPECIFICATIONS:</span></div>
 <div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;    <span class="keywordtype">class</span>(timearrayseriestype),  <span class="keywordtype">intent(inout)</span> :: this</div>
-<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>),            <span class="keywordtype">intent(in)</span>    :: time</div>
-<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;    <span class="keywordtype">type</span>(listnodetype), <span class="keywordtype">pointer</span>, <span class="keywordtype">intent(inout)</span> :: tslnode</div>
+<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structtimearrayseriesmodule_1_1timearrayseriestype.html">timearrayseriestype</a>),  <span class="keywordtype">intent(inout)</span> :: this</div>
+<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;<span class="keywordtype">    real</span>(DP),            <span class="keywordtype">intent(in)</span>    :: time</div>
+<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structlistmodule_1_1listnodetype.html">listnodetype</a>), <span class="keywordtype">pointer</span>, <span class="keywordtype">intent(inout)</span> :: tslNode</div>
 <div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;    <span class="comment">! -- local</span></div>
-<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>) :: time0</div>
-<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;    <span class="keywordtype">type</span>(listnodetype),  <span class="keywordtype">pointer</span> :: currnode =&gt; null()</div>
-<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;    <span class="keywordtype">type</span>(listnodetype),  <span class="keywordtype">pointer</span> :: node0 =&gt; null()</div>
-<div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160;    <span class="keywordtype">type</span>(timearraytype), <span class="keywordtype">pointer</span> :: ta =&gt; null()</div>
-<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;    <span class="keywordtype">type</span>(timearraytype), <span class="keywordtype">pointer</span> :: ta0 =&gt; null()</div>
+<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;<span class="keywordtype">    real</span>(DP) :: time0</div>
+<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structlistmodule_1_1listnodetype.html">listnodetype</a>),  <span class="keywordtype">pointer</span> :: currNode =&gt; null()</div>
+<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structlistmodule_1_1listnodetype.html">listnodetype</a>),  <span class="keywordtype">pointer</span> :: node0 =&gt; null()</div>
+<div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structtimearraymodule_1_1timearraytype.html">timearraytype</a>), <span class="keywordtype">pointer</span> :: ta =&gt; null()</div>
+<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structtimearraymodule_1_1timearraytype.html">timearraytype</a>), <span class="keywordtype">pointer</span> :: ta0 =&gt; null()</div>
 <div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;    <span class="keywordtype">class</span>(*),            <span class="keywordtype">pointer</span> :: obj =&gt; null()</div>
 <div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;    <span class="comment">!</span></div>
@@ -868,20 +913,20 @@ $(function() {
 <div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;    <span class="keywordflow">if</span> (time0 &lt;= time) tslnode =&gt; node0</div>
 <div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;  <span class="keyword">end subroutine </span>get_latest_preceding_node</div>
+<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacetimearrayseriesmodule.html#a2a8b1422980be6a3865e3178d5fe18f0">get_latest_preceding_node</a></div>
 <div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160; </div>
-<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;  <span class="keyword">subroutine </span>tas_da(this)</div>
-<div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacetimearrayseriesmodule.html#a418576393b4b4f3510ea91b980f886dd">tas_da</a>(this)</div>
+<div class="line"><a name="l00802"></a><span class="lineno"><a class="line" href="namespacetimearrayseriesmodule.html#a418576393b4b4f3510ea91b980f886dd">  802</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160;<span class="comment">! tas_da -- deallocate</span></div>
 <div class="line"><a name="l00804"></a><span class="lineno">  804</span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160;<span class="comment">!</span></div>
 <div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160;<span class="comment">!    SPECIFICATIONS:</span></div>
 <div class="line"><a name="l00807"></a><span class="lineno">  807</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160;    <span class="keywordtype">class</span>(timearrayseriestype), <span class="keywordtype">intent(inout)</span> :: this</div>
+<div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structtimearrayseriesmodule_1_1timearrayseriestype.html">timearrayseriestype</a>), <span class="keywordtype">intent(inout)</span> :: this</div>
 <div class="line"><a name="l00810"></a><span class="lineno">  810</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00811"></a><span class="lineno">  811</span>&#160;    <span class="keywordtype">integer</span> :: i, n</div>
-<div class="line"><a name="l00812"></a><span class="lineno">  812</span>&#160;    <span class="keywordtype">type</span>(timearraytype), <span class="keywordtype">pointer</span> :: ta =&gt; null()</div>
+<div class="line"><a name="l00812"></a><span class="lineno">  812</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structtimearraymodule_1_1timearraytype.html">timearraytype</a>), <span class="keywordtype">pointer</span> :: ta =&gt; null()</div>
 <div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00814"></a><span class="lineno">  814</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00815"></a><span class="lineno">  815</span>&#160;    <span class="comment">! -- Deallocate contents of each time array in list</span></div>
@@ -896,7 +941,7 @@ $(function() {
 <div class="line"><a name="l00824"></a><span class="lineno">  824</span>&#160;    <span class="keyword">deallocate</span>(this%list)</div>
 <div class="line"><a name="l00825"></a><span class="lineno">  825</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00826"></a><span class="lineno">  826</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00827"></a><span class="lineno">  827</span>&#160;  <span class="keyword">end subroutine </span>tas_da</div>
+<div class="line"><a name="l00827"></a><span class="lineno">  827</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacetimearrayseriesmodule.html#a418576393b4b4f3510ea91b980f886dd">tas_da</a></div>
 <div class="line"><a name="l00828"></a><span class="lineno">  828</span>&#160; </div>
 <div class="line"><a name="l00829"></a><span class="lineno">  829</span>&#160;  <span class="comment">! -- Procedures not type-bound</span></div>
 <div class="line"><a name="l00830"></a><span class="lineno">  830</span>&#160; </div>
@@ -910,14 +955,14 @@ $(function() {
 <div class="line"><a name="l00838"></a><span class="lineno">  838</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00839"></a><span class="lineno">  839</span>&#160;    <span class="comment">! -- dummy</span></div>
 <div class="line"><a name="l00840"></a><span class="lineno">  840</span>&#160;    <span class="keywordtype">class</span>(*),   <span class="keywordtype">pointer</span>, <span class="keywordtype">intent(inout)</span> :: obj</div>
-<div class="line"><a name="l00841"></a><span class="lineno">  841</span>&#160;    <span class="keywordtype">type</span>(timearrayseriestype), <span class="keywordtype">pointer</span> :: res</div>
+<div class="line"><a name="l00841"></a><span class="lineno">  841</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structtimearrayseriesmodule_1_1timearrayseriestype.html">timearrayseriestype</a>), <span class="keywordtype">pointer</span> :: res</div>
 <div class="line"><a name="l00842"></a><span class="lineno">  842</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00843"></a><span class="lineno">  843</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00844"></a><span class="lineno">  844</span>&#160;    res =&gt; null()</div>
 <div class="line"><a name="l00845"></a><span class="lineno">  845</span>&#160;    <span class="keywordflow">if</span> (.not. <span class="keyword">associated</span>(obj)) <span class="keywordflow">return</span></div>
 <div class="line"><a name="l00846"></a><span class="lineno">  846</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00847"></a><span class="lineno">  847</span>&#160;    <span class="keywordflow">select type</span> (obj)</div>
-<div class="line"><a name="l00848"></a><span class="lineno">  848</span>&#160;<span class="keywordflow">    type is</span> (timearrayseriestype)</div>
+<div class="line"><a name="l00848"></a><span class="lineno">  848</span>&#160;<span class="keywordflow">    type is</span> (<a class="code" href="structtimearrayseriesmodule_1_1timearrayseriestype.html">timearrayseriestype</a>)</div>
 <div class="line"><a name="l00849"></a><span class="lineno">  849</span>&#160;      res =&gt; obj</div>
 <div class="line"><a name="l00850"></a><span class="lineno">  850</span>&#160;<span class="keywordflow">    end select</span></div>
 <div class="line"><a name="l00851"></a><span class="lineno">  851</span>&#160;    <span class="comment">!</span></div>
@@ -932,9 +977,9 @@ $(function() {
 <div class="line"><a name="l00860"></a><span class="lineno">  860</span>&#160;<span class="comment">!    SPECIFICATIONS:</span></div>
 <div class="line"><a name="l00861"></a><span class="lineno">  861</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00862"></a><span class="lineno">  862</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00863"></a><span class="lineno">  863</span>&#160;    <span class="keywordtype">type</span>(listtype),          <span class="keywordtype">intent(inout)</span> :: list</div>
+<div class="line"><a name="l00863"></a><span class="lineno">  863</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structlistmodule_1_1listtype.html">listtype</a>),          <span class="keywordtype">intent(inout)</span> :: list</div>
 <div class="line"><a name="l00864"></a><span class="lineno">  864</span>&#160;    <span class="keywordtype">integer</span>,                 <span class="keywordtype">intent(in)</span>    :: indx</div>
-<div class="line"><a name="l00865"></a><span class="lineno">  865</span>&#160;    <span class="keywordtype">type</span>(timearrayseriestype), <span class="keywordtype">pointer</span> :: res</div>
+<div class="line"><a name="l00865"></a><span class="lineno">  865</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structtimearrayseriesmodule_1_1timearrayseriestype.html">timearrayseriestype</a>), <span class="keywordtype">pointer</span> :: res</div>
 <div class="line"><a name="l00866"></a><span class="lineno">  866</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00867"></a><span class="lineno">  867</span>&#160;    <span class="keywordtype">class</span>(*), <span class="keywordtype">pointer</span> :: obj</div>
 <div class="line"><a name="l00868"></a><span class="lineno">  868</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
@@ -947,16 +992,22 @@ $(function() {
 <div class="line"><a name="l00875"></a><span class="lineno">  875</span>&#160; </div>
 <div class="line"><a name="l00876"></a><span class="lineno">  876</span>&#160;<span class="keyword">end module </span><a class="code" href="namespacetimearrayseriesmodule.html">timearrayseriesmodule</a></div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <div class="ttc" id="anamespacetimearrayseriesmodule_html"><div class="ttname"><a href="namespacetimearrayseriesmodule.html">timearrayseriesmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_time_array_series_8f90_source.html#l00001">TimeArraySeries.f90:1</a></div></div>
 <div class="ttc" id="anamespacekindmodule_html"><div class="ttname"><a href="namespacekindmodule.html">kindmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="kind_8f90_source.html#l00001">kind.f90:1</a></div></div>
+<div class="ttc" id="astructtimearraymodule_1_1timearraytype_html"><div class="ttname"><a href="structtimearraymodule_1_1timearraytype.html">timearraymodule::timearraytype</a></div><div class="ttdef"><b>Definition:</b> <a href="_time_array_8f90_source.html#l00015">TimeArray.f90:15</a></div></div>
 <div class="ttc" id="anamespacetimearrayseriesmodule_html_a004382aa24e9fa0a567bcc06590cbaf2"><div class="ttname"><a href="namespacetimearrayseriesmodule.html#a004382aa24e9fa0a567bcc06590cbaf2">timearrayseriesmodule::constructtimearrayseries</a></div><div class="ttdeci">subroutine, public constructtimearrayseries(newTas, filename)</div><div class="ttdef"><b>Definition:</b> <a href="_time_array_series_8f90_source.html#l00057">TimeArraySeries.f90:57</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_abab5757666b9ddd2726c20ce48dd0050"><div class="ttname"><a href="namespaceconstantsmodule.html#abab5757666b9ddd2726c20ce48dd0050">constantsmodule::dzero</a></div><div class="ttdeci">real(dp), parameter dzero</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00045">Constants.f90:45</a></div></div>
 <div class="ttc" id="anamespacetimearrayseriesmodule_html_a8e1138e86cda83ad88936fa4dc1eeecf"><div class="ttname"><a href="namespacetimearrayseriesmodule.html#a8e1138e86cda83ad88936fa4dc1eeecf">timearrayseriesmodule::gettimearrayseriesfromlist</a></div><div class="ttdeci">type(timearrayseriestype) function, pointer, public gettimearrayseriesfromlist(list, indx)</div><div class="ttdef"><b>Definition:</b> <a href="_time_array_series_8f90_source.html#l00856">TimeArraySeries.f90:856</a></div></div>
 <div class="ttc" id="anamespacesimmodule_html_a1c78a6fda06b630c738bb654aa6bd816"><div class="ttname"><a href="namespacesimmodule.html#a1c78a6fda06b630c738bb654aa6bd816">simmodule::store_error_unit</a></div><div class="ttdeci">subroutine, public store_error_unit(iunit)</div><div class="ttdef"><b>Definition:</b> <a href="_sim_8f90_source.html#l00177">Sim.f90:177</a></div></div>
 <div class="ttc" id="anamespacebasedismodule_html"><div class="ttname"><a href="namespacebasedismodule.html">basedismodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_discretization_base_8f90_source.html#l00001">DiscretizationBase.f90:1</a></div></div>
+<div class="ttc" id="anamespacetimearrayseriesmodule_html_a367b83bf2841153a6f3902a16cc4c69e"><div class="ttname"><a href="namespacetimearrayseriesmodule.html#a367b83bf2841153a6f3902a16cc4c69e">timearrayseriesmodule::getaveragevalues</a></div><div class="ttdeci">subroutine getaveragevalues(this, nvals, values, time0, time1)</div><div class="ttdef"><b>Definition:</b> <a href="_time_array_series_8f90_source.html#l00231">TimeArraySeries.f90:231</a></div></div>
 <div class="ttc" id="anamespacetimearraymodule_html_ab2b139f44766d733b52a72052cf67296"><div class="ttname"><a href="namespacetimearraymodule.html#ab2b139f44766d733b52a72052cf67296">timearraymodule::constructtimearray</a></div><div class="ttdeci">subroutine, public constructtimearray(newTa, dis)</div><div class="ttdef"><b>Definition:</b> <a href="_time_array_8f90_source.html#l00029">TimeArray.f90:29</a></div></div>
 <div class="ttc" id="anamespacesimmodule_html_a536cb6f0e13fcd33755e414641ff931a"><div class="ttname"><a href="namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a">simmodule::store_error</a></div><div class="ttdeci">subroutine, public store_error(msg)</div><div class="ttdef"><b>Definition:</b> <a href="_sim_8f90_source.html#l00107">Sim.f90:107</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_a5a5bc481197413bb50013a92490ffa14"><div class="ttname"><a href="namespaceconstantsmodule.html#a5a5bc481197413bb50013a92490ffa14">constantsmodule::lenbigline</a></div><div class="ttdeci">integer(i4b), parameter lenbigline</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00007">Constants.f90:7</a></div></div>
+<div class="ttc" id="anamespacetimearrayseriesmodule_html_a998dcb9c88356cbcb08c16da194c3b72"><div class="ttname"><a href="namespacetimearrayseriesmodule.html#a998dcb9c88356cbcb08c16da194c3b72">timearrayseriesmodule::get_integrated_values</a></div><div class="ttdeci">subroutine get_integrated_values(this, nvals, values, time0, time1)</div><div class="ttdef"><b>Definition:</b> <a href="_time_array_series_8f90_source.html#l00542">TimeArraySeries.f90:542</a></div></div>
+<div class="ttc" id="anamespacetimearrayseriesmodule_html_aac9d83d41cc060b42576b0f8794b82df"><div class="ttname"><a href="namespacetimearrayseriesmodule.html#aac9d83d41cc060b42576b0f8794b82df">timearrayseriesmodule::tas_init</a></div><div class="ttdeci">subroutine tas_init(this, fname, dis, iout, tasname, autoDeallocate)</div><div class="ttdef"><b>Definition:</b> <a href="_time_array_series_8f90_source.html#l00092">TimeArraySeries.f90:92</a></div></div>
+<div class="ttc" id="astructlistmodule_1_1listtype_html"><div class="ttname"><a href="structlistmodule_1_1listtype.html">listmodule::listtype</a></div><div class="ttdef"><b>Definition:</b> <a href="_list_8f90_source.html#l00009">List.f90:9</a></div></div>
 <div class="ttc" id="anamespacesimmodule_html_a4c46e49de78d4498dd4ec106357775e6"><div class="ttname"><a href="namespacesimmodule.html#a4c46e49de78d4498dd4ec106357775e6">simmodule::count_errors</a></div><div class="ttdeci">integer(i4b) function, public count_errors()</div><div class="ttdef"><b>Definition:</b> <a href="_sim_8f90_source.html#l00043">Sim.f90:43</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_a72b9f98f14e6bc10dae320dfd4f56dfb"><div class="ttname"><a href="namespaceconstantsmodule.html#a72b9f98f14e6bc10dae320dfd4f56dfb">constantsmodule::lentimeseriesname</a></div><div class="ttdeci">integer(i4b), parameter lentimeseriesname</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00025">Constants.f90:25</a></div></div>
 <div class="ttc" id="anamespacesimmodule_html"><div class="ttname"><a href="namespacesimmodule.html">simmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_sim_8f90_source.html#l00001">Sim.f90:1</a></div></div>
@@ -972,21 +1023,35 @@ $(function() {
 <div class="ttc" id="anamespaceinputoutputmodule_html_a535bdfca3d31ebc3a8e4bd5af6890d55"><div class="ttname"><a href="namespaceinputoutputmodule.html#a535bdfca3d31ebc3a8e4bd5af6890d55">inputoutputmodule::getunit</a></div><div class="ttdeci">integer(i4b) function, public getunit()</div><div class="ttdef"><b>Definition:</b> <a href="_input_output_8f90_source.html#l00208">InputOutput.f90:208</a></div></div>
 <div class="ttc" id="anamespacetimearraymodule_html_ae6d622af2204c4ec58b99dcba5ad9ccf"><div class="ttname"><a href="namespacetimearraymodule.html#ae6d622af2204c4ec58b99dcba5ad9ccf">timearraymodule::addtimearraytolist</a></div><div class="ttdeci">subroutine, public addtimearraytolist(list, timearray)</div><div class="ttdef"><b>Definition:</b> <a href="_time_array_8f90_source.html#l00082">TimeArray.f90:82</a></div></div>
 <div class="ttc" id="anamespaceinputoutputmodule_html"><div class="ttname"><a href="namespaceinputoutputmodule.html">inputoutputmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_input_output_8f90_source.html#l00003">InputOutput.f90:3</a></div></div>
+<div class="ttc" id="astructtimearrayseriesmodule_1_1timearrayseriestype_html"><div class="ttname"><a href="structtimearrayseriesmodule_1_1timearrayseriestype.html">timearrayseriesmodule::timearrayseriestype</a></div><div class="ttdef"><b>Definition:</b> <a href="_time_array_series_8f90_source.html#l00024">TimeArraySeries.f90:24</a></div></div>
+<div class="ttc" id="anamespacetimearrayseriesmodule_html_a418576393b4b4f3510ea91b980f886dd"><div class="ttname"><a href="namespacetimearrayseriesmodule.html#a418576393b4b4f3510ea91b980f886dd">timearrayseriesmodule::tas_da</a></div><div class="ttdeci">subroutine tas_da(this)</div><div class="ttdef"><b>Definition:</b> <a href="_time_array_series_8f90_source.html#l00802">TimeArraySeries.f90:802</a></div></div>
+<div class="ttc" id="ainterfacearrayreadersmodule_1_1readarray_html"><div class="ttname"><a href="interfacearrayreadersmodule_1_1readarray.html">arrayreadersmodule::readarray</a></div><div class="ttdef"><b>Definition:</b> <a href="_array_readers_8f90_source.html#l00019">ArrayReaders.f90:19</a></div></div>
 <div class="ttc" id="anamespacegenericutilitiesmodule_html"><div class="ttname"><a href="namespacegenericutilitiesmodule.html">genericutilitiesmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="genericutils_8f90_source.html#l00001">genericutils.f90:1</a></div></div>
 <div class="ttc" id="anamespacekindmodule_html_a2f6861418b5e7d3d602b77228232a470"><div class="ttname"><a href="namespacekindmodule.html#a2f6861418b5e7d3d602b77228232a470">kindmodule::i4b</a></div><div class="ttdeci">integer, parameter i4b</div><div class="ttdef"><b>Definition:</b> <a href="kind_8f90_source.html#l00009">kind.f90:9</a></div></div>
+<div class="ttc" id="anamespacetimearrayseriesmodule_html_aa417120d2b81c6ff78d6c600f041ad6f"><div class="ttname"><a href="namespacetimearrayseriesmodule.html#aa417120d2b81c6ff78d6c600f041ad6f">timearrayseriesmodule::getinunit</a></div><div class="ttdeci">integer(i4b) function getinunit(this)</div><div class="ttdef"><b>Definition:</b> <a href="_time_array_series_8f90_source.html#l00264">TimeArraySeries.f90:264</a></div></div>
 <div class="ttc" id="anamespacetimearrayseriesmodule_html_aa1c34e894d3d92bdb54bdd494a439d0c"><div class="ttname"><a href="namespacetimearrayseriesmodule.html#aa1c34e894d3d92bdb54bdd494a439d0c">timearrayseriesmodule::castastimearrayseriestype</a></div><div class="ttdeci">type(timearrayseriestype) function, pointer, public castastimearrayseriestype(obj)</div><div class="ttdef"><b>Definition:</b> <a href="_time_array_series_8f90_source.html#l00832">TimeArraySeries.f90:832</a></div></div>
+<div class="ttc" id="anamespacetimearrayseriesmodule_html_a2a8b1422980be6a3865e3178d5fe18f0"><div class="ttname"><a href="namespacetimearrayseriesmodule.html#a2a8b1422980be6a3865e3178d5fe18f0">timearrayseriesmodule::get_latest_preceding_node</a></div><div class="ttdeci">subroutine get_latest_preceding_node(this, time, tslNode)</div><div class="ttdef"><b>Definition:</b> <a href="_time_array_series_8f90_source.html#l00727">TimeArraySeries.f90:727</a></div></div>
+<div class="ttc" id="anamespacetimearrayseriesmodule_html_a70bfd9f7ba5024ba190bfd478ee5a638"><div class="ttname"><a href="namespacetimearrayseriesmodule.html#a70bfd9f7ba5024ba190bfd478ee5a638">timearrayseriesmodule::get_surrounding_records</a></div><div class="ttdeci">subroutine get_surrounding_records(this, time, taEarlier, taLater)</div><div class="ttdef"><b>Definition:</b> <a href="_time_array_series_8f90_source.html#l00284">TimeArraySeries.f90:284</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html"><div class="ttname"><a href="namespaceconstantsmodule.html">constantsmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00001">Constants.f90:1</a></div></div>
+<div class="ttc" id="astructblockparsermodule_1_1blockparsertype_html"><div class="ttname"><a href="structblockparsermodule_1_1blockparsertype.html">blockparsermodule::blockparsertype</a></div><div class="ttdef"><b>Definition:</b> <a href="_block_parser_8f90_source.html#l00016">BlockParser.f90:16</a></div></div>
+<div class="ttc" id="anamespacetimearrayseriesmodule_html_a63ac8203ed041ce51280ec279d6fab1b"><div class="ttname"><a href="namespacetimearrayseriesmodule.html#a63ac8203ed041ce51280ec279d6fab1b">timearrayseriesmodule::deallocatebackward</a></div><div class="ttdeci">subroutine deallocatebackward(this, fromNode)</div><div class="ttdef"><b>Definition:</b> <a href="_time_array_series_8f90_source.html#l00683">TimeArraySeries.f90:683</a></div></div>
+<div class="ttc" id="anamespacetimearrayseriesmodule_html_a60c28da68c9f3d0ca2e1995e879e3c11"><div class="ttname"><a href="namespacetimearrayseriesmodule.html#a60c28da68c9f3d0ca2e1995e879e3c11">timearrayseriesmodule::get_values_at_time</a></div><div class="ttdeci">subroutine get_values_at_time(this, nvals, values, time)</div><div class="ttdef"><b>Definition:</b> <a href="_time_array_series_8f90_source.html#l00449">TimeArraySeries.f90:449</a></div></div>
 <div class="ttc" id="anamespacekindmodule_html_ae38bd3a7dfaf151094c26e1529259639"><div class="ttname"><a href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">kindmodule::dp</a></div><div class="ttdeci">integer, parameter dp</div><div class="ttdef"><b>Definition:</b> <a href="kind_8f90_source.html#l00007">kind.f90:7</a></div></div>
+<div class="ttc" id="astructlistmodule_1_1listnodetype_html"><div class="ttname"><a href="structlistmodule_1_1listnodetype.html">listmodule::listnodetype</a></div><div class="ttdef"><b>Definition:</b> <a href="_list_8f90_source.html#l00043">List.f90:43</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_a896fdc3ba8703eb14cd44af957f6954dabef93d9514beed308224dc3f9f35324e"><div class="ttname"><a href="namespaceconstantsmodule.html#a896fdc3ba8703eb14cd44af957f6954dabef93d9514beed308224dc3f9f35324e">constantsmodule::stepwise</a></div><div class="ttdeci">@ stepwise</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00114">Constants.f90:114</a></div></div>
 <div class="ttc" id="anamespaceinputoutputmodule_html_ae97851e3edae8d9809e384058a1a4d52"><div class="ttname"><a href="namespaceinputoutputmodule.html#ae97851e3edae8d9809e384058a1a4d52">inputoutputmodule::openfile</a></div><div class="ttdeci">subroutine, public openfile(iu, iout, fname, ftype, fmtarg_opt, accarg_opt, filstat_opt, mode_opt)</div><div class="ttdef"><b>Definition:</b> <a href="_input_output_8f90_source.html#l00034">InputOutput.f90:34</a></div></div>
 <div class="ttc" id="anamespacetimearraymodule_html"><div class="ttname"><a href="namespacetimearraymodule.html">timearraymodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_time_array_8f90_source.html#l00001">TimeArray.f90:1</a></div></div>
+<div class="ttc" id="anamespacetimearrayseriesmodule_html_af399b6cee23350fd68efb635dd8cf7cf"><div class="ttname"><a href="namespacetimearrayseriesmodule.html#af399b6cee23350fd68efb635dd8cf7cf">timearrayseriesmodule::read_next_array</a></div><div class="ttdeci">logical function read_next_array(this)</div><div class="ttdef"><b>Definition:</b> <a href="_time_array_series_8f90_source.html#l00379">TimeArraySeries.f90:379</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_af918ac22cd0b232deea67660bfbc9ce1"><div class="ttname"><a href="namespaceconstantsmodule.html#af918ac22cd0b232deea67660bfbc9ce1">constantsmodule::done</a></div><div class="ttdeci">real(dp), parameter done</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00056">Constants.f90:56</a></div></div>
 <div class="ttc" id="anamespacelistmodule_html"><div class="ttname"><a href="namespacelistmodule.html">listmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_list_8f90_source.html#l00001">List.f90:1</a></div></div>
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_ff383ddf1aa4eab0c4ce7910366d05a5.html">Utilities</a></li><li class="navelem"><a class="el" href="dir_19b8b60e5053332b863d300b1b14b656.html">TimeSeries</a></li><li class="navelem"><a class="el" href="_time_array_series_8f90.html">TimeArraySeries.f90</a></li>
+    <li class="footer">Generated on Thu Jun 24 2021 19:50:09 for MODFLOW 6 by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
 </body>
 </html>

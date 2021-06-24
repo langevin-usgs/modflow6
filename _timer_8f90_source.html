@@ -5,13 +5,22 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MODFLOW 6 Code Documentation: /home/runner/work/modflow6/modflow6/src/Utilities/Timer.f90 Source File</title>
+<title>MODFLOW 6: /home/runner/work/modflow6/modflow6/src/Utilities/Timer.f90 Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="CustomDoxygen.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -21,9 +30,12 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="mf6-triangular-grid.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">MODFLOW 6 Code Documentation
+   <div id="projectname">MODFLOW 6
+   &#160;<span id="projectnumber">version 6.2.2</span>
    </div>
+   <div id="projectbrief">MODFLOW 6 Code Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -36,16 +48,54 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Modules</span></a></li>
+      <li><a href="annotated.html"><span>Data&#160;Types&#160;List</span></a></li>
+      <li class="current"><a href="files.html"><span>Files</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('_timer_8f90_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,11 +110,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_ff383ddf1aa4eab0c4ce7910366d05a5.html">Utilities</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">Timer.f90</div>  </div>
@@ -80,7 +125,7 @@ $(function() {
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  <span class="keywordtype">public</span> :: <a class="code" href="namespacetimermodule.html#aabd6b77317f11bb9dd7d89c52317c104">start_time</a></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  <span class="keywordtype">public</span> :: <a class="code" href="namespacetimermodule.html#a1f8301c0a31753924cb55e23ebb36b95">elapsed_time</a></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  <span class="keywordtype">public</span> :: <a class="code" href="namespacetimermodule.html#a38a274d978e44672bdb28134abec206a">code_timer</a></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(8)</span> :: ibdt</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="namespacetimermodule.html#a87b723757727d161d5d128609d3ed0d5">   11</a></span>&#160;  <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(8)</span> :: <a class="code" href="namespacetimermodule.html#a87b723757727d161d5d128609d3ed0d5">ibdt</a></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  </div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <span class="keyword">contains</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  </div>
@@ -102,8 +147,8 @@ $(function() {
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="comment">!    </span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="comment">! -- Get current date and time, assign to IBDT, and write to screen</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">call </span>date_and_time(values=ibdt)</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">write</span>(line, fmtdt) (ibdt(i), i = 1, 3), (ibdt(i), i = 5, 7)</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">call </span>date_and_time(values=<a class="code" href="namespacetimermodule.html#a87b723757727d161d5d128609d3ed0d5">ibdt</a>)</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">write</span>(line, fmtdt) (<a class="code" href="namespacetimermodule.html#a87b723757727d161d5d128609d3ed0d5">ibdt</a>(i), i = 1, 3), (<a class="code" href="namespacetimermodule.html#a87b723757727d161d5d128609d3ed0d5">ibdt</a>(i), i = 5, 7)</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">call </span><a class="code" href="namespacegenericutilitiesmodule.html#a34492cca79f70174fd015808be8b7ebf">sim_message</a>(line, skipafter=1)</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="comment">! -- return</span></div>
@@ -152,12 +197,12 @@ $(function() {
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;      ndays=0</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;      leap=0</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;      <span class="keywordflow">IF</span> (mod(iedt(1),4).EQ.0) leap = 1</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;      ibd = ibdt(3)            <span class="comment">! BEGIN DAY</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;      ibd = <a class="code" href="namespacetimermodule.html#a87b723757727d161d5d128609d3ed0d5">ibdt</a>(3)            <span class="comment">! BEGIN DAY</span></div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;      ied = iedt(3)            <span class="comment">! END DAY</span></div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment">!     FIND DAYS</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;      <span class="keywordflow">IF</span> (ibdt(2).NE.iedt(2)) <span class="keywordflow">THEN</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;      <span class="keywordflow">IF</span> (<a class="code" href="namespacetimermodule.html#a87b723757727d161d5d128609d3ed0d5">ibdt</a>(2).NE.iedt(2)) <span class="keywordflow">THEN</span></div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment">!       MONTHS DIFFER</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        mb = ibdt(2)             <span class="comment">! BEGIN MONTH</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        mb = <a class="code" href="namespacetimermodule.html#a87b723757727d161d5d128609d3ed0d5">ibdt</a>(2)             <span class="comment">! BEGIN MONTH</span></div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        me = iedt(2)             <span class="comment">! END MONTH</span></div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        nm = me-mb+1             <span class="comment">! NUMBER OF MONTHS TO LOOK AT</span></div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keywordflow">IF</span> (mb.GT.me) nm = nm+12</div>
@@ -182,10 +227,10 @@ $(function() {
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;      elsec=ndays*nspd</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="comment">!</span></div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="comment">!     ADD OR SUBTRACT SECONDS</span></div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;      elsec = elsec+(iedt(5)-ibdt(5))*3600.0</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;      elsec = elsec+(iedt(6)-ibdt(6))*60.0</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;      elsec = elsec+(iedt(7)-ibdt(7))</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;      elsec = elsec+(iedt(8)-ibdt(8))*0.001</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;      elsec = elsec+(iedt(5)-<a class="code" href="namespacetimermodule.html#a87b723757727d161d5d128609d3ed0d5">ibdt</a>(5))*3600.0</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;      elsec = elsec+(iedt(6)-<a class="code" href="namespacetimermodule.html#a87b723757727d161d5d128609d3ed0d5">ibdt</a>(6))*60.0</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;      elsec = elsec+(iedt(7)-<a class="code" href="namespacetimermodule.html#a87b723757727d161d5d128609d3ed0d5">ibdt</a>(7))</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;      elsec = elsec+(iedt(8)-<a class="code" href="namespacetimermodule.html#a87b723757727d161d5d128609d3ed0d5">ibdt</a>(8))*0.001</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="comment">!</span></div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="comment">!     CONVERT SECONDS TO DAYS, HOURS, MINUTES, AND SECONDS</span></div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;      ndays = elsec/nspd</div>
@@ -265,6 +310,8 @@ $(function() {
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;  </div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="keyword">end module </span><a class="code" href="namespacetimermodule.html">timermodule</a></div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="anamespacetimermodule_html_a87b723757727d161d5d128609d3ed0d5"><div class="ttname"><a href="namespacetimermodule.html#a87b723757727d161d5d128609d3ed0d5">timermodule::ibdt</a></div><div class="ttdeci">integer(i4b), dimension(8) ibdt</div><div class="ttdef"><b>Definition:</b> <a href="_timer_8f90_source.html#l00011">Timer.f90:11</a></div></div>
 <div class="ttc" id="anamespacekindmodule_html"><div class="ttname"><a href="namespacekindmodule.html">kindmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="kind_8f90_source.html#l00001">kind.f90:1</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_abab5757666b9ddd2726c20ce48dd0050"><div class="ttname"><a href="namespaceconstantsmodule.html#abab5757666b9ddd2726c20ce48dd0050">constantsmodule::dzero</a></div><div class="ttdeci">real(dp), parameter dzero</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00045">Constants.f90:45</a></div></div>
 <div class="ttc" id="anamespacegenericutilitiesmodule_html_a34492cca79f70174fd015808be8b7ebf"><div class="ttname"><a href="namespacegenericutilitiesmodule.html#a34492cca79f70174fd015808be8b7ebf">genericutilitiesmodule::sim_message</a></div><div class="ttdeci">subroutine, public sim_message(message, iunit, fmt, level, skipbefore, skipafter, advance)</div><div class="ttdef"><b>Definition:</b> <a href="genericutils_8f90_source.html#l00020">genericutils.f90:20</a></div></div>
@@ -278,10 +325,13 @@ $(function() {
 <div class="ttc" id="anamespacekindmodule_html_ae38bd3a7dfaf151094c26e1529259639"><div class="ttname"><a href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">kindmodule::dp</a></div><div class="ttdeci">integer, parameter dp</div><div class="ttdef"><b>Definition:</b> <a href="kind_8f90_source.html#l00007">kind.f90:7</a></div></div>
 <div class="ttc" id="anamespacetimermodule_html_a1f8301c0a31753924cb55e23ebb36b95"><div class="ttname"><a href="namespacetimermodule.html#a1f8301c0a31753924cb55e23ebb36b95">timermodule::elapsed_time</a></div><div class="ttdeci">subroutine, public elapsed_time(iout, iprtim)</div><div class="ttdef"><b>Definition:</b> <a href="_timer_8f90_source.html#l00042">Timer.f90:42</a></div></div>
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_ff383ddf1aa4eab0c4ce7910366d05a5.html">Utilities</a></li><li class="navelem"><a class="el" href="_timer_8f90.html">Timer.f90</a></li>
+    <li class="footer">Generated on Thu Jun 24 2021 19:50:09 for MODFLOW 6 by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
 </body>
 </html>

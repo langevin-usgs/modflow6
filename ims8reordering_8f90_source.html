@@ -5,13 +5,22 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MODFLOW 6 Code Documentation: /home/runner/work/modflow6/modflow6/src/Solution/SparseMatrixSolver/ims8reordering.f90 Source File</title>
+<title>MODFLOW 6: /home/runner/work/modflow6/modflow6/src/Solution/SparseMatrixSolver/ims8reordering.f90 Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="CustomDoxygen.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -21,9 +30,12 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="mf6-triangular-grid.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">MODFLOW 6 Code Documentation
+   <div id="projectname">MODFLOW 6
+   &#160;<span id="projectnumber">version 6.2.2</span>
    </div>
+   <div id="projectbrief">MODFLOW 6 Code Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -36,16 +48,54 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Modules</span></a></li>
+      <li><a href="annotated.html"><span>Data&#160;Types&#160;List</span></a></li>
+      <li class="current"><a href="files.html"><span>Files</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('ims8reordering_8f90_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,11 +110,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_45e973df69963bbfe985a1f7e6db2b6f.html">Solution</a></li><li class="navelem"><a class="el" href="dir_05d5634044adf0ab08e7f809dfce3115.html">SparseMatrixSolver</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">ims8reordering.f90</div>  </div>
@@ -157,9 +202,9 @@ $(function() {
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;          <span class="comment">! mi</span></div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;          lperm = neqns - num + 1</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;          <span class="comment">! mi</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;          <span class="keyword">call </span>ims_fnroot(lperm, neqns, nja, root, xadj, adjncy, mask,          &amp;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;          <span class="keyword">call </span><a class="code" href="namespaceimsreorderingmodule.html#a2deb34b69752848ce8162ac50f930dec">ims_fnroot</a>(lperm, neqns, nja, root, xadj, adjncy, mask,          &amp;</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                          nlvl, xls, perm(num))</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;          <span class="keyword">call </span>ims_rcm(lperm, neqns, nja, root, xadj, adjncy, mask,             &amp;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;          <span class="keyword">call </span><a class="code" href="namespaceimsreorderingmodule.html#a5d8da64be84261b64cb4c946f19765c3">ims_rcm</a>(lperm, neqns, nja, root, xadj, adjncy, mask,             &amp;</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                       perm(num), ccsize, xls )</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;          num = num + ccsize</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;          <span class="keywordflow">if</span> (num &gt; neqns) <span class="keywordflow">exit</span> louter</div>
@@ -201,9 +246,9 @@ $(function() {
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;      <span class="comment">!</span></div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;      <span class="comment">!***************************************************************</span></div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;      <span class="comment">!</span></div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;      <span class="keyword">subroutine </span>ims_fnroot (lls, neqns, nja, root, xadj, adjncy, mask,         &amp;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;      <span class="keyword">subroutine </span><a class="code" href="namespaceimsreorderingmodule.html#a2deb34b69752848ce8162ac50f930dec">ims_fnroot</a> (lls, neqns, nja, root, xadj, adjncy, mask,         &amp;</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                             nlvl, xls, ls )</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;         <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno"><a class="line" href="namespaceimsreorderingmodule.html#a2deb34b69752848ce8162ac50f930dec">  134</a></span>&#160;         <span class="keywordtype">implicit none</span></div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;     </div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;         <span class="comment">! -- dummy variables</span></div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;         <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: lls</div>
@@ -231,7 +276,7 @@ $(function() {
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;         <span class="keywordtype">integer(I4B)</span> :: nunlvl</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;         <span class="comment">!</span></div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;         <span class="comment">! determine the level structure rooted at root.</span></div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;         <span class="keyword">call </span>ims_rootls(lls, neqns, nja, root, xadj, adjncy, mask,             &amp;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;         <span class="keyword">call </span><a class="code" href="namespaceimsreorderingmodule.html#a6b6099ded56613291aa6b21d726c1fe6">ims_rootls</a>(lls, neqns, nja, root, xadj, adjncy, mask,             &amp;</div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;                         nlvl, xls, ls)</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;         ccsize = xls(nlvl+1) - 1</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;         <span class="keywordflow">if</span> ( nlvl == 1 .or. nlvl == ccsize ) <span class="keywordflow">return</span></div>
@@ -256,13 +301,13 @@ $(function() {
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;<span class="keywordflow">         end do</span> louter</div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;         <span class="comment">!</span></div>
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;         <span class="comment">! and generate its rooted level structure.</span></div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    400  <span class="keyword">call </span>ims_rootls(lls, neqns, nja, root, xadj, adjncy, mask,             &amp;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    400  <span class="keyword">call </span><a class="code" href="namespaceimsreorderingmodule.html#a6b6099ded56613291aa6b21d726c1fe6">ims_rootls</a>(lls, neqns, nja, root, xadj, adjncy, mask,             &amp;</div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                         nunlvl, xls, ls)</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;         <span class="keywordflow">if</span> (nunlvl &lt;= nlvl)  <span class="keywordflow">return</span></div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;         nlvl = nunlvl</div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;         <span class="keywordflow">if</span> (nlvl &lt; ccsize) <span class="keywordflow">go to</span> 100</div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;         <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;      <span class="keyword">end subroutine  </span>ims_fnroot</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;      <span class="keyword">end subroutine  </span><a class="code" href="namespaceimsreorderingmodule.html#a2deb34b69752848ce8162ac50f930dec">ims_fnroot</a></div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160; </div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160; </div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;      <span class="comment">! subroutine ims_rcm</span></div>
@@ -301,9 +346,9 @@ $(function() {
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;      <span class="comment">!</span></div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;      <span class="comment">!***************************************************************</span></div>
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;      <span class="comment">!</span></div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;      <span class="keyword">subroutine </span>ims_rcm(llperm, neqns, nja, root, xadj, adjncy,                &amp;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;      <span class="keyword">subroutine </span><a class="code" href="namespaceimsreorderingmodule.html#a5d8da64be84261b64cb4c946f19765c3">ims_rcm</a>(llperm, neqns, nja, root, xadj, adjncy,                &amp;</div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;                         mask, perm, ccsize, deg)</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;      <span class="comment">!</span></div>
+<div class="line"><a name="l00234"></a><span class="lineno"><a class="line" href="namespaceimsreorderingmodule.html#a5d8da64be84261b64cb4c946f19765c3">  234</a></span>&#160;      <span class="comment">!</span></div>
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;         <span class="keywordtype">implicit none</span></div>
 <div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;         </div>
 <div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;         <span class="comment">! -- dummy variables</span></div>
@@ -335,7 +380,7 @@ $(function() {
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;         <span class="comment">! code</span></div>
 <div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;         <span class="comment">! find the degrees of the nodes in the</span></div>
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;         <span class="comment">! component specified by mask and root.</span></div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;         <span class="keyword">call </span>ims_degree(llperm, neqns, nja, root, xadj, adjncy, mask,          &amp;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;         <span class="keyword">call </span><a class="code" href="namespaceimsreorderingmodule.html#a2b7774290db1a0706fb7bf500716ccf3">ims_degree</a>(llperm, neqns, nja, root, xadj, adjncy, mask,          &amp;</div>
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                         deg, ccsize, perm)</div>
 <div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;         mask(root) = 0</div>
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;         <span class="keywordflow">if</span> (ccsize &lt;= 1) <span class="keywordflow">return</span></div>
@@ -395,7 +440,7 @@ $(function() {
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;           l = l - 1</div>
 <div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;<span class="keywordflow">         end do</span></div>
 <div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;         <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;      <span class="keyword">end subroutine  </span>ims_rcm</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;      <span class="keyword">end subroutine  </span><a class="code" href="namespaceimsreorderingmodule.html#a5d8da64be84261b64cb4c946f19765c3">ims_rcm</a></div>
 <div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160; </div>
 <div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160; </div>
 <div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;      <span class="comment">!----- subroutine ims_degree</span></div>
@@ -421,9 +466,9 @@ $(function() {
 <div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;      <span class="comment">!</span></div>
 <div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;      <span class="comment">!***************************************************************</span></div>
 <div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;      <span class="comment">!</span></div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;      <span class="keyword">subroutine </span>ims_degree(lls, neqns, nja, root, xadj, adjncy, mask,          &amp;</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;      <span class="keyword">subroutine </span><a class="code" href="namespaceimsreorderingmodule.html#a2b7774290db1a0706fb7bf500716ccf3">ims_degree</a>(lls, neqns, nja, root, xadj, adjncy, mask,          &amp;</div>
 <div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;                            deg, ccsize, ls)</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;      <span class="comment">!</span></div>
+<div class="line"><a name="l00354"></a><span class="lineno"><a class="line" href="namespaceimsreorderingmodule.html#a2b7774290db1a0706fb7bf500716ccf3">  354</a></span>&#160;      <span class="comment">!</span></div>
 <div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;      <span class="comment">!***************************************************************</span></div>
 <div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;      <span class="comment">!</span></div>
 <div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;        <span class="keywordtype">implicit none</span>     </div>
@@ -498,7 +543,7 @@ $(function() {
 <div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;          xadj(node) = -xadj(node)</div>
 <div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;<span class="keywordflow">        end do</span></div>
 <div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;        <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;      <span class="keyword">end subroutine </span>ims_degree</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;      <span class="keyword">end subroutine </span><a class="code" href="namespaceimsreorderingmodule.html#a2b7774290db1a0706fb7bf500716ccf3">ims_degree</a></div>
 <div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160; </div>
 <div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160; </div>
 <div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;      <span class="comment">! subroutine ims_rootls</span></div>
@@ -523,9 +568,9 @@ $(function() {
 <div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;      <span class="comment">!</span></div>
 <div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;      <span class="comment">!***************************************************************</span></div>
 <div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;      <span class="comment">!</span></div>
-<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;      <span class="keyword">subroutine </span>ims_rootls(lls, neqns, nja, root, xadj, adjncy, mask,          &amp;</div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;      <span class="keyword">subroutine </span><a class="code" href="namespaceimsreorderingmodule.html#a6b6099ded56613291aa6b21d726c1fe6">ims_rootls</a>(lls, neqns, nja, root, xadj, adjncy, mask,          &amp;</div>
 <div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;                            nlvl, xls, ls )</div>
-<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160; </div>
+<div class="line"><a name="l00456"></a><span class="lineno"><a class="line" href="namespaceimsreorderingmodule.html#a6b6099ded56613291aa6b21d726c1fe6">  456</a></span>&#160; </div>
 <div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;        <span class="keywordtype">implicit none</span></div>
 <div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;       </div>
 <div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;        <span class="comment">! -- dummy variables</span></div>
@@ -596,7 +641,7 @@ $(function() {
 <div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;          mask(node) = 1</div>
 <div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;<span class="keywordflow">        end do</span></div>
 <div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;        <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;      <span class="keyword">end subroutine </span>ims_rootls</div>
+<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;      <span class="keyword">end subroutine </span><a class="code" href="namespaceimsreorderingmodule.html#a6b6099ded56613291aa6b21d726c1fe6">ims_rootls</a></div>
 <div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160; </div>
 <div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160; </div>
 <div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160; </div>
@@ -773,7 +818,7 @@ $(function() {
 <div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;        next = head  +  n</div>
 <div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;        <span class="keywordflow">if</span> (mmax &lt; n)  <span class="keywordflow">go to</span> 110</div>
 <div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;        <span class="comment">!</span></div>
-<div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;        <span class="keyword">call </span>ims_md(n, nja, ia, ja, mmax, isp(v), isp(l), isp(head), p, &amp;</div>
+<div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;        <span class="keyword">call </span><a class="code" href="namespaceimsreorderingmodule.html#a458c0ecdc4e4a5c82916c6d722cd52f1">ims_md</a>(n, nja, ia, ja, mmax, isp(v), isp(l), isp(head), p, &amp;</div>
 <div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;                    ip, isp(v), flag)</div>
 <div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;        <span class="keywordflow">if</span> (flag.ne.0)  <span class="keywordflow">go to</span> 100</div>
 <div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160;        <span class="comment">!</span></div>
@@ -793,9 +838,9 @@ $(function() {
 <div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160; </div>
 <div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160; </div>
 <div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160; </div>
-<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;      <span class="keyword">subroutine </span>ims_md(n, nja, ia, ja, mmax, v, l, head, last, next,           &amp;</div>
+<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;      <span class="keyword">subroutine </span><a class="code" href="namespaceimsreorderingmodule.html#a458c0ecdc4e4a5c82916c6d722cd52f1">ims_md</a>(n, nja, ia, ja, mmax, v, l, head, last, next,           &amp;</div>
 <div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;                        mark, flag)</div>
-<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;        <span class="comment">!</span></div>
+<div class="line"><a name="l00726"></a><span class="lineno"><a class="line" href="namespaceimsreorderingmodule.html#a458c0ecdc4e4a5c82916c6d722cd52f1">  726</a></span>&#160;        <span class="comment">!</span></div>
 <div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;        <span class="comment">!*****************************************************************</span></div>
 <div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;        <span class="comment">!  ims_md -- minimum degree algorithm (based on element model)</span></div>
 <div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;        <span class="comment">!*****************************************************************</span></div>
@@ -907,7 +952,7 @@ $(function() {
 <div class="line"><a name="l00835"></a><span class="lineno">  835</span>&#160;        <span class="comment">!</span></div>
 <div class="line"><a name="l00836"></a><span class="lineno">  836</span>&#160;        <span class="comment">! initialization</span></div>
 <div class="line"><a name="l00837"></a><span class="lineno">  837</span>&#160;        tag = 0</div>
-<div class="line"><a name="l00838"></a><span class="lineno">  838</span>&#160;        <span class="keyword">call </span>ims_mdi(n, nja, ia, ja, mmax ,v, l, head, last, next,              &amp;</div>
+<div class="line"><a name="l00838"></a><span class="lineno">  838</span>&#160;        <span class="keyword">call </span><a class="code" href="namespaceimsreorderingmodule.html#a58786d5d969fe529d126eef6383514f1">ims_mdi</a>(n, nja, ia, ja, mmax ,v, l, head, last, next,              &amp;</div>
 <div class="line"><a name="l00839"></a><span class="lineno">  839</span>&#160;                     mark, tag, flag)</div>
 <div class="line"><a name="l00840"></a><span class="lineno">  840</span>&#160;        <span class="keywordflow">if</span> (flag.ne.0)  <span class="keywordflow">return</span></div>
 <div class="line"><a name="l00841"></a><span class="lineno">  841</span>&#160;        <span class="comment">!</span></div>
@@ -935,13 +980,13 @@ $(function() {
 <div class="line"><a name="l00863"></a><span class="lineno">  863</span>&#160;        mark(vk) = tag</div>
 <div class="line"><a name="l00864"></a><span class="lineno">  864</span>&#160;        <span class="comment">!</span></div>
 <div class="line"><a name="l00865"></a><span class="lineno">  865</span>&#160;        <span class="comment">! form element ek from uneliminated neighbors of vk</span></div>
-<div class="line"><a name="l00866"></a><span class="lineno">  866</span>&#160;        <span class="keyword">call </span>ims_mdm(n, mmax, vk, tail, v, l, last, next, mark)</div>
+<div class="line"><a name="l00866"></a><span class="lineno">  866</span>&#160;        <span class="keyword">call </span><a class="code" href="namespaceimsreorderingmodule.html#a082dccd76afafd79bf505871b953e0e2">ims_mdm</a>(n, mmax, vk, tail, v, l, last, next, mark)</div>
 <div class="line"><a name="l00867"></a><span class="lineno">  867</span>&#160;        <span class="comment">!</span></div>
 <div class="line"><a name="l00868"></a><span class="lineno">  868</span>&#160;        <span class="comment">! purge inactive elements and do mass elimination</span></div>
-<div class="line"><a name="l00869"></a><span class="lineno">  869</span>&#160;        <span class="keyword">call </span>ims_mdp(n, mmax, k, ek, tail, v, l, head, last, next, mark)</div>
+<div class="line"><a name="l00869"></a><span class="lineno">  869</span>&#160;        <span class="keyword">call </span><a class="code" href="namespaceimsreorderingmodule.html#a7f3ea5592e9b87ade93e991350b3fc35">ims_mdp</a>(n, mmax, k, ek, tail, v, l, head, last, next, mark)</div>
 <div class="line"><a name="l00870"></a><span class="lineno">  870</span>&#160;        <span class="comment">!</span></div>
 <div class="line"><a name="l00871"></a><span class="lineno">  871</span>&#160;        <span class="comment">! update degrees of uneliminated vertices in ek</span></div>
-<div class="line"><a name="l00872"></a><span class="lineno">  872</span>&#160;        <span class="keyword">call </span>ims_mdu(n, mmax, ek, dmin, v, l, head, last, next, mark)</div>
+<div class="line"><a name="l00872"></a><span class="lineno">  872</span>&#160;        <span class="keyword">call </span><a class="code" href="namespaceimsreorderingmodule.html#a3b4391890aceaeec329ebe2246434039">ims_mdu</a>(n, mmax, ek, dmin, v, l, head, last, next, mark)</div>
 <div class="line"><a name="l00873"></a><span class="lineno">  873</span>&#160;        <span class="comment">!</span></div>
 <div class="line"><a name="l00874"></a><span class="lineno">  874</span>&#160;        <span class="keywordflow">go to</span> 1</div>
 <div class="line"><a name="l00875"></a><span class="lineno">  875</span>&#160;        <span class="comment">!</span></div>
@@ -952,12 +997,12 @@ $(function() {
 <div class="line"><a name="l00880"></a><span class="lineno">  880</span>&#160;<span class="keywordflow">        end do</span></div>
 <div class="line"><a name="l00881"></a><span class="lineno">  881</span>&#160;        <span class="comment">!</span></div>
 <div class="line"><a name="l00882"></a><span class="lineno">  882</span>&#160;        <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00883"></a><span class="lineno">  883</span>&#160;      <span class="keyword">end subroutine </span>ims_md</div>
+<div class="line"><a name="l00883"></a><span class="lineno">  883</span>&#160;      <span class="keyword">end subroutine </span><a class="code" href="namespaceimsreorderingmodule.html#a458c0ecdc4e4a5c82916c6d722cd52f1">ims_md</a></div>
 <div class="line"><a name="l00884"></a><span class="lineno">  884</span>&#160; </div>
 <div class="line"><a name="l00885"></a><span class="lineno">  885</span>&#160; </div>
-<div class="line"><a name="l00886"></a><span class="lineno">  886</span>&#160;      <span class="keyword">subroutine </span>ims_mdi(n, nja, ia, ja, mmax, v, l, head, last, next,          &amp;</div>
+<div class="line"><a name="l00886"></a><span class="lineno">  886</span>&#160;      <span class="keyword">subroutine </span><a class="code" href="namespaceimsreorderingmodule.html#a58786d5d969fe529d126eef6383514f1">ims_mdi</a>(n, nja, ia, ja, mmax, v, l, head, last, next,          &amp;</div>
 <div class="line"><a name="l00887"></a><span class="lineno">  887</span>&#160;                         mark, tag, flag)</div>
-<div class="line"><a name="l00888"></a><span class="lineno">  888</span>&#160;        <span class="comment">!</span></div>
+<div class="line"><a name="l00888"></a><span class="lineno"><a class="line" href="namespaceimsreorderingmodule.html#a58786d5d969fe529d126eef6383514f1">  888</a></span>&#160;        <span class="comment">!</span></div>
 <div class="line"><a name="l00889"></a><span class="lineno">  889</span>&#160;        <span class="comment">!***********************************************************************</span></div>
 <div class="line"><a name="l00890"></a><span class="lineno">  890</span>&#160;        <span class="comment">!  ims_mdi -- initialization</span></div>
 <div class="line"><a name="l00891"></a><span class="lineno">  891</span>&#160;        <span class="comment">!***********************************************************************</span></div>
@@ -1057,12 +1102,12 @@ $(function() {
 <div class="line"><a name="l00985"></a><span class="lineno">  985</span>&#160;        <span class="comment">! ** error-  insufficient storage</span></div>
 <div class="line"><a name="l00986"></a><span class="lineno">  986</span>&#160;101     flag = 9*n + vi</div>
 <div class="line"><a name="l00987"></a><span class="lineno">  987</span>&#160;        <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00988"></a><span class="lineno">  988</span>&#160;      <span class="keyword">end subroutine </span>ims_mdi</div>
+<div class="line"><a name="l00988"></a><span class="lineno">  988</span>&#160;      <span class="keyword">end subroutine </span><a class="code" href="namespaceimsreorderingmodule.html#a58786d5d969fe529d126eef6383514f1">ims_mdi</a></div>
 <div class="line"><a name="l00989"></a><span class="lineno">  989</span>&#160; </div>
 <div class="line"><a name="l00990"></a><span class="lineno">  990</span>&#160; </div>
 <div class="line"><a name="l00991"></a><span class="lineno">  991</span>&#160; </div>
-<div class="line"><a name="l00992"></a><span class="lineno">  992</span>&#160;      <span class="keyword">subroutine </span>ims_mdm(n, mmax, vk, tail, v, l, last, next, mark)</div>
-<div class="line"><a name="l00993"></a><span class="lineno">  993</span>&#160;      <span class="comment">!</span></div>
+<div class="line"><a name="l00992"></a><span class="lineno">  992</span>&#160;      <span class="keyword">subroutine </span><a class="code" href="namespaceimsreorderingmodule.html#a082dccd76afafd79bf505871b953e0e2">ims_mdm</a>(n, mmax, vk, tail, v, l, last, next, mark)</div>
+<div class="line"><a name="l00993"></a><span class="lineno"><a class="line" href="namespaceimsreorderingmodule.html#a082dccd76afafd79bf505871b953e0e2">  993</a></span>&#160;      <span class="comment">!</span></div>
 <div class="line"><a name="l00994"></a><span class="lineno">  994</span>&#160;      <span class="comment">!***********************************************************************</span></div>
 <div class="line"><a name="l00995"></a><span class="lineno">  995</span>&#160;      <span class="comment">!  ims_mdm -- form element from uneliminated neighbors of vk</span></div>
 <div class="line"><a name="l00996"></a><span class="lineno">  996</span>&#160;      <span class="comment">!***********************************************************************</span></div>
@@ -1138,11 +1183,11 @@ $(function() {
 <div class="line"><a name="l01066"></a><span class="lineno"> 1066</span>&#160;5       l(tail) = 0</div>
 <div class="line"><a name="l01067"></a><span class="lineno"> 1067</span>&#160;        <span class="comment">!</span></div>
 <div class="line"><a name="l01068"></a><span class="lineno"> 1068</span>&#160;        <span class="keywordflow">return</span></div>
-<div class="line"><a name="l01069"></a><span class="lineno"> 1069</span>&#160;      <span class="keyword">end subroutine </span>ims_mdm</div>
+<div class="line"><a name="l01069"></a><span class="lineno"> 1069</span>&#160;      <span class="keyword">end subroutine </span><a class="code" href="namespaceimsreorderingmodule.html#a082dccd76afafd79bf505871b953e0e2">ims_mdm</a></div>
 <div class="line"><a name="l01070"></a><span class="lineno"> 1070</span>&#160; </div>
 <div class="line"><a name="l01071"></a><span class="lineno"> 1071</span>&#160; </div>
-<div class="line"><a name="l01072"></a><span class="lineno"> 1072</span>&#160;      <span class="keyword">subroutine </span>ims_mdp(n, mmax, k, ek, tail, v, l, head, last, next, mark)</div>
-<div class="line"><a name="l01073"></a><span class="lineno"> 1073</span>&#160;        <span class="comment">!</span></div>
+<div class="line"><a name="l01072"></a><span class="lineno"> 1072</span>&#160;      <span class="keyword">subroutine </span><a class="code" href="namespaceimsreorderingmodule.html#a7f3ea5592e9b87ade93e991350b3fc35">ims_mdp</a>(n, mmax, k, ek, tail, v, l, head, last, next, mark)</div>
+<div class="line"><a name="l01073"></a><span class="lineno"><a class="line" href="namespaceimsreorderingmodule.html#a7f3ea5592e9b87ade93e991350b3fc35"> 1073</a></span>&#160;        <span class="comment">!</span></div>
 <div class="line"><a name="l01074"></a><span class="lineno"> 1074</span>&#160;        <span class="comment">!***********************************************************************</span></div>
 <div class="line"><a name="l01075"></a><span class="lineno"> 1075</span>&#160;        <span class="comment">!  ims_mdp -- purge inactive elements and do mass elimination</span></div>
 <div class="line"><a name="l01076"></a><span class="lineno"> 1076</span>&#160;        <span class="comment">!***********************************************************************</span></div>
@@ -1256,12 +1301,12 @@ $(function() {
 <div class="line"><a name="l01184"></a><span class="lineno"> 1184</span>&#160;12      l(tail) = 0</div>
 <div class="line"><a name="l01185"></a><span class="lineno"> 1185</span>&#160;        <span class="comment">!</span></div>
 <div class="line"><a name="l01186"></a><span class="lineno"> 1186</span>&#160;        <span class="keywordflow">return</span></div>
-<div class="line"><a name="l01187"></a><span class="lineno"> 1187</span>&#160;      <span class="keyword">end subroutine </span>ims_mdp</div>
+<div class="line"><a name="l01187"></a><span class="lineno"> 1187</span>&#160;      <span class="keyword">end subroutine </span><a class="code" href="namespaceimsreorderingmodule.html#a7f3ea5592e9b87ade93e991350b3fc35">ims_mdp</a></div>
 <div class="line"><a name="l01188"></a><span class="lineno"> 1188</span>&#160; </div>
 <div class="line"><a name="l01189"></a><span class="lineno"> 1189</span>&#160; </div>
 <div class="line"><a name="l01190"></a><span class="lineno"> 1190</span>&#160; </div>
-<div class="line"><a name="l01191"></a><span class="lineno"> 1191</span>&#160;      <span class="keyword">subroutine </span>ims_mdu(n, mmax, ek, dmin, v, l, head, last, next, mark)</div>
-<div class="line"><a name="l01192"></a><span class="lineno"> 1192</span>&#160;        <span class="comment">!</span></div>
+<div class="line"><a name="l01191"></a><span class="lineno"> 1191</span>&#160;      <span class="keyword">subroutine </span><a class="code" href="namespaceimsreorderingmodule.html#a3b4391890aceaeec329ebe2246434039">ims_mdu</a>(n, mmax, ek, dmin, v, l, head, last, next, mark)</div>
+<div class="line"><a name="l01192"></a><span class="lineno"><a class="line" href="namespaceimsreorderingmodule.html#a3b4391890aceaeec329ebe2246434039"> 1192</a></span>&#160;        <span class="comment">!</span></div>
 <div class="line"><a name="l01193"></a><span class="lineno"> 1193</span>&#160;        <span class="comment">!***********************************************************************</span></div>
 <div class="line"><a name="l01194"></a><span class="lineno"> 1194</span>&#160;        <span class="comment">!  ims_mdu -- update degrees of uneliminated vertices in ek</span></div>
 <div class="line"><a name="l01195"></a><span class="lineno"> 1195</span>&#160;        <span class="comment">!***********************************************************************</span></div>
@@ -1373,7 +1418,7 @@ $(function() {
 <div class="line"><a name="l01301"></a><span class="lineno"> 1301</span>&#160;<span class="keywordflow">        end do</span> louter <span class="comment">!10</span></div>
 <div class="line"><a name="l01302"></a><span class="lineno"> 1302</span>&#160;        <span class="comment">!</span></div>
 <div class="line"><a name="l01303"></a><span class="lineno"> 1303</span>&#160;11      <span class="keywordflow">return</span></div>
-<div class="line"><a name="l01304"></a><span class="lineno"> 1304</span>&#160;      <span class="keyword">end subroutine </span>ims_mdu</div>
+<div class="line"><a name="l01304"></a><span class="lineno"> 1304</span>&#160;      <span class="keyword">end subroutine </span><a class="code" href="namespaceimsreorderingmodule.html#a3b4391890aceaeec329ebe2246434039">ims_mdu</a></div>
 <div class="line"><a name="l01305"></a><span class="lineno"> 1305</span>&#160; </div>
 <div class="line"><a name="l01306"></a><span class="lineno"> 1306</span>&#160;      <span class="comment">!</span></div>
 <div class="line"><a name="l01307"></a><span class="lineno"> 1307</span>&#160;      <span class="comment">! ROUTINES FROM SPARSKIT TO PERMUTATE A LINEAR SYSTEM OF EQUATIONS</span></div>
@@ -1451,16 +1496,16 @@ $(function() {
 <div class="line"><a name="l01379"></a><span class="lineno"> 1379</span>&#160;        <span class="comment">!</span></div>
 <div class="line"><a name="l01380"></a><span class="lineno"> 1380</span>&#160;        <span class="comment">! permute rows first</span></div>
 <div class="line"><a name="l01381"></a><span class="lineno"> 1381</span>&#160;        <span class="comment">!</span></div>
-<div class="line"><a name="l01382"></a><span class="lineno"> 1382</span>&#160;        <span class="keyword">call </span>ims_rperm(nrow, nja, a, ja, ia, ao, jao, iao, perm, locjob)</div>
+<div class="line"><a name="l01382"></a><span class="lineno"> 1382</span>&#160;        <span class="keyword">call </span><a class="code" href="namespaceimsreorderingmodule.html#aa425800b8906fcf1d29adf70aead3f54">ims_rperm</a>(nrow, nja, a, ja, ia, ao, jao, iao, perm, locjob)</div>
 <div class="line"><a name="l01383"></a><span class="lineno"> 1383</span>&#160;        <span class="comment">!</span></div>
 <div class="line"><a name="l01384"></a><span class="lineno"> 1384</span>&#160;        <span class="comment">! then permute columns</span></div>
 <div class="line"><a name="l01385"></a><span class="lineno"> 1385</span>&#160;        <span class="comment">!</span></div>
 <div class="line"><a name="l01386"></a><span class="lineno"> 1386</span>&#160;        locjob = 0</div>
 <div class="line"><a name="l01387"></a><span class="lineno"> 1387</span>&#160;        <span class="comment">!</span></div>
 <div class="line"><a name="l01388"></a><span class="lineno"> 1388</span>&#160;        <span class="keywordflow">if</span> (job .le. 2) <span class="keywordflow">then</span></div>
-<div class="line"><a name="l01389"></a><span class="lineno"> 1389</span>&#160;          <span class="keyword">call </span>ims_cperm(nrow, nja, ao, jao, iao, ao, jao, iao, perm, locjob)</div>
+<div class="line"><a name="l01389"></a><span class="lineno"> 1389</span>&#160;          <span class="keyword">call </span><a class="code" href="namespaceimsreorderingmodule.html#a920303380562e2a0ac28d74138f9c299">ims_cperm</a>(nrow, nja, ao, jao, iao, ao, jao, iao, perm, locjob)</div>
 <div class="line"><a name="l01390"></a><span class="lineno"> 1390</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l01391"></a><span class="lineno"> 1391</span>&#160;          <span class="keyword">call </span>ims_cperm(nrow, nja, ao, jao, iao, ao, jao, iao, qperm, locjob)</div>
+<div class="line"><a name="l01391"></a><span class="lineno"> 1391</span>&#160;          <span class="keyword">call </span><a class="code" href="namespaceimsreorderingmodule.html#a920303380562e2a0ac28d74138f9c299">ims_cperm</a>(nrow, nja, ao, jao, iao, ao, jao, iao, qperm, locjob)</div>
 <div class="line"><a name="l01392"></a><span class="lineno"> 1392</span>&#160;<span class="keywordflow">        endif</span></div>
 <div class="line"><a name="l01393"></a><span class="lineno"> 1393</span>&#160;        <span class="comment">!</span></div>
 <div class="line"><a name="l01394"></a><span class="lineno"> 1394</span>&#160;        <span class="keywordflow">return</span></div>
@@ -1469,16 +1514,16 @@ $(function() {
 <div class="line"><a name="l01397"></a><span class="lineno"> 1397</span>&#160; </div>
 <div class="line"><a name="l01398"></a><span class="lineno"> 1398</span>&#160; </div>
 <div class="line"><a name="l01399"></a><span class="lineno"> 1399</span>&#160;      <span class="comment">!-----------------------------------------------------------------------</span></div>
-<div class="line"><a name="l01400"></a><span class="lineno"> 1400</span>&#160;      <span class="keyword">subroutine </span>ims_rperm (nrow, nja, a, ja, ia, ao, jao, iao, perm, job)</div>
-<div class="line"><a name="l01401"></a><span class="lineno"> 1401</span>&#160;        <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l01400"></a><span class="lineno"> 1400</span>&#160;      <span class="keyword">subroutine </span><a class="code" href="namespaceimsreorderingmodule.html#aa425800b8906fcf1d29adf70aead3f54">ims_rperm</a> (nrow, nja, a, ja, ia, ao, jao, iao, perm, job)</div>
+<div class="line"><a name="l01401"></a><span class="lineno"><a class="line" href="namespaceimsreorderingmodule.html#aa425800b8906fcf1d29adf70aead3f54"> 1401</a></span>&#160;        <span class="keywordtype">implicit none</span></div>
 <div class="line"><a name="l01402"></a><span class="lineno"> 1402</span>&#160;        </div>
 <div class="line"><a name="l01403"></a><span class="lineno"> 1403</span>&#160;        <span class="comment">! -- dummy variables</span></div>
 <div class="line"><a name="l01404"></a><span class="lineno"> 1404</span>&#160;        <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: nrow</div>
 <div class="line"><a name="l01405"></a><span class="lineno"> 1405</span>&#160;        <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: nja</div>
-<div class="line"><a name="l01406"></a><span class="lineno"> 1406</span>&#160;<span class="keywordtype">        real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">dimension(nja)</span>, <span class="keywordtype">intent(in)</span> :: a</div>
+<div class="line"><a name="l01406"></a><span class="lineno"> 1406</span>&#160;<span class="keywordtype">        real</span>(DP), <span class="keywordtype">dimension(nja)</span>, <span class="keywordtype">intent(in)</span> :: a</div>
 <div class="line"><a name="l01407"></a><span class="lineno"> 1407</span>&#160;        <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(nja)</span>, <span class="keywordtype">intent(in)</span> :: ja</div>
 <div class="line"><a name="l01408"></a><span class="lineno"> 1408</span>&#160;        <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(nrow+1)</span>, <span class="keywordtype">intent(in)</span> :: ia</div>
-<div class="line"><a name="l01409"></a><span class="lineno"> 1409</span>&#160;<span class="keywordtype">        real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">dimension(nja)</span>, <span class="keywordtype">intent(inout)</span> :: ao</div>
+<div class="line"><a name="l01409"></a><span class="lineno"> 1409</span>&#160;<span class="keywordtype">        real</span>(DP), <span class="keywordtype">dimension(nja)</span>, <span class="keywordtype">intent(inout)</span> :: ao</div>
 <div class="line"><a name="l01410"></a><span class="lineno"> 1410</span>&#160;        <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(nja)</span>, <span class="keywordtype">intent(inout)</span> :: jao</div>
 <div class="line"><a name="l01411"></a><span class="lineno"> 1411</span>&#160;        <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(nrow+1)</span>, <span class="keywordtype">intent(inout)</span> :: iao</div>
 <div class="line"><a name="l01412"></a><span class="lineno"> 1412</span>&#160;        <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(nrow)</span>, <span class="keywordtype">intent(inout)</span> :: perm</div>
@@ -1558,21 +1603,21 @@ $(function() {
 <div class="line"><a name="l01486"></a><span class="lineno"> 1486</span>&#160;        <span class="keywordflow">return</span></div>
 <div class="line"><a name="l01487"></a><span class="lineno"> 1487</span>&#160;      <span class="comment">!---------end-of-ims_rperm -------------------------------------------------</span></div>
 <div class="line"><a name="l01488"></a><span class="lineno"> 1488</span>&#160;      <span class="comment">!-----------------------------------------------------------------------</span></div>
-<div class="line"><a name="l01489"></a><span class="lineno"> 1489</span>&#160;      <span class="keyword">end subroutine </span>ims_rperm</div>
+<div class="line"><a name="l01489"></a><span class="lineno"> 1489</span>&#160;      <span class="keyword">end subroutine </span><a class="code" href="namespaceimsreorderingmodule.html#aa425800b8906fcf1d29adf70aead3f54">ims_rperm</a></div>
 <div class="line"><a name="l01490"></a><span class="lineno"> 1490</span>&#160; </div>
 <div class="line"><a name="l01491"></a><span class="lineno"> 1491</span>&#160; </div>
 <div class="line"><a name="l01492"></a><span class="lineno"> 1492</span>&#160; </div>
 <div class="line"><a name="l01493"></a><span class="lineno"> 1493</span>&#160;      <span class="comment">!-----------------------------------------------------------------------</span></div>
-<div class="line"><a name="l01494"></a><span class="lineno"> 1494</span>&#160;      <span class="keyword">subroutine </span>ims_cperm (nrow, nja, a, ja, ia, ao, jao, iao, perm, job)</div>
-<div class="line"><a name="l01495"></a><span class="lineno"> 1495</span>&#160;        <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l01494"></a><span class="lineno"> 1494</span>&#160;      <span class="keyword">subroutine </span><a class="code" href="namespaceimsreorderingmodule.html#a920303380562e2a0ac28d74138f9c299">ims_cperm</a> (nrow, nja, a, ja, ia, ao, jao, iao, perm, job)</div>
+<div class="line"><a name="l01495"></a><span class="lineno"><a class="line" href="namespaceimsreorderingmodule.html#a920303380562e2a0ac28d74138f9c299"> 1495</a></span>&#160;        <span class="keywordtype">implicit none</span></div>
 <div class="line"><a name="l01496"></a><span class="lineno"> 1496</span>&#160; </div>
 <div class="line"><a name="l01497"></a><span class="lineno"> 1497</span>&#160;        <span class="comment">! -- dummy variables</span></div>
 <div class="line"><a name="l01498"></a><span class="lineno"> 1498</span>&#160;        <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: nrow</div>
 <div class="line"><a name="l01499"></a><span class="lineno"> 1499</span>&#160;        <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: nja</div>
-<div class="line"><a name="l01500"></a><span class="lineno"> 1500</span>&#160;<span class="keywordtype">        real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">dimension(nja)</span>, <span class="keywordtype">intent(in)</span> :: a</div>
+<div class="line"><a name="l01500"></a><span class="lineno"> 1500</span>&#160;<span class="keywordtype">        real</span>(DP), <span class="keywordtype">dimension(nja)</span>, <span class="keywordtype">intent(in)</span> :: a</div>
 <div class="line"><a name="l01501"></a><span class="lineno"> 1501</span>&#160;        <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(nja)</span>, <span class="keywordtype">intent(in)</span> :: ja</div>
 <div class="line"><a name="l01502"></a><span class="lineno"> 1502</span>&#160;        <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(nrow+1)</span>, <span class="keywordtype">intent(in)</span> :: ia</div>
-<div class="line"><a name="l01503"></a><span class="lineno"> 1503</span>&#160;<span class="keywordtype">        real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">dimension(nja)</span>, <span class="keywordtype">intent(inout)</span> :: ao</div>
+<div class="line"><a name="l01503"></a><span class="lineno"> 1503</span>&#160;<span class="keywordtype">        real</span>(DP), <span class="keywordtype">dimension(nja)</span>, <span class="keywordtype">intent(inout)</span> :: ao</div>
 <div class="line"><a name="l01504"></a><span class="lineno"> 1504</span>&#160;        <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(nja)</span>, <span class="keywordtype">intent(inout)</span> :: jao</div>
 <div class="line"><a name="l01505"></a><span class="lineno"> 1505</span>&#160;        <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(nrow+1)</span>, <span class="keywordtype">intent(inout)</span> :: iao</div>
 <div class="line"><a name="l01506"></a><span class="lineno"> 1506</span>&#160;        <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(nrow)</span>, <span class="keywordtype">intent(inout)</span> :: perm</div>
@@ -1640,7 +1685,7 @@ $(function() {
 <div class="line"><a name="l01568"></a><span class="lineno"> 1568</span>&#160;        <span class="keywordflow">return</span></div>
 <div class="line"><a name="l01569"></a><span class="lineno"> 1569</span>&#160;        <span class="comment">!---------end-of-ims_cperm--------------------------------------------------</span></div>
 <div class="line"><a name="l01570"></a><span class="lineno"> 1570</span>&#160;        <span class="comment">!-----------------------------------------------------------------------</span></div>
-<div class="line"><a name="l01571"></a><span class="lineno"> 1571</span>&#160;      <span class="keyword">end subroutine </span>ims_cperm</div>
+<div class="line"><a name="l01571"></a><span class="lineno"> 1571</span>&#160;      <span class="keyword">end subroutine </span><a class="code" href="namespaceimsreorderingmodule.html#a920303380562e2a0ac28d74138f9c299">ims_cperm</a></div>
 <div class="line"><a name="l01572"></a><span class="lineno"> 1572</span>&#160; </div>
 <div class="line"><a name="l01573"></a><span class="lineno"> 1573</span>&#160; </div>
 <div class="line"><a name="l01574"></a><span class="lineno"> 1574</span>&#160;      <span class="comment">!-----------------------------------------------------------------------</span></div>
@@ -1730,19 +1775,34 @@ $(function() {
 <div class="line"><a name="l01658"></a><span class="lineno"> 1658</span>&#160;  </div>
 <div class="line"><a name="l01659"></a><span class="lineno"> 1659</span>&#160;  <span class="keyword">end module </span>IMSReorderingModule</div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <div class="ttc" id="anamespaceimsreorderingmodule_html_a2d3e25f92144362bc1987df5f745cc0e"><div class="ttname"><a href="namespaceimsreorderingmodule.html#a2d3e25f92144362bc1987df5f745cc0e">imsreorderingmodule::ims_genrcm</a></div><div class="ttdeci">subroutine, public ims_genrcm(neqns, nja, xadj0, adjncy, perm, mask, xls)</div><div class="ttdef"><b>Definition:</b> <a href="ims8reordering_8f90_source.html#l00038">ims8reordering.f90:38</a></div></div>
 <div class="ttc" id="anamespacekindmodule_html"><div class="ttname"><a href="namespacekindmodule.html">kindmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="kind_8f90_source.html#l00001">kind.f90:1</a></div></div>
 <div class="ttc" id="anamespaceimsreorderingmodule_html_ab67ada45733ed9907e7b30988d72f74a"><div class="ttname"><a href="namespaceimsreorderingmodule.html#ab67ada45733ed9907e7b30988d72f74a">imsreorderingmodule::ims_vperm</a></div><div class="ttdeci">subroutine, public ims_vperm(n, x, perm)</div><div class="ttdef"><b>Definition:</b> <a href="ims8reordering_8f90_source.html#l01576">ims8reordering.f90:1576</a></div></div>
 <div class="ttc" id="anamespaceimsreorderingmodule_html"><div class="ttname"><a href="namespaceimsreorderingmodule.html">imsreorderingmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="ims8reordering_8f90_source.html#l00001">ims8reordering.f90:1</a></div></div>
+<div class="ttc" id="anamespaceimsreorderingmodule_html_a2deb34b69752848ce8162ac50f930dec"><div class="ttname"><a href="namespaceimsreorderingmodule.html#a2deb34b69752848ce8162ac50f930dec">imsreorderingmodule::ims_fnroot</a></div><div class="ttdeci">subroutine ims_fnroot(lls, neqns, nja, root, xadj, adjncy, mask, nlvl, xls, ls)</div><div class="ttdef"><b>Definition:</b> <a href="ims8reordering_8f90_source.html#l00134">ims8reordering.f90:134</a></div></div>
+<div class="ttc" id="anamespaceimsreorderingmodule_html_a3b4391890aceaeec329ebe2246434039"><div class="ttname"><a href="namespaceimsreorderingmodule.html#a3b4391890aceaeec329ebe2246434039">imsreorderingmodule::ims_mdu</a></div><div class="ttdeci">subroutine ims_mdu(n, mmax, ek, dmin, v, l, head, last, next, mark)</div><div class="ttdef"><b>Definition:</b> <a href="ims8reordering_8f90_source.html#l01192">ims8reordering.f90:1192</a></div></div>
+<div class="ttc" id="anamespaceimsreorderingmodule_html_a920303380562e2a0ac28d74138f9c299"><div class="ttname"><a href="namespaceimsreorderingmodule.html#a920303380562e2a0ac28d74138f9c299">imsreorderingmodule::ims_cperm</a></div><div class="ttdeci">subroutine ims_cperm(nrow, nja, a, ja, ia, ao, jao, iao, perm, job)</div><div class="ttdef"><b>Definition:</b> <a href="ims8reordering_8f90_source.html#l01495">ims8reordering.f90:1495</a></div></div>
+<div class="ttc" id="anamespaceimsreorderingmodule_html_a6b6099ded56613291aa6b21d726c1fe6"><div class="ttname"><a href="namespaceimsreorderingmodule.html#a6b6099ded56613291aa6b21d726c1fe6">imsreorderingmodule::ims_rootls</a></div><div class="ttdeci">subroutine ims_rootls(lls, neqns, nja, root, xadj, adjncy, mask, nlvl, xls, ls)</div><div class="ttdef"><b>Definition:</b> <a href="ims8reordering_8f90_source.html#l00456">ims8reordering.f90:456</a></div></div>
+<div class="ttc" id="anamespaceimsreorderingmodule_html_a7f3ea5592e9b87ade93e991350b3fc35"><div class="ttname"><a href="namespaceimsreorderingmodule.html#a7f3ea5592e9b87ade93e991350b3fc35">imsreorderingmodule::ims_mdp</a></div><div class="ttdeci">subroutine ims_mdp(n, mmax, k, ek, tail, v, l, head, last, next, mark)</div><div class="ttdef"><b>Definition:</b> <a href="ims8reordering_8f90_source.html#l01073">ims8reordering.f90:1073</a></div></div>
 <div class="ttc" id="anamespacekindmodule_html_a2f6861418b5e7d3d602b77228232a470"><div class="ttname"><a href="namespacekindmodule.html#a2f6861418b5e7d3d602b77228232a470">kindmodule::i4b</a></div><div class="ttdeci">integer, parameter i4b</div><div class="ttdef"><b>Definition:</b> <a href="kind_8f90_source.html#l00009">kind.f90:9</a></div></div>
+<div class="ttc" id="anamespaceimsreorderingmodule_html_a5d8da64be84261b64cb4c946f19765c3"><div class="ttname"><a href="namespaceimsreorderingmodule.html#a5d8da64be84261b64cb4c946f19765c3">imsreorderingmodule::ims_rcm</a></div><div class="ttdeci">subroutine ims_rcm(llperm, neqns, nja, root, xadj, adjncy, mask, perm, ccsize, deg)</div><div class="ttdef"><b>Definition:</b> <a href="ims8reordering_8f90_source.html#l00234">ims8reordering.f90:234</a></div></div>
 <div class="ttc" id="anamespaceimsreorderingmodule_html_ae73f7a7ce75cd046272f4e86ac0d1e9e"><div class="ttname"><a href="namespaceimsreorderingmodule.html#ae73f7a7ce75cd046272f4e86ac0d1e9e">imsreorderingmodule::ims_odrv</a></div><div class="ttdeci">subroutine, public ims_odrv(n, nja, nsp, ia, ja, p, ip, isp, flag)</div><div class="ttdef"><b>Definition:</b> <a href="ims8reordering_8f90_source.html#l00532">ims8reordering.f90:532</a></div></div>
+<div class="ttc" id="anamespaceimsreorderingmodule_html_a2b7774290db1a0706fb7bf500716ccf3"><div class="ttname"><a href="namespaceimsreorderingmodule.html#a2b7774290db1a0706fb7bf500716ccf3">imsreorderingmodule::ims_degree</a></div><div class="ttdeci">subroutine ims_degree(lls, neqns, nja, root, xadj, adjncy, mask, deg, ccsize, ls)</div><div class="ttdef"><b>Definition:</b> <a href="ims8reordering_8f90_source.html#l00354">ims8reordering.f90:354</a></div></div>
+<div class="ttc" id="anamespaceimsreorderingmodule_html_aa425800b8906fcf1d29adf70aead3f54"><div class="ttname"><a href="namespaceimsreorderingmodule.html#aa425800b8906fcf1d29adf70aead3f54">imsreorderingmodule::ims_rperm</a></div><div class="ttdeci">subroutine ims_rperm(nrow, nja, a, ja, ia, ao, jao, iao, perm, job)</div><div class="ttdef"><b>Definition:</b> <a href="ims8reordering_8f90_source.html#l01401">ims8reordering.f90:1401</a></div></div>
+<div class="ttc" id="anamespaceimsreorderingmodule_html_a082dccd76afafd79bf505871b953e0e2"><div class="ttname"><a href="namespaceimsreorderingmodule.html#a082dccd76afafd79bf505871b953e0e2">imsreorderingmodule::ims_mdm</a></div><div class="ttdeci">subroutine ims_mdm(n, mmax, vk, tail, v, l, last, next, mark)</div><div class="ttdef"><b>Definition:</b> <a href="ims8reordering_8f90_source.html#l00993">ims8reordering.f90:993</a></div></div>
 <div class="ttc" id="anamespacekindmodule_html_ae38bd3a7dfaf151094c26e1529259639"><div class="ttname"><a href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">kindmodule::dp</a></div><div class="ttdeci">integer, parameter dp</div><div class="ttdef"><b>Definition:</b> <a href="kind_8f90_source.html#l00007">kind.f90:7</a></div></div>
+<div class="ttc" id="anamespaceimsreorderingmodule_html_a458c0ecdc4e4a5c82916c6d722cd52f1"><div class="ttname"><a href="namespaceimsreorderingmodule.html#a458c0ecdc4e4a5c82916c6d722cd52f1">imsreorderingmodule::ims_md</a></div><div class="ttdeci">subroutine ims_md(n, nja, ia, ja, mmax, v, l, head, last, next, mark, flag)</div><div class="ttdef"><b>Definition:</b> <a href="ims8reordering_8f90_source.html#l00726">ims8reordering.f90:726</a></div></div>
+<div class="ttc" id="anamespaceimsreorderingmodule_html_a58786d5d969fe529d126eef6383514f1"><div class="ttname"><a href="namespaceimsreorderingmodule.html#a58786d5d969fe529d126eef6383514f1">imsreorderingmodule::ims_mdi</a></div><div class="ttdeci">subroutine ims_mdi(n, nja, ia, ja, mmax, v, l, head, last, next, mark, tag, flag)</div><div class="ttdef"><b>Definition:</b> <a href="ims8reordering_8f90_source.html#l00888">ims8reordering.f90:888</a></div></div>
 <div class="ttc" id="anamespaceimsreorderingmodule_html_aa8036709ae066a12a9b07c3afae16d9d"><div class="ttname"><a href="namespaceimsreorderingmodule.html#aa8036709ae066a12a9b07c3afae16d9d">imsreorderingmodule::ims_dperm</a></div><div class="ttdeci">subroutine, public ims_dperm(nrow, nja, a, ja, ia, ao, jao, iao, perm, qperm, job)</div><div class="ttdef"><b>Definition:</b> <a href="ims8reordering_8f90_source.html#l01313">ims8reordering.f90:1313</a></div></div>
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_45e973df69963bbfe985a1f7e6db2b6f.html">Solution</a></li><li class="navelem"><a class="el" href="dir_05d5634044adf0ab08e7f809dfce3115.html">SparseMatrixSolver</a></li><li class="navelem"><a class="el" href="ims8reordering_8f90.html">ims8reordering.f90</a></li>
+    <li class="footer">Generated on Thu Jun 24 2021 19:50:09 for MODFLOW 6 by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
 </body>
 </html>

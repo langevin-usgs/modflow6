@@ -1,15 +1,14 @@
 <map id="obsmodule::defaultobsidprocessor" name="obsmodule::defaultobsidprocessor">
-<area shape="rect" id="node1" title=" " alt="" coords="460,301,707,327"/>
-<area shape="rect" id="node2" href="$namespaceapimodule.html#a69610802564ad710cb88863117b38a46" title="@ brief Create a new package object" alt="" coords="228,45,395,71"/>
-<area shape="rect" id="node5" href="$namespacegwtcncmodule.html#a3c77238777ea30a8701138050f160dcd" title=" " alt="" coords="229,96,394,137"/>
-<area shape="rect" id="node6" href="$namespacechdmodule.html#a14e50adbfa20e7c9aaeb42c74fcb6d47" title=" " alt="" coords="211,162,412,189"/>
-<area shape="rect" id="node7" href="$namespacedrnmodule.html#a4b10ec979b34357f2eef95678fb3639d" title=" " alt="" coords="241,213,381,239"/>
-<area shape="rect" id="node8" href="$namespaceevtmodule.html#ad8a0677acb3111f65840a82dcdf966dd" title=" " alt="" coords="236,264,387,305"/>
-<area shape="rect" id="node9" href="$namespaceghbmodule.html#a3d8bb192db698d9cd0618ce26d490627" title=" " alt="" coords="238,330,385,357"/>
-<area shape="rect" id="node10" href="$namespacerchmodule.html#a0f1f15c7852427287aa0e068d7c84080" title=" " alt="" coords="237,381,386,423"/>
-<area shape="rect" id="node11" href="$namespacerivmodule.html#a34b470fa86fa279bae77a185b43ef966" title=" " alt="" coords="245,447,377,474"/>
-<area shape="rect" id="node12" href="$namespacegwtsrcmodule.html#a6b99a759fd18a16e669003cdc49c007f" title=" " alt="" coords="231,498,391,525"/>
-<area shape="rect" id="node13" href="$namespacewelmodule.html#a8437fc114c52ba645fb2b3ec368baaa0" title=" " alt="" coords="239,549,383,575"/>
-<area shape="rect" id="node3" href="$namespacegwtmodule.html#af18b6e0a8010b0b5ac1eae25d179c0dd" title=" " alt="" coords="5,5,163,47"/>
-<area shape="rect" id="node4" href="$namespacegwfmodule.html#a9fc339c6daad0503d34ef42f994a98ec" title=" " alt="" coords="5,71,163,112"/>
+<area shape="rect" id="node1" title=" " alt="" coords="251,259,497,285"/>
+<area shape="rect" id="node2" href="$namespaceapimodule.html#addb9870e4a80b68dac1cd789b12911f7" title="Define the observation types available in the package." alt="" coords="19,5,189,32"/>
+<area shape="rect" id="node3" href="$namespacechdmodule.html#a6a94d84ad6cb107d927bdffabaa88fe8" title=" " alt="" coords="17,56,191,83"/>
+<area shape="rect" id="node4" href="$namespacegwtcncmodule.html#a59744a874c03018d33cb20525628615f" title=" " alt="" coords="5,107,203,133"/>
+<area shape="rect" id="node5" href="$namespacedrnmodule.html#ae543909f3fa90d218573f96fef196cad" title=" " alt="" coords="19,157,189,184"/>
+<area shape="rect" id="node6" href="$namespaceevtmodule.html#a732fd9183ed0fb9524b22c2adfd888e3" title=" " alt="" coords="19,208,189,235"/>
+<area shape="rect" id="node7" href="$namespaceghbmodule.html#a5acaf68895a0fcbc0e3a5fa3e4eb7bc6" title=" " alt="" coords="15,259,193,285"/>
+<area shape="rect" id="node8" href="$namespaceobsmodule.html#af536a2aa67c795faa46e96ba457a6f62" title=" " alt="" coords="27,309,181,336"/>
+<area shape="rect" id="node9" href="$namespacerchmodule.html#a2b6eba92ff45bb9659f15c76a565d08c" title=" " alt="" coords="19,360,189,387"/>
+<area shape="rect" id="node10" href="$namespacerivmodule.html#a4781898f15fa14125b95c3f497a7f2ac" title=" " alt="" coords="23,411,185,437"/>
+<area shape="rect" id="node11" href="$namespacegwtsrcmodule.html#afad360a4a9ff73a56324affccdd2c628" title=" " alt="" coords="9,461,199,488"/>
+<area shape="rect" id="node12" href="$namespacewelmodule.html#aec99ce0e590a8c2633cbbccb6c4d398d" title=" " alt="" coords="17,512,191,539"/>
 </map>

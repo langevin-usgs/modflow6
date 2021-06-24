@@ -1,6 +1,8 @@
 <map id="mf6xmi::xmi_prepare_solve" name="mf6xmi::xmi_prepare_solve">
 <area shape="rect" id="node1" title="Prepare for solving the system." alt="" coords="5,39,168,80"/>
 <area shape="rect" id="node2" href="$namespacemf6bmiutil.html#aed42965695d84c9e4b715ff1d013fed4" title="Get the solution object for this index." alt="" coords="216,46,391,73"/>
-<area shape="rect" id="node3" href="$namespacenumericalsolutionmodule.html#acc653881da580b6418122bb466276f63" title=" " alt="" coords="439,5,657,47"/>
-<area shape="rect" id="node4" href="$namespacesolutiongroupmodule.html#a7adf638009121f69976a00aa98c604b5" title=" " alt="" coords="453,71,643,112"/>
+<area shape="rect" id="node3" href="$namespacenumericalsolutionmodule.html#acc653881da580b6418122bb466276f63" title="@ brief Get a numerical solution" alt="" coords="439,5,657,47"/>
+<area shape="rect" id="node5" href="$namespacesolutiongroupmodule.html#a7adf638009121f69976a00aa98c604b5" title=" " alt="" coords="453,71,643,112"/>
+<area shape="rect" id="node4" href="$namespacenumericalsolutionmodule.html#aefead85b912cfb79e860d6fe3cb2069c" title="@ brief Cast a object as a Numerical Solution" alt="" coords="705,5,928,47"/>
+<area shape="rect" id="node6" href="$namespacesolutiongroupmodule.html#a24edb8f47b612f3c62752756210e9cca" title=" " alt="" coords="719,71,914,112"/>
 </map>

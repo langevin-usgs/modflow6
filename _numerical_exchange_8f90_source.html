@@ -5,13 +5,22 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MODFLOW 6 Code Documentation: /home/runner/work/modflow6/modflow6/src/Exchange/NumericalExchange.f90 Source File</title>
+<title>MODFLOW 6: /home/runner/work/modflow6/modflow6/src/Exchange/NumericalExchange.f90 Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="CustomDoxygen.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -21,9 +30,12 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="mf6-triangular-grid.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">MODFLOW 6 Code Documentation
+   <div id="projectname">MODFLOW 6
+   &#160;<span id="projectnumber">version 6.2.2</span>
    </div>
+   <div id="projectbrief">MODFLOW 6 Code Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -36,16 +48,54 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Modules</span></a></li>
+      <li><a href="annotated.html"><span>Data&#160;Types&#160;List</span></a></li>
+      <li class="current"><a href="files.html"><span>Files</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('_numerical_exchange_8f90_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,11 +110,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_95d5cc30a66cc7502f2f5157978bb5c3.html">Exchange</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">NumericalExchange.f90</div>  </div>
@@ -76,7 +121,7 @@ $(function() {
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacebasemodelmodule.html">basemodelmodule</a>,       <span class="keywordtype">only</span>: basemodeltype  </div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacebaseexchangemodule.html">baseexchangemodule</a>,    <span class="keywordtype">only</span>: baseexchangetype, <a class="code" href="namespacebaseexchangemodule.html#a67919a88cc5ebe70bb4a38eaf9ef9144">addbaseexchangetolist</a>  </div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacenumericalmodelmodule.html">numericalmodelmodule</a>,  <span class="keywordtype">only</span>: numericalmodeltype</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacelistmodule.html">listmodule</a>,            <span class="keywordtype">only</span>: listtype</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacelistmodule.html">listmodule</a>,            <span class="keywordtype">only</span>: <a class="code" href="structlistmodule_1_1listtype.html">listtype</a></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  <span class="keywordtype">implicit none</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
@@ -84,30 +129,30 @@ $(function() {
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <span class="keywordtype">public</span> :: numericalexchangetype,                                             &amp;</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;            <a class="code" href="namespacenumericalexchangemodule.html#a56a50d312b63be01db46d31e4992d451">addnumericalexchangetolist</a>, <a class="code" href="namespacenumericalexchangemodule.html#a09ae423b40a16a7841cbb95815029b0f">getnumericalexchangefromlist</a></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <span class="keyword">type</span>, <span class="keyword">extends</span>(baseexchangetype) :: numericalexchangetype    </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">character(len=7)</span> :: typename<span class="comment"> !&lt; name of the type (e.g., &#39;GWF-GWF&#39;)</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="structnumericalexchangemodule_1_1numericalexchangetype.html">   15</a></span>&#160;  <span class="keyword">type</span>, <span class="keyword">extends</span>(baseexchangetype) :: numericalexchangetype    </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="structnumericalexchangemodule_1_1numericalexchangetype.html#a93de8d8c83db2fcdacb25b8f262a32a4">   16</a></span>&#160;    <span class="keywordtype">character(len=7)</span> :: typename<span class="comment"> !&lt; name of the type (e.g., &#39;GWF-GWF&#39;)</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <span class="keyword">contains</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">procedure</span> :: exg_df</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">procedure</span> :: exg_ac</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">procedure</span> :: exg_mc</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">procedure</span> :: exg_ar</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="structnumericalexchangemodule_1_1numericalexchangetype.html#ae218c91a415c5f094efacd6078377847">   18</a></span>&#160;    <span class="keywordtype">procedure</span> :: <a class="code" href="interfacebaseexchangemodule_1_1exg__df.html">exg_df</a></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="structnumericalexchangemodule_1_1numericalexchangetype.html#a3c6e81ca03bb82a7fa751676bc1a99af">   19</a></span>&#160;    <span class="keywordtype">procedure</span> :: <a class="code" href="namespacenumericalexchangemodule.html#ae2312a0a441228c4a789c96e802a44e5">exg_ac</a></div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="structnumericalexchangemodule_1_1numericalexchangetype.html#ad85a330782be233e9c8990b4dd3b2e02">   20</a></span>&#160;    <span class="keywordtype">procedure</span> :: <a class="code" href="namespacenumericalexchangemodule.html#ad5ce09f51cf20a10d82df3a52c0b65b6">exg_mc</a></div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="structnumericalexchangemodule_1_1numericalexchangetype.html#ad09536d26c39b40bfdb63b0ffcddc1cb">   21</a></span>&#160;    <span class="keywordtype">procedure</span> :: <a class="code" href="interfacebaseexchangemodule_1_1exg__ar.html">exg_ar</a></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="comment">!procedure :: exg_rp (not needed yet; base exg_rp does nothing)</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">procedure</span> :: exg_ad</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">procedure</span> :: exg_cf</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">procedure</span> :: exg_fc</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">procedure</span> :: exg_nr</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">procedure</span> :: exg_cc</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">procedure</span> :: exg_cq</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">procedure</span> :: exg_bd</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">procedure</span> :: exg_ot</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">procedure</span> :: exg_da</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">procedure</span> :: get_iasym   </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="structnumericalexchangemodule_1_1numericalexchangetype.html#a1dbc09188a45578689368f1b09ca4b3a">   23</a></span>&#160;    <span class="keywordtype">procedure</span> :: <a class="code" href="namespacenumericalexchangemodule.html#a7d9242f0a0a64488733a689b317e877e">exg_ad</a></div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="structnumericalexchangemodule_1_1numericalexchangetype.html#a26b8c4607a29e69c611f69f77f10a007">   24</a></span>&#160;    <span class="keywordtype">procedure</span> :: <a class="code" href="namespacenumericalexchangemodule.html#abe08ac342039fa497fd2a39ff6c56c28">exg_cf</a></div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="structnumericalexchangemodule_1_1numericalexchangetype.html#acb8a4ffa12de0dd45412976de9116f54">   25</a></span>&#160;    <span class="keywordtype">procedure</span> :: <a class="code" href="namespacenumericalexchangemodule.html#a321e1c4b3c2102679ad1ccdfad39eb41">exg_fc</a></div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="structnumericalexchangemodule_1_1numericalexchangetype.html#aade2ff46e5e4a833543921584cf3bf8e">   26</a></span>&#160;    <span class="keywordtype">procedure</span> :: <a class="code" href="namespacenumericalexchangemodule.html#a86db6c5486739bab39399688aba3393b">exg_nr</a></div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="structnumericalexchangemodule_1_1numericalexchangetype.html#a1578aa72214a2458661254da9e393b4e">   27</a></span>&#160;    <span class="keywordtype">procedure</span> :: <a class="code" href="namespacenumericalexchangemodule.html#aca86e0b450435c20feb1e10131f0b586">exg_cc</a></div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="structnumericalexchangemodule_1_1numericalexchangetype.html#a754131d5ca209630fac2b0994d7b1c2d">   28</a></span>&#160;    <span class="keywordtype">procedure</span> :: <a class="code" href="namespacenumericalexchangemodule.html#ad93aa888934fb1a166fef926adf39baf">exg_cq</a></div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="structnumericalexchangemodule_1_1numericalexchangetype.html#a88625976d38f1b6cee7a2245bb111a9f">   29</a></span>&#160;    <span class="keywordtype">procedure</span> :: <a class="code" href="namespacenumericalexchangemodule.html#ab883b8b5384c78053c844d7241e22d5f">exg_bd</a></div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="structnumericalexchangemodule_1_1numericalexchangetype.html#a2ce45eabef1d6dd2ed6ed09e5c028989">   30</a></span>&#160;    <span class="keywordtype">procedure</span> :: <a class="code" href="namespacenumericalexchangemodule.html#a3350878eb5645f9fa174b5857cac875b">exg_ot</a></div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="structnumericalexchangemodule_1_1numericalexchangetype.html#a2783c288096ae2a6a097ffef6ba2507a">   31</a></span>&#160;    <span class="keywordtype">procedure</span> :: <a class="code" href="namespacenumericalexchangemodule.html#addeb957c5e724e941d430af67c214ffb">exg_da</a></div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="structnumericalexchangemodule_1_1numericalexchangetype.html#a1fee256ab9bd4ab22486a7ed66468481">   32</a></span>&#160;    <span class="keywordtype">procedure</span> :: <a class="code" href="namespacenumericalexchangemodule.html#af4990b3a0c4074f3993d7ffde01fb5e4">get_iasym</a>   </div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keyword">end type </span>numericalexchangetype</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">contains</span></div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keyword">subroutine </span>exg_df(this)</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="interfacebaseexchangemodule_1_1exg__df.html">exg_df</a>(this)</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="namespacenumericalexchangemodule.html#a239b2a2d899d88530dc46adb70d7705b">   38</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">! exg_df -- define the exchange</span></div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">!</span></div>
@@ -117,13 +162,13 @@ $(function() {
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacebasemodelmodule.html">basemodelmodule</a>, <span class="keywordtype">only</span>: basemodeltype</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespaceinputoutputmodule.html">inputoutputmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespaceinputoutputmodule.html#a535bdfca3d31ebc3a8e4bd5af6890d55">getunit</a>, <a class="code" href="namespaceinputoutputmodule.html#ae97851e3edae8d9809e384058a1a4d52">openfile</a></div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">class</span>(NumericalExchangeType) :: this</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">class</span>(numericalexchangetype) :: this</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="comment">! -- return</span></div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keyword">end subroutine </span>exg_df</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="interfacebaseexchangemodule_1_1exg__df.html">exg_df</a></div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacenumericalexchangemodule.html#ae2312a0a441228c4a789c96e802a44e5">exg_ac</a>(this, sparse)</div>
 <div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="namespacenumericalexchangemodule.html#ae2312a0a441228c4a789c96e802a44e5">   57</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
@@ -163,7 +208,7 @@ $(function() {
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="comment">! -- return</span></div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacenumericalexchangemodule.html#ad5ce09f51cf20a10d82df3a52c0b65b6">exg_mc</a></div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacenumericalexchangemodule.html#ad6dbac9cbf5d645a4ddd0642e326123d">exg_ar</a>(this)</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="interfacebaseexchangemodule_1_1exg__ar.html">exg_ar</a>(this)</div>
 <div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="namespacenumericalexchangemodule.html#ad6dbac9cbf5d645a4ddd0642e326123d">   95</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="comment">! exg_ar -- Allocate and read</span></div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="comment">! ******************************************************************************</span></div>
@@ -175,10 +220,10 @@ $(function() {
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="comment">! -- return</span></div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacenumericalexchangemodule.html#ad6dbac9cbf5d645a4ddd0642e326123d">exg_ar</a></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="interfacebaseexchangemodule_1_1exg__ar.html">exg_ar</a></div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  <span class="keyword">subroutine </span>exg_ad(this)</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacenumericalexchangemodule.html#a7d9242f0a0a64488733a689b317e877e">exg_ad</a>(this)</div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="namespacenumericalexchangemodule.html#a7d9242f0a0a64488733a689b317e877e">  109</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="comment">! exg_ad -- Advance</span></div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="comment">!</span></div>
@@ -191,10 +236,10 @@ $(function() {
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="comment">! -- return</span></div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  <span class="keyword">end subroutine </span>exg_ad</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacenumericalexchangemodule.html#a7d9242f0a0a64488733a689b317e877e">exg_ad</a></div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  </div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  <span class="keyword">subroutine </span>exg_cf(this, kiter)</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacenumericalexchangemodule.html#abe08ac342039fa497fd2a39ff6c56c28">exg_cf</a>(this, kiter)</div>
+<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="namespacenumericalexchangemodule.html#abe08ac342039fa497fd2a39ff6c56c28">  125</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="comment">! exg_cf -- Calculate conductance, and for explicit exchanges, set the</span></div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="comment">!   conductance in the boundary package.</span></div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="comment">! ******************************************************************************</span></div>
@@ -210,10 +255,10 @@ $(function() {
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="comment">! -- return</span></div>
 <div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  <span class="keyword">end subroutine </span>exg_cf</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacenumericalexchangemodule.html#abe08ac342039fa497fd2a39ff6c56c28">exg_cf</a></div>
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;  <span class="keyword">subroutine </span>exg_fc(this, kiter, iasln, amatsln, rhssln, inwtflag)</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacenumericalexchangemodule.html#a321e1c4b3c2102679ad1ccdfad39eb41">exg_fc</a>(this, kiter, iasln, amatsln, rhssln, inwtflag)</div>
+<div class="line"><a name="l00144"></a><span class="lineno"><a class="line" href="namespacenumericalexchangemodule.html#a321e1c4b3c2102679ad1ccdfad39eb41">  144</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="comment">! exg_fc -- Fill the matrix</span></div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="comment">!</span></div>
@@ -231,10 +276,10 @@ $(function() {
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="comment">! -- return</span></div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  <span class="keyword">end subroutine </span>exg_fc</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacenumericalexchangemodule.html#a321e1c4b3c2102679ad1ccdfad39eb41">exg_fc</a></div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  <span class="keyword">subroutine </span>exg_nr(this, kiter, iasln, amatsln, inwtflag)</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacenumericalexchangemodule.html#a86db6c5486739bab39399688aba3393b">exg_nr</a>(this, kiter, iasln, amatsln, inwtflag)</div>
+<div class="line"><a name="l00165"></a><span class="lineno"><a class="line" href="namespacenumericalexchangemodule.html#a86db6c5486739bab39399688aba3393b">  165</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="comment">! exg_nr -- Add Newton-Raphson terms to the solution</span></div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="comment">!</span></div>
@@ -251,10 +296,10 @@ $(function() {
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="comment">! -- return</span></div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  <span class="keyword">end subroutine </span>exg_nr</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacenumericalexchangemodule.html#a86db6c5486739bab39399688aba3393b">exg_nr</a></div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160; </div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;  <span class="keyword">subroutine </span>exg_cc(this, icnvg)</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacenumericalexchangemodule.html#aca86e0b450435c20feb1e10131f0b586">exg_cc</a>(this, icnvg)</div>
+<div class="line"><a name="l00185"></a><span class="lineno"><a class="line" href="namespacenumericalexchangemodule.html#aca86e0b450435c20feb1e10131f0b586">  185</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;<span class="comment">! exg_cc -- Additional convergence check</span></div>
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;<span class="comment">!</span></div>
@@ -268,10 +313,10 @@ $(function() {
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="comment">! -- return</span></div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;  <span class="keyword">end subroutine </span>exg_cc</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacenumericalexchangemodule.html#aca86e0b450435c20feb1e10131f0b586">exg_cc</a></div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160; </div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;  <span class="keyword">subroutine </span>exg_cq(this, icnvg, isuppress_output, isolnid)</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacenumericalexchangemodule.html#ad93aa888934fb1a166fef926adf39baf">exg_cq</a>(this, icnvg, isuppress_output, isolnid)</div>
+<div class="line"><a name="l00202"></a><span class="lineno"><a class="line" href="namespacenumericalexchangemodule.html#ad93aa888934fb1a166fef926adf39baf">  202</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;<span class="comment">! exg_cq -- Calculate flow</span></div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;<span class="comment">!</span></div>
@@ -289,7 +334,7 @@ $(function() {
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    <span class="comment">! -- return</span></div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;  <span class="keyword">end subroutine </span>exg_cq</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacenumericalexchangemodule.html#ad93aa888934fb1a166fef926adf39baf">exg_cq</a></div>
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160; </div>
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacenumericalexchangemodule.html#ab883b8b5384c78053c844d7241e22d5f">exg_bd</a>(this, icnvg, isuppress_output, isolnid)</div>
 <div class="line"><a name="l00223"></a><span class="lineno"><a class="line" href="namespacenumericalexchangemodule.html#ab883b8b5384c78053c844d7241e22d5f">  223</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
@@ -327,22 +372,22 @@ $(function() {
 <div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <span class="keywordflow">return</span></div>
 <div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacenumericalexchangemodule.html#a3350878eb5645f9fa174b5857cac875b">exg_ot</a></div>
 <div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160; </div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;  <span class="keyword">subroutine </span>exg_da(this)</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacenumericalexchangemodule.html#addeb957c5e724e941d430af67c214ffb">exg_da</a>(this)</div>
+<div class="line"><a name="l00259"></a><span class="lineno"><a class="line" href="namespacenumericalexchangemodule.html#addeb957c5e724e941d430af67c214ffb">  259</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;<span class="comment">! exg_da</span></div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;<span class="comment">!</span></div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;<span class="comment">!    SPECIFICATIONS:</span></div>
 <div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    <span class="comment">! -- modules</span></div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacememorymanagermodule.html">memorymanagermodule</a>, <span class="keywordtype">only</span>: mem_deallocate</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacememorymanagermodule.html">memorymanagermodule</a>, <span class="keywordtype">only</span>: <a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a></div>
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    <span class="comment">! -- dummy</span></div>
 <div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="keywordtype">class</span>(numericalexchangetype) :: this</div>
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;<span class="comment">! ------------------</span></div>
 <div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160; </div>
 <div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;  <span class="keyword">end subroutine </span>exg_da</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacenumericalexchangemodule.html#addeb957c5e724e941d430af67c214ffb">exg_da</a></div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160; </div>
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;  <span class="keyword">function </span><a class="code" href="namespacenumericalexchangemodule.html#af4990b3a0c4074f3993d7ffde01fb5e4">get_iasym</a>(this) <span class="keyword">result</span> (iasym)</div>
 <div class="line"><a name="l00276"></a><span class="lineno"><a class="line" href="namespacenumericalexchangemodule.html#af4990b3a0c4074f3993d7ffde01fb5e4">  276</a></span>&#160;    <span class="keywordtype">class</span>(numericalexchangetype) :: this</div>
@@ -352,8 +397,8 @@ $(function() {
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160; </div>
 <div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;  <span class="keyword">end function </span><a class="code" href="namespacenumericalexchangemodule.html#af4990b3a0c4074f3993d7ffde01fb5e4">get_iasym</a></div>
 <div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160; </div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;  <span class="keyword">function </span>castasnumericalexchangeclass(obj) <span class="keyword">result</span> (res)</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;  <span class="keyword">function </span><a class="code" href="namespacenumericalexchangemodule.html#ab1fef9adb89cbcfb556286fba47b988b">castasnumericalexchangeclass</a>(obj) <span class="keyword">result</span> (res)</div>
+<div class="line"><a name="l00284"></a><span class="lineno"><a class="line" href="namespacenumericalexchangemodule.html#ab1fef9adb89cbcfb556286fba47b988b">  284</a></span>&#160;    <span class="keywordtype">implicit none</span></div>
 <div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    <span class="keywordtype">class</span>(*), <span class="keywordtype">pointer</span>, <span class="keywordtype">intent(inout)</span> :: obj</div>
 <div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    <span class="keywordtype">class</span>(numericalexchangetype), <span class="keywordtype">pointer</span> :: res</div>
 <div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    <span class="comment">!</span></div>
@@ -365,12 +410,12 @@ $(function() {
 <div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;      res =&gt; obj</div>
 <div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;<span class="keywordflow">    end select</span></div>
 <div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;  <span class="keyword">end function </span>castasnumericalexchangeclass</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;  <span class="keyword">end function </span><a class="code" href="namespacenumericalexchangemodule.html#ab1fef9adb89cbcfb556286fba47b988b">castasnumericalexchangeclass</a></div>
 <div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160; </div>
 <div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacenumericalexchangemodule.html#a56a50d312b63be01db46d31e4992d451">addnumericalexchangetolist</a>(list, exchange)</div>
 <div class="line"><a name="l00299"></a><span class="lineno"><a class="line" href="namespacenumericalexchangemodule.html#a56a50d312b63be01db46d31e4992d451">  299</a></span>&#160;    <span class="keywordtype">implicit none</span></div>
 <div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    <span class="keywordtype">type</span>(listtype),       <span class="keywordtype">intent(inout)</span> :: list</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structlistmodule_1_1listtype.html">listtype</a>),       <span class="keywordtype">intent(inout)</span> :: list</div>
 <div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    <span class="keywordtype">class</span>(numericalexchangetype), <span class="keywordtype">pointer</span>, <span class="keywordtype">intent(in)</span> :: exchange</div>
 <div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    <span class="keywordtype">class</span>(*), <span class="keywordtype">pointer</span> :: obj</div>
@@ -384,50 +429,65 @@ $(function() {
 <div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;  <span class="keyword">function </span><a class="code" href="namespacenumericalexchangemodule.html#a09ae423b40a16a7841cbb95815029b0f">getnumericalexchangefromlist</a>(list, idx) <span class="keyword">result</span> (res)</div>
 <div class="line"><a name="l00313"></a><span class="lineno"><a class="line" href="namespacenumericalexchangemodule.html#a09ae423b40a16a7841cbb95815029b0f">  313</a></span>&#160;    <span class="keywordtype">implicit none</span></div>
 <div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    <span class="keywordtype">type</span>(listtype),            <span class="keywordtype">intent(inout)</span> :: list</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structlistmodule_1_1listtype.html">listtype</a>),            <span class="keywordtype">intent(inout)</span> :: list</div>
 <div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    <span class="keywordtype">integer(I4B)</span>,                   <span class="keywordtype">intent(in)</span>    :: idx</div>
 <div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    <span class="keywordtype">class</span>(numericalexchangetype), <span class="keywordtype">pointer</span>    :: res</div>
 <div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    <span class="keywordtype">class</span>(*), <span class="keywordtype">pointer</span> :: obj</div>
 <div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    obj =&gt; list%GetItem(idx)</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    res =&gt; castasnumericalexchangeclass(obj)</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    res =&gt; <a class="code" href="namespacenumericalexchangemodule.html#ab1fef9adb89cbcfb556286fba47b988b">castasnumericalexchangeclass</a>(obj)</div>
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    <span class="keywordflow">return</span></div>
 <div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;  <span class="keyword">end function </span><a class="code" href="namespacenumericalexchangemodule.html#a09ae423b40a16a7841cbb95815029b0f">getnumericalexchangefromlist</a></div>
 <div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160; </div>
 <div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;<span class="keyword">end module </span><a class="code" href="namespacenumericalexchangemodule.html">numericalexchangemodule</a></div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <div class="ttc" id="anamespacebasemodelmodule_html"><div class="ttname"><a href="namespacebasemodelmodule.html">basemodelmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_base_model_8f90_source.html#l00003">BaseModel.f90:3</a></div></div>
 <div class="ttc" id="anamespacenumericalexchangemodule_html_a3350878eb5645f9fa174b5857cac875b"><div class="ttname"><a href="namespacenumericalexchangemodule.html#a3350878eb5645f9fa174b5857cac875b">numericalexchangemodule::exg_ot</a></div><div class="ttdeci">subroutine exg_ot(this)</div><div class="ttdef"><b>Definition:</b> <a href="_numerical_exchange_8f90_source.html#l00244">NumericalExchange.f90:244</a></div></div>
 <div class="ttc" id="anamespacekindmodule_html"><div class="ttname"><a href="namespacekindmodule.html">kindmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="kind_8f90_source.html#l00001">kind.f90:1</a></div></div>
+<div class="ttc" id="anamespacenumericalexchangemodule_html_addeb957c5e724e941d430af67c214ffb"><div class="ttname"><a href="namespacenumericalexchangemodule.html#addeb957c5e724e941d430af67c214ffb">numericalexchangemodule::exg_da</a></div><div class="ttdeci">subroutine exg_da(this)</div><div class="ttdef"><b>Definition:</b> <a href="_numerical_exchange_8f90_source.html#l00259">NumericalExchange.f90:259</a></div></div>
+<div class="ttc" id="anamespacenumericalexchangemodule_html_abe08ac342039fa497fd2a39ff6c56c28"><div class="ttname"><a href="namespacenumericalexchangemodule.html#abe08ac342039fa497fd2a39ff6c56c28">numericalexchangemodule::exg_cf</a></div><div class="ttdeci">subroutine exg_cf(this, kiter)</div><div class="ttdef"><b>Definition:</b> <a href="_numerical_exchange_8f90_source.html#l00125">NumericalExchange.f90:125</a></div></div>
+<div class="ttc" id="ainterfacebaseexchangemodule_1_1exg__df_html"><div class="ttname"><a href="interfacebaseexchangemodule_1_1exg__df.html">baseexchangemodule::exg_df</a></div><div class="ttdef"><b>Definition:</b> <a href="_base_exchange_8f90_source.html#l00031">BaseExchange.f90:31</a></div></div>
+<div class="ttc" id="anamespacenumericalexchangemodule_html_ad93aa888934fb1a166fef926adf39baf"><div class="ttname"><a href="namespacenumericalexchangemodule.html#ad93aa888934fb1a166fef926adf39baf">numericalexchangemodule::exg_cq</a></div><div class="ttdeci">subroutine exg_cq(this, icnvg, isuppress_output, isolnid)</div><div class="ttdef"><b>Definition:</b> <a href="_numerical_exchange_8f90_source.html#l00202">NumericalExchange.f90:202</a></div></div>
+<div class="ttc" id="astructlistmodule_1_1listtype_html"><div class="ttname"><a href="structlistmodule_1_1listtype.html">listmodule::listtype</a></div><div class="ttdef"><b>Definition:</b> <a href="_list_8f90_source.html#l00009">List.f90:9</a></div></div>
 <div class="ttc" id="astructsparsemodule_1_1sparsematrix_html"><div class="ttname"><a href="structsparsemodule_1_1sparsematrix.html">sparsemodule::sparsematrix</a></div><div class="ttdef"><b>Definition:</b> <a href="_sparse_8f90_source.html#l00014">Sparse.f90:14</a></div></div>
+<div class="ttc" id="ainterfacebaseexchangemodule_1_1exg__ar_html"><div class="ttname"><a href="interfacebaseexchangemodule_1_1exg__ar.html">baseexchangemodule::exg_ar</a></div><div class="ttdef"><b>Definition:</b> <a href="_base_exchange_8f90_source.html#l00036">BaseExchange.f90:36</a></div></div>
 <div class="ttc" id="anamespaceinputoutputmodule_html_a535bdfca3d31ebc3a8e4bd5af6890d55"><div class="ttname"><a href="namespaceinputoutputmodule.html#a535bdfca3d31ebc3a8e4bd5af6890d55">inputoutputmodule::getunit</a></div><div class="ttdeci">integer(i4b) function, public getunit()</div><div class="ttdef"><b>Definition:</b> <a href="_input_output_8f90_source.html#l00208">InputOutput.f90:208</a></div></div>
 <div class="ttc" id="anamespacenumericalmodelmodule_html"><div class="ttname"><a href="namespacenumericalmodelmodule.html">numericalmodelmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_numerical_model_8f90_source.html#l00001">NumericalModel.f90:1</a></div></div>
 <div class="ttc" id="anamespaceinputoutputmodule_html"><div class="ttname"><a href="namespaceinputoutputmodule.html">inputoutputmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_input_output_8f90_source.html#l00003">InputOutput.f90:3</a></div></div>
 <div class="ttc" id="anamespacenumericalexchangemodule_html"><div class="ttname"><a href="namespacenumericalexchangemodule.html">numericalexchangemodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_numerical_exchange_8f90_source.html#l00001">NumericalExchange.f90:1</a></div></div>
 <div class="ttc" id="anamespacebaseexchangemodule_html"><div class="ttname"><a href="namespacebaseexchangemodule.html">baseexchangemodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_base_exchange_8f90_source.html#l00001">BaseExchange.f90:1</a></div></div>
+<div class="ttc" id="anamespacenumericalexchangemodule_html_a7d9242f0a0a64488733a689b317e877e"><div class="ttname"><a href="namespacenumericalexchangemodule.html#a7d9242f0a0a64488733a689b317e877e">numericalexchangemodule::exg_ad</a></div><div class="ttdeci">subroutine exg_ad(this)</div><div class="ttdef"><b>Definition:</b> <a href="_numerical_exchange_8f90_source.html#l00109">NumericalExchange.f90:109</a></div></div>
 <div class="ttc" id="anamespacenumericalexchangemodule_html_af4990b3a0c4074f3993d7ffde01fb5e4"><div class="ttname"><a href="namespacenumericalexchangemodule.html#af4990b3a0c4074f3993d7ffde01fb5e4">numericalexchangemodule::get_iasym</a></div><div class="ttdeci">integer(i4b) function get_iasym(this)</div><div class="ttdef"><b>Definition:</b> <a href="_numerical_exchange_8f90_source.html#l00276">NumericalExchange.f90:276</a></div></div>
 <div class="ttc" id="anamespacekindmodule_html_a2f6861418b5e7d3d602b77228232a470"><div class="ttname"><a href="namespacekindmodule.html#a2f6861418b5e7d3d602b77228232a470">kindmodule::i4b</a></div><div class="ttdeci">integer, parameter i4b</div><div class="ttdef"><b>Definition:</b> <a href="kind_8f90_source.html#l00009">kind.f90:9</a></div></div>
+<div class="ttc" id="anamespacenumericalexchangemodule_html_aca86e0b450435c20feb1e10131f0b586"><div class="ttname"><a href="namespacenumericalexchangemodule.html#aca86e0b450435c20feb1e10131f0b586">numericalexchangemodule::exg_cc</a></div><div class="ttdeci">subroutine exg_cc(this, icnvg)</div><div class="ttdef"><b>Definition:</b> <a href="_numerical_exchange_8f90_source.html#l00185">NumericalExchange.f90:185</a></div></div>
 <div class="ttc" id="anamespacenumericalexchangemodule_html_ad5ce09f51cf20a10d82df3a52c0b65b6"><div class="ttname"><a href="namespacenumericalexchangemodule.html#ad5ce09f51cf20a10d82df3a52c0b65b6">numericalexchangemodule::exg_mc</a></div><div class="ttdeci">subroutine exg_mc(this, iasln, jasln)</div><div class="ttdef"><b>Definition:</b> <a href="_numerical_exchange_8f90_source.html#l00076">NumericalExchange.f90:76</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html"><div class="ttname"><a href="namespaceconstantsmodule.html">constantsmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00001">Constants.f90:1</a></div></div>
+<div class="ttc" id="anamespacenumericalexchangemodule_html_a86db6c5486739bab39399688aba3393b"><div class="ttname"><a href="namespacenumericalexchangemodule.html#a86db6c5486739bab39399688aba3393b">numericalexchangemodule::exg_nr</a></div><div class="ttdeci">subroutine exg_nr(this, kiter, iasln, amatsln, inwtflag)</div><div class="ttdef"><b>Definition:</b> <a href="_numerical_exchange_8f90_source.html#l00165">NumericalExchange.f90:165</a></div></div>
+<div class="ttc" id="ainterfacememorymanagermodule_1_1mem__deallocate_html"><div class="ttname"><a href="interfacememorymanagermodule_1_1mem__deallocate.html">memorymanagermodule::mem_deallocate</a></div><div class="ttdef"><b>Definition:</b> <a href="_memory_manager_8f90_source.html#l00085">MemoryManager.f90:85</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_adda4cd91b9096b31d5e48d2215359311"><div class="ttname"><a href="namespaceconstantsmodule.html#adda4cd91b9096b31d5e48d2215359311">constantsmodule::lenbudtxt</a></div><div class="ttdeci">integer(i4b), parameter lenbudtxt</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00020">Constants.f90:20</a></div></div>
 <div class="ttc" id="anamespacememorymanagermodule_html"><div class="ttname"><a href="namespacememorymanagermodule.html">memorymanagermodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_memory_manager_8f90_source.html#l00001">MemoryManager.f90:1</a></div></div>
 <div class="ttc" id="anamespacekindmodule_html_ae38bd3a7dfaf151094c26e1529259639"><div class="ttname"><a href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">kindmodule::dp</a></div><div class="ttdeci">integer, parameter dp</div><div class="ttdef"><b>Definition:</b> <a href="kind_8f90_source.html#l00007">kind.f90:7</a></div></div>
 <div class="ttc" id="anamespacebaseexchangemodule_html_a67919a88cc5ebe70bb4a38eaf9ef9144"><div class="ttname"><a href="namespacebaseexchangemodule.html#a67919a88cc5ebe70bb4a38eaf9ef9144">baseexchangemodule::addbaseexchangetolist</a></div><div class="ttdeci">subroutine, public addbaseexchangetolist(list, exchange)</div><div class="ttdef"><b>Definition:</b> <a href="_base_exchange_8f90_source.html#l00169">BaseExchange.f90:169</a></div></div>
+<div class="ttc" id="anamespacenumericalexchangemodule_html_a321e1c4b3c2102679ad1ccdfad39eb41"><div class="ttname"><a href="namespacenumericalexchangemodule.html#a321e1c4b3c2102679ad1ccdfad39eb41">numericalexchangemodule::exg_fc</a></div><div class="ttdeci">subroutine exg_fc(this, kiter, iasln, amatsln, rhssln, inwtflag)</div><div class="ttdef"><b>Definition:</b> <a href="_numerical_exchange_8f90_source.html#l00144">NumericalExchange.f90:144</a></div></div>
 <div class="ttc" id="anamespacesparsemodule_html"><div class="ttname"><a href="namespacesparsemodule.html">sparsemodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_sparse_8f90_source.html#l00001">Sparse.f90:1</a></div></div>
 <div class="ttc" id="anamespaceinputoutputmodule_html_ae97851e3edae8d9809e384058a1a4d52"><div class="ttname"><a href="namespaceinputoutputmodule.html#ae97851e3edae8d9809e384058a1a4d52">inputoutputmodule::openfile</a></div><div class="ttdeci">subroutine, public openfile(iu, iout, fname, ftype, fmtarg_opt, accarg_opt, filstat_opt, mode_opt)</div><div class="ttdef"><b>Definition:</b> <a href="_input_output_8f90_source.html#l00034">InputOutput.f90:34</a></div></div>
 <div class="ttc" id="anamespacenumericalexchangemodule_html_a09ae423b40a16a7841cbb95815029b0f"><div class="ttname"><a href="namespacenumericalexchangemodule.html#a09ae423b40a16a7841cbb95815029b0f">numericalexchangemodule::getnumericalexchangefromlist</a></div><div class="ttdeci">class(numericalexchangetype) function, pointer, public getnumericalexchangefromlist(list, idx)</div><div class="ttdef"><b>Definition:</b> <a href="_numerical_exchange_8f90_source.html#l00313">NumericalExchange.f90:313</a></div></div>
 <div class="ttc" id="anamespacenumericalexchangemodule_html_ae2312a0a441228c4a789c96e802a44e5"><div class="ttname"><a href="namespacenumericalexchangemodule.html#ae2312a0a441228c4a789c96e802a44e5">numericalexchangemodule::exg_ac</a></div><div class="ttdeci">subroutine exg_ac(this, sparse)</div><div class="ttdef"><b>Definition:</b> <a href="_numerical_exchange_8f90_source.html#l00057">NumericalExchange.f90:57</a></div></div>
-<div class="ttc" id="anamespacenumericalexchangemodule_html_ad6dbac9cbf5d645a4ddd0642e326123d"><div class="ttname"><a href="namespacenumericalexchangemodule.html#ad6dbac9cbf5d645a4ddd0642e326123d">numericalexchangemodule::exg_ar</a></div><div class="ttdeci">subroutine exg_ar(this)</div><div class="ttdef"><b>Definition:</b> <a href="_numerical_exchange_8f90_source.html#l00095">NumericalExchange.f90:95</a></div></div>
 <div class="ttc" id="anamespacenumericalexchangemodule_html_ab883b8b5384c78053c844d7241e22d5f"><div class="ttname"><a href="namespacenumericalexchangemodule.html#ab883b8b5384c78053c844d7241e22d5f">numericalexchangemodule::exg_bd</a></div><div class="ttdeci">subroutine exg_bd(this, icnvg, isuppress_output, isolnid)</div><div class="ttdef"><b>Definition:</b> <a href="_numerical_exchange_8f90_source.html#l00223">NumericalExchange.f90:223</a></div></div>
 <div class="ttc" id="anamespacenumericalexchangemodule_html_a56a50d312b63be01db46d31e4992d451"><div class="ttname"><a href="namespacenumericalexchangemodule.html#a56a50d312b63be01db46d31e4992d451">numericalexchangemodule::addnumericalexchangetolist</a></div><div class="ttdeci">subroutine, public addnumericalexchangetolist(list, exchange)</div><div class="ttdef"><b>Definition:</b> <a href="_numerical_exchange_8f90_source.html#l00299">NumericalExchange.f90:299</a></div></div>
+<div class="ttc" id="anamespacenumericalexchangemodule_html_ab1fef9adb89cbcfb556286fba47b988b"><div class="ttname"><a href="namespacenumericalexchangemodule.html#ab1fef9adb89cbcfb556286fba47b988b">numericalexchangemodule::castasnumericalexchangeclass</a></div><div class="ttdeci">class(numericalexchangetype) function, pointer castasnumericalexchangeclass(obj)</div><div class="ttdef"><b>Definition:</b> <a href="_numerical_exchange_8f90_source.html#l00284">NumericalExchange.f90:284</a></div></div>
 <div class="ttc" id="anamespacelistmodule_html"><div class="ttname"><a href="namespacelistmodule.html">listmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_list_8f90_source.html#l00001">List.f90:1</a></div></div>
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_95d5cc30a66cc7502f2f5157978bb5c3.html">Exchange</a></li><li class="navelem"><a class="el" href="_numerical_exchange_8f90.html">NumericalExchange.f90</a></li>
+    <li class="footer">Generated on Thu Jun 24 2021 19:50:09 for MODFLOW 6 by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
 </body>
 </html>

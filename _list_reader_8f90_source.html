@@ -5,13 +5,22 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MODFLOW 6 Code Documentation: /home/runner/work/modflow6/modflow6/src/Utilities/ListReader.f90 Source File</title>
+<title>MODFLOW 6: /home/runner/work/modflow6/modflow6/src/Utilities/ListReader.f90 Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="CustomDoxygen.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -21,9 +30,12 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="mf6-triangular-grid.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">MODFLOW 6 Code Documentation
+   <div id="projectname">MODFLOW 6
+   &#160;<span id="projectnumber">version 6.2.2</span>
    </div>
+   <div id="projectbrief">MODFLOW 6 Code Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -36,16 +48,54 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Modules</span></a></li>
+      <li><a href="annotated.html"><span>Data&#160;Types&#160;List</span></a></li>
+      <li class="current"><a href="files.html"><span>Files</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('_list_reader_8f90_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,11 +110,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_ff383ddf1aa4eab0c4ce7910366d05a5.html">Utilities</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">ListReader.f90</div>  </div>
@@ -79,53 +124,53 @@ $(function() {
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacesimmodule.html">simmodule</a>,       <span class="keywordtype">only</span>: <a class="code" href="namespacesimmodule.html#a1c78a6fda06b630c738bb654aa6bd816">store_error_unit</a></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  <span class="keywordtype">implicit none</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  <span class="keywordtype">private</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  <span class="keywordtype">public</span> listreadertype</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  <span class="keywordtype">public</span> <a class="code" href="structlistreadermodule_1_1listreadertype.html">listreadertype</a></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <span class="keyword">type</span> :: listreadertype</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: in = 0                                                       <span class="comment">! unit number of file containing control record</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: inlist = 0                                                   <span class="comment">! unit number of file from which list will be read</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: iout = 0                                                     <span class="comment">! unit number to output messages</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: inamedbound = 0                                              <span class="comment">! flag indicating boundary names are to be read</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: ierr = 0                                                     <span class="comment">! error flag</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: nlist = 0                                                    <span class="comment">! number of entries in list.  -1 indicates number will be automatically determined</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: ibinary = 0                                                  <span class="comment">! flag indicating to read binary list</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: istart = 0                                                   <span class="comment">! string starting location</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: istop = 0                                                    <span class="comment">! string ending location</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: lloc = 0                                                     <span class="comment">! entry number in line</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: iclose = 0                                                   <span class="comment">! flag indicating whether or not to close file</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: ndim = 0                                                     <span class="comment">! number of dimensions in model</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: ntxtrlist = 0                                                <span class="comment">! number of text entries found in rlist</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: ntxtauxvar = 0                                               <span class="comment">! number of text entries found in auxvar</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">character(len=LENLISTLABEL)</span> :: label = <span class="stringliteral">&#39;&#39;</span>                                    <span class="comment">! label for printing list</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">character(len=LINELENGTH)</span> :: line = <span class="stringliteral">&#39;&#39;</span>                                       <span class="comment">! line string for reading file</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span> :: mshape =&gt; null()          <span class="comment">! pointer to model shape</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span> :: nodelist =&gt; null()        <span class="comment">! pointer to nodelist</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">dimension(:, :)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span> :: rlist =&gt; null()            <span class="comment">! pointer to rlist</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">dimension(:, :)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span> :: auxvar  =&gt; null()          <span class="comment">! pointer to auxvar</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">character(len=16)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span> :: auxname =&gt; null()                <span class="comment">! pointer to aux names</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">character(len=LENBOUNDNAME)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>,                         &amp;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="structlistreadermodule_1_1listreadertype.html">   12</a></span>&#160;  <span class="keyword">type</span> :: <a class="code" href="structlistreadermodule_1_1listreadertype.html">listreadertype</a></div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="structlistreadermodule_1_1listreadertype.html#ab67b908a50839cf876f9c19956717d11">   13</a></span>&#160;    <span class="keywordtype">integer(I4B)</span> :: in = 0                                                       <span class="comment">! unit number of file containing control record</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="structlistreadermodule_1_1listreadertype.html#a7c9a47fb213299234ffd015320c9e79d">   14</a></span>&#160;    <span class="keywordtype">integer(I4B)</span> :: inlist = 0                                                   <span class="comment">! unit number of file from which list will be read</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="structlistreadermodule_1_1listreadertype.html#ae3f7b283c54ebbfda15e8b40d2156574">   15</a></span>&#160;    <span class="keywordtype">integer(I4B)</span> :: iout = 0                                                     <span class="comment">! unit number to output messages</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="structlistreadermodule_1_1listreadertype.html#a7fdd291a89f9a4ce9b1d3cdf8f5ea3dd">   16</a></span>&#160;    <span class="keywordtype">integer(I4B)</span> :: inamedbound = 0                                              <span class="comment">! flag indicating boundary names are to be read</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="structlistreadermodule_1_1listreadertype.html#a734f0cfc5547586e8d25509c31be3bde">   17</a></span>&#160;    <span class="keywordtype">integer(I4B)</span> :: ierr = 0                                                     <span class="comment">! error flag</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="structlistreadermodule_1_1listreadertype.html#ae682a298abdfdc6e2827baf8e3a513d8">   18</a></span>&#160;    <span class="keywordtype">integer(I4B)</span> :: nlist = 0                                                    <span class="comment">! number of entries in list.  -1 indicates number will be automatically determined</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="structlistreadermodule_1_1listreadertype.html#aba021578bceb51929713f296d9c4430f">   19</a></span>&#160;    <span class="keywordtype">integer(I4B)</span> :: ibinary = 0                                                  <span class="comment">! flag indicating to read binary list</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="structlistreadermodule_1_1listreadertype.html#ae09676f26efce631833b7b23a91d0b83">   20</a></span>&#160;    <span class="keywordtype">integer(I4B)</span> :: istart = 0                                                   <span class="comment">! string starting location</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="structlistreadermodule_1_1listreadertype.html#a655125163afce1fa4aac29ab8b16657f">   21</a></span>&#160;    <span class="keywordtype">integer(I4B)</span> :: istop = 0                                                    <span class="comment">! string ending location</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="structlistreadermodule_1_1listreadertype.html#a4bfd69a554346a31420c1599b4c9f253">   22</a></span>&#160;    <span class="keywordtype">integer(I4B)</span> :: lloc = 0                                                     <span class="comment">! entry number in line</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="structlistreadermodule_1_1listreadertype.html#adc917d2ec634d66cf93ec5845c8790cf">   23</a></span>&#160;    <span class="keywordtype">integer(I4B)</span> :: iclose = 0                                                   <span class="comment">! flag indicating whether or not to close file</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="structlistreadermodule_1_1listreadertype.html#a5721061fb24087b4f34f076b847ffbb1">   24</a></span>&#160;    <span class="keywordtype">integer(I4B)</span> :: ndim = 0                                                     <span class="comment">! number of dimensions in model</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="structlistreadermodule_1_1listreadertype.html#a979129e91de01690a830ae2a6d8fdfb1">   25</a></span>&#160;    <span class="keywordtype">integer(I4B)</span> :: ntxtrlist = 0                                                <span class="comment">! number of text entries found in rlist</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="structlistreadermodule_1_1listreadertype.html#ae43390859e11b1189aacec8847f5319c">   26</a></span>&#160;    <span class="keywordtype">integer(I4B)</span> :: ntxtauxvar = 0                                               <span class="comment">! number of text entries found in auxvar</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="structlistreadermodule_1_1listreadertype.html#ad8b2b346ed486e88109d17a78b359aa0">   27</a></span>&#160;    <span class="keywordtype">character(len=LENLISTLABEL)</span> :: label = <span class="stringliteral">&#39;&#39;</span>                                    <span class="comment">! label for printing list</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="structlistreadermodule_1_1listreadertype.html#a1630aa1b637f5165f83e5896b8579564">   28</a></span>&#160;    <span class="keywordtype">character(len=LINELENGTH)</span> :: line = <span class="stringliteral">&#39;&#39;</span>                                       <span class="comment">! line string for reading file</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="structlistreadermodule_1_1listreadertype.html#ad1727183859e05aa0ca7d86a6ca78226">   29</a></span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span> :: mshape =&gt; null()          <span class="comment">! pointer to model shape</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="structlistreadermodule_1_1listreadertype.html#af1f04a4bbe995a19e53cddc9694d1a8b">   30</a></span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span> :: nodelist =&gt; null()        <span class="comment">! pointer to nodelist</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="structlistreadermodule_1_1listreadertype.html#a7873a75416dcaa8be3657dc215b8d96e">   31</a></span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">dimension(:, :)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span> :: rlist =&gt; null()            <span class="comment">! pointer to rlist</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="structlistreadermodule_1_1listreadertype.html#aefe0aef373ce05cd9528322acd2d5a20">   32</a></span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">dimension(:, :)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span> :: auxvar  =&gt; null()          <span class="comment">! pointer to auxvar</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="structlistreadermodule_1_1listreadertype.html#a98d2c8acad0a3fff58cb2937e4710b29">   33</a></span>&#160;    <span class="keywordtype">character(len=16)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span> :: auxname =&gt; null()                <span class="comment">! pointer to aux names</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="structlistreadermodule_1_1listreadertype.html#a79efdf523297b7233b220ed0a7c36ef1">   34</a></span>&#160;    <span class="keywordtype">character(len=LENBOUNDNAME)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>,                         &amp;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                                 <span class="keywordtype">contiguous</span> :: boundname =&gt; null()               <span class="comment">! pointer to boundname</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">allocatable</span> :: idxtxtrow                         <span class="comment">! row locations of text in rlist</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">allocatable</span> :: idxtxtcol                         <span class="comment">! col locations of text in rlist</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">allocatable</span> :: idxtxtauxrow                      <span class="comment">! row locations of text in auxvar</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">allocatable</span> :: idxtxtauxcol                      <span class="comment">! col locations of text in auxvar</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">character(len=LENTIMESERIESNAME)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">allocatable</span> :: txtrlist      <span class="comment">! text found in rlist</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">character(len=LENTIMESERIESNAME)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">allocatable</span> :: txtauxvar     <span class="comment">! text found in auxvar</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="structlistreadermodule_1_1listreadertype.html#a05f8f515c772253a3645e454d4330763">   36</a></span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">allocatable</span> :: idxtxtrow                         <span class="comment">! row locations of text in rlist</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="structlistreadermodule_1_1listreadertype.html#a39025e829cb14650361d8ca6ea0df9e7">   37</a></span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">allocatable</span> :: idxtxtcol                         <span class="comment">! col locations of text in rlist</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="structlistreadermodule_1_1listreadertype.html#ad6c95b1409522d1a68c5fbeccb25bd9c">   38</a></span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">allocatable</span> :: idxtxtauxrow                      <span class="comment">! row locations of text in auxvar</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="structlistreadermodule_1_1listreadertype.html#a6e68dd76d38033914f92e8d179ce3f76">   39</a></span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">allocatable</span> :: idxtxtauxcol                      <span class="comment">! col locations of text in auxvar</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="structlistreadermodule_1_1listreadertype.html#a613555330810ace146567e371e4469bb">   40</a></span>&#160;    <span class="keywordtype">character(len=LENTIMESERIESNAME)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">allocatable</span> :: txtrlist      <span class="comment">! text found in rlist</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="structlistreadermodule_1_1listreadertype.html#a1ccb503e58464dfa40f26f88ef3cbebc">   41</a></span>&#160;    <span class="keywordtype">character(len=LENTIMESERIESNAME)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">allocatable</span> :: txtauxvar     <span class="comment">! text found in auxvar</span></div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keyword">contains</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">procedure</span>          :: read_list</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">procedure</span>          :: write_list</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: read_control_record</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: read_data</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: set_openclose</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: read_ascii</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: read_binary</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keyword">end type </span>listreadertype</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="structlistreadermodule_1_1listreadertype.html#adb2ffc70d1baa1e2b749fc306a9152a3">   43</a></span>&#160;    <span class="keywordtype">procedure</span>          :: <a class="code" href="namespacelistreadermodule.html#afecd8afdae0fb639777b0001fe374930">read_list</a></div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="structlistreadermodule_1_1listreadertype.html#ac95708f7aa9dd58257518a819492b1d5">   44</a></span>&#160;    <span class="keywordtype">procedure</span>          :: <a class="code" href="namespacelistreadermodule.html#abd6a7233bb89874587dd7bf4c8c1dbc9">write_list</a></div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="structlistreadermodule_1_1listreadertype.html#a4f87a02e2937a9b5904d5aa65b3ccb7b">   45</a></span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: <a class="code" href="namespacelistreadermodule.html#ac55f27096c57bb340123bf6895886ccc">read_control_record</a></div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="structlistreadermodule_1_1listreadertype.html#af04835b2b69a22a1f9292b451d06cbb0">   46</a></span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: <a class="code" href="namespacelistreadermodule.html#ae1d1d43dd45f42206d485f0aa80846a5">read_data</a></div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="structlistreadermodule_1_1listreadertype.html#a93f37b6328328db8b1529e486253eb38">   47</a></span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: <a class="code" href="namespacelistreadermodule.html#ad93f48ece6b06b57701729bae687bd76">set_openclose</a></div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="structlistreadermodule_1_1listreadertype.html#a5a216ccb1dbccea45c47d81e3127bf5c">   48</a></span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: <a class="code" href="namespacelistreadermodule.html#af55f6c0e639acdcf492451a838e3b6e6">read_ascii</a></div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="structlistreadermodule_1_1listreadertype.html#a498d8e3903d953c3926a41567feb37ee">   49</a></span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: <a class="code" href="namespacelistreadermodule.html#ac4da2fd0afff7374d6540d5d977cc647">read_binary</a></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keyword">end type </span><a class="code" href="structlistreadermodule_1_1listreadertype.html">listreadertype</a></div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  </div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keyword">contains</span></div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keyword">subroutine </span>read_list(this, in, iout, nlist, inamedbound, mshape, nodelist,   &amp;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacelistreadermodule.html#afecd8afdae0fb639777b0001fe374930">read_list</a>(this, in, iout, nlist, inamedbound, mshape, nodelist,   &amp;</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                       rlist, auxvar, auxname, boundname, label)</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="namespacelistreadermodule.html#afecd8afdae0fb639777b0001fe374930">   56</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">! init -- Initialize the reader</span></div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">!</span></div>
@@ -134,7 +179,7 @@ $(function() {
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="comment">! -- modules</span></div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespaceconstantsmodule.html">constantsmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespaceconstantsmodule.html#aa63ca3273e52df46471c4746566f46bd">lenboundname</a></div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">class</span>(ListReaderType) :: this</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structlistreadermodule_1_1listreadertype.html">listreadertype</a>) :: this</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: in</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: iout</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(inout)</span> :: nlist</div>
@@ -184,7 +229,7 @@ $(function() {
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="comment">! -- return</span></div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  <span class="keyword">end subroutine </span>read_list</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacelistreadermodule.html#afecd8afdae0fb639777b0001fe374930">read_list</a></div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  </div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacelistreadermodule.html#ac55f27096c57bb340123bf6895886ccc">read_control_record</a>(this)</div>
 <div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="namespacelistreadermodule.html#ac55f27096c57bb340123bf6895886ccc">  118</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
@@ -196,7 +241,7 @@ $(function() {
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="comment">! -- modules</span></div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespaceinputoutputmodule.html">inputoutputmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespaceinputoutputmodule.html#a3d64e8296053c71aa0b91118fa940c4d">u8rdcom</a>, <a class="code" href="namespaceinputoutputmodule.html#a653efe7e8a111c5e477fea26e0b04fe5">urword</a></div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordtype">class</span>(listreadertype) :: this</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structlistreadermodule_1_1listreadertype.html">listreadertype</a>) :: this</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: idum</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="keywordtype">    real</span>(DP) :: r</div>
@@ -241,7 +286,7 @@ $(function() {
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespaceconstantsmodule.html">constantsmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespaceconstantsmodule.html#a060d310ded5535ce2dc85bd1ca1afd3d">linelength</a></div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacesimmodule.html">simmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61">ustop</a>, <a class="code" href="namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a">store_error</a></div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keywordtype">class</span>(listreadertype) :: this</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structlistreadermodule_1_1listreadertype.html">listreadertype</a>) :: this</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: idum, itmp</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="keywordtype">    real</span>(DP) :: r</div>
@@ -325,7 +370,7 @@ $(function() {
 <div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    <span class="comment">! -- modules</span></div>
 <div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    <span class="keywordtype">class</span>(listreadertype) :: this</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structlistreadermodule_1_1listreadertype.html">listreadertype</a>) :: this</div>
 <div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    <span class="comment">! -- formats</span></div>
 <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
@@ -345,8 +390,8 @@ $(function() {
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <span class="keywordflow">return</span></div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacelistreadermodule.html#ae1d1d43dd45f42206d485f0aa80846a5">read_data</a></div>
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;  </div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;  <span class="keyword">subroutine </span>read_binary(this)</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacelistreadermodule.html#ac4da2fd0afff7374d6540d5d977cc647">read_binary</a>(this)</div>
+<div class="line"><a name="l00277"></a><span class="lineno"><a class="line" href="namespacelistreadermodule.html#ac4da2fd0afff7374d6540d5d977cc647">  277</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;<span class="comment">! read_binary -- read the data from a binary file</span></div>
 <div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;<span class="comment">!</span></div>
@@ -357,7 +402,7 @@ $(function() {
 <div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespaceinputoutputmodule.html">inputoutputmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespaceinputoutputmodule.html#a22620cf6624502feca9621056c5c161a">get_node</a></div>
 <div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacesimmodule.html">simmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61">ustop</a>, <a class="code" href="namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a">store_error</a></div>
 <div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    <span class="keywordtype">class</span>(listreadertype) :: this</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structlistreadermodule_1_1listreadertype.html">listreadertype</a>) :: this</div>
 <div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: mxlist, ldim, naux, nod, ii, jj</div>
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    <span class="keywordtype">character(len=LINELENGTH)</span> :: fname</div>
@@ -450,7 +495,7 @@ $(function() {
 <div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;    <span class="comment">! -- return</span></div>
 <div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;  <span class="keyword">end subroutine </span>read_binary</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacelistreadermodule.html#ac4da2fd0afff7374d6540d5d977cc647">read_binary</a></div>
 <div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;  </div>
 <div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacelistreadermodule.html#af55f6c0e639acdcf492451a838e3b6e6">read_ascii</a>(this)</div>
 <div class="line"><a name="l00384"></a><span class="lineno"><a class="line" href="namespacelistreadermodule.html#af55f6c0e639acdcf492451a838e3b6e6">  384</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
@@ -463,9 +508,9 @@ $(function() {
 <div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespaceconstantsmodule.html">constantsmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespaceconstantsmodule.html#aa63ca3273e52df46471c4746566f46bd">lenboundname</a>, <a class="code" href="namespaceconstantsmodule.html#a060d310ded5535ce2dc85bd1ca1afd3d">linelength</a>, <a class="code" href="namespaceconstantsmodule.html#abab5757666b9ddd2726c20ce48dd0050">dzero</a></div>
 <div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespaceinputoutputmodule.html">inputoutputmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespaceinputoutputmodule.html#a3d64e8296053c71aa0b91118fa940c4d">u8rdcom</a>, <a class="code" href="namespaceinputoutputmodule.html#a653efe7e8a111c5e477fea26e0b04fe5">urword</a>, <a class="code" href="namespaceinputoutputmodule.html#a22620cf6624502feca9621056c5c161a">get_node</a></div>
 <div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacesimmodule.html">simmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61">ustop</a>, <a class="code" href="namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a">store_error</a>, <a class="code" href="namespacesimmodule.html#a4c46e49de78d4498dd4ec106357775e6">count_errors</a></div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacearrayhandlersmodule.html">arrayhandlersmodule</a>, <span class="keywordtype">only</span>: expandarray</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacearrayhandlersmodule.html">arrayhandlersmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="interfacearrayhandlersmodule_1_1expandarray.html">expandarray</a></div>
 <div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    <span class="keywordtype">class</span>(listreadertype) :: this</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structlistreadermodule_1_1listreadertype.html">listreadertype</a>) :: this</div>
 <div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    <span class="comment">! -- local  </span></div>
 <div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: mxlist, ldim, naux</div>
 <div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: ii, jj, idum, nod, istat, increment</div>
@@ -611,9 +656,9 @@ $(function() {
 <div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;          <span class="keywordflow">if</span>(this%ntxtrlist &gt; <span class="keyword">size</span>(this%txtrlist)) <span class="keywordflow">then</span></div>
 <div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;            increment = <span class="keyword">size</span>(this%txtrlist) * 0.2</div>
 <div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;            increment = max(100, increment)</div>
-<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;            <span class="keyword">call </span>expandarray(this%txtrlist, increment)</div>
-<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;            <span class="keyword">call </span>expandarray(this%idxtxtrow, increment)</div>
-<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;            <span class="keyword">call </span>expandarray(this%idxtxtcol, increment)</div>
+<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;            <span class="keyword">call </span><a class="code" href="interfacearrayhandlersmodule_1_1expandarray.html">expandarray</a>(this%txtrlist, increment)</div>
+<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;            <span class="keyword">call </span><a class="code" href="interfacearrayhandlersmodule_1_1expandarray.html">expandarray</a>(this%idxtxtrow, increment)</div>
+<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;            <span class="keyword">call </span><a class="code" href="interfacearrayhandlersmodule_1_1expandarray.html">expandarray</a>(this%idxtxtcol, increment)</div>
 <div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;<span class="keywordflow">          endif</span></div>
 <div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;          this%txtrlist(this%ntxtrlist) = this%line(this%istart:this%istop)</div>
 <div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;          this%idxtxtrow(this%ntxtrlist) = ii</div>
@@ -638,9 +683,9 @@ $(function() {
 <div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;          <span class="keywordflow">if</span>(this%ntxtauxvar &gt; <span class="keyword">size</span>(this%txtauxvar)) <span class="keywordflow">then</span></div>
 <div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;            increment = <span class="keyword">size</span>(this%txtauxvar) * 0.2</div>
 <div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;            increment = max(100, increment)</div>
-<div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;            <span class="keyword">call </span>expandarray(this%txtauxvar, increment)</div>
-<div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;            <span class="keyword">call </span>expandarray(this%idxtxtauxrow, increment)</div>
-<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;            <span class="keyword">call </span>expandarray(this%idxtxtauxcol, increment)</div>
+<div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;            <span class="keyword">call </span><a class="code" href="interfacearrayhandlersmodule_1_1expandarray.html">expandarray</a>(this%txtauxvar, increment)</div>
+<div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;            <span class="keyword">call </span><a class="code" href="interfacearrayhandlersmodule_1_1expandarray.html">expandarray</a>(this%idxtxtauxrow, increment)</div>
+<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;            <span class="keyword">call </span><a class="code" href="interfacearrayhandlersmodule_1_1expandarray.html">expandarray</a>(this%idxtxtauxcol, increment)</div>
 <div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;<span class="keywordflow">          endif</span></div>
 <div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;          this%txtauxvar(this%ntxtauxvar) = this%line(this%istart:this%istop)</div>
 <div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;          this%idxtxtauxrow(this%ntxtauxvar) = ii</div>
@@ -689,7 +734,7 @@ $(function() {
 <div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespaceinputoutputmodule.html">inputoutputmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespaceinputoutputmodule.html#a8b610cd194aad47e01e108c64b22aa61">ulstlb</a>, <a class="code" href="namespaceinputoutputmodule.html#a9f5592e52507ea68b2c5f92c88dc477f">get_ijk</a></div>
 <div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacetablemodule.html">tablemodule</a>, <span class="keywordtype">only</span>: <a class="code" href="structtablemodule_1_1tabletype.html">tabletype</a>, <a class="code" href="namespacetablemodule.html#a7632d784ec9e94277a76705ef56725f2">table_cr</a></div>
 <div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;    <span class="keywordtype">class</span>(listreadertype) :: this</div>
+<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structlistreadermodule_1_1listreadertype.html">listreadertype</a>) :: this</div>
 <div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;    <span class="keywordtype">character(len=10)</span> :: cpos</div>
 <div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160;    <span class="keywordtype">character(len=LINELENGTH)</span> :: tag</div>
@@ -844,9 +889,11 @@ $(function() {
 <div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;  </div>
 <div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;<span class="keyword">end module </span><a class="code" href="namespacelistreadermodule.html">listreadermodule</a></div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <div class="ttc" id="anamespaceinputoutputmodule_html_a8b610cd194aad47e01e108c64b22aa61"><div class="ttname"><a href="namespaceinputoutputmodule.html#a8b610cd194aad47e01e108c64b22aa61">inputoutputmodule::ulstlb</a></div><div class="ttdeci">subroutine, public ulstlb(IOUT, LABEL, CAUX, NCAUX, NAUX)</div><div class="ttdef"><b>Definition:</b> <a href="_input_output_8f90_source.html#l00919">InputOutput.f90:919</a></div></div>
 <div class="ttc" id="anamespacelistreadermodule_html_af55f6c0e639acdcf492451a838e3b6e6"><div class="ttname"><a href="namespacelistreadermodule.html#af55f6c0e639acdcf492451a838e3b6e6">listreadermodule::read_ascii</a></div><div class="ttdeci">subroutine read_ascii(this)</div><div class="ttdef"><b>Definition:</b> <a href="_list_reader_8f90_source.html#l00384">ListReader.f90:384</a></div></div>
 <div class="ttc" id="anamespacekindmodule_html"><div class="ttname"><a href="namespacekindmodule.html">kindmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="kind_8f90_source.html#l00001">kind.f90:1</a></div></div>
+<div class="ttc" id="anamespacelistreadermodule_html_afecd8afdae0fb639777b0001fe374930"><div class="ttname"><a href="namespacelistreadermodule.html#afecd8afdae0fb639777b0001fe374930">listreadermodule::read_list</a></div><div class="ttdeci">subroutine read_list(this, in, iout, nlist, inamedbound, mshape, nodelist, rlist, auxvar, auxname, boundname, label)</div><div class="ttdef"><b>Definition:</b> <a href="_list_reader_8f90_source.html#l00056">ListReader.f90:56</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_abab5757666b9ddd2726c20ce48dd0050"><div class="ttname"><a href="namespaceconstantsmodule.html#abab5757666b9ddd2726c20ce48dd0050">constantsmodule::dzero</a></div><div class="ttdeci">real(dp), parameter dzero</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00045">Constants.f90:45</a></div></div>
 <div class="ttc" id="anamespacesimmodule_html_a1c78a6fda06b630c738bb654aa6bd816"><div class="ttname"><a href="namespacesimmodule.html#a1c78a6fda06b630c738bb654aa6bd816">simmodule::store_error_unit</a></div><div class="ttdeci">subroutine, public store_error_unit(iunit)</div><div class="ttdef"><b>Definition:</b> <a href="_sim_8f90_source.html#l00177">Sim.f90:177</a></div></div>
 <div class="ttc" id="anamespacelistreadermodule_html"><div class="ttname"><a href="namespacelistreadermodule.html">listreadermodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_list_reader_8f90_source.html#l00002">ListReader.f90:2</a></div></div>
@@ -857,10 +904,12 @@ $(function() {
 <div class="ttc" id="anamespaceconstantsmodule_html_a5a5bc481197413bb50013a92490ffa14"><div class="ttname"><a href="namespaceconstantsmodule.html#a5a5bc481197413bb50013a92490ffa14">constantsmodule::lenbigline</a></div><div class="ttdeci">integer(i4b), parameter lenbigline</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00007">Constants.f90:7</a></div></div>
 <div class="ttc" id="anamespacelistreadermodule_html_ac55f27096c57bb340123bf6895886ccc"><div class="ttname"><a href="namespacelistreadermodule.html#ac55f27096c57bb340123bf6895886ccc">listreadermodule::read_control_record</a></div><div class="ttdeci">subroutine read_control_record(this)</div><div class="ttdef"><b>Definition:</b> <a href="_list_reader_8f90_source.html#l00118">ListReader.f90:118</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_a6449a1ef03b2afb65c2da79136202944"><div class="ttname"><a href="namespaceconstantsmodule.html#a6449a1ef03b2afb65c2da79136202944">constantsmodule::lenlistlabel</a></div><div class="ttdeci">integer(i4b), parameter lenlistlabel</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00029">Constants.f90:29</a></div></div>
+<div class="ttc" id="astructlistreadermodule_1_1listreadertype_html"><div class="ttname"><a href="structlistreadermodule_1_1listreadertype.html">listreadermodule::listreadertype</a></div><div class="ttdef"><b>Definition:</b> <a href="_list_reader_8f90_source.html#l00012">ListReader.f90:12</a></div></div>
 <div class="ttc" id="anamespaceopenspecmodule_html"><div class="ttname"><a href="namespaceopenspecmodule.html">openspecmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_open_spec_8f90_source.html#l00001">OpenSpec.f90:1</a></div></div>
 <div class="ttc" id="anamespacesimmodule_html_a4c46e49de78d4498dd4ec106357775e6"><div class="ttname"><a href="namespacesimmodule.html#a4c46e49de78d4498dd4ec106357775e6">simmodule::count_errors</a></div><div class="ttdeci">integer(i4b) function, public count_errors()</div><div class="ttdef"><b>Definition:</b> <a href="_sim_8f90_source.html#l00043">Sim.f90:43</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_a72b9f98f14e6bc10dae320dfd4f56dfb"><div class="ttname"><a href="namespaceconstantsmodule.html#a72b9f98f14e6bc10dae320dfd4f56dfb">constantsmodule::lentimeseriesname</a></div><div class="ttdeci">integer(i4b), parameter lentimeseriesname</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00025">Constants.f90:25</a></div></div>
 <div class="ttc" id="anamespacesimmodule_html"><div class="ttname"><a href="namespacesimmodule.html">simmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_sim_8f90_source.html#l00001">Sim.f90:1</a></div></div>
+<div class="ttc" id="ainterfacearrayhandlersmodule_1_1expandarray_html"><div class="ttname"><a href="interfacearrayhandlersmodule_1_1expandarray.html">arrayhandlersmodule::expandarray</a></div><div class="ttdef"><b>Definition:</b> <a href="_array_handlers_8f90_source.html#l00016">ArrayHandlers.f90:16</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_a060d310ded5535ce2dc85bd1ca1afd3d"><div class="ttname"><a href="namespaceconstantsmodule.html#a060d310ded5535ce2dc85bd1ca1afd3d">constantsmodule::linelength</a></div><div class="ttdeci">integer(i4b), parameter linelength</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00028">Constants.f90:28</a></div></div>
 <div class="ttc" id="anamespacelistreadermodule_html_abd6a7233bb89874587dd7bf4c8c1dbc9"><div class="ttname"><a href="namespacelistreadermodule.html#abd6a7233bb89874587dd7bf4c8c1dbc9">listreadermodule::write_list</a></div><div class="ttdeci">subroutine write_list(this)</div><div class="ttdef"><b>Definition:</b> <a href="_list_reader_8f90_source.html#l00608">ListReader.f90:608</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_a71ca6c4361b908f3fc476b67e1ea3558a883db0b9eda65642c49b625055be8dac"><div class="ttname"><a href="namespaceconstantsmodule.html#a71ca6c4361b908f3fc476b67e1ea3558a883db0b9eda65642c49b625055be8dac">constantsmodule::tabcenter</a></div><div class="ttdeci">@ tabcenter</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00120">Constants.f90:120</a></div></div>
@@ -879,15 +928,19 @@ $(function() {
 <div class="ttc" id="anamespaceinputoutputmodule_html_a653efe7e8a111c5e477fea26e0b04fe5"><div class="ttname"><a href="namespaceinputoutputmodule.html#a653efe7e8a111c5e477fea26e0b04fe5">inputoutputmodule::urword</a></div><div class="ttdeci">subroutine, public urword(LINE, ICOL, ISTART, ISTOP, NCODE, N, R, IOUT, IN)</div><div class="ttdef"><b>Definition:</b> <a href="_input_output_8f90_source.html#l00747">InputOutput.f90:747</a></div></div>
 <div class="ttc" id="anamespaceinputoutputmodule_html_a9f5592e52507ea68b2c5f92c88dc477f"><div class="ttname"><a href="namespaceinputoutputmodule.html#a9f5592e52507ea68b2c5f92c88dc477f">inputoutputmodule::get_ijk</a></div><div class="ttdeci">subroutine, public get_ijk(nodenumber, nrow, ncol, nlay, irow, icol, ilay)</div><div class="ttdef"><b>Definition:</b> <a href="_input_output_8f90_source.html#l01474">InputOutput.f90:1474</a></div></div>
 <div class="ttc" id="anamespaceopenspecmodule_html_a5cd9b8ccff306158f81ed8cc744b1e46"><div class="ttname"><a href="namespaceopenspecmodule.html#a5cd9b8ccff306158f81ed8cc744b1e46">openspecmodule::access</a></div><div class="ttdeci">character(len=20) access</div><div class="ttdef"><b>Definition:</b> <a href="_open_spec_8f90_source.html#l00007">OpenSpec.f90:7</a></div></div>
+<div class="ttc" id="anamespacelistreadermodule_html_ac4da2fd0afff7374d6540d5d977cc647"><div class="ttname"><a href="namespacelistreadermodule.html#ac4da2fd0afff7374d6540d5d977cc647">listreadermodule::read_binary</a></div><div class="ttdeci">subroutine read_binary(this)</div><div class="ttdef"><b>Definition:</b> <a href="_list_reader_8f90_source.html#l00277">ListReader.f90:277</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_a9ee3f8405321b057b32648a5dc031e20"><div class="ttname"><a href="namespaceconstantsmodule.html#a9ee3f8405321b057b32648a5dc031e20">constantsmodule::lenauxname</a></div><div class="ttdeci">integer(i4b), parameter lenauxname</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00018">Constants.f90:18</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_a71ca6c4361b908f3fc476b67e1ea3558add793922614b244e637762bb8590cc4a"><div class="ttname"><a href="namespaceconstantsmodule.html#a71ca6c4361b908f3fc476b67e1ea3558add793922614b244e637762bb8590cc4a">constantsmodule::tableft</a></div><div class="ttdeci">@ tableft</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00120">Constants.f90:120</a></div></div>
 <div class="ttc" id="anamespaceinputoutputmodule_html_ae97851e3edae8d9809e384058a1a4d52"><div class="ttname"><a href="namespaceinputoutputmodule.html#ae97851e3edae8d9809e384058a1a4d52">inputoutputmodule::openfile</a></div><div class="ttdeci">subroutine, public openfile(iu, iout, fname, ftype, fmtarg_opt, accarg_opt, filstat_opt, mode_opt)</div><div class="ttdef"><b>Definition:</b> <a href="_input_output_8f90_source.html#l00034">InputOutput.f90:34</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_af918ac22cd0b232deea67660bfbc9ce1"><div class="ttname"><a href="namespaceconstantsmodule.html#af918ac22cd0b232deea67660bfbc9ce1">constantsmodule::done</a></div><div class="ttdeci">real(dp), parameter done</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00056">Constants.f90:56</a></div></div>
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_ff383ddf1aa4eab0c4ce7910366d05a5.html">Utilities</a></li><li class="navelem"><a class="el" href="_list_reader_8f90.html">ListReader.f90</a></li>
+    <li class="footer">Generated on Thu Jun 24 2021 19:50:09 for MODFLOW 6 by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
 </body>
 </html>

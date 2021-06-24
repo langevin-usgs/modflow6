@@ -5,13 +5,22 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MODFLOW 6 Code Documentation: constantsmodule Module Reference</title>
+<title>MODFLOW 6: constantsmodule Module Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="CustomDoxygen.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -21,9 +30,12 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="mf6-triangular-grid.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">MODFLOW 6 Code Documentation
+   <div id="projectname">MODFLOW 6
+   &#160;<span id="projectnumber">version 6.2.2</span>
    </div>
+   <div id="projectbrief">MODFLOW 6 Code Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -36,16 +48,54 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li class="current"><a href="namespaces.html"><span>Modules</span></a></li>
+      <li><a href="annotated.html"><span>Data&#160;Types&#160;List</span></a></li>
+      <li><a href="files.html"><span>Files</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="namespaces.html"><span>Modules&#160;List</span></a></li>
+      <li><a href="namespacemembers.html"><span>Module&#160;Members</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('namespaceconstantsmodule.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,7 +110,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#enum-members">Enumerations</a> &#124;
@@ -434,7 +483,11 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00106">106</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <span class="keywordtype">character(len=10)</span>, <span class="keywordtype">dimension(3, 3)</span>, <span class="keywordtype">parameter</span> :: cidxnames = reshape (       &amp;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    [ <span class="stringliteral">&#39;      NODE&#39;</span>, <span class="stringliteral">&#39;          &#39;</span>, <span class="stringliteral">&#39;          &#39;</span>,                                &amp;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;      <span class="stringliteral">&#39;     LAYER&#39;</span>, <span class="stringliteral">&#39;    CELL2D&#39;</span>, <span class="stringliteral">&#39;          &#39;</span>,                                &amp;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;      <span class="stringliteral">&#39;     LAYER&#39;</span>, <span class="stringliteral">&#39;       ROW&#39;</span>, <span class="stringliteral">&#39;       COL&#39;</span>], [3,3])</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a5b73d818c12272cd4da0666f55af99ed"></a>
@@ -450,7 +503,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00057">57</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keywordtype">  real</span>(DP), <span class="keywordtype">parameter</span> :: D1P1 = 1.1_dp</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab0273018b808857c29117b1e203d5c1b"></a>
@@ -466,7 +520,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00077">77</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keywordtype">  real</span>(DP), <span class="keywordtype">parameter</span> :: D5EM2 = 5.0e-2_dp</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="abdc74fc08685220c2108457073c4c88d"></a>
@@ -482,7 +537,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00104">104</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="keywordtype">  real</span>(DP), <span class="keywordtype">parameter</span> :: DCD = 0.61_dp</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a3cc637c699d53cd54b952a49b42e8503"></a>
@@ -498,7 +554,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00063">63</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keywordtype">  real</span>(DP), <span class="keywordtype">parameter</span> :: DEIGHT = 8.0_dp</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a793abf88a028c5e60b6768b24be0c763"></a>
@@ -514,7 +571,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00076">76</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keywordtype">  real</span>(DP), <span class="keywordtype">parameter</span> :: DEM1  = 1.0e-1_dp</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a37d15656af6eb36c58ed9e6d53f37f0c"></a>
@@ -530,7 +588,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00086">86</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keywordtype">  real</span>(DP), <span class="keywordtype">parameter</span> :: DEM10 = 1.0e-10_dp</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a100e23d4075b1fe047f6e1a38fcea748"></a>
@@ -546,7 +605,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00087">87</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="keywordtype">  real</span>(DP), <span class="keywordtype">parameter</span> :: DEM12 = 1.0e-12_dp</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a7c7a6895f1e56f602334e3d8ef8ee88c"></a>
@@ -562,7 +622,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00088">88</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keywordtype">  real</span>(DP), <span class="keywordtype">parameter</span> :: DEM14 = 1.0e-14_dp</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="adafb091d6975c732382bcb23a58e9491"></a>
@@ -578,7 +639,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00089">89</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keywordtype">  real</span>(DP), <span class="keywordtype">parameter</span> :: DEM15 = 1.0e-15_dp</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="adbe75ed2ec75c6e2c872eeb397ec049a"></a>
@@ -594,7 +656,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00078">78</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="keywordtype">  real</span>(DP), <span class="keywordtype">parameter</span> :: DEM2  = 1.0e-2_dp</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a1cd70c4b2bcf2bae02b57189766adff7"></a>
@@ -610,7 +673,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00090">90</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keywordtype">  real</span>(DP), <span class="keywordtype">parameter</span> :: DEM20 = 1.0e-20_dp</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa41cf049537f0ca1529a9d6527e64d15"></a>
@@ -626,7 +690,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00079">79</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keywordtype">  real</span>(DP), <span class="keywordtype">parameter</span> :: DEM3  = 1.0e-3_dp</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab969c749fb18276528bd17beebf58244"></a>
@@ -642,7 +707,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00091">91</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="keywordtype">  real</span>(DP), <span class="keywordtype">parameter</span> :: DEM30 = 1.0e-30_dp</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab7e0e3c806c97c3b5e9fae53f95350f4"></a>
@@ -658,7 +724,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00080">80</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keywordtype">  real</span>(DP), <span class="keywordtype">parameter</span> :: DEM4  = 1.0e-4_dp</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="abfa587fcd3a538441dbd56c684454ee4"></a>
@@ -674,7 +741,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00081">81</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="keywordtype">  real</span>(DP), <span class="keywordtype">parameter</span> :: DEM5  = 1.0e-5_dp</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aba95664cbd721a2d72df12ac8bb78da8"></a>
@@ -690,7 +758,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00082">82</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="keywordtype">  real</span>(DP), <span class="keywordtype">parameter</span> :: DEM6  = 1.0e-6_dp</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a433972bd08156c85979081a6afe75ebb"></a>
@@ -706,7 +775,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00083">83</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="keywordtype">  real</span>(DP), <span class="keywordtype">parameter</span> :: DEM7  = 1.0e-7_dp</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a445fe33017b6af4db7738526d4340856"></a>
@@ -722,7 +792,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00084">84</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="keywordtype">  real</span>(DP), <span class="keywordtype">parameter</span> :: DEM8  = 1.0e-8_dp</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad2842e6abbd5f9565a39ea7c24cc7361"></a>
@@ -738,7 +809,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00085">85</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="keywordtype">  real</span>(DP), <span class="keywordtype">parameter</span> :: DEM9  = 1.0e-9_dp</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a788fea7ac93d7754e6f23ee9ca77ec24"></a>
@@ -754,7 +826,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00070">70</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keywordtype">  real</span>(DP), <span class="keywordtype">parameter</span> :: DEP20 = 1.0e20_dp</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a2367e11addd73adb5eb9bd88baf3fe13"></a>
@@ -770,7 +843,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00067">67</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keywordtype">  real</span>(DP), <span class="keywordtype">parameter</span> :: DEP3 = 1.0e3_dp</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a3b6c2c36dc5ab397c6dfeb5c4967cbd1"></a>
@@ -786,7 +860,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00068">68</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keywordtype">  real</span>(DP), <span class="keywordtype">parameter</span> :: DEP6 = 1.0e6_dp</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a7fefa6a706d69030d1df9865d8af4c0a"></a>
@@ -802,7 +877,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00069">69</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keywordtype">  real</span>(DP), <span class="keywordtype">parameter</span> :: DEP9 = 1.0e9_dp</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a4456efdba60fa1e34046f1ab7ff709d8"></a>
@@ -818,7 +894,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00058">58</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keywordtype">  real</span>(DP), <span class="keywordtype">parameter</span> :: DFIVETHIRDS = 5.0_dp / 3.0_dp</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a3d8e2f8d9aeecf80a7a34ad71fc53a02"></a>
@@ -834,7 +911,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00061">61</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keywordtype">  real</span>(DP), <span class="keywordtype">parameter</span> :: DFOUR = 4.0_dp</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a96d09754db7c0d885c3fd2cd98421c10"></a>
@@ -850,7 +928,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00103">103</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="keywordtype">  real</span>(DP), <span class="keywordtype">parameter</span> :: DGRAVITY = 9.80665_dp</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a9262b16d485352c5d369c6cb86232c60"></a>
@@ -866,7 +945,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00048">48</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keywordtype">  real</span>(DP), <span class="keywordtype">parameter</span> :: DHALF = 0.5_dp</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a0fca590c703b8fbda34193c0ab7d1246"></a>
@@ -882,7 +962,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00073">73</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keywordtype">  real</span>(DP), <span class="keywordtype">parameter</span> :: DHDRY = -1.e30_dp</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a636a1fbcffa24ababa57ac244ee2217f"></a>
@@ -898,7 +979,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00072">72</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keywordtype">  real</span>(DP), <span class="keywordtype">parameter</span> :: DHNOFLO = 1.e30_dp</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a6b8f1b479964958f02d53cc5b60f8533"></a>
@@ -914,7 +996,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00065">65</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keywordtype">  real</span>(DP), <span class="keywordtype">parameter</span> :: DHUNDRED = 1.0e2_dp</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad1788cb8fb28394f71afb55c9d4193dd"></a>
@@ -930,7 +1013,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00097">97</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="keywordtype">  real</span>(DP), <span class="keywordtype">parameter</span> :: DLNHIGH = 1.005_dp</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a0f5392f3174c8f464c40f2fca19b095a"></a>
@@ -946,7 +1030,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00096">96</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="keywordtype">  real</span>(DP), <span class="keywordtype">parameter</span> :: DLNLOW = 0.995_dp</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a4ee8967493137bb95d5b78dc3a77feba"></a>
@@ -962,7 +1047,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00074">74</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keywordtype">  real</span>(DP), <span class="keywordtype">parameter</span> :: DNODATA = 3.0e30_dp</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af918ac22cd0b232deea67660bfbc9ce1"></a>
@@ -978,7 +1064,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00056">56</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keywordtype">  real</span>(DP), <span class="keywordtype">parameter</span> :: DONE = 1.0_dp</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a4bda705585dcbb6b9fc3b7b3d0acc4b7"></a>
@@ -994,7 +1081,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00047">47</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keywordtype">  real</span>(DP), <span class="keywordtype">parameter</span> :: DONETHIRD = 1.0_dp / 3.0_dp</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a78c9dfa547fd460e26f4e891c04bde66"></a>
@@ -1010,7 +1098,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00049">49</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keywordtype">  real</span>(DP), <span class="keywordtype">parameter</span> :: DP6 = 0.6_dp</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="acb834e38a59e043c7f606d42694836d2"></a>
@@ -1026,7 +1115,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00051">51</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keywordtype">  real</span>(DP), <span class="keywordtype">parameter</span> :: DP7 = 0.7_dp</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a2f3c8a76f726908832424379a5afb9ff"></a>
@@ -1042,7 +1132,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00052">52</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keywordtype">  real</span>(DP), <span class="keywordtype">parameter</span> :: DP9 = 0.9_dp</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa5a6605f3ea28d088dabaff26da808e6"></a>
@@ -1058,7 +1149,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00053">53</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keywordtype">  real</span>(DP), <span class="keywordtype">parameter</span> :: DP99 = 0.99_dp</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a4542b7bb018f5ce26185f254f9eec59c"></a>
@@ -1074,7 +1166,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00054">54</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keywordtype">  real</span>(DP), <span class="keywordtype">parameter</span> :: DP999 = 0.999_dp</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa190ea61b44b2ef628329833de6543a9"></a>
@@ -1090,7 +1183,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00099">99</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="keywordtype">  real</span>(DP), <span class="keywordtype">parameter</span> :: DPI = dfour * atan(done)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa782c151085f5c3c4892ecb72cdda2ce"></a>
@@ -1106,7 +1200,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00101">101</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="keywordtype">  real</span>(DP), <span class="keywordtype">parameter</span> :: DPIO180 = datan(done)/4.5d1</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac37de3e5441d5466b8c6e7a45a0cb32b"></a>
@@ -1122,7 +1217,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00093">93</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="keywordtype">  real</span>(DP), <span class="keywordtype">parameter</span> :: DPREC = epsilon(1.0_dp)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aef6ab188e5a7f149629474bbdba2b0ab"></a>
@@ -1138,7 +1234,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00046">46</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keywordtype">  real</span>(DP), <span class="keywordtype">parameter</span> :: DQUARTER = 0.25_dp</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a045a5a7f4aa6dff3c42329d41aba01f8"></a>
@@ -1154,7 +1251,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00094">94</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="keywordtype">  real</span>(DP), <span class="keywordtype">parameter</span> :: DSAME = dhundred * dprec</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aecad452f859d016112558e44a6913dc9"></a>
@@ -1170,7 +1268,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00062">62</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keywordtype">  real</span>(DP), <span class="keywordtype">parameter</span> :: DSIX = 6.0_dp</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac01448fbf94949dbcc80aa705d7c80de"></a>
@@ -1186,7 +1285,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00064">64</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keywordtype">  real</span>(DP), <span class="keywordtype">parameter</span> :: DTEN = 1.0e1_dp</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af78a42d4fd58cef4835c0bbd973ccf59"></a>
@@ -1202,7 +1302,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00060">60</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keywordtype">  real</span>(DP), <span class="keywordtype">parameter</span> :: DTHREE = 3.0_dp</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="adc3d56c06695509e95078d706508e83f"></a>
@@ -1218,7 +1319,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00059">59</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keywordtype">  real</span>(DP), <span class="keywordtype">parameter</span> :: DTWO = 2.0_dp</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a737325c92b7e38dc1466b93ed3e130cd"></a>
@@ -1234,7 +1336,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00100">100</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="keywordtype">  real</span>(DP), <span class="keywordtype">parameter</span> :: DTWOPI = dtwo * dfour * atan(done)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a1dd99b36c8013b13af6abf45ed99bf3d"></a>
@@ -1250,7 +1353,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00050">50</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keywordtype">  real</span>(DP), <span class="keywordtype">parameter</span> :: DTWOTHIRDS = 2.0_dp / 3.0_dp</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="abab5757666b9ddd2726c20ce48dd0050"></a>
@@ -1266,7 +1370,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00045">45</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keywordtype">  real</span>(DP), <span class="keywordtype">parameter</span> :: DZERO = 0.0_dp</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a3999926c281524e8a79cb40dd4711b8c"></a>
@@ -1282,7 +1387,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00038">38</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">parameter</span> :: IULAST = 10000</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a6d366b0fb2a7bb591d1700fe614ae384"></a>
@@ -1298,7 +1404,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00005">5</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;  <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">parameter</span> :: IUSERFORMATSTRIP = -99</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a7b8d677e1ca983dd9bdaaed17dd8fbd9"></a>
@@ -1314,7 +1421,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00006">6</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;  <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">parameter</span> :: IUSERFORMATWRAP = 99</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a4c97c83c0354b0d18b16ed8ff425aaa4"></a>
@@ -1330,7 +1438,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00037">37</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">parameter</span> :: IUSTART = 1000</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aae7c048de23e9b2f66a7514ad2004cff"></a>
@@ -1346,7 +1455,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00034">34</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">parameter</span> :: IZERO = 0</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a9ee3f8405321b057b32648a5dc031e20"></a>
@@ -1362,7 +1472,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00018">18</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">parameter</span> :: LENAUXNAME = 16</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a5a5bc481197413bb50013a92490ffa14"></a>
@@ -1378,7 +1489,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00007">7</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">parameter</span> :: LENBIGLINE = 5000</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa63ca3273e52df46471c4746566f46bd"></a>
@@ -1394,7 +1506,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00019">19</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">parameter</span> :: LENBOUNDNAME = 40</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="adda4cd91b9096b31d5e48d2215359311"></a>
@@ -1410,7 +1523,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00020">20</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">parameter</span> :: LENBUDTXT = 16</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a07b1e4cc3a2d7bf5c88fd4426d00279d"></a>
@@ -1426,7 +1540,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00010">10</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">parameter</span> :: LENCOMPONENTNAME = 16</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a8747ddf06805dda42850e6af6199a999"></a>
@@ -1442,7 +1557,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00027">27</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">parameter</span> :: LENDATETIME = 30</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a2c636eb1c2af29a8d9b384896408f12d"></a>
@@ -1457,10 +1573,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>maximum length of the exchange name </p>
-
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00014">14</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">parameter</span> :: LENEXCHANGENAME = lencomponentname                         <span class="comment">!&lt; maximum length of the exchange name</span></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a96baa989fd4e29721a7756b985c18b30"></a>
@@ -1476,7 +1591,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00022">22</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">parameter</span> :: LENFTYPE = 5</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a5a1a293eb39a53c7247c4630d2b8fecd"></a>
@@ -1492,7 +1608,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00008">8</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">parameter</span> :: LENHUGELINE = 50000</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a6449a1ef03b2afb65c2da79136202944"></a>
@@ -1508,7 +1625,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00029">29</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">parameter</span> :: LENLISTLABEL = 500</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a124df3d46105cc5604d4a2d748342a9c"></a>
@@ -1523,10 +1641,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>maximum length of the full memory address, including variable name </p>
-
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00017">17</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">parameter</span> :: LENMEMADDRESS = lenmempath + lenmemseparator + lenvarname  <span class="comment">!&lt; maximum length of the full memory address, including variable name</span></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae1ec6380bd0e8e6c89a40d3b97306586"></a>
@@ -1541,10 +1658,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>maximum length of the memory path </p>
-
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00016">16</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">parameter</span> :: LENMEMPATH = 2*lencomponentname + lenmemseparator          <span class="comment">!&lt; maximum length of the memory path</span></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a4ccef9855300cc5422b66657bf8af838"></a>
@@ -1559,10 +1675,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>maximum length of the memory path separator used, currently a '/' </p>
-
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00015">15</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">parameter</span> :: LENMEMSEPARATOR = 1<span class="comment">                                        !&lt; maximum length of the memory path separator used, currently a &#39;/&#39;</span></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa2a9a4f415f41c7d1d20d25390419b13"></a>
@@ -1578,7 +1693,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00042">42</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">public</span>, <span class="keywordtype">parameter</span> :: LENMEMTYPE = 50</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a2371bf2667814198ff255350fa3e3edd"></a>
@@ -1593,10 +1709,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>maximum length of the model name </p>
-
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00012">12</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">parameter</span> :: LENMODELNAME = lencomponentname                            <span class="comment">!&lt; maximum length of the model name</span></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa7666dc20f64af0be4dc11ebf6759841"></a>
@@ -1612,7 +1727,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00023">23</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">parameter</span> :: LENOBSNAME = 40</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad1f6ef2448de9c1b27af4212ea587085"></a>
@@ -1628,7 +1744,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00024">24</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">parameter</span> :: LENOBSTYPE = 30</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a2e75f10abe62e57d87d7d468c2bf763d"></a>
@@ -1643,10 +1760,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>maximum length of the package name </p>
-
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00013">13</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">parameter</span> :: LENPACKAGENAME = lencomponentname                          <span class="comment">!&lt; maximum length of the package name</span></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a59c04cea8e26df96e1d7432b284e16fc"></a>
@@ -1662,7 +1778,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00021">21</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">parameter</span> :: LENPACKAGETYPE = 7  </div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a7086a401efd60d6b642fae8380f32cbd"></a>
@@ -1678,7 +1795,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00033">33</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">parameter</span> :: LENPAKLOC = 34</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a28a74b623811fb516de0539ff0219d94"></a>
@@ -1693,10 +1811,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>maximum length of the solution name </p>
-
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00011">11</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">parameter</span> :: LENSOLUTIONNAME = lencomponentname                         <span class="comment">!&lt; maximum length of the solution name</span></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a72b9f98f14e6bc10dae320dfd4f56dfb"></a>
@@ -1712,7 +1829,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00025">25</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">parameter</span> :: LENTIMESERIESNAME = lenobsname</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a8128a47da98d91469cdc370e09bb0111"></a>
@@ -1728,7 +1846,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00026">26</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">parameter</span> :: LENTIMESERIESTEXT = 16</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a8a23c620a738ea7c5a9b5c4893b6bfbb"></a>
@@ -1744,7 +1863,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00009">9</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">parameter</span> :: LENVARNAME = 16</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a060d310ded5535ce2dc85bd1ca1afd3d"></a>
@@ -1760,7 +1880,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00028">28</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">parameter</span> :: LINELENGTH = 300</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac9c1da291f7c6bfb35a47957c588ab20"></a>
@@ -1776,7 +1897,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00030">30</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">parameter</span> :: MAXCHARLEN = max(1000, lenbigline)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a9ec08a833e9347ea3239bc60b9b129b8"></a>
@@ -1792,7 +1914,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00041">41</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">public</span>, <span class="keywordtype">parameter</span> :: MAXMEMRANK = 3</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a7bc1680f8ee7a7b1b5d8ad6927951da7"></a>
@@ -1808,7 +1931,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00031">31</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">parameter</span> :: MAXOBSTYPES = 100</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a46161975c953f015e2fda2bc089cfa94"></a>
@@ -1824,15 +1948,20 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_constants_8f90_source.html#l00032">32</a> of file <a class="el" href="_constants_8f90_source.html">Constants.f90</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">parameter</span> :: NAMEDBOUNDFLAG = -9</div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceconstantsmodule.html">constantsmodule</a></li>
+    <li class="footer">Generated on Thu Jun 24 2021 19:50:10 for MODFLOW 6 by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
 </body>
 </html>

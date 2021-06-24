@@ -5,13 +5,22 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MODFLOW 6 Code Documentation: /home/runner/work/modflow6/modflow6/srcbmi/mf6xmi.f90 Source File</title>
+<title>MODFLOW 6: /home/runner/work/modflow6/modflow6/srcbmi/mf6xmi.f90 Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="CustomDoxygen.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -21,9 +30,12 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="mf6-triangular-grid.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">MODFLOW 6 Code Documentation
+   <div id="projectname">MODFLOW 6
+   &#160;<span id="projectnumber">version 6.2.2</span>
    </div>
+   <div id="projectbrief">MODFLOW 6 Code Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -36,16 +48,54 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Modules</span></a></li>
+      <li><a href="annotated.html"><span>Data&#160;Types&#160;List</span></a></li>
+      <li class="current"><a href="files.html"><span>Files</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('mf6xmi_8f90_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,11 +110,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_df792f6769e16fbc2e58301ddc635f77.html">srcbmi</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">mf6xmi.f90</div>  </div>
@@ -272,7 +317,7 @@ $(function() {
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="keywordtype">integer(kind=c_int)</span> :: subcomponent_idx<span class="comment"> !&lt; index of the subcomponent (i.e. Numerical Solution)</span></div>
 <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <span class="keywordtype">integer(kind=c_int)</span> :: bmi_status<span class="comment">       !&lt; BMI status code</span></div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <span class="comment">! -- local variables</span></div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="keywordtype">class</span>(numericalsolutiontype), <span class="keywordtype">pointer</span> :: ns</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structnumericalsolutionmodule_1_1numericalsolutiontype.html">numericalsolutiontype</a>), <span class="keywordtype">pointer</span> :: ns</div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160; </div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="comment">! people might not call &#39;xmi_get_subcomponent_count&#39; first, so let&#39;s repeat this:</span></div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="namespacelistsmodule.html#a733280dd05725ffbe3969344a79a964c">solutiongrouplist</a>%Count() /= 1) <span class="keywordflow">then</span></div>
@@ -310,7 +355,7 @@ $(function() {
 <div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="keywordtype">integer(kind=c_int)</span>, <span class="keywordtype">intent(out)</span> :: has_converged<span class="comment">   !&lt; equal to 1 for convergence, 0 otherwise</span></div>
 <div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    <span class="keywordtype">integer(kind=c_int)</span> :: bmi_status<span class="comment">                   !&lt; BMI status code</span></div>
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <span class="comment">! -- local variables</span></div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <span class="keywordtype">class</span>(numericalsolutiontype), <span class="keywordtype">pointer</span> :: ns</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structnumericalsolutionmodule_1_1numericalsolutiontype.html">numericalsolutiontype</a>), <span class="keywordtype">pointer</span> :: ns</div>
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160; </div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <span class="comment">! get the numerical solution we are running</span></div>
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    ns =&gt; <a class="code" href="namespacemf6bmiutil.html#aed42965695d84c9e4b715ff1d013fed4">getsolution</a>(subcomponent_idx)</div>
@@ -346,7 +391,7 @@ $(function() {
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    <span class="keywordtype">integer(kind=c_int)</span>, <span class="keywordtype">intent(in)</span> :: subcomponent_idx<span class="comment"> !&lt; index of the subcomponent (i.e. Numerical Solution)</span></div>
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <span class="keywordtype">integer(kind=c_int)</span> :: bmi_status<span class="comment">               !&lt; BMI status code</span></div>
 <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <span class="comment">! -- local variables</span></div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    <span class="keywordtype">class</span>(numericalsolutiontype), <span class="keywordtype">pointer</span> :: ns</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structnumericalsolutionmodule_1_1numericalsolutiontype.html">numericalsolutiontype</a>), <span class="keywordtype">pointer</span> :: ns</div>
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: hasconverged</div>
 <div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160; </div>
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <span class="comment">! get the numerical solution we are running</span></div>
@@ -423,8 +468,10 @@ $(function() {
 <div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160; </div>
 <div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;<span class="keyword">end module </span><a class="code" href="namespacemf6xmi.html">mf6xmi</a></div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <div class="ttc" id="anamespacekindmodule_html"><div class="ttname"><a href="namespacekindmodule.html">kindmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="kind_8f90_source.html#l00001">kind.f90:1</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_ae1ec6380bd0e8e6c89a40d3b97306586"><div class="ttname"><a href="namespaceconstantsmodule.html#ae1ec6380bd0e8e6c89a40d3b97306586">constantsmodule::lenmempath</a></div><div class="ttdeci">integer(i4b), parameter lenmempath</div><div class="ttdoc">maximum length of the memory path</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00016">Constants.f90:16</a></div></div>
+<div class="ttc" id="astructnumericalsolutionmodule_1_1numericalsolutiontype_html"><div class="ttname"><a href="structnumericalsolutionmodule_1_1numericalsolutiontype.html">numericalsolutionmodule::numericalsolutiontype</a></div><div class="ttdef"><b>Definition:</b> <a href="_numerical_solution_8f90_source.html#l00040">NumericalSolution.f90:40</a></div></div>
 <div class="ttc" id="anamespacemf6xmi_html_af8d28c72dda6783a01843bcc2ed56fe3"><div class="ttname"><a href="namespacemf6xmi.html#af8d28c72dda6783a01843bcc2ed56fe3">mf6xmi::get_var_address</a></div><div class="ttdeci">integer(kind=c_int) function get_var_address(c_component_name, c_subcomponent_name, c_var_name, c_var_address)</div><div class="ttdoc">Get the full address string for a variable.</div><div class="ttdef"><b>Definition:</b> <a href="mf6xmi_8f90_source.html#l00314">mf6xmi.f90:314</a></div></div>
 <div class="ttc" id="anamespacemf6bmiutil_html_afb854f164b45b8ef66a1667d42233d08"><div class="ttname"><a href="namespacemf6bmiutil.html#afb854f164b45b8ef66a1667d42233d08">mf6bmiutil::bmi_lenvaraddress</a></div><div class="ttdeci">integer(c_int), bind(C, name=&quot;BMI_LENVARADDRESS&quot;) bmi_lenvaraddress</div><div class="ttdoc">max. length for the variable's address C-string</div><div class="ttdef"><b>Definition:</b> <a href="mf6bmi_util_8f90_source.html#l00032">mf6bmiUtil.f90:32</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_a07b1e4cc3a2d7bf5c88fd4426d00279d"><div class="ttname"><a href="namespaceconstantsmodule.html#a07b1e4cc3a2d7bf5c88fd4426d00279d">constantsmodule::lencomponentname</a></div><div class="ttdeci">integer(i4b), parameter lencomponentname</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00010">Constants.f90:10</a></div></div>
@@ -466,10 +513,13 @@ $(function() {
 <div class="ttc" id="anamespacemf6bmierror_html_ab39c8011ab12267e1dab392ffbd651d4"><div class="ttname"><a href="namespacemf6bmierror.html#ab39c8011ab12267e1dab392ffbd651d4">mf6bmierror::fmt_fail_cvg_sol</a></div><div class="ttdeci">character(len= *), parameter fmt_fail_cvg_sol</div><div class="ttdef"><b>Definition:</b> <a href="mf6bmi_error_8f90_source.html#l00031">mf6bmiError.f90:31</a></div></div>
 <div class="ttc" id="anamespacemf6xmi_html_acf0c5a0b42fa9e0423156b713b22761b"><div class="ttname"><a href="namespacemf6xmi.html#acf0c5a0b42fa9e0423156b713b22761b">mf6xmi::xmi_finalize_solve</a></div><div class="ttdeci">integer(kind=c_int) function xmi_finalize_solve(subcomponent_idx)</div><div class="ttdoc">Finalize the solve of the system.</div><div class="ttdef"><b>Definition:</b> <a href="mf6xmi_8f90_source.html#l00270">mf6xmi.f90:270</a></div></div>
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_df792f6769e16fbc2e58301ddc635f77.html">srcbmi</a></li><li class="navelem"><a class="el" href="mf6xmi_8f90.html">mf6xmi.f90</a></li>
+    <li class="footer">Generated on Thu Jun 24 2021 19:50:10 for MODFLOW 6 by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
 </body>
 </html>

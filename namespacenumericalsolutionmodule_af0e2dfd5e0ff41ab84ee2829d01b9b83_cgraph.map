@@ -1,7 +1,4 @@
 <map id="numericalsolutionmodule::add_model" name="numericalsolutionmodule::add_model">
-<area shape="rect" id="node1" title=" " alt="" coords="5,104,193,145"/>
-<area shape="rect" id="node2" href="$namespacenumericalexchangemodule.html#a56a50d312b63be01db46d31e4992d451" title=" " alt="" coords="249,5,464,47"/>
-<area shape="rect" id="node3" href="$namespacenumericalmodelmodule.html#a065349973a4697016b21beb9cd1446b2" title=" " alt="" coords="260,71,453,112"/>
-<area shape="rect" id="node4" href="$namespacenumericalexchangemodule.html#a09ae423b40a16a7841cbb95815029b0f" title=" " alt="" coords="241,136,472,177"/>
-<area shape="rect" id="node5" href="$namespacenumericalmodelmodule.html#a4d031f0a98348529066eef37676f018d" title=" " alt="" coords="253,201,461,243"/>
+<area shape="rect" id="node1" title="@ brief Add a model" alt="" coords="5,5,193,47"/>
+<area shape="rect" id="node2" href="$namespacenumericalmodelmodule.html#a065349973a4697016b21beb9cd1446b2" title=" " alt="" coords="241,5,435,47"/>
 </map>

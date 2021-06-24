@@ -5,13 +5,22 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MODFLOW 6 Code Documentation: memorysethandlermodule Module Reference</title>
+<title>MODFLOW 6: memorysethandlermodule Module Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="CustomDoxygen.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -21,9 +30,12 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="mf6-triangular-grid.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">MODFLOW 6 Code Documentation
+   <div id="projectname">MODFLOW 6
+   &#160;<span id="projectnumber">version 6.2.2</span>
    </div>
+   <div id="projectbrief">MODFLOW 6 Code Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -36,16 +48,54 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li class="current"><a href="namespaces.html"><span>Modules</span></a></li>
+      <li><a href="annotated.html"><span>Data&#160;Types&#160;List</span></a></li>
+      <li><a href="files.html"><span>Files</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="namespaces.html"><span>Modules&#160;List</span></a></li>
+      <li><a href="namespacemembers.html"><span>Module&#160;Members</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('namespacememorysethandlermodule.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,16 +110,23 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Data Types</a> &#124;
-<a href="#func-members">Functions/Subroutines</a>  </div>
+<a href="#func-members">Functions/Subroutines</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">memorysethandlermodule Module Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Data Types</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">type &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmemorysethandlermodule_1_1eventhandlerdatatype.html">eventhandlerdatatype</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacememorysethandlermodule_1_1set__handler__iface.html">set_handler_iface</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions/Subroutines</h2></td></tr>
 <tr class="memitem:a22298f4c80fed5e929971b29d4c57a7b"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorysethandlermodule.html#a22298f4c80fed5e929971b29d4c57a7b">mem_register_handler</a> (var_name, mem_path, handler, ctx)</td></tr>
@@ -78,6 +135,11 @@ Functions/Subroutines</h2></td></tr>
 <tr class="memitem:a696105cae7404befd7025d5757933bb5"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorysethandlermodule.html#a696105cae7404befd7025d5757933bb5">on_memory_set</a> (var_name, mem_path, status)</td></tr>
 <tr class="memdesc:a696105cae7404befd7025d5757933bb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Triggers the calling of the side effect handler for this variable.  <a href="namespacememorysethandlermodule.html#a696105cae7404befd7025d5757933bb5">More...</a><br /></td></tr>
 <tr class="separator:a696105cae7404befd7025d5757933bb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a92d89d35116dc4a2f903fc377171d1a2"><td class="memItemLeft" align="right" valign="top">type(listtype)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorysethandlermodule.html#a92d89d35116dc4a2f903fc377171d1a2">handler_list</a></td></tr>
+<tr class="separator:a92d89d35116dc4a2f903fc377171d1a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function/Subroutine Documentation</h2>
 <a id="a22298f4c80fed5e929971b29d4c57a7b"></a>
@@ -101,7 +163,7 @@ Functions/Subroutines</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">procedure(set_handler_iface), pointer&#160;</td>
+          <td class="paramtype">procedure(<a class="el" href="interfacememorysethandlermodule_1_1set__handler__iface.html">set_handler_iface</a>), pointer&#160;</td>
           <td class="paramname"><em>handler</em>, </td>
         </tr>
         <tr>
@@ -117,8 +179,6 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Register the event handler and context for this variable. </p>
 <p>The event handler and its ctx are called whenever the trigger is given by calling <code>on_set_memory()</code>. This allows to handle side effects, e.g. when a variable is from outside a class (the context) such as happens with the BMI. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">var_name</td><td>the variable name </td></tr>
@@ -130,19 +190,47 @@ Functions/Subroutines</h2></td></tr>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="_memory_set_handler_8f90_source.html#l00040">40</a> of file <a class="el" href="_memory_set_handler_8f90_source.html">MemorySetHandler.f90</a>.</p>
-<div class="dynheader">
+<div class="fragment"><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">character(len=*)</span>, <span class="keywordtype">intent(in)</span> :: var_name<span class="comment">            !&lt; the variable name</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">character(len=*)</span>, <span class="keywordtype">intent(in)</span> :: mem_path<span class="comment">            !&lt; the memory path</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">procedure</span>(set_handler_iface), <span class="keywordtype">pointer</span> :: handler<span class="comment">    !&lt; called after memory is set</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">class</span>(*), <span class="keywordtype">pointer</span> :: ctx<span class="comment">                            !&lt; the context with which the handler should be called</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="comment">! local</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: handler_idx</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">class</span>(EventHandlerDataType), <span class="keywordtype">pointer</span> :: handler_data =&gt; null()</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">class</span>(*), <span class="keywordtype">pointer</span> :: handler_data_genptr</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">type</span>(MemoryType), <span class="keywordtype">pointer</span> :: mt</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">logical(LGP)</span> :: found</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="comment">! first store the handler data</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">allocate</span>(handler_data)</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    handler_data%handler =&gt; handler</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    handler_data%handlerContext =&gt; ctx</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    handler_data_genptr =&gt; handler_data</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keyword">call </span>handler_list%Add(handler_data_genptr)</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="comment">! this is the index for the current handler</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    handler_idx = handler_list%Count()</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="comment">! now set it to the memory item</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    mt =&gt; null()</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    found = .false.</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">call </span>get_from_memorylist(var_name, mem_path, mt, found)</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    mt%set_handler_idx = handler_idx</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+</div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacememorysethandlermodule_a22298f4c80fed5e929971b29d4c57a7b_cgraph.png" border="0" usemap="#namespacememorysethandlermodule_a22298f4c80fed5e929971b29d4c57a7b_cgraph" alt=""/></div>
 <map name="namespacememorysethandlermodule_a22298f4c80fed5e929971b29d4c57a7b_cgraph" id="namespacememorysethandlermodule_a22298f4c80fed5e929971b29d4c57a7b_cgraph">
-<area shape="rect" title="Register the event handler and context for this variable." alt="" coords="5,29,200,70"/>
-<area shape="rect" href="namespacememorymanagermodule.html#a8e6f199b7218d6ec1ab68f383cb6e20f" title="@ brief Get a memory type entry from the memory list" alt="" coords="248,29,432,70"/>
-<area shape="rect" href="namespacememoryhelpermodule.html#a5405f58247a0962e5449ebc1e4dcff0f" title="Generic routine to check the length of (parts of) the memory address." alt="" coords="480,29,647,70"/>
-<area shape="rect" href="namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a" title=" " alt="" coords="695,9,869,36"/>
-<area shape="rect" href="namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61" title=" " alt="" coords="713,64,851,91"/>
-<area shape="rect" href="namespacesimmodule.html#a5feb4a39fb3f3dc66c03cc13b11e2297" title=" " alt="" coords="917,5,1112,32"/>
-<area shape="rect" href="namespacegenericutilitiesmodule.html#a34492cca79f70174fd015808be8b7ebf" title=" " alt="" coords="931,57,1099,98"/>
-<area shape="rect" href="namespacegenericutilitiesmodule.html#a3af5fcf48dcd06255d9bc07f6a25db59" title=" " alt="" coords="931,122,1099,163"/>
+<area shape="rect" title="Register the event handler and context for this variable." alt="" coords="5,35,200,77"/>
+<area shape="rect" href="namespacememorymanagermodule.html#a8e6f199b7218d6ec1ab68f383cb6e20f" title="@ brief Get a memory type entry from the memory list" alt="" coords="248,35,432,77"/>
+<area shape="rect" href="namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a" title=" " alt="" coords="480,17,655,44"/>
+<area shape="rect" href="namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61" title=" " alt="" coords="498,68,637,95"/>
+<area shape="rect" href="namespacesimmodule.html#aa04e734eebf95836b2f37839b65bcae9" title=" " alt="" coords="703,27,871,69"/>
+<area shape="rect" href="namespacegenericutilitiesmodule.html#a3af5fcf48dcd06255d9bc07f6a25db59" title=" " alt="" coords="703,93,871,134"/>
+<area shape="rect" href="namespacesimmodule.html#a5feb4a39fb3f3dc66c03cc13b11e2297" title=" " alt="" coords="919,5,1113,32"/>
+<area shape="rect" href="namespacegenericutilitiesmodule.html#a34492cca79f70174fd015808be8b7ebf" title=" " alt="" coords="932,57,1100,98"/>
 </map>
 </div>
 
@@ -179,8 +267,6 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Triggers the calling of the side effect handler for this variable. </p>
 <p>The handler can be set by calling <code><a class="el" href="namespacememorysethandlermodule.html#a22298f4c80fed5e929971b29d4c57a7b" title="Register the event handler and context for this variable.">mem_register_handler()</a></code>. When the status contains an error code, the program should be stopped because the data in memory is no longer consistent... </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">var_name</td><td>the variable name </td></tr>
@@ -191,19 +277,46 @@ Here is the call graph for this function:</div>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="_memory_set_handler_8f90_source.html#l00077">77</a> of file <a class="el" href="_memory_set_handler_8f90_source.html">MemorySetHandler.f90</a>.</p>
-<div class="dynheader">
+<div class="fragment"><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">character(len=*)</span>, <span class="keywordtype">intent(in)</span> :: var_name<span class="comment">  !&lt; the variable name</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">character(len=*)</span>, <span class="keywordtype">intent(in)</span> :: mem_path<span class="comment">  !&lt; the memory path</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(out)</span> :: status<span class="comment">       !&lt; status: 0 for success, -1 when failed</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="comment">! local</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">type</span>(MemoryType), <span class="keywordtype">pointer</span> :: mt</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">logical(LGP)</span> :: found</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">class</span>(*), <span class="keywordtype">pointer</span> :: handler_data_genptr =&gt; null()</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordtype">class</span>(EventHandlerDataType), <span class="keywordtype">pointer</span> :: evt_handler_data =&gt; null()</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="comment">! get the handler data and cast</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    mt =&gt; null()</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    found = .false.</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keyword">call </span>get_from_memorylist(var_name, mem_path, mt, found)</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordflow">if</span> (mt%set_handler_idx == 0) <span class="keywordflow">then</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;      <span class="comment">! nothing to be done</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;      status = 0</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;      <span class="keywordflow">return</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="keywordflow">    end if</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    handler_data_genptr =&gt; handler_list%GetItem(mt%set_handler_idx)</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">select type</span>(handler_data_genptr)</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="keywordflow">    class is</span> (eventhandlerdatatype)</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;      evt_handler_data =&gt; handler_data_genptr</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="keywordflow">    end select</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="comment">! call the function</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keyword">call </span>evt_handler_data%handler(evt_handler_data%handlerContext, status)</div>
+</div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacememorysethandlermodule_a696105cae7404befd7025d5757933bb5_cgraph.png" border="0" usemap="#namespacememorysethandlermodule_a696105cae7404befd7025d5757933bb5_cgraph" alt=""/></div>
 <map name="namespacememorysethandlermodule_a696105cae7404befd7025d5757933bb5_cgraph" id="namespacememorysethandlermodule_a696105cae7404befd7025d5757933bb5_cgraph">
-<area shape="rect" title="Triggers the calling of the side effect handler for this variable." alt="" coords="5,29,200,70"/>
-<area shape="rect" href="namespacememorymanagermodule.html#a8e6f199b7218d6ec1ab68f383cb6e20f" title="@ brief Get a memory type entry from the memory list" alt="" coords="248,29,432,70"/>
-<area shape="rect" href="namespacememoryhelpermodule.html#a5405f58247a0962e5449ebc1e4dcff0f" title="Generic routine to check the length of (parts of) the memory address." alt="" coords="480,29,647,70"/>
-<area shape="rect" href="namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a" title=" " alt="" coords="695,9,869,36"/>
-<area shape="rect" href="namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61" title=" " alt="" coords="713,64,851,91"/>
-<area shape="rect" href="namespacesimmodule.html#a5feb4a39fb3f3dc66c03cc13b11e2297" title=" " alt="" coords="917,5,1112,32"/>
-<area shape="rect" href="namespacegenericutilitiesmodule.html#a34492cca79f70174fd015808be8b7ebf" title=" " alt="" coords="931,57,1099,98"/>
-<area shape="rect" href="namespacegenericutilitiesmodule.html#a3af5fcf48dcd06255d9bc07f6a25db59" title=" " alt="" coords="931,122,1099,163"/>
+<area shape="rect" title="Triggers the calling of the side effect handler for this variable." alt="" coords="5,35,200,77"/>
+<area shape="rect" href="namespacememorymanagermodule.html#a8e6f199b7218d6ec1ab68f383cb6e20f" title="@ brief Get a memory type entry from the memory list" alt="" coords="248,35,432,77"/>
+<area shape="rect" href="namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a" title=" " alt="" coords="480,17,655,44"/>
+<area shape="rect" href="namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61" title=" " alt="" coords="498,68,637,95"/>
+<area shape="rect" href="namespacesimmodule.html#aa04e734eebf95836b2f37839b65bcae9" title=" " alt="" coords="703,27,871,69"/>
+<area shape="rect" href="namespacegenericutilitiesmodule.html#a3af5fcf48dcd06255d9bc07f6a25db59" title=" " alt="" coords="703,93,871,134"/>
+<area shape="rect" href="namespacesimmodule.html#a5feb4a39fb3f3dc66c03cc13b11e2297" title=" " alt="" coords="919,5,1113,32"/>
+<area shape="rect" href="namespacegenericutilitiesmodule.html#a34492cca79f70174fd015808be8b7ebf" title=" " alt="" coords="932,57,1100,98"/>
 </map>
 </div>
 <div class="dynheader">
@@ -221,12 +334,42 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a92d89d35116dc4a2f903fc377171d1a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92d89d35116dc4a2f903fc377171d1a2">&#9670;&nbsp;</a></span>handler_list</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">type(listtype) memorysethandlermodule::handler_list</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_memory_set_handler_8f90_source.html#l00020">20</a> of file <a class="el" href="_memory_set_handler_8f90_source.html">MemorySetHandler.f90</a>.</p>
+<div class="fragment"><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keywordtype">type</span>(ListType) :: handler_list</div>
+</div><!-- fragment -->
+</div>
+</div>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacememorysethandlermodule.html">memorysethandlermodule</a></li>
+    <li class="footer">Generated on Thu Jun 24 2021 19:50:17 for MODFLOW 6 by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
 </body>
 </html>

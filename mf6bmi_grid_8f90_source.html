@@ -5,13 +5,22 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MODFLOW 6 Code Documentation: /home/runner/work/modflow6/modflow6/srcbmi/mf6bmiGrid.f90 Source File</title>
+<title>MODFLOW 6: /home/runner/work/modflow6/modflow6/srcbmi/mf6bmiGrid.f90 Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="CustomDoxygen.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -21,9 +30,12 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="mf6-triangular-grid.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">MODFLOW 6 Code Documentation
+   <div id="projectname">MODFLOW 6
+   &#160;<span id="projectnumber">version 6.2.2</span>
    </div>
+   <div id="projectbrief">MODFLOW 6 Code Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -36,16 +48,54 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Modules</span></a></li>
+      <li><a href="annotated.html"><span>Data&#160;Types&#160;List</span></a></li>
+      <li class="current"><a href="files.html"><span>Files</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('mf6bmi_grid_8f90_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,11 +110,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_df792f6769e16fbc2e58301ddc635f77.html">srcbmi</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">mf6bmiGrid.f90</div>  </div>
@@ -83,7 +128,7 @@ $(function() {
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <span class="keywordtype">use </span>iso_c_binding, <span class="keywordtype">only</span>: c_double, c_ptr, c_loc</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespaceconstantsmodule.html">constantsmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespaceconstantsmodule.html#a2371bf2667814198ff255350fa3e3edd">lenmodelname</a>, <a class="code" href="namespaceconstantsmodule.html#ae1ec6380bd0e8e6c89a40d3b97306586">lenmempath</a></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacekindmodule.html">kindmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>, <a class="code" href="namespacekindmodule.html#a2f6861418b5e7d3d602b77228232a470">i4b</a></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacememorymanagermodule.html">memorymanagermodule</a>, <span class="keywordtype">only</span>: mem_setptr</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacememorymanagermodule.html">memorymanagermodule</a>, <span class="keywordtype">only</span>: <a class="code" href="interfacememorymanagermodule_1_1mem__setptr.html">mem_setptr</a></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacememoryhelpermodule.html">memoryhelpermodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespacememoryhelpermodule.html#a3791dbc2d4a06a0b9112158cff21f738">create_mem_path</a></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <span class="keywordtype">implicit none</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
@@ -171,7 +216,7 @@ $(function() {
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="comment">! get shape array</span></div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    model_name = <a class="code" href="namespacemf6bmiutil.html#a1e8692c600f23ba6b0468dff63f2b29b">get_model_name</a>(grid_id)</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keyword">call </span>mem_setptr(grid_shape, <span class="stringliteral">&quot;MSHAPE&quot;</span>, <a class="code" href="namespacememoryhelpermodule.html#a3791dbc2d4a06a0b9112158cff21f738">create_mem_path</a>(model_name, <span class="stringliteral">&#39;DIS&#39;</span>))</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__setptr.html">mem_setptr</a>(grid_shape, <span class="stringliteral">&quot;MSHAPE&quot;</span>, <a class="code" href="namespacememoryhelpermodule.html#a3791dbc2d4a06a0b9112158cff21f738">create_mem_path</a>(model_name, <span class="stringliteral">&#39;DIS&#39;</span>))</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordflow">if</span> (grid_shape(1) == 1) <span class="keywordflow">then</span></div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;      grid_rank = 2</div>
@@ -202,7 +247,7 @@ $(function() {
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    model_name = <a class="code" href="namespacemf6bmiutil.html#a1e8692c600f23ba6b0468dff63f2b29b">get_model_name</a>(grid_id)</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordflow">if</span> (grid_type_f == <span class="stringliteral">&quot;rectilinear&quot;</span>) <span class="keywordflow">then</span></div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;      <span class="keyword">call </span>mem_setptr(grid_shape, <span class="stringliteral">&quot;MSHAPE&quot;</span>, <a class="code" href="namespacememoryhelpermodule.html#a3791dbc2d4a06a0b9112158cff21f738">create_mem_path</a>(model_name, <span class="stringliteral">&#39;DIS&#39;</span>))</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__setptr.html">mem_setptr</a>(grid_shape, <span class="stringliteral">&quot;MSHAPE&quot;</span>, <a class="code" href="namespacememoryhelpermodule.html#a3791dbc2d4a06a0b9112158cff21f738">create_mem_path</a>(model_name, <span class="stringliteral">&#39;DIS&#39;</span>))</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;      grid_size = grid_shape(1)*grid_shape(2)*grid_shape(3)</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;      bmi_status = <a class="code" href="namespacemf6bmierror.html#aef191def294c11093888859e037d3b4d">bmi_success</a></div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;      <span class="keywordflow">return</span></div>
@@ -231,7 +276,7 @@ $(function() {
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="comment">! get shape array</span></div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    model_name = <a class="code" href="namespacemf6bmiutil.html#a1e8692c600f23ba6b0468dff63f2b29b">get_model_name</a>(grid_id)</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keyword">call </span>mem_setptr(grid_shape_ptr, <span class="stringliteral">&quot;MSHAPE&quot;</span>, <a class="code" href="namespacememoryhelpermodule.html#a3791dbc2d4a06a0b9112158cff21f738">create_mem_path</a>(model_name, <span class="stringliteral">&#39;DIS&#39;</span>))</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__setptr.html">mem_setptr</a>(grid_shape_ptr, <span class="stringliteral">&quot;MSHAPE&quot;</span>, <a class="code" href="namespacememoryhelpermodule.html#a3791dbc2d4a06a0b9112158cff21f738">create_mem_path</a>(model_name, <span class="stringliteral">&#39;DIS&#39;</span>))</div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="keywordflow">if</span> (grid_shape_ptr(1) == 1) <span class="keywordflow">then</span></div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;      grid_shape(1:2) = grid_shape_ptr(2:3)  <span class="comment">! 2D</span></div>
@@ -264,13 +309,13 @@ $(function() {
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    model_name = <a class="code" href="namespacemf6bmiutil.html#a1e8692c600f23ba6b0468dff63f2b29b">get_model_name</a>(grid_id)</div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <span class="keywordflow">if</span> (grid_type_f == <span class="stringliteral">&quot;rectilinear&quot;</span>) <span class="keywordflow">then</span></div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;      <span class="keyword">call </span>mem_setptr(grid_shape_ptr, <span class="stringliteral">&quot;MSHAPE&quot;</span>, <a class="code" href="namespacememoryhelpermodule.html#a3791dbc2d4a06a0b9112158cff21f738">create_mem_path</a>(model_name, <span class="stringliteral">&#39;DIS&#39;</span>))</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__setptr.html">mem_setptr</a>(grid_shape_ptr, <span class="stringliteral">&quot;MSHAPE&quot;</span>, <a class="code" href="namespacememoryhelpermodule.html#a3791dbc2d4a06a0b9112158cff21f738">create_mem_path</a>(model_name, <span class="stringliteral">&#39;DIS&#39;</span>))</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;      <span class="comment">! The dimension of x is in the last element of the shape array.</span></div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;      <span class="comment">! + 1 because we count corners, not centers.</span></div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;      x_size = grid_shape_ptr(<span class="keyword">size</span>(grid_shape_ptr)) + 1</div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;      grid_x(1:x_size) = [(i, i=0, x_size - 1)]</div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (grid_type_f == <span class="stringliteral">&quot;unstructured&quot;</span>) <span class="keywordflow">then</span></div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;      <span class="keyword">call </span>mem_setptr(vertices_ptr, <span class="stringliteral">&quot;VERTICES&quot;</span>, <a class="code" href="namespacememoryhelpermodule.html#a3791dbc2d4a06a0b9112158cff21f738">create_mem_path</a>(model_name, <span class="stringliteral">&#39;DIS&#39;</span>))</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__setptr.html">mem_setptr</a>(vertices_ptr, <span class="stringliteral">&quot;VERTICES&quot;</span>, <a class="code" href="namespacememoryhelpermodule.html#a3791dbc2d4a06a0b9112158cff21f738">create_mem_path</a>(model_name, <span class="stringliteral">&#39;DIS&#39;</span>))</div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;      <span class="comment">! x-coordinates are in the 1st column</span></div>
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;      x_size = <span class="keyword">size</span>(vertices_ptr(1, :))</div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;      grid_x(1:x_size) = vertices_ptr(1, :)</div>
@@ -303,13 +348,13 @@ $(function() {
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160; </div>
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    model_name = <a class="code" href="namespacemf6bmiutil.html#a1e8692c600f23ba6b0468dff63f2b29b">get_model_name</a>(grid_id)</div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <span class="keywordflow">if</span> (grid_type_f == <span class="stringliteral">&quot;rectilinear&quot;</span>) <span class="keywordflow">then</span></div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;      <span class="keyword">call </span>mem_setptr(grid_shape_ptr, <span class="stringliteral">&quot;MSHAPE&quot;</span>, <a class="code" href="namespacememoryhelpermodule.html#a3791dbc2d4a06a0b9112158cff21f738">create_mem_path</a>(model_name, <span class="stringliteral">&#39;DIS&#39;</span>))</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__setptr.html">mem_setptr</a>(grid_shape_ptr, <span class="stringliteral">&quot;MSHAPE&quot;</span>, <a class="code" href="namespacememoryhelpermodule.html#a3791dbc2d4a06a0b9112158cff21f738">create_mem_path</a>(model_name, <span class="stringliteral">&#39;DIS&#39;</span>))</div>
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;      <span class="comment">! The dimension of y is in the second last element of the shape array.</span></div>
 <div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;      <span class="comment">! + 1 because we count corners, not centers.</span></div>
 <div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;      y_size = grid_shape_ptr(<span class="keyword">size</span>(grid_shape_ptr - 1)) + 1</div>
 <div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;      grid_y(1:y_size) = [(i, i=y_size - 1, 0, -1)]</div>
 <div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (grid_type_f == <span class="stringliteral">&quot;unstructured&quot;</span>) <span class="keywordflow">then</span></div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;      <span class="keyword">call </span>mem_setptr(vertices_ptr, <span class="stringliteral">&quot;VERTICES&quot;</span>, <a class="code" href="namespacememoryhelpermodule.html#a3791dbc2d4a06a0b9112158cff21f738">create_mem_path</a>(model_name, <span class="stringliteral">&#39;DIS&#39;</span>))</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__setptr.html">mem_setptr</a>(vertices_ptr, <span class="stringliteral">&quot;VERTICES&quot;</span>, <a class="code" href="namespacememoryhelpermodule.html#a3791dbc2d4a06a0b9112158cff21f738">create_mem_path</a>(model_name, <span class="stringliteral">&#39;DIS&#39;</span>))</div>
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;      <span class="comment">! y-coordinates are in the 2nd column</span></div>
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;      y_size = <span class="keyword">size</span>(vertices_ptr(2, :))</div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;      grid_y(1:y_size) = vertices_ptr(2, :)</div>
@@ -337,7 +382,7 @@ $(function() {
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    <span class="keywordflow">if</span> (.not. <a class="code" href="namespacemf6bmiutil.html#a8d588c1efe402b6494a19948bdb67a85">confirm_grid_type</a>(grid_id, <span class="stringliteral">&quot;DISU&quot;</span>)) <span class="keywordflow">return</span></div>
 <div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160; </div>
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    model_name = <a class="code" href="namespacemf6bmiutil.html#a1e8692c600f23ba6b0468dff63f2b29b">get_model_name</a>(grid_id)</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="keyword">call </span>mem_setptr(nvert_ptr, <span class="stringliteral">&quot;NVERT&quot;</span>, <a class="code" href="namespacememoryhelpermodule.html#a3791dbc2d4a06a0b9112158cff21f738">create_mem_path</a>(model_name, <span class="stringliteral">&#39;DIS&#39;</span>))</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__setptr.html">mem_setptr</a>(nvert_ptr, <span class="stringliteral">&quot;NVERT&quot;</span>, <a class="code" href="namespacememoryhelpermodule.html#a3791dbc2d4a06a0b9112158cff21f738">create_mem_path</a>(model_name, <span class="stringliteral">&#39;DIS&#39;</span>))</div>
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    count = nvert_ptr</div>
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    bmi_status = <a class="code" href="namespacemf6bmierror.html#aef191def294c11093888859e037d3b4d">bmi_success</a></div>
 <div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;  <span class="keyword">end function </span><a class="code" href="namespacemf6bmigrid.html#ad88efccd58e4838c717b0ba1aa59cd03">get_grid_node_count</a></div>
@@ -391,7 +436,7 @@ $(function() {
 <div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    <span class="keywordflow">if</span> (.not. <a class="code" href="namespacemf6bmiutil.html#a8d588c1efe402b6494a19948bdb67a85">confirm_grid_type</a>(grid_id, <span class="stringliteral">&quot;DISU&quot;</span>)) <span class="keywordflow">return</span></div>
 <div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160; </div>
 <div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    model_name = <a class="code" href="namespacemf6bmiutil.html#a1e8692c600f23ba6b0468dff63f2b29b">get_model_name</a>(grid_id)</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    <span class="keyword">call </span>mem_setptr(javert_ptr, <span class="stringliteral">&quot;JAVERT&quot;</span>, <a class="code" href="namespacememoryhelpermodule.html#a3791dbc2d4a06a0b9112158cff21f738">create_mem_path</a>(model_name, <span class="stringliteral">&#39;DIS&#39;</span>))</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__setptr.html">mem_setptr</a>(javert_ptr, <span class="stringliteral">&quot;JAVERT&quot;</span>, <a class="code" href="namespacememoryhelpermodule.html#a3791dbc2d4a06a0b9112158cff21f738">create_mem_path</a>(model_name, <span class="stringliteral">&#39;DIS&#39;</span>))</div>
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160; </div>
 <div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    bmi_status = <a class="code" href="namespacemf6bmigrid.html#a3c96cac8f7941e22fa690cb7647b244d">get_grid_face_count</a>(grid_id, face_count)</div>
 <div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    <span class="keywordflow">if</span> (bmi_status == <a class="code" href="namespacemf6bmierror.html#a48ac153f4b14f401ad4a4d8861aedf61">bmi_failure</a>) <span class="keywordflow">return</span></div>
@@ -423,7 +468,7 @@ $(function() {
 <div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    <span class="keywordflow">if</span> (.not. <a class="code" href="namespacemf6bmiutil.html#a8d588c1efe402b6494a19948bdb67a85">confirm_grid_type</a>(grid_id, <span class="stringliteral">&quot;DISU&quot;</span>)) <span class="keywordflow">return</span></div>
 <div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160; </div>
 <div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;    model_name = <a class="code" href="namespacemf6bmiutil.html#a1e8692c600f23ba6b0468dff63f2b29b">get_model_name</a>(grid_id)</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;    <span class="keyword">call </span>mem_setptr(iavert_ptr, <span class="stringliteral">&quot;IAVERT&quot;</span>, <a class="code" href="namespacememoryhelpermodule.html#a3791dbc2d4a06a0b9112158cff21f738">create_mem_path</a>(model_name, <span class="stringliteral">&#39;DIS&#39;</span>))</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__setptr.html">mem_setptr</a>(iavert_ptr, <span class="stringliteral">&quot;IAVERT&quot;</span>, <a class="code" href="namespacememoryhelpermodule.html#a3791dbc2d4a06a0b9112158cff21f738">create_mem_path</a>(model_name, <span class="stringliteral">&#39;DIS&#39;</span>))</div>
 <div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160; </div>
 <div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;    <span class="keywordflow">do</span> i = 1, <span class="keyword">size</span>(iavert_ptr) - 1</div>
 <div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;      nodes_per_face(i) = iavert_ptr(i + 1) - iavert_ptr(i) - 1</div>
@@ -432,6 +477,7 @@ $(function() {
 <div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;  <span class="keyword">end function </span><a class="code" href="namespacemf6bmigrid.html#ad01b75893110495984c1615f208b9abd">get_grid_nodes_per_face</a></div>
 <div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;<span class="keyword">end module </span><a class="code" href="namespacemf6bmigrid.html">mf6bmigrid</a></div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <div class="ttc" id="anamespacebasemodelmodule_html"><div class="ttname"><a href="namespacebasemodelmodule.html">basemodelmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_base_model_8f90_source.html#l00003">BaseModel.f90:3</a></div></div>
 <div class="ttc" id="anamespacenumericalmodelmodule_html_a4d031f0a98348529066eef37676f018d"><div class="ttname"><a href="namespacenumericalmodelmodule.html#a4d031f0a98348529066eef37676f018d">numericalmodelmodule::getnumericalmodelfromlist</a></div><div class="ttdeci">class(numericalmodeltype) function, pointer, public getnumericalmodelfromlist(list, idx)</div><div class="ttdef"><b>Definition:</b> <a href="_numerical_model_8f90_source.html#l00433">NumericalModel.f90:433</a></div></div>
 <div class="ttc" id="anamespacemf6bmigrid_html_a576ebe2e6fe82ce03bc4651345629873"><div class="ttname"><a href="namespacemf6bmigrid.html#a576ebe2e6fe82ce03bc4651345629873">mf6bmigrid::get_grid_face_nodes</a></div><div class="ttdeci">integer(kind=c_int) function get_grid_face_nodes(grid_id, face_nodes)</div><div class="ttdef"><b>Definition:</b> <a href="mf6bmi_grid_8f90_source.html#l00305">mf6bmiGrid.f90:305</a></div></div>
@@ -456,6 +502,7 @@ $(function() {
 <div class="ttc" id="anamespacemf6bmigrid_html_af44b2f8aff3d1d8f393ac2bba8242cb5"><div class="ttname"><a href="namespacemf6bmigrid.html#af44b2f8aff3d1d8f393ac2bba8242cb5">mf6bmigrid::get_grid_y</a></div><div class="ttdeci">integer(kind=c_int) function get_grid_y(grid_id, grid_y)</div><div class="ttdef"><b>Definition:</b> <a href="mf6bmi_grid_8f90_source.html#l00214">mf6bmiGrid.f90:214</a></div></div>
 <div class="ttc" id="anamespacekindmodule_html_a2f6861418b5e7d3d602b77228232a470"><div class="ttname"><a href="namespacekindmodule.html#a2f6861418b5e7d3d602b77228232a470">kindmodule::i4b</a></div><div class="ttdeci">integer, parameter i4b</div><div class="ttdef"><b>Definition:</b> <a href="kind_8f90_source.html#l00009">kind.f90:9</a></div></div>
 <div class="ttc" id="anamespacemf6bmigrid_html_a3c96cac8f7941e22fa690cb7647b244d"><div class="ttname"><a href="namespacemf6bmigrid.html#a3c96cac8f7941e22fa690cb7647b244d">mf6bmigrid::get_grid_face_count</a></div><div class="ttdeci">integer(kind=c_int) function get_grid_face_count(grid_id, count)</div><div class="ttdef"><b>Definition:</b> <a href="mf6bmi_grid_8f90_source.html#l00276">mf6bmiGrid.f90:276</a></div></div>
+<div class="ttc" id="ainterfacememorymanagermodule_1_1mem__setptr_html"><div class="ttname"><a href="interfacememorymanagermodule_1_1mem__setptr.html">memorymanagermodule::mem_setptr</a></div><div class="ttdef"><b>Definition:</b> <a href="_memory_manager_8f90_source.html#l00069">MemoryManager.f90:69</a></div></div>
 <div class="ttc" id="anamespacemf6bmiutil_html"><div class="ttname"><a href="namespacemf6bmiutil.html">mf6bmiutil</a></div><div class="ttdoc">This module contains helper routines and parameters for the MODFLOW 6 BMI.</div><div class="ttdef"><b>Definition:</b> <a href="mf6bmi_util_8f90_source.html#l00004">mf6bmiUtil.f90:4</a></div></div>
 <div class="ttc" id="anamespacemf6bmigrid_html"><div class="ttname"><a href="namespacemf6bmigrid.html">mf6bmigrid</a></div><div class="ttdoc">This module contains BMI routines to expose the MODFLOW 6 discretization.</div><div class="ttdef"><b>Definition:</b> <a href="mf6bmi_grid_8f90_source.html#l00008">mf6bmiGrid.f90:8</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html"><div class="ttname"><a href="namespaceconstantsmodule.html">constantsmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00001">Constants.f90:1</a></div></div>
@@ -472,10 +519,13 @@ $(function() {
 <div class="ttc" id="anamespacemf6bmiutil_html_a1e8692c600f23ba6b0468dff63f2b29b"><div class="ttname"><a href="namespacemf6bmiutil.html#a1e8692c600f23ba6b0468dff63f2b29b">mf6bmiutil::get_model_name</a></div><div class="ttdeci">character(len=lenmodelname) function get_model_name(grid_id)</div><div class="ttdoc">Get the model name from the grid id.</div><div class="ttdef"><b>Definition:</b> <a href="mf6bmi_util_8f90_source.html#l00182">mf6bmiUtil.f90:182</a></div></div>
 <div class="ttc" id="anamespacemf6bmigrid_html_afea0bc5291b3ce31f4109bfb07074366"><div class="ttname"><a href="namespacemf6bmigrid.html#afea0bc5291b3ce31f4109bfb07074366">mf6bmigrid::get_grid_x</a></div><div class="ttdeci">integer(kind=c_int) function get_grid_x(grid_id, grid_x)</div><div class="ttdef"><b>Definition:</b> <a href="mf6bmi_grid_8f90_source.html#l00174">mf6bmiGrid.f90:174</a></div></div>
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_df792f6769e16fbc2e58301ddc635f77.html">srcbmi</a></li><li class="navelem"><a class="el" href="mf6bmi_grid_8f90.html">mf6bmiGrid.f90</a></li>
+    <li class="footer">Generated on Thu Jun 24 2021 19:50:10 for MODFLOW 6 by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -5,13 +5,22 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MODFLOW 6 Code Documentation: /home/runner/work/modflow6/modflow6/src/Exchange/GhostNode.f90 Source File</title>
+<title>MODFLOW 6: /home/runner/work/modflow6/modflow6/src/Exchange/GhostNode.f90 Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="CustomDoxygen.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -21,9 +30,12 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="mf6-triangular-grid.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">MODFLOW 6 Code Documentation
+   <div id="projectname">MODFLOW 6
+   &#160;<span id="projectnumber">version 6.2.2</span>
    </div>
+   <div id="projectbrief">MODFLOW 6 Code Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -36,16 +48,54 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Modules</span></a></li>
+      <li><a href="annotated.html"><span>Data&#160;Types&#160;List</span></a></li>
+      <li class="current"><a href="files.html"><span>Files</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('_ghost_node_8f90_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,11 +110,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_95d5cc30a66cc7502f2f5157978bb5c3.html">Exchange</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">GhostNode.f90</div>  </div>
@@ -76,51 +121,51 @@ $(function() {
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespaceconstantsmodule.html">constantsmodule</a>,        <span class="keywordtype">only</span>: <a class="code" href="namespaceconstantsmodule.html#a060d310ded5535ce2dc85bd1ca1afd3d">linelength</a></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacenumericalmodelmodule.html">numericalmodelmodule</a>,   <span class="keywordtype">only</span>: numericalmodeltype</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacenumericalpackagemodule.html">numericalpackagemodule</a>, <span class="keywordtype">only</span>: numericalpackagetype</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespaceblockparsermodule.html">blockparsermodule</a>,      <span class="keywordtype">only</span>: blockparsertype</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespaceblockparsermodule.html">blockparsermodule</a>,      <span class="keywordtype">only</span>: <a class="code" href="structblockparsermodule_1_1blockparsertype.html">blockparsertype</a></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  <span class="keywordtype">implicit none</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <span class="keywordtype">private</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <span class="keywordtype">public</span> :: ghostnodetype</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <span class="keywordtype">public</span> :: <a class="code" href="structghostnodemodule_1_1ghostnodetype.html">ghostnodetype</a></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <span class="keywordtype">public</span> :: <a class="code" href="namespaceghostnodemodule.html#a3f4539c3f97fd80471d86f2e9a347558">gnc_cr</a></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <span class="keyword">type</span>, <span class="keyword">extends</span>(numericalpackagetype) :: ghostnodetype</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">logical</span>, <span class="keywordtype">pointer</span>                                   :: smgnc       =&gt; null()  <span class="comment">! single model gnc</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">logical</span>, <span class="keywordtype">pointer</span>                                   :: <span class="keywordtype">implicit</span>    =&gt; null()  <span class="comment">! lhs or rhs</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">logical</span>, <span class="keywordtype">pointer</span>                                   :: i2kn        =&gt; null()  <span class="comment">! not used</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">pointer</span>                              :: nexg        =&gt; null()  <span class="comment">! number of gncs</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">pointer</span>                              :: numjs       =&gt; null()  <span class="comment">! number of connecting nodes</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">class</span>(NumericalModelType), <span class="keywordtype">pointer</span>                 :: m1          =&gt; null()  <span class="comment">! pointer to model 1</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">class</span>(NumericalModelType), <span class="keywordtype">pointer</span>                 :: m2          =&gt; null()  <span class="comment">! pointer to model 2</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span>    :: nodem1      =&gt; null()  <span class="comment">! array of nodes in model 1</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span>    :: nodem2      =&gt; null()  <span class="comment">! array of nodes in model 2</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:, :)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span> :: nodesj      =&gt; null()  <span class="comment">! array of interpolation nodes</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span>        :: cond        =&gt; null()  <span class="comment">! array of conductance</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span>    :: idxglo      =&gt; null()  <span class="comment">! connection position in amat</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span>    :: idxsymglo   =&gt; null()  <span class="comment">! symmetric position in amat</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">dimension(:, :)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span>     :: alphasj     =&gt; null()  <span class="comment">! interpolation factors</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span>    :: idiagn      =&gt; null()  <span class="comment">! amat diagonal position of n</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span>    :: idiagm      =&gt; null()  <span class="comment">! amat diagonal position of m</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:,:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span>  :: jposinrown  =&gt; null()  <span class="comment">! amat j position in row n</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:,:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span>  :: jposinrowm  =&gt; null()  <span class="comment">! amat j position in row m</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="structghostnodemodule_1_1ghostnodetype.html">   15</a></span>&#160;  <span class="keyword">type</span>, <span class="keyword">extends</span>(numericalpackagetype) :: <a class="code" href="structghostnodemodule_1_1ghostnodetype.html">ghostnodetype</a></div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="structghostnodemodule_1_1ghostnodetype.html#a241479161be2d0c26f9a334db3225bcc">   16</a></span>&#160;    <span class="keywordtype">logical</span>, <span class="keywordtype">pointer</span>                                   :: smgnc       =&gt; null()  <span class="comment">! single model gnc</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="structghostnodemodule_1_1ghostnodetype.html#a1f41cc7f506d0fe751fc25ff354735ac">   17</a></span>&#160;    <span class="keywordtype">logical</span>, <span class="keywordtype">pointer</span>                                   :: <span class="keywordtype">implicit</span>    =&gt; null()  <span class="comment">! lhs or rhs</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="structghostnodemodule_1_1ghostnodetype.html#af1120f15d8d2e3bd5532f24a425c8a7a">   18</a></span>&#160;    <span class="keywordtype">logical</span>, <span class="keywordtype">pointer</span>                                   :: i2kn        =&gt; null()  <span class="comment">! not used</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="structghostnodemodule_1_1ghostnodetype.html#a9e97c09c548246ebf6b1f83f26aff04f">   19</a></span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">pointer</span>                              :: nexg        =&gt; null()  <span class="comment">! number of gncs</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="structghostnodemodule_1_1ghostnodetype.html#a67c05eb0e1ecdacf8283decb968e21bc">   20</a></span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">pointer</span>                              :: numjs       =&gt; null()  <span class="comment">! number of connecting nodes</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="structghostnodemodule_1_1ghostnodetype.html#acc296f93022c52fa190a419205a23e4a">   21</a></span>&#160;    <span class="keywordtype">class</span>(numericalmodeltype), <span class="keywordtype">pointer</span>                 :: m1          =&gt; null()  <span class="comment">! pointer to model 1</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="structghostnodemodule_1_1ghostnodetype.html#af8ab465605bdabdb4607b21d3576d34d">   22</a></span>&#160;    <span class="keywordtype">class</span>(numericalmodeltype), <span class="keywordtype">pointer</span>                 :: m2          =&gt; null()  <span class="comment">! pointer to model 2</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="structghostnodemodule_1_1ghostnodetype.html#aee72d988fac3153c8ea30234dbb66e06">   23</a></span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span>    :: nodem1      =&gt; null()  <span class="comment">! array of nodes in model 1</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="structghostnodemodule_1_1ghostnodetype.html#a4f0eb0a38dcc11b197232ff54fe2d435">   24</a></span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span>    :: nodem2      =&gt; null()  <span class="comment">! array of nodes in model 2</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="structghostnodemodule_1_1ghostnodetype.html#a27785c48a415dca788dba388deabc76a">   25</a></span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:, :)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span> :: nodesj      =&gt; null()  <span class="comment">! array of interpolation nodes</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="structghostnodemodule_1_1ghostnodetype.html#a854ab4c4be54c10024c20a4cf928c8a1">   26</a></span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span>        :: cond        =&gt; null()  <span class="comment">! array of conductance</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="structghostnodemodule_1_1ghostnodetype.html#a6671a00d18c8a0bf5f875c0bab58bde9">   27</a></span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span>    :: idxglo      =&gt; null()  <span class="comment">! connection position in amat</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="structghostnodemodule_1_1ghostnodetype.html#a861bf31386b2dad18425eb76e16aa34d">   28</a></span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span>    :: idxsymglo   =&gt; null()  <span class="comment">! symmetric position in amat</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="structghostnodemodule_1_1ghostnodetype.html#af042c6df3f25c80a10added64f48dc95">   29</a></span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">dimension(:, :)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span>     :: alphasj     =&gt; null()  <span class="comment">! interpolation factors</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="structghostnodemodule_1_1ghostnodetype.html#a956f428bd21a7b8200b047ee85138381">   30</a></span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span>    :: idiagn      =&gt; null()  <span class="comment">! amat diagonal position of n</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="structghostnodemodule_1_1ghostnodetype.html#a4decb3fd0496cebed5af182ba1936d8d">   31</a></span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span>    :: idiagm      =&gt; null()  <span class="comment">! amat diagonal position of m</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="structghostnodemodule_1_1ghostnodetype.html#a153536529103c6234819cd1f4b2949e7">   32</a></span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:,:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span>  :: jposinrown  =&gt; null()  <span class="comment">! amat j position in row n</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="structghostnodemodule_1_1ghostnodetype.html#aceb208f1f6c238fd93819b58f706ff42">   33</a></span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:,:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span>  :: jposinrowm  =&gt; null()  <span class="comment">! amat j position in row m</span></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keyword">contains</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">procedure</span>          :: gnc_df</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">procedure</span>          :: gnc_ac</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">procedure</span>          :: gnc_mc</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: gnc_fmsav</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">procedure</span>          :: gnc_fc</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">procedure</span>          :: gnc_fn</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">procedure</span>          :: gnc_cq</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">procedure</span>          :: gnc_ot</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">procedure</span>          :: gnc_da</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">procedure</span>          :: deltaQgnc</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">procedure</span>          :: allocate_scalars</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: allocate_arrays</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: read_options</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: read_dimensions</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: read_data</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: nodeu_to_noder</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keyword">end type </span>ghostnodetype</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="structghostnodemodule_1_1ghostnodetype.html#a7ab342dff0ed014de1ae34ab1f1b06a0">   35</a></span>&#160;    <span class="keywordtype">procedure</span>          :: <a class="code" href="namespaceghostnodemodule.html#a70e05d7c1d52ba43831822948ff03ff4">gnc_df</a></div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="structghostnodemodule_1_1ghostnodetype.html#a5b3d8dbc1539f1b1be3f67859a15b45a">   36</a></span>&#160;    <span class="keywordtype">procedure</span>          :: <a class="code" href="namespaceghostnodemodule.html#aeaca6e9ab11bb6d7d8012f4e75a109d0">gnc_ac</a></div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="structghostnodemodule_1_1ghostnodetype.html#a900f8e7d40c5b4f3f1276afc335f85c9">   37</a></span>&#160;    <span class="keywordtype">procedure</span>          :: <a class="code" href="namespaceghostnodemodule.html#aa1cee3f4ccae990cdcdc7346b49c8b83">gnc_mc</a></div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="structghostnodemodule_1_1ghostnodetype.html#aa352b9be48f4ee152bbb1370e7a13690">   38</a></span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: <a class="code" href="namespaceghostnodemodule.html#a3f3d93709ff27a73b608acaeb9cf5d92">gnc_fmsav</a></div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="structghostnodemodule_1_1ghostnodetype.html#a9f04aa538228888c13057952cce33c34">   39</a></span>&#160;    <span class="keywordtype">procedure</span>          :: <a class="code" href="namespaceghostnodemodule.html#ac2acfce128dbfa0e01bf7790a1e45330">gnc_fc</a></div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="structghostnodemodule_1_1ghostnodetype.html#a3f3bec3d07706e801b57a1b6f85ab3ac">   40</a></span>&#160;    <span class="keywordtype">procedure</span>          :: <a class="code" href="namespaceghostnodemodule.html#a8e6f649d4541aee057fa1be27887ca99">gnc_fn</a></div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="structghostnodemodule_1_1ghostnodetype.html#a63750b5dc215d8716bf2e5b5d757b395">   41</a></span>&#160;    <span class="keywordtype">procedure</span>          :: <a class="code" href="namespaceghostnodemodule.html#a98c24ae68b27c6f10d8d5fbd2a66e268">gnc_cq</a></div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="structghostnodemodule_1_1ghostnodetype.html#a4df3bc585a60461720036e533e74a8dc">   42</a></span>&#160;    <span class="keywordtype">procedure</span>          :: <a class="code" href="namespaceghostnodemodule.html#a8e73bf34ced1e7d7bb00eb84346e6b9a">gnc_ot</a></div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="structghostnodemodule_1_1ghostnodetype.html#a5b7cc158fd8e2f25a8511363f7fbe1ba">   43</a></span>&#160;    <span class="keywordtype">procedure</span>          :: <a class="code" href="namespaceghostnodemodule.html#a207fe811932867a79e0394806a53ea88">gnc_da</a></div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="structghostnodemodule_1_1ghostnodetype.html#add5ed0b633fff59f4ac14bda73577789">   44</a></span>&#160;    <span class="keywordtype">procedure</span>          :: <a class="code" href="namespaceghostnodemodule.html#af58ee6920ce9ba3b02357b0c9019012f">deltaqgnc</a></div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="structghostnodemodule_1_1ghostnodetype.html#a53888570f9bbba8d24183a149ab29ccd">   45</a></span>&#160;    <span class="keywordtype">procedure</span>          :: <a class="code" href="namespaceghostnodemodule.html#a467e0f55fe5f9c0eca47cac1b546ec03">allocate_scalars</a></div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="structghostnodemodule_1_1ghostnodetype.html#a13d8944177b13bb31ac302db003c8385">   46</a></span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: <a class="code" href="namespaceghostnodemodule.html#a8cba068f59f195a6b6442eb49ac786d4">allocate_arrays</a></div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="structghostnodemodule_1_1ghostnodetype.html#a5efe3d75854f2bd7a9ed17ab2f92c703">   47</a></span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: <a class="code" href="namespaceghostnodemodule.html#a77eb63139533e9e835aa11ef46013dab">read_options</a></div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="structghostnodemodule_1_1ghostnodetype.html#accd7bb58e78d5402512b7333d886f33c">   48</a></span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: <a class="code" href="namespaceghostnodemodule.html#a067f3b9f68b64c4de96dfab8d5aa3e5d">read_dimensions</a></div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="structghostnodemodule_1_1ghostnodetype.html#a0927488b9376e704ea6567f684d4a175">   49</a></span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: <a class="code" href="namespaceghostnodemodule.html#a4356c3f3ff9252b0f4434aa9b88c5a62">read_data</a></div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="structghostnodemodule_1_1ghostnodetype.html#ab554e276c994dd4f45f0e83c7fa92fd4">   50</a></span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: <a class="code" href="namespaceghostnodemodule.html#a0da0c2f548e75c7ab4eb1d2462db6088">nodeu_to_noder</a></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keyword">end type </span><a class="code" href="structghostnodemodule_1_1ghostnodetype.html">ghostnodetype</a></div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keyword">contains</span></div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
@@ -133,7 +178,7 @@ $(function() {
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="comment">! -- modules</span></div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">type</span>(ghostnodetype), <span class="keywordtype">pointer</span>, <span class="keywordtype">intent(inout)</span> :: gncobj</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structghostnodemodule_1_1ghostnodetype.html">ghostnodetype</a>), <span class="keywordtype">pointer</span>, <span class="keywordtype">intent(inout)</span> :: gncobj</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">character(len=*)</span>, <span class="keywordtype">intent(in)</span> :: name_parent</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: inunit</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: iout</div>
@@ -157,8 +202,8 @@ $(function() {
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">return</span></div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespaceghostnodemodule.html#a3f4539c3f97fd80471d86f2e9a347558">gnc_cr</a></div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="keyword">subroutine </span>gnc_df(this, m1, m2)</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespaceghostnodemodule.html#a70e05d7c1d52ba43831822948ff03ff4">gnc_df</a>(this, m1, m2)</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="namespaceghostnodemodule.html#a70e05d7c1d52ba43831822948ff03ff4">   89</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="comment">! gnc_df -- Initialize a gnc object.</span></div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment">!</span></div>
@@ -168,7 +213,7 @@ $(function() {
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacenumericalmodelmodule.html">numericalmodelmodule</a>, <span class="keywordtype">only</span>: numericalmodeltype</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacesimmodule.html">simmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a">store_error</a>, <a class="code" href="namespacesimmodule.html#a1c78a6fda06b630c738bb654aa6bd816">store_error_unit</a>, <a class="code" href="namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61">ustop</a></div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordtype">class</span>(ghostnodetype) :: this</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structghostnodemodule_1_1ghostnodetype.html">ghostnodetype</a>) :: this</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordtype">class</span>(numericalmodeltype), <span class="keywordtype">target</span> :: m1</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordtype">class</span>(numericalmodeltype), <span class="keywordtype">target</span>, <span class="keywordtype">optional</span> :: m2</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="comment">! -- local</span></div>
@@ -213,7 +258,7 @@ $(function() {
 <div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="comment">! -- return</span></div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;  <span class="keyword">end subroutine </span>gnc_df</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespaceghostnodemodule.html#a70e05d7c1d52ba43831822948ff03ff4">gnc_df</a></div>
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160; </div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespaceghostnodemodule.html#aeaca6e9ab11bb6d7d8012f4e75a109d0">gnc_ac</a>(this, sparse)</div>
 <div class="line"><a name="l00147"></a><span class="lineno"><a class="line" href="namespaceghostnodemodule.html#aeaca6e9ab11bb6d7d8012f4e75a109d0">  147</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
@@ -226,7 +271,7 @@ $(function() {
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="comment">! -- modules</span></div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacesparsemodule.html">sparsemodule</a>, <span class="keywordtype">only</span>: <a class="code" href="structsparsemodule_1_1sparsematrix.html">sparsematrix</a></div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keywordtype">class</span>(ghostnodetype) :: this</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structghostnodemodule_1_1ghostnodetype.html">ghostnodetype</a>) :: this</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structsparsemodule_1_1sparsematrix.html">sparsematrix</a>), <span class="keywordtype">intent(inout)</span> :: sparse</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: ignc, jidx, noden, nodem, nodej</div>
@@ -271,7 +316,7 @@ $(function() {
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <span class="comment">! -- modules</span></div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacesimmodule.html">simmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61">ustop</a>, <a class="code" href="namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a">store_error</a>, <a class="code" href="namespacesimmodule.html#a1c78a6fda06b630c738bb654aa6bd816">store_error_unit</a>, <a class="code" href="namespacesimmodule.html#a4c46e49de78d4498dd4ec106357775e6">count_errors</a></div>
 <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <span class="keywordtype">class</span>(ghostnodetype) :: this</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structghostnodemodule_1_1ghostnodetype.html">ghostnodetype</a>) :: this</div>
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">intent(in)</span> :: iasln</div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">intent(in)</span> :: jasln</div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="comment">! -- local</span></div>
@@ -390,7 +435,7 @@ $(function() {
 <div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    <span class="comment">! -- modules</span></div>
 <div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespaceconstantsmodule.html">constantsmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespaceconstantsmodule.html#abab5757666b9ddd2726c20ce48dd0050">dzero</a></div>
 <div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    <span class="keywordtype">class</span>(ghostnodetype) :: this</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structghostnodemodule_1_1ghostnodetype.html">ghostnodetype</a>) :: this</div>
 <div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: kiter</div>
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">intent(inout)</span> :: amatsln</div>
 <div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    <span class="comment">! -- local</span></div>
@@ -426,7 +471,7 @@ $(function() {
 <div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;    <span class="comment">! -- modules</span></div>
 <div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespaceconstantsmodule.html">constantsmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespaceconstantsmodule.html#abab5757666b9ddd2726c20ce48dd0050">dzero</a></div>
 <div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;    <span class="keywordtype">class</span>(ghostnodetype) :: this</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structghostnodemodule_1_1ghostnodetype.html">ghostnodetype</a>) :: this</div>
 <div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: kiter</div>
 <div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">intent(inout)</span> :: amatsln</div>
 <div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;    <span class="comment">! -- local</span></div>
@@ -497,7 +542,7 @@ $(function() {
 <div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespaceconstantsmodule.html">constantsmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespaceconstantsmodule.html#abab5757666b9ddd2726c20ce48dd0050">dzero</a></div>
 <div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacesmoothingmodule.html">smoothingmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespacesmoothingmodule.html#a0ee42e035a1831565d3132d8929eb67c">squadraticsaturationderivative</a></div>
 <div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;    <span class="keywordtype">class</span>(ghostnodetype) :: this</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structghostnodemodule_1_1ghostnodetype.html">ghostnodetype</a>) :: this</div>
 <div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: kiter</div>
 <div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: njasln</div>
 <div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">dimension(njasln)</span>, <span class="keywordtype">intent(inout)</span> :: amatsln</div>
@@ -611,7 +656,7 @@ $(function() {
 <div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;<span class="comment">!    SPECIFICATIONS:</span></div>
 <div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;    <span class="keywordtype">class</span>(ghostnodetype) :: this</div>
+<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structghostnodemodule_1_1ghostnodetype.html">ghostnodetype</a>) :: this</div>
 <div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: ibudfl</div>
 <div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: ignc</div>
@@ -640,15 +685,15 @@ $(function() {
 <div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;    <span class="keywordflow">return</span></div>
 <div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespaceghostnodemodule.html#a8e73bf34ced1e7d7bb00eb84346e6b9a">gnc_ot</a></div>
 <div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160; </div>
-<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;  <span class="keyword">subroutine </span>gnc_cq(this, flowja)</div>
-<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespaceghostnodemodule.html#a98c24ae68b27c6f10d8d5fbd2a66e268">gnc_cq</a>(this, flowja)</div>
+<div class="line"><a name="l00572"></a><span class="lineno"><a class="line" href="namespaceghostnodemodule.html#a98c24ae68b27c6f10d8d5fbd2a66e268">  572</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;<span class="comment">! gnc_cq -- Add GNC to flowja</span></div>
 <div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;<span class="comment">!</span></div>
 <div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;<span class="comment">!    SPECIFICATIONS:</span></div>
 <div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;    <span class="keywordtype">class</span>(ghostnodetype) :: this</div>
+<div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structghostnodemodule_1_1ghostnodetype.html">ghostnodetype</a>) :: this</div>
 <div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">intent(inout)</span> :: flowja</div>
 <div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: ignc, n1, n2, ipos, isympos</div>
@@ -676,10 +721,10 @@ $(function() {
 <div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;    <span class="comment">! -- return</span></div>
 <div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;  <span class="keyword">end subroutine </span>gnc_cq</div>
+<div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespaceghostnodemodule.html#a98c24ae68b27c6f10d8d5fbd2a66e268">gnc_cq</a></div>
 <div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160; </div>
-<div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;  <span class="keyword">function </span>deltaqgnc(this, ignc)</div>
-<div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;  <span class="keyword">function </span><a class="code" href="namespaceghostnodemodule.html#af58ee6920ce9ba3b02357b0c9019012f">deltaqgnc</a>(this, ignc)</div>
+<div class="line"><a name="l00610"></a><span class="lineno"><a class="line" href="namespaceghostnodemodule.html#af58ee6920ce9ba3b02357b0c9019012f">  610</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160;<span class="comment">! deltaQgnc -- Single Model deltaQgnc (ghost node correction flux)</span></div>
 <div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;<span class="comment">! Subroutine: (1) Calculate the deltaQgnc value for any GNC in the GNC list</span></div>
 <div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160;<span class="comment">! ******************************************************************************</span></div>
@@ -689,17 +734,17 @@ $(function() {
 <div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;    <span class="comment">! -- modules</span></div>
 <div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespaceconstantsmodule.html">constantsmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespaceconstantsmodule.html#abab5757666b9ddd2726c20ce48dd0050">dzero</a></div>
 <div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;    <span class="comment">! -- return</span></div>
-<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;<span class="keywordtype">    real</span>(DP) :: deltaQgnc</div>
+<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>) :: <a class="code" href="namespaceghostnodemodule.html#af58ee6920ce9ba3b02357b0c9019012f">deltaqgnc</a></div>
 <div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;    <span class="keywordtype">class</span>(ghostnodetype) :: this</div>
+<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structghostnodemodule_1_1ghostnodetype.html">ghostnodetype</a>) :: this</div>
 <div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: ignc</div>
 <div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: noden, nodem, nodej, jidx</div>
-<div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;<span class="keywordtype">    real</span>(DP) :: sigalj, alpha, hd, aterm, cond</div>
+<div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>) :: sigalj, alpha, hd, aterm, cond</div>
 <div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;    <span class="comment">! -- initialize values</span></div>
-<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;    deltaqgnc = <a class="code" href="namespaceconstantsmodule.html#abab5757666b9ddd2726c20ce48dd0050">dzero</a></div>
+<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;    <a class="code" href="namespaceghostnodemodule.html#af58ee6920ce9ba3b02357b0c9019012f">deltaqgnc</a> = <a class="code" href="namespaceconstantsmodule.html#abab5757666b9ddd2726c20ce48dd0050">dzero</a></div>
 <div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;    sigalj = <a class="code" href="namespaceconstantsmodule.html#abab5757666b9ddd2726c20ce48dd0050">dzero</a></div>
 <div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;    hd = <a class="code" href="namespaceconstantsmodule.html#abab5757666b9ddd2726c20ce48dd0050">dzero</a></div>
 <div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;    noden = this%nodem1(ignc)</div>
@@ -717,12 +762,12 @@ $(function() {
 <div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;<span class="keywordflow">      enddo</span> jloop</div>
 <div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;      aterm = sigalj * this%m1%x(noden) - hd</div>
 <div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;      cond = this%cond(ignc)</div>
-<div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;      deltaqgnc = aterm * cond</div>
+<div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;      <a class="code" href="namespaceghostnodemodule.html#af58ee6920ce9ba3b02357b0c9019012f">deltaqgnc</a> = aterm * cond</div>
 <div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;<span class="keywordflow">    endif</span></div>
 <div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;    <span class="comment">! -- return</span></div>
 <div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;  <span class="keyword">end function </span>deltaqgnc</div>
+<div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;  <span class="keyword">end function </span><a class="code" href="namespaceghostnodemodule.html#af58ee6920ce9ba3b02357b0c9019012f">deltaqgnc</a></div>
 <div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160; </div>
 <div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespaceghostnodemodule.html#a467e0f55fe5f9c0eca47cac1b546ec03">allocate_scalars</a>(this)</div>
 <div class="line"><a name="l00656"></a><span class="lineno"><a class="line" href="namespaceghostnodemodule.html#a467e0f55fe5f9c0eca47cac1b546ec03">  656</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
@@ -732,19 +777,19 @@ $(function() {
 <div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;<span class="comment">!    SPECIFICATIONS:</span></div>
 <div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;    <span class="comment">! -- modules</span></div>
-<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacememorymanagermodule.html">memorymanagermodule</a>, <span class="keywordtype">only</span>: mem_allocate</div>
+<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacememorymanagermodule.html">memorymanagermodule</a>, <span class="keywordtype">only</span>: <a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a></div>
 <div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160;    <span class="keywordtype">class</span>(ghostnodetype) :: this</div>
+<div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structghostnodemodule_1_1ghostnodetype.html">ghostnodetype</a>) :: this</div>
 <div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00668"></a><span class="lineno">  668</span>&#160;    <span class="comment">! -- allocate scalars in NumericalPackageType</span></div>
 <div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;    <span class="keyword">call </span>this%NumericalPackageType%allocate_scalars()</div>
 <div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;    <span class="comment">!</span></div>
-<div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;    <span class="keyword">call </span>mem_allocate(this%smgnc, <span class="stringliteral">&#39;SMGNC&#39;</span>, this%memoryPath)</div>
-<div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;    <span class="keyword">call </span>mem_allocate(this%implicit, <span class="stringliteral">&#39;IMPLICIT&#39;</span>, this%memoryPath)</div>
-<div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;    <span class="keyword">call </span>mem_allocate(this%i2kn, <span class="stringliteral">&#39;I2KN&#39;</span>, this%memoryPath)</div>
-<div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;    <span class="keyword">call </span>mem_allocate(this%nexg, <span class="stringliteral">&#39;NEXG&#39;</span>, this%memoryPath)</div>
-<div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;    <span class="keyword">call </span>mem_allocate(this%numjs, <span class="stringliteral">&#39;NUMJS&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%smgnc, <span class="stringliteral">&#39;SMGNC&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%implicit, <span class="stringliteral">&#39;IMPLICIT&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%i2kn, <span class="stringliteral">&#39;I2KN&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%nexg, <span class="stringliteral">&#39;NEXG&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%numjs, <span class="stringliteral">&#39;NUMJS&#39;</span>, this%memoryPath)</div>
 <div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;    <span class="comment">! -- Initialize values</span></div>
 <div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;    this%smgnc = .true.</div>
@@ -764,32 +809,32 @@ $(function() {
 <div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;<span class="comment">!    SPECIFICATIONS:</span></div>
 <div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;    <span class="comment">! -- modules</span></div>
-<div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacememorymanagermodule.html">memorymanagermodule</a>, <span class="keywordtype">only</span>: mem_allocate</div>
+<div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacememorymanagermodule.html">memorymanagermodule</a>, <span class="keywordtype">only</span>: <a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a></div>
 <div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;    <span class="keywordtype">class</span>(ghostnodetype) :: this</div>
+<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structghostnodemodule_1_1ghostnodetype.html">ghostnodetype</a>) :: this</div>
 <div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;    <span class="comment">! -- allocate memory for arrays</span></div>
-<div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;    <span class="keyword">call </span>mem_allocate(this%nodem1, this%nexg, <span class="stringliteral">&#39;NODEM1&#39;</span>, this%memoryPath)</div>
-<div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;    <span class="keyword">call </span>mem_allocate(this%nodem2, this%nexg, <span class="stringliteral">&#39;NODEM2&#39;</span>, this%memoryPath)</div>
-<div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;    <span class="keyword">call </span>mem_allocate(this%nodesj, this%numjs, this%nexg, <span class="stringliteral">&#39;NODESJ&#39;</span>,            &amp;</div>
+<div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%nodem1, this%nexg, <span class="stringliteral">&#39;NODEM1&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%nodem2, this%nexg, <span class="stringliteral">&#39;NODEM2&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%nodesj, this%numjs, this%nexg, <span class="stringliteral">&#39;NODESJ&#39;</span>,            &amp;</div>
 <div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;                      this%memoryPath)</div>
-<div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;    <span class="keyword">call </span>mem_allocate(this%alphasj, this%numjs, this%nexg, <span class="stringliteral">&#39;ALPHASJ&#39;</span>,          &amp;</div>
+<div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%alphasj, this%numjs, this%nexg, <span class="stringliteral">&#39;ALPHASJ&#39;</span>,          &amp;</div>
 <div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160;                      this%memoryPath)</div>
-<div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160;    <span class="keyword">call </span>mem_allocate(this%cond, this%nexg, <span class="stringliteral">&#39;COND&#39;</span>, this%memoryPath)</div>
-<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;    <span class="keyword">call </span>mem_allocate(this%idxglo, this%nexg, <span class="stringliteral">&#39;IDXGLO&#39;</span>, this%memoryPath)</div>
-<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;    <span class="keyword">call </span>mem_allocate(this%idiagn, this%nexg, <span class="stringliteral">&#39;IDIAGN&#39;</span>, this%memoryPath)</div>
-<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;    <span class="keyword">call </span>mem_allocate(this%idiagm, this%nexg, <span class="stringliteral">&#39;IDIAGM&#39;</span>, this%memoryPath)</div>
-<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;    <span class="keyword">call </span>mem_allocate(this%idxsymglo, this%nexg, <span class="stringliteral">&#39;IDXSYMGLO&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%cond, this%nexg, <span class="stringliteral">&#39;COND&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%idxglo, this%nexg, <span class="stringliteral">&#39;IDXGLO&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%idiagn, this%nexg, <span class="stringliteral">&#39;IDIAGN&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%idiagm, this%nexg, <span class="stringliteral">&#39;IDIAGM&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%idxsymglo, this%nexg, <span class="stringliteral">&#39;IDXSYMGLO&#39;</span>, this%memoryPath)</div>
 <div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;    <span class="keywordflow">if</span>(this%implicit) <span class="keywordflow">then</span></div>
-<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;      <span class="keyword">call </span>mem_allocate(this%jposinrown, this%numjs, this%nexg, <span class="stringliteral">&#39;JPOSINROWN&#39;</span>,  &amp;</div>
+<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%jposinrown, this%numjs, this%nexg, <span class="stringliteral">&#39;JPOSINROWN&#39;</span>,  &amp;</div>
 <div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;                        this%memoryPath)</div>
-<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;      <span class="keyword">call </span>mem_allocate(this%jposinrowm, this%numjs, this%nexg, <span class="stringliteral">&#39;JPOSINROWM&#39;</span>,  &amp;</div>
+<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%jposinrowm, this%numjs, this%nexg, <span class="stringliteral">&#39;JPOSINROWM&#39;</span>,  &amp;</div>
 <div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;                        this%memoryPath)</div>
 <div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;      <span class="keyword">call </span>mem_allocate(this%jposinrown, 0, 0, <span class="stringliteral">&#39;JPOSINROWN&#39;</span>, this%memoryPath)</div>
-<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;      <span class="keyword">call </span>mem_allocate(this%jposinrowm, 0, 0, <span class="stringliteral">&#39;JPOSINROWM&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%jposinrown, 0, 0, <span class="stringliteral">&#39;JPOSINROWN&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%jposinrowm, 0, 0, <span class="stringliteral">&#39;JPOSINROWM&#39;</span>, this%memoryPath)</div>
 <div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;<span class="keywordflow">    endif</span></div>
 <div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;    <span class="comment">! -- Return</span></div>
@@ -804,30 +849,30 @@ $(function() {
 <div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;<span class="comment">!    SPECIFICATIONS:</span></div>
 <div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;    <span class="comment">! -- modules</span></div>
-<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacememorymanagermodule.html">memorymanagermodule</a>, <span class="keywordtype">only</span>: mem_deallocate</div>
+<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacememorymanagermodule.html">memorymanagermodule</a>, <span class="keywordtype">only</span>: <a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a></div>
 <div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;    <span class="keywordtype">class</span>(ghostnodetype) :: this</div>
+<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structghostnodemodule_1_1ghostnodetype.html">ghostnodetype</a>) :: this</div>
 <div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;    <span class="comment">!</span></div>
-<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;    <span class="keyword">call </span>mem_deallocate(this%smgnc)</div>
-<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;    <span class="keyword">call </span>mem_deallocate(this%implicit)</div>
-<div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160;    <span class="keyword">call </span>mem_deallocate(this%i2kn)</div>
-<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;    <span class="keyword">call </span>mem_deallocate(this%nexg)</div>
-<div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;    <span class="keyword">call </span>mem_deallocate(this%numjs)</div>
+<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%smgnc)</div>
+<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%implicit)</div>
+<div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%i2kn)</div>
+<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%nexg)</div>
+<div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%numjs)</div>
 <div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;    <span class="comment">! -- Arrays</span></div>
 <div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;    <span class="keywordflow">if</span> (this%inunit &gt; 0) <span class="keywordflow">then</span></div>
-<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;      <span class="keyword">call </span>mem_deallocate(this%nodem1)</div>
-<div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;      <span class="keyword">call </span>mem_deallocate(this%nodem2)</div>
-<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;      <span class="keyword">call </span>mem_deallocate(this%nodesj)</div>
-<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;      <span class="keyword">call </span>mem_deallocate(this%alphasj)</div>
-<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;      <span class="keyword">call </span>mem_deallocate(this%cond)</div>
-<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;      <span class="keyword">call </span>mem_deallocate(this%idxglo)</div>
-<div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;      <span class="keyword">call </span>mem_deallocate(this%idiagn)</div>
-<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;      <span class="keyword">call </span>mem_deallocate(this%idiagm)</div>
-<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;      <span class="keyword">call </span>mem_deallocate(this%idxsymglo)</div>
-<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;      <span class="keyword">call </span>mem_deallocate(this%jposinrown)</div>
-<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;      <span class="keyword">call </span>mem_deallocate(this%jposinrowm)</div>
+<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%nodem1)</div>
+<div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%nodem2)</div>
+<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%nodesj)</div>
+<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%alphasj)</div>
+<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%cond)</div>
+<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%idxglo)</div>
+<div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%idiagn)</div>
+<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%idiagm)</div>
+<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%idxsymglo)</div>
+<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%jposinrown)</div>
+<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%jposinrowm)</div>
 <div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;<span class="keywordflow">    endif</span></div>
 <div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;    <span class="comment">! -- deallocate NumericalPackageType</span></div>
@@ -848,7 +893,7 @@ $(function() {
 <div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;    <span class="comment">! -- modules</span></div>
 <div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacesimmodule.html">simmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61">ustop</a>, <a class="code" href="namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a">store_error</a></div>
 <div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160;    <span class="keywordtype">class</span>(ghostnodetype) :: this</div>
+<div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structghostnodemodule_1_1ghostnodetype.html">ghostnodetype</a>) :: this</div>
 <div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;    <span class="keywordtype">character(len=LINELENGTH)</span> :: errmsg, keyword</div>
 <div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: ierr</div>
@@ -911,7 +956,7 @@ $(function() {
 <div class="line"><a name="l00839"></a><span class="lineno">  839</span>&#160;    <span class="comment">! -- modules</span></div>
 <div class="line"><a name="l00840"></a><span class="lineno">  840</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacesimmodule.html">simmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61">ustop</a>, <a class="code" href="namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a">store_error</a></div>
 <div class="line"><a name="l00841"></a><span class="lineno">  841</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00842"></a><span class="lineno">  842</span>&#160;    <span class="keywordtype">class</span>(ghostnodetype) :: this</div>
+<div class="line"><a name="l00842"></a><span class="lineno">  842</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structghostnodemodule_1_1ghostnodetype.html">ghostnodetype</a>) :: this</div>
 <div class="line"><a name="l00843"></a><span class="lineno">  843</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00844"></a><span class="lineno">  844</span>&#160;    <span class="keywordtype">character(len=LINELENGTH)</span> :: errmsg, keyword</div>
 <div class="line"><a name="l00845"></a><span class="lineno">  845</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: ierr</div>
@@ -965,7 +1010,7 @@ $(function() {
 <div class="line"><a name="l00893"></a><span class="lineno">  893</span>&#160;    <span class="comment">! -- modules</span></div>
 <div class="line"><a name="l00894"></a><span class="lineno">  894</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacesimmodule.html">simmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61">ustop</a>, <a class="code" href="namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a">store_error</a>, <a class="code" href="namespacesimmodule.html#a4c46e49de78d4498dd4ec106357775e6">count_errors</a></div>
 <div class="line"><a name="l00895"></a><span class="lineno">  895</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00896"></a><span class="lineno">  896</span>&#160;    <span class="keywordtype">class</span>(ghostnodetype) :: this</div>
+<div class="line"><a name="l00896"></a><span class="lineno">  896</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structghostnodemodule_1_1ghostnodetype.html">ghostnodetype</a>) :: this</div>
 <div class="line"><a name="l00897"></a><span class="lineno">  897</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00898"></a><span class="lineno">  898</span>&#160;    <span class="keywordtype">character(len=LINELENGTH)</span> :: line, errmsg, nodestr, fmtgnc, cellid, &amp;</div>
 <div class="line"><a name="l00899"></a><span class="lineno">  899</span>&#160;                                 cellidm, cellidn</div>
@@ -1105,7 +1150,7 @@ $(function() {
 <div class="line"><a name="l01033"></a><span class="lineno"> 1033</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacenumericalmodelmodule.html">numericalmodelmodule</a>, <span class="keywordtype">only</span>: numericalmodeltype</div>
 <div class="line"><a name="l01034"></a><span class="lineno"> 1034</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacesimmodule.html">simmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a">store_error</a></div>
 <div class="line"><a name="l01035"></a><span class="lineno"> 1035</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l01036"></a><span class="lineno"> 1036</span>&#160;    <span class="keywordtype">class</span>(ghostnodetype) :: this</div>
+<div class="line"><a name="l01036"></a><span class="lineno"> 1036</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structghostnodemodule_1_1ghostnodetype.html">ghostnodetype</a>) :: this</div>
 <div class="line"><a name="l01037"></a><span class="lineno"> 1037</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: nodeu</div>
 <div class="line"><a name="l01038"></a><span class="lineno"> 1038</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(inout)</span> :: noder</div>
 <div class="line"><a name="l01039"></a><span class="lineno"> 1039</span>&#160;    <span class="keywordtype">class</span>(numericalmodeltype), <span class="keywordtype">intent(in)</span> :: model</div>
@@ -1129,6 +1174,7 @@ $(function() {
 <div class="line"><a name="l01057"></a><span class="lineno"> 1057</span>&#160; </div>
 <div class="line"><a name="l01058"></a><span class="lineno"> 1058</span>&#160;<span class="keyword">end module </span><a class="code" href="namespaceghostnodemodule.html">ghostnodemodule</a></div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <div class="ttc" id="anamespacekindmodule_html"><div class="ttname"><a href="namespacekindmodule.html">kindmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="kind_8f90_source.html#l00001">kind.f90:1</a></div></div>
 <div class="ttc" id="anamespaceghostnodemodule_html_a467e0f55fe5f9c0eca47cac1b546ec03"><div class="ttname"><a href="namespaceghostnodemodule.html#a467e0f55fe5f9c0eca47cac1b546ec03">ghostnodemodule::allocate_scalars</a></div><div class="ttdeci">subroutine allocate_scalars(this)</div><div class="ttdef"><b>Definition:</b> <a href="_ghost_node_8f90_source.html#l00656">GhostNode.f90:656</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_abab5757666b9ddd2726c20ce48dd0050"><div class="ttname"><a href="namespaceconstantsmodule.html#abab5757666b9ddd2726c20ce48dd0050">constantsmodule::dzero</a></div><div class="ttdeci">real(dp), parameter dzero</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00045">Constants.f90:45</a></div></div>
@@ -1142,32 +1188,42 @@ $(function() {
 <div class="ttc" id="astructsparsemodule_1_1sparsematrix_html"><div class="ttname"><a href="structsparsemodule_1_1sparsematrix.html">sparsemodule::sparsematrix</a></div><div class="ttdef"><b>Definition:</b> <a href="_sparse_8f90_source.html#l00014">Sparse.f90:14</a></div></div>
 <div class="ttc" id="anamespaceblockparsermodule_html"><div class="ttname"><a href="namespaceblockparsermodule.html">blockparsermodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_block_parser_8f90_source.html#l00001">BlockParser.f90:1</a></div></div>
 <div class="ttc" id="anamespaceghostnodemodule_html_a207fe811932867a79e0394806a53ea88"><div class="ttname"><a href="namespaceghostnodemodule.html#a207fe811932867a79e0394806a53ea88">ghostnodemodule::gnc_da</a></div><div class="ttdeci">subroutine gnc_da(this)</div><div class="ttdef"><b>Definition:</b> <a href="_ghost_node_8f90_source.html#l00728">GhostNode.f90:728</a></div></div>
+<div class="ttc" id="anamespaceghostnodemodule_html_a98c24ae68b27c6f10d8d5fbd2a66e268"><div class="ttname"><a href="namespaceghostnodemodule.html#a98c24ae68b27c6f10d8d5fbd2a66e268">ghostnodemodule::gnc_cq</a></div><div class="ttdeci">subroutine gnc_cq(this, flowja)</div><div class="ttdef"><b>Definition:</b> <a href="_ghost_node_8f90_source.html#l00572">GhostNode.f90:572</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_a060d310ded5535ce2dc85bd1ca1afd3d"><div class="ttname"><a href="namespaceconstantsmodule.html#a060d310ded5535ce2dc85bd1ca1afd3d">constantsmodule::linelength</a></div><div class="ttdeci">integer(i4b), parameter linelength</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00028">Constants.f90:28</a></div></div>
+<div class="ttc" id="anamespaceghostnodemodule_html_a70e05d7c1d52ba43831822948ff03ff4"><div class="ttname"><a href="namespaceghostnodemodule.html#a70e05d7c1d52ba43831822948ff03ff4">ghostnodemodule::gnc_df</a></div><div class="ttdeci">subroutine gnc_df(this, m1, m2)</div><div class="ttdef"><b>Definition:</b> <a href="_ghost_node_8f90_source.html#l00089">GhostNode.f90:89</a></div></div>
 <div class="ttc" id="anamespaceghostnodemodule_html_a8e6f649d4541aee057fa1be27887ca99"><div class="ttname"><a href="namespaceghostnodemodule.html#a8e6f649d4541aee057fa1be27887ca99">ghostnodemodule::gnc_fn</a></div><div class="ttdeci">subroutine gnc_fn(this, kiter, njasln, amatsln, condsat, ihc_opt, ivarcv_opt, ictm1_opt, ictm2_opt)</div><div class="ttdef"><b>Definition:</b> <a href="_ghost_node_8f90_source.html#l00405">GhostNode.f90:405</a></div></div>
 <div class="ttc" id="anamespacesimmodule_html_a0be97214c1d4fcf42bc4ddc27b111b61"><div class="ttname"><a href="namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61">simmodule::ustop</a></div><div class="ttdeci">subroutine, public ustop(stopmess, ioutlocal)</div><div class="ttdef"><b>Definition:</b> <a href="_sim_8f90_source.html#l00324">Sim.f90:324</a></div></div>
+<div class="ttc" id="ainterfacememorymanagermodule_1_1mem__allocate_html"><div class="ttname"><a href="interfacememorymanagermodule_1_1mem__allocate.html">memorymanagermodule::mem_allocate</a></div><div class="ttdef"><b>Definition:</b> <a href="_memory_manager_8f90_source.html#l00050">MemoryManager.f90:50</a></div></div>
 <div class="ttc" id="anamespacenumericalmodelmodule_html"><div class="ttname"><a href="namespacenumericalmodelmodule.html">numericalmodelmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_numerical_model_8f90_source.html#l00001">NumericalModel.f90:1</a></div></div>
 <div class="ttc" id="anamespaceghostnodemodule_html_a8cba068f59f195a6b6442eb49ac786d4"><div class="ttname"><a href="namespaceghostnodemodule.html#a8cba068f59f195a6b6442eb49ac786d4">ghostnodemodule::allocate_arrays</a></div><div class="ttdeci">subroutine allocate_arrays(this)</div><div class="ttdef"><b>Definition:</b> <a href="_ghost_node_8f90_source.html#l00688">GhostNode.f90:688</a></div></div>
 <div class="ttc" id="anamespacesmoothingmodule_html_a0ee42e035a1831565d3132d8929eb67c"><div class="ttname"><a href="namespacesmoothingmodule.html#a0ee42e035a1831565d3132d8929eb67c">smoothingmodule::squadraticsaturationderivative</a></div><div class="ttdeci">real(dp) function squadraticsaturationderivative(top, bot, x, eps, bmin)</div><div class="ttdef"><b>Definition:</b> <a href="_smoothing_functions_8f90_source.html#l00418">SmoothingFunctions.f90:418</a></div></div>
 <div class="ttc" id="anamespacekindmodule_html_a2f6861418b5e7d3d602b77228232a470"><div class="ttname"><a href="namespacekindmodule.html#a2f6861418b5e7d3d602b77228232a470">kindmodule::i4b</a></div><div class="ttdeci">integer, parameter i4b</div><div class="ttdef"><b>Definition:</b> <a href="kind_8f90_source.html#l00009">kind.f90:9</a></div></div>
 <div class="ttc" id="anamespaceghostnodemodule_html_a067f3b9f68b64c4de96dfab8d5aa3e5d"><div class="ttname"><a href="namespaceghostnodemodule.html#a067f3b9f68b64c4de96dfab8d5aa3e5d">ghostnodemodule::read_dimensions</a></div><div class="ttdeci">subroutine read_dimensions(this)</div><div class="ttdef"><b>Definition:</b> <a href="_ghost_node_8f90_source.html#l00832">GhostNode.f90:832</a></div></div>
+<div class="ttc" id="astructghostnodemodule_1_1ghostnodetype_html"><div class="ttname"><a href="structghostnodemodule_1_1ghostnodetype.html">ghostnodemodule::ghostnodetype</a></div><div class="ttdef"><b>Definition:</b> <a href="_ghost_node_8f90_source.html#l00015">GhostNode.f90:15</a></div></div>
 <div class="ttc" id="anamespaceghostnodemodule_html_a8e73bf34ced1e7d7bb00eb84346e6b9a"><div class="ttname"><a href="namespaceghostnodemodule.html#a8e73bf34ced1e7d7bb00eb84346e6b9a">ghostnodemodule::gnc_ot</a></div><div class="ttdeci">subroutine gnc_ot(this, ibudfl)</div><div class="ttdef"><b>Definition:</b> <a href="_ghost_node_8f90_source.html#l00534">GhostNode.f90:534</a></div></div>
 <div class="ttc" id="anamespaceghostnodemodule_html_a4356c3f3ff9252b0f4434aa9b88c5a62"><div class="ttname"><a href="namespaceghostnodemodule.html#a4356c3f3ff9252b0f4434aa9b88c5a62">ghostnodemodule::read_data</a></div><div class="ttdeci">subroutine read_data(this)</div><div class="ttdef"><b>Definition:</b> <a href="_ghost_node_8f90_source.html#l00886">GhostNode.f90:886</a></div></div>
 <div class="ttc" id="anamespaceghostnodemodule_html_a77eb63139533e9e835aa11ef46013dab"><div class="ttname"><a href="namespaceghostnodemodule.html#a77eb63139533e9e835aa11ef46013dab">ghostnodemodule::read_options</a></div><div class="ttdeci">subroutine read_options(this)</div><div class="ttdef"><b>Definition:</b> <a href="_ghost_node_8f90_source.html#l00769">GhostNode.f90:769</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html"><div class="ttname"><a href="namespaceconstantsmodule.html">constantsmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00001">Constants.f90:1</a></div></div>
+<div class="ttc" id="ainterfacememorymanagermodule_1_1mem__deallocate_html"><div class="ttname"><a href="interfacememorymanagermodule_1_1mem__deallocate.html">memorymanagermodule::mem_deallocate</a></div><div class="ttdef"><b>Definition:</b> <a href="_memory_manager_8f90_source.html#l00085">MemoryManager.f90:85</a></div></div>
+<div class="ttc" id="astructblockparsermodule_1_1blockparsertype_html"><div class="ttname"><a href="structblockparsermodule_1_1blockparsertype.html">blockparsermodule::blockparsertype</a></div><div class="ttdef"><b>Definition:</b> <a href="_block_parser_8f90_source.html#l00016">BlockParser.f90:16</a></div></div>
 <div class="ttc" id="anamespaceghostnodemodule_html_aeaca6e9ab11bb6d7d8012f4e75a109d0"><div class="ttname"><a href="namespaceghostnodemodule.html#aeaca6e9ab11bb6d7d8012f4e75a109d0">ghostnodemodule::gnc_ac</a></div><div class="ttdeci">subroutine gnc_ac(this, sparse)</div><div class="ttdef"><b>Definition:</b> <a href="_ghost_node_8f90_source.html#l00147">GhostNode.f90:147</a></div></div>
 <div class="ttc" id="anamespacememorymanagermodule_html"><div class="ttname"><a href="namespacememorymanagermodule.html">memorymanagermodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_memory_manager_8f90_source.html#l00001">MemoryManager.f90:1</a></div></div>
 <div class="ttc" id="anamespaceghostnodemodule_html_ac2acfce128dbfa0e01bf7790a1e45330"><div class="ttname"><a href="namespaceghostnodemodule.html#ac2acfce128dbfa0e01bf7790a1e45330">ghostnodemodule::gnc_fc</a></div><div class="ttdeci">subroutine gnc_fc(this, kiter, amatsln)</div><div class="ttdef"><b>Definition:</b> <a href="_ghost_node_8f90_source.html#l00346">GhostNode.f90:346</a></div></div>
 <div class="ttc" id="anamespacekindmodule_html_ae38bd3a7dfaf151094c26e1529259639"><div class="ttname"><a href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">kindmodule::dp</a></div><div class="ttdeci">integer, parameter dp</div><div class="ttdef"><b>Definition:</b> <a href="kind_8f90_source.html#l00007">kind.f90:7</a></div></div>
 <div class="ttc" id="anamespaceghostnodemodule_html_aa1cee3f4ccae990cdcdc7346b49c8b83"><div class="ttname"><a href="namespaceghostnodemodule.html#aa1cee3f4ccae990cdcdc7346b49c8b83">ghostnodemodule::gnc_mc</a></div><div class="ttdeci">subroutine gnc_mc(this, iasln, jasln)</div><div class="ttdef"><b>Definition:</b> <a href="_ghost_node_8f90_source.html#l00187">GhostNode.f90:187</a></div></div>
+<div class="ttc" id="anamespaceghostnodemodule_html_af58ee6920ce9ba3b02357b0c9019012f"><div class="ttname"><a href="namespaceghostnodemodule.html#af58ee6920ce9ba3b02357b0c9019012f">ghostnodemodule::deltaqgnc</a></div><div class="ttdeci">real(dp) function deltaqgnc(this, ignc)</div><div class="ttdef"><b>Definition:</b> <a href="_ghost_node_8f90_source.html#l00610">GhostNode.f90:610</a></div></div>
 <div class="ttc" id="anamespacesmoothingmodule_html"><div class="ttname"><a href="namespacesmoothingmodule.html">smoothingmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_smoothing_functions_8f90_source.html#l00001">SmoothingFunctions.f90:1</a></div></div>
 <div class="ttc" id="anamespacesparsemodule_html"><div class="ttname"><a href="namespacesparsemodule.html">sparsemodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_sparse_8f90_source.html#l00001">Sparse.f90:1</a></div></div>
 <div class="ttc" id="anamespacenumericalpackagemodule_html"><div class="ttname"><a href="namespacenumericalpackagemodule.html">numericalpackagemodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_numerical_package_8f90_source.html#l00001">NumericalPackage.f90:1</a></div></div>
 <div class="ttc" id="anamespaceghostnodemodule_html_a3f3d93709ff27a73b608acaeb9cf5d92"><div class="ttname"><a href="namespaceghostnodemodule.html#a3f3d93709ff27a73b608acaeb9cf5d92">ghostnodemodule::gnc_fmsav</a></div><div class="ttdeci">subroutine gnc_fmsav(this, kiter, amatsln)</div><div class="ttdef"><b>Definition:</b> <a href="_ghost_node_8f90_source.html#l00311">GhostNode.f90:311</a></div></div>
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_95d5cc30a66cc7502f2f5157978bb5c3.html">Exchange</a></li><li class="navelem"><a class="el" href="_ghost_node_8f90.html">GhostNode.f90</a></li>
+    <li class="footer">Generated on Thu Jun 24 2021 19:50:09 for MODFLOW 6 by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
 </body>
 </html>

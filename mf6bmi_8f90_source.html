@@ -5,13 +5,22 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MODFLOW 6 Code Documentation: /home/runner/work/modflow6/modflow6/srcbmi/mf6bmi.f90 Source File</title>
+<title>MODFLOW 6: /home/runner/work/modflow6/modflow6/srcbmi/mf6bmi.f90 Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="CustomDoxygen.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -21,9 +30,12 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="mf6-triangular-grid.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">MODFLOW 6 Code Documentation
+   <div id="projectname">MODFLOW 6
+   &#160;<span id="projectnumber">version 6.2.2</span>
    </div>
+   <div id="projectbrief">MODFLOW 6 Code Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -36,16 +48,54 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Modules</span></a></li>
+      <li><a href="annotated.html"><span>Data&#160;Types&#160;List</span></a></li>
+      <li class="current"><a href="files.html"><span>Files</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('mf6bmi_8f90_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,11 +110,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_df792f6769e16fbc2e58301ddc635f77.html">srcbmi</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">mf6bmi.f90</div>  </div>
@@ -96,10 +141,10 @@ $(function() {
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                           c_f_pointer</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacekindmodule.html">kindmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>, <a class="code" href="namespacekindmodule.html#a2f6861418b5e7d3d602b77228232a470">i4b</a>, <a class="code" href="namespacekindmodule.html#aab86cc631d886fd4042b11df419be9ee">lgp</a></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespaceconstantsmodule.html">constantsmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespaceconstantsmodule.html#ae1ec6380bd0e8e6c89a40d3b97306586">lenmempath</a>, <a class="code" href="namespaceconstantsmodule.html#a8a23c620a738ea7c5a9b5c4893b6bfbb">lenvarname</a></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacememorymanagermodule.html">memorymanagermodule</a>, <span class="keywordtype">only</span>: mem_setptr, <a class="code" href="namespacememorymanagermodule.html#ae5bac6c9ab6024213a0b4b857bc37ae4">get_mem_elem_size</a>, <a class="code" href="namespacememorymanagermodule.html#ad0c684aa838f08c32710dbd0da08a520">get_isize</a>, &amp;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacememorymanagermodule.html">memorymanagermodule</a>, <span class="keywordtype">only</span>: <a class="code" href="interfacememorymanagermodule_1_1mem__setptr.html">mem_setptr</a>, <a class="code" href="namespacememorymanagermodule.html#ae5bac6c9ab6024213a0b4b857bc37ae4">get_mem_elem_size</a>, <a class="code" href="namespacememorymanagermodule.html#ad0c684aa838f08c32710dbd0da08a520">get_isize</a>, &amp;</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                                 <a class="code" href="namespacememorymanagermodule.html#ad59d62832cbff0a81e1fca5ff4ee6d5d">get_mem_rank</a>, <a class="code" href="namespacememorymanagermodule.html#a7c50d332b4e8c4c6dd1c0eadd8c71c25">get_mem_shape</a>, <a class="code" href="namespacememorymanagermodule.html#a4842389f89cc6c6b63e4b28ed69c0fa7">get_mem_type</a>, &amp;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                                 <a class="code" href="namespacememorymanagermodule.html#aa6a53b9762dc9cd2d90bf23b5dbd5e1b">memorylist</a>, <a class="code" href="namespacememorymanagermodule.html#a8e6f199b7218d6ec1ab68f383cb6e20f">get_from_memorylist</a></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacememorytypemodule.html">memorytypemodule</a>, <span class="keywordtype">only</span>: memorytype</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacememorytypemodule.html">memorytypemodule</a>, <span class="keywordtype">only</span>: <a class="code" href="structmemorytypemodule_1_1memorytype.html">memorytype</a></div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacememoryhelpermodule.html">memoryhelpermodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespacememoryhelpermodule.html#abda60b8cd05bba132ea82b23bf12c36c">create_mem_address</a></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacesimvariablesmodule.html">simvariablesmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespacesimvariablesmodule.html#a6a23234e51501db5f4a3370ea91f2f2b">simstdout</a>, <a class="code" href="namespacesimvariablesmodule.html#ae1046045ef436d5259b217750d7490fe">istdout</a></div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespaceinputoutputmodule.html">inputoutputmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespaceinputoutputmodule.html#a535bdfca3d31ebc3a8e4bd5af6890d55">getunit</a></div>
@@ -316,7 +361,7 @@ $(function() {
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <span class="keywordtype">integer(kind=c_int)</span> :: bmi_status<span class="comment">                         !&lt; BMI status code</span></div>
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="comment">! -- local variables</span></div>
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: imem, start, i</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <span class="keywordtype">type</span>(memorytype), <span class="keywordtype">pointer</span> :: mt =&gt; null()</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structmemorytypemodule_1_1memorytype.html">memorytype</a>), <span class="keywordtype">pointer</span> :: mt =&gt; null()</div>
 <div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <span class="keywordtype">character(len=LENMEMADDRESS)</span> :: var_address</div>
 <div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160; </div>
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    start = 1</div>
@@ -347,7 +392,7 @@ $(function() {
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <span class="keywordtype">integer(kind=c_int)</span> :: bmi_status<span class="comment">                         !&lt; BMI status code</span></div>
 <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <span class="comment">! -- local variables</span></div>
 <div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: imem, start, i</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    <span class="keywordtype">type</span>(memorytype), <span class="keywordtype">pointer</span> :: mt =&gt; null()</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structmemorytypemodule_1_1memorytype.html">memorytype</a>), <span class="keywordtype">pointer</span> :: mt =&gt; null()</div>
 <div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <span class="keywordtype">character(len=LENMEMADDRESS)</span> :: var_address</div>
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160; </div>
 <div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    start = 1</div>
@@ -462,17 +507,17 @@ $(function() {
 <div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;    <span class="keyword">call </span><a class="code" href="namespacememorymanagermodule.html#ad59d62832cbff0a81e1fca5ff4ee6d5d">get_mem_rank</a>(var_name, mem_path, rank)</div>
 <div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160; </div>
 <div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;    <span class="keywordflow">if</span> (rank == 0) <span class="keywordflow">then</span></div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;      <span class="keyword">call </span>mem_setptr(src_ptr, var_name, mem_path)</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__setptr.html">mem_setptr</a>(src_ptr, var_name, mem_path)</div>
 <div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;      <span class="keyword">call </span>c_f_pointer(c_arr_ptr, tgt_ptr)</div>
 <div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;      tgt_ptr = src_ptr</div>
 <div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (rank == 1) <span class="keywordflow">then</span></div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;      <span class="keyword">call </span>mem_setptr(src1d_ptr, var_name, mem_path)</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__setptr.html">mem_setptr</a>(src1d_ptr, var_name, mem_path)</div>
 <div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;      <span class="keyword">call </span>c_f_pointer(c_arr_ptr, tgt1d_ptr, shape(src1d_ptr))</div>
 <div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;      <span class="keywordflow">do</span> i = 1, <span class="keyword">size</span>(tgt1d_ptr)</div>
 <div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;        tgt1d_ptr(i) = src1d_ptr(i)</div>
 <div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;<span class="keywordflow">      end do</span></div>
 <div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (rank == 2) <span class="keywordflow">then</span></div>
-<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;      <span class="keyword">call </span>mem_setptr(src2d_ptr, var_name, mem_path)</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__setptr.html">mem_setptr</a>(src2d_ptr, var_name, mem_path)</div>
 <div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;      <span class="keyword">call </span>c_f_pointer(c_arr_ptr, tgt2d_ptr, shape(src2d_ptr))</div>
 <div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;      <span class="keywordflow">do</span> j = 1, <span class="keyword">size</span>(tgt2d_ptr, 2)</div>
 <div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;        <span class="keywordflow">do</span> i = 1, <span class="keyword">size</span>(tgt2d_ptr, 1)</div>
@@ -480,7 +525,7 @@ $(function() {
 <div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;<span class="keywordflow">        end do</span></div>
 <div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;<span class="keywordflow">      end do</span></div>
 <div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (rank == 3) <span class="keywordflow">then</span></div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;      <span class="keyword">call </span>mem_setptr(src3d_ptr, var_name, mem_path)</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__setptr.html">mem_setptr</a>(src3d_ptr, var_name, mem_path)</div>
 <div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;      <span class="keyword">call </span>c_f_pointer(c_arr_ptr, tgt3d_ptr, shape(src3d_ptr))</div>
 <div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;      <span class="keywordflow">do</span> k = 1, <span class="keyword">size</span>(tgt3d_ptr, 3)</div>
 <div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;        <span class="keywordflow">do</span> j = 1, <span class="keyword">size</span>(tgt3d_ptr, 2)</div>
@@ -538,17 +583,17 @@ $(function() {
 <div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;    <span class="keyword">call </span><a class="code" href="namespacememorymanagermodule.html#ad59d62832cbff0a81e1fca5ff4ee6d5d">get_mem_rank</a>(var_name, mem_path, rank)</div>
 <div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160; </div>
 <div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;    <span class="keywordflow">if</span> (rank == 0) <span class="keywordflow">then</span></div>
-<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;      <span class="keyword">call </span>mem_setptr(src_ptr, var_name, mem_path)</div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__setptr.html">mem_setptr</a>(src_ptr, var_name, mem_path)</div>
 <div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;      <span class="keyword">call </span>c_f_pointer(c_arr_ptr, tgt_ptr)</div>
 <div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;      tgt_ptr = src_ptr</div>
 <div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (rank == 1) <span class="keywordflow">then</span></div>
-<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;      <span class="keyword">call </span>mem_setptr(src1d_ptr, var_name, mem_path)</div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__setptr.html">mem_setptr</a>(src1d_ptr, var_name, mem_path)</div>
 <div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;      <span class="keyword">call </span>c_f_pointer(c_arr_ptr, tgt1d_ptr, shape(src1d_ptr))</div>
 <div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;      <span class="keywordflow">do</span> i = 1, <span class="keyword">size</span>(tgt1d_ptr)</div>
 <div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;        tgt1d_ptr(i) = src1d_ptr(i)</div>
 <div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;<span class="keywordflow">      end do</span></div>
 <div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (rank == 2) <span class="keywordflow">then</span></div>
-<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;      <span class="keyword">call </span>mem_setptr(src2d_ptr, var_name, mem_path)</div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__setptr.html">mem_setptr</a>(src2d_ptr, var_name, mem_path)</div>
 <div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;      <span class="keyword">call </span>c_f_pointer(c_arr_ptr, tgt2d_ptr, shape(src2d_ptr))</div>
 <div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;      <span class="keywordflow">do</span> j = 1, <span class="keyword">size</span>(tgt2d_ptr, 2)</div>
 <div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;        <span class="keywordflow">do</span> i = 1, <span class="keyword">size</span>(tgt2d_ptr, 1)</div>
@@ -556,7 +601,7 @@ $(function() {
 <div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;<span class="keywordflow">        end do</span></div>
 <div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;<span class="keywordflow">      end do</span></div>
 <div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (rank == 3) <span class="keywordflow">then</span></div>
-<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;      <span class="keyword">call </span>mem_setptr(src3d_ptr, var_name, mem_path)</div>
+<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__setptr.html">mem_setptr</a>(src3d_ptr, var_name, mem_path)</div>
 <div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;      <span class="keyword">call </span>c_f_pointer(c_arr_ptr, tgt3d_ptr, shape(src3d_ptr))</div>
 <div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;      <span class="keywordflow">do</span> k = 1, <span class="keyword">size</span>(tgt3d_ptr, 3)</div>
 <div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;        <span class="keywordflow">do</span> j = 1, <span class="keyword">size</span>(tgt3d_ptr, 2)</div>
@@ -608,16 +653,16 @@ $(function() {
 <div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;    rank = -1</div>
 <div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;    <span class="keyword">call </span><a class="code" href="namespacememorymanagermodule.html#ad59d62832cbff0a81e1fca5ff4ee6d5d">get_mem_rank</a>(var_name, mem_path, rank)</div>
 <div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;    <span class="keywordflow">if</span> (rank == 0) <span class="keywordflow">then</span></div>
-<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;      <span class="keyword">call </span>mem_setptr(scalar_ptr, var_name, mem_path)</div>
+<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__setptr.html">mem_setptr</a>(scalar_ptr, var_name, mem_path)</div>
 <div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;      c_arr_ptr = c_loc(scalar_ptr)</div>
 <div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (rank == 1) <span class="keywordflow">then</span></div>
-<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;      <span class="keyword">call </span>mem_setptr(array_ptr, var_name, mem_path)</div>
+<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__setptr.html">mem_setptr</a>(array_ptr, var_name, mem_path)</div>
 <div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;      c_arr_ptr = c_loc(array_ptr)</div>
 <div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (rank == 2) <span class="keywordflow">then</span></div>
-<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;      <span class="keyword">call </span>mem_setptr(array2d_ptr, var_name, mem_path)</div>
+<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__setptr.html">mem_setptr</a>(array2d_ptr, var_name, mem_path)</div>
 <div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;      c_arr_ptr = c_loc(array2d_ptr)</div>
 <div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (rank == 3) <span class="keywordflow">then</span></div>
-<div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;      <span class="keyword">call </span>mem_setptr(array3d_ptr, var_name, mem_path)</div>
+<div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__setptr.html">mem_setptr</a>(array3d_ptr, var_name, mem_path)</div>
 <div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;      c_arr_ptr = c_loc(array3d_ptr)</div>
 <div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;    <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;      <span class="keyword">write</span> (<a class="code" href="namespacemf6bmierror.html#a932c5940ed3682a9c5573bd2434739a5">bmi_last_error</a>, <a class="code" href="namespacemf6bmierror.html#aeb24edba9f8e7c2ad77ebb4602a5b8f4">fmt_unsupported_rank</a>) trim(var_name)</div>
@@ -662,16 +707,16 @@ $(function() {
 <div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;    <span class="keyword">call </span><a class="code" href="namespacememorymanagermodule.html#ad59d62832cbff0a81e1fca5ff4ee6d5d">get_mem_rank</a>(var_name, mem_path, rank)</div>
 <div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160; </div>
 <div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;    <span class="keywordflow">if</span> (rank == 0) <span class="keywordflow">then</span></div>
-<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;      <span class="keyword">call </span>mem_setptr(scalar_ptr, var_name, mem_path)</div>
+<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__setptr.html">mem_setptr</a>(scalar_ptr, var_name, mem_path)</div>
 <div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;      c_arr_ptr = c_loc(scalar_ptr)</div>
 <div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (rank == 1) <span class="keywordflow">then</span></div>
-<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;      <span class="keyword">call </span>mem_setptr(array_ptr, var_name, mem_path)</div>
+<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__setptr.html">mem_setptr</a>(array_ptr, var_name, mem_path)</div>
 <div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;      c_arr_ptr = c_loc(array_ptr)</div>
 <div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (rank == 2) <span class="keywordflow">then</span></div>
-<div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;      <span class="keyword">call </span>mem_setptr(array2d_ptr, var_name, mem_path)</div>
+<div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__setptr.html">mem_setptr</a>(array2d_ptr, var_name, mem_path)</div>
 <div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;      c_arr_ptr = c_loc(array2d_ptr)</div>
 <div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (rank == 3) <span class="keywordflow">then</span></div>
-<div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;      <span class="keyword">call </span>mem_setptr(array3d_ptr, var_name, mem_path)</div>
+<div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__setptr.html">mem_setptr</a>(array3d_ptr, var_name, mem_path)</div>
 <div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;      c_arr_ptr = c_loc(array3d_ptr)</div>
 <div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;    <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;      <span class="keyword">write</span> (<a class="code" href="namespacemf6bmierror.html#a932c5940ed3682a9c5573bd2434739a5">bmi_last_error</a>, <a class="code" href="namespacemf6bmierror.html#aeb24edba9f8e7c2ad77ebb4602a5b8f4">fmt_unsupported_rank</a>) trim(var_name)</div>
@@ -720,17 +765,17 @@ $(function() {
 <div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;    <span class="keyword">call </span><a class="code" href="namespacememorymanagermodule.html#ad59d62832cbff0a81e1fca5ff4ee6d5d">get_mem_rank</a>(var_name, mem_path, rank)</div>
 <div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160; </div>
 <div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;    <span class="keywordflow">if</span> (rank == 0) <span class="keywordflow">then</span></div>
-<div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;      <span class="keyword">call </span>mem_setptr(tgt_ptr, var_name, mem_path)</div>
+<div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__setptr.html">mem_setptr</a>(tgt_ptr, var_name, mem_path)</div>
 <div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160;      <span class="keyword">call </span>c_f_pointer(c_arr_ptr, src_ptr)</div>
 <div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;      tgt_ptr = src_ptr</div>
 <div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (rank == 1) <span class="keywordflow">then</span></div>
-<div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;      <span class="keyword">call </span>mem_setptr(tgt1d_ptr, var_name, mem_path)</div>
+<div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__setptr.html">mem_setptr</a>(tgt1d_ptr, var_name, mem_path)</div>
 <div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;      <span class="keyword">call </span>c_f_pointer(c_arr_ptr, src1d_ptr, shape(tgt1d_ptr))</div>
 <div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;      <span class="keywordflow">do</span> i = 1, <span class="keyword">size</span>(tgt1d_ptr)</div>
 <div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;        tgt1d_ptr(i) = src1d_ptr(i)</div>
 <div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;<span class="keywordflow">      end do</span></div>
 <div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (rank == 2) <span class="keywordflow">then</span></div>
-<div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;      <span class="keyword">call </span>mem_setptr(tgt2d_ptr, var_name, mem_path)</div>
+<div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__setptr.html">mem_setptr</a>(tgt2d_ptr, var_name, mem_path)</div>
 <div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;      <span class="keyword">call </span>c_f_pointer(c_arr_ptr, src2d_ptr, shape(tgt2d_ptr))</div>
 <div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;      <span class="keywordflow">do</span> j = 1, <span class="keyword">size</span>(tgt2d_ptr, 2)</div>
 <div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160;        <span class="keywordflow">do</span> i = 1, <span class="keyword">size</span>(tgt2d_ptr, 1)</div>
@@ -792,17 +837,17 @@ $(function() {
 <div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;    <span class="keyword">call </span><a class="code" href="namespacememorymanagermodule.html#ad59d62832cbff0a81e1fca5ff4ee6d5d">get_mem_rank</a>(var_name, mem_path, rank)</div>
 <div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160; </div>
 <div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;    <span class="keywordflow">if</span> (rank == 0) <span class="keywordflow">then</span></div>
-<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;      <span class="keyword">call </span>mem_setptr(tgt_ptr, var_name, mem_path)</div>
+<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__setptr.html">mem_setptr</a>(tgt_ptr, var_name, mem_path)</div>
 <div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;      <span class="keyword">call </span>c_f_pointer(c_arr_ptr, src_ptr)</div>
 <div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;      tgt_ptr = src_ptr</div>
 <div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (rank == 1) <span class="keywordflow">then</span></div>
-<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;      <span class="keyword">call </span>mem_setptr(tgt1d_ptr, var_name, mem_path)</div>
+<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__setptr.html">mem_setptr</a>(tgt1d_ptr, var_name, mem_path)</div>
 <div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;      <span class="keyword">call </span>c_f_pointer(c_arr_ptr, src1d_ptr, shape(tgt1d_ptr))</div>
 <div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;      <span class="keywordflow">do</span> i = 1, <span class="keyword">size</span>(tgt1d_ptr)</div>
 <div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;        tgt1d_ptr(i) = src1d_ptr(i)</div>
 <div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;<span class="keywordflow">      end do</span></div>
 <div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (rank == 2) <span class="keywordflow">then</span></div>
-<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;      <span class="keyword">call </span>mem_setptr(tgt2d_ptr, var_name, mem_path)</div>
+<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__setptr.html">mem_setptr</a>(tgt2d_ptr, var_name, mem_path)</div>
 <div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;      <span class="keyword">call </span>c_f_pointer(c_arr_ptr, src2d_ptr, shape(tgt2d_ptr))</div>
 <div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;      <span class="keywordflow">do</span> j = 1, <span class="keyword">size</span>(tgt2d_ptr, 2)</div>
 <div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;        <span class="keywordflow">do</span> i = 1, <span class="keyword">size</span>(tgt2d_ptr, 1)</div>
@@ -951,12 +996,14 @@ $(function() {
 <div class="line"><a name="l00879"></a><span class="lineno">  879</span>&#160; </div>
 <div class="line"><a name="l00880"></a><span class="lineno">  880</span>&#160;<span class="keyword">end module </span><a class="code" href="namespacemf6bmi.html">mf6bmi</a></div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <div class="ttc" id="anamespacememorymanagermodule_html_ae5bac6c9ab6024213a0b4b857bc37ae4"><div class="ttname"><a href="namespacememorymanagermodule.html#ae5bac6c9ab6024213a0b4b857bc37ae4">memorymanagermodule::get_mem_elem_size</a></div><div class="ttdeci">subroutine, public get_mem_elem_size(name, mem_path, size)</div><div class="ttdoc">@ brief Get the memory size of a single element of the stored variable</div><div class="ttdef"><b>Definition:</b> <a href="_memory_manager_8f90_source.html#l00161">MemoryManager.f90:161</a></div></div>
 <div class="ttc" id="anamespacemf6bmi_html_a8e2d2eff520317a6077f5930a16ee879"><div class="ttname"><a href="namespacemf6bmi.html#a8e2d2eff520317a6077f5930a16ee879">mf6bmi::get_value_double</a></div><div class="ttdeci">integer function get_value_double(c_var_address, c_arr_ptr)</div><div class="ttdoc">Copy the double precision values of a variable into the array.</div><div class="ttdef"><b>Definition:</b> <a href="mf6bmi_8f90_source.html#l00361">mf6bmi.f90:361</a></div></div>
 <div class="ttc" id="anamespacekindmodule_html"><div class="ttname"><a href="namespacekindmodule.html">kindmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="kind_8f90_source.html#l00001">kind.f90:1</a></div></div>
 <div class="ttc" id="anamespacemf6bmi_html_a0427db25b4615ced24f28f44d8062c7a"><div class="ttname"><a href="namespacemf6bmi.html#a0427db25b4615ced24f28f44d8062c7a">mf6bmi::get_end_time</a></div><div class="ttdeci">integer(kind=c_int) function get_end_time(end_time)</div><div class="ttdoc">Get the end time of the simulation.</div><div class="ttdef"><b>Definition:</b> <a href="mf6bmi_8f90_source.html#l00146">mf6bmi.f90:146</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_ae1ec6380bd0e8e6c89a40d3b97306586"><div class="ttname"><a href="namespaceconstantsmodule.html#ae1ec6380bd0e8e6c89a40d3b97306586">constantsmodule::lenmempath</a></div><div class="ttdeci">integer(i4b), parameter lenmempath</div><div class="ttdoc">maximum length of the memory path</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00016">Constants.f90:16</a></div></div>
 <div class="ttc" id="anamespacememorymanagermodule_html_ad0c684aa838f08c32710dbd0da08a520"><div class="ttname"><a href="namespacememorymanagermodule.html#ad0c684aa838f08c32710dbd0da08a520">memorymanagermodule::get_isize</a></div><div class="ttdeci">subroutine, public get_isize(name, mem_path, isize)</div><div class="ttdoc">@ brief Get the number of elements for this variable</div><div class="ttdef"><b>Definition:</b> <a href="_memory_manager_8f90_source.html#l00235">MemoryManager.f90:235</a></div></div>
+<div class="ttc" id="astructmemorytypemodule_1_1memorytype_html"><div class="ttname"><a href="structmemorytypemodule_1_1memorytype.html">memorytypemodule::memorytype</a></div><div class="ttdef"><b>Definition:</b> <a href="_memory_8f90_source.html#l00015">Memory.f90:15</a></div></div>
 <div class="ttc" id="anamespacememorymanagermodule_html_aa6a53b9762dc9cd2d90bf23b5dbd5e1b"><div class="ttname"><a href="namespacememorymanagermodule.html#aa6a53b9762dc9cd2d90bf23b5dbd5e1b">memorymanagermodule::memorylist</a></div><div class="ttdeci">type(memorylisttype), public memorylist</div><div class="ttdef"><b>Definition:</b> <a href="_memory_manager_8f90_source.html#l00041">MemoryManager.f90:41</a></div></div>
 <div class="ttc" id="anamespacemf6bmi_html_af62108098e59d2930c0c36d224a364c5"><div class="ttname"><a href="namespacemf6bmi.html#af62108098e59d2930c0c36d224a364c5">mf6bmi::istdout_to_file</a></div><div class="ttdeci">integer(c_int), bind(C, name=&quot;ISTDOUTTOFILE&quot;) istdout_to_file</div><div class="ttdoc">output control: =0 to screen, &gt;0 to file</div><div class="ttdef"><b>Definition:</b> <a href="mf6bmi_8f90_source.html#l00036">mf6bmi.f90:36</a></div></div>
 <div class="ttc" id="anamespacemf6coremodule_html_ae17efa5a9e03fd31617a08c08e20ae03"><div class="ttname"><a href="namespacemf6coremodule.html#ae17efa5a9e03fd31617a08c08e20ae03">mf6coremodule::mf6finalize</a></div><div class="ttdeci">subroutine mf6finalize()</div><div class="ttdef"><b>Definition:</b> <a href="mf6core_8f90_source.html#l00084">mf6core.f90:84</a></div></div>
@@ -994,6 +1041,7 @@ $(function() {
 <div class="ttc" id="anamespacekindmodule_html_a2f6861418b5e7d3d602b77228232a470"><div class="ttname"><a href="namespacekindmodule.html#a2f6861418b5e7d3d602b77228232a470">kindmodule::i4b</a></div><div class="ttdeci">integer, parameter i4b</div><div class="ttdef"><b>Definition:</b> <a href="kind_8f90_source.html#l00009">kind.f90:9</a></div></div>
 <div class="ttc" id="anamespacememoryhelpermodule_html_abda60b8cd05bba132ea82b23bf12c36c"><div class="ttname"><a href="namespacememoryhelpermodule.html#abda60b8cd05bba132ea82b23bf12c36c">memoryhelpermodule::create_mem_address</a></div><div class="ttdeci">character(len=lenmemaddress) function create_mem_address(mem_path, var_name)</div><div class="ttdoc">returns the address string of the memory object</div><div class="ttdef"><b>Definition:</b> <a href="_memory_helper_8f90_source.html#l00043">MemoryHelper.f90:43</a></div></div>
 <div class="ttc" id="anamespacemf6coremodule_html_a7526420bd1fc4ebd3a09487e8509eff7"><div class="ttname"><a href="namespacemf6coremodule.html#a7526420bd1fc4ebd3a09487e8509eff7">mf6coremodule::mf6update</a></div><div class="ttdeci">logical(lgp) function mf6update()</div><div class="ttdef"><b>Definition:</b> <a href="mf6core_8f90_source.html#l00068">mf6core.f90:68</a></div></div>
+<div class="ttc" id="ainterfacememorymanagermodule_1_1mem__setptr_html"><div class="ttname"><a href="interfacememorymanagermodule_1_1mem__setptr.html">memorymanagermodule::mem_setptr</a></div><div class="ttdef"><b>Definition:</b> <a href="_memory_manager_8f90_source.html#l00069">MemoryManager.f90:69</a></div></div>
 <div class="ttc" id="anamespacesimvariablesmodule_html_a6a23234e51501db5f4a3370ea91f2f2b"><div class="ttname"><a href="namespacesimvariablesmodule.html#a6a23234e51501db5f4a3370ea91f2f2b">simvariablesmodule::simstdout</a></div><div class="ttdeci">character(len=linelength) simstdout</div><div class="ttdef"><b>Definition:</b> <a href="_sim_variables_8f90_source.html#l00008">SimVariables.f90:8</a></div></div>
 <div class="ttc" id="anamespacesimvariablesmodule_html_ae1046045ef436d5259b217750d7490fe"><div class="ttname"><a href="namespacesimvariablesmodule.html#ae1046045ef436d5259b217750d7490fe">simvariablesmodule::istdout</a></div><div class="ttdeci">integer(i4b) istdout</div><div class="ttdef"><b>Definition:</b> <a href="_sim_variables_8f90_source.html#l00011">SimVariables.f90:11</a></div></div>
 <div class="ttc" id="anamespacemf6bmiutil_html"><div class="ttname"><a href="namespacemf6bmiutil.html">mf6bmiutil</a></div><div class="ttdoc">This module contains helper routines and parameters for the MODFLOW 6 BMI.</div><div class="ttdef"><b>Definition:</b> <a href="mf6bmi_util_8f90_source.html#l00004">mf6bmiUtil.f90:4</a></div></div>
@@ -1029,10 +1077,13 @@ $(function() {
 <div class="ttc" id="anamespacemf6bmi_html_aa6b446de7c8c4e4eb1fc5f02d227367e"><div class="ttname"><a href="namespacemf6bmi.html#aa6b446de7c8c4e4eb1fc5f02d227367e">mf6bmi::get_var_shape</a></div><div class="ttdeci">integer(kind=c_int) function get_var_shape(c_var_address, c_var_shape)</div><div class="ttdoc">Get the shape of the array for the variable (non-BMI)</div><div class="ttdef"><b>Definition:</b> <a href="mf6bmi_8f90_source.html#l00841">mf6bmi.f90:841</a></div></div>
 <div class="ttc" id="anamespacememorymanagermodule_html_a7c50d332b4e8c4c6dd1c0eadd8c71c25"><div class="ttname"><a href="namespacememorymanagermodule.html#a7c50d332b4e8c4c6dd1c0eadd8c71c25">memorymanagermodule::get_mem_shape</a></div><div class="ttdeci">subroutine, public get_mem_shape(name, mem_path, mem_shape)</div><div class="ttdoc">@ brief Get the variable memory shape</div><div class="ttdef"><b>Definition:</b> <a href="_memory_manager_8f90_source.html#l00199">MemoryManager.f90:199</a></div></div>
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_df792f6769e16fbc2e58301ddc635f77.html">srcbmi</a></li><li class="navelem"><a class="el" href="mf6bmi_8f90.html">mf6bmi.f90</a></li>
+    <li class="footer">Generated on Thu Jun 24 2021 19:50:10 for MODFLOW 6 by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
 </body>
 </html>

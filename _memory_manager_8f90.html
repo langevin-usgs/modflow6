@@ -5,13 +5,22 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MODFLOW 6 Code Documentation: /home/runner/work/modflow6/modflow6/src/Utilities/Memory/MemoryManager.f90 File Reference</title>
+<title>MODFLOW 6: /home/runner/work/modflow6/modflow6/src/Utilities/Memory/MemoryManager.f90 File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="CustomDoxygen.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -21,9 +30,12 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="mf6-triangular-grid.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">MODFLOW 6 Code Documentation
+   <div id="projectname">MODFLOW 6
+   &#160;<span id="projectnumber">version 6.2.2</span>
    </div>
+   <div id="projectbrief">MODFLOW 6 Code Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -36,16 +48,54 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Modules</span></a></li>
+      <li><a href="annotated.html"><span>Data&#160;Types&#160;List</span></a></li>
+      <li class="current"><a href="files.html"><span>Files</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('_memory_manager_8f90.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,11 +110,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_ff383ddf1aa4eab0c4ce7910366d05a5.html">Utilities</a></li><li class="navelem"><a class="el" href="dir_21ddf0b5f18acd5e64826f246466c9e1.html">Memory</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Data Types</a> &#124;
@@ -78,6 +123,23 @@ $(function() {
 
 <p><a href="_memory_manager_8f90_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Data Types</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacememorymanagermodule_1_1mem__allocate.html">memorymanagermodule::mem_allocate</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacememorymanagermodule_1_1mem__checkin.html">memorymanagermodule::mem_checkin</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacememorymanagermodule_1_1mem__reallocate.html">memorymanagermodule::mem_reallocate</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacememorymanagermodule_1_1mem__setptr.html">memorymanagermodule::mem_setptr</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacememorymanagermodule_1_1mem__copyptr.html">memorymanagermodule::mem_copyptr</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacememorymanagermodule_1_1mem__reassignptr.html">memorymanagermodule::mem_reassignptr</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacememorymanagermodule_1_1mem__deallocate.html">memorymanagermodule::mem_deallocate</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Modules</h2></td></tr>
 <tr class="memitem:namespacememorymanagermodule"><td class="memItemLeft" align="right" valign="top">module &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorymanagermodule.html">memorymanagermodule</a></td></tr>
@@ -103,12 +165,171 @@ Functions/Subroutines</h2></td></tr>
 <tr class="memitem:a8e6f199b7218d6ec1ab68f383cb6e20f"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorymanagermodule.html#a8e6f199b7218d6ec1ab68f383cb6e20f">memorymanagermodule::get_from_memorylist</a> (name, mem_path, mt, found, check)</td></tr>
 <tr class="memdesc:a8e6f199b7218d6ec1ab68f383cb6e20f"><td class="mdescLeft">&#160;</td><td class="mdescRight">@ brief Get a memory type entry from the memory list  <a href="namespacememorymanagermodule.html#a8e6f199b7218d6ec1ab68f383cb6e20f">More...</a><br /></td></tr>
 <tr class="separator:a8e6f199b7218d6ec1ab68f383cb6e20f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7604d59560009da39dc9507ac0725f8"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorymanagermodule.html#af7604d59560009da39dc9507ac0725f8">memorymanagermodule::allocate_error</a> (varname, mem_path, istat, isize)</td></tr>
+<tr class="memdesc:af7604d59560009da39dc9507ac0725f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Issue allocation error message and stop program execution.  <a href="namespacememorymanagermodule.html#af7604d59560009da39dc9507ac0725f8">More...</a><br /></td></tr>
+<tr class="separator:af7604d59560009da39dc9507ac0725f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a88357b0c068c805e19b63fee0620b1"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorymanagermodule.html#a0a88357b0c068c805e19b63fee0620b1">memorymanagermodule::allocate_logical</a> (sclr, name, mem_path)</td></tr>
+<tr class="memdesc:a0a88357b0c068c805e19b63fee0620b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate a logical scalar.  <a href="namespacememorymanagermodule.html#a0a88357b0c068c805e19b63fee0620b1">More...</a><br /></td></tr>
+<tr class="separator:a0a88357b0c068c805e19b63fee0620b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4780db4c21eb164665232983b1be0dca"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorymanagermodule.html#a4780db4c21eb164665232983b1be0dca">memorymanagermodule::allocate_str</a> (sclr, ilen, name, mem_path)</td></tr>
+<tr class="memdesc:a4780db4c21eb164665232983b1be0dca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate a character string.  <a href="namespacememorymanagermodule.html#a4780db4c21eb164665232983b1be0dca">More...</a><br /></td></tr>
+<tr class="separator:a4780db4c21eb164665232983b1be0dca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c5bf39cf785030754c02899af6e29e9"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorymanagermodule.html#a0c5bf39cf785030754c02899af6e29e9">memorymanagermodule::allocate_str1d</a> (astr, ilen, nrow, name, mem_path)</td></tr>
+<tr class="memdesc:a0c5bf39cf785030754c02899af6e29e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate a 1-dimensional defined length string array.  <a href="namespacememorymanagermodule.html#a0c5bf39cf785030754c02899af6e29e9">More...</a><br /></td></tr>
+<tr class="separator:a0c5bf39cf785030754c02899af6e29e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace801553e187d88f8e9c1c15a9594e09"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorymanagermodule.html#ace801553e187d88f8e9c1c15a9594e09">memorymanagermodule::allocate_int</a> (sclr, name, mem_path)</td></tr>
+<tr class="memdesc:ace801553e187d88f8e9c1c15a9594e09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate a integer scalar.  <a href="namespacememorymanagermodule.html#ace801553e187d88f8e9c1c15a9594e09">More...</a><br /></td></tr>
+<tr class="separator:ace801553e187d88f8e9c1c15a9594e09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca7e7b53355397095e6c4cec589ab015"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorymanagermodule.html#aca7e7b53355397095e6c4cec589ab015">memorymanagermodule::allocate_int1d</a> (aint, nrow, name, mem_path)</td></tr>
+<tr class="memdesc:aca7e7b53355397095e6c4cec589ab015"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate a 1-dimensional integer array.  <a href="namespacememorymanagermodule.html#aca7e7b53355397095e6c4cec589ab015">More...</a><br /></td></tr>
+<tr class="separator:aca7e7b53355397095e6c4cec589ab015"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0febd2a106acecc627777302641438c9"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorymanagermodule.html#a0febd2a106acecc627777302641438c9">memorymanagermodule::allocate_int2d</a> (aint, ncol, nrow, name, mem_path)</td></tr>
+<tr class="memdesc:a0febd2a106acecc627777302641438c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate a 2-dimensional integer array.  <a href="namespacememorymanagermodule.html#a0febd2a106acecc627777302641438c9">More...</a><br /></td></tr>
+<tr class="separator:a0febd2a106acecc627777302641438c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7474cd696cb9b1c1fe44574ea103060e"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorymanagermodule.html#a7474cd696cb9b1c1fe44574ea103060e">memorymanagermodule::allocate_int3d</a> (aint, ncol, nrow, nlay, name, mem_path)</td></tr>
+<tr class="memdesc:a7474cd696cb9b1c1fe44574ea103060e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate a 3-dimensional integer array.  <a href="namespacememorymanagermodule.html#a7474cd696cb9b1c1fe44574ea103060e">More...</a><br /></td></tr>
+<tr class="separator:a7474cd696cb9b1c1fe44574ea103060e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fa4ef590633806da981c9ba7e280df2"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorymanagermodule.html#a5fa4ef590633806da981c9ba7e280df2">memorymanagermodule::allocate_dbl</a> (sclr, name, mem_path)</td></tr>
+<tr class="memdesc:a5fa4ef590633806da981c9ba7e280df2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate a real scalar.  <a href="namespacememorymanagermodule.html#a5fa4ef590633806da981c9ba7e280df2">More...</a><br /></td></tr>
+<tr class="separator:a5fa4ef590633806da981c9ba7e280df2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3f615d7f192d5eb8a7acd4d14e9f423"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorymanagermodule.html#af3f615d7f192d5eb8a7acd4d14e9f423">memorymanagermodule::allocate_dbl1d</a> (adbl, nrow, name, mem_path)</td></tr>
+<tr class="memdesc:af3f615d7f192d5eb8a7acd4d14e9f423"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate a 1-dimensional real array.  <a href="namespacememorymanagermodule.html#af3f615d7f192d5eb8a7acd4d14e9f423">More...</a><br /></td></tr>
+<tr class="separator:af3f615d7f192d5eb8a7acd4d14e9f423"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad201d68beb5a31d08d7231dd347228d4"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorymanagermodule.html#ad201d68beb5a31d08d7231dd347228d4">memorymanagermodule::allocate_dbl2d</a> (adbl, ncol, nrow, name, mem_path)</td></tr>
+<tr class="memdesc:ad201d68beb5a31d08d7231dd347228d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate a 2-dimensional real array.  <a href="namespacememorymanagermodule.html#ad201d68beb5a31d08d7231dd347228d4">More...</a><br /></td></tr>
+<tr class="separator:ad201d68beb5a31d08d7231dd347228d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d9171f5e579d0fda3ec7bb3b6fc1cb0"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorymanagermodule.html#a1d9171f5e579d0fda3ec7bb3b6fc1cb0">memorymanagermodule::allocate_dbl3d</a> (adbl, ncol, nrow, nlay, name, mem_path)</td></tr>
+<tr class="memdesc:a1d9171f5e579d0fda3ec7bb3b6fc1cb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate a 3-dimensional real array.  <a href="namespacememorymanagermodule.html#a1d9171f5e579d0fda3ec7bb3b6fc1cb0">More...</a><br /></td></tr>
+<tr class="separator:a1d9171f5e579d0fda3ec7bb3b6fc1cb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adaebe968303549959b18bfe9a922ca9a"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorymanagermodule.html#adaebe968303549959b18bfe9a922ca9a">memorymanagermodule::checkin_int1d</a> (aint, name, mem_path, name2, mem_path2)</td></tr>
+<tr class="memdesc:adaebe968303549959b18bfe9a922ca9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check in an existing 1d integer array with a new address (name + path)  <a href="namespacememorymanagermodule.html#adaebe968303549959b18bfe9a922ca9a">More...</a><br /></td></tr>
+<tr class="separator:adaebe968303549959b18bfe9a922ca9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad803a305fe80202cdbbee23dd5c347fa"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorymanagermodule.html#ad803a305fe80202cdbbee23dd5c347fa">memorymanagermodule::checkin_dbl1d</a> (adbl, name, mem_path, name2, mem_path2)</td></tr>
+<tr class="memdesc:ad803a305fe80202cdbbee23dd5c347fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check in an existing 1d double precision array with a new address (name + path)  <a href="namespacememorymanagermodule.html#ad803a305fe80202cdbbee23dd5c347fa">More...</a><br /></td></tr>
+<tr class="separator:ad803a305fe80202cdbbee23dd5c347fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf1a3c790b0f50e9a0084728c961bbd1"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorymanagermodule.html#abf1a3c790b0f50e9a0084728c961bbd1">memorymanagermodule::reallocate_str1d</a> (astr, ilen, nrow, name, mem_path)</td></tr>
+<tr class="memdesc:abf1a3c790b0f50e9a0084728c961bbd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reallocate a 1-dimensional defined length string array.  <a href="namespacememorymanagermodule.html#abf1a3c790b0f50e9a0084728c961bbd1">More...</a><br /></td></tr>
+<tr class="separator:abf1a3c790b0f50e9a0084728c961bbd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7056374019a32e8fe81a20244180431"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorymanagermodule.html#aa7056374019a32e8fe81a20244180431">memorymanagermodule::reallocate_int1d</a> (aint, nrow, name, mem_path)</td></tr>
+<tr class="memdesc:aa7056374019a32e8fe81a20244180431"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reallocate a 1-dimensional integer array.  <a href="namespacememorymanagermodule.html#aa7056374019a32e8fe81a20244180431">More...</a><br /></td></tr>
+<tr class="separator:aa7056374019a32e8fe81a20244180431"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05562b5d22dbf816eef799c99651b027"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorymanagermodule.html#a05562b5d22dbf816eef799c99651b027">memorymanagermodule::reallocate_int2d</a> (aint, ncol, nrow, name, mem_path)</td></tr>
+<tr class="memdesc:a05562b5d22dbf816eef799c99651b027"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reallocate a 2-dimensional integer array.  <a href="namespacememorymanagermodule.html#a05562b5d22dbf816eef799c99651b027">More...</a><br /></td></tr>
+<tr class="separator:a05562b5d22dbf816eef799c99651b027"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b60924f8d1eaab5ebc4a7077734626c"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorymanagermodule.html#a9b60924f8d1eaab5ebc4a7077734626c">memorymanagermodule::reallocate_dbl1d</a> (adbl, nrow, name, mem_path)</td></tr>
+<tr class="memdesc:a9b60924f8d1eaab5ebc4a7077734626c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reallocate a 1-dimensional real array.  <a href="namespacememorymanagermodule.html#a9b60924f8d1eaab5ebc4a7077734626c">More...</a><br /></td></tr>
+<tr class="separator:a9b60924f8d1eaab5ebc4a7077734626c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b2c7bfb9930cdb9485650491a5450b1"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorymanagermodule.html#a3b2c7bfb9930cdb9485650491a5450b1">memorymanagermodule::reallocate_dbl2d</a> (adbl, ncol, nrow, name, mem_path)</td></tr>
+<tr class="memdesc:a3b2c7bfb9930cdb9485650491a5450b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reallocate a 2-dimensional real array.  <a href="namespacememorymanagermodule.html#a3b2c7bfb9930cdb9485650491a5450b1">More...</a><br /></td></tr>
+<tr class="separator:a3b2c7bfb9930cdb9485650491a5450b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefa833a64722dc48b1dcd5120b5d2cf0"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorymanagermodule.html#aefa833a64722dc48b1dcd5120b5d2cf0">memorymanagermodule::setptr_logical</a> (sclr, name, mem_path)</td></tr>
+<tr class="memdesc:aefa833a64722dc48b1dcd5120b5d2cf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set pointer to a logical scalar.  <a href="namespacememorymanagermodule.html#aefa833a64722dc48b1dcd5120b5d2cf0">More...</a><br /></td></tr>
+<tr class="separator:aefa833a64722dc48b1dcd5120b5d2cf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a414be91ca92a21afe6be2e1d8789bc5a"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorymanagermodule.html#a414be91ca92a21afe6be2e1d8789bc5a">memorymanagermodule::setptr_int</a> (sclr, name, mem_path)</td></tr>
+<tr class="memdesc:a414be91ca92a21afe6be2e1d8789bc5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set pointer to integer scalar.  <a href="namespacememorymanagermodule.html#a414be91ca92a21afe6be2e1d8789bc5a">More...</a><br /></td></tr>
+<tr class="separator:a414be91ca92a21afe6be2e1d8789bc5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a893117da5c3368afba56f1b481a48efe"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorymanagermodule.html#a893117da5c3368afba56f1b481a48efe">memorymanagermodule::setptr_int1d</a> (aint, name, mem_path)</td></tr>
+<tr class="memdesc:a893117da5c3368afba56f1b481a48efe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set pointer to 1d integer array.  <a href="namespacememorymanagermodule.html#a893117da5c3368afba56f1b481a48efe">More...</a><br /></td></tr>
+<tr class="separator:a893117da5c3368afba56f1b481a48efe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4858811fe2b26dc0932f5cf6cd79428a"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorymanagermodule.html#a4858811fe2b26dc0932f5cf6cd79428a">memorymanagermodule::setptr_int2d</a> (aint, name, mem_path)</td></tr>
+<tr class="memdesc:a4858811fe2b26dc0932f5cf6cd79428a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set pointer to 2d integer array.  <a href="namespacememorymanagermodule.html#a4858811fe2b26dc0932f5cf6cd79428a">More...</a><br /></td></tr>
+<tr class="separator:a4858811fe2b26dc0932f5cf6cd79428a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25adb6caf1476bc95b420642cb828c28"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorymanagermodule.html#a25adb6caf1476bc95b420642cb828c28">memorymanagermodule::setptr_int3d</a> (aint, name, mem_path)</td></tr>
+<tr class="memdesc:a25adb6caf1476bc95b420642cb828c28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set pointer to 3d integer array.  <a href="namespacememorymanagermodule.html#a25adb6caf1476bc95b420642cb828c28">More...</a><br /></td></tr>
+<tr class="separator:a25adb6caf1476bc95b420642cb828c28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c03fdc7796c6e28b17b3253c9d50afc"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorymanagermodule.html#a6c03fdc7796c6e28b17b3253c9d50afc">memorymanagermodule::setptr_dbl</a> (sclr, name, mem_path)</td></tr>
+<tr class="memdesc:a6c03fdc7796c6e28b17b3253c9d50afc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set pointer to a real scalar.  <a href="namespacememorymanagermodule.html#a6c03fdc7796c6e28b17b3253c9d50afc">More...</a><br /></td></tr>
+<tr class="separator:a6c03fdc7796c6e28b17b3253c9d50afc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae616b669ee4b25fc2ea0b3456ccf6fcb"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorymanagermodule.html#ae616b669ee4b25fc2ea0b3456ccf6fcb">memorymanagermodule::setptr_dbl1d</a> (adbl, name, mem_path)</td></tr>
+<tr class="memdesc:ae616b669ee4b25fc2ea0b3456ccf6fcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set pointer to a 1d real array.  <a href="namespacememorymanagermodule.html#ae616b669ee4b25fc2ea0b3456ccf6fcb">More...</a><br /></td></tr>
+<tr class="separator:ae616b669ee4b25fc2ea0b3456ccf6fcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9be2d2af9c989aff846dc24ee3f37c18"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorymanagermodule.html#a9be2d2af9c989aff846dc24ee3f37c18">memorymanagermodule::setptr_dbl2d</a> (adbl, name, mem_path)</td></tr>
+<tr class="memdesc:a9be2d2af9c989aff846dc24ee3f37c18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set pointer to a 2d real array.  <a href="namespacememorymanagermodule.html#a9be2d2af9c989aff846dc24ee3f37c18">More...</a><br /></td></tr>
+<tr class="separator:a9be2d2af9c989aff846dc24ee3f37c18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae28bf6692479e10fc49d2b08f423d7bb"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorymanagermodule.html#ae28bf6692479e10fc49d2b08f423d7bb">memorymanagermodule::setptr_dbl3d</a> (adbl, name, mem_path)</td></tr>
+<tr class="memdesc:ae28bf6692479e10fc49d2b08f423d7bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set pointer to a 3d real array.  <a href="namespacememorymanagermodule.html#ae28bf6692479e10fc49d2b08f423d7bb">More...</a><br /></td></tr>
+<tr class="separator:ae28bf6692479e10fc49d2b08f423d7bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43788091085873dc85edae3786201d78"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorymanagermodule.html#a43788091085873dc85edae3786201d78">memorymanagermodule::copyptr_int1d</a> (aint, name, mem_path, mem_path_copy)</td></tr>
+<tr class="memdesc:a43788091085873dc85edae3786201d78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a copy of a 1-dimensional integer array.  <a href="namespacememorymanagermodule.html#a43788091085873dc85edae3786201d78">More...</a><br /></td></tr>
+<tr class="separator:a43788091085873dc85edae3786201d78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a586f55600a71156ec280dd00027a0b29"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorymanagermodule.html#a586f55600a71156ec280dd00027a0b29">memorymanagermodule::copyptr_int2d</a> (aint, name, mem_path, mem_path_copy)</td></tr>
+<tr class="memdesc:a586f55600a71156ec280dd00027a0b29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a copy of a 2-dimensional integer array.  <a href="namespacememorymanagermodule.html#a586f55600a71156ec280dd00027a0b29">More...</a><br /></td></tr>
+<tr class="separator:a586f55600a71156ec280dd00027a0b29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac28c89286eb411da67b21c078f480cc9"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorymanagermodule.html#ac28c89286eb411da67b21c078f480cc9">memorymanagermodule::copyptr_dbl1d</a> (adbl, name, mem_path, mem_path_copy)</td></tr>
+<tr class="memdesc:ac28c89286eb411da67b21c078f480cc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a copy of a 1-dimensional real array.  <a href="namespacememorymanagermodule.html#ac28c89286eb411da67b21c078f480cc9">More...</a><br /></td></tr>
+<tr class="separator:ac28c89286eb411da67b21c078f480cc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6810f04c0c6531d4d8a82ac5b0c2f036"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorymanagermodule.html#a6810f04c0c6531d4d8a82ac5b0c2f036">memorymanagermodule::copyptr_dbl2d</a> (adbl, name, mem_path, mem_path_copy)</td></tr>
+<tr class="memdesc:a6810f04c0c6531d4d8a82ac5b0c2f036"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a copy of a 2-dimensional real array.  <a href="namespacememorymanagermodule.html#a6810f04c0c6531d4d8a82ac5b0c2f036">More...</a><br /></td></tr>
+<tr class="separator:a6810f04c0c6531d4d8a82ac5b0c2f036"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae072fa90880d62debf453a1a1428fa93"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorymanagermodule.html#ae072fa90880d62debf453a1a1428fa93">memorymanagermodule::copy_dbl1d</a> (adbl, name, mem_path)</td></tr>
 <tr class="memdesc:ae072fa90880d62debf453a1a1428fa93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy values from a 1-dimensional real array in the memory.  <a href="namespacememorymanagermodule.html#ae072fa90880d62debf453a1a1428fa93">More...</a><br /></td></tr>
 <tr class="separator:ae072fa90880d62debf453a1a1428fa93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acec3ecf0b919282a8fc932ac08585357"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorymanagermodule.html#acec3ecf0b919282a8fc932ac08585357">memorymanagermodule::reassignptr_int1d</a> (aint, name, mem_path, name_target, mem_path_target)</td></tr>
+<tr class="memdesc:acec3ecf0b919282a8fc932ac08585357"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the pointer for a 1-dimensional integer array to.  <a href="namespacememorymanagermodule.html#acec3ecf0b919282a8fc932ac08585357">More...</a><br /></td></tr>
+<tr class="separator:acec3ecf0b919282a8fc932ac08585357"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a3cb628133de899280f6ad67daf5f93"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorymanagermodule.html#a6a3cb628133de899280f6ad67daf5f93">memorymanagermodule::reassignptr_int2d</a> (aint, name, mem_path, name_target, mem_path_target)</td></tr>
+<tr class="memdesc:a6a3cb628133de899280f6ad67daf5f93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the pointer for a 2-dimensional integer array to.  <a href="namespacememorymanagermodule.html#a6a3cb628133de899280f6ad67daf5f93">More...</a><br /></td></tr>
+<tr class="separator:a6a3cb628133de899280f6ad67daf5f93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70613d0cd4560dd677e3329a8ad3c79d"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorymanagermodule.html#a70613d0cd4560dd677e3329a8ad3c79d">memorymanagermodule::reassignptr_dbl1d</a> (adbl, name, mem_path, name_target, mem_path_target)</td></tr>
+<tr class="memdesc:a70613d0cd4560dd677e3329a8ad3c79d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the pointer for a 1-dimensional real array to.  <a href="namespacememorymanagermodule.html#a70613d0cd4560dd677e3329a8ad3c79d">More...</a><br /></td></tr>
+<tr class="separator:a70613d0cd4560dd677e3329a8ad3c79d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac47296c614674d278c88c53ba687c8b1"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorymanagermodule.html#ac47296c614674d278c88c53ba687c8b1">memorymanagermodule::reassignptr_dbl2d</a> (adbl, name, mem_path, name_target, mem_path_target)</td></tr>
+<tr class="memdesc:ac47296c614674d278c88c53ba687c8b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the pointer for a 2-dimensional real array to.  <a href="namespacememorymanagermodule.html#ac47296c614674d278c88c53ba687c8b1">More...</a><br /></td></tr>
+<tr class="separator:ac47296c614674d278c88c53ba687c8b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2d3e314c67f87d4d955cd5a8441266b"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorymanagermodule.html#ad2d3e314c67f87d4d955cd5a8441266b">memorymanagermodule::deallocate_str</a> (sclr, name, mem_path)</td></tr>
+<tr class="memdesc:ad2d3e314c67f87d4d955cd5a8441266b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deallocate a variable-length character string.  <a href="namespacememorymanagermodule.html#ad2d3e314c67f87d4d955cd5a8441266b">More...</a><br /></td></tr>
+<tr class="separator:ad2d3e314c67f87d4d955cd5a8441266b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8d43ac5b8236a26c69546ae9a5e1d62"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorymanagermodule.html#af8d43ac5b8236a26c69546ae9a5e1d62">memorymanagermodule::deallocate_str1d</a> (astr, name, mem_path)</td></tr>
+<tr class="memdesc:af8d43ac5b8236a26c69546ae9a5e1d62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deallocate an array of variable-length character strings.  <a href="namespacememorymanagermodule.html#af8d43ac5b8236a26c69546ae9a5e1d62">More...</a><br /></td></tr>
+<tr class="separator:af8d43ac5b8236a26c69546ae9a5e1d62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0f77f6a9e46d9786b7486161a6caf06"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorymanagermodule.html#aa0f77f6a9e46d9786b7486161a6caf06">memorymanagermodule::deallocate_logical</a> (sclr)</td></tr>
+<tr class="memdesc:aa0f77f6a9e46d9786b7486161a6caf06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deallocate a logical scalar.  <a href="namespacememorymanagermodule.html#aa0f77f6a9e46d9786b7486161a6caf06">More...</a><br /></td></tr>
+<tr class="separator:aa0f77f6a9e46d9786b7486161a6caf06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22b08aefcfd4adfeaadcc670751619bd"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorymanagermodule.html#a22b08aefcfd4adfeaadcc670751619bd">memorymanagermodule::deallocate_int</a> (sclr)</td></tr>
+<tr class="memdesc:a22b08aefcfd4adfeaadcc670751619bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deallocate a integer scalar.  <a href="namespacememorymanagermodule.html#a22b08aefcfd4adfeaadcc670751619bd">More...</a><br /></td></tr>
+<tr class="separator:a22b08aefcfd4adfeaadcc670751619bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57f7ad36753600e25c2587a91c57a512"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorymanagermodule.html#a57f7ad36753600e25c2587a91c57a512">memorymanagermodule::deallocate_dbl</a> (sclr)</td></tr>
+<tr class="memdesc:a57f7ad36753600e25c2587a91c57a512"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deallocate a real scalar.  <a href="namespacememorymanagermodule.html#a57f7ad36753600e25c2587a91c57a512">More...</a><br /></td></tr>
+<tr class="separator:a57f7ad36753600e25c2587a91c57a512"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53c6c62418aa62ef1d09976e44ae7049"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorymanagermodule.html#a53c6c62418aa62ef1d09976e44ae7049">memorymanagermodule::deallocate_int1d</a> (aint, name, mem_path)</td></tr>
+<tr class="memdesc:a53c6c62418aa62ef1d09976e44ae7049"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deallocate a 1-dimensional integer array.  <a href="namespacememorymanagermodule.html#a53c6c62418aa62ef1d09976e44ae7049">More...</a><br /></td></tr>
+<tr class="separator:a53c6c62418aa62ef1d09976e44ae7049"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7049f4eecd31d511dbf351b06517e398"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorymanagermodule.html#a7049f4eecd31d511dbf351b06517e398">memorymanagermodule::deallocate_int2d</a> (aint, name, mem_path)</td></tr>
+<tr class="memdesc:a7049f4eecd31d511dbf351b06517e398"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deallocate a 2-dimensional integer array.  <a href="namespacememorymanagermodule.html#a7049f4eecd31d511dbf351b06517e398">More...</a><br /></td></tr>
+<tr class="separator:a7049f4eecd31d511dbf351b06517e398"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c5469ceb27feb4b31c4ccd7106ebefa"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorymanagermodule.html#a6c5469ceb27feb4b31c4ccd7106ebefa">memorymanagermodule::deallocate_int3d</a> (aint, name, mem_path)</td></tr>
+<tr class="memdesc:a6c5469ceb27feb4b31c4ccd7106ebefa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deallocate a 3-dimensional integer array.  <a href="namespacememorymanagermodule.html#a6c5469ceb27feb4b31c4ccd7106ebefa">More...</a><br /></td></tr>
+<tr class="separator:a6c5469ceb27feb4b31c4ccd7106ebefa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a455e02c8bcd327c70e7dd1e698c9e2a2"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorymanagermodule.html#a455e02c8bcd327c70e7dd1e698c9e2a2">memorymanagermodule::deallocate_dbl1d</a> (adbl, name, mem_path)</td></tr>
+<tr class="memdesc:a455e02c8bcd327c70e7dd1e698c9e2a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deallocate a 1-dimensional real array.  <a href="namespacememorymanagermodule.html#a455e02c8bcd327c70e7dd1e698c9e2a2">More...</a><br /></td></tr>
+<tr class="separator:a455e02c8bcd327c70e7dd1e698c9e2a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a869ebd3d547582e53512c5166e586043"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorymanagermodule.html#a869ebd3d547582e53512c5166e586043">memorymanagermodule::deallocate_dbl2d</a> (adbl, name, mem_path)</td></tr>
+<tr class="memdesc:a869ebd3d547582e53512c5166e586043"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deallocate a 2-dimensional real array.  <a href="namespacememorymanagermodule.html#a869ebd3d547582e53512c5166e586043">More...</a><br /></td></tr>
+<tr class="separator:a869ebd3d547582e53512c5166e586043"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa62917fb44417da4e80132e65f6db3db"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorymanagermodule.html#aa62917fb44417da4e80132e65f6db3db">memorymanagermodule::deallocate_dbl3d</a> (adbl, name, mem_path)</td></tr>
+<tr class="memdesc:aa62917fb44417da4e80132e65f6db3db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deallocate a 3-dimensional real array.  <a href="namespacememorymanagermodule.html#aa62917fb44417da4e80132e65f6db3db">More...</a><br /></td></tr>
+<tr class="separator:aa62917fb44417da4e80132e65f6db3db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af132849a84e8ffb066b5c4833f501c50"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorymanagermodule.html#af132849a84e8ffb066b5c4833f501c50">memorymanagermodule::mem_set_print_option</a> (iout, keyword, error_msg)</td></tr>
 <tr class="memdesc:af132849a84e8ffb066b5c4833f501c50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the memory print option.  <a href="namespacememorymanagermodule.html#af132849a84e8ffb066b5c4833f501c50">More...</a><br /></td></tr>
 <tr class="separator:af132849a84e8ffb066b5c4833f501c50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed3e26ec4c612141d4f90133d199804c"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorymanagermodule.html#aed3e26ec4c612141d4f90133d199804c">memorymanagermodule::mem_summary_table</a> (iout, nrows, cunits)</td></tr>
+<tr class="memdesc:aed3e26ec4c612141d4f90133d199804c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a table if memory_print_option is 'SUMMARY'.  <a href="namespacememorymanagermodule.html#aed3e26ec4c612141d4f90133d199804c">More...</a><br /></td></tr>
+<tr class="separator:aed3e26ec4c612141d4f90133d199804c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26996233617cac05b555c6b28709ebee"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorymanagermodule.html#a26996233617cac05b555c6b28709ebee">memorymanagermodule::mem_detailed_table</a> (iout, nrows)</td></tr>
+<tr class="memdesc:a26996233617cac05b555c6b28709ebee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a table if memory_print_option is 'ALL'.  <a href="namespacememorymanagermodule.html#a26996233617cac05b555c6b28709ebee">More...</a><br /></td></tr>
+<tr class="separator:a26996233617cac05b555c6b28709ebee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10e4656f142379aef3565d335e86768d"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorymanagermodule.html#a10e4656f142379aef3565d335e86768d">memorymanagermodule::mem_summary_line</a> (component, rchars, rlog, rint, rreal, bytes)</td></tr>
+<tr class="memdesc:a10e4656f142379aef3565d335e86768d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a row for the memory_print_option 'SUMMARY' table.  <a href="namespacememorymanagermodule.html#a10e4656f142379aef3565d335e86768d">More...</a><br /></td></tr>
+<tr class="separator:a10e4656f142379aef3565d335e86768d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87b7f4b50d3bc870febbc95f79bd9a2e"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorymanagermodule.html#a87b7f4b50d3bc870febbc95f79bd9a2e">memorymanagermodule::mem_units</a> (bytes, fact, cunits)</td></tr>
+<tr class="memdesc:a87b7f4b50d3bc870febbc95f79bd9a2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine appropriate memory unit and conversion factor.  <a href="namespacememorymanagermodule.html#a87b7f4b50d3bc870febbc95f79bd9a2e">More...</a><br /></td></tr>
+<tr class="separator:a87b7f4b50d3bc870febbc95f79bd9a2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf5a8c25e83663c4a7a97b265b6b34a0"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorymanagermodule.html#acf5a8c25e83663c4a7a97b265b6b34a0">memorymanagermodule::mem_summary_total</a> (iout, bytes)</td></tr>
+<tr class="memdesc:acf5a8c25e83663c4a7a97b265b6b34a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create and fill a table with the total allocated memory.  <a href="namespacememorymanagermodule.html#acf5a8c25e83663c4a7a97b265b6b34a0">More...</a><br /></td></tr>
+<tr class="separator:acf5a8c25e83663c4a7a97b265b6b34a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a430466a5feab54cd89c60302f87a3740"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorymanagermodule.html#a430466a5feab54cd89c60302f87a3740">memorymanagermodule::mem_cleanup_table</a> ()</td></tr>
+<tr class="memdesc:a430466a5feab54cd89c60302f87a3740"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generic function to clean a memory manager table.  <a href="namespacememorymanagermodule.html#a430466a5feab54cd89c60302f87a3740">More...</a><br /></td></tr>
+<tr class="separator:a430466a5feab54cd89c60302f87a3740"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3482099aea98afc7340a70d4073de4d9"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorymanagermodule.html#a3482099aea98afc7340a70d4073de4d9">memorymanagermodule::mem_write_usage</a> (iout)</td></tr>
 <tr class="memdesc:a3482099aea98afc7340a70d4073de4d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write memory manager memory usage based on the user-specified memory_print_option.  <a href="namespacememorymanagermodule.html#a3482099aea98afc7340a70d4073de4d9">More...</a><br /></td></tr>
 <tr class="separator:a3482099aea98afc7340a70d4073de4d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -123,13 +344,31 @@ Functions/Subroutines</h2></td></tr>
 Variables</h2></td></tr>
 <tr class="memitem:aa6a53b9762dc9cd2d90bf23b5dbd5e1b"><td class="memItemLeft" align="right" valign="top">type(memorylisttype), public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorymanagermodule.html#aa6a53b9762dc9cd2d90bf23b5dbd5e1b">memorymanagermodule::memorylist</a></td></tr>
 <tr class="separator:aa6a53b9762dc9cd2d90bf23b5dbd5e1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2537ed30b876b264d94a42108ee0ea50"><td class="memItemLeft" align="right" valign="top">type(tabletype), pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorymanagermodule.html#a2537ed30b876b264d94a42108ee0ea50">memorymanagermodule::memtab</a> =&gt; null()</td></tr>
+<tr class="separator:a2537ed30b876b264d94a42108ee0ea50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae80b9c88e2266f9faf1a9cff7b1820c6"><td class="memItemLeft" align="right" valign="top">integer(i8b)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorymanagermodule.html#ae80b9c88e2266f9faf1a9cff7b1820c6">memorymanagermodule::nvalues_alogical</a> = 0</td></tr>
+<tr class="separator:ae80b9c88e2266f9faf1a9cff7b1820c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bb79ba9134fb30aa3e3c4cd84ca3335"><td class="memItemLeft" align="right" valign="top">integer(i8b)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorymanagermodule.html#a5bb79ba9134fb30aa3e3c4cd84ca3335">memorymanagermodule::nvalues_achr</a> = 0</td></tr>
+<tr class="separator:a5bb79ba9134fb30aa3e3c4cd84ca3335"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a579def825df8e544338cad509fc24163"><td class="memItemLeft" align="right" valign="top">integer(i8b)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorymanagermodule.html#a579def825df8e544338cad509fc24163">memorymanagermodule::nvalues_astr</a> = 0</td></tr>
+<tr class="separator:a579def825df8e544338cad509fc24163"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d419061b354905b75909e5af7da42f5"><td class="memItemLeft" align="right" valign="top">integer(i8b)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorymanagermodule.html#a3d419061b354905b75909e5af7da42f5">memorymanagermodule::nvalues_aint</a> = 0</td></tr>
+<tr class="separator:a3d419061b354905b75909e5af7da42f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20eb2371c2adc85050cc40b3dea14f61"><td class="memItemLeft" align="right" valign="top">integer(i8b)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorymanagermodule.html#a20eb2371c2adc85050cc40b3dea14f61">memorymanagermodule::nvalues_adbl</a> = 0</td></tr>
+<tr class="separator:a20eb2371c2adc85050cc40b3dea14f61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b030117728c1dbb6704277edb93c547"><td class="memItemLeft" align="right" valign="top">integer(i4b)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacememorymanagermodule.html#a6b030117728c1dbb6704277edb93c547">memorymanagermodule::iprmem</a> = 0</td></tr>
+<tr class="separator:a6b030117728c1dbb6704277edb93c547"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_ff383ddf1aa4eab0c4ce7910366d05a5.html">Utilities</a></li><li class="navelem"><a class="el" href="dir_21ddf0b5f18acd5e64826f246466c9e1.html">Memory</a></li><li class="navelem"><a class="el" href="_memory_manager_8f90.html">MemoryManager.f90</a></li>
+    <li class="footer">Generated on Thu Jun 24 2021 19:50:10 for MODFLOW 6 by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -1,13 +1,5 @@
 <map id="timeseriesmanagermodule::tsmgr_ad" name="timeseriesmanagermodule::tsmgr_ad">
-<area shape="rect" id="node1" title=" " alt="" coords="5,169,204,211"/>
-<area shape="rect" id="node2" href="$namespacetimeserieslinkmodule.html#a63c38c5b183f474bb1d42e4c5a87b93e" title=" " alt="" coords="259,5,439,47"/>
-<area shape="rect" id="node3" href="$namespacetimeserieslinkmodule.html#a1969df94e787ccdaf7260cce3421172b" title=" " alt="" coords="258,71,441,112"/>
-<area shape="rect" id="node5" href="$namespacetimeserieslinkmodule.html#ab7e38e1f45871cf48de54cc179ee9ac7" title=" " alt="" coords="252,136,447,177"/>
-<area shape="rect" id="node6" href="$namespacehashtablemodule.html#a11ba5aed83a5b91bd5ed8785a9dd2865" title=" " alt="" coords="262,201,437,243"/>
-<area shape="rect" id="node7" href="$namespacehashtablemodule.html#ae02aba2c4987138df12df597d0df1782" title=" " alt="" coords="262,267,437,308"/>
-<area shape="rect" id="node8" href="$namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61" title=" " alt="" coords="280,333,419,359"/>
-<area shape="rect" id="node4" href="$namespaceinputoutputmodule.html#a3418ad9e27e9d9caac6f541863e1c522" title=" " alt="" coords="515,71,669,112"/>
-<area shape="rect" id="node9" href="$namespacesimmodule.html#a5feb4a39fb3f3dc66c03cc13b11e2297" title=" " alt="" coords="495,274,689,301"/>
-<area shape="rect" id="node10" href="$namespacegenericutilitiesmodule.html#a34492cca79f70174fd015808be8b7ebf" title=" " alt="" coords="508,325,676,367"/>
-<area shape="rect" id="node11" href="$namespacegenericutilitiesmodule.html#a3af5fcf48dcd06255d9bc07f6a25db59" title=" " alt="" coords="508,391,676,432"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,204,47"/>
+<area shape="rect" id="node2" href="$namespacetimeserieslinkmodule.html#ab7e38e1f45871cf48de54cc179ee9ac7" title=" " alt="" coords="252,5,447,47"/>
+<area shape="rect" id="node3" href="$namespacetimeserieslinkmodule.html#a98fcda49493a105d70f1660210a6d825" title=" " alt="" coords="495,5,689,47"/>
 </map>

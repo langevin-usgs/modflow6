@@ -1,8 +1,16 @@
 <map id="genericutilitiesmodule::is_same" name="genericutilitiesmodule::is_same">
-<area shape="rect" id="node1" title=" " alt="" coords="307,123,475,164"/>
-<area shape="rect" id="node2" href="$namespacetimearrayseriesmodule.html#a004382aa24e9fa0a567bcc06590cbaf2" title=" " alt="" coords="35,5,229,47"/>
-<area shape="rect" id="node3" href="$namespaceimslinearmodule.html#a006a4eedcab0d169efca29c07606e5f5" title=" " alt="" coords="7,71,257,98"/>
-<area shape="rect" id="node4" href="$namespaceinputoutputmodule.html#a5c5a026a2298577eb353f39d91504598" title=" " alt="" coords="55,123,209,164"/>
-<area shape="rect" id="node5" href="$namespacetimeseriesmodule.html#a9c0534ffc96d995e8dff164e7d57be3b" title=" " alt="" coords="5,189,259,215"/>
-<area shape="rect" id="node6" href="$namespacenumericalsolutionmodule.html#ac6bb33e0aaff92c1244857513eedf312" title=" " alt="" coords="38,240,226,281"/>
+<area shape="rect" id="node1" title=" " alt="" coords="604,365,772,407"/>
+<area shape="rect" id="node2" href="$namespacetimeseriesmodule.html#a80bc57fc2894760a116810375982ad97" title=" " alt="" coords="332,5,501,47"/>
+<area shape="rect" id="node3" href="$namespacetimearrayseriesmodule.html#a2a8b1422980be6a3865e3178d5fe18f0" title=" " alt="" coords="314,71,519,112"/>
+<area shape="rect" id="node4" href="$namespacetimeseriesmodule.html#a431a0beb6499b3a56175c5e347a564bb" title=" " alt="" coords="329,136,505,177"/>
+<area shape="rect" id="node5" href="$namespacetimeseriesmodule.html#a1925bd486bd5b3f0f0dbe57ff542e1f6" title=" " alt="" coords="332,201,501,243"/>
+<area shape="rect" id="node6" href="$namespacetimeseriesmodule.html#ae6a5d7cdcbcb15215a14ec17449d0527" title=" " alt="" coords="332,267,501,308"/>
+<area shape="rect" id="node7" href="$namespacetimeseriesmodule.html#a8dd8c75a634b0be62f5a7ac8915f88f4" title=" " alt="" coords="332,332,501,373"/>
+<area shape="rect" id="node8" href="$namespacetimearrayseriesmodule.html#a60c28da68c9f3d0ca2e1995e879e3c11" title=" " alt="" coords="329,397,504,439"/>
+<area shape="rect" id="node9" href="$namespacetimeseriesmodule.html#a5d52e4dd03b6af93d7b2dbd1b6cad096" title=" " alt="" coords="277,463,556,490"/>
+<area shape="rect" id="node10" href="$namespaceimslinearbasemodule.html#a4ea318d12fd3c9a9157e9d9105dcc0e2" title="@ brief Preconditioned BiConjugate Gradient Stabilized linear accelerator" alt="" coords="335,515,498,556"/>
+<area shape="rect" id="node12" href="$namespaceimslinearbasemodule.html#afbf0c8cb5e5b740b9ff34f7c7141f251" title="@ brief Preconditioned Conjugate Gradient linear accelerator" alt="" coords="335,580,498,621"/>
+<area shape="rect" id="node13" href="$namespaceinputoutputmodule.html#a5c5a026a2298577eb353f39d91504598" title=" " alt="" coords="339,645,494,687"/>
+<area shape="rect" id="node14" href="$namespacenumericalsolutionmodule.html#aa3e6fe297bd0318f1d628ce549bca68d" title="@ brief Solve the linear system of equations" alt="" coords="323,711,511,752"/>
+<area shape="rect" id="node11" href="$namespaceimslinearmodule.html#a7c756a5435a1749f8b81d2c0148f756c" title="@ brief Base linear accelerator subroutine" alt="" coords="5,555,229,582"/>
 </map>

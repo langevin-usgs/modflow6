@@ -5,13 +5,22 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MODFLOW 6 Code Documentation: /home/runner/work/modflow6/modflow6/src/Model/GroundWaterFlow/gwf3buy8.f90 Source File</title>
+<title>MODFLOW 6: /home/runner/work/modflow6/modflow6/src/Model/GroundWaterFlow/gwf3buy8.f90 Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="CustomDoxygen.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -21,9 +30,12 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="mf6-triangular-grid.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">MODFLOW 6 Code Documentation
+   <div id="projectname">MODFLOW 6
+   &#160;<span id="projectnumber">version 6.2.2</span>
    </div>
+   <div id="projectbrief">MODFLOW 6 Code Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -36,16 +48,54 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Modules</span></a></li>
+      <li><a href="annotated.html"><span>Data&#160;Types&#160;List</span></a></li>
+      <li class="current"><a href="files.html"><span>Files</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('gwf3buy8_8f90_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,11 +110,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_32e188284d239da8bb14ec1dabb0c35f.html">Model</a></li><li class="navelem"><a class="el" href="dir_5aefb7a434fc869900e7ccf685166f81.html">GroundWaterFlow</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">gwf3buy8.f90</div>  </div>
@@ -79,87 +124,87 @@ $(function() {
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacekindmodule.html">kindmodule</a>,             <span class="keywordtype">only</span>: <a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>, <a class="code" href="namespacekindmodule.html#a2f6861418b5e7d3d602b77228232a470">i4b</a></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacesimmodule.html">simmodule</a>,              <span class="keywordtype">only</span>: <a class="code" href="namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61">ustop</a>, <a class="code" href="namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a">store_error</a>, <a class="code" href="namespacesimmodule.html#a4c46e49de78d4498dd4ec106357775e6">count_errors</a>,          &amp;</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;                                    <a class="code" href="namespacesimmodule.html#a1c78a6fda06b630c738bb654aa6bd816">store_error_unit</a></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacememorymanagermodule.html">memorymanagermodule</a>,    <span class="keywordtype">only</span>: mem_allocate, mem_reallocate,              &amp;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;                                    mem_deallocate</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacememorymanagermodule.html">memorymanagermodule</a>,    <span class="keywordtype">only</span>: <a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>, <a class="code" href="interfacememorymanagermodule_1_1mem__reallocate.html">mem_reallocate</a>,              &amp;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;                                    <a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespaceconstantsmodule.html">constantsmodule</a>,        <span class="keywordtype">only</span>: <a class="code" href="namespaceconstantsmodule.html#a9262b16d485352c5d369c6cb86232c60">dhalf</a>, <a class="code" href="namespaceconstantsmodule.html#abab5757666b9ddd2726c20ce48dd0050">dzero</a>, <a class="code" href="namespaceconstantsmodule.html#af918ac22cd0b232deea67660bfbc9ce1">done</a>, <a class="code" href="namespaceconstantsmodule.html#a2371bf2667814198ff255350fa3e3edd">lenmodelname</a>,          &amp;</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;                                    <a class="code" href="namespaceconstantsmodule.html#a9ee3f8405321b057b32648a5dc031e20">lenauxname</a>, <a class="code" href="namespaceconstantsmodule.html#a636a1fbcffa24ababa57ac244ee2217f">dhnoflo</a>, <a class="code" href="namespaceconstantsmodule.html#ac9c1da291f7c6bfb35a47957c588ab20">maxcharlen</a>, <a class="code" href="namespaceconstantsmodule.html#a060d310ded5535ce2dc85bd1ca1afd3d">linelength</a></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacenumericalpackagemodule.html">numericalpackagemodule</a>, <span class="keywordtype">only</span>: numericalpackagetype</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacebasedismodule.html">basedismodule</a>,          <span class="keywordtype">only</span>: disbasetype</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacegwfnpfmodule.html">gwfnpfmodule</a>,           <span class="keywordtype">only</span>: gwfnpftype</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacegwfnpfmodule.html">gwfnpfmodule</a>,           <span class="keywordtype">only</span>: <a class="code" href="structgwfnpfmodule_1_1gwfnpftype.html">gwfnpftype</a></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  </div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <span class="keywordtype">implicit none</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keywordtype">private</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="keywordtype">public</span> :: gwfbuytype</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="keywordtype">public</span> :: <a class="code" href="structgwfbuymodule_1_1gwfbuytype.html">gwfbuytype</a></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="keywordtype">public</span> :: <a class="code" href="namespacegwfbuymodule.html#a280c013f7e5cdc83e8fc21d588ff8ce3">buy_cr</a></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keyword">type</span> :: concentrationpointer</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>             :: conc       =&gt; null()         <span class="comment">! pointer to concentration array</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>         :: icbund     =&gt; null()         <span class="comment">! store pointer to gwt ibound array</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keyword">end type </span>concentrationpointer</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="structgwfbuymodule_1_1concentrationpointer.html">   24</a></span>&#160;  <span class="keyword">type</span> :: <a class="code" href="structgwfbuymodule_1_1concentrationpointer.html">concentrationpointer</a></div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="structgwfbuymodule_1_1concentrationpointer.html#ac45a329b222a65c26d581368b49ec9c6">   25</a></span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>             :: conc       =&gt; null()         <span class="comment">! pointer to concentration array</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="structgwfbuymodule_1_1concentrationpointer.html#a3d41888602208e8162a2aef8fc888376">   26</a></span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>         :: icbund     =&gt; null()         <span class="comment">! store pointer to gwt ibound array</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keyword">end type </span><a class="code" href="structgwfbuymodule_1_1concentrationpointer.html">concentrationpointer</a></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keyword">type</span>, <span class="keyword">extends</span>(numericalpackagetype) :: gwfbuytype</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">type</span>(GwfNpfType), <span class="keywordtype">pointer</span>                   :: npf        =&gt; null()         <span class="comment">! npf object</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">pointer</span>                       :: ioutdense  =&gt; null()         <span class="comment">! unit number for saving density</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">pointer</span>                       :: iform      =&gt; null()         <span class="comment">! formulation: 0 freshwater head, 1 hydraulic head, 2 hh rhs</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">pointer</span>                       :: ireadelev  =&gt; null()         <span class="comment">! if 1 then elev has been allocated and filled</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">pointer</span>                       :: ireadconcbuy =&gt; null()       <span class="comment">! if 1 then dense has been read from this buy input file</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">pointer</span>                       :: iconcset   =&gt; null()         <span class="comment">! if 1 then conc is pointed to a gwt model%x</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">pointer</span>                           :: denseref   =&gt; null()         <span class="comment">! reference fluid density</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span> :: dense      =&gt; null()         <span class="comment">! density</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span> :: concbuy    =&gt; null()         <span class="comment">! concentration array if specified in buy package</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span> :: elev       =&gt; null()         <span class="comment">! cell center elevation (optional; if not specified, hten use (top+bot)/2)</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>         :: ibound     =&gt; null()         <span class="comment">! store pointer to ibound</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="structgwfbuymodule_1_1gwfbuytype.html">   29</a></span>&#160;  <span class="keyword">type</span>, <span class="keyword">extends</span>(numericalpackagetype) :: <a class="code" href="structgwfbuymodule_1_1gwfbuytype.html">gwfbuytype</a></div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="structgwfbuymodule_1_1gwfbuytype.html#a53bf774f3aa55aac565b5c020a4ac5f4">   30</a></span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structgwfnpfmodule_1_1gwfnpftype.html">gwfnpftype</a>), <span class="keywordtype">pointer</span>                   :: npf        =&gt; null()         <span class="comment">! npf object</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="structgwfbuymodule_1_1gwfbuytype.html#a9ba990674e835f26a6cc4d2660af52e6">   31</a></span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">pointer</span>                       :: ioutdense  =&gt; null()         <span class="comment">! unit number for saving density</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="structgwfbuymodule_1_1gwfbuytype.html#afd794f26768a36f29030cade409119b1">   32</a></span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">pointer</span>                       :: iform      =&gt; null()         <span class="comment">! formulation: 0 freshwater head, 1 hydraulic head, 2 hh rhs</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="structgwfbuymodule_1_1gwfbuytype.html#a0bb572a711d8c7856878dcf63fe1a3d8">   33</a></span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">pointer</span>                       :: ireadelev  =&gt; null()         <span class="comment">! if 1 then elev has been allocated and filled</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="structgwfbuymodule_1_1gwfbuytype.html#a48984b215e34c333f205d2b237d917a7">   34</a></span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">pointer</span>                       :: ireadconcbuy =&gt; null()       <span class="comment">! if 1 then dense has been read from this buy input file</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="structgwfbuymodule_1_1gwfbuytype.html#a7e929bdb69440f0d779d8088806e7f88">   35</a></span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">pointer</span>                       :: iconcset   =&gt; null()         <span class="comment">! if 1 then conc is pointed to a gwt model%x</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="structgwfbuymodule_1_1gwfbuytype.html#aa41bee666b952deb12780b8b0a067406">   36</a></span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">pointer</span>                           :: denseref   =&gt; null()         <span class="comment">! reference fluid density</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="structgwfbuymodule_1_1gwfbuytype.html#a9cb20182b149235a4e893e99676d7193">   37</a></span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span> :: dense      =&gt; null()         <span class="comment">! density</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="structgwfbuymodule_1_1gwfbuytype.html#a40263298f552ee08be6af5caedc77086">   38</a></span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span> :: concbuy    =&gt; null()         <span class="comment">! concentration array if specified in buy package</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="structgwfbuymodule_1_1gwfbuytype.html#a3ac5d66ebfdcee08d8d3cd0c1f667948">   39</a></span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span> :: elev       =&gt; null()         <span class="comment">! cell center elevation (optional; if not specified, hten use (top+bot)/2)</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="structgwfbuymodule_1_1gwfbuytype.html#ac8fd33ef56372ec383d47906e1e7975f">   40</a></span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>         :: ibound     =&gt; null()         <span class="comment">! store pointer to ibound</span></div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">pointer</span>                       :: nrhospecies =&gt; null()        <span class="comment">! number of species used in equation of state to calculate density</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span> :: drhodc      =&gt; null()        <span class="comment">! change in density with change in concentration</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span> :: crhoref     =&gt; null()        <span class="comment">! reference concentration used in equation of state</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span> :: ctemp       =&gt; null()        <span class="comment">! temporary array of size (nrhospec) to pass to calcdens</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">character(len=LENMODELNAME)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">allocatable</span> :: cmodelname        <span class="comment">! names of gwt models used in equation of state</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">character(len=LENAUXNAME)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">allocatable</span> :: cauxspeciesname     <span class="comment">! names of gwt models used in equation of state</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="structgwfbuymodule_1_1gwfbuytype.html#a88f4ea44c6cf01ed874a7e6646aa8c42">   42</a></span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">pointer</span>                       :: nrhospecies =&gt; null()        <span class="comment">! number of species used in equation of state to calculate density</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="structgwfbuymodule_1_1gwfbuytype.html#af278b4fe4aff7f090b7333dcfec65527">   43</a></span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span> :: drhodc      =&gt; null()        <span class="comment">! change in density with change in concentration</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="structgwfbuymodule_1_1gwfbuytype.html#a00195f85c1da7bd297e090f165d2b44b">   44</a></span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span> :: crhoref     =&gt; null()        <span class="comment">! reference concentration used in equation of state</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="structgwfbuymodule_1_1gwfbuytype.html#abf80ef2134bb2a8768abbdddd3e296fd">   45</a></span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span> :: ctemp       =&gt; null()        <span class="comment">! temporary array of size (nrhospec) to pass to calcdens</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="structgwfbuymodule_1_1gwfbuytype.html#ad88da152336e3b533c3916a6ee5a0e96">   46</a></span>&#160;    <span class="keywordtype">character(len=LENMODELNAME)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">allocatable</span> :: cmodelname        <span class="comment">! names of gwt models used in equation of state</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="structgwfbuymodule_1_1gwfbuytype.html#a247221904d2715d3716a742224ecc96d">   47</a></span>&#160;    <span class="keywordtype">character(len=LENAUXNAME)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">allocatable</span> :: cauxspeciesname     <span class="comment">! names of gwt models used in equation of state</span></div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">type</span>(ConcentrationPointer), <span class="keywordtype">allocatable</span>, <span class="keywordtype">dimension(:)</span> :: modelconc           <span class="comment">! concentration pointer for each transport model</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="structgwfbuymodule_1_1gwfbuytype.html#a0bb375ab50f981396d36a697f72ba261">   49</a></span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structgwfbuymodule_1_1concentrationpointer.html">concentrationpointer</a>), <span class="keywordtype">allocatable</span>, <span class="keywordtype">dimension(:)</span> :: modelconc           <span class="comment">! concentration pointer for each transport model</span></div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    </div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keyword">contains</span>    </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">procedure</span> :: buy_df</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">procedure</span> :: buy_ar</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">procedure</span> :: buy_ar_bnd</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">procedure</span> :: buy_rp</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">procedure</span> :: buy_ad</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">procedure</span> :: buy_cf</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">procedure</span> :: buy_cf_bnd</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">procedure</span> :: buy_fc</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">procedure</span> :: buy_ot_dv</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">procedure</span> :: buy_cq</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">procedure</span> :: buy_da</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: read_dimensions</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: read_packagedata</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: calcbuy</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: calchhterms</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: buy_calcdens</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: buy_calcelev</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">procedure</span> :: allocate_scalars</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: allocate_arrays</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: read_options</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">procedure</span> :: set_concentration_pointer</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <span class="keyword">end type </span>gwfbuytype</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="structgwfbuymodule_1_1gwfbuytype.html#abff418e2c30f3df008dd8b69c7b65017">   52</a></span>&#160;    <span class="keywordtype">procedure</span> :: <a class="code" href="namespacegwfbuymodule.html#ae5b0ba797f20cf610f2612e6ee6a62e7">buy_df</a></div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="structgwfbuymodule_1_1gwfbuytype.html#ac00aeecc2dc4d437eac601ef3c08a8c4">   53</a></span>&#160;    <span class="keywordtype">procedure</span> :: <a class="code" href="namespacegwfbuymodule.html#aad5e64467e7a2573634217e3bb04f512">buy_ar</a></div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="structgwfbuymodule_1_1gwfbuytype.html#a31c2c86178d9de628a4cdc28b1bc3f02">   54</a></span>&#160;    <span class="keywordtype">procedure</span> :: <a class="code" href="namespacegwfbuymodule.html#af75f8de1bb456d6edef13d300e22c84c">buy_ar_bnd</a></div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="structgwfbuymodule_1_1gwfbuytype.html#a3aff2b7408ef14070163eade209c7422">   55</a></span>&#160;    <span class="keywordtype">procedure</span> :: <a class="code" href="namespacegwfbuymodule.html#a2276d49daabf4a511728b87d53a141f9">buy_rp</a></div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="structgwfbuymodule_1_1gwfbuytype.html#a12f45d7e1d50f197c3408bc54f9eb9f6">   56</a></span>&#160;    <span class="keywordtype">procedure</span> :: <a class="code" href="namespacegwfbuymodule.html#ad316c8aa62b82e8e27bb3c75768dd27b">buy_ad</a></div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="structgwfbuymodule_1_1gwfbuytype.html#a96eac8f39712db26a6ee8e35a64858bb">   57</a></span>&#160;    <span class="keywordtype">procedure</span> :: <a class="code" href="namespacegwfbuymodule.html#a077ff4f37c00b6536645fc4d184f3145">buy_cf</a></div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="structgwfbuymodule_1_1gwfbuytype.html#aa54590b7ff43dd9916723027415fab27">   58</a></span>&#160;    <span class="keywordtype">procedure</span> :: <a class="code" href="namespacegwfbuymodule.html#a083c65aa2b34b9b7cfd1f1d6effb92c6">buy_cf_bnd</a></div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="structgwfbuymodule_1_1gwfbuytype.html#a06f17a659f182f6707db56b7350148ff">   59</a></span>&#160;    <span class="keywordtype">procedure</span> :: <a class="code" href="namespacegwfbuymodule.html#a627e3b4f6d77574bed6996c9185fa8e6">buy_fc</a></div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="structgwfbuymodule_1_1gwfbuytype.html#ad18687f6526d191eecb7823e361fac1b">   60</a></span>&#160;    <span class="keywordtype">procedure</span> :: <a class="code" href="namespacegwfbuymodule.html#a91f12f6b88ac79575bf5aa6e1d4a36e4">buy_ot_dv</a></div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="structgwfbuymodule_1_1gwfbuytype.html#aef55cee961669c3ca55268fcc088491a">   61</a></span>&#160;    <span class="keywordtype">procedure</span> :: <a class="code" href="namespacegwfbuymodule.html#a3e8151a3192e45930c4ec84b91aee333">buy_cq</a></div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="structgwfbuymodule_1_1gwfbuytype.html#ab8adbef0e921c23848c59aad70ad7ca6">   62</a></span>&#160;    <span class="keywordtype">procedure</span> :: <a class="code" href="namespacegwfbuymodule.html#ab30b5c1a3760c346c449e58bafa2649f">buy_da</a></div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="structgwfbuymodule_1_1gwfbuytype.html#a49609e96fa68d4d8b995dab6326c4ca7">   63</a></span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: <a class="code" href="namespacegwfbuymodule.html#aa22728d20def7fcbd66a55b9163968f6">read_dimensions</a></div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="structgwfbuymodule_1_1gwfbuytype.html#af740e323bb5f995e77072d6c5bf1a2df">   64</a></span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: <a class="code" href="namespacegwfbuymodule.html#a81d907dd102a8f2787ac8f666b9f0bdb">read_packagedata</a></div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="structgwfbuymodule_1_1gwfbuytype.html#a44af5eaacff26940a808e3a665c98f1c">   65</a></span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: <a class="code" href="namespacegwfbuymodule.html#afad33f0e9d7a6436b40c52758f6dca6f">calcbuy</a></div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="structgwfbuymodule_1_1gwfbuytype.html#a90f2812eac951e1171292306a07f0d2a">   66</a></span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: <a class="code" href="namespacegwfbuymodule.html#a1c7119e85ddd46a92c3ca038d987ab8c">calchhterms</a></div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="structgwfbuymodule_1_1gwfbuytype.html#a2e11963cdeda645c96f332c0903dee21">   67</a></span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: <a class="code" href="namespacegwfbuymodule.html#afb5ea963ecedb22bf478b009c13c7cf1">buy_calcdens</a></div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="structgwfbuymodule_1_1gwfbuytype.html#a3fc4fc778b314add41ddf60e97ff8cbd">   68</a></span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: <a class="code" href="namespacegwfbuymodule.html#a430cdfb8d5378619631d196d8767e1d2">buy_calcelev</a></div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="structgwfbuymodule_1_1gwfbuytype.html#a1a25ae21b43e77a85540e944dab0c591">   69</a></span>&#160;    <span class="keywordtype">procedure</span> :: <a class="code" href="namespacegwfbuymodule.html#a3e80d610c8e0c1e7c9a75c17a66f8a5f">allocate_scalars</a></div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="structgwfbuymodule_1_1gwfbuytype.html#a37d38522e415526ff4f8e9b1da7596aa">   70</a></span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: <a class="code" href="namespacegwfbuymodule.html#aee878e8aa5ce9eeda029b4124d1d4c74">allocate_arrays</a></div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="structgwfbuymodule_1_1gwfbuytype.html#ac455aca3bc846b6948f00987c0549a91">   71</a></span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: <a class="code" href="namespacegwfbuymodule.html#a0e88c756f125aeb05acb4ac475cf3f18">read_options</a></div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="structgwfbuymodule_1_1gwfbuytype.html#aff62e131c78c0cbfdd563d74c455ed0d">   72</a></span>&#160;    <span class="keywordtype">procedure</span> :: <a class="code" href="namespacegwfbuymodule.html#a4bfb087dd22f740704ffa194593c6f73">set_concentration_pointer</a></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <span class="keyword">end type </span><a class="code" href="structgwfbuymodule_1_1gwfbuytype.html">gwfbuytype</a></div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  </div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="keyword">contains</span></div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keyword">function </span>calcdens(denseref, drhodc, crhoref, conc) <span class="keyword">result</span>(dense)</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keyword">function </span><a class="code" href="namespacegwfbuymodule.html#a045903b8758418af7cf74ff95e77db1a">calcdens</a>(denseref, drhodc, crhoref, conc) <span class="keyword">result</span>(dense)</div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="namespacegwfbuymodule.html#a045903b8758418af7cf74ff95e77db1a">   78</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">! calcdens -- generic function to calculate fluid density from concentration</span></div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment">!</span></div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment">!    SPECIFICATIONS:</span></div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">intent(in)</span> :: denseref</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">intent(in)</span> :: drhodc</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">intent(in)</span> :: crhoref</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">intent(in)</span> :: conc</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">intent(in)</span> :: denseref</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">intent(in)</span> :: drhodc</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">intent(in)</span> :: crhoref</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">intent(in)</span> :: conc</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="comment">! -- return</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keywordtype">    real</span>(DP) :: dense</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>) :: dense</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: nrhospec</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: i</div>
@@ -173,7 +218,7 @@ $(function() {
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="comment">! -- return</span></div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <span class="keyword">end function </span>calcdens</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <span class="keyword">end function </span><a class="code" href="namespacegwfbuymodule.html#a045903b8758418af7cf74ff95e77db1a">calcdens</a></div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacegwfbuymodule.html#a280c013f7e5cdc83e8fc21d588ff8ce3">buy_cr</a>(buyobj, name_model, inunit, iout)</div>
 <div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="namespacegwfbuymodule.html#a280c013f7e5cdc83e8fc21d588ff8ce3">  107</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
@@ -183,7 +228,7 @@ $(function() {
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="comment">!    SPECIFICATIONS:</span></div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordtype">type</span>(gwfbuytype), <span class="keywordtype">pointer</span> :: buyobj</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structgwfbuymodule_1_1gwfbuytype.html">gwfbuytype</a>), <span class="keywordtype">pointer</span> :: buyobj</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordtype">character(len=*)</span>, <span class="keywordtype">intent(in)</span> :: name_model</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: inunit</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: iout</div>
@@ -209,8 +254,8 @@ $(function() {
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keywordflow">return</span></div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacegwfbuymodule.html#a280c013f7e5cdc83e8fc21d588ff8ce3">buy_cr</a></div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;  <span class="keyword">subroutine </span>buy_df(this, dis)</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacegwfbuymodule.html#ae5b0ba797f20cf610f2612e6ee6a62e7">buy_df</a>(this, dis)</div>
+<div class="line"><a name="l00141"></a><span class="lineno"><a class="line" href="namespacegwfbuymodule.html#ae5b0ba797f20cf610f2612e6ee6a62e7">  141</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="comment">! buy_df -- Allocate and Read</span></div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="comment">!</span></div>
@@ -218,7 +263,7 @@ $(function() {
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="comment">! -- modules</span></div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keywordtype">class</span>(gwfbuytype) :: this</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structgwfbuymodule_1_1gwfbuytype.html">gwfbuytype</a>) :: this</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="keywordtype">class</span>(disbasetype), <span class="keywordtype">pointer</span>, <span class="keywordtype">intent(in)</span> :: dis</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="comment">! -- formats</span></div>
@@ -247,10 +292,10 @@ $(function() {
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="comment">! -- Return</span></div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;  <span class="keyword">end subroutine </span>buy_df</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacegwfbuymodule.html#ae5b0ba797f20cf610f2612e6ee6a62e7">buy_df</a></div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;  <span class="keyword">subroutine </span>buy_ar(this, npf, ibound)</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacegwfbuymodule.html#aad5e64467e7a2573634217e3bb04f512">buy_ar</a>(this, npf, ibound)</div>
+<div class="line"><a name="l00181"></a><span class="lineno"><a class="line" href="namespacegwfbuymodule.html#aad5e64467e7a2573634217e3bb04f512">  181</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;<span class="comment">! buy_ar -- Allocate and Read</span></div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;<span class="comment">!</span></div>
@@ -258,8 +303,8 @@ $(function() {
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="comment">! -- modules</span></div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="keywordtype">class</span>(gwfbuytype) :: this</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="keywordtype">type</span>(gwfnpftype), <span class="keywordtype">pointer</span>, <span class="keywordtype">intent(in)</span> :: npf</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structgwfbuymodule_1_1gwfbuytype.html">gwfbuytype</a>) :: this</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structgwfnpfmodule_1_1gwfnpftype.html">gwfnpftype</a>), <span class="keywordtype">pointer</span>, <span class="keywordtype">intent(in)</span> :: npf</div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span> :: ibound</div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <span class="comment">! -- formats</span></div>
@@ -282,10 +327,10 @@ $(function() {
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    <span class="comment">! -- Return</span></div>
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;  <span class="keyword">end subroutine </span>buy_ar</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacegwfbuymodule.html#aad5e64467e7a2573634217e3bb04f512">buy_ar</a></div>
 <div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160; </div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;  <span class="keyword">subroutine </span>buy_ar_bnd(this, packobj, hnew)</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacegwfbuymodule.html#af75f8de1bb456d6edef13d300e22c84c">buy_ar_bnd</a>(this, packobj, hnew)</div>
+<div class="line"><a name="l00216"></a><span class="lineno"><a class="line" href="namespacegwfbuymodule.html#af75f8de1bb456d6edef13d300e22c84c">  216</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;<span class="comment">! buy_ar_bnd -- buoyancy ar_bnd routine to activate density in packages.</span></div>
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;<span class="comment">!   This routine is called from gwf_ar() as it goes through each package.</span></div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;<span class="comment">! ******************************************************************************</span></div>
@@ -294,13 +339,13 @@ $(function() {
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="comment">! -- modules</span></div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacebndmodule.html">bndmodule</a>, <span class="keywordtype">only</span>: bndtype</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacelakmodule.html">lakmodule</a>, <span class="keywordtype">only</span>: laktype</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacesfrmodule.html">sfrmodule</a>, <span class="keywordtype">only</span>: sfrtype</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacemawmodule.html">mawmodule</a>, <span class="keywordtype">only</span>: mawtype</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacelakmodule.html">lakmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="structlakmodule_1_1laktype.html">laktype</a></div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacesfrmodule.html">sfrmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="structsfrmodule_1_1sfrtype.html">sfrtype</a></div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacemawmodule.html">mawmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="structmawmodule_1_1mawtype.html">mawtype</a></div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <span class="keywordtype">class</span>(gwfbuytype) :: this</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structgwfbuymodule_1_1gwfbuytype.html">gwfbuytype</a>) :: this</div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    <span class="keywordtype">class</span>(bndtype), <span class="keywordtype">pointer</span> :: packobj</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">intent(in)</span>, <span class="keywordtype">dimension(:)</span> :: hnew</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">intent(in)</span>, <span class="keywordtype">dimension(:)</span> :: hnew</div>
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <span class="comment">!</span></div>
@@ -310,7 +355,7 @@ $(function() {
 <div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        <span class="comment">!</span></div>
 <div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        <span class="comment">! -- activate density for lake package</span></div>
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        <span class="keywordflow">select type</span>(packobj)</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;<span class="keywordflow">        type is</span> (laktype)</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;<span class="keywordflow">        type is</span> (<a class="code" href="structlakmodule_1_1laktype.html">laktype</a>)</div>
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;          <span class="keyword">call </span>packobj%lak_activate_density()</div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;<span class="keywordflow">        end select</span></div>
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        </div>
@@ -318,7 +363,7 @@ $(function() {
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        <span class="comment">!</span></div>
 <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        <span class="comment">! -- activate density for sfr package</span></div>
 <div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        <span class="keywordflow">select type</span>(packobj)</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;<span class="keywordflow">        type is</span> (sfrtype)</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;<span class="keywordflow">        type is</span> (<a class="code" href="structsfrmodule_1_1sfrtype.html">sfrtype</a>)</div>
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;          <span class="keyword">call </span>packobj%sfr_activate_density()</div>
 <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;<span class="keywordflow">        end select</span></div>
 <div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        </div>
@@ -326,7 +371,7 @@ $(function() {
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        <span class="comment">!</span></div>
 <div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        <span class="comment">! -- activate density for maw package</span></div>
 <div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        <span class="keywordflow">select type</span>(packobj)</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;<span class="keywordflow">        type is</span> (mawtype)</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;<span class="keywordflow">        type is</span> (<a class="code" href="structmawmodule_1_1mawtype.html">mawtype</a>)</div>
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;          <span class="keyword">call </span>packobj%maw_activate_density()</div>
 <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;<span class="keywordflow">        end select</span></div>
 <div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        </div>
@@ -337,7 +382,7 @@ $(function() {
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    <span class="comment">! -- Return</span></div>
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;  <span class="keyword">end subroutine </span>buy_ar_bnd</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacegwfbuymodule.html#af75f8de1bb456d6edef13d300e22c84c">buy_ar_bnd</a></div>
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;  </div>
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacegwfbuymodule.html#a2276d49daabf4a511728b87d53a141f9">buy_rp</a>(this)</div>
 <div class="line"><a name="l00271"></a><span class="lineno"><a class="line" href="namespacegwfbuymodule.html#a2276d49daabf4a511728b87d53a141f9">  271</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
@@ -349,7 +394,7 @@ $(function() {
 <div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    <span class="comment">! -- modules</span></div>
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacetdismodule.html">tdismodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespacetdismodule.html#ad3443c7d7da2a67a75174c39c6d40c84">kstp</a>, <a class="code" href="namespacetdismodule.html#ae84d6ee69d7bba12d20a6255a398935b">kper</a></div>
 <div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <span class="keywordtype">class</span>(gwfbuytype) :: this</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structgwfbuymodule_1_1gwfbuytype.html">gwfbuytype</a>) :: this</div>
 <div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    <span class="keywordtype">character(len=LINELENGTH)</span> :: errmsg</div>
 <div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: i</div>
@@ -387,7 +432,7 @@ $(function() {
 <div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;<span class="comment">!    SPECIFICATIONS:</span></div>
 <div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    <span class="keywordtype">class</span>(gwfbuytype) :: this</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structgwfbuymodule_1_1gwfbuytype.html">gwfbuytype</a>) :: this</div>
 <div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    <span class="comment">!</span></div>
@@ -398,15 +443,15 @@ $(function() {
 <div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    <span class="keywordflow">return</span></div>
 <div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacegwfbuymodule.html#ad316c8aa62b82e8e27bb3c75768dd27b">buy_ad</a></div>
 <div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;  </div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;  <span class="keyword">subroutine </span>buy_cf(this, kiter)</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacegwfbuymodule.html#a077ff4f37c00b6536645fc4d184f3145">buy_cf</a>(this, kiter)</div>
+<div class="line"><a name="l00330"></a><span class="lineno"><a class="line" href="namespacegwfbuymodule.html#a077ff4f37c00b6536645fc4d184f3145">  330</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;<span class="comment">! buy_cf -- Fill coefficients</span></div>
 <div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;<span class="comment">!</span></div>
 <div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;<span class="comment">!    SPECIFICATIONS:</span></div>
 <div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    <span class="keywordtype">class</span>(gwfbuytype) :: this</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structgwfbuymodule_1_1gwfbuytype.html">gwfbuytype</a>) :: this</div>
 <div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: kiter</div>
 <div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
@@ -420,10 +465,10 @@ $(function() {
 <div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    <span class="comment">! -- Return</span></div>
 <div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;  <span class="keyword">end subroutine </span>buy_cf</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacegwfbuymodule.html#a077ff4f37c00b6536645fc4d184f3145">buy_cf</a></div>
 <div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;  </div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;  <span class="keyword">subroutine </span>buy_cf_bnd(this, packobj, hnew) <span class="comment">!, hcof, rhs, auxnam, auxvar)</span></div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacegwfbuymodule.html#a083c65aa2b34b9b7cfd1f1d6effb92c6">buy_cf_bnd</a>(this, packobj, hnew) <span class="comment">!, hcof, rhs, auxnam, auxvar)</span></div>
+<div class="line"><a name="l00354"></a><span class="lineno"><a class="line" href="namespacegwfbuymodule.html#a083c65aa2b34b9b7cfd1f1d6effb92c6">  354</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;<span class="comment">! buy_cf_bnd -- Fill coefficients</span></div>
 <div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;<span class="comment">!</span></div>
@@ -432,7 +477,7 @@ $(function() {
 <div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;    <span class="comment">! -- modules</span></div>
 <div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacebndmodule.html">bndmodule</a>, <span class="keywordtype">only</span>: bndtype</div>
 <div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    <span class="keywordtype">class</span>(gwfbuytype) :: this</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structgwfbuymodule_1_1gwfbuytype.html">gwfbuytype</a>) :: this</div>
 <div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    <span class="keywordtype">class</span>(bndtype), <span class="keywordtype">pointer</span> :: packobj</div>
 <div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">intent(in)</span>, <span class="keywordtype">dimension(:)</span> :: hnew</div>
 <div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;    <span class="comment">! -- local</span></div>
@@ -481,13 +526,13 @@ $(function() {
 <div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;      <span class="keywordflow">case</span>(<span class="stringliteral">&#39;GHB&#39;</span>)</div>
 <div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;        <span class="comment">!</span></div>
 <div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;        <span class="comment">! -- general head boundary</span></div>
-<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;        <span class="keyword">call </span>buy_cf_ghb(packobj, hnew, this%dense, this%elev, this%denseref,   &amp;</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;        <span class="keyword">call </span><a class="code" href="namespacegwfbuymodule.html#a9ed716cc62d95ab9907052ffa651d1aa">buy_cf_ghb</a>(packobj, hnew, this%dense, this%elev, this%denseref,   &amp;</div>
 <div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;                        locelev, locdense, locconc, this%drhodc, this%crhoref, &amp;</div>
 <div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;                        this%ctemp, this%iform)</div>
 <div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;      <span class="keywordflow">case</span>(<span class="stringliteral">&#39;RIV&#39;</span>)</div>
 <div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;        <span class="comment">!</span></div>
 <div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;        <span class="comment">! -- river</span></div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;        <span class="keyword">call </span>buy_cf_riv(packobj, hnew, this%dense, this%elev, this%denseref,   &amp;</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;        <span class="keyword">call </span><a class="code" href="namespacegwfbuymodule.html#a576621c1f09d954aefab444df188535c">buy_cf_riv</a>(packobj, hnew, this%dense, this%elev, this%denseref,   &amp;</div>
 <div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;                        locelev, locdense, locconc, this%drhodc, this%crhoref, &amp;</div>
 <div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;                        this%ctemp, this%iform)</div>
 <div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;      <span class="keywordflow">case</span>(<span class="stringliteral">&#39;DRN&#39;</span>)</div>
@@ -522,7 +567,7 @@ $(function() {
 <div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;    <span class="comment">! -- Return</span></div>
 <div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;  <span class="keyword">end subroutine </span>buy_cf_bnd</div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacegwfbuymodule.html#a083c65aa2b34b9b7cfd1f1d6effb92c6">buy_cf_bnd</a></div>
 <div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;  </div>
 <div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;  <span class="keyword">function </span><a class="code" href="namespacegwfbuymodule.html#a9d9c74652752a291e6258f7ddbc964a7">get_bnd_density</a>(n, locdense, locconc, denseref, drhodc, crhoref,    &amp;</div>
 <div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;                           ctemp, auxvar) <span class="keyword">result</span> (densebnd)</div>
@@ -564,7 +609,7 @@ $(function() {
 <div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;          ctemp(i) = auxvar(locconc(i), n)</div>
 <div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;<span class="keywordflow">        end if</span></div>
 <div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;<span class="keywordflow">      end do</span></div>
-<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;      densebnd = calcdens(denseref, drhodc, crhoref, ctemp)</div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;      densebnd = <a class="code" href="namespacegwfbuymodule.html#a045903b8758418af7cf74ff95e77db1a">calcdens</a>(denseref, drhodc, crhoref, ctemp)</div>
 <div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;    <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;      <span class="comment">! -- neither of the above, so assign as denseref</span></div>
 <div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;      densebnd = denseref</div>
@@ -574,10 +619,10 @@ $(function() {
 <div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;    <span class="keywordflow">return</span></div>
 <div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;  <span class="keyword">end function </span><a class="code" href="namespacegwfbuymodule.html#a9d9c74652752a291e6258f7ddbc964a7">get_bnd_density</a></div>
 <div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;  </div>
-<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;  <span class="keyword">subroutine </span>buy_cf_ghb(packobj, hnew, dense, elev, denseref, locelev,         &amp;</div>
+<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacegwfbuymodule.html#a9ed716cc62d95ab9907052ffa651d1aa">buy_cf_ghb</a>(packobj, hnew, dense, elev, denseref, locelev,         &amp;</div>
 <div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;                        locdense, locconc, drhodc, crhoref, ctemp,             &amp;</div>
 <div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;                        iform)</div>
-<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00508"></a><span class="lineno"><a class="line" href="namespacegwfbuymodule.html#a9ed716cc62d95ab9907052ffa651d1aa">  508</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;<span class="comment">! buy_cf_ghb -- Fill ghb coefficients</span></div>
 <div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;<span class="comment">!</span></div>
@@ -587,25 +632,25 @@ $(function() {
 <div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacebndmodule.html">bndmodule</a>, <span class="keywordtype">only</span>: bndtype</div>
 <div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;    <span class="keywordtype">class</span>(bndtype), <span class="keywordtype">pointer</span> :: packobj</div>
 <div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">intent(in)</span>, <span class="keywordtype">dimension(:)</span> :: hnew</div>
-<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">intent(in)</span>, <span class="keywordtype">dimension(:)</span> :: dense</div>
-<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">intent(in)</span>, <span class="keywordtype">dimension(:)</span> :: elev</div>
-<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">intent(in)</span> :: denseref</div>
+<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">intent(in)</span>, <span class="keywordtype">dimension(:)</span> :: hnew</div>
+<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">intent(in)</span>, <span class="keywordtype">dimension(:)</span> :: dense</div>
+<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">intent(in)</span>, <span class="keywordtype">dimension(:)</span> :: elev</div>
+<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">intent(in)</span> :: denseref</div>
 <div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: locelev</div>
 <div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: locdense</div>
 <div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">intent(in)</span> :: locconc</div>
-<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">intent(in)</span> :: drhodc</div>
-<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">intent(in)</span> :: crhoref</div>
-<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">intent(inout)</span> :: ctemp</div>
+<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">intent(in)</span> :: drhodc</div>
+<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">intent(in)</span> :: crhoref</div>
+<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">intent(inout)</span> :: ctemp</div>
 <div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: iform</div>
 <div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: n</div>
 <div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: node</div>
-<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>) :: denseghb</div>
-<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>) :: elevghb</div>
-<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>) :: hghb</div>
-<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>) :: cond</div>
-<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>) :: hcofterm, rhsterm</div>
+<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;<span class="keywordtype">    real</span>(DP) :: denseghb</div>
+<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;<span class="keywordtype">    real</span>(DP) :: elevghb</div>
+<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;<span class="keywordtype">    real</span>(DP) :: hghb</div>
+<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;<span class="keywordtype">    real</span>(DP) :: cond</div>
+<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;<span class="keywordtype">    real</span>(DP) :: hcofterm, rhsterm</div>
 <div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;    <span class="comment">! -- Process density terms for each GHB</span></div>
@@ -636,7 +681,7 @@ $(function() {
 <div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;    <span class="comment">! -- Return</span></div>
 <div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;  <span class="keyword">end subroutine </span>buy_cf_ghb</div>
+<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacegwfbuymodule.html#a9ed716cc62d95ab9907052ffa651d1aa">buy_cf_ghb</a></div>
 <div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;                        </div>
 <div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacegwfbuymodule.html#a3d93527a9c7cd66e113e5ce6425e8b94">calc_ghb_hcof_rhs_terms</a>(denseref, denseghb, densenode, &amp;</div>
 <div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;                                     elevghb, elevnode, hghb, hnode, &amp;</div>
@@ -693,10 +738,10 @@ $(function() {
 <div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;    <span class="keywordflow">return</span></div>
 <div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacegwfbuymodule.html#a3d93527a9c7cd66e113e5ce6425e8b94">calc_ghb_hcof_rhs_terms</a></div>
 <div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160;  </div>
-<div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160;  <span class="keyword">subroutine </span>buy_cf_riv(packobj, hnew, dense, elev, denseref, locelev,         &amp;</div>
+<div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacegwfbuymodule.html#a576621c1f09d954aefab444df188535c">buy_cf_riv</a>(packobj, hnew, dense, elev, denseref, locelev,         &amp;</div>
 <div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;                        locdense, locconc, drhodc, crhoref, ctemp,             &amp;</div>
 <div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;                        iform)</div>
-<div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00627"></a><span class="lineno"><a class="line" href="namespacegwfbuymodule.html#a576621c1f09d954aefab444df188535c">  627</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;<span class="comment">! buy_cf_riv -- Fill riv coefficients</span></div>
 <div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;<span class="comment">!</span></div>
@@ -766,7 +811,7 @@ $(function() {
 <div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;    <span class="comment">! -- Return</span></div>
 <div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;  <span class="keyword">end subroutine </span>buy_cf_riv</div>
+<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacegwfbuymodule.html#a576621c1f09d954aefab444df188535c">buy_cf_riv</a></div>
 <div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;  </div>
 <div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacegwfbuymodule.html#ad10da9e2fe102865f23c83cb61cebcec">buy_cf_drn</a>(packobj, hnew, dense, denseref)</div>
 <div class="line"><a name="l00700"></a><span class="lineno"><a class="line" href="namespacegwfbuymodule.html#ad10da9e2fe102865f23c83cb61cebcec">  700</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
@@ -823,7 +868,7 @@ $(function() {
 <div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;    <span class="comment">! -- modules</span></div>
 <div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacebndmodule.html">bndmodule</a>, <span class="keywordtype">only</span>: bndtype</div>
-<div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacelakmodule.html">lakmodule</a>, <span class="keywordtype">only</span>: laktype</div>
+<div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacelakmodule.html">lakmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="structlakmodule_1_1laktype.html">laktype</a></div>
 <div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;    <span class="keywordtype">class</span>(bndtype), <span class="keywordtype">pointer</span> :: packobj</div>
 <div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;    <span class="comment">! -- dummy</span></div>
 <div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">intent(in)</span>, <span class="keywordtype">dimension(:)</span> :: hnew</div>
@@ -845,7 +890,7 @@ $(function() {
 <div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;    <span class="comment">! -- Insert the lake and gwf relative densities into col 1 and 2 and the</span></div>
 <div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;    <span class="comment">!    gwf elevation into col 3 of the lake package denseterms array</span></div>
 <div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;    <span class="keywordflow">select type</span>(packobj)</div>
-<div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;<span class="keywordflow">    type is</span> (laktype)</div>
+<div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;<span class="keywordflow">    type is</span> (<a class="code" href="structlakmodule_1_1laktype.html">laktype</a>)</div>
 <div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;      <span class="keywordflow">do</span> n = 1, packobj%nbound</div>
 <div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160;        <span class="comment">!</span></div>
 <div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160;        <span class="comment">! -- get gwf node number</span></div>
@@ -884,7 +929,7 @@ $(function() {
 <div class="line"><a name="l00812"></a><span class="lineno">  812</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160;    <span class="comment">! -- modules</span></div>
 <div class="line"><a name="l00814"></a><span class="lineno">  814</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacebndmodule.html">bndmodule</a>, <span class="keywordtype">only</span>: bndtype</div>
-<div class="line"><a name="l00815"></a><span class="lineno">  815</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacesfrmodule.html">sfrmodule</a>, <span class="keywordtype">only</span>: sfrtype</div>
+<div class="line"><a name="l00815"></a><span class="lineno">  815</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacesfrmodule.html">sfrmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="structsfrmodule_1_1sfrtype.html">sfrtype</a></div>
 <div class="line"><a name="l00816"></a><span class="lineno">  816</span>&#160;    <span class="keywordtype">class</span>(bndtype), <span class="keywordtype">pointer</span> :: packobj</div>
 <div class="line"><a name="l00817"></a><span class="lineno">  817</span>&#160;    <span class="comment">! -- dummy</span></div>
 <div class="line"><a name="l00818"></a><span class="lineno">  818</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">intent(in)</span>, <span class="keywordtype">dimension(:)</span> :: hnew</div>
@@ -906,7 +951,7 @@ $(function() {
 <div class="line"><a name="l00834"></a><span class="lineno">  834</span>&#160;    <span class="comment">! -- Insert the sfr and gwf relative densities into col 1 and 2 and the</span></div>
 <div class="line"><a name="l00835"></a><span class="lineno">  835</span>&#160;    <span class="comment">!    gwf elevation into col 3 of the sfr package denseterms array</span></div>
 <div class="line"><a name="l00836"></a><span class="lineno">  836</span>&#160;    <span class="keywordflow">select type</span>(packobj)</div>
-<div class="line"><a name="l00837"></a><span class="lineno">  837</span>&#160;<span class="keywordflow">    type is</span> (sfrtype)</div>
+<div class="line"><a name="l00837"></a><span class="lineno">  837</span>&#160;<span class="keywordflow">    type is</span> (<a class="code" href="structsfrmodule_1_1sfrtype.html">sfrtype</a>)</div>
 <div class="line"><a name="l00838"></a><span class="lineno">  838</span>&#160;      <span class="keywordflow">do</span> n = 1, packobj%nbound</div>
 <div class="line"><a name="l00839"></a><span class="lineno">  839</span>&#160;        <span class="comment">!</span></div>
 <div class="line"><a name="l00840"></a><span class="lineno">  840</span>&#160;        <span class="comment">! -- get gwf node number</span></div>
@@ -945,7 +990,7 @@ $(function() {
 <div class="line"><a name="l00873"></a><span class="lineno">  873</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00874"></a><span class="lineno">  874</span>&#160;    <span class="comment">! -- modules</span></div>
 <div class="line"><a name="l00875"></a><span class="lineno">  875</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacebndmodule.html">bndmodule</a>, <span class="keywordtype">only</span>: bndtype</div>
-<div class="line"><a name="l00876"></a><span class="lineno">  876</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacemawmodule.html">mawmodule</a>, <span class="keywordtype">only</span>: mawtype</div>
+<div class="line"><a name="l00876"></a><span class="lineno">  876</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacemawmodule.html">mawmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="structmawmodule_1_1mawtype.html">mawtype</a></div>
 <div class="line"><a name="l00877"></a><span class="lineno">  877</span>&#160;    <span class="keywordtype">class</span>(bndtype), <span class="keywordtype">pointer</span> :: packobj</div>
 <div class="line"><a name="l00878"></a><span class="lineno">  878</span>&#160;    <span class="comment">! -- dummy</span></div>
 <div class="line"><a name="l00879"></a><span class="lineno">  879</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">intent(in)</span>, <span class="keywordtype">dimension(:)</span> :: hnew</div>
@@ -967,7 +1012,7 @@ $(function() {
 <div class="line"><a name="l00895"></a><span class="lineno">  895</span>&#160;    <span class="comment">! -- Insert the maw and gwf relative densities into col 1 and 2 and the</span></div>
 <div class="line"><a name="l00896"></a><span class="lineno">  896</span>&#160;    <span class="comment">!    gwf elevation into col 3 of the maw package denseterms array</span></div>
 <div class="line"><a name="l00897"></a><span class="lineno">  897</span>&#160;    <span class="keywordflow">select type</span>(packobj)</div>
-<div class="line"><a name="l00898"></a><span class="lineno">  898</span>&#160;<span class="keywordflow">    type is</span> (mawtype)</div>
+<div class="line"><a name="l00898"></a><span class="lineno">  898</span>&#160;<span class="keywordflow">    type is</span> (<a class="code" href="structmawmodule_1_1mawtype.html">mawtype</a>)</div>
 <div class="line"><a name="l00899"></a><span class="lineno">  899</span>&#160;      <span class="keywordflow">do</span> n = 1, packobj%nbound</div>
 <div class="line"><a name="l00900"></a><span class="lineno">  900</span>&#160;        <span class="comment">!</span></div>
 <div class="line"><a name="l00901"></a><span class="lineno">  901</span>&#160;        <span class="comment">! -- get gwf node number</span></div>
@@ -1002,7 +1047,7 @@ $(function() {
 <div class="line"><a name="l00930"></a><span class="lineno">  930</span>&#160;<span class="comment">!    SPECIFICATIONS:</span></div>
 <div class="line"><a name="l00931"></a><span class="lineno">  931</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00932"></a><span class="lineno">  932</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00933"></a><span class="lineno">  933</span>&#160;    <span class="keywordtype">class</span>(gwfbuytype) :: this</div>
+<div class="line"><a name="l00933"></a><span class="lineno">  933</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structgwfbuymodule_1_1gwfbuytype.html">gwfbuytype</a>) :: this</div>
 <div class="line"><a name="l00934"></a><span class="lineno">  934</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: kiter</div>
 <div class="line"><a name="l00935"></a><span class="lineno">  935</span>&#160;    <span class="keywordtype">integer</span>,<span class="keywordtype">intent(in)</span> :: njasln</div>
 <div class="line"><a name="l00936"></a><span class="lineno">  936</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">dimension(njasln)</span>, <span class="keywordtype">intent(inout)</span> :: amat</div>
@@ -1042,15 +1087,15 @@ $(function() {
 <div class="line"><a name="l00970"></a><span class="lineno">  970</span>&#160;    <span class="keywordflow">return</span></div>
 <div class="line"><a name="l00971"></a><span class="lineno">  971</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacegwfbuymodule.html#a627e3b4f6d77574bed6996c9185fa8e6">buy_fc</a></div>
 <div class="line"><a name="l00972"></a><span class="lineno">  972</span>&#160; </div>
-<div class="line"><a name="l00973"></a><span class="lineno">  973</span>&#160;  <span class="keyword">subroutine </span>buy_ot_dv(this, idvfl)</div>
-<div class="line"><a name="l00974"></a><span class="lineno">  974</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00973"></a><span class="lineno">  973</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacegwfbuymodule.html#a91f12f6b88ac79575bf5aa6e1d4a36e4">buy_ot_dv</a>(this, idvfl)</div>
+<div class="line"><a name="l00974"></a><span class="lineno"><a class="line" href="namespacegwfbuymodule.html#a91f12f6b88ac79575bf5aa6e1d4a36e4">  974</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00975"></a><span class="lineno">  975</span>&#160;<span class="comment">! buy_ot_dv -- Save density array to binary file</span></div>
 <div class="line"><a name="l00976"></a><span class="lineno">  976</span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00977"></a><span class="lineno">  977</span>&#160;<span class="comment">!</span></div>
 <div class="line"><a name="l00978"></a><span class="lineno">  978</span>&#160;<span class="comment">!    SPECIFICATIONS:</span></div>
 <div class="line"><a name="l00979"></a><span class="lineno">  979</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00980"></a><span class="lineno">  980</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00981"></a><span class="lineno">  981</span>&#160;    <span class="keywordtype">class</span>(gwfbuytype) :: this</div>
+<div class="line"><a name="l00981"></a><span class="lineno">  981</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structgwfbuymodule_1_1gwfbuytype.html">gwfbuytype</a>) :: this</div>
 <div class="line"><a name="l00982"></a><span class="lineno">  982</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: idvfl</div>
 <div class="line"><a name="l00983"></a><span class="lineno">  983</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00984"></a><span class="lineno">  984</span>&#160;    <span class="keywordtype">character(len=1)</span> :: cdatafmp=<span class="stringliteral">&#39; &#39;</span>, editdesc=<span class="stringliteral">&#39; &#39;</span></div>
@@ -1086,17 +1131,17 @@ $(function() {
 <div class="line"><a name="l01014"></a><span class="lineno"> 1014</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l01015"></a><span class="lineno"> 1015</span>&#160;    <span class="comment">! -- Return</span></div>
 <div class="line"><a name="l01016"></a><span class="lineno"> 1016</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l01017"></a><span class="lineno"> 1017</span>&#160;  <span class="keyword">end subroutine </span>buy_ot_dv</div>
+<div class="line"><a name="l01017"></a><span class="lineno"> 1017</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacegwfbuymodule.html#a91f12f6b88ac79575bf5aa6e1d4a36e4">buy_ot_dv</a></div>
 <div class="line"><a name="l01018"></a><span class="lineno"> 1018</span>&#160; </div>
-<div class="line"><a name="l01019"></a><span class="lineno"> 1019</span>&#160;  <span class="keyword">subroutine </span>buy_cq(this, hnew, flowja)</div>
-<div class="line"><a name="l01020"></a><span class="lineno"> 1020</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l01019"></a><span class="lineno"> 1019</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacegwfbuymodule.html#a3e8151a3192e45930c4ec84b91aee333">buy_cq</a>(this, hnew, flowja)</div>
+<div class="line"><a name="l01020"></a><span class="lineno"><a class="line" href="namespacegwfbuymodule.html#a3e8151a3192e45930c4ec84b91aee333"> 1020</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l01021"></a><span class="lineno"> 1021</span>&#160;<span class="comment">! buy_cq -- Add buy term to flowja</span></div>
 <div class="line"><a name="l01022"></a><span class="lineno"> 1022</span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l01023"></a><span class="lineno"> 1023</span>&#160;<span class="comment">!</span></div>
 <div class="line"><a name="l01024"></a><span class="lineno"> 1024</span>&#160;<span class="comment">!    SPECIFICATIONS:</span></div>
 <div class="line"><a name="l01025"></a><span class="lineno"> 1025</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l01026"></a><span class="lineno"> 1026</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l01027"></a><span class="lineno"> 1027</span>&#160;    <span class="keywordtype">class</span>(gwfbuytype) :: this</div>
+<div class="line"><a name="l01027"></a><span class="lineno"> 1027</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structgwfbuymodule_1_1gwfbuytype.html">gwfbuytype</a>) :: this</div>
 <div class="line"><a name="l01028"></a><span class="lineno"> 1028</span>&#160;<span class="keywordtype">    real</span>(DP),<span class="keywordtype">intent(in)</span>,<span class="keywordtype">dimension(:)</span> :: hnew</div>
 <div class="line"><a name="l01029"></a><span class="lineno"> 1029</span>&#160;<span class="keywordtype">    real</span>(DP),<span class="keywordtype">intent(inout)</span>,<span class="keywordtype">dimension(:)</span> :: flowja</div>
 <div class="line"><a name="l01030"></a><span class="lineno"> 1030</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: n, m, ipos</div>
@@ -1126,10 +1171,10 @@ $(function() {
 <div class="line"><a name="l01054"></a><span class="lineno"> 1054</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l01055"></a><span class="lineno"> 1055</span>&#160;    <span class="comment">! -- Return</span></div>
 <div class="line"><a name="l01056"></a><span class="lineno"> 1056</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l01057"></a><span class="lineno"> 1057</span>&#160;  <span class="keyword">end subroutine </span>buy_cq</div>
+<div class="line"><a name="l01057"></a><span class="lineno"> 1057</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacegwfbuymodule.html#a3e8151a3192e45930c4ec84b91aee333">buy_cq</a></div>
 <div class="line"><a name="l01058"></a><span class="lineno"> 1058</span>&#160; </div>
-<div class="line"><a name="l01059"></a><span class="lineno"> 1059</span>&#160;  <span class="keyword">subroutine </span>buy_da(this)</div>
-<div class="line"><a name="l01060"></a><span class="lineno"> 1060</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l01059"></a><span class="lineno"> 1059</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacegwfbuymodule.html#ab30b5c1a3760c346c449e58bafa2649f">buy_da</a>(this)</div>
+<div class="line"><a name="l01060"></a><span class="lineno"><a class="line" href="namespacegwfbuymodule.html#ab30b5c1a3760c346c449e58bafa2649f"> 1060</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l01061"></a><span class="lineno"> 1061</span>&#160;<span class="comment">! buy_da -- Deallocate</span></div>
 <div class="line"><a name="l01062"></a><span class="lineno"> 1062</span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l01063"></a><span class="lineno"> 1063</span>&#160;<span class="comment">!</span></div>
@@ -1137,41 +1182,41 @@ $(function() {
 <div class="line"><a name="l01065"></a><span class="lineno"> 1065</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l01066"></a><span class="lineno"> 1066</span>&#160;    <span class="comment">! -- modules</span></div>
 <div class="line"><a name="l01067"></a><span class="lineno"> 1067</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l01068"></a><span class="lineno"> 1068</span>&#160;    <span class="keywordtype">class</span>(gwfbuytype) :: this</div>
+<div class="line"><a name="l01068"></a><span class="lineno"> 1068</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structgwfbuymodule_1_1gwfbuytype.html">gwfbuytype</a>) :: this</div>
 <div class="line"><a name="l01069"></a><span class="lineno"> 1069</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l01070"></a><span class="lineno"> 1070</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l01071"></a><span class="lineno"> 1071</span>&#160;    <span class="comment">! -- Deallocate arrays if package was active</span></div>
 <div class="line"><a name="l01072"></a><span class="lineno"> 1072</span>&#160;    <span class="keywordflow">if</span>(this%inunit &gt; 0) <span class="keywordflow">then</span></div>
-<div class="line"><a name="l01073"></a><span class="lineno"> 1073</span>&#160;      <span class="keyword">call </span>mem_deallocate(this%elev)</div>
-<div class="line"><a name="l01074"></a><span class="lineno"> 1074</span>&#160;      <span class="keyword">call </span>mem_deallocate(this%dense)</div>
-<div class="line"><a name="l01075"></a><span class="lineno"> 1075</span>&#160;      <span class="keyword">call </span>mem_deallocate(this%concbuy)</div>
-<div class="line"><a name="l01076"></a><span class="lineno"> 1076</span>&#160;      <span class="keyword">call </span>mem_deallocate(this%drhodc)</div>
-<div class="line"><a name="l01077"></a><span class="lineno"> 1077</span>&#160;      <span class="keyword">call </span>mem_deallocate(this%crhoref)</div>
-<div class="line"><a name="l01078"></a><span class="lineno"> 1078</span>&#160;      <span class="keyword">call </span>mem_deallocate(this%ctemp)</div>
+<div class="line"><a name="l01073"></a><span class="lineno"> 1073</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%elev)</div>
+<div class="line"><a name="l01074"></a><span class="lineno"> 1074</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%dense)</div>
+<div class="line"><a name="l01075"></a><span class="lineno"> 1075</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%concbuy)</div>
+<div class="line"><a name="l01076"></a><span class="lineno"> 1076</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%drhodc)</div>
+<div class="line"><a name="l01077"></a><span class="lineno"> 1077</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%crhoref)</div>
+<div class="line"><a name="l01078"></a><span class="lineno"> 1078</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%ctemp)</div>
 <div class="line"><a name="l01079"></a><span class="lineno"> 1079</span>&#160;      <span class="keyword">deallocate</span>(this%cmodelname)</div>
 <div class="line"><a name="l01080"></a><span class="lineno"> 1080</span>&#160;      <span class="keyword">deallocate</span>(this%cauxspeciesname)</div>
 <div class="line"><a name="l01081"></a><span class="lineno"> 1081</span>&#160;      <span class="keyword">deallocate</span>(this%modelconc)</div>
 <div class="line"><a name="l01082"></a><span class="lineno"> 1082</span>&#160;<span class="keywordflow">    endif</span></div>
 <div class="line"><a name="l01083"></a><span class="lineno"> 1083</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l01084"></a><span class="lineno"> 1084</span>&#160;    <span class="comment">! -- Scalars</span></div>
-<div class="line"><a name="l01085"></a><span class="lineno"> 1085</span>&#160;    <span class="keyword">call </span>mem_deallocate(this%ioutdense)</div>
-<div class="line"><a name="l01086"></a><span class="lineno"> 1086</span>&#160;    <span class="keyword">call </span>mem_deallocate(this%iform)</div>
-<div class="line"><a name="l01087"></a><span class="lineno"> 1087</span>&#160;    <span class="keyword">call </span>mem_deallocate(this%ireadelev)</div>
-<div class="line"><a name="l01088"></a><span class="lineno"> 1088</span>&#160;    <span class="keyword">call </span>mem_deallocate(this%ireadconcbuy)</div>
-<div class="line"><a name="l01089"></a><span class="lineno"> 1089</span>&#160;    <span class="keyword">call </span>mem_deallocate(this%iconcset)</div>
-<div class="line"><a name="l01090"></a><span class="lineno"> 1090</span>&#160;    <span class="keyword">call </span>mem_deallocate(this%denseref)</div>
+<div class="line"><a name="l01085"></a><span class="lineno"> 1085</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%ioutdense)</div>
+<div class="line"><a name="l01086"></a><span class="lineno"> 1086</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%iform)</div>
+<div class="line"><a name="l01087"></a><span class="lineno"> 1087</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%ireadelev)</div>
+<div class="line"><a name="l01088"></a><span class="lineno"> 1088</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%ireadconcbuy)</div>
+<div class="line"><a name="l01089"></a><span class="lineno"> 1089</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%iconcset)</div>
+<div class="line"><a name="l01090"></a><span class="lineno"> 1090</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%denseref)</div>
 <div class="line"><a name="l01091"></a><span class="lineno"> 1091</span>&#160;    </div>
-<div class="line"><a name="l01092"></a><span class="lineno"> 1092</span>&#160;    <span class="keyword">call </span>mem_deallocate(this%nrhospecies)</div>
+<div class="line"><a name="l01092"></a><span class="lineno"> 1092</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%nrhospecies)</div>
 <div class="line"><a name="l01093"></a><span class="lineno"> 1093</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l01094"></a><span class="lineno"> 1094</span>&#160;    <span class="comment">! -- deallocate parent</span></div>
 <div class="line"><a name="l01095"></a><span class="lineno"> 1095</span>&#160;    <span class="keyword">call </span>this%NumericalPackageType%da()</div>
 <div class="line"><a name="l01096"></a><span class="lineno"> 1096</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l01097"></a><span class="lineno"> 1097</span>&#160;    <span class="comment">! -- Return</span></div>
 <div class="line"><a name="l01098"></a><span class="lineno"> 1098</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l01099"></a><span class="lineno"> 1099</span>&#160;  <span class="keyword">end subroutine </span>buy_da</div>
+<div class="line"><a name="l01099"></a><span class="lineno"> 1099</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacegwfbuymodule.html#ab30b5c1a3760c346c449e58bafa2649f">buy_da</a></div>
 <div class="line"><a name="l01100"></a><span class="lineno"> 1100</span>&#160; </div>
-<div class="line"><a name="l01101"></a><span class="lineno"> 1101</span>&#160;  <span class="keyword">subroutine </span>read_dimensions(this)</div>
-<div class="line"><a name="l01102"></a><span class="lineno"> 1102</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l01101"></a><span class="lineno"> 1101</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacegwfbuymodule.html#aa22728d20def7fcbd66a55b9163968f6">read_dimensions</a>(this)</div>
+<div class="line"><a name="l01102"></a><span class="lineno"><a class="line" href="namespacegwfbuymodule.html#aa22728d20def7fcbd66a55b9163968f6"> 1102</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l01103"></a><span class="lineno"> 1103</span>&#160;<span class="comment">! read_dimensions -- Read the dimensions for this package</span></div>
 <div class="line"><a name="l01104"></a><span class="lineno"> 1104</span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l01105"></a><span class="lineno"> 1105</span>&#160;<span class="comment">!</span></div>
@@ -1179,7 +1224,7 @@ $(function() {
 <div class="line"><a name="l01107"></a><span class="lineno"> 1107</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l01108"></a><span class="lineno"> 1108</span>&#160;    <span class="comment">! -- modules</span></div>
 <div class="line"><a name="l01109"></a><span class="lineno"> 1109</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l01110"></a><span class="lineno"> 1110</span>&#160;    <span class="keywordtype">class</span>(gwfbuytype),<span class="keywordtype">intent(inout)</span> :: this</div>
+<div class="line"><a name="l01110"></a><span class="lineno"> 1110</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structgwfbuymodule_1_1gwfbuytype.html">gwfbuytype</a>),<span class="keywordtype">intent(inout)</span> :: this</div>
 <div class="line"><a name="l01111"></a><span class="lineno"> 1111</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l01112"></a><span class="lineno"> 1112</span>&#160;    <span class="keywordtype">character (len=LINELENGTH)</span> :: errmsg, keyword</div>
 <div class="line"><a name="l01113"></a><span class="lineno"> 1113</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: ierr</div>
@@ -1226,10 +1271,10 @@ $(function() {
 <div class="line"><a name="l01154"></a><span class="lineno"> 1154</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l01155"></a><span class="lineno"> 1155</span>&#160;    <span class="comment">! -- return</span></div>
 <div class="line"><a name="l01156"></a><span class="lineno"> 1156</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l01157"></a><span class="lineno"> 1157</span>&#160;  <span class="keyword">end subroutine </span>read_dimensions</div>
+<div class="line"><a name="l01157"></a><span class="lineno"> 1157</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacegwfbuymodule.html#aa22728d20def7fcbd66a55b9163968f6">read_dimensions</a></div>
 <div class="line"><a name="l01158"></a><span class="lineno"> 1158</span>&#160; </div>
-<div class="line"><a name="l01159"></a><span class="lineno"> 1159</span>&#160;  <span class="keyword">subroutine </span>read_packagedata(this)</div>
-<div class="line"><a name="l01160"></a><span class="lineno"> 1160</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l01159"></a><span class="lineno"> 1159</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacegwfbuymodule.html#a81d907dd102a8f2787ac8f666b9f0bdb">read_packagedata</a>(this)</div>
+<div class="line"><a name="l01160"></a><span class="lineno"><a class="line" href="namespacegwfbuymodule.html#a81d907dd102a8f2787ac8f666b9f0bdb"> 1160</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l01161"></a><span class="lineno"> 1161</span>&#160;<span class="comment">! read_packagedata -- Read PACKAGEDATA block</span></div>
 <div class="line"><a name="l01162"></a><span class="lineno"> 1162</span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l01163"></a><span class="lineno"> 1163</span>&#160;<span class="comment">!</span></div>
@@ -1237,7 +1282,7 @@ $(function() {
 <div class="line"><a name="l01165"></a><span class="lineno"> 1165</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l01166"></a><span class="lineno"> 1166</span>&#160;    <span class="comment">! -- modules</span></div>
 <div class="line"><a name="l01167"></a><span class="lineno"> 1167</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l01168"></a><span class="lineno"> 1168</span>&#160;    <span class="keywordtype">class</span>(gwfbuytype) :: this</div>
+<div class="line"><a name="l01168"></a><span class="lineno"> 1168</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structgwfbuymodule_1_1gwfbuytype.html">gwfbuytype</a>) :: this</div>
 <div class="line"><a name="l01169"></a><span class="lineno"> 1169</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l01170"></a><span class="lineno"> 1170</span>&#160;    <span class="keywordtype">character(len=LINELENGTH)</span> :: errmsg</div>
 <div class="line"><a name="l01171"></a><span class="lineno"> 1171</span>&#160;    <span class="keywordtype">character(len=LINELENGTH)</span> :: line</div>
@@ -1319,10 +1364,10 @@ $(function() {
 <div class="line"><a name="l01247"></a><span class="lineno"> 1247</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l01248"></a><span class="lineno"> 1248</span>&#160;    <span class="comment">! -- return</span></div>
 <div class="line"><a name="l01249"></a><span class="lineno"> 1249</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l01250"></a><span class="lineno"> 1250</span>&#160;  <span class="keyword">end subroutine </span>read_packagedata</div>
+<div class="line"><a name="l01250"></a><span class="lineno"> 1250</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacegwfbuymodule.html#a81d907dd102a8f2787ac8f666b9f0bdb">read_packagedata</a></div>
 <div class="line"><a name="l01251"></a><span class="lineno"> 1251</span>&#160;  </div>
-<div class="line"><a name="l01252"></a><span class="lineno"> 1252</span>&#160;  <span class="keyword">subroutine </span>calcbuy(this, n, m, icon, hn, hm, buy)</div>
-<div class="line"><a name="l01253"></a><span class="lineno"> 1253</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l01252"></a><span class="lineno"> 1252</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacegwfbuymodule.html#afad33f0e9d7a6436b40c52758f6dca6f">calcbuy</a>(this, n, m, icon, hn, hm, buy)</div>
+<div class="line"><a name="l01253"></a><span class="lineno"><a class="line" href="namespacegwfbuymodule.html#afad33f0e9d7a6436b40c52758f6dca6f"> 1253</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l01254"></a><span class="lineno"> 1254</span>&#160;<span class="comment">! calcbuy -- Calculate buyancy term for this connection</span></div>
 <div class="line"><a name="l01255"></a><span class="lineno"> 1255</span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l01256"></a><span class="lineno"> 1256</span>&#160;<span class="comment">!</span></div>
@@ -1331,7 +1376,7 @@ $(function() {
 <div class="line"><a name="l01259"></a><span class="lineno"> 1259</span>&#160;    <span class="comment">! -- modules</span></div>
 <div class="line"><a name="l01260"></a><span class="lineno"> 1260</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacegwfnpfmodule.html">gwfnpfmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespacegwfnpfmodule.html#a7fc55c137cbf452e811e7bda474af209">hcond</a>, <a class="code" href="namespacegwfnpfmodule.html#a0ac64188c68a16279d975e588393259e">vcond</a></div>
 <div class="line"><a name="l01261"></a><span class="lineno"> 1261</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l01262"></a><span class="lineno"> 1262</span>&#160;    <span class="keywordtype">class</span>(gwfbuytype) :: this</div>
+<div class="line"><a name="l01262"></a><span class="lineno"> 1262</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structgwfbuymodule_1_1gwfbuytype.html">gwfbuytype</a>) :: this</div>
 <div class="line"><a name="l01263"></a><span class="lineno"> 1263</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: n</div>
 <div class="line"><a name="l01264"></a><span class="lineno"> 1264</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: m</div>
 <div class="line"><a name="l01265"></a><span class="lineno"> 1265</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: icon</div>
@@ -1410,7 +1455,7 @@ $(function() {
 <div class="line"><a name="l01338"></a><span class="lineno"> 1338</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l01339"></a><span class="lineno"> 1339</span>&#160;    <span class="comment">! -- Return</span></div>
 <div class="line"><a name="l01340"></a><span class="lineno"> 1340</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l01341"></a><span class="lineno"> 1341</span>&#160;  <span class="keyword">end subroutine </span>calcbuy</div>
+<div class="line"><a name="l01341"></a><span class="lineno"> 1341</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacegwfbuymodule.html#afad33f0e9d7a6436b40c52758f6dca6f">calcbuy</a></div>
 <div class="line"><a name="l01342"></a><span class="lineno"> 1342</span>&#160; </div>
 <div class="line"><a name="l01343"></a><span class="lineno"> 1343</span>&#160; </div>
 <div class="line"><a name="l01344"></a><span class="lineno"> 1344</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacegwfbuymodule.html#a1c7119e85ddd46a92c3ca038d987ab8c">calchhterms</a>(this, n, m, icon, hn, hm, rhsterm, amatnn, amatnm)</div>
@@ -1423,7 +1468,7 @@ $(function() {
 <div class="line"><a name="l01351"></a><span class="lineno"> 1351</span>&#160;    <span class="comment">! -- modules</span></div>
 <div class="line"><a name="l01352"></a><span class="lineno"> 1352</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacegwfnpfmodule.html">gwfnpfmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespacegwfnpfmodule.html#a7fc55c137cbf452e811e7bda474af209">hcond</a>, <a class="code" href="namespacegwfnpfmodule.html#a0ac64188c68a16279d975e588393259e">vcond</a></div>
 <div class="line"><a name="l01353"></a><span class="lineno"> 1353</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l01354"></a><span class="lineno"> 1354</span>&#160;    <span class="keywordtype">class</span>(gwfbuytype) :: this</div>
+<div class="line"><a name="l01354"></a><span class="lineno"> 1354</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structgwfbuymodule_1_1gwfbuytype.html">gwfbuytype</a>) :: this</div>
 <div class="line"><a name="l01355"></a><span class="lineno"> 1355</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: n</div>
 <div class="line"><a name="l01356"></a><span class="lineno"> 1356</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: m</div>
 <div class="line"><a name="l01357"></a><span class="lineno"> 1357</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: icon</div>
@@ -1523,7 +1568,7 @@ $(function() {
 <div class="line"><a name="l01451"></a><span class="lineno"> 1451</span>&#160;<span class="comment">!    SPECIFICATIONS:</span></div>
 <div class="line"><a name="l01452"></a><span class="lineno"> 1452</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l01453"></a><span class="lineno"> 1453</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l01454"></a><span class="lineno"> 1454</span>&#160;    <span class="keywordtype">class</span>(gwfbuytype) :: this</div>
+<div class="line"><a name="l01454"></a><span class="lineno"> 1454</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structgwfbuymodule_1_1gwfbuytype.html">gwfbuytype</a>) :: this</div>
 <div class="line"><a name="l01455"></a><span class="lineno"> 1455</span>&#160;    </div>
 <div class="line"><a name="l01456"></a><span class="lineno"> 1456</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l01457"></a><span class="lineno"> 1457</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: n</div>
@@ -1539,7 +1584,7 @@ $(function() {
 <div class="line"><a name="l01467"></a><span class="lineno"> 1467</span>&#160;          this%ctemp(i) = this%modelconc(i)%conc(n)</div>
 <div class="line"><a name="l01468"></a><span class="lineno"> 1468</span>&#160;<span class="keywordflow">        end if</span></div>
 <div class="line"><a name="l01469"></a><span class="lineno"> 1469</span>&#160;<span class="keywordflow">      end do</span></div>
-<div class="line"><a name="l01470"></a><span class="lineno"> 1470</span>&#160;      this%dense(n) = calcdens(this%denseref, this%drhodc, this%crhoref, &amp;</div>
+<div class="line"><a name="l01470"></a><span class="lineno"> 1470</span>&#160;      this%dense(n) = <a class="code" href="namespacegwfbuymodule.html#a045903b8758418af7cf74ff95e77db1a">calcdens</a>(this%denseref, this%drhodc, this%crhoref, &amp;</div>
 <div class="line"><a name="l01471"></a><span class="lineno"> 1471</span>&#160;                               this%ctemp)</div>
 <div class="line"><a name="l01472"></a><span class="lineno"> 1472</span>&#160;<span class="keywordflow">    enddo</span></div>
 <div class="line"><a name="l01473"></a><span class="lineno"> 1473</span>&#160;    <span class="comment">!</span></div>
@@ -1547,15 +1592,15 @@ $(function() {
 <div class="line"><a name="l01475"></a><span class="lineno"> 1475</span>&#160;    <span class="keywordflow">return</span></div>
 <div class="line"><a name="l01476"></a><span class="lineno"> 1476</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacegwfbuymodule.html#afb5ea963ecedb22bf478b009c13c7cf1">buy_calcdens</a></div>
 <div class="line"><a name="l01477"></a><span class="lineno"> 1477</span>&#160;  </div>
-<div class="line"><a name="l01478"></a><span class="lineno"> 1478</span>&#160;  <span class="keyword">subroutine </span>buy_calcelev(this)</div>
-<div class="line"><a name="l01479"></a><span class="lineno"> 1479</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l01478"></a><span class="lineno"> 1478</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacegwfbuymodule.html#a430cdfb8d5378619631d196d8767e1d2">buy_calcelev</a>(this)</div>
+<div class="line"><a name="l01479"></a><span class="lineno"><a class="line" href="namespacegwfbuymodule.html#a430cdfb8d5378619631d196d8767e1d2"> 1479</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l01480"></a><span class="lineno"> 1480</span>&#160;<span class="comment">! buy_calcelev -- Calculate cell elevations to use in density flow equations</span></div>
 <div class="line"><a name="l01481"></a><span class="lineno"> 1481</span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l01482"></a><span class="lineno"> 1482</span>&#160;<span class="comment">!</span></div>
 <div class="line"><a name="l01483"></a><span class="lineno"> 1483</span>&#160;<span class="comment">!    SPECIFICATIONS:</span></div>
 <div class="line"><a name="l01484"></a><span class="lineno"> 1484</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l01485"></a><span class="lineno"> 1485</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l01486"></a><span class="lineno"> 1486</span>&#160;    <span class="keywordtype">class</span>(gwfbuytype) :: this</div>
+<div class="line"><a name="l01486"></a><span class="lineno"> 1486</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structgwfbuymodule_1_1gwfbuytype.html">gwfbuytype</a>) :: this</div>
 <div class="line"><a name="l01487"></a><span class="lineno"> 1487</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l01488"></a><span class="lineno"> 1488</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: n</div>
 <div class="line"><a name="l01489"></a><span class="lineno"> 1489</span>&#160;<span class="keywordtype">    real</span>(DP) :: tp, bt, frac</div>
@@ -1571,10 +1616,10 @@ $(function() {
 <div class="line"><a name="l01499"></a><span class="lineno"> 1499</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l01500"></a><span class="lineno"> 1500</span>&#160;    <span class="comment">! -- Return</span></div>
 <div class="line"><a name="l01501"></a><span class="lineno"> 1501</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l01502"></a><span class="lineno"> 1502</span>&#160;  <span class="keyword">end subroutine </span>buy_calcelev</div>
+<div class="line"><a name="l01502"></a><span class="lineno"> 1502</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacegwfbuymodule.html#a430cdfb8d5378619631d196d8767e1d2">buy_calcelev</a></div>
 <div class="line"><a name="l01503"></a><span class="lineno"> 1503</span>&#160;  </div>
-<div class="line"><a name="l01504"></a><span class="lineno"> 1504</span>&#160;  <span class="keyword">subroutine </span>allocate_scalars(this)</div>
-<div class="line"><a name="l01505"></a><span class="lineno"> 1505</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l01504"></a><span class="lineno"> 1504</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacegwfbuymodule.html#a3e80d610c8e0c1e7c9a75c17a66f8a5f">allocate_scalars</a>(this)</div>
+<div class="line"><a name="l01505"></a><span class="lineno"><a class="line" href="namespacegwfbuymodule.html#a3e80d610c8e0c1e7c9a75c17a66f8a5f"> 1505</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l01506"></a><span class="lineno"> 1506</span>&#160;<span class="comment">! allocate_scalars</span></div>
 <div class="line"><a name="l01507"></a><span class="lineno"> 1507</span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l01508"></a><span class="lineno"> 1508</span>&#160;<span class="comment">!</span></div>
@@ -1583,7 +1628,7 @@ $(function() {
 <div class="line"><a name="l01511"></a><span class="lineno"> 1511</span>&#160;    <span class="comment">! -- modules</span></div>
 <div class="line"><a name="l01512"></a><span class="lineno"> 1512</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespaceconstantsmodule.html">constantsmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespaceconstantsmodule.html#abab5757666b9ddd2726c20ce48dd0050">dzero</a></div>
 <div class="line"><a name="l01513"></a><span class="lineno"> 1513</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l01514"></a><span class="lineno"> 1514</span>&#160;    <span class="keywordtype">class</span>(gwfbuytype) :: this</div>
+<div class="line"><a name="l01514"></a><span class="lineno"> 1514</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structgwfbuymodule_1_1gwfbuytype.html">gwfbuytype</a>) :: this</div>
 <div class="line"><a name="l01515"></a><span class="lineno"> 1515</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l01516"></a><span class="lineno"> 1516</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l01517"></a><span class="lineno"> 1517</span>&#160;    <span class="comment">!</span></div>
@@ -1591,14 +1636,14 @@ $(function() {
 <div class="line"><a name="l01519"></a><span class="lineno"> 1519</span>&#160;    <span class="keyword">call </span>this%NumericalPackageType%allocate_scalars()</div>
 <div class="line"><a name="l01520"></a><span class="lineno"> 1520</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l01521"></a><span class="lineno"> 1521</span>&#160;    <span class="comment">! -- Allocate</span></div>
-<div class="line"><a name="l01522"></a><span class="lineno"> 1522</span>&#160;    <span class="keyword">call </span>mem_allocate(this%ioutdense, <span class="stringliteral">&#39;IOUTDENSE&#39;</span>, this%memoryPath)</div>
-<div class="line"><a name="l01523"></a><span class="lineno"> 1523</span>&#160;    <span class="keyword">call </span>mem_allocate(this%iform, <span class="stringliteral">&#39;IFORM&#39;</span>, this%memoryPath)</div>
-<div class="line"><a name="l01524"></a><span class="lineno"> 1524</span>&#160;    <span class="keyword">call </span>mem_allocate(this%ireadelev, <span class="stringliteral">&#39;IREADELEV&#39;</span>, this%memoryPath)</div>
-<div class="line"><a name="l01525"></a><span class="lineno"> 1525</span>&#160;    <span class="keyword">call </span>mem_allocate(this%ireadconcbuy, <span class="stringliteral">&#39;IREADCONCBUY&#39;</span>, this%memoryPath)</div>
-<div class="line"><a name="l01526"></a><span class="lineno"> 1526</span>&#160;    <span class="keyword">call </span>mem_allocate(this%iconcset, <span class="stringliteral">&#39;ICONCSET&#39;</span>, this%memoryPath)</div>
-<div class="line"><a name="l01527"></a><span class="lineno"> 1527</span>&#160;    <span class="keyword">call </span>mem_allocate(this%denseref, <span class="stringliteral">&#39;DENSEREF&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l01522"></a><span class="lineno"> 1522</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%ioutdense, <span class="stringliteral">&#39;IOUTDENSE&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l01523"></a><span class="lineno"> 1523</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%iform, <span class="stringliteral">&#39;IFORM&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l01524"></a><span class="lineno"> 1524</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%ireadelev, <span class="stringliteral">&#39;IREADELEV&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l01525"></a><span class="lineno"> 1525</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%ireadconcbuy, <span class="stringliteral">&#39;IREADCONCBUY&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l01526"></a><span class="lineno"> 1526</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%iconcset, <span class="stringliteral">&#39;ICONCSET&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l01527"></a><span class="lineno"> 1527</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%denseref, <span class="stringliteral">&#39;DENSEREF&#39;</span>, this%memoryPath)</div>
 <div class="line"><a name="l01528"></a><span class="lineno"> 1528</span>&#160; </div>
-<div class="line"><a name="l01529"></a><span class="lineno"> 1529</span>&#160;    <span class="keyword">call </span>mem_allocate(this%nrhospecies, <span class="stringliteral">&#39;NRHOSPECIES&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l01529"></a><span class="lineno"> 1529</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%nrhospecies, <span class="stringliteral">&#39;NRHOSPECIES&#39;</span>, this%memoryPath)</div>
 <div class="line"><a name="l01530"></a><span class="lineno"> 1530</span>&#160;    </div>
 <div class="line"><a name="l01531"></a><span class="lineno"> 1531</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l01532"></a><span class="lineno"> 1532</span>&#160;    <span class="comment">! -- Initialize</span></div>
@@ -1617,7 +1662,7 @@ $(function() {
 <div class="line"><a name="l01545"></a><span class="lineno"> 1545</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l01546"></a><span class="lineno"> 1546</span>&#160;    <span class="comment">! -- Return</span></div>
 <div class="line"><a name="l01547"></a><span class="lineno"> 1547</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l01548"></a><span class="lineno"> 1548</span>&#160;  <span class="keyword">end subroutine </span>allocate_scalars</div>
+<div class="line"><a name="l01548"></a><span class="lineno"> 1548</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacegwfbuymodule.html#a3e80d610c8e0c1e7c9a75c17a66f8a5f">allocate_scalars</a></div>
 <div class="line"><a name="l01549"></a><span class="lineno"> 1549</span>&#160; </div>
 <div class="line"><a name="l01550"></a><span class="lineno"> 1550</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacegwfbuymodule.html#aee878e8aa5ce9eeda029b4124d1d4c74">allocate_arrays</a>(this, nodes)</div>
 <div class="line"><a name="l01551"></a><span class="lineno"><a class="line" href="namespacegwfbuymodule.html#aee878e8aa5ce9eeda029b4124d1d4c74"> 1551</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
@@ -1628,19 +1673,19 @@ $(function() {
 <div class="line"><a name="l01556"></a><span class="lineno"> 1556</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l01557"></a><span class="lineno"> 1557</span>&#160;    <span class="comment">! -- modules</span></div>
 <div class="line"><a name="l01558"></a><span class="lineno"> 1558</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l01559"></a><span class="lineno"> 1559</span>&#160;    <span class="keywordtype">class</span>(gwfbuytype) :: this</div>
+<div class="line"><a name="l01559"></a><span class="lineno"> 1559</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structgwfbuymodule_1_1gwfbuytype.html">gwfbuytype</a>) :: this</div>
 <div class="line"><a name="l01560"></a><span class="lineno"> 1560</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: nodes</div>
 <div class="line"><a name="l01561"></a><span class="lineno"> 1561</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l01562"></a><span class="lineno"> 1562</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: i</div>
 <div class="line"><a name="l01563"></a><span class="lineno"> 1563</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l01564"></a><span class="lineno"> 1564</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l01565"></a><span class="lineno"> 1565</span>&#160;    <span class="comment">! -- Allocate</span></div>
-<div class="line"><a name="l01566"></a><span class="lineno"> 1566</span>&#160;    <span class="keyword">call </span>mem_allocate(this%dense, nodes, <span class="stringliteral">&#39;DENSE&#39;</span>, this%memoryPath)</div>
-<div class="line"><a name="l01567"></a><span class="lineno"> 1567</span>&#160;    <span class="keyword">call </span>mem_allocate(this%concbuy, 0, <span class="stringliteral">&#39;CONCBUY&#39;</span>, this%memoryPath)</div>
-<div class="line"><a name="l01568"></a><span class="lineno"> 1568</span>&#160;    <span class="keyword">call </span>mem_allocate(this%elev, nodes, <span class="stringliteral">&#39;ELEV&#39;</span>, this%memoryPath)</div>
-<div class="line"><a name="l01569"></a><span class="lineno"> 1569</span>&#160;    <span class="keyword">call </span>mem_allocate(this%drhodc, this%nrhospecies, <span class="stringliteral">&#39;DRHODC&#39;</span>, this%memoryPath)</div>
-<div class="line"><a name="l01570"></a><span class="lineno"> 1570</span>&#160;    <span class="keyword">call </span>mem_allocate(this%crhoref, this%nrhospecies, <span class="stringliteral">&#39;CRHOREF&#39;</span>, this%memoryPath)</div>
-<div class="line"><a name="l01571"></a><span class="lineno"> 1571</span>&#160;    <span class="keyword">call </span>mem_allocate(this%ctemp, this%nrhospecies, <span class="stringliteral">&#39;CTEMP&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l01566"></a><span class="lineno"> 1566</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%dense, nodes, <span class="stringliteral">&#39;DENSE&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l01567"></a><span class="lineno"> 1567</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%concbuy, 0, <span class="stringliteral">&#39;CONCBUY&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l01568"></a><span class="lineno"> 1568</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%elev, nodes, <span class="stringliteral">&#39;ELEV&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l01569"></a><span class="lineno"> 1569</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%drhodc, this%nrhospecies, <span class="stringliteral">&#39;DRHODC&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l01570"></a><span class="lineno"> 1570</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%crhoref, this%nrhospecies, <span class="stringliteral">&#39;CRHOREF&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l01571"></a><span class="lineno"> 1571</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%ctemp, this%nrhospecies, <span class="stringliteral">&#39;CTEMP&#39;</span>, this%memoryPath)</div>
 <div class="line"><a name="l01572"></a><span class="lineno"> 1572</span>&#160;    <span class="keyword">allocate</span>(this%cmodelname(this%nrhospecies))</div>
 <div class="line"><a name="l01573"></a><span class="lineno"> 1573</span>&#160;    <span class="keyword">allocate</span>(this%cauxspeciesname(this%nrhospecies))</div>
 <div class="line"><a name="l01574"></a><span class="lineno"> 1574</span>&#160;    <span class="keyword">allocate</span>(this%modelconc(this%nrhospecies))</div>
@@ -1664,8 +1709,8 @@ $(function() {
 <div class="line"><a name="l01592"></a><span class="lineno"> 1592</span>&#160;    <span class="keywordflow">return</span></div>
 <div class="line"><a name="l01593"></a><span class="lineno"> 1593</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacegwfbuymodule.html#aee878e8aa5ce9eeda029b4124d1d4c74">allocate_arrays</a></div>
 <div class="line"><a name="l01594"></a><span class="lineno"> 1594</span>&#160; </div>
-<div class="line"><a name="l01595"></a><span class="lineno"> 1595</span>&#160;  <span class="keyword">subroutine </span>read_options(this)</div>
-<div class="line"><a name="l01596"></a><span class="lineno"> 1596</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l01595"></a><span class="lineno"> 1595</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacegwfbuymodule.html#a0e88c756f125aeb05acb4ac475cf3f18">read_options</a>(this)</div>
+<div class="line"><a name="l01596"></a><span class="lineno"><a class="line" href="namespacegwfbuymodule.html#a0e88c756f125aeb05acb4ac475cf3f18"> 1596</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l01597"></a><span class="lineno"> 1597</span>&#160;<span class="comment">! read_options</span></div>
 <div class="line"><a name="l01598"></a><span class="lineno"> 1598</span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l01599"></a><span class="lineno"> 1599</span>&#160;<span class="comment">!</span></div>
@@ -1675,7 +1720,7 @@ $(function() {
 <div class="line"><a name="l01603"></a><span class="lineno"> 1603</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespaceopenspecmodule.html">openspecmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespaceopenspecmodule.html#a5cd9b8ccff306158f81ed8cc744b1e46">access</a>, <a class="code" href="namespaceopenspecmodule.html#ade3198b3fa7a2972dae70d888f866536">form</a></div>
 <div class="line"><a name="l01604"></a><span class="lineno"> 1604</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespaceinputoutputmodule.html">inputoutputmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespaceinputoutputmodule.html#a653efe7e8a111c5e477fea26e0b04fe5">urword</a>, <a class="code" href="namespaceinputoutputmodule.html#a535bdfca3d31ebc3a8e4bd5af6890d55">getunit</a>, <a class="code" href="namespaceinputoutputmodule.html#a12462c53c53955327093c22ab7b89d99">urdaux</a>, <a class="code" href="namespaceinputoutputmodule.html#ae97851e3edae8d9809e384058a1a4d52">openfile</a></div>
 <div class="line"><a name="l01605"></a><span class="lineno"> 1605</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l01606"></a><span class="lineno"> 1606</span>&#160;    <span class="keywordtype">class</span>(gwfbuytype) :: this</div>
+<div class="line"><a name="l01606"></a><span class="lineno"> 1606</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structgwfbuymodule_1_1gwfbuytype.html">gwfbuytype</a>) :: this</div>
 <div class="line"><a name="l01607"></a><span class="lineno"> 1607</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l01608"></a><span class="lineno"> 1608</span>&#160;    <span class="keywordtype">character(len=LINELENGTH)</span> :: errmsg, keyword</div>
 <div class="line"><a name="l01609"></a><span class="lineno"> 1609</span>&#160;    <span class="keywordtype">character(len=MAXCHARLEN)</span> :: fname</div>
@@ -1741,7 +1786,7 @@ $(function() {
 <div class="line"><a name="l01669"></a><span class="lineno"> 1669</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l01670"></a><span class="lineno"> 1670</span>&#160;    <span class="comment">! -- Return</span></div>
 <div class="line"><a name="l01671"></a><span class="lineno"> 1671</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l01672"></a><span class="lineno"> 1672</span>&#160;  <span class="keyword">end subroutine </span>read_options</div>
+<div class="line"><a name="l01672"></a><span class="lineno"> 1672</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacegwfbuymodule.html#a0e88c756f125aeb05acb4ac475cf3f18">read_options</a></div>
 <div class="line"><a name="l01673"></a><span class="lineno"> 1673</span>&#160; </div>
 <div class="line"><a name="l01674"></a><span class="lineno"> 1674</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacegwfbuymodule.html#a4bfb087dd22f740704ffa194593c6f73">set_concentration_pointer</a>(this, modelname, conc, icbund)</div>
 <div class="line"><a name="l01675"></a><span class="lineno"><a class="line" href="namespacegwfbuymodule.html#a4bfb087dd22f740704ffa194593c6f73"> 1675</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
@@ -1755,7 +1800,7 @@ $(function() {
 <div class="line"><a name="l01683"></a><span class="lineno"> 1683</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l01684"></a><span class="lineno"> 1684</span>&#160;    <span class="comment">! -- modules</span></div>
 <div class="line"><a name="l01685"></a><span class="lineno"> 1685</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l01686"></a><span class="lineno"> 1686</span>&#160;    <span class="keywordtype">class</span>(gwfbuytype) :: this</div>
+<div class="line"><a name="l01686"></a><span class="lineno"> 1686</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structgwfbuymodule_1_1gwfbuytype.html">gwfbuytype</a>) :: this</div>
 <div class="line"><a name="l01687"></a><span class="lineno"> 1687</span>&#160;    <span class="keywordtype">character(len=LENMODELNAME)</span>, <span class="keywordtype">intent(in)</span> :: modelname</div>
 <div class="line"><a name="l01688"></a><span class="lineno"> 1688</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span> :: conc</div>
 <div class="line"><a name="l01689"></a><span class="lineno"> 1689</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span> :: icbund</div>
@@ -1781,10 +1826,14 @@ $(function() {
 <div class="line"><a name="l01709"></a><span class="lineno"> 1709</span>&#160;  </div>
 <div class="line"><a name="l01710"></a><span class="lineno"> 1710</span>&#160;<span class="keyword">end module </span>GwfBuyModule</div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <div class="ttc" id="anamespacebndmodule_html"><div class="ttname"><a href="namespacebndmodule.html">bndmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_boundary_package_8f90_source.html#l00001">BoundaryPackage.f90:1</a></div></div>
 <div class="ttc" id="anamespacegwfbuymodule_html"><div class="ttname"><a href="namespacegwfbuymodule.html">gwfbuymodule</a></div><div class="ttdef"><b>Definition:</b> <a href="gwf3buy8_8f90_source.html#l00005">gwf3buy8.f90:5</a></div></div>
 <div class="ttc" id="anamespacegwfbuymodule_html_a9d9c74652752a291e6258f7ddbc964a7"><div class="ttname"><a href="namespacegwfbuymodule.html#a9d9c74652752a291e6258f7ddbc964a7">gwfbuymodule::get_bnd_density</a></div><div class="ttdeci">real(dp) function get_bnd_density(n, locdense, locconc, denseref, drhodc, crhoref, ctemp, auxvar)</div><div class="ttdef"><b>Definition:</b> <a href="gwf3buy8_8f90_source.html#l00457">gwf3buy8.f90:457</a></div></div>
+<div class="ttc" id="anamespacegwfbuymodule_html_aad5e64467e7a2573634217e3bb04f512"><div class="ttname"><a href="namespacegwfbuymodule.html#aad5e64467e7a2573634217e3bb04f512">gwfbuymodule::buy_ar</a></div><div class="ttdeci">subroutine buy_ar(this, npf, ibound)</div><div class="ttdef"><b>Definition:</b> <a href="gwf3buy8_8f90_source.html#l00181">gwf3buy8.f90:181</a></div></div>
+<div class="ttc" id="ainterfacememorymanagermodule_1_1mem__reallocate_html"><div class="ttname"><a href="interfacememorymanagermodule_1_1mem__reallocate.html">memorymanagermodule::mem_reallocate</a></div><div class="ttdef"><b>Definition:</b> <a href="_memory_manager_8f90_source.html#l00064">MemoryManager.f90:64</a></div></div>
 <div class="ttc" id="anamespacekindmodule_html"><div class="ttname"><a href="namespacekindmodule.html">kindmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="kind_8f90_source.html#l00001">kind.f90:1</a></div></div>
+<div class="ttc" id="anamespacegwfbuymodule_html_a9ed716cc62d95ab9907052ffa651d1aa"><div class="ttname"><a href="namespacegwfbuymodule.html#a9ed716cc62d95ab9907052ffa651d1aa">gwfbuymodule::buy_cf_ghb</a></div><div class="ttdeci">subroutine buy_cf_ghb(packobj, hnew, dense, elev, denseref, locelev, locdense, locconc, drhodc, crhoref, ctemp, iform)</div><div class="ttdef"><b>Definition:</b> <a href="gwf3buy8_8f90_source.html#l00508">gwf3buy8.f90:508</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_abab5757666b9ddd2726c20ce48dd0050"><div class="ttname"><a href="namespaceconstantsmodule.html#abab5757666b9ddd2726c20ce48dd0050">constantsmodule::dzero</a></div><div class="ttdeci">real(dp), parameter dzero</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00045">Constants.f90:45</a></div></div>
 <div class="ttc" id="anamespacesimmodule_html_a1c78a6fda06b630c738bb654aa6bd816"><div class="ttname"><a href="namespacesimmodule.html#a1c78a6fda06b630c738bb654aa6bd816">simmodule::store_error_unit</a></div><div class="ttdeci">subroutine, public store_error_unit(iunit)</div><div class="ttdef"><b>Definition:</b> <a href="_sim_8f90_source.html#l00177">Sim.f90:177</a></div></div>
 <div class="ttc" id="anamespacebasedismodule_html"><div class="ttname"><a href="namespacebasedismodule.html">basedismodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_discretization_base_8f90_source.html#l00001">DiscretizationBase.f90:1</a></div></div>
@@ -1797,48 +1846,74 @@ $(function() {
 <div class="ttc" id="anamespaceinputoutputmodule_html_a12462c53c53955327093c22ab7b89d99"><div class="ttname"><a href="namespaceinputoutputmodule.html#a12462c53c53955327093c22ab7b89d99">inputoutputmodule::urdaux</a></div><div class="ttdeci">subroutine, public urdaux(naux, inunit, iout, lloc, istart, istop, auxname, line, text)</div><div class="ttdef"><b>Definition:</b> <a href="_input_output_8f90_source.html#l01801">InputOutput.f90:1801</a></div></div>
 <div class="ttc" id="anamespaceopenspecmodule_html"><div class="ttname"><a href="namespaceopenspecmodule.html">openspecmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_open_spec_8f90_source.html#l00001">OpenSpec.f90:1</a></div></div>
 <div class="ttc" id="anamespacegwfbuymodule_html_a627e3b4f6d77574bed6996c9185fa8e6"><div class="ttname"><a href="namespacegwfbuymodule.html#a627e3b4f6d77574bed6996c9185fa8e6">gwfbuymodule::buy_fc</a></div><div class="ttdeci">subroutine buy_fc(this, kiter, njasln, amat, idxglo, rhs, hnew)</div><div class="ttdef"><b>Definition:</b> <a href="gwf3buy8_8f90_source.html#l00926">gwf3buy8.f90:926</a></div></div>
+<div class="ttc" id="anamespacegwfbuymodule_html_a3e8151a3192e45930c4ec84b91aee333"><div class="ttname"><a href="namespacegwfbuymodule.html#a3e8151a3192e45930c4ec84b91aee333">gwfbuymodule::buy_cq</a></div><div class="ttdeci">subroutine buy_cq(this, hnew, flowja)</div><div class="ttdef"><b>Definition:</b> <a href="gwf3buy8_8f90_source.html#l01020">gwf3buy8.f90:1020</a></div></div>
 <div class="ttc" id="anamespacesimmodule_html_a4c46e49de78d4498dd4ec106357775e6"><div class="ttname"><a href="namespacesimmodule.html#a4c46e49de78d4498dd4ec106357775e6">simmodule::count_errors</a></div><div class="ttdeci">integer(i4b) function, public count_errors()</div><div class="ttdef"><b>Definition:</b> <a href="_sim_8f90_source.html#l00043">Sim.f90:43</a></div></div>
 <div class="ttc" id="anamespacesimmodule_html"><div class="ttname"><a href="namespacesimmodule.html">simmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_sim_8f90_source.html#l00001">Sim.f90:1</a></div></div>
 <div class="ttc" id="anamespacegwfbuymodule_html_a8cc8f4785fcc3d7f4cc952ddda6f5666"><div class="ttname"><a href="namespacegwfbuymodule.html#a8cc8f4785fcc3d7f4cc952ddda6f5666">gwfbuymodule::buy_cf_sfr</a></div><div class="ttdeci">subroutine buy_cf_sfr(packobj, hnew, dense, elev, denseref, locdense, locconc, drhodc, crhoref, ctemp, iform)</div><div class="ttdef"><b>Definition:</b> <a href="gwf3buy8_8f90_source.html#l00805">gwf3buy8.f90:805</a></div></div>
+<div class="ttc" id="astructgwfnpfmodule_1_1gwfnpftype_html"><div class="ttname"><a href="structgwfnpfmodule_1_1gwfnpftype.html">gwfnpfmodule::gwfnpftype</a></div><div class="ttdef"><b>Definition:</b> <a href="gwf3npf8_8f90_source.html#l00028">gwf3npf8.f90:28</a></div></div>
+<div class="ttc" id="anamespacegwfbuymodule_html_ae5b0ba797f20cf610f2612e6ee6a62e7"><div class="ttname"><a href="namespacegwfbuymodule.html#ae5b0ba797f20cf610f2612e6ee6a62e7">gwfbuymodule::buy_df</a></div><div class="ttdeci">subroutine buy_df(this, dis)</div><div class="ttdef"><b>Definition:</b> <a href="gwf3buy8_8f90_source.html#l00141">gwf3buy8.f90:141</a></div></div>
+<div class="ttc" id="anamespacegwfbuymodule_html_a077ff4f37c00b6536645fc4d184f3145"><div class="ttname"><a href="namespacegwfbuymodule.html#a077ff4f37c00b6536645fc4d184f3145">gwfbuymodule::buy_cf</a></div><div class="ttdeci">subroutine buy_cf(this, kiter)</div><div class="ttdef"><b>Definition:</b> <a href="gwf3buy8_8f90_source.html#l00330">gwf3buy8.f90:330</a></div></div>
 <div class="ttc" id="anamespacegwfbuymodule_html_a2276d49daabf4a511728b87d53a141f9"><div class="ttname"><a href="namespacegwfbuymodule.html#a2276d49daabf4a511728b87d53a141f9">gwfbuymodule::buy_rp</a></div><div class="ttdeci">subroutine buy_rp(this)</div><div class="ttdef"><b>Definition:</b> <a href="gwf3buy8_8f90_source.html#l00271">gwf3buy8.f90:271</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_a060d310ded5535ce2dc85bd1ca1afd3d"><div class="ttname"><a href="namespaceconstantsmodule.html#a060d310ded5535ce2dc85bd1ca1afd3d">constantsmodule::linelength</a></div><div class="ttdeci">integer(i4b), parameter linelength</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00028">Constants.f90:28</a></div></div>
 <div class="ttc" id="anamespacegwfbuymodule_html_afb5ea963ecedb22bf478b009c13c7cf1"><div class="ttname"><a href="namespacegwfbuymodule.html#afb5ea963ecedb22bf478b009c13c7cf1">gwfbuymodule::buy_calcdens</a></div><div class="ttdeci">subroutine buy_calcdens(this)</div><div class="ttdef"><b>Definition:</b> <a href="gwf3buy8_8f90_source.html#l01447">gwf3buy8.f90:1447</a></div></div>
 <div class="ttc" id="anamespacegwfbuymodule_html_a280c013f7e5cdc83e8fc21d588ff8ce3"><div class="ttname"><a href="namespacegwfbuymodule.html#a280c013f7e5cdc83e8fc21d588ff8ce3">gwfbuymodule::buy_cr</a></div><div class="ttdeci">subroutine, public buy_cr(buyobj, name_model, inunit, iout)</div><div class="ttdef"><b>Definition:</b> <a href="gwf3buy8_8f90_source.html#l00107">gwf3buy8.f90:107</a></div></div>
 <div class="ttc" id="anamespacesimmodule_html_a0be97214c1d4fcf42bc4ddc27b111b61"><div class="ttname"><a href="namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61">simmodule::ustop</a></div><div class="ttdeci">subroutine, public ustop(stopmess, ioutlocal)</div><div class="ttdef"><b>Definition:</b> <a href="_sim_8f90_source.html#l00324">Sim.f90:324</a></div></div>
 <div class="ttc" id="anamespaceinputoutputmodule_html_a535bdfca3d31ebc3a8e4bd5af6890d55"><div class="ttname"><a href="namespaceinputoutputmodule.html#a535bdfca3d31ebc3a8e4bd5af6890d55">inputoutputmodule::getunit</a></div><div class="ttdeci">integer(i4b) function, public getunit()</div><div class="ttdef"><b>Definition:</b> <a href="_input_output_8f90_source.html#l00208">InputOutput.f90:208</a></div></div>
+<div class="ttc" id="ainterfacememorymanagermodule_1_1mem__allocate_html"><div class="ttname"><a href="interfacememorymanagermodule_1_1mem__allocate.html">memorymanagermodule::mem_allocate</a></div><div class="ttdef"><b>Definition:</b> <a href="_memory_manager_8f90_source.html#l00050">MemoryManager.f90:50</a></div></div>
 <div class="ttc" id="anamespacegwfbuymodule_html_a1c7119e85ddd46a92c3ca038d987ab8c"><div class="ttname"><a href="namespacegwfbuymodule.html#a1c7119e85ddd46a92c3ca038d987ab8c">gwfbuymodule::calchhterms</a></div><div class="ttdeci">subroutine calchhterms(this, n, m, icon, hn, hm, rhsterm, amatnn, amatnm)</div><div class="ttdef"><b>Definition:</b> <a href="gwf3buy8_8f90_source.html#l01345">gwf3buy8.f90:1345</a></div></div>
 <div class="ttc" id="anamespaceinputoutputmodule_html"><div class="ttname"><a href="namespaceinputoutputmodule.html">inputoutputmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_input_output_8f90_source.html#l00003">InputOutput.f90:3</a></div></div>
+<div class="ttc" id="anamespacegwfbuymodule_html_ab30b5c1a3760c346c449e58bafa2649f"><div class="ttname"><a href="namespacegwfbuymodule.html#ab30b5c1a3760c346c449e58bafa2649f">gwfbuymodule::buy_da</a></div><div class="ttdeci">subroutine buy_da(this)</div><div class="ttdef"><b>Definition:</b> <a href="gwf3buy8_8f90_source.html#l01060">gwf3buy8.f90:1060</a></div></div>
 <div class="ttc" id="anamespacegwfbuymodule_html_ad316c8aa62b82e8e27bb3c75768dd27b"><div class="ttname"><a href="namespacegwfbuymodule.html#ad316c8aa62b82e8e27bb3c75768dd27b">gwfbuymodule::buy_ad</a></div><div class="ttdeci">subroutine buy_ad(this)</div><div class="ttdef"><b>Definition:</b> <a href="gwf3buy8_8f90_source.html#l00311">gwf3buy8.f90:311</a></div></div>
 <div class="ttc" id="anamespacegwfbuymodule_html_ad10da9e2fe102865f23c83cb61cebcec"><div class="ttname"><a href="namespacegwfbuymodule.html#ad10da9e2fe102865f23c83cb61cebcec">gwfbuymodule::buy_cf_drn</a></div><div class="ttdeci">subroutine buy_cf_drn(packobj, hnew, dense, denseref)</div><div class="ttdef"><b>Definition:</b> <a href="gwf3buy8_8f90_source.html#l00700">gwf3buy8.f90:700</a></div></div>
+<div class="ttc" id="astructlakmodule_1_1laktype_html"><div class="ttname"><a href="structlakmodule_1_1laktype.html">lakmodule::laktype</a></div><div class="ttdef"><b>Definition:</b> <a href="gwf3lak8_8f90_source.html#l00049">gwf3lak8.f90:49</a></div></div>
+<div class="ttc" id="anamespacegwfbuymodule_html_a0e88c756f125aeb05acb4ac475cf3f18"><div class="ttname"><a href="namespacegwfbuymodule.html#a0e88c756f125aeb05acb4ac475cf3f18">gwfbuymodule::read_options</a></div><div class="ttdeci">subroutine read_options(this)</div><div class="ttdef"><b>Definition:</b> <a href="gwf3buy8_8f90_source.html#l01596">gwf3buy8.f90:1596</a></div></div>
 <div class="ttc" id="anamespacekindmodule_html_a2f6861418b5e7d3d602b77228232a470"><div class="ttname"><a href="namespacekindmodule.html#a2f6861418b5e7d3d602b77228232a470">kindmodule::i4b</a></div><div class="ttdeci">integer, parameter i4b</div><div class="ttdef"><b>Definition:</b> <a href="kind_8f90_source.html#l00009">kind.f90:9</a></div></div>
+<div class="ttc" id="astructgwfbuymodule_1_1concentrationpointer_html"><div class="ttname"><a href="structgwfbuymodule_1_1concentrationpointer.html">gwfbuymodule::concentrationpointer</a></div><div class="ttdef"><b>Definition:</b> <a href="gwf3buy8_8f90_source.html#l00024">gwf3buy8.f90:24</a></div></div>
+<div class="ttc" id="anamespacegwfbuymodule_html_a045903b8758418af7cf74ff95e77db1a"><div class="ttname"><a href="namespacegwfbuymodule.html#a045903b8758418af7cf74ff95e77db1a">gwfbuymodule::calcdens</a></div><div class="ttdeci">real(dp) function calcdens(denseref, drhodc, crhoref, conc)</div><div class="ttdef"><b>Definition:</b> <a href="gwf3buy8_8f90_source.html#l00078">gwf3buy8.f90:78</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html"><div class="ttname"><a href="namespaceconstantsmodule.html">constantsmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00001">Constants.f90:1</a></div></div>
+<div class="ttc" id="astructmawmodule_1_1mawtype_html"><div class="ttname"><a href="structmawmodule_1_1mawtype.html">mawmodule::mawtype</a></div><div class="ttdef"><b>Definition:</b> <a href="gwf3maw8_8f90_source.html#l00043">gwf3maw8.f90:43</a></div></div>
 <div class="ttc" id="anamespacetdismodule_html"><div class="ttname"><a href="namespacetdismodule.html">tdismodule</a></div><div class="ttdef"><b>Definition:</b> <a href="tdis_8f90_source.html#l00005">tdis.f90:5</a></div></div>
 <div class="ttc" id="anamespacesfrmodule_html"><div class="ttname"><a href="namespacesfrmodule.html">sfrmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="gwf3sfr8_8f90_source.html#l00001">gwf3sfr8.f90:1</a></div></div>
+<div class="ttc" id="anamespacegwfbuymodule_html_a91f12f6b88ac79575bf5aa6e1d4a36e4"><div class="ttname"><a href="namespacegwfbuymodule.html#a91f12f6b88ac79575bf5aa6e1d4a36e4">gwfbuymodule::buy_ot_dv</a></div><div class="ttdeci">subroutine buy_ot_dv(this, idvfl)</div><div class="ttdef"><b>Definition:</b> <a href="gwf3buy8_8f90_source.html#l00974">gwf3buy8.f90:974</a></div></div>
 <div class="ttc" id="anamespacegwfnpfmodule_html"><div class="ttname"><a href="namespacegwfnpfmodule.html">gwfnpfmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="gwf3npf8_8f90_source.html#l00001">gwf3npf8.f90:1</a></div></div>
 <div class="ttc" id="anamespacegwfbuymodule_html_a2bc9e0847e2019882dd27dc9ca2872a7"><div class="ttname"><a href="namespacegwfbuymodule.html#a2bc9e0847e2019882dd27dc9ca2872a7">gwfbuymodule::buy_cf_maw</a></div><div class="ttdeci">subroutine buy_cf_maw(packobj, hnew, dense, elev, denseref, locdense, locconc, drhodc, crhoref, ctemp, iform)</div><div class="ttdef"><b>Definition:</b> <a href="gwf3buy8_8f90_source.html#l00866">gwf3buy8.f90:866</a></div></div>
+<div class="ttc" id="anamespacegwfbuymodule_html_a3e80d610c8e0c1e7c9a75c17a66f8a5f"><div class="ttname"><a href="namespacegwfbuymodule.html#a3e80d610c8e0c1e7c9a75c17a66f8a5f">gwfbuymodule::allocate_scalars</a></div><div class="ttdeci">subroutine allocate_scalars(this)</div><div class="ttdef"><b>Definition:</b> <a href="gwf3buy8_8f90_source.html#l01505">gwf3buy8.f90:1505</a></div></div>
 <div class="ttc" id="anamespacegwfbuymodule_html_a3d93527a9c7cd66e113e5ce6425e8b94"><div class="ttname"><a href="namespacegwfbuymodule.html#a3d93527a9c7cd66e113e5ce6425e8b94">gwfbuymodule::calc_ghb_hcof_rhs_terms</a></div><div class="ttdeci">subroutine calc_ghb_hcof_rhs_terms(denseref, denseghb, densenode, elevghb, elevnode, hghb, hnode, cond, iform, rhsterm, hcofterm)</div><div class="ttdef"><b>Definition:</b> <a href="gwf3buy8_8f90_source.html#l00572">gwf3buy8.f90:572</a></div></div>
 <div class="ttc" id="anamespacegwfbuymodule_html_a4bfb087dd22f740704ffa194593c6f73"><div class="ttname"><a href="namespacegwfbuymodule.html#a4bfb087dd22f740704ffa194593c6f73">gwfbuymodule::set_concentration_pointer</a></div><div class="ttdeci">subroutine set_concentration_pointer(this, modelname, conc, icbund)</div><div class="ttdef"><b>Definition:</b> <a href="gwf3buy8_8f90_source.html#l01675">gwf3buy8.f90:1675</a></div></div>
+<div class="ttc" id="ainterfacememorymanagermodule_1_1mem__deallocate_html"><div class="ttname"><a href="interfacememorymanagermodule_1_1mem__deallocate.html">memorymanagermodule::mem_deallocate</a></div><div class="ttdef"><b>Definition:</b> <a href="_memory_manager_8f90_source.html#l00085">MemoryManager.f90:85</a></div></div>
 <div class="ttc" id="anamespacelakmodule_html"><div class="ttname"><a href="namespacelakmodule.html">lakmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="gwf3lak8_8f90_source.html#l00001">gwf3lak8.f90:1</a></div></div>
 <div class="ttc" id="anamespacememorymanagermodule_html"><div class="ttname"><a href="namespacememorymanagermodule.html">memorymanagermodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_memory_manager_8f90_source.html#l00001">MemoryManager.f90:1</a></div></div>
+<div class="ttc" id="anamespacegwfbuymodule_html_af75f8de1bb456d6edef13d300e22c84c"><div class="ttname"><a href="namespacegwfbuymodule.html#af75f8de1bb456d6edef13d300e22c84c">gwfbuymodule::buy_ar_bnd</a></div><div class="ttdeci">subroutine buy_ar_bnd(this, packobj, hnew)</div><div class="ttdef"><b>Definition:</b> <a href="gwf3buy8_8f90_source.html#l00216">gwf3buy8.f90:216</a></div></div>
 <div class="ttc" id="anamespacekindmodule_html_ae38bd3a7dfaf151094c26e1529259639"><div class="ttname"><a href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">kindmodule::dp</a></div><div class="ttdeci">integer, parameter dp</div><div class="ttdef"><b>Definition:</b> <a href="kind_8f90_source.html#l00007">kind.f90:7</a></div></div>
+<div class="ttc" id="astructgwfbuymodule_1_1gwfbuytype_html"><div class="ttname"><a href="structgwfbuymodule_1_1gwfbuytype.html">gwfbuymodule::gwfbuytype</a></div><div class="ttdef"><b>Definition:</b> <a href="gwf3buy8_8f90_source.html#l00029">gwf3buy8.f90:29</a></div></div>
 <div class="ttc" id="anamespaceopenspecmodule_html_ade3198b3fa7a2972dae70d888f866536"><div class="ttname"><a href="namespaceopenspecmodule.html#ade3198b3fa7a2972dae70d888f866536">openspecmodule::form</a></div><div class="ttdeci">character(len=20) form</div><div class="ttdef"><b>Definition:</b> <a href="_open_spec_8f90_source.html#l00007">OpenSpec.f90:7</a></div></div>
 <div class="ttc" id="anamespaceinputoutputmodule_html_a653efe7e8a111c5e477fea26e0b04fe5"><div class="ttname"><a href="namespaceinputoutputmodule.html#a653efe7e8a111c5e477fea26e0b04fe5">inputoutputmodule::urword</a></div><div class="ttdeci">subroutine, public urword(LINE, ICOL, ISTART, ISTOP, NCODE, N, R, IOUT, IN)</div><div class="ttdef"><b>Definition:</b> <a href="_input_output_8f90_source.html#l00747">InputOutput.f90:747</a></div></div>
+<div class="ttc" id="anamespacegwfbuymodule_html_a430cdfb8d5378619631d196d8767e1d2"><div class="ttname"><a href="namespacegwfbuymodule.html#a430cdfb8d5378619631d196d8767e1d2">gwfbuymodule::buy_calcelev</a></div><div class="ttdeci">subroutine buy_calcelev(this)</div><div class="ttdef"><b>Definition:</b> <a href="gwf3buy8_8f90_source.html#l01479">gwf3buy8.f90:1479</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_a2371bf2667814198ff255350fa3e3edd"><div class="ttname"><a href="namespaceconstantsmodule.html#a2371bf2667814198ff255350fa3e3edd">constantsmodule::lenmodelname</a></div><div class="ttdeci">integer(i4b), parameter lenmodelname</div><div class="ttdoc">maximum length of the model name</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00012">Constants.f90:12</a></div></div>
 <div class="ttc" id="anamespaceopenspecmodule_html_a5cd9b8ccff306158f81ed8cc744b1e46"><div class="ttname"><a href="namespaceopenspecmodule.html#a5cd9b8ccff306158f81ed8cc744b1e46">openspecmodule::access</a></div><div class="ttdeci">character(len=20) access</div><div class="ttdef"><b>Definition:</b> <a href="_open_spec_8f90_source.html#l00007">OpenSpec.f90:7</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_a9ee3f8405321b057b32648a5dc031e20"><div class="ttname"><a href="namespaceconstantsmodule.html#a9ee3f8405321b057b32648a5dc031e20">constantsmodule::lenauxname</a></div><div class="ttdeci">integer(i4b), parameter lenauxname</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00018">Constants.f90:18</a></div></div>
 <div class="ttc" id="anamespacetdismodule_html_ad3443c7d7da2a67a75174c39c6d40c84"><div class="ttname"><a href="namespacetdismodule.html#ad3443c7d7da2a67a75174c39c6d40c84">tdismodule::kstp</a></div><div class="ttdeci">integer(i4b), pointer, public kstp</div><div class="ttdoc">current time step number</div><div class="ttdef"><b>Definition:</b> <a href="tdis_8f90_source.html#l00025">tdis.f90:25</a></div></div>
+<div class="ttc" id="anamespacegwfbuymodule_html_afad33f0e9d7a6436b40c52758f6dca6f"><div class="ttname"><a href="namespacegwfbuymodule.html#afad33f0e9d7a6436b40c52758f6dca6f">gwfbuymodule::calcbuy</a></div><div class="ttdeci">subroutine calcbuy(this, n, m, icon, hn, hm, buy)</div><div class="ttdef"><b>Definition:</b> <a href="gwf3buy8_8f90_source.html#l01253">gwf3buy8.f90:1253</a></div></div>
 <div class="ttc" id="anamespaceinputoutputmodule_html_ae97851e3edae8d9809e384058a1a4d52"><div class="ttname"><a href="namespaceinputoutputmodule.html#ae97851e3edae8d9809e384058a1a4d52">inputoutputmodule::openfile</a></div><div class="ttdeci">subroutine, public openfile(iu, iout, fname, ftype, fmtarg_opt, accarg_opt, filstat_opt, mode_opt)</div><div class="ttdef"><b>Definition:</b> <a href="_input_output_8f90_source.html#l00034">InputOutput.f90:34</a></div></div>
 <div class="ttc" id="anamespacetdismodule_html_ae84d6ee69d7bba12d20a6255a398935b"><div class="ttname"><a href="namespacetdismodule.html#ae84d6ee69d7bba12d20a6255a398935b">tdismodule::kper</a></div><div class="ttdeci">integer(i4b), pointer, public kper</div><div class="ttdoc">current stress period number</div><div class="ttdef"><b>Definition:</b> <a href="tdis_8f90_source.html#l00024">tdis.f90:24</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_ac9c1da291f7c6bfb35a47957c588ab20"><div class="ttname"><a href="namespaceconstantsmodule.html#ac9c1da291f7c6bfb35a47957c588ab20">constantsmodule::maxcharlen</a></div><div class="ttdeci">integer(i4b), parameter maxcharlen</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00030">Constants.f90:30</a></div></div>
+<div class="ttc" id="anamespacegwfbuymodule_html_a81d907dd102a8f2787ac8f666b9f0bdb"><div class="ttname"><a href="namespacegwfbuymodule.html#a81d907dd102a8f2787ac8f666b9f0bdb">gwfbuymodule::read_packagedata</a></div><div class="ttdeci">subroutine read_packagedata(this)</div><div class="ttdef"><b>Definition:</b> <a href="gwf3buy8_8f90_source.html#l01160">gwf3buy8.f90:1160</a></div></div>
+<div class="ttc" id="astructsfrmodule_1_1sfrtype_html"><div class="ttname"><a href="structsfrmodule_1_1sfrtype.html">sfrmodule::sfrtype</a></div><div class="ttdef"><b>Definition:</b> <a href="gwf3sfr8_8f90_source.html#l00036">gwf3sfr8.f90:36</a></div></div>
 <div class="ttc" id="anamespacenumericalpackagemodule_html"><div class="ttname"><a href="namespacenumericalpackagemodule.html">numericalpackagemodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_numerical_package_8f90_source.html#l00001">NumericalPackage.f90:1</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_a636a1fbcffa24ababa57ac244ee2217f"><div class="ttname"><a href="namespaceconstantsmodule.html#a636a1fbcffa24ababa57ac244ee2217f">constantsmodule::dhnoflo</a></div><div class="ttdeci">real(dp), parameter dhnoflo</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00072">Constants.f90:72</a></div></div>
+<div class="ttc" id="anamespacegwfbuymodule_html_a576621c1f09d954aefab444df188535c"><div class="ttname"><a href="namespacegwfbuymodule.html#a576621c1f09d954aefab444df188535c">gwfbuymodule::buy_cf_riv</a></div><div class="ttdeci">subroutine buy_cf_riv(packobj, hnew, dense, elev, denseref, locelev, locdense, locconc, drhodc, crhoref, ctemp, iform)</div><div class="ttdef"><b>Definition:</b> <a href="gwf3buy8_8f90_source.html#l00627">gwf3buy8.f90:627</a></div></div>
+<div class="ttc" id="anamespacegwfbuymodule_html_a083c65aa2b34b9b7cfd1f1d6effb92c6"><div class="ttname"><a href="namespacegwfbuymodule.html#a083c65aa2b34b9b7cfd1f1d6effb92c6">gwfbuymodule::buy_cf_bnd</a></div><div class="ttdeci">subroutine buy_cf_bnd(this, packobj, hnew)</div><div class="ttdef"><b>Definition:</b> <a href="gwf3buy8_8f90_source.html#l00354">gwf3buy8.f90:354</a></div></div>
+<div class="ttc" id="anamespacegwfbuymodule_html_aa22728d20def7fcbd66a55b9163968f6"><div class="ttname"><a href="namespacegwfbuymodule.html#aa22728d20def7fcbd66a55b9163968f6">gwfbuymodule::read_dimensions</a></div><div class="ttdeci">subroutine read_dimensions(this)</div><div class="ttdef"><b>Definition:</b> <a href="gwf3buy8_8f90_source.html#l01102">gwf3buy8.f90:1102</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_af918ac22cd0b232deea67660bfbc9ce1"><div class="ttname"><a href="namespaceconstantsmodule.html#af918ac22cd0b232deea67660bfbc9ce1">constantsmodule::done</a></div><div class="ttdeci">real(dp), parameter done</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00056">Constants.f90:56</a></div></div>
 <div class="ttc" id="anamespacemawmodule_html"><div class="ttname"><a href="namespacemawmodule.html">mawmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="gwf3maw8_8f90_source.html#l00001">gwf3maw8.f90:1</a></div></div>
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_32e188284d239da8bb14ec1dabb0c35f.html">Model</a></li><li class="navelem"><a class="el" href="dir_5aefb7a434fc869900e7ccf685166f81.html">GroundWaterFlow</a></li><li class="navelem"><a class="el" href="gwf3buy8_8f90.html">gwf3buy8.f90</a></li>
+    <li class="footer">Generated on Thu Jun 24 2021 19:50:09 for MODFLOW 6 by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -5,13 +5,22 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MODFLOW 6 Code Documentation: Data Fields - Variables</title>
+<title>MODFLOW 6: Data Fields - Variables</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="CustomDoxygen.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -21,9 +30,12 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="mf6-triangular-grid.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">MODFLOW 6 Code Documentation
+   <div id="projectname">MODFLOW 6
+   &#160;<span id="projectnumber">version 6.2.2</span>
    </div>
+   <div id="projectbrief">MODFLOW 6 Code Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -36,17 +48,93 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Modules</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Data&#160;Types&#160;List</span></a></li>
+      <li><a href="files.html"><span>Files</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Data&#160;Types&#160;List</span></a></li>
+      <li><a href="classes.html"><span>Data&#160;Types</span></a></li>
+      <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li class="current"><a href="functions.html"><span>Data&#160;Fields</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow3" class="tabs2">
+    <ul class="tablist">
+      <li><a href="functions.html"><span>All</span></a></li>
+      <li><a href="functions_func.html"><span>Functions/Subroutines</span></a></li>
+      <li class="current"><a href="functions_vars.html"><span>Variables</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow4" class="tabs3">
+    <ul class="tablist">
+      <li><a href="functions_vars.html#index_a"><span>a</span></a></li>
+      <li><a href="functions_vars_b.html#index_b"><span>b</span></a></li>
+      <li><a href="functions_vars_c.html#index_c"><span>c</span></a></li>
+      <li><a href="functions_vars_d.html#index_d"><span>d</span></a></li>
+      <li><a href="functions_vars_e.html#index_e"><span>e</span></a></li>
+      <li><a href="functions_vars_f.html#index_f"><span>f</span></a></li>
+      <li><a href="functions_vars_g.html#index_g"><span>g</span></a></li>
+      <li><a href="functions_vars_h.html#index_h"><span>h</span></a></li>
+      <li><a href="functions_vars_i.html#index_i"><span>i</span></a></li>
+      <li><a href="functions_vars_j.html#index_j"><span>j</span></a></li>
+      <li><a href="functions_vars_k.html#index_k"><span>k</span></a></li>
+      <li class="current"><a href="functions_vars_l.html#index_l"><span>l</span></a></li>
+      <li><a href="functions_vars_m.html#index_m"><span>m</span></a></li>
+      <li><a href="functions_vars_n.html#index_n"><span>n</span></a></li>
+      <li><a href="functions_vars_o.html#index_o"><span>o</span></a></li>
+      <li><a href="functions_vars_p.html#index_p"><span>p</span></a></li>
+      <li><a href="functions_vars_q.html#index_q"><span>q</span></a></li>
+      <li><a href="functions_vars_r.html#index_r"><span>r</span></a></li>
+      <li><a href="functions_vars_s.html#index_s"><span>s</span></a></li>
+      <li><a href="functions_vars_t.html#index_t"><span>t</span></a></li>
+      <li><a href="functions_vars_u.html#index_u"><span>u</span></a></li>
+      <li><a href="functions_vars_v.html#index_v"><span>v</span></a></li>
+      <li><a href="functions_vars_w.html#index_w"><span>w</span></a></li>
+      <li><a href="functions_vars_x.html#index_x"><span>x</span></a></li>
+      <li><a href="functions_vars_y.html#index_y"><span>y</span></a></li>
+      <li><a href="functions_vars_z.html#index_z"><span>z</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
-</div><!-- top -->
+$(document).ready(function(){initNavTree('functions_vars_l.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,32 +155,133 @@ $(function() {
 <h3><a id="index_l"></a>- l -</h3><ul>
 <li>l2norm0
 : <a class="el" href="structimslinearmodule_1_1imslineardatatype.html#a395148c3a430840ea4e9d73a26b556b9">imslinearmodule::imslineardatatype</a>
+, <a class="el" href="structnumericalsolutionmodule_1_1numericalsolutiontype.html#ab149688c85d225f0a6763c392b7a44d2">numericalsolutionmodule::numericalsolutiontype</a>
+</li>
+<li>label
+: <a class="el" href="structlistreadermodule_1_1listreadertype.html#ad8b2b346ed486e88109d17a78b359aa0">listreadermodule::listreadertype</a>
+</li>
+<li>labeled
+: <a class="el" href="structbudgetmodule_1_1budgettype.html#aecefc4f1ed9e1ae966bbc3b320a4e205">budgetmodule::budgettype</a>
+</li>
+<li>labeltitle
+: <a class="el" href="structbudgetmodule_1_1budgettype.html#a8ad64c56beb2578e2fe4392c0169e4e7">budgetmodule::budgettype</a>
+</li>
+<li>lakebot
+: <a class="el" href="structlakmodule_1_1laktype.html#a8fd857f77b5a74bb4dba160ab5f279c9">lakmodule::laktype</a>
+</li>
+<li>lakein
+: <a class="el" href="structlakmodule_1_1laktype.html#a00326e80ba4b1e5ce0f5028f008e4701">lakmodule::laktype</a>
+</li>
+<li>lakename
+: <a class="el" href="structlakmodule_1_1laktype.html#acbcfc054bb8a715dcce04974d2c4d8f8">lakmodule::laktype</a>
+</li>
+<li>lakeout
+: <a class="el" href="structlakmodule_1_1laktype.html#a64dba91526d000dc32064fde13708648">lakmodule::laktype</a>
+</li>
+<li>laketop
+: <a class="el" href="structlakmodule_1_1laktype.html#ad7a0f26b71e8867ca5091a2522fd4c36">lakmodule::laktype</a>
 </li>
 <li>lamatsaved
 : <a class="el" href="structxt3dmodule_1_1xt3dtype.html#a8e667eb0736e3989b09970be50f26278">xt3dmodule::xt3dtype</a>
 </li>
+<li>landflag
+: <a class="el" href="structuzfcellgroupmodule_1_1uzfcellgrouptype.html#a0ac3fe58cef8864b53480466fef4b2fc">uzfcellgroupmodule::uzfcellgrouptype</a>
+</li>
+<li>landtop
+: <a class="el" href="structuzfcellgroupmodule_1_1uzfcellgrouptype.html#a3494f813201ef993153e69d229bce486">uzfcellgroupmodule::uzfcellgrouptype</a>
+</li>
+<li>lastedge
+: <a class="el" href="structgwfnpfmodule_1_1gwfnpftype.html#ad70db2226fb845fbc5f359295da12eab">gwfnpfmodule::gwfnpftype</a>
+</li>
+<li>lastnode
+: <a class="el" href="structlistmodule_1_1listtype.html#adf690f03daabde18835745763bdf706c">listmodule::listtype</a>
+</li>
+<li>lastonper
+: <a class="el" href="structnumericalpackagemodule_1_1numericalpackagetype.html#a3d7fe3eaa5a6a384f44926f2f1a8b7ae">numericalpackagemodule::numericalpackagetype</a>
+</li>
+<li>laststring
+: <a class="el" href="structblockparsermodule_1_1blockparsertype.html#a2da3c97a44278de254d710d228e48d61">blockparsermodule::blockparsertype</a>
+</li>
 <li>lauxvar
 : <a class="el" href="structgwtaptmodule_1_1gwtapttype.html#a7c222edbd3f4e808df8fa9241e4fa684">gwtaptmodule::gwtapttype</a>
+, <a class="el" href="structlakmodule_1_1laktype.html#a4b9cdc5478d17c1b8ace5910fa9f1d3b">lakmodule::laktype</a>
 </li>
 <li>ldispersion
 : <a class="el" href="structxt3dmodule_1_1xt3dtype.html#a495b0bffceb762b4ffdb069bfe945796">xt3dmodule::xt3dtype</a>
 </li>
+<li>length
+: <a class="el" href="structsfrmodule_1_1sfrtype.html#af6f683bb9ac2b85f2822cac5157009a8">sfrmodule::sfrtype</a>
+</li>
+<li>lenuni
+: <a class="el" href="structbasedismodule_1_1disbasetype.html#a5c1e31568c7f4133d0c91164d2bced9e">basedismodule::disbasetype</a>
+</li>
 <li>level
 : <a class="el" href="structimslinearmodule_1_1imslineardatatype.html#a406b9514d86de2a3ca0a52359f0694d9">imslinearmodule::imslineardatatype</a>
+</li>
+<li>lhead_based
+: <a class="el" href="structgwfcsubmodule_1_1gwfcsubtype.html#a9abb4a6c73c7696ac233c27f6bc536b2">gwfcsubmodule::gwfcsubtype</a>
+</li>
+<li>line
+: <a class="el" href="structblockparsermodule_1_1blockparsertype.html#a9867cc4a50ddfd93e12bb87f1cb1a15e">blockparsermodule::blockparsertype</a>
+, <a class="el" href="structlistreadermodule_1_1listreadertype.html#a1630aa1b637f5165f83e5896b8579564">listreadermodule::listreadertype</a>
+</li>
+<li>lineout
+: <a class="el" href="structobsoutputmodule_1_1obsoutputtype.html#aca59872256872627c63aa7510e20da82">obsoutputmodule::obsoutputtype</a>
 </li>
 <li>linesep
 : <a class="el" href="structtablemodule_1_1tabletype.html#abd6f6ccb02b21e9d209f47a2892e4008">tablemodule::tabletype</a>
 </li>
+<li>linesread
+: <a class="el" href="structblockparsermodule_1_1blockparsertype.html#aecf80509fd4755e9feb6f4b717b82bce">blockparsermodule::blockparsertype</a>
+</li>
+<li>linmeth
+: <a class="el" href="structnumericalsolutionmodule_1_1numericalsolutiontype.html#a6645597e106e1712f99acc609be8ddd7">numericalsolutionmodule::numericalsolutiontype</a>
+</li>
+<li>list
+: <a class="el" href="structhashtablemodule_1_1hashlisttype.html#a449d5af808a8611a37bacaa01c55dc71">hashtablemodule::hashlisttype</a>
+, <a class="el" href="structmemorylistmodule_1_1memorylisttype.html#aa1b64e9de681898fc84e82d4587846d7">memorylistmodule::memorylisttype</a>
+, <a class="el" href="structtimearrayseriesmodule_1_1timearrayseriestype.html#a9dd52def077eb44d50b9880ef4020187">timearrayseriesmodule::timearrayseriestype</a>
+, <a class="el" href="structtimeseriesmodule_1_1timeseriestype.html#afe051d478f02744f29da016178eca21e">timeseriesmodule::timeseriestype</a>
+</li>
+<li>listdata
+: <a class="el" href="structhashtablemodule_1_1listtype.html#a36a08d7dedff6df243f0a99c804a475d">hashtablemodule::listtype</a>
+</li>
+<li>listlabel
+: <a class="el" href="structbndmodule_1_1bndtype.html#a9b7e42ddcaf5562e513fe6234e8050ed">bndmodule::bndtype</a>
+, <a class="el" href="structgwfcsubmodule_1_1gwfcsubtype.html#ae92880bbcf2cbe0002dc365c16ec36b8">gwfcsubmodule::gwfcsubtype</a>
+</li>
+<li>lkgwsink
+: <a class="el" href="structlakmodule_1_1laktype.html#a0abae467fc44ad1c751407c46c70b520">lakmodule::laktype</a>
+</li>
+<li>lloc
+: <a class="el" href="structblockparsermodule_1_1blockparsertype.html#acdb8a48de0f56d6e18d944596fd88809">blockparsermodule::blockparsertype</a>
+, <a class="el" href="structlistreadermodule_1_1listreadertype.html#a4bfd69a554346a31420c1599b4c9f253">listreadermodule::listreadertype</a>
+</li>
+<li>locdr
+: <a class="el" href="structnumericalsolutionmodule_1_1numericalsolutiontype.html#a5ac05be8a33d451987cc2d3749879e36">numericalsolutionmodule::numericalsolutiontype</a>
+</li>
+<li>locdv
+: <a class="el" href="structnumericalsolutionmodule_1_1numericalsolutiontype.html#a6fc5dce3f3e7a91461d35447b059acb3">numericalsolutionmodule::numericalsolutiontype</a>
+</li>
+<li>logicalsclr
+: <a class="el" href="structmemorytypemodule_1_1memorytype.html#acff7180f38cc0d29e513dd26d2ce45a4">memorytypemodule::memorytype</a>
+</li>
 <li>lorder
 : <a class="el" href="structimslinearmodule_1_1imslineardatatype.html#aac547e4e213acedc7f86085e424ca9b4">imslinearmodule::imslineardatatype</a>
 </li>
+<li>lrch
+: <a class="el" href="structnumericalsolutionmodule_1_1numericalsolutiontype.html#ae04065894c2b660320d2194ad3b33719">numericalsolutionmodule::numericalsolutiontype</a>
+</li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated on Thu Jun 24 2021 19:50:24 for MODFLOW 6 by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -5,13 +5,22 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MODFLOW 6 Code Documentation: /home/runner/work/modflow6/modflow6/src/Utilities/InputOutput.f90 Source File</title>
+<title>MODFLOW 6: /home/runner/work/modflow6/modflow6/src/Utilities/InputOutput.f90 Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="CustomDoxygen.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -21,9 +30,12 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="mf6-triangular-grid.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">MODFLOW 6 Code Documentation
+   <div id="projectname">MODFLOW 6
+   &#160;<span id="projectnumber">version 6.2.2</span>
    </div>
+   <div id="projectbrief">MODFLOW 6 Code Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -36,16 +48,54 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Modules</span></a></li>
+      <li><a href="annotated.html"><span>Data&#160;Types&#160;List</span></a></li>
+      <li class="current"><a href="files.html"><span>Files</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('_input_output_8f90_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,11 +110,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_ff383ddf1aa4eab0c4ce7910366d05a5.html">Utilities</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">InputOutput.f90</div>  </div>
@@ -1877,7 +1922,7 @@ $(function() {
 <div class="line"><a name="l01805"></a><span class="lineno"> 1805</span>&#160;<span class="comment">!    SPECIFICATIONS:</span></div>
 <div class="line"><a name="l01806"></a><span class="lineno"> 1806</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l01807"></a><span class="lineno"> 1807</span>&#160;    <span class="comment">! -- modules</span></div>
-<div class="line"><a name="l01808"></a><span class="lineno"> 1808</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacearrayhandlersmodule.html">arrayhandlersmodule</a>, <span class="keywordtype">only</span>: expandarray</div>
+<div class="line"><a name="l01808"></a><span class="lineno"> 1808</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacearrayhandlersmodule.html">arrayhandlersmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="interfacearrayhandlersmodule_1_1expandarray.html">expandarray</a></div>
 <div class="line"><a name="l01809"></a><span class="lineno"> 1809</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespaceconstantsmodule.html">constantsmodule</a>,     <span class="keywordtype">only</span>: <a class="code" href="namespaceconstantsmodule.html#a9ee3f8405321b057b32648a5dc031e20">lenauxname</a></div>
 <div class="line"><a name="l01810"></a><span class="lineno"> 1810</span>&#160;    <span class="comment">! -- implicit</span></div>
 <div class="line"><a name="l01811"></a><span class="lineno"> 1811</span>&#160;    <span class="keywordtype">implicit none</span></div>
@@ -1909,7 +1954,7 @@ $(function() {
 <div class="line"><a name="l01837"></a><span class="lineno"> 1837</span>&#160;      <span class="comment">!if(lloc &gt;= linelen) exit auxloop</span></div>
 <div class="line"><a name="l01838"></a><span class="lineno"> 1838</span>&#160;      <span class="keywordflow">if</span> (istart &gt;= linelen) <span class="keywordflow">exit</span> auxloop</div>
 <div class="line"><a name="l01839"></a><span class="lineno"> 1839</span>&#160;      naux = naux + 1</div>
-<div class="line"><a name="l01840"></a><span class="lineno"> 1840</span>&#160;      <span class="keyword">call </span>expandarray(auxname)</div>
+<div class="line"><a name="l01840"></a><span class="lineno"> 1840</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacearrayhandlersmodule_1_1expandarray.html">expandarray</a>(auxname)</div>
 <div class="line"><a name="l01841"></a><span class="lineno"> 1841</span>&#160;      auxname(naux) = line(istart:istop)</div>
 <div class="line"><a name="l01842"></a><span class="lineno"> 1842</span>&#160;      <span class="keywordflow">if</span>(iout &gt; 0) <span class="keywordflow">then</span></div>
 <div class="line"><a name="l01843"></a><span class="lineno"> 1843</span>&#160;        <span class="keyword">write</span>(iout, <span class="stringliteral">&quot;(4X,&#39;AUXILIARY &#39;,a,&#39; VARIABLE: &#39;,A)&quot;</span>)                     &amp;</div>
@@ -2330,7 +2375,7 @@ $(function() {
 <div class="line"><a name="l02258"></a><span class="lineno"> 2258</span>&#160;    <span class="comment">!readerrmsg = &#39;&#39;</span></div>
 <div class="line"><a name="l02259"></a><span class="lineno"> 2259</span>&#160;    line = comment</div>
 <div class="line"><a name="l02260"></a><span class="lineno"> 2260</span>&#160;    pcomments: <span class="keywordflow">do</span></div>
-<div class="line"><a name="l02261"></a><span class="lineno"> 2261</span>&#160;      <span class="keyword">call </span>get_line(iin, line, ierr)</div>
+<div class="line"><a name="l02261"></a><span class="lineno"> 2261</span>&#160;      <span class="keyword">call </span><a class="code" href="namespaceinputoutputmodule.html#a5c6e044368434dc29fe6191d7875b380">get_line</a>(iin, line, ierr)</div>
 <div class="line"><a name="l02262"></a><span class="lineno"> 2262</span>&#160;      <span class="keywordflow">if</span> (ierr == iostat_end) <span class="keywordflow">then</span></div>
 <div class="line"><a name="l02263"></a><span class="lineno"> 2263</span>&#160;        <span class="comment">! -- End of file reached.</span></div>
 <div class="line"><a name="l02264"></a><span class="lineno"> 2264</span>&#160;        <span class="comment">! -- Backspace is needed for gfortran.</span></div>
@@ -2406,8 +2451,8 @@ $(function() {
 <div class="line"><a name="l02334"></a><span class="lineno"> 2334</span>&#160;    <span class="keywordflow">return</span></div>
 <div class="line"><a name="l02335"></a><span class="lineno"> 2335</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespaceinputoutputmodule.html#a8a875888681ccf032a27de648aeab670">u9rdcom</a></div>
 <div class="line"><a name="l02336"></a><span class="lineno"> 2336</span>&#160; </div>
-<div class="line"><a name="l02337"></a><span class="lineno"> 2337</span>&#160;  <span class="keyword">subroutine </span>get_line(lun, line, iostat)</div>
-<div class="line"><a name="l02338"></a><span class="lineno"> 2338</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l02337"></a><span class="lineno"> 2337</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespaceinputoutputmodule.html#a5c6e044368434dc29fe6191d7875b380">get_line</a>(lun, line, iostat)</div>
+<div class="line"><a name="l02338"></a><span class="lineno"><a class="line" href="namespaceinputoutputmodule.html#a5c6e044368434dc29fe6191d7875b380"> 2338</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l02339"></a><span class="lineno"> 2339</span>&#160;<span class="comment">! Read an unlimited length line from unit number lun into a deferred-length</span></div>
 <div class="line"><a name="l02340"></a><span class="lineno"> 2340</span>&#160;<span class="comment">! characater string (line).  Tack on a single space to the end so that </span></div>
 <div class="line"><a name="l02341"></a><span class="lineno"> 2341</span>&#160;<span class="comment">! routines like URWORD continue to function as before.</span></div>
@@ -2462,10 +2507,11 @@ $(function() {
 <div class="line"><a name="l02390"></a><span class="lineno"> 2390</span>&#160;        <span class="keywordflow">exit</span></div>
 <div class="line"><a name="l02391"></a><span class="lineno"> 2391</span>&#160;<span class="keywordflow">      end if</span></div>
 <div class="line"><a name="l02392"></a><span class="lineno"> 2392</span>&#160;<span class="keywordflow">    end do</span></div>
-<div class="line"><a name="l02393"></a><span class="lineno"> 2393</span>&#160;  <span class="keyword">end subroutine </span>get_line  </div>
+<div class="line"><a name="l02393"></a><span class="lineno"> 2393</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespaceinputoutputmodule.html#a5c6e044368434dc29fe6191d7875b380">get_line</a>  </div>
 <div class="line"><a name="l02394"></a><span class="lineno"> 2394</span>&#160; </div>
 <div class="line"><a name="l02395"></a><span class="lineno"> 2395</span>&#160;<span class="keyword">END MODULE </span><a class="code" href="namespaceinputoutputmodule.html">inputoutputmodule</a></div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <div class="ttc" id="anamespaceconstantsmodule_html_a4c97c83c0354b0d18b16ed8ff425aaa4"><div class="ttname"><a href="namespaceconstantsmodule.html#a4c97c83c0354b0d18b16ed8ff425aaa4">constantsmodule::iustart</a></div><div class="ttdeci">integer(i4b), parameter iustart</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00037">Constants.f90:37</a></div></div>
 <div class="ttc" id="anamespaceinputoutputmodule_html_a3e5181ed33997c4d8e1936eee4c4867a"><div class="ttname"><a href="namespaceinputoutputmodule.html#a3e5181ed33997c4d8e1936eee4c4867a">inputoutputmodule::ubdsvb</a></div><div class="ttdeci">subroutine, public ubdsvb(IBDCHN, ICRL, Q, VAL, NVL, NAUX, LAUX)</div><div class="ttdef"><b>Definition:</b> <a href="_input_output_8f90_source.html#l00989">InputOutput.f90:989</a></div></div>
 <div class="ttc" id="anamespaceinputoutputmodule_html_a8b610cd194aad47e01e108c64b22aa61"><div class="ttname"><a href="namespaceinputoutputmodule.html#a8b610cd194aad47e01e108c64b22aa61">inputoutputmodule::ulstlb</a></div><div class="ttdeci">subroutine, public ulstlb(IOUT, LABEL, CAUX, NCAUX, NAUX)</div><div class="ttdef"><b>Definition:</b> <a href="_input_output_8f90_source.html#l00919">InputOutput.f90:919</a></div></div>
@@ -2476,6 +2522,7 @@ $(function() {
 <div class="ttc" id="anamespaceconstantsmodule_html_abab5757666b9ddd2726c20ce48dd0050"><div class="ttname"><a href="namespaceconstantsmodule.html#abab5757666b9ddd2726c20ce48dd0050">constantsmodule::dzero</a></div><div class="ttdeci">real(dp), parameter dzero</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00045">Constants.f90:45</a></div></div>
 <div class="ttc" id="anamespacegenericutilitiesmodule_html_a34492cca79f70174fd015808be8b7ebf"><div class="ttname"><a href="namespacegenericutilitiesmodule.html#a34492cca79f70174fd015808be8b7ebf">genericutilitiesmodule::sim_message</a></div><div class="ttdeci">subroutine, public sim_message(message, iunit, fmt, level, skipbefore, skipafter, advance)</div><div class="ttdef"><b>Definition:</b> <a href="genericutils_8f90_source.html#l00020">genericutils.f90:20</a></div></div>
 <div class="ttc" id="anamespaceinputoutputmodule_html_a9138018756a22c0480830e247f537fa1"><div class="ttname"><a href="namespaceinputoutputmodule.html#a9138018756a22c0480830e247f537fa1">inputoutputmodule::fseek_stream</a></div><div class="ttdeci">subroutine, public fseek_stream(iu, offset, whence, status)</div><div class="ttdef"><b>Definition:</b> <a href="_input_output_8f90_source.html#l02190">InputOutput.f90:2190</a></div></div>
+<div class="ttc" id="anamespaceinputoutputmodule_html_a5c6e044368434dc29fe6191d7875b380"><div class="ttname"><a href="namespaceinputoutputmodule.html#a5c6e044368434dc29fe6191d7875b380">inputoutputmodule::get_line</a></div><div class="ttdeci">subroutine get_line(lun, line, iostat)</div><div class="ttdef"><b>Definition:</b> <a href="_input_output_8f90_source.html#l02338">InputOutput.f90:2338</a></div></div>
 <div class="ttc" id="anamespacesimmodule_html_a1c78a6fda06b630c738bb654aa6bd816"><div class="ttname"><a href="namespacesimmodule.html#a1c78a6fda06b630c738bb654aa6bd816">simmodule::store_error_unit</a></div><div class="ttdeci">subroutine, public store_error_unit(iunit)</div><div class="ttdef"><b>Definition:</b> <a href="_sim_8f90_source.html#l00177">Sim.f90:177</a></div></div>
 <div class="ttc" id="anamespaceopenspecmodule_html_a70135a25b66da5205955e723bb58d743"><div class="ttname"><a href="namespaceopenspecmodule.html#a70135a25b66da5205955e723bb58d743">openspecmodule::action</a></div><div class="ttdeci">character(len=20), dimension(2) action</div><div class="ttdef"><b>Definition:</b> <a href="_open_spec_8f90_source.html#l00007">OpenSpec.f90:7</a></div></div>
 <div class="ttc" id="anamespacesimmodule_html_a536cb6f0e13fcd33755e414641ff931a"><div class="ttname"><a href="namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a">simmodule::store_error</a></div><div class="ttdeci">subroutine, public store_error(msg)</div><div class="ttdef"><b>Definition:</b> <a href="_sim_8f90_source.html#l00107">Sim.f90:107</a></div></div>
@@ -2500,6 +2547,7 @@ $(function() {
 <div class="ttc" id="anamespacesimmodule_html"><div class="ttname"><a href="namespacesimmodule.html">simmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_sim_8f90_source.html#l00001">Sim.f90:1</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_a3999926c281524e8a79cb40dd4711b8c"><div class="ttname"><a href="namespaceconstantsmodule.html#a3999926c281524e8a79cb40dd4711b8c">constantsmodule::iulast</a></div><div class="ttdeci">integer(i4b), parameter iulast</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00038">Constants.f90:38</a></div></div>
 <div class="ttc" id="anamespacegenericutilitiesmodule_html_aa6f1e09d5f419107a1e51aeecc9c12b4"><div class="ttname"><a href="namespacegenericutilitiesmodule.html#aa6f1e09d5f419107a1e51aeecc9c12b4">genericutilitiesmodule::is_same</a></div><div class="ttdeci">logical function, public is_same(a, b, eps)</div><div class="ttdef"><b>Definition:</b> <a href="genericutils_8f90_source.html#l00172">genericutils.f90:172</a></div></div>
+<div class="ttc" id="ainterfacearrayhandlersmodule_1_1expandarray_html"><div class="ttname"><a href="interfacearrayhandlersmodule_1_1expandarray.html">arrayhandlersmodule::expandarray</a></div><div class="ttdef"><b>Definition:</b> <a href="_array_handlers_8f90_source.html#l00016">ArrayHandlers.f90:16</a></div></div>
 <div class="ttc" id="anamespaceinputoutputmodule_html_a5d0681efcccbea67f1d521a6729cbb4f"><div class="ttname"><a href="namespaceinputoutputmodule.html#a5d0681efcccbea67f1d521a6729cbb4f">inputoutputmodule::lowcase</a></div><div class="ttdeci">subroutine, public lowcase(word)</div><div class="ttdef"><b>Definition:</b> <a href="_input_output_8f90_source.html#l00603">InputOutput.f90:603</a></div></div>
 <div class="ttc" id="anamespaceinputoutputmodule_html_a3418ad9e27e9d9caac6f541863e1c522"><div class="ttname"><a href="namespaceinputoutputmodule.html#a3418ad9e27e9d9caac6f541863e1c522">inputoutputmodule::upcase</a></div><div class="ttdeci">subroutine, public upcase(WORD)</div><div class="ttdef"><b>Definition:</b> <a href="_input_output_8f90_source.html#l00581">InputOutput.f90:581</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_a060d310ded5535ce2dc85bd1ca1afd3d"><div class="ttname"><a href="namespaceconstantsmodule.html#a060d310ded5535ce2dc85bd1ca1afd3d">constantsmodule::linelength</a></div><div class="ttdeci">integer(i4b), parameter linelength</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00028">Constants.f90:28</a></div></div>
@@ -2543,10 +2591,13 @@ $(function() {
 <div class="ttc" id="anamespaceconstantsmodule_html_ac9c1da291f7c6bfb35a47957c588ab20"><div class="ttname"><a href="namespaceconstantsmodule.html#ac9c1da291f7c6bfb35a47957c588ab20">constantsmodule::maxcharlen</a></div><div class="ttdeci">integer(i4b), parameter maxcharlen</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00030">Constants.f90:30</a></div></div>
 <div class="ttc" id="anamespaceinputoutputmodule_html_a07b5a678851f1bbbca15c9c058818e28"><div class="ttname"><a href="namespaceinputoutputmodule.html#a07b5a678851f1bbbca15c9c058818e28">inputoutputmodule::ulasav</a></div><div class="ttdeci">subroutine, public ulasav(BUF, TEXT, KSTP, KPER, PERTIM, TOTIM, NCOL, NROW, ILAY, ICHN)</div><div class="ttdef"><b>Definition:</b> <a href="_input_output_8f90_source.html#l01256">InputOutput.f90:1256</a></div></div>
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_ff383ddf1aa4eab0c4ce7910366d05a5.html">Utilities</a></li><li class="navelem"><a class="el" href="_input_output_8f90.html">InputOutput.f90</a></li>
+    <li class="footer">Generated on Thu Jun 24 2021 19:50:09 for MODFLOW 6 by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
 </body>
 </html>

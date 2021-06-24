@@ -1,8 +1,9 @@
 <map id="numericalexchangemodule::getnumericalexchangefromlist" name="numericalexchangemodule::getnumericalexchangefromlist">
-<area shape="rect" id="node1" title=" " alt="" coords="241,136,472,177"/>
-<area shape="rect" id="node2" href="$namespacenumericalsolutionmodule.html#af0e2dfd5e0ff41ab84ee2829d01b9b83" title=" " alt="" coords="5,5,193,47"/>
-<area shape="rect" id="node3" href="$namespacenumericalsolutionmodule.html#a7fcf392bb98599ca511fdf62749e9447" title=" " alt="" coords="5,71,193,112"/>
-<area shape="rect" id="node4" href="$namespacenumericalsolutionmodule.html#abe804dcafea9bef2ef528e68475ac3ec" title=" " alt="" coords="5,136,193,177"/>
-<area shape="rect" id="node5" href="$namespacenumericalsolutionmodule.html#ac1c7daf42e56a62cccf6625801a30dcb" title=" " alt="" coords="5,201,193,243"/>
-<area shape="rect" id="node6" href="$namespacenumericalsolutionmodule.html#ac6bb33e0aaff92c1244857513eedf312" title=" " alt="" coords="5,267,193,308"/>
+<area shape="rect" id="node1" title=" " alt="" coords="241,169,472,211"/>
+<area shape="rect" id="node2" href="$namespacenumericalsolutionmodule.html#a7fcf392bb98599ca511fdf62749e9447" title="@ brief finalize a solution" alt="" coords="5,5,193,47"/>
+<area shape="rect" id="node3" href="$namespacenumericalsolutionmodule.html#ad38d2c1f3ad4cdb32b3e9e51329d5913" title="@ brief prepare to solve" alt="" coords="5,71,193,112"/>
+<area shape="rect" id="node4" href="$namespacenumericalsolutionmodule.html#abe804dcafea9bef2ef528e68475ac3ec" title="@ brief Allocate and read data" alt="" coords="5,136,193,177"/>
+<area shape="rect" id="node5" href="$namespacenumericalsolutionmodule.html#a61e4b4c1609f9833296260d4a9deefdd" title="@ brief Perform backtracking" alt="" coords="5,201,193,243"/>
+<area shape="rect" id="node6" href="$namespacenumericalsolutionmodule.html#a3af64aed80e4521475b814733555b327" title="@ brief Assign solution connections" alt="" coords="5,267,193,308"/>
+<area shape="rect" id="node7" href="$namespacenumericalsolutionmodule.html#a964262851ef62c07577f4b3bbf384e15" title="@ brief Build and solve the simulation" alt="" coords="5,332,193,373"/>
 </map>

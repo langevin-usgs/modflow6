@@ -1,0 +1,23 @@
+<map id="memorymanagermodule::allocate_error" name="memorymanagermodule::allocate_error">
+<area shape="rect" id="node1" title="Issue allocation error message and stop program execution." alt="" coords="469,496,653,537"/>
+<area shape="rect" id="node2" href="$namespacememorymanagermodule.html#a5fa4ef590633806da981c9ba7e280df2" title="Allocate a real scalar." alt="" coords="237,5,421,47"/>
+<area shape="rect" id="node3" href="$namespacememorymanagermodule.html#af3f615d7f192d5eb8a7acd4d14e9f423" title="Allocate a 1&#45;dimensional real array." alt="" coords="237,71,421,112"/>
+<area shape="rect" id="node5" href="$namespacememorymanagermodule.html#ad201d68beb5a31d08d7231dd347228d4" title="Allocate a 2&#45;dimensional real array." alt="" coords="237,136,421,177"/>
+<area shape="rect" id="node7" href="$namespacememorymanagermodule.html#a1d9171f5e579d0fda3ec7bb3b6fc1cb0" title="Allocate a 3&#45;dimensional real array." alt="" coords="237,201,421,243"/>
+<area shape="rect" id="node8" href="$namespacememorymanagermodule.html#ace801553e187d88f8e9c1c15a9594e09" title="Allocate a integer scalar." alt="" coords="237,267,421,308"/>
+<area shape="rect" id="node9" href="$namespacememorymanagermodule.html#aca7e7b53355397095e6c4cec589ab015" title="Allocate a 1&#45;dimensional integer array." alt="" coords="237,332,421,373"/>
+<area shape="rect" id="node11" href="$namespacememorymanagermodule.html#a0febd2a106acecc627777302641438c9" title="Allocate a 2&#45;dimensional integer array." alt="" coords="237,397,421,439"/>
+<area shape="rect" id="node13" href="$namespacememorymanagermodule.html#a7474cd696cb9b1c1fe44574ea103060e" title="Allocate a 3&#45;dimensional integer array." alt="" coords="237,463,421,504"/>
+<area shape="rect" id="node14" href="$namespacememorymanagermodule.html#a0a88357b0c068c805e19b63fee0620b1" title="Allocate a logical scalar." alt="" coords="237,528,421,569"/>
+<area shape="rect" id="node15" href="$namespacememorymanagermodule.html#a4780db4c21eb164665232983b1be0dca" title="Allocate a character string." alt="" coords="237,593,421,635"/>
+<area shape="rect" id="node16" href="$namespacememorymanagermodule.html#a0c5bf39cf785030754c02899af6e29e9" title="Allocate a 1&#45;dimensional defined length string array." alt="" coords="237,659,421,700"/>
+<area shape="rect" id="node17" href="$namespacememorymanagermodule.html#a9b60924f8d1eaab5ebc4a7077734626c" title="Reallocate a 1&#45;dimensional real array." alt="" coords="237,724,421,765"/>
+<area shape="rect" id="node18" href="$namespacememorymanagermodule.html#a3b2c7bfb9930cdb9485650491a5450b1" title="Reallocate a 2&#45;dimensional real array." alt="" coords="237,789,421,831"/>
+<area shape="rect" id="node19" href="$namespacememorymanagermodule.html#aa7056374019a32e8fe81a20244180431" title="Reallocate a 1&#45;dimensional integer array." alt="" coords="237,855,421,896"/>
+<area shape="rect" id="node20" href="$namespacememorymanagermodule.html#a05562b5d22dbf816eef799c99651b027" title="Reallocate a 2&#45;dimensional integer array." alt="" coords="237,920,421,961"/>
+<area shape="rect" id="node21" href="$namespacememorymanagermodule.html#abf1a3c790b0f50e9a0084728c961bbd1" title="Reallocate a 1&#45;dimensional defined length string array." alt="" coords="237,985,421,1027"/>
+<area shape="rect" id="node4" href="$namespacememorymanagermodule.html#ac28c89286eb411da67b21c078f480cc9" title="Make a copy of a 1&#45;dimensional real array." alt="" coords="5,71,189,112"/>
+<area shape="rect" id="node6" href="$namespacememorymanagermodule.html#a6810f04c0c6531d4d8a82ac5b0c2f036" title="Make a copy of a 2&#45;dimensional real array." alt="" coords="5,136,189,177"/>
+<area shape="rect" id="node10" href="$namespacememorymanagermodule.html#a43788091085873dc85edae3786201d78" title="Make a copy of a 1&#45;dimensional integer array." alt="" coords="5,332,189,373"/>
+<area shape="rect" id="node12" href="$namespacememorymanagermodule.html#a586f55600a71156ec280dd00027a0b29" title="Make a copy of a 2&#45;dimensional integer array." alt="" coords="5,397,189,439"/>
+</map>

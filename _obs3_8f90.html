@@ -5,13 +5,22 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MODFLOW 6 Code Documentation: /home/runner/work/modflow6/modflow6/src/Utilities/Observation/Obs3.f90 File Reference</title>
+<title>MODFLOW 6: /home/runner/work/modflow6/modflow6/src/Utilities/Observation/Obs3.f90 File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="CustomDoxygen.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -21,9 +30,12 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="mf6-triangular-grid.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">MODFLOW 6 Code Documentation
+   <div id="projectname">MODFLOW 6
+   &#160;<span id="projectnumber">version 6.2.2</span>
    </div>
+   <div id="projectbrief">MODFLOW 6 Code Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -36,16 +48,54 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Modules</span></a></li>
+      <li><a href="annotated.html"><span>Data&#160;Types&#160;List</span></a></li>
+      <li class="current"><a href="files.html"><span>Files</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('_obs3_8f90.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,11 +110,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_ff383ddf1aa4eab0c4ce7910366d05a5.html">Utilities</a></li><li class="navelem"><a class="el" href="dir_77e0984581d4d49dab8f9e4942a73c12.html">Observation</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Data Types</a> &#124;
@@ -77,6 +122,11 @@ $(function() {
 
 <p><a href="_obs3_8f90_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Data Types</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">type &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structobsmodule_1_1obstype.html">obsmodule::obstype</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Modules</h2></td></tr>
 <tr class="memitem:namespaceobsmodule"><td class="memItemLeft" align="right" valign="top">module &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceobsmodule.html">obsmodule</a></td></tr>
@@ -88,15 +138,61 @@ Functions/Subroutines</h2></td></tr>
 <tr class="separator:a57372fbf202fe90e2d12383ce1b15eee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7dbce254f60ae2f0925c07136365ce91"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceobsmodule.html#a7dbce254f60ae2f0925c07136365ce91">obsmodule::defaultobsidprocessor</a> (obsrv, dis, inunitobs, iout)</td></tr>
 <tr class="separator:a7dbce254f60ae2f0925c07136365ce91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5578ffb3710b8c02aac33ff970f6b44"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceobsmodule.html#aa5578ffb3710b8c02aac33ff970f6b44">obsmodule::obs_df</a> (this, iout, pkgname, filtyp, dis)</td></tr>
+<tr class="separator:aa5578ffb3710b8c02aac33ff970f6b44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4de474f34c3b0446f6e3ef6c6725ae8d"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceobsmodule.html#a4de474f34c3b0446f6e3ef6c6725ae8d">obsmodule::obs_ar</a> (this)</td></tr>
+<tr class="separator:a4de474f34c3b0446f6e3ef6c6725ae8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a536bbd2e5167a100114ec4556e347e1a"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceobsmodule.html#a536bbd2e5167a100114ec4556e347e1a">obsmodule::obs_ad</a> (this)</td></tr>
+<tr class="separator:a536bbd2e5167a100114ec4556e347e1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37c57e0e1cd8e621c9fa80ac697227dd"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceobsmodule.html#a37c57e0e1cd8e621c9fa80ac697227dd">obsmodule::obs_bd_clear</a> (this)</td></tr>
+<tr class="separator:a37c57e0e1cd8e621c9fa80ac697227dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adae8cf444bda36ffe55b9ab78f0f14b3"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceobsmodule.html#adae8cf444bda36ffe55b9ab78f0f14b3">obsmodule::obs_ot</a> (this)</td></tr>
+<tr class="separator:adae8cf444bda36ffe55b9ab78f0f14b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a268c01aaa4ae9950ec82420b416e13b3"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceobsmodule.html#a268c01aaa4ae9950ec82420b416e13b3">obsmodule::obs_da</a> (this)</td></tr>
+<tr class="separator:a268c01aaa4ae9950ec82420b416e13b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6cdbd7ac6e357c628fe803a4dbd8d2c"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceobsmodule.html#ac6cdbd7ac6e357c628fe803a4dbd8d2c">obsmodule::saveonesimval</a> (this, obsrv, simval)</td></tr>
+<tr class="separator:ac6cdbd7ac6e357c628fe803a4dbd8d2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa798af6bf30f959ddea76b5581fbefcb"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceobsmodule.html#aa798af6bf30f959ddea76b5581fbefcb">obsmodule::storeobstype</a> (this, obsrvType, cumulative, indx)</td></tr>
+<tr class="separator:aa798af6bf30f959ddea76b5581fbefcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad918f221e65761c46614ed11cbb83dac"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceobsmodule.html#ad918f221e65761c46614ed11cbb83dac">obsmodule::allocate_scalars</a> (this)</td></tr>
+<tr class="separator:ad918f221e65761c46614ed11cbb83dac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e08c4a00b4774dbe59e849c8820bd22"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceobsmodule.html#a4e08c4a00b4774dbe59e849c8820bd22">obsmodule::obs_ar1</a> (this, pkgname)</td></tr>
+<tr class="separator:a4e08c4a00b4774dbe59e849c8820bd22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af536a2aa67c795faa46e96ba457a6f62"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceobsmodule.html#af536a2aa67c795faa46e96ba457a6f62">obsmodule::obs_ar2</a> (this, dis)</td></tr>
+<tr class="separator:af536a2aa67c795faa46e96ba457a6f62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b8183302027550598aa7123044222ed"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceobsmodule.html#a6b8183302027550598aa7123044222ed">obsmodule::read_obs_options</a> (this)</td></tr>
+<tr class="separator:a6b8183302027550598aa7123044222ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a952ac4b026bc683dbfcedd8da24220bb"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceobsmodule.html#a952ac4b026bc683dbfcedd8da24220bb">obsmodule::define_fmts</a> (this)</td></tr>
+<tr class="separator:a952ac4b026bc683dbfcedd8da24220bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5020e6a1e691cbed308108acbb813f9e"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceobsmodule.html#a5020e6a1e691cbed308108acbb813f9e">obsmodule::read_observations</a> (this)</td></tr>
+<tr class="separator:a5020e6a1e691cbed308108acbb813f9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa716217a44f18c7a825f084a15e2cbe5"><td class="memItemLeft" align="right" valign="top">integer(i4b) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceobsmodule.html#aa716217a44f18c7a825f084a15e2cbe5">obsmodule::get_num</a> (this)</td></tr>
+<tr class="separator:aa716217a44f18c7a825f084a15e2cbe5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab207c4278b47e96ab80e4614a8ed4856"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceobsmodule.html#ab207c4278b47e96ab80e4614a8ed4856">obsmodule::build_headers</a> (this)</td></tr>
+<tr class="separator:ab207c4278b47e96ab80e4614a8ed4856"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d458629a33ffafd940a178c1b778a72"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceobsmodule.html#a5d458629a33ffafd940a178c1b778a72">obsmodule::get_obs_array</a> (this, nObs, obsArray)</td></tr>
 <tr class="separator:a5d458629a33ffafd940a178c1b778a72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26a16acf4e670e4702053e5114434328"><td class="memItemLeft" align="right" valign="top">type(obsdatatype) function, pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceobsmodule.html#a26a16acf4e670e4702053e5114434328">obsmodule::get_obs_datum</a> (this, obsTypeID)</td></tr>
+<tr class="separator:a26a16acf4e670e4702053e5114434328"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fd1cb02953abfdd6554807a8d15ccad"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceobsmodule.html#a0fd1cb02953abfdd6554807a8d15ccad">obsmodule::populate_obs_array</a> (this, nObs, obsArray)</td></tr>
+<tr class="separator:a0fd1cb02953abfdd6554807a8d15ccad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb1621db37eb5c9e8621cd0fd55247ae"><td class="memItemLeft" align="right" valign="top">class(observetype) function, pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceobsmodule.html#aeb1621db37eb5c9e8621cd0fd55247ae">obsmodule::get_obs</a> (this, indx)</td></tr>
+<tr class="separator:aeb1621db37eb5c9e8621cd0fd55247ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e39fd82e1d2b282f8789b064f750f72"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceobsmodule.html#a0e39fd82e1d2b282f8789b064f750f72">obsmodule::read_obs_blocks</a> (this, fname)</td></tr>
+<tr class="separator:a0e39fd82e1d2b282f8789b064f750f72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac53e5a4563db4c57b4f8ef488b1ad482"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceobsmodule.html#ac53e5a4563db4c57b4f8ef488b1ad482">obsmodule::write_continuous_simvals</a> (this)</td></tr>
+<tr class="separator:ac53e5a4563db4c57b4f8ef488b1ad482"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_ff383ddf1aa4eab0c4ce7910366d05a5.html">Utilities</a></li><li class="navelem"><a class="el" href="dir_77e0984581d4d49dab8f9e4942a73c12.html">Observation</a></li><li class="navelem"><a class="el" href="_obs3_8f90.html">Obs3.f90</a></li>
+    <li class="footer">Generated on Thu Jun 24 2021 19:50:10 for MODFLOW 6 by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -1,4 +1,4 @@
 <map id="adaptivetimestepmodule::ats_submit_delt" name="adaptivetimestepmodule::ats_submit_delt">
 <area shape="rect" id="node1" title="@ brief Allow and external caller to submit preferred time step" alt="" coords="241,5,428,47"/>
-<area shape="rect" id="node2" href="$namespacenumericalsolutionmodule.html#a0532bb986b3da12da5b753fc999bbe0e" title=" " alt="" coords="5,5,193,47"/>
+<area shape="rect" id="node2" href="$namespacenumericalsolutionmodule.html#a0532bb986b3da12da5b753fc999bbe0e" title="@ brief Calculate delt" alt="" coords="5,5,193,47"/>
 </map>

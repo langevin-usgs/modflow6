@@ -5,13 +5,22 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MODFLOW 6 Code Documentation: /home/runner/work/modflow6/modflow6/src/Model/GroundWaterFlow/gwf3chd8.f90 Source File</title>
+<title>MODFLOW 6: /home/runner/work/modflow6/modflow6/src/Model/GroundWaterFlow/gwf3chd8.f90 Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="CustomDoxygen.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -21,9 +30,12 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="mf6-triangular-grid.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">MODFLOW 6 Code Documentation
+   <div id="projectname">MODFLOW 6
+   &#160;<span id="projectnumber">version 6.2.2</span>
    </div>
+   <div id="projectbrief">MODFLOW 6 Code Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -36,16 +48,54 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Modules</span></a></li>
+      <li><a href="annotated.html"><span>Data&#160;Types&#160;List</span></a></li>
+      <li class="current"><a href="files.html"><span>Files</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('gwf3chd8_8f90_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,11 +110,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_32e188284d239da8bb14ec1dabb0c35f.html">Model</a></li><li class="navelem"><a class="el" href="dir_5aefb7a434fc869900e7ccf685166f81.html">GroundWaterFlow</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">gwf3chd8.f90</div>  </div>
@@ -78,37 +123,37 @@ $(function() {
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacememoryhelpermodule.html">memoryhelpermodule</a>,   <span class="keywordtype">only</span>: <a class="code" href="namespacememoryhelpermodule.html#a3791dbc2d4a06a0b9112158cff21f738">create_mem_path</a>                                </div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespaceobsmodule.html">obsmodule</a>,            <span class="keywordtype">only</span>: <a class="code" href="namespaceobsmodule.html#a7dbce254f60ae2f0925c07136365ce91">defaultobsidprocessor</a></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacebndmodule.html">bndmodule</a>,            <span class="keywordtype">only</span>: bndtype</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespaceobservemodule.html">observemodule</a>,        <span class="keywordtype">only</span>: observetype</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacetimeserieslinkmodule.html">timeserieslinkmodule</a>, <span class="keywordtype">only</span>: timeserieslinktype, &amp;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespaceobservemodule.html">observemodule</a>,        <span class="keywordtype">only</span>: <a class="code" href="structobservemodule_1_1observetype.html">observetype</a></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacetimeserieslinkmodule.html">timeserieslinkmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="structtimeserieslinkmodule_1_1timeserieslinktype.html">timeserieslinktype</a>, &amp;</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;                                  <a class="code" href="namespacetimeserieslinkmodule.html#ab7e38e1f45871cf48de54cc179ee9ac7">gettimeserieslinkfromlist</a></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <span class="comment">!</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <span class="keywordtype">implicit none</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <span class="comment">!</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <span class="keywordtype">private</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <span class="keywordtype">public</span> :: <a class="code" href="namespacechdmodule.html#a061dea5df09ddd53e4ca09a1fb9168e6">chd_create</a>, chdtype</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <span class="keywordtype">public</span> :: <a class="code" href="namespacechdmodule.html#a061dea5df09ddd53e4ca09a1fb9168e6">chd_create</a>, <a class="code" href="structchdmodule_1_1chdtype.html">chdtype</a></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <span class="comment">!</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <span class="keywordtype">character(len=LENFTYPE)</span>       :: ftype = <span class="stringliteral">&#39;CHD&#39;</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <span class="keywordtype">character(len=LENPACKAGENAME)</span> :: text  = <span class="stringliteral">&#39;             CHD&#39;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="namespacechdmodule.html#a2812d89876d044728d15c3dcb178e65e">   18</a></span>&#160;  <span class="keywordtype">character(len=LENFTYPE)</span>       :: <a class="code" href="namespacechdmodule.html#a2812d89876d044728d15c3dcb178e65e">ftype</a> = <span class="stringliteral">&#39;CHD&#39;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="namespacechdmodule.html#a0459d61d8ea375eb9d3927babec416d5">   19</a></span>&#160;  <span class="keywordtype">character(len=LENPACKAGENAME)</span> :: <a class="code" href="namespacechdmodule.html#a0459d61d8ea375eb9d3927babec416d5">text</a>  = <span class="stringliteral">&#39;             CHD&#39;</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="comment">!</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="keyword">type</span>, <span class="keyword">extends</span>(bndtype) :: chdtype</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keywordtype">      real</span>(DP), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span> :: ratechdin =&gt; null()        <span class="comment">!simulated flows into constant head (excluding other chds)</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keywordtype">      real</span>(DP), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span> :: ratechdout =&gt; null()       <span class="comment">!simulated flows out of constant head (excluding to other chds)</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="structchdmodule_1_1chdtype.html">   21</a></span>&#160;  <span class="keyword">type</span>, <span class="keyword">extends</span>(bndtype) :: <a class="code" href="structchdmodule_1_1chdtype.html">chdtype</a></div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="structchdmodule_1_1chdtype.html#ac67ddf822271a71e30d01e78b31e81ac">   22</a></span>&#160;<span class="keywordtype">      real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span> :: ratechdin =&gt; null()        <span class="comment">!simulated flows into constant head (excluding other chds)</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="structchdmodule_1_1chdtype.html#aac9edc85fa19fb21e8b6d1250f80edfa">   23</a></span>&#160;<span class="keywordtype">      real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span> :: ratechdout =&gt; null()       <span class="comment">!simulated flows out of constant head (excluding to other chds)</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">contains</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;      <span class="keywordtype">procedure</span> :: bnd_rp =&gt; <a class="code" href="namespacechdmodule.html#a6c5d3017622c4c83795a1e0826f9aa2e">chd_rp</a></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;      <span class="keywordtype">procedure</span> :: bnd_ad =&gt; <a class="code" href="namespacechdmodule.html#a97431e4849ccedef864cdee9039b8a1b">chd_ad</a></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;      <span class="keywordtype">procedure</span> :: bnd_ck =&gt; chd_ck</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;      <span class="keywordtype">procedure</span> :: bnd_fc =&gt; <a class="code" href="namespacechdmodule.html#a80991f44441f8190d603fb38217d3c55">chd_fc</a></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;      <span class="keywordtype">procedure</span> :: bnd_cq =&gt; chd_cq</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;      <span class="keywordtype">procedure</span> :: bnd_bd =&gt; chd_bd</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;      <span class="keywordtype">procedure</span> :: bnd_da =&gt; <a class="code" href="namespacechdmodule.html#a14c6e49f889c841d4c1b84369f3cd026">chd_da</a></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;      <span class="keywordtype">procedure</span> :: allocate_arrays =&gt; chd_allocate_arrays</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;      <span class="keywordtype">procedure</span> :: define_listlabel</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="structchdmodule_1_1chdtype.html#af946ad5d929624d79a138bf4838bb1a2">   25</a></span>&#160;      <span class="keywordtype">procedure</span> :: bnd_rp =&gt; <a class="code" href="namespacechdmodule.html#a6c5d3017622c4c83795a1e0826f9aa2e">chd_rp</a></div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="structchdmodule_1_1chdtype.html#abd1caac54c5d3ce33d305aec61bd3eb8">   26</a></span>&#160;      <span class="keywordtype">procedure</span> :: bnd_ad =&gt; <a class="code" href="namespacechdmodule.html#a97431e4849ccedef864cdee9039b8a1b">chd_ad</a></div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="structchdmodule_1_1chdtype.html#a45256258da0f526919152be1351e3092">   27</a></span>&#160;      <span class="keywordtype">procedure</span> :: bnd_ck =&gt; <a class="code" href="namespacechdmodule.html#a01c9aca7c3c701e986232d5a9f53e06c">chd_ck</a></div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="structchdmodule_1_1chdtype.html#afb407424b1415c124fe32e3bc55e0cdd">   28</a></span>&#160;      <span class="keywordtype">procedure</span> :: bnd_fc =&gt; <a class="code" href="namespacechdmodule.html#a80991f44441f8190d603fb38217d3c55">chd_fc</a></div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="structchdmodule_1_1chdtype.html#a8abf7ffd4dcee01108ba7f0751943cf3">   29</a></span>&#160;      <span class="keywordtype">procedure</span> :: bnd_cq =&gt; <a class="code" href="namespacechdmodule.html#a27f77461af24165028b7051aec51fb2f">chd_cq</a></div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="structchdmodule_1_1chdtype.html#a4ae8414f963375c5ded83efb428e6b55">   30</a></span>&#160;      <span class="keywordtype">procedure</span> :: bnd_bd =&gt; <a class="code" href="namespacechdmodule.html#abbd0e7988d54f58f56548abb7146de97">chd_bd</a></div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="structchdmodule_1_1chdtype.html#a028dd1e8cbc13739c0bcd6c26544b431">   31</a></span>&#160;      <span class="keywordtype">procedure</span> :: bnd_da =&gt; <a class="code" href="namespacechdmodule.html#a14c6e49f889c841d4c1b84369f3cd026">chd_da</a></div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="structchdmodule_1_1chdtype.html#a3a16fa58ad47f11286bf69c91b82997e">   32</a></span>&#160;      <span class="keywordtype">procedure</span> :: allocate_arrays =&gt; <a class="code" href="namespacechdmodule.html#aad308414c6c9102365d15eb7c2e97151">chd_allocate_arrays</a></div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="structchdmodule_1_1chdtype.html#a7100ba04480089253ce22ad50152c00a">   33</a></span>&#160;      <span class="keywordtype">procedure</span> :: <a class="code" href="namespacechdmodule.html#a14e50adbfa20e7c9aaeb42c74fcb6d47">define_listlabel</a></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;      <span class="comment">! -- methods for observations</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;      <span class="keywordtype">procedure</span>, <span class="keywordtype">public</span> :: bnd_obs_supported =&gt; chd_obs_supported</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;      <span class="keywordtype">procedure</span>, <span class="keywordtype">public</span> :: bnd_df_obs =&gt; chd_df_obs</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="structchdmodule_1_1chdtype.html#a95293493428ecc399e5fb215e8312f00">   35</a></span>&#160;      <span class="keywordtype">procedure</span>, <span class="keywordtype">public</span> :: bnd_obs_supported =&gt; <a class="code" href="namespacechdmodule.html#aba1bff4536c8defbdf16661983d8dde0">chd_obs_supported</a></div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="structchdmodule_1_1chdtype.html#ab1ea349c41e9cd2a0046b7cd6587db73">   36</a></span>&#160;      <span class="keywordtype">procedure</span>, <span class="keywordtype">public</span> :: bnd_df_obs =&gt; <a class="code" href="namespacechdmodule.html#a6a94d84ad6cb107d927bdffabaa88fe8">chd_df_obs</a></div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;      <span class="comment">! -- method for time series</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;      <span class="keywordtype">procedure</span>, <span class="keywordtype">public</span> :: bnd_rp_ts =&gt; chd_rp_ts</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keyword">end type </span>chdtype</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="structchdmodule_1_1chdtype.html#af29c63b89e1ae40243013875f6a03665">   38</a></span>&#160;      <span class="keywordtype">procedure</span>, <span class="keywordtype">public</span> :: bnd_rp_ts =&gt; <a class="code" href="namespacechdmodule.html#a2fa3100d6d57a3db4aa034dd351c48d7">chd_rp_ts</a></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keyword">end type </span><a class="code" href="structchdmodule_1_1chdtype.html">chdtype</a></div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">contains</span></div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
@@ -130,7 +175,7 @@ $(function() {
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">character(len=*)</span>, <span class="keywordtype">intent(in)</span> :: namemodel</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">character(len=*)</span>, <span class="keywordtype">intent(in)</span> :: pakname</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="comment">! -- local</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">type</span>(chdtype), <span class="keywordtype">pointer</span> :: chdobj</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structchdmodule_1_1chdtype.html">chdtype</a>), <span class="keywordtype">pointer</span> :: chdobj</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="comment">! -- allocate the object and assign values to object variables</span></div>
@@ -138,8 +183,8 @@ $(function() {
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    packobj =&gt; chdobj</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="comment">! -- create name and memory path</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">call </span>packobj%set_names(ibcnum, namemodel, pakname, ftype)</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    packobj%text = text</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">call </span>packobj%set_names(ibcnum, namemodel, pakname, <a class="code" href="namespacechdmodule.html#a2812d89876d044728d15c3dcb178e65e">ftype</a>)</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    packobj%text = <a class="code" href="namespacechdmodule.html#a0459d61d8ea375eb9d3927babec416d5">text</a></div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="comment">! -- allocate scalars</span></div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keyword">call </span>packobj%allocate_scalars()</div>
@@ -160,19 +205,19 @@ $(function() {
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">return</span></div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacechdmodule.html#a061dea5df09ddd53e4ca09a1fb9168e6">chd_create</a></div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <span class="keyword">subroutine </span>chd_allocate_arrays(this, nodelist, auxvar)</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacechdmodule.html#aad308414c6c9102365d15eb7c2e97151">chd_allocate_arrays</a>(this, nodelist, auxvar)</div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="namespacechdmodule.html#aad308414c6c9102365d15eb7c2e97151">   92</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment">! allocate_scalars -- allocate arrays</span></div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment">!</span></div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="comment">!    SPECIFICATIONS:</span></div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="comment">! -- modules</span></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacememorymanagermodule.html">memorymanagermodule</a>, <span class="keywordtype">only</span>: mem_allocate</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacememorymanagermodule.html">memorymanagermodule</a>, <span class="keywordtype">only</span>: <a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a></div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordtype">class</span>(chdtype) :: this</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structchdmodule_1_1chdtype.html">chdtype</a>) :: this</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span>, <span class="keywordtype">optional</span> :: nodelist</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">dimension(:, :)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span>, <span class="keywordtype">optional</span> :: auxvar</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">dimension(:, :)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span>, <span class="keywordtype">optional</span> :: auxvar</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: i</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
@@ -181,8 +226,8 @@ $(function() {
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keyword">call </span>this%BndType%allocate_arrays()</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="comment">! -- allocate ratechdex</span></div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keyword">call </span>mem_allocate(this%ratechdin, this%maxbound, <span class="stringliteral">&#39;RATECHDIN&#39;</span>, this%memoryPath)</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keyword">call </span>mem_allocate(this%ratechdout, this%maxbound, <span class="stringliteral">&#39;RATECHDOUT&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%ratechdin, this%maxbound, <span class="stringliteral">&#39;RATECHDIN&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%ratechdout, this%maxbound, <span class="stringliteral">&#39;RATECHDOUT&#39;</span>, this%memoryPath)</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordflow">do</span> i = 1, this%maxbound</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;      this%ratechdin(i) = <a class="code" href="namespaceconstantsmodule.html#abab5757666b9ddd2726c20ce48dd0050">dzero</a></div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;      this%ratechdout(i) = <a class="code" href="namespaceconstantsmodule.html#abab5757666b9ddd2726c20ce48dd0050">dzero</a></div>
@@ -190,7 +235,7 @@ $(function() {
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="comment">! -- return</span></div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  <span class="keyword">end subroutine </span>chd_allocate_arrays</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacechdmodule.html#aad308414c6c9102365d15eb7c2e97151">chd_allocate_arrays</a></div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  </div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacechdmodule.html#a6c5d3017622c4c83795a1e0826f9aa2e">chd_rp</a>(this)</div>
 <div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="namespacechdmodule.html#a6c5d3017622c4c83795a1e0826f9aa2e">  124</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
@@ -201,7 +246,7 @@ $(function() {
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacesimmodule.html">simmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61">ustop</a>, <a class="code" href="namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a">store_error</a></div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordtype">class</span>(chdtype), <span class="keywordtype">intent(inout)</span> :: this</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structchdmodule_1_1chdtype.html">chdtype</a>), <span class="keywordtype">intent(inout)</span> :: this</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keywordtype">character(len=LINELENGTH)</span> :: errmsg</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keywordtype">character(len=30)</span> :: nodestr</div>
@@ -252,7 +297,7 @@ $(function() {
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="comment">! -- modules</span></div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="keywordtype">class</span>(chdtype) :: this</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structchdmodule_1_1chdtype.html">chdtype</a>) :: this</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: i, node</div>
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;<span class="keywordtype">    real</span>(DP) :: hb</div>
@@ -279,8 +324,8 @@ $(function() {
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="keywordflow">return</span></div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacechdmodule.html#a97431e4849ccedef864cdee9039b8a1b">chd_ad</a></div>
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160; </div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;  <span class="keyword">subroutine </span>chd_ck(this)</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacechdmodule.html#a01c9aca7c3c701e986232d5a9f53e06c">chd_ck</a>(this)</div>
+<div class="line"><a name="l00211"></a><span class="lineno"><a class="line" href="namespacechdmodule.html#a01c9aca7c3c701e986232d5a9f53e06c">  211</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;<span class="comment">! chd_ck -- Check chd boundary condition data</span></div>
 <div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;<span class="comment">!</span></div>
@@ -290,7 +335,7 @@ $(function() {
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespaceconstantsmodule.html">constantsmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespaceconstantsmodule.html#a060d310ded5535ce2dc85bd1ca1afd3d">linelength</a></div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacesimmodule.html">simmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61">ustop</a>, <a class="code" href="namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a">store_error</a>, <a class="code" href="namespacesimmodule.html#a4c46e49de78d4498dd4ec106357775e6">count_errors</a>, <a class="code" href="namespacesimmodule.html#a1c78a6fda06b630c738bb654aa6bd816">store_error_unit</a></div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <span class="keywordtype">class</span>(chdtype),<span class="keywordtype">intent(inout)</span> :: this</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structchdmodule_1_1chdtype.html">chdtype</a>),<span class="keywordtype">intent(inout)</span> :: this</div>
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="keywordtype">character(len=LINELENGTH)</span> :: errmsg</div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <span class="keywordtype">character(len=30)</span> :: nodestr</div>
@@ -323,7 +368,7 @@ $(function() {
 <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    <span class="comment">! -- return</span></div>
 <div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;  <span class="keyword">end subroutine </span>chd_ck</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacechdmodule.html#a01c9aca7c3c701e986232d5a9f53e06c">chd_ck</a></div>
 <div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160; </div>
 <div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacechdmodule.html#a80991f44441f8190d603fb38217d3c55">chd_fc</a>(this, rhs, ia, idxglo, amatsln)</div>
 <div class="line"><a name="l00257"></a><span class="lineno"><a class="line" href="namespacechdmodule.html#a80991f44441f8190d603fb38217d3c55">  257</a></span>&#160;<span class="comment">! **************************************************************************</span></div>
@@ -333,7 +378,7 @@ $(function() {
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;<span class="comment">!    SPECIFICATIONS:</span></div>
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;<span class="comment">! --------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <span class="keywordtype">class</span>(chdtype) :: this</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structchdmodule_1_1chdtype.html">chdtype</a>) :: this</div>
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">intent(inout)</span> :: rhs</div>
 <div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">intent(in)</span> :: ia</div>
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">intent(in)</span> :: idxglo</div>
@@ -345,8 +390,8 @@ $(function() {
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <span class="keywordflow">return</span></div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacechdmodule.html#a80991f44441f8190d603fb38217d3c55">chd_fc</a></div>
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160; </div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;  <span class="keyword">subroutine </span>chd_cq(this, x, flowja, iadv)</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacechdmodule.html#a27f77461af24165028b7051aec51fb2f">chd_cq</a>(this, x, flowja, iadv)</div>
+<div class="line"><a name="l00277"></a><span class="lineno"><a class="line" href="namespacechdmodule.html#a27f77461af24165028b7051aec51fb2f">  277</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;<span class="comment">! chd_cq -- Calculate constant head flow.  This method overrides bnd_cq().</span></div>
 <div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;<span class="comment">!</span></div>
@@ -354,7 +399,7 @@ $(function() {
 <div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    <span class="comment">! -- modules</span></div>
 <div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    <span class="keywordtype">class</span>(chdtype), <span class="keywordtype">intent(inout)</span> :: this</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structchdmodule_1_1chdtype.html">chdtype</a>), <span class="keywordtype">intent(inout)</span> :: this</div>
 <div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">intent(in)</span> :: x</div>
 <div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">contiguous</span>, <span class="keywordtype">intent(inout)</span> :: flowja</div>
 <div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">optional</span>, <span class="keywordtype">intent(in)</span> :: iadv</div>
@@ -414,14 +459,14 @@ $(function() {
 <div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    <span class="comment">! -- return</span></div>
 <div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;  <span class="keyword">end subroutine </span>chd_cq</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacechdmodule.html#a27f77461af24165028b7051aec51fb2f">chd_cq</a></div>
 <div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160; </div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;  <span class="keyword">subroutine </span>chd_bd(this, model_budget)</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    <span class="comment">! -- add package ratin/ratout to model budget</span></div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacechdmodule.html#abbd0e7988d54f58f56548abb7146de97">chd_bd</a>(this, model_budget)</div>
+<div class="line"><a name="l00348"></a><span class="lineno"><a class="line" href="namespacechdmodule.html#abbd0e7988d54f58f56548abb7146de97">  348</a></span>&#160;    <span class="comment">! -- add package ratin/ratout to model budget</span></div>
 <div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacetdismodule.html">tdismodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespacetdismodule.html#ae9a8dbe15bd2bcb8a85d53d570407ae6">delt</a></div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacebudgetmodule.html">budgetmodule</a>, <span class="keywordtype">only</span>: budgettype, <a class="code" href="namespacebudgetmodule.html#a917d4897942de165ea88d0c1f0850d8e">rate_accumulator</a></div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    <span class="keywordtype">class</span>(chdtype) :: this</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    <span class="keywordtype">type</span>(budgettype), <span class="keywordtype">intent(inout)</span> :: model_budget</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacebudgetmodule.html">budgetmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="structbudgetmodule_1_1budgettype.html">budgettype</a>, <a class="code" href="namespacebudgetmodule.html#a917d4897942de165ea88d0c1f0850d8e">rate_accumulator</a></div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structchdmodule_1_1chdtype.html">chdtype</a>) :: this</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structbudgetmodule_1_1budgettype.html">budgettype</a>), <span class="keywordtype">intent(inout)</span> :: model_budget</div>
 <div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;<span class="keywordtype">    real</span>(DP) :: ratin</div>
 <div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;<span class="keywordtype">    real</span>(DP) :: ratout</div>
 <div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;<span class="keywordtype">    real</span>(DP) :: dum</div>
@@ -431,7 +476,7 @@ $(function() {
 <div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    <span class="keyword">call </span><a class="code" href="namespacebudgetmodule.html#a917d4897942de165ea88d0c1f0850d8e">rate_accumulator</a>(this%ratechdout(1:this%nbound), ratout, dum)</div>
 <div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;    <span class="keyword">call </span>model_budget%addentry(ratin, ratout, <a class="code" href="namespacetdismodule.html#ae9a8dbe15bd2bcb8a85d53d570407ae6">delt</a>, this%text,                 &amp;</div>
 <div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;                               isuppress_output, this%packName)</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;  <span class="keyword">end subroutine </span>chd_bd</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacechdmodule.html#abbd0e7988d54f58f56548abb7146de97">chd_bd</a></div>
 <div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160; </div>
 <div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacechdmodule.html#a14c6e49f889c841d4c1b84369f3cd026">chd_da</a>(this)</div>
 <div class="line"><a name="l00365"></a><span class="lineno"><a class="line" href="namespacechdmodule.html#a14c6e49f889c841d4c1b84369f3cd026">  365</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
@@ -441,17 +486,17 @@ $(function() {
 <div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;<span class="comment">!    SPECIFICATIONS:</span></div>
 <div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    <span class="comment">! -- modules</span></div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacememorymanagermodule.html">memorymanagermodule</a>, <span class="keywordtype">only</span>: mem_deallocate</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacememorymanagermodule.html">memorymanagermodule</a>, <span class="keywordtype">only</span>: <a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a></div>
 <div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    <span class="keywordtype">class</span>(chdtype) :: this</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structchdmodule_1_1chdtype.html">chdtype</a>) :: this</div>
 <div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;    <span class="comment">! -- Deallocate parent package</span></div>
 <div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    <span class="keyword">call </span>this%BndType%bnd_da()</div>
 <div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    <span class="comment">! -- arrays</span></div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;    <span class="keyword">call </span>mem_deallocate(this%ratechdin)</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;    <span class="keyword">call </span>mem_deallocate(this%ratechdout)</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%ratechdin)</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%ratechdout)</div>
 <div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;    <span class="comment">! -- return</span></div>
 <div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;    <span class="keywordflow">return</span></div>
@@ -465,7 +510,7 @@ $(function() {
 <div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;<span class="comment">!</span></div>
 <div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;<span class="comment">!    SPECIFICATIONS:</span></div>
 <div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    <span class="keywordtype">class</span>(chdtype), <span class="keywordtype">intent(inout)</span> :: this</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structchdmodule_1_1chdtype.html">chdtype</a>), <span class="keywordtype">intent(inout)</span> :: this</div>
 <div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;    <span class="comment">! -- create the header list label</span></div>
@@ -491,8 +536,8 @@ $(function() {
 <div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160; </div>
 <div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;  <span class="comment">! -- Procedures related to observations</span></div>
 <div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160; </div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;<span class="keyword">logical </span><span class="keyword">function </span>chd_obs_supported(this)</div>
-<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;<span class="keyword">logical </span><span class="keyword">function </span><a class="code" href="namespacechdmodule.html#aba1bff4536c8defbdf16661983d8dde0">chd_obs_supported</a>(this)</div>
+<div class="line"><a name="l00423"></a><span class="lineno"><a class="line" href="namespacechdmodule.html#aba1bff4536c8defbdf16661983d8dde0">  423</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;<span class="comment">! chd_obs_supported</span></div>
 <div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;<span class="comment">!   -- Return true because CHD package supports observations.</span></div>
 <div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;<span class="comment">!   -- Overrides packagetype%_obs_supported()</span></div>
@@ -501,14 +546,14 @@ $(function() {
 <div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;<span class="comment">!    SPECIFICATIONS:</span></div>
 <div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;  <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;  <span class="keywordtype">class</span>(chdtype) :: this</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;  <span class="keywordtype">class</span>(<a class="code" href="structchdmodule_1_1chdtype.html">chdtype</a>) :: this</div>
 <div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;  chd_obs_supported = .true.</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;  <a class="code" href="namespacechdmodule.html#aba1bff4536c8defbdf16661983d8dde0">chd_obs_supported</a> = .true.</div>
 <div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;  <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;<span class="keyword">end function </span>chd_obs_supported</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;<span class="keyword">end function </span><a class="code" href="namespacechdmodule.html#aba1bff4536c8defbdf16661983d8dde0">chd_obs_supported</a></div>
 <div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160; </div>
-<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;<span class="keyword">subroutine </span>chd_df_obs(this)</div>
-<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;<span class="keyword">subroutine </span><a class="code" href="namespacechdmodule.html#a6a94d84ad6cb107d927bdffabaa88fe8">chd_df_obs</a>(this)</div>
+<div class="line"><a name="l00439"></a><span class="lineno"><a class="line" href="namespacechdmodule.html#a6a94d84ad6cb107d927bdffabaa88fe8">  439</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;<span class="comment">! chd_df_obs (implements bnd_df_obs)</span></div>
 <div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;<span class="comment">!   -- Store observation type supported by CHD package.</span></div>
 <div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;<span class="comment">!   -- Overrides BndType%bnd_df_obs</span></div>
@@ -518,27 +563,27 @@ $(function() {
 <div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;  <span class="keywordtype">implicit none</span></div>
 <div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;  <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;  <span class="keywordtype">class</span>(chdtype) :: this</div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;  <span class="keywordtype">class</span>(<a class="code" href="structchdmodule_1_1chdtype.html">chdtype</a>) :: this</div>
 <div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;  <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;  <span class="keywordtype">integer(I4B)</span> :: indx</div>
 <div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;  <span class="keyword">call </span>this%obs%StoreObsType(<span class="stringliteral">&#39;chd&#39;</span>, .true., indx)</div>
 <div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;  this%obs%obsData(indx)%ProcessIdPtr =&gt; <a class="code" href="namespaceobsmodule.html#a7dbce254f60ae2f0925c07136365ce91">defaultobsidprocessor</a></div>
 <div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;  <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;<span class="keyword">end subroutine </span>chd_df_obs</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;<span class="keyword">end subroutine </span><a class="code" href="namespacechdmodule.html#a6a94d84ad6cb107d927bdffabaa88fe8">chd_df_obs</a></div>
 <div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160; </div>
 <div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;  <span class="comment">! -- Procedure related to time series</span></div>
 <div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160; </div>
-<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;  <span class="keyword">subroutine </span>chd_rp_ts(this)</div>
-<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;    <span class="comment">! -- Assign tsLink%Text appropriately for</span></div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacechdmodule.html#a2fa3100d6d57a3db4aa034dd351c48d7">chd_rp_ts</a>(this)</div>
+<div class="line"><a name="l00461"></a><span class="lineno"><a class="line" href="namespacechdmodule.html#a2fa3100d6d57a3db4aa034dd351c48d7">  461</a></span>&#160;    <span class="comment">! -- Assign tsLink%Text appropriately for</span></div>
 <div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;    <span class="comment">!    all time series in use by package.</span></div>
 <div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;    <span class="comment">!    In CHD package variable HEAD</span></div>
 <div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;    <span class="comment">!    can be controlled by time series.</span></div>
 <div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;    <span class="keywordtype">class</span>(chdtype), <span class="keywordtype">intent(inout)</span> :: this</div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structchdmodule_1_1chdtype.html">chdtype</a>), <span class="keywordtype">intent(inout)</span> :: this</div>
 <div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: i, nlinks</div>
-<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;    <span class="keywordtype">type</span>(timeserieslinktype), <span class="keywordtype">pointer</span> :: tslink =&gt; null()</div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structtimeserieslinkmodule_1_1timeserieslinktype.html">timeserieslinktype</a>), <span class="keywordtype">pointer</span> :: tslink =&gt; null()</div>
 <div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;    nlinks = this%TsManager%boundtslinks%Count()</div>
 <div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;    <span class="keywordflow">do</span> i=1,nlinks</div>
@@ -552,50 +597,69 @@ $(function() {
 <div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;<span class="keywordflow">    enddo</span></div>
 <div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;  <span class="keyword">end subroutine </span>chd_rp_ts</div>
+<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacechdmodule.html#a2fa3100d6d57a3db4aa034dd351c48d7">chd_rp_ts</a></div>
 <div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160; </div>
 <div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;<span class="keyword">end module </span><a class="code" href="namespacechdmodule.html">chdmodule</a></div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <div class="ttc" id="anamespacebndmodule_html"><div class="ttname"><a href="namespacebndmodule.html">bndmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_boundary_package_8f90_source.html#l00001">BoundaryPackage.f90:1</a></div></div>
 <div class="ttc" id="anamespacekindmodule_html"><div class="ttname"><a href="namespacekindmodule.html">kindmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="kind_8f90_source.html#l00001">kind.f90:1</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_abab5757666b9ddd2726c20ce48dd0050"><div class="ttname"><a href="namespaceconstantsmodule.html#abab5757666b9ddd2726c20ce48dd0050">constantsmodule::dzero</a></div><div class="ttdeci">real(dp), parameter dzero</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00045">Constants.f90:45</a></div></div>
+<div class="ttc" id="astructtimeserieslinkmodule_1_1timeserieslinktype_html"><div class="ttname"><a href="structtimeserieslinkmodule_1_1timeserieslinktype.html">timeserieslinkmodule::timeserieslinktype</a></div><div class="ttdef"><b>Definition:</b> <a href="_time_series_link_8f90_source.html#l00017">TimeSeriesLink.f90:17</a></div></div>
 <div class="ttc" id="anamespaceobsmodule_html"><div class="ttname"><a href="namespaceobsmodule.html">obsmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_obs3_8f90_source.html#l00127">Obs3.f90:127</a></div></div>
 <div class="ttc" id="anamespacesimmodule_html_a1c78a6fda06b630c738bb654aa6bd816"><div class="ttname"><a href="namespacesimmodule.html#a1c78a6fda06b630c738bb654aa6bd816">simmodule::store_error_unit</a></div><div class="ttdeci">subroutine, public store_error_unit(iunit)</div><div class="ttdef"><b>Definition:</b> <a href="_sim_8f90_source.html#l00177">Sim.f90:177</a></div></div>
 <div class="ttc" id="anamespacesimmodule_html_a536cb6f0e13fcd33755e414641ff931a"><div class="ttname"><a href="namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a">simmodule::store_error</a></div><div class="ttdeci">subroutine, public store_error(msg)</div><div class="ttdef"><b>Definition:</b> <a href="_sim_8f90_source.html#l00107">Sim.f90:107</a></div></div>
+<div class="ttc" id="astructobservemodule_1_1observetype_html"><div class="ttname"><a href="structobservemodule_1_1observetype.html">observemodule::observetype</a></div><div class="ttdef"><b>Definition:</b> <a href="_observe_8f90_source.html#l00032">Observe.f90:32</a></div></div>
 <div class="ttc" id="anamespacebudgetmodule_html_a917d4897942de165ea88d0c1f0850d8e"><div class="ttname"><a href="namespacebudgetmodule.html#a917d4897942de165ea88d0c1f0850d8e">budgetmodule::rate_accumulator</a></div><div class="ttdeci">subroutine, public rate_accumulator(flow, rin, rout)</div><div class="ttdef"><b>Definition:</b> <a href="_budget_8f90_source.html#l00641">Budget.f90:641</a></div></div>
+<div class="ttc" id="anamespacechdmodule_html_aad308414c6c9102365d15eb7c2e97151"><div class="ttname"><a href="namespacechdmodule.html#aad308414c6c9102365d15eb7c2e97151">chdmodule::chd_allocate_arrays</a></div><div class="ttdeci">subroutine chd_allocate_arrays(this, nodelist, auxvar)</div><div class="ttdef"><b>Definition:</b> <a href="gwf3chd8_8f90_source.html#l00092">gwf3chd8.f90:92</a></div></div>
+<div class="ttc" id="anamespacechdmodule_html_a0459d61d8ea375eb9d3927babec416d5"><div class="ttname"><a href="namespacechdmodule.html#a0459d61d8ea375eb9d3927babec416d5">chdmodule::text</a></div><div class="ttdeci">character(len=lenpackagename) text</div><div class="ttdef"><b>Definition:</b> <a href="gwf3chd8_8f90_source.html#l00019">gwf3chd8.f90:19</a></div></div>
 <div class="ttc" id="anamespacechdmodule_html_a14c6e49f889c841d4c1b84369f3cd026"><div class="ttname"><a href="namespacechdmodule.html#a14c6e49f889c841d4c1b84369f3cd026">chdmodule::chd_da</a></div><div class="ttdeci">subroutine chd_da(this)</div><div class="ttdef"><b>Definition:</b> <a href="gwf3chd8_8f90_source.html#l00365">gwf3chd8.f90:365</a></div></div>
 <div class="ttc" id="anamespacesimmodule_html_a4c46e49de78d4498dd4ec106357775e6"><div class="ttname"><a href="namespacesimmodule.html#a4c46e49de78d4498dd4ec106357775e6">simmodule::count_errors</a></div><div class="ttdeci">integer(i4b) function, public count_errors()</div><div class="ttdef"><b>Definition:</b> <a href="_sim_8f90_source.html#l00043">Sim.f90:43</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_a96baa989fd4e29721a7756b985c18b30"><div class="ttname"><a href="namespaceconstantsmodule.html#a96baa989fd4e29721a7756b985c18b30">constantsmodule::lenftype</a></div><div class="ttdeci">integer(i4b), parameter lenftype</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00022">Constants.f90:22</a></div></div>
+<div class="ttc" id="anamespacechdmodule_html_a2fa3100d6d57a3db4aa034dd351c48d7"><div class="ttname"><a href="namespacechdmodule.html#a2fa3100d6d57a3db4aa034dd351c48d7">chdmodule::chd_rp_ts</a></div><div class="ttdeci">subroutine chd_rp_ts(this)</div><div class="ttdef"><b>Definition:</b> <a href="gwf3chd8_8f90_source.html#l00461">gwf3chd8.f90:461</a></div></div>
+<div class="ttc" id="anamespacechdmodule_html_a01c9aca7c3c701e986232d5a9f53e06c"><div class="ttname"><a href="namespacechdmodule.html#a01c9aca7c3c701e986232d5a9f53e06c">chdmodule::chd_ck</a></div><div class="ttdeci">subroutine chd_ck(this)</div><div class="ttdef"><b>Definition:</b> <a href="gwf3chd8_8f90_source.html#l00211">gwf3chd8.f90:211</a></div></div>
 <div class="ttc" id="anamespacesimmodule_html"><div class="ttname"><a href="namespacesimmodule.html">simmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_sim_8f90_source.html#l00001">Sim.f90:1</a></div></div>
 <div class="ttc" id="anamespacememoryhelpermodule_html"><div class="ttname"><a href="namespacememoryhelpermodule.html">memoryhelpermodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_memory_helper_8f90_source.html#l00001">MemoryHelper.f90:1</a></div></div>
+<div class="ttc" id="anamespacechdmodule_html_a27f77461af24165028b7051aec51fb2f"><div class="ttname"><a href="namespacechdmodule.html#a27f77461af24165028b7051aec51fb2f">chdmodule::chd_cq</a></div><div class="ttdeci">subroutine chd_cq(this, x, flowja, iadv)</div><div class="ttdef"><b>Definition:</b> <a href="gwf3chd8_8f90_source.html#l00277">gwf3chd8.f90:277</a></div></div>
+<div class="ttc" id="anamespacechdmodule_html_aba1bff4536c8defbdf16661983d8dde0"><div class="ttname"><a href="namespacechdmodule.html#aba1bff4536c8defbdf16661983d8dde0">chdmodule::chd_obs_supported</a></div><div class="ttdeci">logical function chd_obs_supported(this)</div><div class="ttdef"><b>Definition:</b> <a href="gwf3chd8_8f90_source.html#l00423">gwf3chd8.f90:423</a></div></div>
 <div class="ttc" id="anamespacememoryhelpermodule_html_a3791dbc2d4a06a0b9112158cff21f738"><div class="ttname"><a href="namespacememoryhelpermodule.html#a3791dbc2d4a06a0b9112158cff21f738">memoryhelpermodule::create_mem_path</a></div><div class="ttdeci">character(len=lenmempath) function create_mem_path(component, subcomponent)</div><div class="ttdoc">returns the path to the memory object</div><div class="ttdef"><b>Definition:</b> <a href="_memory_helper_8f90_source.html#l00021">MemoryHelper.f90:21</a></div></div>
 <div class="ttc" id="anamespacechdmodule_html_a14e50adbfa20e7c9aaeb42c74fcb6d47"><div class="ttname"><a href="namespacechdmodule.html#a14e50adbfa20e7c9aaeb42c74fcb6d47">chdmodule::define_listlabel</a></div><div class="ttdeci">subroutine define_listlabel(this)</div><div class="ttdef"><b>Definition:</b> <a href="gwf3chd8_8f90_source.html#l00389">gwf3chd8.f90:389</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_a060d310ded5535ce2dc85bd1ca1afd3d"><div class="ttname"><a href="namespaceconstantsmodule.html#a060d310ded5535ce2dc85bd1ca1afd3d">constantsmodule::linelength</a></div><div class="ttdeci">integer(i4b), parameter linelength</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00028">Constants.f90:28</a></div></div>
 <div class="ttc" id="anamespacetimeserieslinkmodule_html"><div class="ttname"><a href="namespacetimeserieslinkmodule.html">timeserieslinkmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_time_series_link_8f90_source.html#l00001">TimeSeriesLink.f90:1</a></div></div>
 <div class="ttc" id="anamespacesimmodule_html_a0be97214c1d4fcf42bc4ddc27b111b61"><div class="ttname"><a href="namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61">simmodule::ustop</a></div><div class="ttdeci">subroutine, public ustop(stopmess, ioutlocal)</div><div class="ttdef"><b>Definition:</b> <a href="_sim_8f90_source.html#l00324">Sim.f90:324</a></div></div>
+<div class="ttc" id="ainterfacememorymanagermodule_1_1mem__allocate_html"><div class="ttname"><a href="interfacememorymanagermodule_1_1mem__allocate.html">memorymanagermodule::mem_allocate</a></div><div class="ttdef"><b>Definition:</b> <a href="_memory_manager_8f90_source.html#l00050">MemoryManager.f90:50</a></div></div>
 <div class="ttc" id="anamespaceobservemodule_html"><div class="ttname"><a href="namespaceobservemodule.html">observemodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_observe_8f90_source.html#l00012">Observe.f90:12</a></div></div>
 <div class="ttc" id="anamespacechdmodule_html"><div class="ttname"><a href="namespacechdmodule.html">chdmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="gwf3chd8_8f90_source.html#l00001">gwf3chd8.f90:1</a></div></div>
 <div class="ttc" id="anamespacechdmodule_html_a6c5d3017622c4c83795a1e0826f9aa2e"><div class="ttname"><a href="namespacechdmodule.html#a6c5d3017622c4c83795a1e0826f9aa2e">chdmodule::chd_rp</a></div><div class="ttdeci">subroutine chd_rp(this)</div><div class="ttdef"><b>Definition:</b> <a href="gwf3chd8_8f90_source.html#l00124">gwf3chd8.f90:124</a></div></div>
+<div class="ttc" id="anamespacechdmodule_html_a6a94d84ad6cb107d927bdffabaa88fe8"><div class="ttname"><a href="namespacechdmodule.html#a6a94d84ad6cb107d927bdffabaa88fe8">chdmodule::chd_df_obs</a></div><div class="ttdeci">subroutine chd_df_obs(this)</div><div class="ttdef"><b>Definition:</b> <a href="gwf3chd8_8f90_source.html#l00439">gwf3chd8.f90:439</a></div></div>
 <div class="ttc" id="anamespaceobsmodule_html_a7dbce254f60ae2f0925c07136365ce91"><div class="ttname"><a href="namespaceobsmodule.html#a7dbce254f60ae2f0925c07136365ce91">obsmodule::defaultobsidprocessor</a></div><div class="ttdeci">subroutine, public defaultobsidprocessor(obsrv, dis, inunitobs, iout)</div><div class="ttdef"><b>Definition:</b> <a href="_obs3_8f90_source.html#l00238">Obs3.f90:238</a></div></div>
 <div class="ttc" id="anamespacekindmodule_html_a2f6861418b5e7d3d602b77228232a470"><div class="ttname"><a href="namespacekindmodule.html#a2f6861418b5e7d3d602b77228232a470">kindmodule::i4b</a></div><div class="ttdeci">integer, parameter i4b</div><div class="ttdef"><b>Definition:</b> <a href="kind_8f90_source.html#l00009">kind.f90:9</a></div></div>
 <div class="ttc" id="anamespacechdmodule_html_a80991f44441f8190d603fb38217d3c55"><div class="ttname"><a href="namespacechdmodule.html#a80991f44441f8190d603fb38217d3c55">chdmodule::chd_fc</a></div><div class="ttdeci">subroutine chd_fc(this, rhs, ia, idxglo, amatsln)</div><div class="ttdef"><b>Definition:</b> <a href="gwf3chd8_8f90_source.html#l00257">gwf3chd8.f90:257</a></div></div>
 <div class="ttc" id="anamespacebudgetmodule_html"><div class="ttname"><a href="namespacebudgetmodule.html">budgetmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_budget_8f90_source.html#l00019">Budget.f90:19</a></div></div>
+<div class="ttc" id="astructbudgetmodule_1_1budgettype_html"><div class="ttname"><a href="structbudgetmodule_1_1budgettype.html">budgetmodule::budgettype</a></div><div class="ttdef"><b>Definition:</b> <a href="_budget_8f90_source.html#l00031">Budget.f90:31</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_a46161975c953f015e2fda2bc089cfa94"><div class="ttname"><a href="namespaceconstantsmodule.html#a46161975c953f015e2fda2bc089cfa94">constantsmodule::namedboundflag</a></div><div class="ttdeci">integer(i4b), parameter namedboundflag</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00032">Constants.f90:32</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html"><div class="ttname"><a href="namespaceconstantsmodule.html">constantsmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00001">Constants.f90:1</a></div></div>
 <div class="ttc" id="anamespacetdismodule_html"><div class="ttname"><a href="namespacetdismodule.html">tdismodule</a></div><div class="ttdef"><b>Definition:</b> <a href="tdis_8f90_source.html#l00005">tdis.f90:5</a></div></div>
 <div class="ttc" id="anamespacechdmodule_html_a97431e4849ccedef864cdee9039b8a1b"><div class="ttname"><a href="namespacechdmodule.html#a97431e4849ccedef864cdee9039b8a1b">chdmodule::chd_ad</a></div><div class="ttdeci">subroutine chd_ad(this)</div><div class="ttdef"><b>Definition:</b> <a href="gwf3chd8_8f90_source.html#l00175">gwf3chd8.f90:175</a></div></div>
 <div class="ttc" id="anamespacetimeserieslinkmodule_html_ab7e38e1f45871cf48de54cc179ee9ac7"><div class="ttname"><a href="namespacetimeserieslinkmodule.html#ab7e38e1f45871cf48de54cc179ee9ac7">timeserieslinkmodule::gettimeserieslinkfromlist</a></div><div class="ttdeci">type(timeserieslinktype) function, pointer, public gettimeserieslinkfromlist(list, indx)</div><div class="ttdef"><b>Definition:</b> <a href="_time_series_link_8f90_source.html#l00095">TimeSeriesLink.f90:95</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_a2e75f10abe62e57d87d7d468c2bf763d"><div class="ttname"><a href="namespaceconstantsmodule.html#a2e75f10abe62e57d87d7d468c2bf763d">constantsmodule::lenpackagename</a></div><div class="ttdeci">integer(i4b), parameter lenpackagename</div><div class="ttdoc">maximum length of the package name</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00013">Constants.f90:13</a></div></div>
+<div class="ttc" id="ainterfacememorymanagermodule_1_1mem__deallocate_html"><div class="ttname"><a href="interfacememorymanagermodule_1_1mem__deallocate.html">memorymanagermodule::mem_deallocate</a></div><div class="ttdef"><b>Definition:</b> <a href="_memory_manager_8f90_source.html#l00085">MemoryManager.f90:85</a></div></div>
 <div class="ttc" id="anamespacememorymanagermodule_html"><div class="ttname"><a href="namespacememorymanagermodule.html">memorymanagermodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_memory_manager_8f90_source.html#l00001">MemoryManager.f90:1</a></div></div>
 <div class="ttc" id="anamespacekindmodule_html_ae38bd3a7dfaf151094c26e1529259639"><div class="ttname"><a href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">kindmodule::dp</a></div><div class="ttdeci">integer, parameter dp</div><div class="ttdef"><b>Definition:</b> <a href="kind_8f90_source.html#l00007">kind.f90:7</a></div></div>
 <div class="ttc" id="anamespacechdmodule_html_a061dea5df09ddd53e4ca09a1fb9168e6"><div class="ttname"><a href="namespacechdmodule.html#a061dea5df09ddd53e4ca09a1fb9168e6">chdmodule::chd_create</a></div><div class="ttdeci">subroutine, public chd_create(packobj, id, ibcnum, inunit, iout, namemodel, pakname)</div><div class="ttdef"><b>Definition:</b> <a href="gwf3chd8_8f90_source.html#l00044">gwf3chd8.f90:44</a></div></div>
 <div class="ttc" id="anamespacetdismodule_html_ae9a8dbe15bd2bcb8a85d53d570407ae6"><div class="ttname"><a href="namespacetdismodule.html#ae9a8dbe15bd2bcb8a85d53d570407ae6">tdismodule::delt</a></div><div class="ttdeci">real(dp), pointer, public delt</div><div class="ttdoc">length of the current time step</div><div class="ttdef"><b>Definition:</b> <a href="tdis_8f90_source.html#l00030">tdis.f90:30</a></div></div>
+<div class="ttc" id="anamespacechdmodule_html_abbd0e7988d54f58f56548abb7146de97"><div class="ttname"><a href="namespacechdmodule.html#abbd0e7988d54f58f56548abb7146de97">chdmodule::chd_bd</a></div><div class="ttdeci">subroutine chd_bd(this, model_budget)</div><div class="ttdef"><b>Definition:</b> <a href="gwf3chd8_8f90_source.html#l00348">gwf3chd8.f90:348</a></div></div>
+<div class="ttc" id="anamespacechdmodule_html_a2812d89876d044728d15c3dcb178e65e"><div class="ttname"><a href="namespacechdmodule.html#a2812d89876d044728d15c3dcb178e65e">chdmodule::ftype</a></div><div class="ttdeci">character(len=lenftype) ftype</div><div class="ttdef"><b>Definition:</b> <a href="gwf3chd8_8f90_source.html#l00018">gwf3chd8.f90:18</a></div></div>
+<div class="ttc" id="astructchdmodule_1_1chdtype_html"><div class="ttname"><a href="structchdmodule_1_1chdtype.html">chdmodule::chdtype</a></div><div class="ttdef"><b>Definition:</b> <a href="gwf3chd8_8f90_source.html#l00021">gwf3chd8.f90:21</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_af918ac22cd0b232deea67660bfbc9ce1"><div class="ttname"><a href="namespaceconstantsmodule.html#af918ac22cd0b232deea67660bfbc9ce1">constantsmodule::done</a></div><div class="ttdeci">real(dp), parameter done</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00056">Constants.f90:56</a></div></div>
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_32e188284d239da8bb14ec1dabb0c35f.html">Model</a></li><li class="navelem"><a class="el" href="dir_5aefb7a434fc869900e7ccf685166f81.html">GroundWaterFlow</a></li><li class="navelem"><a class="el" href="gwf3chd8_8f90.html">gwf3chd8.f90</a></li>
+    <li class="footer">Generated on Thu Jun 24 2021 19:50:09 for MODFLOW 6 by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
 </body>
 </html>

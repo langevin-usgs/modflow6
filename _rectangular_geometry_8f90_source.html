@@ -5,13 +5,22 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MODFLOW 6 Code Documentation: /home/runner/work/modflow6/modflow6/src/Model/Geometry/RectangularGeometry.f90 Source File</title>
+<title>MODFLOW 6: /home/runner/work/modflow6/modflow6/src/Model/Geometry/RectangularGeometry.f90 Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="CustomDoxygen.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -21,9 +30,12 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="mf6-triangular-grid.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">MODFLOW 6 Code Documentation
+   <div id="projectname">MODFLOW 6
+   &#160;<span id="projectnumber">version 6.2.2</span>
    </div>
+   <div id="projectbrief">MODFLOW 6 Code Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -36,16 +48,54 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Modules</span></a></li>
+      <li><a href="annotated.html"><span>Data&#160;Types&#160;List</span></a></li>
+      <li class="current"><a href="files.html"><span>Files</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('_rectangular_geometry_8f90_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,11 +110,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_32e188284d239da8bb14ec1dabb0c35f.html">Model</a></li><li class="navelem"><a class="el" href="dir_5e358ed4ee1421ad992482c81cef41a0.html">Geometry</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">RectangularGeometry.f90</div>  </div>
@@ -76,24 +121,24 @@ $(function() {
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespaceconstantsmodule.html">constantsmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespaceconstantsmodule.html#abab5757666b9ddd2726c20ce48dd0050">dzero</a></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;  <span class="keywordtype">implicit none</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;  <span class="keywordtype">private</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  <span class="keywordtype">public</span> :: rectangulargeometrytype</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  <span class="keywordtype">public</span> :: <a class="code" href="structrectangulargeometrymodule_1_1rectangulargeometrytype.html">rectangulargeometrytype</a></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  <span class="keyword">type</span>, <span class="keyword">extends</span>(basegeometrytype) :: rectangulargeometrytype</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keywordtype">    real</span>(DP) :: height = <a class="code" href="namespaceconstantsmodule.html#abab5757666b9ddd2726c20ce48dd0050">dzero</a></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keywordtype">    real</span>(DP) :: width  = <a class="code" href="namespaceconstantsmodule.html#abab5757666b9ddd2726c20ce48dd0050">dzero</a></div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="structrectangulargeometrymodule_1_1rectangulargeometrytype.html">    9</a></span>&#160;  <span class="keyword">type</span>, <span class="keyword">extends</span>(basegeometrytype) :: <a class="code" href="structrectangulargeometrymodule_1_1rectangulargeometrytype.html">rectangulargeometrytype</a></div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="structrectangulargeometrymodule_1_1rectangulargeometrytype.html#a361c1422e5ddf2ffaa0707b551aff520">   10</a></span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>) :: height = <a class="code" href="namespaceconstantsmodule.html#abab5757666b9ddd2726c20ce48dd0050">dzero</a></div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="structrectangulargeometrymodule_1_1rectangulargeometrytype.html#a3678e88c6a5529e813c7f16a557b8e00">   11</a></span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>) :: width  = <a class="code" href="namespaceconstantsmodule.html#abab5757666b9ddd2726c20ce48dd0050">dzero</a></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <span class="keyword">contains</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordtype">procedure</span> :: area_sat</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">procedure</span> :: perimeter_sat</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">procedure</span> :: area_wet</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">procedure</span> :: perimeter_wet</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">procedure</span> :: set_attribute</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">procedure</span> :: print_attributes</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <span class="keyword">end type </span>rectangulargeometrytype</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="structrectangulargeometrymodule_1_1rectangulargeometrytype.html#abf8377cf5531edfd89cda353ff7e3343">   13</a></span>&#160;    <span class="keywordtype">procedure</span> :: <a class="code" href="namespacerectangulargeometrymodule.html#a73912353525d19ee8c486181f9c56048">area_sat</a></div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="structrectangulargeometrymodule_1_1rectangulargeometrytype.html#a7c4ce221603ee93bfab814444414d615">   14</a></span>&#160;    <span class="keywordtype">procedure</span> :: <a class="code" href="namespacerectangulargeometrymodule.html#a00f6a9389c3f480d388b2200c9e5aa3f">perimeter_sat</a></div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="structrectangulargeometrymodule_1_1rectangulargeometrytype.html#a52a08289f702b75de6eed2903b1c0eb0">   15</a></span>&#160;    <span class="keywordtype">procedure</span> :: <a class="code" href="namespacerectangulargeometrymodule.html#ace4d1b45bd33ebdf2e02afbbf6b06fcb">area_wet</a></div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="structrectangulargeometrymodule_1_1rectangulargeometrytype.html#ad5287f5e28b75e596d80d95442f38281">   16</a></span>&#160;    <span class="keywordtype">procedure</span> :: <a class="code" href="namespacerectangulargeometrymodule.html#a20cb51ee9c3fb3e8b04b88bdf42b3e2b">perimeter_wet</a></div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="structrectangulargeometrymodule_1_1rectangulargeometrytype.html#a06c44c075f43a36f14cd4de1bece92dd">   17</a></span>&#160;    <span class="keywordtype">procedure</span> :: <a class="code" href="namespacerectangulargeometrymodule.html#a6822bf89e419aeed9caec9e37475f5d9">set_attribute</a></div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="structrectangulargeometrymodule_1_1rectangulargeometrytype.html#aecac0c0b358a0325047a4668dc273340">   18</a></span>&#160;    <span class="keywordtype">procedure</span> :: <a class="code" href="namespacerectangulargeometrymodule.html#a6f623d42989e341d43668a91cb48b841">print_attributes</a></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <span class="keyword">end type </span><a class="code" href="structrectangulargeometrymodule_1_1rectangulargeometrytype.html">rectangulargeometrytype</a></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  </div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="keyword">contains</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keyword">function </span>area_sat(this)</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keyword">function </span><a class="code" href="namespacerectangulargeometrymodule.html#a73912353525d19ee8c486181f9c56048">area_sat</a>(this)</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="namespacerectangulargeometrymodule.html#a73912353525d19ee8c486181f9c56048">   24</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">! area_sat -- return saturated area</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">!</span></div>
@@ -102,17 +147,17 @@ $(function() {
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="comment">! -- modules</span></div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespaceconstantsmodule.html">constantsmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespaceconstantsmodule.html#adc3d56c06695509e95078d706508e83f">dtwo</a>, <a class="code" href="namespaceconstantsmodule.html#aa190ea61b44b2ef628329833de6543a9">dpi</a></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="comment">! -- return</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keywordtype">    real</span>(DP) :: area_sat</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>) :: <a class="code" href="namespacerectangulargeometrymodule.html#a73912353525d19ee8c486181f9c56048">area_sat</a></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">class</span>(RectangularGeometryType) :: this</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structrectangulargeometrymodule_1_1rectangulargeometrytype.html">rectangulargeometrytype</a>) :: this</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="comment">! -- Calculate area</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    area_sat = this%height * this%width</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="namespacerectangulargeometrymodule.html#a73912353525d19ee8c486181f9c56048">area_sat</a> = this%height * this%width</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="comment">! -- Return</span></div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keyword">end function </span>area_sat</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keyword">end function </span><a class="code" href="namespacerectangulargeometrymodule.html#a73912353525d19ee8c486181f9c56048">area_sat</a></div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  </div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keyword">function </span><a class="code" href="namespacerectangulargeometrymodule.html#a00f6a9389c3f480d388b2200c9e5aa3f">perimeter_sat</a>(this)</div>
 <div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="namespacerectangulargeometrymodule.html#a00f6a9389c3f480d388b2200c9e5aa3f">   46</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
@@ -126,7 +171,7 @@ $(function() {
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="comment">! -- return</span></div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>) :: <a class="code" href="namespacerectangulargeometrymodule.html#a00f6a9389c3f480d388b2200c9e5aa3f">perimeter_sat</a></div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">class</span>(rectangulargeometrytype) :: this</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structrectangulargeometrymodule_1_1rectangulargeometrytype.html">rectangulargeometrytype</a>) :: this</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="comment">! -- Calculate area</span></div>
@@ -148,7 +193,7 @@ $(function() {
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="comment">! -- return</span></div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>) :: <a class="code" href="namespacerectangulargeometrymodule.html#ace4d1b45bd33ebdf2e02afbbf6b06fcb">area_wet</a></div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">class</span>(rectangulargeometrytype) :: this</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structrectangulargeometrymodule_1_1rectangulargeometrytype.html">rectangulargeometrytype</a>) :: this</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">intent(in)</span> :: depth</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="comment">!</span></div>
@@ -177,7 +222,7 @@ $(function() {
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="comment">! -- return</span></div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>) :: <a class="code" href="namespacerectangulargeometrymodule.html#a20cb51ee9c3fb3e8b04b88bdf42b3e2b">perimeter_wet</a></div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordtype">class</span>(rectangulargeometrytype) :: this</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structrectangulargeometrymodule_1_1rectangulargeometrytype.html">rectangulargeometrytype</a>) :: this</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">intent(in)</span> :: depth</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="comment">!</span></div>
@@ -206,7 +251,7 @@ $(function() {
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespaceconstantsmodule.html">constantsmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespaceconstantsmodule.html#a060d310ded5535ce2dc85bd1ca1afd3d">linelength</a></div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacesimmodule.html">simmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61">ustop</a>, <a class="code" href="namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a">store_error</a>, <a class="code" href="namespacesimmodule.html#a4c46e49de78d4498dd4ec106357775e6">count_errors</a></div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keywordtype">class</span>(rectangulargeometrytype) :: this</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structrectangulargeometrymodule_1_1rectangulargeometrytype.html">rectangulargeometrytype</a>) :: this</div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="keywordtype">character(len=LINELENGTH)</span> :: errmsg</div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keywordtype">character(len=*)</span>, <span class="keywordtype">intent(inout)</span> :: line</div>
 <div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="comment">! -- local</span></div>
@@ -251,7 +296,7 @@ $(function() {
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;<span class="comment">!    SPECIFICATIONS:</span></div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <span class="keywordtype">class</span>(rectangulargeometrytype) :: this</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structrectangulargeometrymodule_1_1rectangulargeometrytype.html">rectangulargeometrytype</a>) :: this</div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: iout</div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="comment">! -- formats</span></div>
@@ -274,8 +319,10 @@ $(function() {
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;  </div>
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;<span class="keyword">end module </span>RectangularGeometryModule</div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <div class="ttc" id="anamespacerectangulargeometrymodule_html_a6f623d42989e341d43668a91cb48b841"><div class="ttname"><a href="namespacerectangulargeometrymodule.html#a6f623d42989e341d43668a91cb48b841">rectangulargeometrymodule::print_attributes</a></div><div class="ttdeci">subroutine print_attributes(this, iout)</div><div class="ttdef"><b>Definition:</b> <a href="_rectangular_geometry_8f90_source.html#l00175">RectangularGeometry.f90:175</a></div></div>
 <div class="ttc" id="anamespacekindmodule_html"><div class="ttname"><a href="namespacekindmodule.html">kindmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="kind_8f90_source.html#l00001">kind.f90:1</a></div></div>
+<div class="ttc" id="astructrectangulargeometrymodule_1_1rectangulargeometrytype_html"><div class="ttname"><a href="structrectangulargeometrymodule_1_1rectangulargeometrytype.html">rectangulargeometrymodule::rectangulargeometrytype</a></div><div class="ttdef"><b>Definition:</b> <a href="_rectangular_geometry_8f90_source.html#l00009">RectangularGeometry.f90:9</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_abab5757666b9ddd2726c20ce48dd0050"><div class="ttname"><a href="namespaceconstantsmodule.html#abab5757666b9ddd2726c20ce48dd0050">constantsmodule::dzero</a></div><div class="ttdeci">real(dp), parameter dzero</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00045">Constants.f90:45</a></div></div>
 <div class="ttc" id="anamespacerectangulargeometrymodule_html_ace4d1b45bd33ebdf2e02afbbf6b06fcb"><div class="ttname"><a href="namespacerectangulargeometrymodule.html#ace4d1b45bd33ebdf2e02afbbf6b06fcb">rectangulargeometrymodule::area_wet</a></div><div class="ttdeci">real(dp) function area_wet(this, depth)</div><div class="ttdef"><b>Definition:</b> <a href="_rectangular_geometry_8f90_source.html#l00068">RectangularGeometry.f90:68</a></div></div>
 <div class="ttc" id="anamespacerectangulargeometrymodule_html_a00f6a9389c3f480d388b2200c9e5aa3f"><div class="ttname"><a href="namespacerectangulargeometrymodule.html#a00f6a9389c3f480d388b2200c9e5aa3f">rectangulargeometrymodule::perimeter_sat</a></div><div class="ttdeci">real(dp) function perimeter_sat(this)</div><div class="ttdef"><b>Definition:</b> <a href="_rectangular_geometry_8f90_source.html#l00046">RectangularGeometry.f90:46</a></div></div>
@@ -285,6 +332,7 @@ $(function() {
 <div class="ttc" id="anamespacesimmodule_html_a4c46e49de78d4498dd4ec106357775e6"><div class="ttname"><a href="namespacesimmodule.html#a4c46e49de78d4498dd4ec106357775e6">simmodule::count_errors</a></div><div class="ttdeci">integer(i4b) function, public count_errors()</div><div class="ttdef"><b>Definition:</b> <a href="_sim_8f90_source.html#l00043">Sim.f90:43</a></div></div>
 <div class="ttc" id="anamespacesimmodule_html"><div class="ttname"><a href="namespacesimmodule.html">simmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_sim_8f90_source.html#l00001">Sim.f90:1</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_adc3d56c06695509e95078d706508e83f"><div class="ttname"><a href="namespaceconstantsmodule.html#adc3d56c06695509e95078d706508e83f">constantsmodule::dtwo</a></div><div class="ttdeci">real(dp), parameter dtwo</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00059">Constants.f90:59</a></div></div>
+<div class="ttc" id="anamespacerectangulargeometrymodule_html_a73912353525d19ee8c486181f9c56048"><div class="ttname"><a href="namespacerectangulargeometrymodule.html#a73912353525d19ee8c486181f9c56048">rectangulargeometrymodule::area_sat</a></div><div class="ttdeci">real(dp) function area_sat(this)</div><div class="ttdef"><b>Definition:</b> <a href="_rectangular_geometry_8f90_source.html#l00024">RectangularGeometry.f90:24</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_aa190ea61b44b2ef628329833de6543a9"><div class="ttname"><a href="namespaceconstantsmodule.html#aa190ea61b44b2ef628329833de6543a9">constantsmodule::dpi</a></div><div class="ttdeci">real(dp), parameter dpi</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00099">Constants.f90:99</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_a060d310ded5535ce2dc85bd1ca1afd3d"><div class="ttname"><a href="namespaceconstantsmodule.html#a060d310ded5535ce2dc85bd1ca1afd3d">constantsmodule::linelength</a></div><div class="ttdeci">integer(i4b), parameter linelength</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00028">Constants.f90:28</a></div></div>
 <div class="ttc" id="anamespacesimmodule_html_a0be97214c1d4fcf42bc4ddc27b111b61"><div class="ttname"><a href="namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61">simmodule::ustop</a></div><div class="ttdeci">subroutine, public ustop(stopmess, ioutlocal)</div><div class="ttdef"><b>Definition:</b> <a href="_sim_8f90_source.html#l00324">Sim.f90:324</a></div></div>
@@ -296,10 +344,13 @@ $(function() {
 <div class="ttc" id="anamespacekindmodule_html_ae38bd3a7dfaf151094c26e1529259639"><div class="ttname"><a href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">kindmodule::dp</a></div><div class="ttdeci">integer, parameter dp</div><div class="ttdef"><b>Definition:</b> <a href="kind_8f90_source.html#l00007">kind.f90:7</a></div></div>
 <div class="ttc" id="anamespaceinputoutputmodule_html_a653efe7e8a111c5e477fea26e0b04fe5"><div class="ttname"><a href="namespaceinputoutputmodule.html#a653efe7e8a111c5e477fea26e0b04fe5">inputoutputmodule::urword</a></div><div class="ttdeci">subroutine, public urword(LINE, ICOL, ISTART, ISTOP, NCODE, N, R, IOUT, IN)</div><div class="ttdef"><b>Definition:</b> <a href="_input_output_8f90_source.html#l00747">InputOutput.f90:747</a></div></div>
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_32e188284d239da8bb14ec1dabb0c35f.html">Model</a></li><li class="navelem"><a class="el" href="dir_5e358ed4ee1421ad992482c81cef41a0.html">Geometry</a></li><li class="navelem"><a class="el" href="_rectangular_geometry_8f90.html">RectangularGeometry.f90</a></li>
+    <li class="footer">Generated on Thu Jun 24 2021 19:50:09 for MODFLOW 6 by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
 </body>
 </html>

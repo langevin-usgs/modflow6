@@ -5,13 +5,22 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MODFLOW 6 Code Documentation: /home/runner/work/modflow6/modflow6/src/Model/GroundWaterFlow/gwf3sfr8.f90 File Reference</title>
+<title>MODFLOW 6: /home/runner/work/modflow6/modflow6/src/Model/GroundWaterFlow/gwf3sfr8.f90 File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="CustomDoxygen.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -21,9 +30,12 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="mf6-triangular-grid.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">MODFLOW 6 Code Documentation
+   <div id="projectname">MODFLOW 6
+   &#160;<span id="projectnumber">version 6.2.2</span>
    </div>
+   <div id="projectbrief">MODFLOW 6 Code Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -36,16 +48,54 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Modules</span></a></li>
+      <li><a href="annotated.html"><span>Data&#160;Types&#160;List</span></a></li>
+      <li class="current"><a href="files.html"><span>Files</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('gwf3sfr8_8f90.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,11 +110,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_32e188284d239da8bb14ec1dabb0c35f.html">Model</a></li><li class="navelem"><a class="el" href="dir_5aefb7a434fc869900e7ccf685166f81.html">GroundWaterFlow</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Data Types</a> &#124;
@@ -78,6 +123,11 @@ $(function() {
 
 <p><a href="gwf3sfr8_8f90_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Data Types</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">type &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsfrmodule_1_1sfrtype.html">sfrmodule::sfrtype</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Modules</h2></td></tr>
 <tr class="memitem:namespacesfrmodule"><td class="memItemLeft" align="right" valign="top">module &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesfrmodule.html">sfrmodule</a></td></tr>
@@ -109,6 +159,12 @@ Functions/Subroutines</h2></td></tr>
 <tr class="separator:afc05ae3a236bf4c4a4884bfe51a3d1fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e647aebe799daa24b7fc145a1f425d9"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesfrmodule.html#a9e647aebe799daa24b7fc145a1f425d9">sfrmodule::sfr_cf</a> (this, reset_mover)</td></tr>
 <tr class="separator:a9e647aebe799daa24b7fc145a1f425d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad15971981bf4723e1f9b2af0280fa884"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesfrmodule.html#ad15971981bf4723e1f9b2af0280fa884">sfrmodule::sfr_fc</a> (this, rhs, ia, idxglo, amatsln)</td></tr>
+<tr class="separator:ad15971981bf4723e1f9b2af0280fa884"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afec5f1ca9cd19982426b70000c431141"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesfrmodule.html#afec5f1ca9cd19982426b70000c431141">sfrmodule::sfr_fn</a> (this, rhs, ia, idxglo, amatsln)</td></tr>
+<tr class="separator:afec5f1ca9cd19982426b70000c431141"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19fcebfb4dc1f317beaf82d9bf5af7a4"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesfrmodule.html#a19fcebfb4dc1f317beaf82d9bf5af7a4">sfrmodule::sfr_cc</a> (this, innertot, kiter, iend, icnvgmod, cpak, ipak, dpak)</td></tr>
+<tr class="separator:a19fcebfb4dc1f317beaf82d9bf5af7a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1cecc4054c571877f6b14d2beaab7356"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesfrmodule.html#a1cecc4054c571877f6b14d2beaab7356">sfrmodule::sfr_cq</a> (this, x, flowja, iadv)</td></tr>
 <tr class="separator:a1cecc4054c571877f6b14d2beaab7356"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23b0ec222b7529d8ff451c39732978ce"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesfrmodule.html#a23b0ec222b7529d8ff451c39732978ce">sfrmodule::sfr_ot_package_flows</a> (this, icbcfl, ibudfl)</td></tr>
@@ -117,16 +173,66 @@ Functions/Subroutines</h2></td></tr>
 <tr class="separator:a506c1fd74d4c4c8a1965b9b50d7d4205"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ea99a7214abdd7ae79e917dc0fae08b"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesfrmodule.html#a3ea99a7214abdd7ae79e917dc0fae08b">sfrmodule::sfr_ot_bdsummary</a> (this, kstp, kper, iout)</td></tr>
 <tr class="separator:a3ea99a7214abdd7ae79e917dc0fae08b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2df712db96a8dca145df5d98736db677"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesfrmodule.html#a2df712db96a8dca145df5d98736db677">sfrmodule::sfr_da</a> (this)</td></tr>
+<tr class="separator:a2df712db96a8dca145df5d98736db677"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69bccbdc4a96b0df4b0c32d08ccbe35b"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesfrmodule.html#a69bccbdc4a96b0df4b0c32d08ccbe35b">sfrmodule::define_listlabel</a> (this)</td></tr>
 <tr class="separator:a69bccbdc4a96b0df4b0c32d08ccbe35b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef4940fae7801fe9061871c558094aed"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesfrmodule.html#aef4940fae7801fe9061871c558094aed">sfrmodule::sfr_set_pointers</a> (this, neq, ibound, xnew, xold, flowja)</td></tr>
+<tr class="separator:aef4940fae7801fe9061871c558094aed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd9d59e830cf2a82a2b2d09bd094b418"><td class="memItemLeft" align="right" valign="top">logical function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesfrmodule.html#acd9d59e830cf2a82a2b2d09bd094b418">sfrmodule::sfr_obs_supported</a> (this)</td></tr>
+<tr class="separator:acd9d59e830cf2a82a2b2d09bd094b418"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a2744b945481221fbaaf48acabd8186"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesfrmodule.html#a6a2744b945481221fbaaf48acabd8186">sfrmodule::sfr_df_obs</a> (this)</td></tr>
+<tr class="separator:a6a2744b945481221fbaaf48acabd8186"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a985422530d8f633587ef61d5faa1cd"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesfrmodule.html#a7a985422530d8f633587ef61d5faa1cd">sfrmodule::sfr_bd_obs</a> (this)</td></tr>
+<tr class="separator:a7a985422530d8f633587ef61d5faa1cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9f92e161b51b34427f1b12cfbb79815"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesfrmodule.html#ad9f92e161b51b34427f1b12cfbb79815">sfrmodule::sfr_rp_obs</a> (this)</td></tr>
+<tr class="separator:ad9f92e161b51b34427f1b12cfbb79815"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a685d2a55b16bd60a12a2aaedbea9d620"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesfrmodule.html#a685d2a55b16bd60a12a2aaedbea9d620">sfrmodule::sfr_process_obsid</a> (obsrv, dis, inunitobs, iout)</td></tr>
 <tr class="separator:a685d2a55b16bd60a12a2aaedbea9d620"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8852a544449ad581a8cabf7d9e94e36"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesfrmodule.html#ac8852a544449ad581a8cabf7d9e94e36">sfrmodule::sfr_set_stressperiod</a> (this, n, ichkustrm)</td></tr>
+<tr class="separator:ac8852a544449ad581a8cabf7d9e94e36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad4744f90a4cc1281e6536c5068d1c7a4"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesfrmodule.html#ad4744f90a4cc1281e6536c5068d1c7a4">sfrmodule::sfr_solve</a> (this, n, h, hcof, rhs, update)</td></tr>
 <tr class="separator:ad4744f90a4cc1281e6536c5068d1c7a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bfa2634514f23a92277fc718952915b"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesfrmodule.html#a9bfa2634514f23a92277fc718952915b">sfrmodule::sfr_update_flows</a> (this, n, qd, qgwf)</td></tr>
+<tr class="separator:a9bfa2634514f23a92277fc718952915b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f26e22eac11fe58a67d375cf2bb9b25"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesfrmodule.html#a9f26e22eac11fe58a67d375cf2bb9b25">sfrmodule::sfr_calc_qd</a> (this, n, depth, hgwf, qgwf, qd)</td></tr>
+<tr class="separator:a9f26e22eac11fe58a67d375cf2bb9b25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf2c5c93011287606794460a53ee2c52"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesfrmodule.html#abf2c5c93011287606794460a53ee2c52">sfrmodule::sfr_calc_qsource</a> (this, n, depth, qsrc)</td></tr>
+<tr class="separator:abf2c5c93011287606794460a53ee2c52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bea0c1a6342ebff08051f67b38cc64d"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesfrmodule.html#a8bea0c1a6342ebff08051f67b38cc64d">sfrmodule::sfr_calc_qman</a> (this, n, depth, qman)</td></tr>
+<tr class="separator:a8bea0c1a6342ebff08051f67b38cc64d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafe126a78d9becdbf0327c4204b6075a"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesfrmodule.html#aafe126a78d9becdbf0327c4204b6075a">sfrmodule::sfr_calc_qgwf</a> (this, n, depth, hgwf, qgwf, gwfhcof, gwfrhs)</td></tr>
+<tr class="separator:aafe126a78d9becdbf0327c4204b6075a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a83d5d942e8d25368763a1b2ebaee35"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesfrmodule.html#a1a83d5d942e8d25368763a1b2ebaee35">sfrmodule::sfr_calc_cond</a> (this, n, cond)</td></tr>
+<tr class="separator:a1a83d5d942e8d25368763a1b2ebaee35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafddc50496348f677e8f00ca1d2342cc"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesfrmodule.html#aafddc50496348f677e8f00ca1d2342cc">sfrmodule::sfr_calc_div</a> (this, n, i, qd, qdiv)</td></tr>
+<tr class="separator:aafddc50496348f677e8f00ca1d2342cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0434ac92fc2fc5ef2812ac323aed9d0b"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesfrmodule.html#a0434ac92fc2fc5ef2812ac323aed9d0b">sfrmodule::sfr_rectch_depth</a> (this, n, q1, d1)</td></tr>
+<tr class="separator:a0434ac92fc2fc5ef2812ac323aed9d0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a982f769cc3bd67789b08e3823384cafd"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesfrmodule.html#a982f769cc3bd67789b08e3823384cafd">sfrmodule::sfr_check_reaches</a> (this)</td></tr>
+<tr class="separator:a982f769cc3bd67789b08e3823384cafd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72ae02795191b6875226f19aebd056ad"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesfrmodule.html#a72ae02795191b6875226f19aebd056ad">sfrmodule::sfr_check_connections</a> (this)</td></tr>
+<tr class="separator:a72ae02795191b6875226f19aebd056ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d8c519f90b35fd498f1006b22267c2c"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesfrmodule.html#a4d8c519f90b35fd498f1006b22267c2c">sfrmodule::sfr_check_diversions</a> (this)</td></tr>
+<tr class="separator:a4d8c519f90b35fd498f1006b22267c2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a341aafee87310288ad4e23da535d9a27"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesfrmodule.html#a341aafee87310288ad4e23da535d9a27">sfrmodule::sfr_check_ustrf</a> (this)</td></tr>
+<tr class="separator:a341aafee87310288ad4e23da535d9a27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fa3402fe639ad226e2ade9195cc66b3"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesfrmodule.html#a7fa3402fe639ad226e2ade9195cc66b3">sfrmodule::sfr_setup_budobj</a> (this)</td></tr>
+<tr class="separator:a7fa3402fe639ad226e2ade9195cc66b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4b629c40e77f49df978c81616ec873c"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesfrmodule.html#aa4b629c40e77f49df978c81616ec873c">sfrmodule::sfr_fill_budobj</a> (this)</td></tr>
 <tr class="separator:aa4b629c40e77f49df978c81616ec873c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a126527f0b5361bc25a93acfd502b01cd"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesfrmodule.html#a126527f0b5361bc25a93acfd502b01cd">sfrmodule::sfr_setup_tableobj</a> (this)</td></tr>
+<tr class="separator:a126527f0b5361bc25a93acfd502b01cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab50a29307f715cc793210e118b33c4bb"><td class="memItemLeft" align="right" valign="top">real(dp) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesfrmodule.html#ab50a29307f715cc793210e118b33c4bb">sfrmodule::area_wet</a> (this, n, depth)</td></tr>
 <tr class="separator:ab50a29307f715cc793210e118b33c4bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b87da35da79d25681e47fa07360bf6b"><td class="memItemLeft" align="right" valign="top">real(dp) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesfrmodule.html#a0b87da35da79d25681e47fa07360bf6b">sfrmodule::perimeter_wet</a> (this, n)</td></tr>
+<tr class="separator:a0b87da35da79d25681e47fa07360bf6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af81d42c89228b40995c0afe2af97c344"><td class="memItemLeft" align="right" valign="top">real(dp) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesfrmodule.html#af81d42c89228b40995c0afe2af97c344">sfrmodule::surface_area</a> (this, n)</td></tr>
+<tr class="separator:af81d42c89228b40995c0afe2af97c344"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adeba773b948d28ffbd29a812e5616578"><td class="memItemLeft" align="right" valign="top">real(dp) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesfrmodule.html#adeba773b948d28ffbd29a812e5616578">sfrmodule::surface_area_wet</a> (this, n, depth)</td></tr>
+<tr class="separator:adeba773b948d28ffbd29a812e5616578"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a806b53674fa9b2d21064b9d5718310ae"><td class="memItemLeft" align="right" valign="top">real(dp) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesfrmodule.html#a806b53674fa9b2d21064b9d5718310ae">sfrmodule::top_width_wet</a> (this, n, depth)</td></tr>
+<tr class="separator:a806b53674fa9b2d21064b9d5718310ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada816d9da42d771a0b92682bfc82996c"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesfrmodule.html#ada816d9da42d771a0b92682bfc82996c">sfrmodule::sfr_activate_density</a> (this)</td></tr>
 <tr class="separator:ada816d9da42d771a0b92682bfc82996c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a560d50d24cedfb00dbd54443afd65a73"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesfrmodule.html#a560d50d24cedfb00dbd54443afd65a73">sfrmodule::sfr_calculate_density_exchange</a> (this, n, stage, head, cond, bots, flow, gwfhcof, gwfrhs)</td></tr>
@@ -140,11 +246,15 @@ Variables</h2></td></tr>
 <tr class="separator:abe1408ea8d05f91dcfac95cc8e579853"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_32e188284d239da8bb14ec1dabb0c35f.html">Model</a></li><li class="navelem"><a class="el" href="dir_5aefb7a434fc869900e7ccf685166f81.html">GroundWaterFlow</a></li><li class="navelem"><a class="el" href="gwf3sfr8_8f90.html">gwf3sfr8.f90</a></li>
+    <li class="footer">Generated on Thu Jun 24 2021 19:50:10 for MODFLOW 6 by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
 </body>
 </html>

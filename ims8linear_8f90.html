@@ -5,13 +5,22 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MODFLOW 6 Code Documentation: /home/runner/work/modflow6/modflow6/src/Solution/SparseMatrixSolver/ims8linear.f90 File Reference</title>
+<title>MODFLOW 6: /home/runner/work/modflow6/modflow6/src/Solution/SparseMatrixSolver/ims8linear.f90 File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="CustomDoxygen.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -21,9 +30,12 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="mf6-triangular-grid.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">MODFLOW 6 Code Documentation
+   <div id="projectname">MODFLOW 6
+   &#160;<span id="projectnumber">version 6.2.2</span>
    </div>
+   <div id="projectbrief">MODFLOW 6 Code Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -36,16 +48,54 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Modules</span></a></li>
+      <li><a href="annotated.html"><span>Data&#160;Types&#160;List</span></a></li>
+      <li class="current"><a href="files.html"><span>Files</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('ims8linear_8f90.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,16 +110,12 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_45e973df69963bbfe985a1f7e6db2b6f.html">Solution</a></li><li class="navelem"><a class="el" href="dir_05d5634044adf0ab08e7f809dfce3115.html">SparseMatrixSolver</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Data Types</a> &#124;
 <a href="#namespaces">Modules</a> &#124;
-<a href="#func-members">Functions/Subroutines</a>  </div>
+<a href="#func-members">Functions/Subroutines</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">ims8linear.f90 File Reference</div>  </div>
 </div><!--header-->
@@ -89,28 +135,40 @@ Modules</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions/Subroutines</h2></td></tr>
+<tr class="memitem:a6a11a0465c3b3e411da5afab1b06241a"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceimslinearmodule.html#a6a11a0465c3b3e411da5afab1b06241a">imslinearmodule::imslinear_ar</a> (this, NAME, INIU, IOUT, IPRIMS, MXITER, IFDPARAM, IMSLINEARM, NEQ, NJA, IA, JA, AMAT, RHS, X, NINNER, LFINDBLOCK)</td></tr>
+<tr class="memdesc:a6a11a0465c3b3e411da5afab1b06241a"><td class="mdescLeft">&#160;</td><td class="mdescRight">@ brief Allocate storage and read data  <a href="namespaceimslinearmodule.html#a6a11a0465c3b3e411da5afab1b06241a">More...</a><br /></td></tr>
+<tr class="separator:a6a11a0465c3b3e411da5afab1b06241a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f7967f429e6faea280ac07dc5da1e7c"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceimslinearmodule.html#a2f7967f429e6faea280ac07dc5da1e7c">imslinearmodule::imslinear_summary</a> (this, mxiter)</td></tr>
 <tr class="memdesc:a2f7967f429e6faea280ac07dc5da1e7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">@ brief Write summary of settings  <a href="namespaceimslinearmodule.html#a2f7967f429e6faea280ac07dc5da1e7c">More...</a><br /></td></tr>
 <tr class="separator:a2f7967f429e6faea280ac07dc5da1e7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12ab7e2f208e4281cc451ef3febe30a5"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceimslinearmodule.html#a12ab7e2f208e4281cc451ef3febe30a5">imslinearmodule::allocate_scalars</a> (this)</td></tr>
+<tr class="memdesc:a12ab7e2f208e4281cc451ef3febe30a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">@ brief Allocate and initialize scalars  <a href="namespaceimslinearmodule.html#a12ab7e2f208e4281cc451ef3febe30a5">More...</a><br /></td></tr>
+<tr class="separator:a12ab7e2f208e4281cc451ef3febe30a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93717fa4233383baf9e284e08e5685e3"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceimslinearmodule.html#a93717fa4233383baf9e284e08e5685e3">imslinearmodule::imslinear_da</a> (this)</td></tr>
 <tr class="memdesc:a93717fa4233383baf9e284e08e5685e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">@ brief Deallocate memory  <a href="namespaceimslinearmodule.html#a93717fa4233383baf9e284e08e5685e3">More...</a><br /></td></tr>
 <tr class="separator:a93717fa4233383baf9e284e08e5685e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad0b69e33584eb3bbe15d9a0c4ff950f9"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceimslinearmodule.html#ad0b69e33584eb3bbe15d9a0c4ff950f9">imslinearmodule::set_imslinear_input</a> (THIS, IFDPARAM)</td></tr>
-<tr class="memdesc:ad0b69e33584eb3bbe15d9a0c4ff950f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">@ brief Set default settings  <a href="namespaceimslinearmodule.html#ad0b69e33584eb3bbe15d9a0c4ff950f9">More...</a><br /></td></tr>
-<tr class="separator:ad0b69e33584eb3bbe15d9a0c4ff950f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b685c3a21ca3310a8d64e4fc8575a1a"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceimslinearmodule.html#a5b685c3a21ca3310a8d64e4fc8575a1a">imslinearmodule::imslinearsub_calc_order</a> (IOUT, IPRIMS, IORD, NEQ, NJA, IA, JA, LORDER, IORDER)</td></tr>
-<tr class="separator:a5b685c3a21ca3310a8d64e4fc8575a1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8525d49f9f8249356f91d983d6eb2b4"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceimslinearmodule.html#aa8525d49f9f8249356f91d983d6eb2b4">imslinearmodule::imslinearsub_scale</a> (IOPT, ISCL, NEQ, NJA, IA, JA, AMAT, X, B, DSCALE, DSCALE2)</td></tr>
-<tr class="separator:aa8525d49f9f8249356f91d983d6eb2b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a006a4eedcab0d169efca29c07606e5f5"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceimslinearmodule.html#a006a4eedcab0d169efca29c07606e5f5">imslinearmodule::imslinearsub_pcj</a> (NJA, NEQ, AMAT, APC, IA, JA)</td></tr>
-<tr class="separator:a006a4eedcab0d169efca29c07606e5f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c545aecf605db0332971007215f7328"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceimslinearmodule.html#a4c545aecf605db0332971007215f7328">imslinearmodule::imslinear_set_input</a> (this, IFDPARAM)</td></tr>
+<tr class="memdesc:a4c545aecf605db0332971007215f7328"><td class="mdescLeft">&#160;</td><td class="mdescRight">@ brief Set default settings  <a href="namespaceimslinearmodule.html#a4c545aecf605db0332971007215f7328">More...</a><br /></td></tr>
+<tr class="separator:a4c545aecf605db0332971007215f7328"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c756a5435a1749f8b81d2c0148f756c"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceimslinearmodule.html#a7c756a5435a1749f8b81d2c0148f756c">imslinearmodule::imslinear_ap</a> (this, ICNVG, KSTP, KITER, IN_ITER, NCONV, CONVNMOD, CONVMODSTART, LOCDV, LOCDR, CACCEL, ITINNER, CONVLOCDV, CONVLOCDR, DVMAX, DRMAX, CONVDVMAX, CONVDRMAX)</td></tr>
+<tr class="memdesc:a7c756a5435a1749f8b81d2c0148f756c"><td class="mdescLeft">&#160;</td><td class="mdescRight">@ brief Base linear accelerator subroutine  <a href="namespaceimslinearmodule.html#a7c756a5435a1749f8b81d2c0148f756c">More...</a><br /></td></tr>
+<tr class="separator:a7c756a5435a1749f8b81d2c0148f756c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a95223272f43c74a8b575a28d9c54bfb5"><td class="memItemLeft" align="right" valign="top">type(blockparsertype), private&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceimslinearmodule.html#a95223272f43c74a8b575a28d9c54bfb5">imslinearmodule::parser</a></td></tr>
+<tr class="separator:a95223272f43c74a8b575a28d9c54bfb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_45e973df69963bbfe985a1f7e6db2b6f.html">Solution</a></li><li class="navelem"><a class="el" href="dir_05d5634044adf0ab08e7f809dfce3115.html">SparseMatrixSolver</a></li><li class="navelem"><a class="el" href="ims8linear_8f90.html">ims8linear.f90</a></li>
+    <li class="footer">Generated on Thu Jun 24 2021 19:50:10 for MODFLOW 6 by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
 </body>
 </html>

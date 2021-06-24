@@ -5,13 +5,22 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MODFLOW 6 Code Documentation: /home/runner/work/modflow6/modflow6/src/Exchange/GwfGwtExchange.f90 Source File</title>
+<title>MODFLOW 6: /home/runner/work/modflow6/modflow6/src/Exchange/GwfGwtExchange.f90 Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="CustomDoxygen.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -21,9 +30,12 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="mf6-triangular-grid.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">MODFLOW 6 Code Documentation
+   <div id="projectname">MODFLOW 6
+   &#160;<span id="projectnumber">version 6.2.2</span>
    </div>
+   <div id="projectbrief">MODFLOW 6 Code Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -36,16 +48,54 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Modules</span></a></li>
+      <li><a href="annotated.html"><span>Data&#160;Types&#160;List</span></a></li>
+      <li class="current"><a href="files.html"><span>Files</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('_gwf_gwt_exchange_8f90_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,11 +110,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_95d5cc30a66cc7502f2f5157978bb5c3.html">Exchange</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">GwfGwtExchange.f90</div>  </div>
@@ -77,8 +122,8 @@ $(function() {
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacesimvariablesmodule.html">simvariablesmodule</a>,      <span class="keywordtype">only</span>: <a class="code" href="namespacesimvariablesmodule.html#a08c1a8900029e311ac640e2319c6a234">errmsg</a></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacebaseexchangemodule.html">baseexchangemodule</a>,      <span class="keywordtype">only</span>: baseexchangetype, <a class="code" href="namespacebaseexchangemodule.html#a67919a88cc5ebe70bb4a38eaf9ef9144">addbaseexchangetolist</a></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacebasemodelmodule.html">basemodelmodule</a>,         <span class="keywordtype">only</span>: basemodeltype, <a class="code" href="namespacebasemodelmodule.html#a79adefc92f4f7d0d032babb551c571f8">getbasemodelfromlist</a></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacegwfmodule.html">gwfmodule</a>,               <span class="keywordtype">only</span>: gwfmodeltype</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacegwtmodule.html">gwtmodule</a>,               <span class="keywordtype">only</span>: gwtmodeltype</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacegwfmodule.html">gwfmodule</a>,               <span class="keywordtype">only</span>: <a class="code" href="structgwfmodule_1_1gwfmodeltype.html">gwfmodeltype</a></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacegwtmodule.html">gwtmodule</a>,               <span class="keywordtype">only</span>: <a class="code" href="structgwtmodule_1_1gwtmodeltype.html">gwtmodeltype</a></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacebndmodule.html">bndmodule</a>,               <span class="keywordtype">only</span>: bndtype, <a class="code" href="namespacebndmodule.html#a7ac2e1c143722a28d1f0ecb4c67a4a0a">getbndfromlist</a></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  </div>
@@ -93,12 +138,12 @@ $(function() {
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="keyword">contains</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    </div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="structgwfgwtexchangemodule_1_1gwfgwtexchangetype.html#a9ccef3bbf4e45afc2c72ea91929b9747">   24</a></span>&#160;    <span class="keywordtype">procedure</span> :: <a class="code" href="namespacegwfgwtexchangemodule.html#a499b6f444b6b971f46e5502eb1cf3fc0">exg_df</a></div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="structgwfgwtexchangemodule_1_1gwfgwtexchangetype.html#a99e0d5ad7d53a18d208e690eb9c90476">   25</a></span>&#160;    <span class="keywordtype">procedure</span> :: <a class="code" href="namespacegwfgwtexchangemodule.html#aec07441e9d3360a6ed1e87e8c00e8f94">exg_ar</a></div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="structgwfgwtexchangemodule_1_1gwfgwtexchangetype.html#a9ccef3bbf4e45afc2c72ea91929b9747">   24</a></span>&#160;    <span class="keywordtype">procedure</span> :: <a class="code" href="interfacebaseexchangemodule_1_1exg__df.html">exg_df</a></div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="structgwfgwtexchangemodule_1_1gwfgwtexchangetype.html#a99e0d5ad7d53a18d208e690eb9c90476">   25</a></span>&#160;    <span class="keywordtype">procedure</span> :: <a class="code" href="interfacebaseexchangemodule_1_1exg__ar.html">exg_ar</a></div>
 <div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="structgwfgwtexchangemodule_1_1gwfgwtexchangetype.html#aba8e9309d21bca0e5e210c358b2d445e">   26</a></span>&#160;    <span class="keywordtype">procedure</span> :: <a class="code" href="namespacegwfgwtexchangemodule.html#a156a43e0390eb269bf16fac228b0b2c2">exg_da</a></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: <a class="code" href="namespacegwfgwtexchangemodule.html#ae7df87968c62eebdd785510342852679">set_model_pointers</a></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: <a class="code" href="namespacegwfgwtexchangemodule.html#ae007a0b4a614c75aa3f055778cdaa1ce">allocate_scalars</a></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: <a class="code" href="namespacegwfgwtexchangemodule.html#abbedb30b5491b6d003c17354417c6e47">gwfbnd2gwtfmi</a></div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="structgwfgwtexchangemodule_1_1gwfgwtexchangetype.html#afef0867577209962b76ecff40ace17c7">   27</a></span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: <a class="code" href="namespacegwfgwtexchangemodule.html#ae7df87968c62eebdd785510342852679">set_model_pointers</a></div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="structgwfgwtexchangemodule_1_1gwfgwtexchangetype.html#ac8b8c7c44739858c14675046629580a9">   28</a></span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: <a class="code" href="namespacegwfgwtexchangemodule.html#ae007a0b4a614c75aa3f055778cdaa1ce">allocate_scalars</a></div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="structgwfgwtexchangemodule_1_1gwfgwtexchangetype.html#ac0cb9d4f190bcc5f0bb3eb90ea9b4bb5">   29</a></span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: <a class="code" href="namespacegwfgwtexchangemodule.html#abbedb30b5491b6d003c17354417c6e47">gwfbnd2gwtfmi</a></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    </div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keyword">end type </span><a class="code" href="structgwfgwtexchangemodule_1_1gwfgwtexchangetype.html">gwfgwtexchangetype</a></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  </div>
@@ -158,8 +203,8 @@ $(function() {
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structgwfgwtexchangemodule_1_1gwfgwtexchangetype.html">gwfgwtexchangetype</a>) :: this</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">class</span>(basemodeltype), <span class="keywordtype">pointer</span> :: mb =&gt; null()</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">type</span>(gwfmodeltype), <span class="keywordtype">pointer</span> :: gwfmodel =&gt; null()</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordtype">type</span>(gwtmodeltype), <span class="keywordtype">pointer</span> :: gwtmodel =&gt; null()</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structgwfmodule_1_1gwfmodeltype.html">gwfmodeltype</a>), <span class="keywordtype">pointer</span> :: gwfmodel =&gt; null()</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structgwtmodule_1_1gwtmodeltype.html">gwtmodeltype</a>), <span class="keywordtype">pointer</span> :: gwtmodel =&gt; null()</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: ngwfpack, ip</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordtype">class</span>(bndtype), <span class="keywordtype">pointer</span> :: packobj =&gt; null()</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
@@ -167,14 +212,14 @@ $(function() {
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="comment">! -- set gwfmodel</span></div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    mb =&gt; <a class="code" href="namespacebasemodelmodule.html#a79adefc92f4f7d0d032babb551c571f8">getbasemodelfromlist</a>(<a class="code" href="namespacelistsmodule.html#a3b242f17eecc25a4acea6ab6e3c5ae7b">basemodellist</a>, this%m1id)</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">select type</span> (mb)</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="keywordflow">    type is</span> (gwfmodeltype)</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="keywordflow">    type is</span> (<a class="code" href="structgwfmodule_1_1gwfmodeltype.html">gwfmodeltype</a>)</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;      gwfmodel =&gt; mb</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="keywordflow">    end select</span></div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="comment">! -- set gwtmodel</span></div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    mb =&gt; <a class="code" href="namespacebasemodelmodule.html#a79adefc92f4f7d0d032babb551c571f8">getbasemodelfromlist</a>(<a class="code" href="namespacelistsmodule.html#a3b242f17eecc25a4acea6ab6e3c5ae7b">basemodellist</a>, this%m2id)</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordflow">select type</span> (mb)</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="keywordflow">    type is</span> (gwtmodeltype)</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="keywordflow">    type is</span> (<a class="code" href="structgwtmodule_1_1gwtmodeltype.html">gwtmodeltype</a>)</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;      gwtmodel =&gt; mb</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="keywordflow">    end select</span></div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="comment">!</span></div>
@@ -199,7 +244,7 @@ $(function() {
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordflow">return</span></div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacegwfgwtexchangemodule.html#ae7df87968c62eebdd785510342852679">set_model_pointers</a></div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  </div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacegwfgwtexchangemodule.html#a499b6f444b6b971f46e5502eb1cf3fc0">exg_df</a>(this)</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="interfacebaseexchangemodule_1_1exg__df.html">exg_df</a>(this)</div>
 <div class="line"><a name="l00131"></a><span class="lineno"><a class="line" href="namespacegwfgwtexchangemodule.html#a499b6f444b6b971f46e5502eb1cf3fc0">  131</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="comment">! exg_df -- define</span></div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="comment">! ******************************************************************************</span></div>
@@ -211,8 +256,8 @@ $(function() {
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structgwfgwtexchangemodule_1_1gwfgwtexchangetype.html">gwfgwtexchangetype</a>) :: this</div>
 <div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="keywordtype">class</span>(basemodeltype), <span class="keywordtype">pointer</span> :: mb =&gt; null()</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keywordtype">type</span>(gwfmodeltype), <span class="keywordtype">pointer</span> :: gwfmodel =&gt; null()</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keywordtype">type</span>(gwtmodeltype), <span class="keywordtype">pointer</span> :: gwtmodel =&gt; null()</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structgwfmodule_1_1gwfmodeltype.html">gwfmodeltype</a>), <span class="keywordtype">pointer</span> :: gwfmodel =&gt; null()</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structgwtmodule_1_1gwtmodeltype.html">gwtmodeltype</a>), <span class="keywordtype">pointer</span> :: gwtmodel =&gt; null()</div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: ngwfpack, ip</div>
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keywordtype">class</span>(bndtype), <span class="keywordtype">pointer</span> :: packobj =&gt; null()</div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
@@ -221,14 +266,14 @@ $(function() {
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="comment">! -- set gwfmodel</span></div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    mb =&gt; <a class="code" href="namespacebasemodelmodule.html#a79adefc92f4f7d0d032babb551c571f8">getbasemodelfromlist</a>(<a class="code" href="namespacelistsmodule.html#a3b242f17eecc25a4acea6ab6e3c5ae7b">basemodellist</a>, this%m1id)</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keywordflow">select type</span> (mb)</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="keywordflow">    type is</span> (gwfmodeltype)</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="keywordflow">    type is</span> (<a class="code" href="structgwfmodule_1_1gwfmodeltype.html">gwfmodeltype</a>)</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;      gwfmodel =&gt; mb</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="keywordflow">    end select</span></div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="comment">! -- set gwtmodel</span></div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    mb =&gt; <a class="code" href="namespacebasemodelmodule.html#a79adefc92f4f7d0d032babb551c571f8">getbasemodelfromlist</a>(<a class="code" href="namespacelistsmodule.html#a3b242f17eecc25a4acea6ab6e3c5ae7b">basemodellist</a>, this%m2id)</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordflow">select type</span> (mb)</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="keywordflow">    type is</span> (gwtmodeltype)</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="keywordflow">    type is</span> (<a class="code" href="structgwtmodule_1_1gwtmodeltype.html">gwtmodeltype</a>)</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;      gwtmodel =&gt; mb</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="keywordflow">    end select</span></div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="comment">!</span></div>
@@ -251,9 +296,9 @@ $(function() {
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="comment">! -- return</span></div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacegwfgwtexchangemodule.html#a499b6f444b6b971f46e5502eb1cf3fc0">exg_df</a></div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="interfacebaseexchangemodule_1_1exg__df.html">exg_df</a></div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  </div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacegwfgwtexchangemodule.html#aec07441e9d3360a6ed1e87e8c00e8f94">exg_ar</a>(this)</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="interfacebaseexchangemodule_1_1exg__ar.html">exg_ar</a>(this)</div>
 <div class="line"><a name="l00185"></a><span class="lineno"><a class="line" href="namespacegwfgwtexchangemodule.html#aec07441e9d3360a6ed1e87e8c00e8f94">  185</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;<span class="comment">! exg_ar -- </span></div>
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;<span class="comment">! ******************************************************************************</span></div>
@@ -266,8 +311,8 @@ $(function() {
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structgwfgwtexchangemodule_1_1gwfgwtexchangetype.html">gwfgwtexchangetype</a>) :: this</div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="keywordtype">class</span>(basemodeltype), <span class="keywordtype">pointer</span> :: mb =&gt; null()</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="keywordtype">type</span>(gwfmodeltype), <span class="keywordtype">pointer</span> :: gwfmodel =&gt; null()</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="keywordtype">type</span>(gwtmodeltype), <span class="keywordtype">pointer</span> :: gwtmodel =&gt; null()</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structgwfmodule_1_1gwfmodeltype.html">gwfmodeltype</a>), <span class="keywordtype">pointer</span> :: gwfmodel =&gt; null()</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structgwtmodule_1_1gwtmodeltype.html">gwtmodeltype</a>), <span class="keywordtype">pointer</span> :: gwtmodel =&gt; null()</div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <span class="comment">! -- formats</span></div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="keywordtype">character(len=*)</span>,<span class="keywordtype">parameter</span> :: fmtdiserr = &amp;</div>
 <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;      <span class="stringliteral">&quot;(&#39;GWF and GWT Models do not have the same discretization for exchange&amp;</span></div>
@@ -280,14 +325,14 @@ $(function() {
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <span class="comment">! -- set gwfmodel</span></div>
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    mb =&gt; <a class="code" href="namespacebasemodelmodule.html#a79adefc92f4f7d0d032babb551c571f8">getbasemodelfromlist</a>(<a class="code" href="namespacelistsmodule.html#a3b242f17eecc25a4acea6ab6e3c5ae7b">basemodellist</a>, this%m1id)</div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <span class="keywordflow">select type</span> (mb)</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;<span class="keywordflow">    type is</span> (gwfmodeltype)</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;<span class="keywordflow">    type is</span> (<a class="code" href="structgwfmodule_1_1gwfmodeltype.html">gwfmodeltype</a>)</div>
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;      gwfmodel =&gt; mb</div>
 <div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;<span class="keywordflow">    end select</span></div>
 <div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <span class="comment">! -- set gwtmodel</span></div>
 <div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    mb =&gt; <a class="code" href="namespacebasemodelmodule.html#a79adefc92f4f7d0d032babb551c571f8">getbasemodelfromlist</a>(<a class="code" href="namespacelistsmodule.html#a3b242f17eecc25a4acea6ab6e3c5ae7b">basemodellist</a>, this%m2id)</div>
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="keywordflow">select type</span> (mb)</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;<span class="keywordflow">    type is</span> (gwtmodeltype)</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;<span class="keywordflow">    type is</span> (<a class="code" href="structgwtmodule_1_1gwtmodeltype.html">gwtmodeltype</a>)</div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;      gwtmodel =&gt; mb</div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;<span class="keywordflow">    end select</span></div>
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <span class="comment">!</span></div>
@@ -337,7 +382,7 @@ $(function() {
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    <span class="comment">! -- return</span></div>
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacegwfgwtexchangemodule.html#aec07441e9d3360a6ed1e87e8c00e8f94">exg_ar</a></div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="interfacebaseexchangemodule_1_1exg__ar.html">exg_ar</a></div>
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;  </div>
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacegwfgwtexchangemodule.html#a156a43e0390eb269bf16fac228b0b2c2">exg_da</a>(this)</div>
 <div class="line"><a name="l00271"></a><span class="lineno"><a class="line" href="namespacegwfgwtexchangemodule.html#a156a43e0390eb269bf16fac228b0b2c2">  271</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
@@ -347,14 +392,14 @@ $(function() {
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;<span class="comment">!    SPECIFICATIONS:</span></div>
 <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    <span class="comment">! -- modules</span></div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacememorymanagermodule.html">memorymanagermodule</a>, <span class="keywordtype">only</span>: mem_deallocate</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacememorymanagermodule.html">memorymanagermodule</a>, <span class="keywordtype">only</span>: <a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a></div>
 <div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <span class="comment">! -- dummy</span></div>
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structgwfgwtexchangemodule_1_1gwfgwtexchangetype.html">gwfgwtexchangetype</a>) :: this</div>
 <div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    <span class="comment">!</span></div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    <span class="keyword">call </span>mem_deallocate(this%m1id)</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    <span class="keyword">call </span>mem_deallocate(this%m2id)</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%m1id)</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%m2id)</div>
 <div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    <span class="comment">! -- return</span></div>
 <div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    <span class="keywordflow">return</span></div>
@@ -368,14 +413,14 @@ $(function() {
 <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;<span class="comment">!    SPECIFICATIONS:</span></div>
 <div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    <span class="comment">! -- modules</span></div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacememorymanagermodule.html">memorymanagermodule</a>, <span class="keywordtype">only</span>: mem_allocate</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacememorymanagermodule.html">memorymanagermodule</a>, <span class="keywordtype">only</span>: <a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a></div>
 <div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    <span class="comment">! -- dummy</span></div>
 <div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structgwfgwtexchangemodule_1_1gwfgwtexchangetype.html">gwfgwtexchangetype</a>) :: this</div>
 <div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    <span class="comment">!</span></div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    <span class="keyword">call </span>mem_allocate(this%m1id, <span class="stringliteral">&#39;M1ID&#39;</span>, this%memoryPath)</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    <span class="keyword">call </span>mem_allocate(this%m2id, <span class="stringliteral">&#39;M2ID&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%m1id, <span class="stringliteral">&#39;M1ID&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%m2id, <span class="stringliteral">&#39;M2ID&#39;</span>, this%memoryPath)</div>
 <div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    this%m1id = 0</div>
 <div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    this%m2id = 0</div>
 <div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    <span class="comment">!</span></div>
@@ -396,22 +441,22 @@ $(function() {
 <div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: ngwfpack, ip</div>
 <div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    <span class="keywordtype">class</span>(basemodeltype), <span class="keywordtype">pointer</span> :: mb =&gt; null()</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    <span class="keywordtype">type</span>(gwfmodeltype), <span class="keywordtype">pointer</span> :: gwfmodel =&gt; null()</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    <span class="keywordtype">type</span>(gwtmodeltype), <span class="keywordtype">pointer</span> :: gwtmodel =&gt; null()</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structgwfmodule_1_1gwfmodeltype.html">gwfmodeltype</a>), <span class="keywordtype">pointer</span> :: gwfmodel =&gt; null()</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structgwtmodule_1_1gwtmodeltype.html">gwtmodeltype</a>), <span class="keywordtype">pointer</span> :: gwtmodel =&gt; null()</div>
 <div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    <span class="keywordtype">class</span>(bndtype), <span class="keywordtype">pointer</span> :: packobj =&gt; null()</div>
 <div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    <span class="comment">! -- set gwfmodel</span></div>
 <div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    mb =&gt; <a class="code" href="namespacebasemodelmodule.html#a79adefc92f4f7d0d032babb551c571f8">getbasemodelfromlist</a>(<a class="code" href="namespacelistsmodule.html#a3b242f17eecc25a4acea6ab6e3c5ae7b">basemodellist</a>, this%m1id)</div>
 <div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    <span class="keywordflow">select type</span> (mb)</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;<span class="keywordflow">    type is</span> (gwfmodeltype)</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;<span class="keywordflow">    type is</span> (<a class="code" href="structgwfmodule_1_1gwfmodeltype.html">gwfmodeltype</a>)</div>
 <div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;      gwfmodel =&gt; mb</div>
 <div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;<span class="keywordflow">    end select</span></div>
 <div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    <span class="comment">! -- set gwtmodel</span></div>
 <div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    mb =&gt; <a class="code" href="namespacebasemodelmodule.html#a79adefc92f4f7d0d032babb551c571f8">getbasemodelfromlist</a>(<a class="code" href="namespacelistsmodule.html#a3b242f17eecc25a4acea6ab6e3c5ae7b">basemodellist</a>, this%m2id)</div>
 <div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    <span class="keywordflow">select type</span> (mb)</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;<span class="keywordflow">    type is</span> (gwtmodeltype)</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;<span class="keywordflow">    type is</span> (<a class="code" href="structgwtmodule_1_1gwtmodeltype.html">gwtmodeltype</a>)</div>
 <div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;      gwtmodel =&gt; mb</div>
 <div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;<span class="keywordflow">    end select</span></div>
 <div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    <span class="comment">!</span></div>
@@ -437,20 +482,24 @@ $(function() {
 <div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160; </div>
 <div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;<span class="keyword">end module </span>GwfGwtExchangeModule</div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <div class="ttc" id="anamespacebndmodule_html"><div class="ttname"><a href="namespacebndmodule.html">bndmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_boundary_package_8f90_source.html#l00001">BoundaryPackage.f90:1</a></div></div>
 <div class="ttc" id="anamespacebasemodelmodule_html"><div class="ttname"><a href="namespacebasemodelmodule.html">basemodelmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_base_model_8f90_source.html#l00003">BaseModel.f90:3</a></div></div>
 <div class="ttc" id="anamespacesimvariablesmodule_html_a08c1a8900029e311ac640e2319c6a234"><div class="ttname"><a href="namespacesimvariablesmodule.html#a08c1a8900029e311ac640e2319c6a234">simvariablesmodule::errmsg</a></div><div class="ttdeci">character(len=maxcharlen) errmsg</div><div class="ttdef"><b>Definition:</b> <a href="_sim_variables_8f90_source.html#l00009">SimVariables.f90:9</a></div></div>
-<div class="ttc" id="anamespacegwfgwtexchangemodule_html_aec07441e9d3360a6ed1e87e8c00e8f94"><div class="ttname"><a href="namespacegwfgwtexchangemodule.html#aec07441e9d3360a6ed1e87e8c00e8f94">gwfgwtexchangemodule::exg_ar</a></div><div class="ttdeci">subroutine exg_ar(this)</div><div class="ttdef"><b>Definition:</b> <a href="_gwf_gwt_exchange_8f90_source.html#l00185">GwfGwtExchange.f90:185</a></div></div>
 <div class="ttc" id="anamespacekindmodule_html"><div class="ttname"><a href="namespacekindmodule.html">kindmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="kind_8f90_source.html#l00001">kind.f90:1</a></div></div>
+<div class="ttc" id="astructgwfmodule_1_1gwfmodeltype_html"><div class="ttname"><a href="structgwfmodule_1_1gwfmodeltype.html">gwfmodule::gwfmodeltype</a></div><div class="ttdef"><b>Definition:</b> <a href="gwf3_8f90_source.html#l00032">gwf3.f90:32</a></div></div>
+<div class="ttc" id="ainterfacebaseexchangemodule_1_1exg__df_html"><div class="ttname"><a href="interfacebaseexchangemodule_1_1exg__df.html">baseexchangemodule::exg_df</a></div><div class="ttdef"><b>Definition:</b> <a href="_base_exchange_8f90_source.html#l00031">BaseExchange.f90:31</a></div></div>
+<div class="ttc" id="astructgwtmodule_1_1gwtmodeltype_html"><div class="ttname"><a href="structgwtmodule_1_1gwtmodeltype.html">gwtmodule::gwtmodeltype</a></div><div class="ttdef"><b>Definition:</b> <a href="gwt1_8f90_source.html#l00035">gwt1.f90:35</a></div></div>
 <div class="ttc" id="anamespacesimmodule_html_a536cb6f0e13fcd33755e414641ff931a"><div class="ttname"><a href="namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a">simmodule::store_error</a></div><div class="ttdeci">subroutine, public store_error(msg)</div><div class="ttdef"><b>Definition:</b> <a href="_sim_8f90_source.html#l00107">Sim.f90:107</a></div></div>
 <div class="ttc" id="anamespacebasemodelmodule_html_a79adefc92f4f7d0d032babb551c571f8"><div class="ttname"><a href="namespacebasemodelmodule.html#a79adefc92f4f7d0d032babb551c571f8">basemodelmodule::getbasemodelfromlist</a></div><div class="ttdeci">class(basemodeltype) function, pointer, public getbasemodelfromlist(list, idx)</div><div class="ttdef"><b>Definition:</b> <a href="_base_model_8f90_source.html#l00255">BaseModel.f90:255</a></div></div>
 <div class="ttc" id="astructgwfgwtexchangemodule_1_1gwfgwtexchangetype_html"><div class="ttname"><a href="structgwfgwtexchangemodule_1_1gwfgwtexchangetype.html">gwfgwtexchangemodule::gwfgwtexchangetype</a></div><div class="ttdef"><b>Definition:</b> <a href="_gwf_gwt_exchange_8f90_source.html#l00017">GwfGwtExchange.f90:17</a></div></div>
 <div class="ttc" id="anamespacesimmodule_html"><div class="ttname"><a href="namespacesimmodule.html">simmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_sim_8f90_source.html#l00001">Sim.f90:1</a></div></div>
+<div class="ttc" id="ainterfacebaseexchangemodule_1_1exg__ar_html"><div class="ttname"><a href="interfacebaseexchangemodule_1_1exg__ar.html">baseexchangemodule::exg_ar</a></div><div class="ttdef"><b>Definition:</b> <a href="_base_exchange_8f90_source.html#l00036">BaseExchange.f90:36</a></div></div>
 <div class="ttc" id="anamespacelistsmodule_html"><div class="ttname"><a href="namespacelistsmodule.html">listsmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="mf6lists_8f90_source.html#l00001">mf6lists.f90:1</a></div></div>
 <div class="ttc" id="anamespacegwfmodule_html"><div class="ttname"><a href="namespacegwfmodule.html">gwfmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="gwf3_8f90_source.html#l00001">gwf3.f90:1</a></div></div>
 <div class="ttc" id="anamespacesimmodule_html_a0be97214c1d4fcf42bc4ddc27b111b61"><div class="ttname"><a href="namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61">simmodule::ustop</a></div><div class="ttdeci">subroutine, public ustop(stopmess, ioutlocal)</div><div class="ttdef"><b>Definition:</b> <a href="_sim_8f90_source.html#l00324">Sim.f90:324</a></div></div>
 <div class="ttc" id="anamespacegwfgwtexchangemodule_html_a156a43e0390eb269bf16fac228b0b2c2"><div class="ttname"><a href="namespacegwfgwtexchangemodule.html#a156a43e0390eb269bf16fac228b0b2c2">gwfgwtexchangemodule::exg_da</a></div><div class="ttdeci">subroutine exg_da(this)</div><div class="ttdef"><b>Definition:</b> <a href="_gwf_gwt_exchange_8f90_source.html#l00271">GwfGwtExchange.f90:271</a></div></div>
-<div class="ttc" id="anamespacegwfgwtexchangemodule_html_a499b6f444b6b971f46e5502eb1cf3fc0"><div class="ttname"><a href="namespacegwfgwtexchangemodule.html#a499b6f444b6b971f46e5502eb1cf3fc0">gwfgwtexchangemodule::exg_df</a></div><div class="ttdeci">subroutine exg_df(this)</div><div class="ttdef"><b>Definition:</b> <a href="_gwf_gwt_exchange_8f90_source.html#l00131">GwfGwtExchange.f90:131</a></div></div>
+<div class="ttc" id="ainterfacememorymanagermodule_1_1mem__allocate_html"><div class="ttname"><a href="interfacememorymanagermodule_1_1mem__allocate.html">memorymanagermodule::mem_allocate</a></div><div class="ttdef"><b>Definition:</b> <a href="_memory_manager_8f90_source.html#l00050">MemoryManager.f90:50</a></div></div>
 <div class="ttc" id="anamespacelistsmodule_html_a3e857b53bd777fd84ebcc75f2d7fe273"><div class="ttname"><a href="namespacelistsmodule.html#a3e857b53bd777fd84ebcc75f2d7fe273">listsmodule::baseexchangelist</a></div><div class="ttdeci">type(listtype), public baseexchangelist</div><div class="ttdef"><b>Definition:</b> <a href="mf6lists_8f90_source.html#l00025">mf6lists.f90:25</a></div></div>
 <div class="ttc" id="anamespacegwtmodule_html"><div class="ttname"><a href="namespacegwtmodule.html">gwtmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="gwt1_8f90_source.html#l00009">gwt1.f90:9</a></div></div>
 <div class="ttc" id="anamespacesimvariablesmodule_html"><div class="ttname"><a href="namespacesimvariablesmodule.html">simvariablesmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_sim_variables_8f90_source.html#l00001">SimVariables.f90:1</a></div></div>
@@ -461,16 +510,20 @@ $(function() {
 <div class="ttc" id="anamespacegwfgwtexchangemodule_html_ae007a0b4a614c75aa3f055778cdaa1ce"><div class="ttname"><a href="namespacegwfgwtexchangemodule.html#ae007a0b4a614c75aa3f055778cdaa1ce">gwfgwtexchangemodule::allocate_scalars</a></div><div class="ttdeci">subroutine allocate_scalars(this)</div><div class="ttdef"><b>Definition:</b> <a href="_gwf_gwt_exchange_8f90_source.html#l00292">GwfGwtExchange.f90:292</a></div></div>
 <div class="ttc" id="anamespacegwfgwtexchangemodule_html_ae7df87968c62eebdd785510342852679"><div class="ttname"><a href="namespacegwfgwtexchangemodule.html#ae7df87968c62eebdd785510342852679">gwfgwtexchangemodule::set_model_pointers</a></div><div class="ttdeci">subroutine set_model_pointers(this)</div><div class="ttdef"><b>Definition:</b> <a href="_gwf_gwt_exchange_8f90_source.html#l00078">GwfGwtExchange.f90:78</a></div></div>
 <div class="ttc" id="anamespacegwfgwtexchangemodule_html_abaa0495d0fb9d47508b2641f656e04ef"><div class="ttname"><a href="namespacegwfgwtexchangemodule.html#abaa0495d0fb9d47508b2641f656e04ef">gwfgwtexchangemodule::gwfgwt_cr</a></div><div class="ttdeci">subroutine, public gwfgwt_cr(filename, id, m1id, m2id)</div><div class="ttdef"><b>Definition:</b> <a href="_gwf_gwt_exchange_8f90_source.html#l00036">GwfGwtExchange.f90:36</a></div></div>
+<div class="ttc" id="ainterfacememorymanagermodule_1_1mem__deallocate_html"><div class="ttname"><a href="interfacememorymanagermodule_1_1mem__deallocate.html">memorymanagermodule::mem_deallocate</a></div><div class="ttdef"><b>Definition:</b> <a href="_memory_manager_8f90_source.html#l00085">MemoryManager.f90:85</a></div></div>
 <div class="ttc" id="anamespacememorymanagermodule_html"><div class="ttname"><a href="namespacememorymanagermodule.html">memorymanagermodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_memory_manager_8f90_source.html#l00001">MemoryManager.f90:1</a></div></div>
 <div class="ttc" id="anamespacekindmodule_html_ae38bd3a7dfaf151094c26e1529259639"><div class="ttname"><a href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">kindmodule::dp</a></div><div class="ttdeci">integer, parameter dp</div><div class="ttdef"><b>Definition:</b> <a href="kind_8f90_source.html#l00007">kind.f90:7</a></div></div>
 <div class="ttc" id="anamespacelistsmodule_html_a3b242f17eecc25a4acea6ab6e3c5ae7b"><div class="ttname"><a href="namespacelistsmodule.html#a3b242f17eecc25a4acea6ab6e3c5ae7b">listsmodule::basemodellist</a></div><div class="ttdeci">type(listtype), public basemodellist</div><div class="ttdef"><b>Definition:</b> <a href="mf6lists_8f90_source.html#l00016">mf6lists.f90:16</a></div></div>
 <div class="ttc" id="anamespacebaseexchangemodule_html_a67919a88cc5ebe70bb4a38eaf9ef9144"><div class="ttname"><a href="namespacebaseexchangemodule.html#a67919a88cc5ebe70bb4a38eaf9ef9144">baseexchangemodule::addbaseexchangetolist</a></div><div class="ttdeci">subroutine, public addbaseexchangetolist(list, exchange)</div><div class="ttdef"><b>Definition:</b> <a href="_base_exchange_8f90_source.html#l00169">BaseExchange.f90:169</a></div></div>
 <div class="ttc" id="anamespacegwfgwtexchangemodule_html_abbedb30b5491b6d003c17354417c6e47"><div class="ttname"><a href="namespacegwfgwtexchangemodule.html#abbedb30b5491b6d003c17354417c6e47">gwfgwtexchangemodule::gwfbnd2gwtfmi</a></div><div class="ttdeci">subroutine gwfbnd2gwtfmi(this)</div><div class="ttdef"><b>Definition:</b> <a href="_gwf_gwt_exchange_8f90_source.html#l00315">GwfGwtExchange.f90:315</a></div></div>
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_95d5cc30a66cc7502f2f5157978bb5c3.html">Exchange</a></li><li class="navelem"><a class="el" href="_gwf_gwt_exchange_8f90.html">GwfGwtExchange.f90</a></li>
+    <li class="footer">Generated on Thu Jun 24 2021 19:50:09 for MODFLOW 6 by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
 </body>
 </html>

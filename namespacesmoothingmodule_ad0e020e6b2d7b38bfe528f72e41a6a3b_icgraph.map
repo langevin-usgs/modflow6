@@ -1,10 +1,16 @@
 <map id="smoothingmodule::squadratic0sp" name="smoothingmodule::squadratic0sp">
-<area shape="rect" id="node1" title=" " alt="" coords="475,140,713,167"/>
-<area shape="rect" id="node2" href="$namespacegwfcsubmodule.html#a4448d660bfe423c8327c9f3d835348d8" title="@ brief Calculate Sske for a cell" alt="" coords="11,38,173,79"/>
-<area shape="rect" id="node3" href="$namespacegwfcsubmodule.html#a0d39881d356523dd2fbf75afd55a6044" title="Assemble delay interbed Newton&#45;Raphson formulation coefficients." alt="" coords="245,34,408,75"/>
-<area shape="rect" id="node4" href="$namespacegwfcsubmodule.html#a3a5310d2e8da71802bc99a1dda4dc2f6" title="Delay interbed linear solution." alt="" coords="245,99,408,141"/>
-<area shape="rect" id="node5" href="$namespacegwfcsubmodule.html#a85b967992eb3ac29fcaa98cad30d52f8" title="@ brief Calculate no&#45;delay interbed compaction" alt="" coords="245,165,408,206"/>
-<area shape="rect" id="node6" href="$namespacegwfcsubmodule.html#abd1b90b11e50759af854c5b70975c3a7" title="@ brief Save model flows for package" alt="" coords="245,230,408,271"/>
-<area shape="rect" id="node7" href="$namespacemawmodule.html#af39015154df128789df86fce4d63d0d7" title=" " alt="" coords="227,295,427,337"/>
-<area shape="rect" id="node8" href="$namespacemawmodule.html#a8223d4b65bb7f68e2bbece3212d2cead" title=" " alt="" coords="5,295,179,337"/>
+<area shape="rect" id="node1" title=" " alt="" coords="263,405,501,431"/>
+<area shape="rect" id="node2" href="$namespacegwfcsubmodule.html#a4448d660bfe423c8327c9f3d835348d8" title="@ brief Calculate Sske for a cell" alt="" coords="29,5,191,47"/>
+<area shape="rect" id="node3" href="$namespacegwfcsubmodule.html#a8b990f1d8726331981c41f505040308a" title="@ brief Calculate the stress for model cells" alt="" coords="29,71,191,112"/>
+<area shape="rect" id="node4" href="$namespacegwfcsubmodule.html#af6ba2cc610b8fd91243b2d0e3a7cce90" title="@ brief Formulate the coefficients for coarse&#45;grained materials" alt="" coords="29,136,191,177"/>
+<area shape="rect" id="node5" href="$namespacegwfcsubmodule.html#ad317ed87eb5b8b4ad72359c7cfd0d2c1" title="@ brief Formulate coarse&#45;grained Newton&#45;Raphson terms" alt="" coords="29,201,191,243"/>
+<area shape="rect" id="node6" href="$namespacegwfcsubmodule.html#a98d62a1ef47868303e6063594743f7d6" title="Assemble delay interbed standard formulation coefficients." alt="" coords="29,267,191,308"/>
+<area shape="rect" id="node7" href="$namespacegwfcsubmodule.html#a0d39881d356523dd2fbf75afd55a6044" title="Assemble delay interbed Newton&#45;Raphson formulation coefficients." alt="" coords="29,332,191,373"/>
+<area shape="rect" id="node8" href="$namespacegwfcsubmodule.html#af3d763ef89cbcd53e10ec9d386760034" title="Calculate delay interbed storage change." alt="" coords="29,397,191,439"/>
+<area shape="rect" id="node9" href="$namespacegwfcsubmodule.html#a3dbd720cd8f56b3b389a1742acca0a4c" title="Calculate delay interbed cell storage coefficients." alt="" coords="29,463,191,504"/>
+<area shape="rect" id="node10" href="$namespacegwfcsubmodule.html#a7b3af5c6357365affa1546adad1cc095" title="Calculate delay interbed stress values." alt="" coords="29,528,191,569"/>
+<area shape="rect" id="node11" href="$namespacegwfcsubmodule.html#a99bcf821bdec79c75c9045a455ce9d0b" title="@ brief Formulate the coefficients for a interbed" alt="" coords="29,593,191,635"/>
+<area shape="rect" id="node12" href="$namespacegwfcsubmodule.html#a9f3988b40430cbfc8f7f1d2bd41879fb" title="@ brief Calculate no&#45;delay interbed storage coefficients" alt="" coords="29,659,191,700"/>
+<area shape="rect" id="node13" href="$namespacegwfcsubmodule.html#a895b630bf8ee96f93d1709b6aae59b0e" title="@ brief Set initial states for the package" alt="" coords="29,724,191,765"/>
+<area shape="rect" id="node14" href="$namespacemawmodule.html#a406d86ec10d024754ad0d69663bf2846" title=" " alt="" coords="5,789,215,831"/>
 </map>

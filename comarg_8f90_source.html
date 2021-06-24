@@ -5,13 +5,22 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MODFLOW 6 Code Documentation: /home/runner/work/modflow6/modflow6/src/Utilities/comarg.f90 Source File</title>
+<title>MODFLOW 6: /home/runner/work/modflow6/modflow6/src/Utilities/comarg.f90 Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="CustomDoxygen.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -21,9 +30,12 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="mf6-triangular-grid.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">MODFLOW 6 Code Documentation
+   <div id="projectname">MODFLOW 6
+   &#160;<span id="projectnumber">version 6.2.2</span>
    </div>
+   <div id="projectbrief">MODFLOW 6 Code Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -36,16 +48,54 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Modules</span></a></li>
+      <li><a href="annotated.html"><span>Data&#160;Types&#160;List</span></a></li>
+      <li class="current"><a href="files.html"><span>Files</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('comarg_8f90_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,11 +110,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_ff383ddf1aa4eab0c4ce7910366d05a5.html">Utilities</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">comarg.f90</div>  </div>
@@ -109,7 +154,7 @@ $(function() {
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">character(len=LINELENGTH)</span> :: errmsg</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">character(len=LINELENGTH)</span> :: cexe</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">character(len=80)</span> :: compiler</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">character(len=20)</span> :: cdate</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">character(len=20)</span> :: <a class="code" href="namespacecompilerversion.html#abf7c19dd306bf485fefc86767459c4fe">cdate</a></div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">character(len=17)</span> :: ctyp</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">logical</span> :: ltyp</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">logical</span> :: lexist</div>
@@ -140,10 +185,10 @@ $(function() {
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    cexe = cexe(ipos:)</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="comment">! -- write header</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keyword">call </span><a class="code" href="namespacecompilerversion.html#abda76dfdbd7ce79d98c5432a2b764acb">get_compile_date</a>(cdate)</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keyword">call </span><a class="code" href="namespacecompilerversion.html#abda76dfdbd7ce79d98c5432a2b764acb">get_compile_date</a>(<a class="code" href="namespacecompilerversion.html#abf7c19dd306bf485fefc86767459c4fe">cdate</a>)</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keyword">write</span>(header, <span class="stringliteral">&#39;(a,4(1x,a),a)&#39;</span>) &amp;</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      trim(adjustl(cexe)), <span class="stringliteral">&#39;- MODFLOW&#39;</span>,                                          &amp;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      trim(adjustl(<a class="code" href="namespaceversionmodule.html#ab74ada460bfde99cc70cdba64cbd3122">version</a>)), <span class="stringliteral">&#39;(compiled&#39;</span>, trim(adjustl(cdate)), <span class="stringliteral">&#39;)&#39;</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      trim(adjustl(<a class="code" href="namespaceversionmodule.html#ab74ada460bfde99cc70cdba64cbd3122">version</a>)), <span class="stringliteral">&#39;(compiled&#39;</span>, trim(adjustl(<a class="code" href="namespacecompilerversion.html#abf7c19dd306bf485fefc86767459c4fe">cdate</a>)), <span class="stringliteral">&#39;)&#39;</span></div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="comment">! -- set ctyp</span></div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="namespaceversionmodule.html#ab82d1ea64df56737f03bbbe06c1499bd">idevelopmode</a> == 1) <span class="keywordflow">then</span></div>
@@ -219,7 +264,7 @@ $(function() {
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;      <span class="keywordflow">select case</span>(trim(adjustl(uctag)))</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        <span class="keywordflow">case</span>(<span class="stringliteral">&#39;-H&#39;</span>, <span class="stringliteral">&#39;-?&#39;</span>, <span class="stringliteral">&#39;--HELP&#39;</span>)</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;          lstop = .true.</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;          <span class="keyword">call </span>write_usage(trim(adjustl(header)), trim(adjustl(cexe)))</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;          <span class="keyword">call </span><a class="code" href="namespacecommandarguments.html#a7ad0d7d4ccdd20a850ca314ac3973f40">write_usage</a>(trim(adjustl(header)), trim(adjustl(cexe)))</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <span class="keywordflow">case</span>(<span class="stringliteral">&#39;-V&#39;</span>, <span class="stringliteral">&#39;--VERSION&#39;</span>)</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;          lstop = .true.</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;          <span class="keyword">write</span>(line, <span class="stringliteral">&#39;(2a,2(1x,a))&#39;</span>)                                            &amp;</div>
@@ -252,7 +297,7 @@ $(function() {
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            <span class="keywordflow">case</span>(<span class="stringliteral">&#39;DEBUG&#39;</span>)</div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;              <a class="code" href="namespacesimvariablesmodule.html#a3969c9d197fd27580f72f1a6b1862875">isim_level</a> = <a class="code" href="namespaceconstantsmodule.html#a2b539c21fd695a3e19b9bf12f6c72561a2a9ee4212cc09833c226bcc943277e52">vdebug</a></div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;<span class="keywordflow">            case default</span></div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;              <span class="keyword">call </span>write_usage(trim(adjustl(header)), trim(adjustl(cexe)))</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;              <span class="keyword">call </span><a class="code" href="namespacecommandarguments.html#a7ad0d7d4ccdd20a850ca314ac3973f40">write_usage</a>(trim(adjustl(header)), trim(adjustl(cexe)))</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;              <span class="keyword">write</span>(errmsg, <span class="stringliteral">&#39;(2a,1x,a)&#39;</span>)                                         &amp;</div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;                trim(adjustl(cexe)), <span class="stringliteral">&#39;: illegal STDOUT level option -&#39;</span>,          &amp;</div>
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;                trim(adjustl(clevel))</div>
@@ -274,7 +319,7 @@ $(function() {
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;            <span class="keywordflow">case</span>(<span class="stringliteral">&#39;VALIDATE&#39;</span>)</div>
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;              <a class="code" href="namespacesimvariablesmodule.html#aed164026d7ee76a480c460834765a2b8">isim_mode</a> = <a class="code" href="namespaceconstantsmodule.html#a8f91ce3a7d9214a7dd504a557c9302cba1bac4f31bb8e9d2c8da14300c920f483">mvalidate</a></div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="keywordflow">            case default</span></div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;              <span class="keyword">call </span>write_usage(trim(adjustl(header)), trim(adjustl(cexe)))</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;              <span class="keyword">call </span><a class="code" href="namespacecommandarguments.html#a7ad0d7d4ccdd20a850ca314ac3973f40">write_usage</a>(trim(adjustl(header)), trim(adjustl(cexe)))</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;              errmsg = trim(adjustl(cexe)) // <span class="stringliteral">&#39;: illegal MODFLOW 6 &#39;</span> //          &amp;</div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;                <span class="stringliteral">&#39;simulation mode option - &#39;</span> // trim(adjustl(cmode))</div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;              <span class="keyword">call </span><a class="code" href="namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a">store_error</a>(errmsg)</div>
@@ -288,7 +333,7 @@ $(function() {
 <div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;          <span class="keyword">call </span><a class="code" href="namespacegenericutilitiesmodule.html#a34492cca79f70174fd015808be8b7ebf">sim_message</a>(line)</div>
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;<span class="keywordflow">        case default</span></div>
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;          lstop = .true.</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;          <span class="keyword">call </span>write_usage(trim(adjustl(header)), trim(adjustl(cexe)))</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;          <span class="keyword">call </span><a class="code" href="namespacecommandarguments.html#a7ad0d7d4ccdd20a850ca314ac3973f40">write_usage</a>(trim(adjustl(header)), trim(adjustl(cexe)))</div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;          <span class="keyword">write</span>(errmsg, <span class="stringliteral">&#39;(2a,1x,a)&#39;</span>) &amp;</div>
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;            trim(adjustl(cexe)), <span class="stringliteral">&#39;: illegal option -&#39;</span>, trim(adjustl(tag))</div>
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;          <span class="keyword">call </span><a class="code" href="namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a">store_error</a>(errmsg)</div>
@@ -326,14 +371,14 @@ $(function() {
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;<span class="comment">  !! Subroutine to write usage information for command line arguments.</span></div>
 <div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;<span class="comment">  !!</span></div>
 <div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;<span class="comment">  !&lt;</span></div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;  <span class="keyword">subroutine </span>write_usage(header, cexe)</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    <span class="comment">! -- dummy variables</span></div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacecommandarguments.html#a7ad0d7d4ccdd20a850ca314ac3973f40">write_usage</a>(header, cexe)</div>
+<div class="line"><a name="l00258"></a><span class="lineno"><a class="line" href="namespacecommandarguments.html#a7ad0d7d4ccdd20a850ca314ac3973f40">  258</a></span>&#160;    <span class="comment">! -- dummy variables</span></div>
 <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    <span class="keywordtype">character(len=*)</span>, <span class="keywordtype">intent(in)</span> :: header<span class="comment"> !&lt; header for usage </span></div>
 <div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="keywordtype">character(len=*)</span>, <span class="keywordtype">intent(in)</span> :: cexe<span class="comment">   !&lt; executable name</span></div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <span class="comment">! -- local variables</span></div>
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <span class="keywordtype">character(len=LINELENGTH)</span> :: line</div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    <span class="comment">! -- format</span></div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <span class="keywordtype">character(len=*)</span>, <span class="keywordtype">parameter</span> :: optionsfmt =                                  &amp;</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <span class="keywordtype">character(len=*)</span>, <span class="keywordtype">parameter</span> :: OPTIONSFMT =                                  &amp;</div>
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;      <span class="stringliteral">&quot;(/,                                                                       &amp;</span></div>
 <div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;<span class="stringliteral"></span><span class="stringliteral">      &amp;&#39;Options   GNU long option   Meaning &#39;,/,                                 &amp;</span></div>
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;<span class="stringliteral"></span><span class="stringliteral">      &amp;&#39; -h, -?    --help           Show this message&#39;,/,                        &amp;</span></div>
@@ -373,10 +418,11 @@ $(function() {
 <div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    <span class="comment">! -- return</span></div>
 <div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;  <span class="keyword">end subroutine </span>write_usage</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacecommandarguments.html#a7ad0d7d4ccdd20a850ca314ac3973f40">write_usage</a></div>
 <div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;  </div>
 <div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;<span class="keyword">end module </span>CommandArguments</div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <div class="ttc" id="anamespacesimvariablesmodule_html_a3969c9d197fd27580f72f1a6b1862875"><div class="ttname"><a href="namespacesimvariablesmodule.html#a3969c9d197fd27580f72f1a6b1862875">simvariablesmodule::isim_level</a></div><div class="ttdeci">integer(i4b) isim_level</div><div class="ttdef"><b>Definition:</b> <a href="_sim_variables_8f90_source.html#l00012">SimVariables.f90:12</a></div></div>
 <div class="ttc" id="anamespacekindmodule_html"><div class="ttname"><a href="namespacekindmodule.html">kindmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="kind_8f90_source.html#l00001">kind.f90:1</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_a2b539c21fd695a3e19b9bf12f6c72561a2a9ee4212cc09833c226bcc943277e52"><div class="ttname"><a href="namespaceconstantsmodule.html#a2b539c21fd695a3e19b9bf12f6c72561a2a9ee4212cc09833c226bcc943277e52">constantsmodule::vdebug</a></div><div class="ttdeci">@ vdebug</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00130">Constants.f90:130</a></div></div>
@@ -386,6 +432,7 @@ $(function() {
 <div class="ttc" id="anamespacesimmodule_html_a1c78a6fda06b630c738bb654aa6bd816"><div class="ttname"><a href="namespacesimmodule.html#a1c78a6fda06b630c738bb654aa6bd816">simmodule::store_error_unit</a></div><div class="ttdeci">subroutine, public store_error_unit(iunit)</div><div class="ttdef"><b>Definition:</b> <a href="_sim_8f90_source.html#l00177">Sim.f90:177</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_a2b539c21fd695a3e19b9bf12f6c72561ad4d4f3a64bd94f5e096165fc5a625c26"><div class="ttname"><a href="namespaceconstantsmodule.html#a2b539c21fd695a3e19b9bf12f6c72561ad4d4f3a64bd94f5e096165fc5a625c26">constantsmodule::vall</a></div><div class="ttdeci">@ vall</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00130">Constants.f90:130</a></div></div>
 <div class="ttc" id="anamespacesimmodule_html_a536cb6f0e13fcd33755e414641ff931a"><div class="ttname"><a href="namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a">simmodule::store_error</a></div><div class="ttdeci">subroutine, public store_error(msg)</div><div class="ttdef"><b>Definition:</b> <a href="_sim_8f90_source.html#l00107">Sim.f90:107</a></div></div>
+<div class="ttc" id="anamespacecommandarguments_html_a7ad0d7d4ccdd20a850ca314ac3973f40"><div class="ttname"><a href="namespacecommandarguments.html#a7ad0d7d4ccdd20a850ca314ac3973f40">commandarguments::write_usage</a></div><div class="ttdeci">subroutine write_usage(header, cexe)</div><div class="ttdoc">Write command line argument usage.</div><div class="ttdef"><b>Definition:</b> <a href="comarg_8f90_source.html#l00258">comarg.f90:258</a></div></div>
 <div class="ttc" id="anamespacesimmodule_html_a0cceacac46166042383f55bd3965897d"><div class="ttname"><a href="namespacesimmodule.html#a0cceacac46166042383f55bd3965897d">simmodule::store_error_filename</a></div><div class="ttdeci">subroutine, public store_error_filename(filename)</div><div class="ttdef"><b>Definition:</b> <a href="_sim_8f90_source.html#l00202">Sim.f90:202</a></div></div>
 <div class="ttc" id="anamespacecompilerversion_html_a340e9d1856b5f223fa830a94697e6608"><div class="ttname"><a href="namespacecompilerversion.html#a340e9d1856b5f223fa830a94697e6608">compilerversion::get_compiler</a></div><div class="ttdeci">subroutine, public get_compiler(txt)</div><div class="ttdoc">@ brief Get compiler information</div><div class="ttdef"><b>Definition:</b> <a href="compilerversion_8f90_source.html#l00026">compilerversion.f90:26</a></div></div>
 <div class="ttc" id="anamespacesimmodule_html"><div class="ttname"><a href="namespacesimmodule.html">simmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_sim_8f90_source.html#l00001">Sim.f90:1</a></div></div>
@@ -408,14 +455,18 @@ $(function() {
 <div class="ttc" id="anamespaceversionmodule_html"><div class="ttname"><a href="namespaceversionmodule.html">versionmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="version_8f90_source.html#l00001">version.f90:1</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html"><div class="ttname"><a href="namespaceconstantsmodule.html">constantsmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00001">Constants.f90:1</a></div></div>
 <div class="ttc" id="anamespaceversionmodule_html_adf8da3dcc355041cd1c6808e03c7fbfa"><div class="ttname"><a href="namespaceversionmodule.html#adf8da3dcc355041cd1c6808e03c7fbfa">versionmodule::mfvnam</a></div><div class="ttdeci">character(len=10), parameter mfvnam</div><div class="ttdef"><b>Definition:</b> <a href="version_8f90_source.html#l00008">version.f90:8</a></div></div>
+<div class="ttc" id="anamespacecompilerversion_html_abf7c19dd306bf485fefc86767459c4fe"><div class="ttname"><a href="namespacecompilerversion.html#abf7c19dd306bf485fefc86767459c4fe">compilerversion::cdate</a></div><div class="ttdeci">character(len=20) cdate</div><div class="ttdoc">compilation date</div><div class="ttdef"><b>Definition:</b> <a href="compilerversion_8f90_source.html#l00009">compilerversion.f90:9</a></div></div>
 <div class="ttc" id="anamespacesimvariablesmodule_html_aed164026d7ee76a480c460834765a2b8"><div class="ttname"><a href="namespacesimvariablesmodule.html#aed164026d7ee76a480c460834765a2b8">simvariablesmodule::isim_mode</a></div><div class="ttdeci">integer(i4b) isim_mode</div><div class="ttdef"><b>Definition:</b> <a href="_sim_variables_8f90_source.html#l00013">SimVariables.f90:13</a></div></div>
 <div class="ttc" id="anamespacecommandarguments_html_ae6b7d5e1791dc7bd0614d16c358d6dee"><div class="ttname"><a href="namespacecommandarguments.html#ae6b7d5e1791dc7bd0614d16c358d6dee">commandarguments::getcommandlinearguments</a></div><div class="ttdeci">subroutine, public getcommandlinearguments()</div><div class="ttdoc">Get command line arguments.</div><div class="ttdef"><b>Definition:</b> <a href="comarg_8f90_source.html#l00029">comarg.f90:29</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_a8f91ce3a7d9214a7dd504a557c9302cba1bac4f31bb8e9d2c8da14300c920f483"><div class="ttname"><a href="namespaceconstantsmodule.html#a8f91ce3a7d9214a7dd504a557c9302cba1bac4f31bb8e9d2c8da14300c920f483">constantsmodule::mvalidate</a></div><div class="ttdeci">@ mvalidate</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00140">Constants.f90:140</a></div></div>
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_ff383ddf1aa4eab0c4ce7910366d05a5.html">Utilities</a></li><li class="navelem"><a class="el" href="comarg_8f90.html">comarg.f90</a></li>
+    <li class="footer">Generated on Thu Jun 24 2021 19:50:09 for MODFLOW 6 by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
 </body>
 </html>

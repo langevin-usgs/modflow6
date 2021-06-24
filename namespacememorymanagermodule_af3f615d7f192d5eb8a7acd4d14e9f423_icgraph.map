@@ -1,0 +1,4 @@
+<map id="memorymanagermodule::allocate_dbl1d" name="memorymanagermodule::allocate_dbl1d">
+<area shape="rect" id="node1" title="Allocate a 1&#45;dimensional real array." alt="" coords="237,5,421,47"/>
+<area shape="rect" id="node2" href="$namespacememorymanagermodule.html#ac28c89286eb411da67b21c078f480cc9" title="Make a copy of a 1&#45;dimensional real array." alt="" coords="5,5,189,47"/>
+</map>

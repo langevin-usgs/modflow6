@@ -5,13 +5,22 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MODFLOW 6 Code Documentation: /home/runner/work/modflow6/modflow6/src/Utilities/PackageBudget.f90 Source File</title>
+<title>MODFLOW 6: /home/runner/work/modflow6/modflow6/src/Utilities/PackageBudget.f90 Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="CustomDoxygen.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -21,9 +30,12 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="mf6-triangular-grid.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">MODFLOW 6 Code Documentation
+   <div id="projectname">MODFLOW 6
+   &#160;<span id="projectnumber">version 6.2.2</span>
    </div>
+   <div id="projectbrief">MODFLOW 6 Code Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -36,16 +48,54 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Modules</span></a></li>
+      <li><a href="annotated.html"><span>Data&#160;Types&#160;List</span></a></li>
+      <li class="current"><a href="files.html"><span>Files</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('_package_budget_8f90_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,11 +110,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_ff383ddf1aa4eab0c4ce7910366d05a5.html">Utilities</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">PackageBudget.f90</div>  </div>
@@ -78,42 +123,42 @@ $(function() {
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;  <span class="keywordtype">implicit none</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  </div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  <span class="keywordtype">private</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  <span class="keywordtype">public</span> :: packagebudgettype</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  <span class="keywordtype">public</span> :: <a class="code" href="structpackagebudgetmodule_1_1packagebudgettype.html">packagebudgettype</a></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <span class="keyword">type</span> :: packagebudgettype</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="structpackagebudgetmodule_1_1packagebudgettype.html">   11</a></span>&#160;  <span class="keyword">type</span> :: <a class="code" href="structpackagebudgetmodule_1_1packagebudgettype.html">packagebudgettype</a></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordtype">character(len=LENPACKAGENAME)</span> :: name = <span class="stringliteral">&#39;&#39;</span>                                   <span class="comment">!name of the package</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">character(len=LENAUXNAME)</span>, <span class="keywordtype">allocatable</span>, <span class="keywordtype">dimension(:)</span> :: auxname              <span class="comment">!auxiliary variable names</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: naux                                                         <span class="comment">!number of auxiliary variables</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">pointer</span> :: nbound =&gt; null()                                    <span class="comment">!number of boundaries for current stress period</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span> :: nodelist =&gt; null()        <span class="comment">!vector of reduced node numbers</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">dimension(:,:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span> :: bound =&gt; null()             <span class="comment">!array of package specific boundary numbers</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span> :: hcof =&gt; null()                <span class="comment">!diagonal contribution</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span> :: rhs =&gt; null()                 <span class="comment">!right-hand side contribution</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">dimension(:,:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span> :: auxvar =&gt; null()            <span class="comment">!auxiliary variable array</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span> :: flow =&gt; null()                <span class="comment">!calculated flow</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span> :: xnew =&gt; null()                <span class="comment">!dependent variable (head) for this time step</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="structpackagebudgetmodule_1_1packagebudgettype.html#ae4149556d97e817714dd3bac2bdf5e87">   13</a></span>&#160;    <span class="keywordtype">character(len=LENPACKAGENAME)</span> :: name = <span class="stringliteral">&#39;&#39;</span>                                   <span class="comment">!name of the package</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="structpackagebudgetmodule_1_1packagebudgettype.html#af313dce584001ec7708868a2bf023a45">   14</a></span>&#160;    <span class="keywordtype">character(len=LENAUXNAME)</span>, <span class="keywordtype">allocatable</span>, <span class="keywordtype">dimension(:)</span> :: auxname              <span class="comment">!auxiliary variable names</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="structpackagebudgetmodule_1_1packagebudgettype.html#a252e46fe72c0da9472f2e898a48ff28e">   15</a></span>&#160;    <span class="keywordtype">integer(I4B)</span> :: naux                                                         <span class="comment">!number of auxiliary variables</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="structpackagebudgetmodule_1_1packagebudgettype.html#a5a14d51bdee604bfe1f4aaf3fcba342d">   16</a></span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">pointer</span> :: nbound =&gt; null()                                    <span class="comment">!number of boundaries for current stress period</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="structpackagebudgetmodule_1_1packagebudgettype.html#a76c75bf8e6a084b663bf945f2bd326a1">   17</a></span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span> :: nodelist =&gt; null()        <span class="comment">!vector of reduced node numbers</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="structpackagebudgetmodule_1_1packagebudgettype.html#af532730d194f1e9b35f8ee83f8db86f5">   18</a></span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">dimension(:,:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span> :: bound =&gt; null()             <span class="comment">!array of package specific boundary numbers</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="structpackagebudgetmodule_1_1packagebudgettype.html#ab31060a98ad288d37195de5d4dc12929">   19</a></span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span> :: hcof =&gt; null()                <span class="comment">!diagonal contribution</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="structpackagebudgetmodule_1_1packagebudgettype.html#aa7b0f32e46d48bc978e2156bc44542c0">   20</a></span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span> :: rhs =&gt; null()                 <span class="comment">!right-hand side contribution</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="structpackagebudgetmodule_1_1packagebudgettype.html#a1c933816ef3648c0a60687e362eb75b7">   21</a></span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">dimension(:,:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span> :: auxvar =&gt; null()            <span class="comment">!auxiliary variable array</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="structpackagebudgetmodule_1_1packagebudgettype.html#a06fdef6b4317c38c763a1df341b45a7a">   22</a></span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span> :: flow =&gt; null()                <span class="comment">!calculated flow</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="structpackagebudgetmodule_1_1packagebudgettype.html#afa41bd3246add726cfd85134919e5202">   23</a></span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span> :: xnew =&gt; null()                <span class="comment">!dependent variable (head) for this time step</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    </div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keyword">contains</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">procedure</span> :: set_name</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">procedure</span> :: set_auxname</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">procedure</span> :: set_pointers</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">procedure</span> :: copy_values</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">procedure</span> :: get_flow</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="structpackagebudgetmodule_1_1packagebudgettype.html#a86f5bd7b0b21dc7fd59a14f058e1c6d6">   27</a></span>&#160;    <span class="keywordtype">procedure</span> :: <a class="code" href="namespacepackagebudgetmodule.html#a5618a5b36fc252d8dad53fffe4b7bcf1">set_name</a></div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="structpackagebudgetmodule_1_1packagebudgettype.html#a28e43ab14abe8f3282844f008b335e27">   28</a></span>&#160;    <span class="keywordtype">procedure</span> :: <a class="code" href="namespacepackagebudgetmodule.html#a6e7992bb454d0eb14f7b963d3053829b">set_auxname</a></div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="structpackagebudgetmodule_1_1packagebudgettype.html#a695e674839f9088326ac7abc1c3c51a5">   29</a></span>&#160;    <span class="keywordtype">procedure</span> :: <a class="code" href="namespacepackagebudgetmodule.html#a8d9061c24d1e97ce72d7f25e036811cf">set_pointers</a></div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="structpackagebudgetmodule_1_1packagebudgettype.html#a3af4dd202abb14a737cb20ce953a9cf5">   30</a></span>&#160;    <span class="keywordtype">procedure</span> :: <a class="code" href="namespacepackagebudgetmodule.html#a89c6f09b23f91dcb3bb7a1d3eaba10b2">copy_values</a></div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="structpackagebudgetmodule_1_1packagebudgettype.html#ad389f7712ea832b77a7819024daaff20">   31</a></span>&#160;    <span class="keywordtype">procedure</span> :: <a class="code" href="namespacepackagebudgetmodule.html#aca3e7624dc575a742e3ae9a5d1f0bc32">get_flow</a></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keyword">end type </span>packagebudgettype  </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keyword">end type </span><a class="code" href="structpackagebudgetmodule_1_1packagebudgettype.html">packagebudgettype</a>  </div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  </div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keyword">contains</span></div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keyword">subroutine </span>set_name(this, name)</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">class</span>(PackageBudgetType) :: this</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacepackagebudgetmodule.html#a5618a5b36fc252d8dad53fffe4b7bcf1">set_name</a>(this, name)</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="namespacepackagebudgetmodule.html#a5618a5b36fc252d8dad53fffe4b7bcf1">   38</a></span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structpackagebudgetmodule_1_1packagebudgettype.html">packagebudgettype</a>) :: this</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">character(len=LENPACKAGENAME)</span> :: name</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    this%name = name</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keyword">end subroutine </span>set_name</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacepackagebudgetmodule.html#a5618a5b36fc252d8dad53fffe4b7bcf1">set_name</a></div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keyword">subroutine </span>set_auxname(this, naux, auxname)</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">class</span>(PackageBudgetType) :: this</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacepackagebudgetmodule.html#a6e7992bb454d0eb14f7b963d3053829b">set_auxname</a>(this, naux, auxname)</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="namespacepackagebudgetmodule.html#a6e7992bb454d0eb14f7b963d3053829b">   44</a></span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structpackagebudgetmodule_1_1packagebudgettype.html">packagebudgettype</a>) :: this</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: naux</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">character(len=LENAUXNAME)</span>, <span class="keywordtype">contiguous</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">intent(in)</span> :: auxname</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    this%naux = naux</div>
@@ -123,11 +168,11 @@ $(function() {
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keywordflow">      end if</span></div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      this%auxname(:) = auxname(:)</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keywordflow">    end if</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keyword">end subroutine </span>set_auxname</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacepackagebudgetmodule.html#a6e7992bb454d0eb14f7b963d3053829b">set_auxname</a></div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keyword">subroutine </span>set_pointers(this, name, auxname, nbound, naux, nodelist, &amp;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacepackagebudgetmodule.html#a8d9061c24d1e97ce72d7f25e036811cf">set_pointers</a>(this, name, auxname, nbound, naux, nodelist, &amp;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                           hcof, rhs, auxvar, xnew)</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">class</span>(PackageBudgetType) :: this</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="namespacepackagebudgetmodule.html#a8d9061c24d1e97ce72d7f25e036811cf">   58</a></span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structpackagebudgetmodule_1_1packagebudgettype.html">packagebudgettype</a>) :: this</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">character(len=LENPACKAGENAME)</span> :: name</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">character(len=LENAUXNAME)</span>, <span class="keywordtype">contiguous</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">intent(in)</span> :: auxname </div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">target</span>, <span class="keywordtype">intent(in)</span> :: nbound</div>
@@ -151,11 +196,11 @@ $(function() {
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    this%rhs =&gt; rhs</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    this%auxvar =&gt; auxvar</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    this%xnew =&gt; xnew</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="keyword">end subroutine </span>set_pointers</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacepackagebudgetmodule.html#a8d9061c24d1e97ce72d7f25e036811cf">set_pointers</a></div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="keyword">subroutine </span>copy_values(this, name, auxname, nbound, naux, &amp;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacepackagebudgetmodule.html#a89c6f09b23f91dcb3bb7a1d3eaba10b2">copy_values</a>(this, name, auxname, nbound, naux, &amp;</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                         nodelist, flow, auxvar)</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">class</span>(PackageBudgetType) :: this</div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="namespacepackagebudgetmodule.html#a89c6f09b23f91dcb3bb7a1d3eaba10b2">   86</a></span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structpackagebudgetmodule_1_1packagebudgettype.html">packagebudgettype</a>) :: this</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordtype">character(len=LENPACKAGENAME)</span>, <span class="keywordtype">intent(in)</span> :: name</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">character(len=LENAUXNAME)</span>, <span class="keywordtype">contiguous</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">intent(in)</span> :: auxname</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: nbound</div>
@@ -189,12 +234,12 @@ $(function() {
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;      this%flow(i) = flow(i)</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;      this%auxvar(:, i) = auxvar(:, i)</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="keywordflow">    end do</span></div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  <span class="keyword">end subroutine </span>copy_values</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacepackagebudgetmodule.html#a89c6f09b23f91dcb3bb7a1d3eaba10b2">copy_values</a></div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  </div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  <span class="keyword">function </span>get_flow(this, i) <span class="keyword">result</span>(flow)</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keywordtype">class</span>(PackageBudgetType) :: this</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  <span class="keyword">function </span><a class="code" href="namespacepackagebudgetmodule.html#aca3e7624dc575a742e3ae9a5d1f0bc32">get_flow</a>(this, i) <span class="keyword">result</span>(flow)</div>
+<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="namespacepackagebudgetmodule.html#aca3e7624dc575a742e3ae9a5d1f0bc32">  123</a></span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structpackagebudgetmodule_1_1packagebudgettype.html">packagebudgettype</a>) :: this</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: i</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="keywordtype">    real</span>(DP) :: flow</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>) :: flow</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: n</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">associated</span>(this%flow)) <span class="keywordflow">then</span></div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;      flow = this%flow(i)</div>
@@ -203,20 +248,31 @@ $(function() {
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;      flow = this%hcof(i) * this%xnew(n) - this%rhs(i)</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="keywordflow">    end if</span></div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  <span class="keyword">end function </span>get_flow</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  <span class="keyword">end function </span><a class="code" href="namespacepackagebudgetmodule.html#aca3e7624dc575a742e3ae9a5d1f0bc32">get_flow</a></div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  </div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="keyword">end module </span>PackageBudgetModule</div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <div class="ttc" id="anamespacekindmodule_html"><div class="ttname"><a href="namespacekindmodule.html">kindmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="kind_8f90_source.html#l00001">kind.f90:1</a></div></div>
+<div class="ttc" id="anamespacepackagebudgetmodule_html_aca3e7624dc575a742e3ae9a5d1f0bc32"><div class="ttname"><a href="namespacepackagebudgetmodule.html#aca3e7624dc575a742e3ae9a5d1f0bc32">packagebudgetmodule::get_flow</a></div><div class="ttdeci">real(dp) function get_flow(this, i)</div><div class="ttdef"><b>Definition:</b> <a href="_package_budget_8f90_source.html#l00123">PackageBudget.f90:123</a></div></div>
+<div class="ttc" id="anamespacepackagebudgetmodule_html_a89c6f09b23f91dcb3bb7a1d3eaba10b2"><div class="ttname"><a href="namespacepackagebudgetmodule.html#a89c6f09b23f91dcb3bb7a1d3eaba10b2">packagebudgetmodule::copy_values</a></div><div class="ttdeci">subroutine copy_values(this, name, auxname, nbound, naux, nodelist, flow, auxvar)</div><div class="ttdef"><b>Definition:</b> <a href="_package_budget_8f90_source.html#l00086">PackageBudget.f90:86</a></div></div>
+<div class="ttc" id="anamespacepackagebudgetmodule_html_a8d9061c24d1e97ce72d7f25e036811cf"><div class="ttname"><a href="namespacepackagebudgetmodule.html#a8d9061c24d1e97ce72d7f25e036811cf">packagebudgetmodule::set_pointers</a></div><div class="ttdeci">subroutine set_pointers(this, name, auxname, nbound, naux, nodelist, hcof, rhs, auxvar, xnew)</div><div class="ttdef"><b>Definition:</b> <a href="_package_budget_8f90_source.html#l00058">PackageBudget.f90:58</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html"><div class="ttname"><a href="namespaceconstantsmodule.html">constantsmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00001">Constants.f90:1</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_a2e75f10abe62e57d87d7d468c2bf763d"><div class="ttname"><a href="namespaceconstantsmodule.html#a2e75f10abe62e57d87d7d468c2bf763d">constantsmodule::lenpackagename</a></div><div class="ttdeci">integer(i4b), parameter lenpackagename</div><div class="ttdoc">maximum length of the package name</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00013">Constants.f90:13</a></div></div>
+<div class="ttc" id="astructpackagebudgetmodule_1_1packagebudgettype_html"><div class="ttname"><a href="structpackagebudgetmodule_1_1packagebudgettype.html">packagebudgetmodule::packagebudgettype</a></div><div class="ttdef"><b>Definition:</b> <a href="_package_budget_8f90_source.html#l00011">PackageBudget.f90:11</a></div></div>
+<div class="ttc" id="anamespacekindmodule_html_ae38bd3a7dfaf151094c26e1529259639"><div class="ttname"><a href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">kindmodule::dp</a></div><div class="ttdeci">integer, parameter dp</div><div class="ttdef"><b>Definition:</b> <a href="kind_8f90_source.html#l00007">kind.f90:7</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_a9ee3f8405321b057b32648a5dc031e20"><div class="ttname"><a href="namespaceconstantsmodule.html#a9ee3f8405321b057b32648a5dc031e20">constantsmodule::lenauxname</a></div><div class="ttdeci">integer(i4b), parameter lenauxname</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00018">Constants.f90:18</a></div></div>
 <div class="ttc" id="anamespacepackagebudgetmodule_html"><div class="ttname"><a href="namespacepackagebudgetmodule.html">packagebudgetmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_package_budget_8f90_source.html#l00001">PackageBudget.f90:1</a></div></div>
+<div class="ttc" id="anamespacepackagebudgetmodule_html_a6e7992bb454d0eb14f7b963d3053829b"><div class="ttname"><a href="namespacepackagebudgetmodule.html#a6e7992bb454d0eb14f7b963d3053829b">packagebudgetmodule::set_auxname</a></div><div class="ttdeci">subroutine set_auxname(this, naux, auxname)</div><div class="ttdef"><b>Definition:</b> <a href="_package_budget_8f90_source.html#l00044">PackageBudget.f90:44</a></div></div>
+<div class="ttc" id="anamespacepackagebudgetmodule_html_a5618a5b36fc252d8dad53fffe4b7bcf1"><div class="ttname"><a href="namespacepackagebudgetmodule.html#a5618a5b36fc252d8dad53fffe4b7bcf1">packagebudgetmodule::set_name</a></div><div class="ttdeci">subroutine set_name(this, name)</div><div class="ttdef"><b>Definition:</b> <a href="_package_budget_8f90_source.html#l00038">PackageBudget.f90:38</a></div></div>
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_ff383ddf1aa4eab0c4ce7910366d05a5.html">Utilities</a></li><li class="navelem"><a class="el" href="_package_budget_8f90.html">PackageBudget.f90</a></li>
+    <li class="footer">Generated on Thu Jun 24 2021 19:50:09 for MODFLOW 6 by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
 </body>
 </html>

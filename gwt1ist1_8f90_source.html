@@ -5,13 +5,22 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MODFLOW 6 Code Documentation: /home/runner/work/modflow6/modflow6/src/Model/GroundWaterTransport/gwt1ist1.f90 Source File</title>
+<title>MODFLOW 6: /home/runner/work/modflow6/modflow6/src/Model/GroundWaterTransport/gwt1ist1.f90 Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="CustomDoxygen.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -21,9 +30,12 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="mf6-triangular-grid.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">MODFLOW 6 Code Documentation
+   <div id="projectname">MODFLOW 6
+   &#160;<span id="projectnumber">version 6.2.2</span>
    </div>
+   <div id="projectbrief">MODFLOW 6 Code Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -36,16 +48,54 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Modules</span></a></li>
+      <li><a href="annotated.html"><span>Data&#160;Types&#160;List</span></a></li>
+      <li class="current"><a href="files.html"><span>Files</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('gwt1ist1_8f90_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,11 +110,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_32e188284d239da8bb14ec1dabb0c35f.html">Model</a></li><li class="navelem"><a class="el" href="dir_5ac382e795535087161f2a8b7f95a830.html">GroundWaterTransport</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">gwt1ist1.f90</div>  </div>
@@ -76,65 +121,65 @@ $(function() {
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespaceconstantsmodule.html">constantsmodule</a>,        <span class="keywordtype">only</span>: <a class="code" href="namespaceconstantsmodule.html#af918ac22cd0b232deea67660bfbc9ce1">done</a>, <a class="code" href="namespaceconstantsmodule.html#abab5757666b9ddd2726c20ce48dd0050">dzero</a>, <a class="code" href="namespaceconstantsmodule.html#a96baa989fd4e29721a7756b985c18b30">lenftype</a>, <a class="code" href="namespaceconstantsmodule.html#a2e75f10abe62e57d87d7d468c2bf763d">lenpackagename</a>,     &amp;</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;                                    <a class="code" href="namespaceconstantsmodule.html#adda4cd91b9096b31d5e48d2215359311">lenbudtxt</a>, <a class="code" href="namespaceconstantsmodule.html#a636a1fbcffa24ababa57ac244ee2217f">dhnoflo</a></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacebndmodule.html">bndmodule</a>,              <span class="keywordtype">only</span>: bndtype</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacebudgetmodule.html">budgetmodule</a>,           <span class="keywordtype">only</span>: budgettype</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacegwtfmimodule.html">gwtfmimodule</a>,           <span class="keywordtype">only</span>: gwtfmitype</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacebudgetmodule.html">budgetmodule</a>,           <span class="keywordtype">only</span>: <a class="code" href="structbudgetmodule_1_1budgettype.html">budgettype</a></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacegwtfmimodule.html">gwtfmimodule</a>,           <span class="keywordtype">only</span>: <a class="code" href="structgwtfmimodule_1_1gwtfmitype.html">gwtfmitype</a></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacegwtmstmodule.html">gwtmstmodule</a>,           <span class="keywordtype">only</span>: <a class="code" href="structgwtmstmodule_1_1gwtmsttype.html">gwtmsttype</a></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespaceoutputcontroldata.html">outputcontroldata</a>,      <span class="keywordtype">only</span>: outputcontroldatatype</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespaceoutputcontroldata.html">outputcontroldata</a>,      <span class="keywordtype">only</span>: <a class="code" href="structoutputcontroldata_1_1outputcontroldatatype.html">outputcontroldatatype</a></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <span class="comment">!</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <span class="keywordtype">implicit none</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <span class="comment">!</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <span class="keywordtype">private</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <span class="keywordtype">public</span> :: <a class="code" href="namespacegwtistmodule.html#a68d5d648825cc85b757caa72dfcf462a">ist_create</a></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <span class="comment">!</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <span class="keywordtype">character(len=LENFTYPE)</span>       :: ftype = <span class="stringliteral">&#39;IST&#39;</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <span class="keywordtype">character(len=LENPACKAGENAME)</span> :: text  = <span class="stringliteral">&#39; IMMOBILE DOMAIN&#39;</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">parameter</span> :: NBDITEMS = 5</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keywordtype">character(len=LENBUDTXT)</span>, <span class="keywordtype">dimension(NBDITEMS)</span> :: budtxt</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="keyword">data</span> budtxt / <span class="stringliteral">&#39; STORAGE-AQUEOUS&#39;</span>, <span class="stringliteral">&#39;  STORAGE-SORBED&#39;</span>, &amp;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="namespacegwtistmodule.html#aacc01093936348bbdb8565f98faad71a">   17</a></span>&#160;  <span class="keywordtype">character(len=LENFTYPE)</span>       :: <a class="code" href="namespacegwtistmodule.html#aacc01093936348bbdb8565f98faad71a">ftype</a> = <span class="stringliteral">&#39;IST&#39;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="namespacegwtistmodule.html#aff073c698fc57a0b26f81614665b8e49">   18</a></span>&#160;  <span class="keywordtype">character(len=LENPACKAGENAME)</span> :: <a class="code" href="namespacegwtistmodule.html#aff073c698fc57a0b26f81614665b8e49">text</a>  = <span class="stringliteral">&#39; IMMOBILE DOMAIN&#39;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="namespacegwtistmodule.html#a92661d68c115592344e5e54c62b4ac86">   19</a></span>&#160;  <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">parameter</span> :: <a class="code" href="namespacegwtistmodule.html#a92661d68c115592344e5e54c62b4ac86">nbditems</a> = 5</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="namespacegwtistmodule.html#af7dec5c53d3b8bf6e8041f314cd1e4a3">   20</a></span>&#160;  <span class="keywordtype">character(len=LENBUDTXT)</span>, <span class="keywordtype">dimension(NBDITEMS)</span> :: <a class="code" href="namespacegwtistmodule.html#af7dec5c53d3b8bf6e8041f314cd1e4a3">budtxt</a></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="keyword">data</span> <a class="code" href="namespacegwtistmodule.html#af7dec5c53d3b8bf6e8041f314cd1e4a3">budtxt</a> / <span class="stringliteral">&#39; STORAGE-AQUEOUS&#39;</span>, <span class="stringliteral">&#39;  STORAGE-SORBED&#39;</span>, &amp;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                <span class="stringliteral">&#39;   DECAY-AQUEOUS&#39;</span>, <span class="stringliteral">&#39;    DECAY-SORBED&#39;</span>, &amp;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                <span class="stringliteral">&#39;   MOBILE-DOMAIN&#39;</span> /</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="comment">!</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keyword">type</span>, <span class="keyword">extends</span>(bndtype) :: gwtisttype</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="structgwtistmodule_1_1gwtisttype.html">   25</a></span>&#160;  <span class="keyword">type</span>, <span class="keyword">extends</span>(bndtype) :: <a class="code" href="structgwtistmodule_1_1gwtisttype.html">gwtisttype</a></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">type</span>(GwtFmiType), <span class="keywordtype">pointer</span>                        :: fmi =&gt; null()           <span class="comment">! pointer to fmi object</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">type</span>(GwtMstType), <span class="keywordtype">pointer</span>                        :: mst =&gt; null()           <span class="comment">! pointer to mst object</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="structgwtistmodule_1_1gwtisttype.html#abd3497ed36887ace9aef6efc1716bc36">   27</a></span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structgwtfmimodule_1_1gwtfmitype.html">gwtfmitype</a>), <span class="keywordtype">pointer</span>                        :: fmi =&gt; null()           <span class="comment">! pointer to fmi object</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="structgwtistmodule_1_1gwtisttype.html#a4d2f241f7c93b0b39017da311ebe3c94">   28</a></span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structgwtmstmodule_1_1gwtmsttype.html">gwtmsttype</a>), <span class="keywordtype">pointer</span>                        :: mst =&gt; null()           <span class="comment">! pointer to mst object</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">pointer</span>                            :: icimout =&gt; null()       <span class="comment">! unit number for binary cim output</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">pointer</span>                            :: idcy =&gt; null()          <span class="comment">! order of decay rate (0:none, 1:first, 2:zero)</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">pointer</span>                            :: isrb =&gt; null()          <span class="comment">! sorption active flag (0:off, 1:on)</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span>      :: cim =&gt; null()           <span class="comment">! concentration for immobile domain</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span>      :: zetaim =&gt; null()        <span class="comment">! mass transfer rate to immobile domain</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span>      :: thetaim =&gt; null()       <span class="comment">! porosity of the immobile domain</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span>      :: bulk_density =&gt; null()  <span class="comment">! bulk density</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span>      :: distcoef =&gt; null()      <span class="comment">! distribution coefficient</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span>      :: decay =&gt; null()         <span class="comment">! first or zero order rate constant for liquid</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span>      :: decay_sorbed =&gt; null()  <span class="comment">! first or zero order rate constant for sorbed mass</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span>      :: strg =&gt; null()          <span class="comment">! mass transfer rate</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">dimension(2, NBDITEMS)</span>                 :: budterm                 <span class="comment">! immmobile domain mass summaries</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="structgwtistmodule_1_1gwtisttype.html#a27cab7efb487049fcdc055e25b2b7bc2">   30</a></span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">pointer</span>                            :: icimout =&gt; null()       <span class="comment">! unit number for binary cim output</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="structgwtistmodule_1_1gwtisttype.html#a25496c0a3253be0c08d689f242ad7490">   31</a></span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">pointer</span>                            :: idcy =&gt; null()          <span class="comment">! order of decay rate (0:none, 1:first, 2:zero)</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="structgwtistmodule_1_1gwtisttype.html#a04874017ccb3d489cab3490cdfc99638">   32</a></span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">pointer</span>                            :: isrb =&gt; null()          <span class="comment">! sorption active flag (0:off, 1:on)</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="structgwtistmodule_1_1gwtisttype.html#a44511a0f91b5fcd3a9adf7cba6a64793">   33</a></span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span>      :: cim =&gt; null()           <span class="comment">! concentration for immobile domain</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="structgwtistmodule_1_1gwtisttype.html#ac7b73d1543752a62ed7219b88dc063e0">   34</a></span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span>      :: zetaim =&gt; null()        <span class="comment">! mass transfer rate to immobile domain</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="structgwtistmodule_1_1gwtisttype.html#a383531a23c0ddffbbc8efe6822df811c">   35</a></span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span>      :: thetaim =&gt; null()       <span class="comment">! porosity of the immobile domain</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="structgwtistmodule_1_1gwtisttype.html#a66250a0d66a87d32bc2670e092a07e1e">   36</a></span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span>      :: bulk_density =&gt; null()  <span class="comment">! bulk density</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="structgwtistmodule_1_1gwtisttype.html#a84261a54cac1e6c363525d4692e4a9b5">   37</a></span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span>      :: distcoef =&gt; null()      <span class="comment">! distribution coefficient</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="structgwtistmodule_1_1gwtisttype.html#ad831f82c8acc77f7ae96cdcd40c33922">   38</a></span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span>      :: decay =&gt; null()         <span class="comment">! first or zero order rate constant for liquid</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="structgwtistmodule_1_1gwtisttype.html#a0b046872adaeb27537aa1a51ab5b5922">   39</a></span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span>      :: decay_sorbed =&gt; null()  <span class="comment">! first or zero order rate constant for sorbed mass</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="structgwtistmodule_1_1gwtisttype.html#a29d59c6d56b9ae103c09481efad18808">   40</a></span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span>      :: strg =&gt; null()          <span class="comment">! mass transfer rate</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="structgwtistmodule_1_1gwtisttype.html#a89129ff1461b81be961e463e23632bd6">   41</a></span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">dimension(2, NBDITEMS)</span>                 :: budterm                 <span class="comment">! immmobile domain mass summaries</span></div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">type</span>(BudgetType), <span class="keywordtype">pointer</span>                        :: budget =&gt; null()        <span class="comment">! budget object</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">type</span>(OutputControlDataType), <span class="keywordtype">pointer</span>             :: ocd =&gt; null()           <span class="comment">! output control object for cim</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="structgwtistmodule_1_1gwtisttype.html#a58ffc0c4012f0d76569989b266ee13e2">   43</a></span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structbudgetmodule_1_1budgettype.html">budgettype</a>), <span class="keywordtype">pointer</span>                        :: budget =&gt; null()        <span class="comment">! budget object</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="structgwtistmodule_1_1gwtisttype.html#a95b8618da60e393935f11c4adfbaa42e">   44</a></span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structoutputcontroldata_1_1outputcontroldatatype.html">outputcontroldatatype</a>), <span class="keywordtype">pointer</span>             :: ocd =&gt; null()           <span class="comment">! output control object for cim</span></div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    </div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keyword">contains</span></div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">procedure</span> :: bnd_ar =&gt; ist_ar</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">procedure</span> :: bnd_rp =&gt; ist_rp</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">procedure</span> :: bnd_fc =&gt; ist_fc</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">procedure</span> :: bnd_cq =&gt; <a class="code" href="namespacegwtistmodule.html#ada94becde756a937e3b9e970a31de656">ist_cq</a></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">procedure</span> :: bnd_bd =&gt; <a class="code" href="namespacegwtistmodule.html#ae29f3d0e014cba69c1aa21c6a74afa89">ist_bd</a></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">procedure</span> :: bnd_ot_model_flows =&gt; <a class="code" href="namespacegwtistmodule.html#aa763b6b80ea78e794aaa4b1e1d8930ec">ist_ot_model_flows</a></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">procedure</span> :: bnd_ot_dv =&gt; <a class="code" href="namespacegwtistmodule.html#abeaca165685a01879fb09532d3e5d9e8">ist_ot_dv</a></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">procedure</span> :: bnd_ot_bdsummary =&gt; <a class="code" href="namespacegwtistmodule.html#a13b194937bbe8fd33ea10a9dd4cfceb5">ist_ot_bdsummary</a></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">procedure</span> :: bnd_da =&gt; <a class="code" href="namespacegwtistmodule.html#a0f50268c35442b91ea1d8b895ef7271c">ist_da</a></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">procedure</span> :: allocate_scalars</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">procedure</span> :: read_dimensions =&gt; <a class="code" href="namespacegwtistmodule.html#aa8042e00c4dee75f0865a5467509490d">ist_read_dimensions</a></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">procedure</span> :: read_options</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: ist_allocate_arrays</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: read_data</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: calcddbud</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: calccim</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="structgwtistmodule_1_1gwtisttype.html#a88340be17d95eb5f69d3d4264918f5e7">   48</a></span>&#160;    <span class="keywordtype">procedure</span> :: bnd_ar =&gt; <a class="code" href="namespacegwtistmodule.html#aaec4957a4392e2394289597478328dd0">ist_ar</a></div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="structgwtistmodule_1_1gwtisttype.html#aaaa54b703f3d74e6af784f223e81b96b">   49</a></span>&#160;    <span class="keywordtype">procedure</span> :: bnd_rp =&gt; <a class="code" href="namespacegwtistmodule.html#a513b002303b3cb2d9394130bfa927663">ist_rp</a></div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="structgwtistmodule_1_1gwtisttype.html#a51632be89b664f357fe72f33c87d916b">   50</a></span>&#160;    <span class="keywordtype">procedure</span> :: bnd_fc =&gt; <a class="code" href="namespacegwtistmodule.html#a37c321f840348165c87503d0d1165a6e">ist_fc</a></div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="structgwtistmodule_1_1gwtisttype.html#a1569ca69d41810aaa8ab3f32f3ab0ae5">   51</a></span>&#160;    <span class="keywordtype">procedure</span> :: bnd_cq =&gt; <a class="code" href="namespacegwtistmodule.html#ada94becde756a937e3b9e970a31de656">ist_cq</a></div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="structgwtistmodule_1_1gwtisttype.html#a6ada0fe619507208e02679a06a0054f4">   52</a></span>&#160;    <span class="keywordtype">procedure</span> :: bnd_bd =&gt; <a class="code" href="namespacegwtistmodule.html#ae29f3d0e014cba69c1aa21c6a74afa89">ist_bd</a></div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="structgwtistmodule_1_1gwtisttype.html#a9877ccb19621d35b7c07eaa0450739ae">   53</a></span>&#160;    <span class="keywordtype">procedure</span> :: bnd_ot_model_flows =&gt; <a class="code" href="namespacegwtistmodule.html#aa763b6b80ea78e794aaa4b1e1d8930ec">ist_ot_model_flows</a></div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="structgwtistmodule_1_1gwtisttype.html#a11e296b948dbdd9aeb26c64594701c85">   54</a></span>&#160;    <span class="keywordtype">procedure</span> :: bnd_ot_dv =&gt; <a class="code" href="namespacegwtistmodule.html#abeaca165685a01879fb09532d3e5d9e8">ist_ot_dv</a></div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="structgwtistmodule_1_1gwtisttype.html#a9f9f0ffea758181db9e1848fe14015d1">   55</a></span>&#160;    <span class="keywordtype">procedure</span> :: bnd_ot_bdsummary =&gt; <a class="code" href="namespacegwtistmodule.html#a13b194937bbe8fd33ea10a9dd4cfceb5">ist_ot_bdsummary</a></div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="structgwtistmodule_1_1gwtisttype.html#a82f533a48843c051c24501a794407be0">   56</a></span>&#160;    <span class="keywordtype">procedure</span> :: bnd_da =&gt; <a class="code" href="namespacegwtistmodule.html#a0f50268c35442b91ea1d8b895ef7271c">ist_da</a></div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="structgwtistmodule_1_1gwtisttype.html#a996d5be6c9581663f911b6ecae347745">   57</a></span>&#160;    <span class="keywordtype">procedure</span> :: <a class="code" href="namespacegwtistmodule.html#aaaa3a8e269ee0d09d8d4e33b5eb7391e">allocate_scalars</a></div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="structgwtistmodule_1_1gwtisttype.html#ae6c49f508b444654cff5cdc71997347c">   58</a></span>&#160;    <span class="keywordtype">procedure</span> :: read_dimensions =&gt; <a class="code" href="namespacegwtistmodule.html#aa8042e00c4dee75f0865a5467509490d">ist_read_dimensions</a></div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="structgwtistmodule_1_1gwtisttype.html#a3d5c7a3f9e0fc13e8eb547c8ee4bf31a">   59</a></span>&#160;    <span class="keywordtype">procedure</span> :: <a class="code" href="namespacegwtistmodule.html#af8cd450ab5f646649ed562d52cdda268">read_options</a></div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="structgwtistmodule_1_1gwtisttype.html#a8330948f4411110856c291d8ffb256a9">   60</a></span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: <a class="code" href="namespacegwtistmodule.html#ad885bba7122d4e3d9b9511ca820f10c8">ist_allocate_arrays</a></div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="structgwtistmodule_1_1gwtisttype.html#a83abf139535794abf79efe5d4951d0a3">   61</a></span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: <a class="code" href="namespacegwtistmodule.html#ada17d3ef6a3a0fa2740662cdad8c5e00">read_data</a></div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="structgwtistmodule_1_1gwtisttype.html#a648a8e8003a82a5a34e54cd032a20a8e">   62</a></span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: <a class="code" href="namespacegwtistmodule.html#a4c7a8e405cd0cd3831efbba2d3eaf866">calcddbud</a></div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="structgwtistmodule_1_1gwtisttype.html#adc6fae186af5202d529e9cf95f21aed8">   63</a></span>&#160;    <span class="keywordtype">procedure</span>, <span class="keywordtype">private</span> :: <a class="code" href="namespacegwtistmodule.html#a4bec645b4e0786bef24fa889eef489c8">calccim</a></div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="keyword">end type </span>gwtisttype</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="keyword">end type </span><a class="code" href="structgwtistmodule_1_1gwtisttype.html">gwtisttype</a></div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  </div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keyword">contains</span></div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  </div>
@@ -157,8 +202,8 @@ $(function() {
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">character(len=*)</span>, <span class="keywordtype">intent(in)</span> :: namemodel</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">character(len=*)</span>, <span class="keywordtype">intent(in)</span> :: pakname</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="comment">! -- local</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">type</span>(gwtisttype), <span class="keywordtype">pointer</span> :: istobj</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">type</span>(gwtfmitype), <span class="keywordtype">pointer</span> :: fmi</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structgwtistmodule_1_1gwtisttype.html">gwtisttype</a>), <span class="keywordtype">pointer</span> :: istobj</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structgwtfmimodule_1_1gwtfmitype.html">gwtfmitype</a>), <span class="keywordtype">pointer</span> :: fmi</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structgwtmstmodule_1_1gwtmsttype.html">gwtmsttype</a>), <span class="keywordtype">pointer</span> :: mst</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="comment">!</span></div>
@@ -167,8 +212,8 @@ $(function() {
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    packobj =&gt; istobj</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="comment">! -- create name and memory path</span></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keyword">call </span>packobj%set_names(ibcnum, namemodel, pakname, ftype)</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    packobj%text = text</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keyword">call </span>packobj%set_names(ibcnum, namemodel, pakname, <a class="code" href="namespacegwtistmodule.html#aacc01093936348bbdb8565f98faad71a">ftype</a>)</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    packobj%text = <a class="code" href="namespacegwtistmodule.html#aff073c698fc57a0b26f81614665b8e49">text</a></div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="comment">! -- allocate scalars</span></div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keyword">call </span>packobj%allocate_scalars()</div>
@@ -192,8 +237,8 @@ $(function() {
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordflow">return</span></div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacegwtistmodule.html#a68d5d648825cc85b757caa72dfcf462a">ist_create</a></div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  <span class="keyword">subroutine </span>ist_ar(this)</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacegwtistmodule.html#aaec4957a4392e2394289597478328dd0">ist_ar</a>(this)</div>
+<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="namespacegwtistmodule.html#aaec4957a4392e2394289597478328dd0">  124</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="comment">! ist_ar -- Allocate and Read</span></div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="comment">!</span></div>
@@ -203,7 +248,7 @@ $(function() {
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacesimmodule.html">simmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61">ustop</a>, <a class="code" href="namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a">store_error</a>, <a class="code" href="namespacesimmodule.html#a4c46e49de78d4498dd4ec106357775e6">count_errors</a></div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacebudgetmodule.html">budgetmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespacebudgetmodule.html#a5d07ccf1026ac718f510c44519685c0f">budget_cr</a></div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keywordtype">class</span>(gwtisttype), <span class="keywordtype">intent(inout)</span> :: this</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structgwtistmodule_1_1gwtisttype.html">gwtisttype</a>), <span class="keywordtype">intent(inout)</span> :: this</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="comment">! -- formats</span></div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keywordtype">character(len=*)</span>, <span class="keywordtype">parameter</span> :: fmtist =                                    &amp;</div>
@@ -228,7 +273,7 @@ $(function() {
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="comment">! -- setup the immobile domain budget</span></div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keyword">call </span><a class="code" href="namespacebudgetmodule.html#a5d07ccf1026ac718f510c44519685c0f">budget_cr</a>(this%budget, this%memoryPath)</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keyword">call </span>this%budget%budget_df(nbditems, <span class="stringliteral">&#39;MASS&#39;</span>, <span class="stringliteral">&#39;M&#39;</span>, bdzone=this%packName)</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keyword">call </span>this%budget%budget_df(<a class="code" href="namespacegwtistmodule.html#a92661d68c115592344e5e54c62b4ac86">nbditems</a>, <span class="stringliteral">&#39;MASS&#39;</span>, <span class="stringliteral">&#39;M&#39;</span>, bdzone=this%packName)</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="comment">! -- Perform a check to ensure that sorption and decay are set </span></div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="comment">!    consistently between the MST and IST packages.</span></div>
@@ -247,7 +292,7 @@ $(function() {
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="comment">! -- Return</span></div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;  <span class="keyword">end subroutine </span>ist_ar</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacegwtistmodule.html#aaec4957a4392e2394289597478328dd0">ist_ar</a></div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;  </div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacegwtistmodule.html#aa8042e00c4dee75f0865a5467509490d">ist_read_dimensions</a>(this)</div>
 <div class="line"><a name="l00181"></a><span class="lineno"><a class="line" href="namespacegwtistmodule.html#aa8042e00c4dee75f0865a5467509490d">  181</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
@@ -257,7 +302,7 @@ $(function() {
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<span class="comment">!    SPECIFICATIONS:</span></div>
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="keywordtype">class</span>(gwtisttype),<span class="keywordtype">intent(inout)</span> :: this</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structgwtistmodule_1_1gwtisttype.html">gwtisttype</a>),<span class="keywordtype">intent(inout)</span> :: this</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="comment">! -- format</span></div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
@@ -266,25 +311,25 @@ $(function() {
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <span class="keywordflow">return</span></div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacegwtistmodule.html#aa8042e00c4dee75f0865a5467509490d">ist_read_dimensions</a></div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160; </div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;  <span class="keyword">subroutine </span>ist_rp(this)</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacegwtistmodule.html#a513b002303b3cb2d9394130bfa927663">ist_rp</a>(this)</div>
+<div class="line"><a name="l00198"></a><span class="lineno"><a class="line" href="namespacegwtistmodule.html#a513b002303b3cb2d9394130bfa927663">  198</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="comment">! ist_rp -- override in order to skip reading for ist package</span></div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;<span class="comment">!</span></div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="comment">!    SPECIFICATIONS:</span></div>
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="keywordtype">class</span>(gwtisttype),<span class="keywordtype">intent(inout)</span> :: this</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structgwtistmodule_1_1gwtisttype.html">gwtisttype</a>),<span class="keywordtype">intent(inout)</span> :: this</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="comment">! -- format</span></div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <span class="comment">! -- return</span></div>
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;  <span class="keyword">end subroutine </span>ist_rp</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacegwtistmodule.html#a513b002303b3cb2d9394130bfa927663">ist_rp</a></div>
 <div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160; </div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;  <span class="keyword">subroutine </span>ist_fc(this, rhs, ia, idxglo, amatsln)</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacegwtistmodule.html#a37c321f840348165c87503d0d1165a6e">ist_fc</a>(this, rhs, ia, idxglo, amatsln)</div>
+<div class="line"><a name="l00215"></a><span class="lineno"><a class="line" href="namespacegwtistmodule.html#a37c321f840348165c87503d0d1165a6e">  215</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;<span class="comment">! ist_fc -- Calculate coefficients and fill amat and rhs</span></div>
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;<span class="comment">!</span></div>
@@ -293,7 +338,7 @@ $(function() {
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <span class="comment">! -- modules</span></div>
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacetdismodule.html">tdismodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespacetdismodule.html#ae9a8dbe15bd2bcb8a85d53d570407ae6">delt</a></div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <span class="keywordtype">class</span>(gwtisttype) :: this</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structgwtistmodule_1_1gwtisttype.html">gwtisttype</a>) :: this</div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">intent(inout)</span> :: rhs</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">intent(in)</span> :: ia</div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">intent(in)</span> :: idxglo</div>
@@ -359,7 +404,7 @@ $(function() {
 <div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    <span class="comment">! -- Return</span></div>
 <div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;  <span class="keyword">end subroutine </span>ist_fc</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacegwtistmodule.html#a37c321f840348165c87503d0d1165a6e">ist_fc</a></div>
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;  </div>
 <div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacegwtistmodule.html#ada94becde756a937e3b9e970a31de656">ist_cq</a>(this, x, flowja, iadv)</div>
 <div class="line"><a name="l00293"></a><span class="lineno"><a class="line" href="namespacegwtistmodule.html#ada94becde756a937e3b9e970a31de656">  293</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
@@ -372,7 +417,7 @@ $(function() {
 <div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacetdismodule.html">tdismodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespacetdismodule.html#ae9a8dbe15bd2bcb8a85d53d570407ae6">delt</a></div>
 <div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespaceconstantsmodule.html">constantsmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespaceconstantsmodule.html#abab5757666b9ddd2726c20ce48dd0050">dzero</a></div>
 <div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <span class="keywordtype">class</span>(gwtisttype), <span class="keywordtype">intent(inout)</span> :: this</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structgwtistmodule_1_1gwtisttype.html">gwtisttype</a>), <span class="keywordtype">intent(inout)</span> :: this</div>
 <div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">intent(in)</span> :: x</div>
 <div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">contiguous</span>, <span class="keywordtype">intent(inout)</span> :: flowja</div>
 <div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">optional</span>, <span class="keywordtype">intent(in)</span> :: iadv</div>
@@ -456,9 +501,9 @@ $(function() {
 <div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacegwtistmodule.html#ae29f3d0e014cba69c1aa21c6a74afa89">ist_bd</a>(this, model_budget)</div>
 <div class="line"><a name="l00385"></a><span class="lineno"><a class="line" href="namespacegwtistmodule.html#ae29f3d0e014cba69c1aa21c6a74afa89">  385</a></span>&#160;    <span class="comment">! -- add package ratin/ratout to model budget</span></div>
 <div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacetdismodule.html">tdismodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespacetdismodule.html#ae9a8dbe15bd2bcb8a85d53d570407ae6">delt</a></div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacebudgetmodule.html">budgetmodule</a>, <span class="keywordtype">only</span>: budgettype, <a class="code" href="namespacebudgetmodule.html#a917d4897942de165ea88d0c1f0850d8e">rate_accumulator</a></div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;    <span class="keywordtype">class</span>(gwtisttype) :: this</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    <span class="keywordtype">type</span>(budgettype), <span class="keywordtype">intent(inout)</span> :: model_budget</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacebudgetmodule.html">budgetmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="structbudgetmodule_1_1budgettype.html">budgettype</a>, <a class="code" href="namespacebudgetmodule.html#a917d4897942de165ea88d0c1f0850d8e">rate_accumulator</a></div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structgwtistmodule_1_1gwtisttype.html">gwtisttype</a>) :: this</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structbudgetmodule_1_1budgettype.html">budgettype</a>), <span class="keywordtype">intent(inout)</span> :: model_budget</div>
 <div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;<span class="keywordtype">    real</span>(DP) :: ratin</div>
 <div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;<span class="keywordtype">    real</span>(DP) :: ratout</div>
 <div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: isuppress_output</div>
@@ -479,7 +524,7 @@ $(function() {
 <div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;    <span class="comment">! -- modules</span></div>
 <div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespaceconstantsmodule.html">constantsmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespaceconstantsmodule.html#abab5757666b9ddd2726c20ce48dd0050">dzero</a></div>
 <div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;    <span class="keywordtype">class</span>(gwtisttype) :: this</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structgwtistmodule_1_1gwtisttype.html">gwtisttype</a>) :: this</div>
 <div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: icbcfl</div>
 <div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: ibudfl</div>
 <div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: icbcun</div>
@@ -540,7 +585,7 @@ $(function() {
 <div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacegwtistmodule.html#abeaca165685a01879fb09532d3e5d9e8">ist_ot_dv</a>(this, idvsave, idvprint)</div>
 <div class="line"><a name="l00469"></a><span class="lineno"><a class="line" href="namespacegwtistmodule.html#abeaca165685a01879fb09532d3e5d9e8">  469</a></span>&#160;    <span class="comment">! -- modules</span></div>
 <div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacetdismodule.html">tdismodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespacetdismodule.html#ad3443c7d7da2a67a75174c39c6d40c84">kstp</a>, <a class="code" href="namespacetdismodule.html#ae84d6ee69d7bba12d20a6255a398935b">kper</a>, <a class="code" href="namespacetdismodule.html#a42960ee7de0c530454882fd51c4d8c5c">nstp</a></div>
-<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;    <span class="keywordtype">class</span>(gwtisttype) :: this</div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structgwtistmodule_1_1gwtisttype.html">gwtisttype</a>) :: this</div>
 <div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: idvsave</div>
 <div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: idvprint</div>
 <div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;    <span class="comment">! -- local</span></div>
@@ -567,7 +612,7 @@ $(function() {
 <div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;  </div>
 <div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacegwtistmodule.html#a13b194937bbe8fd33ea10a9dd4cfceb5">ist_ot_bdsummary</a>(this, kstp, kper, iout)</div>
 <div class="line"><a name="l00497"></a><span class="lineno"><a class="line" href="namespacegwtistmodule.html#a13b194937bbe8fd33ea10a9dd4cfceb5">  497</a></span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacetdismodule.html">tdismodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespacetdismodule.html#ae9a8dbe15bd2bcb8a85d53d570407ae6">delt</a></div>
-<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;    <span class="keywordtype">class</span>(gwtisttype) :: this</div>
+<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structgwtistmodule_1_1gwtisttype.html">gwtisttype</a>) :: this</div>
 <div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: kstp</div>
 <div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: kper</div>
 <div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: iout</div>
@@ -575,7 +620,7 @@ $(function() {
 <div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;    <span class="comment">! -- Write budget to list file</span></div>
 <div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;    <span class="keyword">call </span>this%budget%reset()</div>
-<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;    <span class="keyword">call </span>this%budget%addentry(this%budterm, <a class="code" href="namespacetdismodule.html#ae9a8dbe15bd2bcb8a85d53d570407ae6">delt</a>, budtxt, isuppress_output)</div>
+<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;    <span class="keyword">call </span>this%budget%addentry(this%budterm, <a class="code" href="namespacetdismodule.html#ae9a8dbe15bd2bcb8a85d53d570407ae6">delt</a>, <a class="code" href="namespacegwtistmodule.html#af7dec5c53d3b8bf6e8041f314cd1e4a3">budtxt</a>, isuppress_output)</div>
 <div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;    <span class="keyword">call </span>this%budget%budget_ot(kstp, kper, iout)</div>
 <div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;    </div>
 <div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacegwtistmodule.html#a13b194937bbe8fd33ea10a9dd4cfceb5">ist_ot_bdsummary</a></div>
@@ -588,24 +633,24 @@ $(function() {
 <div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;<span class="comment">!    SPECIFICATIONS:</span></div>
 <div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;    <span class="comment">! -- modules</span></div>
-<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacememorymanagermodule.html">memorymanagermodule</a>, <span class="keywordtype">only</span>: mem_deallocate</div>
+<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacememorymanagermodule.html">memorymanagermodule</a>, <span class="keywordtype">only</span>: <a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a></div>
 <div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;    <span class="keywordtype">class</span>(gwtisttype) :: this</div>
+<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structgwtistmodule_1_1gwtisttype.html">gwtisttype</a>) :: this</div>
 <div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;    <span class="comment">! -- Deallocate arrays if package was active</span></div>
 <div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;    <span class="keywordflow">if</span>(this%inunit &gt; 0) <span class="keywordflow">then</span></div>
-<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;      <span class="keyword">call </span>mem_deallocate(this%icimout)</div>
-<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;      <span class="keyword">call </span>mem_deallocate(this%idcy)</div>
-<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;      <span class="keyword">call </span>mem_deallocate(this%isrb)</div>
-<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;      <span class="keyword">call </span>mem_deallocate(this%cim)</div>
-<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;      <span class="keyword">call </span>mem_deallocate(this%zetaim)</div>
-<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;      <span class="keyword">call </span>mem_deallocate(this%thetaim)</div>
-<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;      <span class="keyword">call </span>mem_deallocate(this%bulk_density)</div>
-<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;      <span class="keyword">call </span>mem_deallocate(this%distcoef)</div>
-<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;      <span class="keyword">call </span>mem_deallocate(this%decay)</div>
-<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;      <span class="keyword">call </span>mem_deallocate(this%decay_sorbed)</div>
-<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;      <span class="keyword">call </span>mem_deallocate(this%strg)</div>
+<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%icimout)</div>
+<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%idcy)</div>
+<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%isrb)</div>
+<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%cim)</div>
+<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%zetaim)</div>
+<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%thetaim)</div>
+<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%bulk_density)</div>
+<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%distcoef)</div>
+<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%decay)</div>
+<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%decay_sorbed)</div>
+<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__deallocate.html">mem_deallocate</a>(this%strg)</div>
 <div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;      this%fmi =&gt; null()</div>
 <div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;      this%mst =&gt; null()</div>
 <div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;<span class="keywordflow">    endif</span></div>
@@ -633,10 +678,10 @@ $(function() {
 <div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;<span class="comment">!    SPECIFICATIONS:</span></div>
 <div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;    <span class="comment">! -- modules</span></div>
-<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacememorymanagermodule.html">memorymanagermodule</a>, <span class="keywordtype">only</span>: mem_allocate, mem_setptr</div>
+<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacememorymanagermodule.html">memorymanagermodule</a>, <span class="keywordtype">only</span>: <a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>, <a class="code" href="interfacememorymanagermodule_1_1mem__setptr.html">mem_setptr</a></div>
 <div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespaceoutputcontroldata.html">outputcontroldata</a>, <span class="keywordtype">only</span>: <a class="code" href="namespaceoutputcontroldata.html#a225600f84ec8c95252f9f5a9bd305024">ocd_cr</a></div>
 <div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;    <span class="keywordtype">class</span>(gwtisttype) :: this</div>
+<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structgwtistmodule_1_1gwtisttype.html">gwtisttype</a>) :: this</div>
 <div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;    <span class="comment">!</span></div>
@@ -644,9 +689,9 @@ $(function() {
 <div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;    <span class="keyword">call </span>this%BndType%allocate_scalars()</div>
 <div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;    <span class="comment">! -- Allocate</span></div>
-<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;    <span class="keyword">call </span>mem_allocate(this%icimout, <span class="stringliteral">&#39;ICIMOUT&#39;</span>, this%memoryPath)</div>
-<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;    <span class="keyword">call </span>mem_allocate(this%isrb, <span class="stringliteral">&#39;ISRB&#39;</span>, this%memoryPath)</div>
-<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;    <span class="keyword">call </span>mem_allocate(this%idcy, <span class="stringliteral">&#39;IDCY&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%icimout, <span class="stringliteral">&#39;ICIMOUT&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%isrb, <span class="stringliteral">&#39;ISRB&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%idcy, <span class="stringliteral">&#39;IDCY&#39;</span>, this%memoryPath)</div>
 <div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;    <span class="comment">! -- Initialize</span></div>
 <div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;    this%icimout = 0</div>
@@ -672,9 +717,9 @@ $(function() {
 <div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;<span class="comment">!    SPECIFICATIONS:</span></div>
 <div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;    <span class="comment">! -- modules</span></div>
-<div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacememorymanagermodule.html">memorymanagermodule</a>, <span class="keywordtype">only</span>: mem_allocate</div>
+<div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacememorymanagermodule.html">memorymanagermodule</a>, <span class="keywordtype">only</span>: <a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a></div>
 <div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;    <span class="keywordtype">class</span>(gwtisttype),   <span class="keywordtype">intent(inout)</span> :: this</div>
+<div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structgwtistmodule_1_1gwtisttype.html">gwtisttype</a>),   <span class="keywordtype">intent(inout)</span> :: this</div>
 <div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;    <span class="keywordtype">integer(I4B)</span> :: n</div>
 <div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
@@ -684,24 +729,24 @@ $(function() {
 <div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;    <span class="keyword">call </span>this%BndType%allocate_arrays()</div>
 <div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;    <span class="comment">! -- allocate ist arrays of size nodes</span></div>
-<div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;    <span class="keyword">call </span>mem_allocate(this%strg, this%dis%nodes, <span class="stringliteral">&#39;STRG&#39;</span>, this%memoryPath)</div>
-<div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;    <span class="keyword">call </span>mem_allocate(this%cim, this%dis%nodes, <span class="stringliteral">&#39;CIM&#39;</span>, this%memoryPath)</div>
-<div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;    <span class="keyword">call </span>mem_allocate(this%zetaim, this%dis%nodes, <span class="stringliteral">&#39;ZETAIM&#39;</span>, this%memoryPath)</div>
-<div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;    <span class="keyword">call </span>mem_allocate(this%thetaim, this%dis%nodes, <span class="stringliteral">&#39;THETAIM&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%strg, this%dis%nodes, <span class="stringliteral">&#39;STRG&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%cim, this%dis%nodes, <span class="stringliteral">&#39;CIM&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%zetaim, this%dis%nodes, <span class="stringliteral">&#39;ZETAIM&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%thetaim, this%dis%nodes, <span class="stringliteral">&#39;THETAIM&#39;</span>, this%memoryPath)</div>
 <div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;    <span class="keywordflow">if</span> (this%isrb == 0) <span class="keywordflow">then</span></div>
-<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;      <span class="keyword">call </span>mem_allocate(this%bulk_density, 1, <span class="stringliteral">&#39;BULK_DENSITY&#39;</span>, this%memoryPath)</div>
-<div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;      <span class="keyword">call </span>mem_allocate(this%distcoef,  1, <span class="stringliteral">&#39;DISTCOEF&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%bulk_density, 1, <span class="stringliteral">&#39;BULK_DENSITY&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%distcoef,  1, <span class="stringliteral">&#39;DISTCOEF&#39;</span>, this%memoryPath)</div>
 <div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160;      <span class="keyword">call </span>mem_allocate(this%bulk_density, this%dis%nodes, <span class="stringliteral">&#39;BULK_DENSITY&#39;</span>,     &amp;</div>
+<div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%bulk_density, this%dis%nodes, <span class="stringliteral">&#39;BULK_DENSITY&#39;</span>,     &amp;</div>
 <div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160;                        this%memoryPath)</div>
-<div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;      <span class="keyword">call </span>mem_allocate(this%distcoef,  this%dis%nodes, <span class="stringliteral">&#39;DISTCOEF&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%distcoef,  this%dis%nodes, <span class="stringliteral">&#39;DISTCOEF&#39;</span>, this%memoryPath)</div>
 <div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;<span class="keywordflow">    endif</span></div>
 <div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;    <span class="keywordflow">if</span> (this%idcy == 0) <span class="keywordflow">then</span></div>
-<div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;      <span class="keyword">call </span>mem_allocate(this%decay, 1, <span class="stringliteral">&#39;DECAY&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%decay, 1, <span class="stringliteral">&#39;DECAY&#39;</span>, this%memoryPath)</div>
 <div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;      <span class="keyword">call </span>mem_allocate(this%decay, this%dis%nodes, <span class="stringliteral">&#39;DECAY&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;      <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%decay, this%dis%nodes, <span class="stringliteral">&#39;DECAY&#39;</span>, this%memoryPath)</div>
 <div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;<span class="keywordflow">    endif</span></div>
-<div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;    <span class="keyword">call </span>mem_allocate(this%decay_sorbed, 1, <span class="stringliteral">&#39;DECAY_SORBED&#39;</span>, this%memoryPath)</div>
+<div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;    <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__allocate.html">mem_allocate</a>(this%decay_sorbed, 1, <span class="stringliteral">&#39;DECAY_SORBED&#39;</span>, this%memoryPath)</div>
 <div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;    <span class="comment">! -- initialize</span></div>
 <div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;    <span class="keywordflow">do</span> n = 1, this%dis%nodes</div>
@@ -733,7 +778,7 @@ $(function() {
 <div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespaceconstantsmodule.html">constantsmodule</a>,   <span class="keywordtype">only</span>: <a class="code" href="namespaceconstantsmodule.html#a060d310ded5535ce2dc85bd1ca1afd3d">linelength</a></div>
 <div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacesimmodule.html">simmodule</a>,         <span class="keywordtype">only</span>: <a class="code" href="namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61">ustop</a>, <a class="code" href="namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a">store_error</a></div>
 <div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160;    <span class="keywordtype">class</span>(gwtisttype), <span class="keywordtype">intent(inout)</span> :: this</div>
+<div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structgwtistmodule_1_1gwtisttype.html">gwtisttype</a>), <span class="keywordtype">intent(inout)</span> :: this</div>
 <div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;    <span class="keywordtype">character(len=LINELENGTH)</span> :: errmsg, keyword</div>
 <div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160;    <span class="keywordtype">character(len=:)</span>, <span class="keywordtype">allocatable</span> :: keyword2</div>
@@ -805,9 +850,9 @@ $(function() {
 <div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;    <span class="comment">! -- modules</span></div>
 <div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespaceconstantsmodule.html">constantsmodule</a>,   <span class="keywordtype">only</span>: <a class="code" href="namespaceconstantsmodule.html#a060d310ded5535ce2dc85bd1ca1afd3d">linelength</a></div>
 <div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacesimmodule.html">simmodule</a>,         <span class="keywordtype">only</span>: <a class="code" href="namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61">ustop</a>, <a class="code" href="namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a">store_error</a>, <a class="code" href="namespacesimmodule.html#a4c46e49de78d4498dd4ec106357775e6">count_errors</a></div>
-<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacememorymanagermodule.html">memorymanagermodule</a>, <span class="keywordtype">only</span>: mem_reallocate, mem_reassignptr</div>
+<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacememorymanagermodule.html">memorymanagermodule</a>, <span class="keywordtype">only</span>: <a class="code" href="interfacememorymanagermodule_1_1mem__reallocate.html">mem_reallocate</a>, <a class="code" href="interfacememorymanagermodule_1_1mem__reassignptr.html">mem_reassignptr</a></div>
 <div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;    <span class="keywordtype">class</span>(gwtisttype) :: this</div>
+<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structgwtistmodule_1_1gwtisttype.html">gwtisttype</a>) :: this</div>
 <div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;    <span class="keywordtype">character(len=LINELENGTH)</span> :: errmsg, keyword</div>
 <div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;    <span class="keywordtype">character(len=:)</span>, <span class="keywordtype">allocatable</span> :: line</div>
@@ -843,7 +888,7 @@ $(function() {
 <div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160;        <span class="keywordflow">select case</span> (keyword)</div>
 <div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;          <span class="keywordflow">case</span> (<span class="stringliteral">&#39;BULK_DENSITY&#39;</span>)</div>
 <div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;            <span class="keywordflow">if</span> (this%isrb == 0) &amp;</div>
-<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;              <span class="keyword">call </span>mem_reallocate(this%bulk_density, this%dis%nodes,           &amp;</div>
+<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;              <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__reallocate.html">mem_reallocate</a>(this%bulk_density, this%dis%nodes,           &amp;</div>
 <div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;                                  <span class="stringliteral">&#39;BULK_DENSITY&#39;</span>, trim(this%memoryPath))</div>
 <div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;            <span class="keyword">call </span>this%dis%read_grid_array(line, lloc, istart, istop, this%iout,&amp;</div>
 <div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;                                         this%parser%iuactive,                 &amp;</div>
@@ -851,7 +896,7 @@ $(function() {
 <div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160;            lname(1) = .true.</div>
 <div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;          <span class="keywordflow">case</span> (<span class="stringliteral">&#39;DISTCOEF&#39;</span>)</div>
 <div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;            <span class="keywordflow">if</span> (this%isrb == 0) &amp;</div>
-<div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160;              <span class="keyword">call </span>mem_reallocate(this%distcoef, this%dis%nodes, <span class="stringliteral">&#39;DISTCOEF&#39;</span>,   &amp;</div>
+<div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160;              <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__reallocate.html">mem_reallocate</a>(this%distcoef, this%dis%nodes, <span class="stringliteral">&#39;DISTCOEF&#39;</span>,   &amp;</div>
 <div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;                                trim(this%memoryPath))</div>
 <div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;            <span class="keyword">call </span>this%dis%read_grid_array(line, lloc, istart, istop, this%iout,&amp;</div>
 <div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;                                         this%parser%iuactive, this%distcoef,  &amp;</div>
@@ -859,14 +904,14 @@ $(function() {
 <div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;            lname(2) = .true.</div>
 <div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;          <span class="keywordflow">case</span> (<span class="stringliteral">&#39;DECAY&#39;</span>)</div>
 <div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;            <span class="keywordflow">if</span> (this%idcy == 0) &amp;</div>
-<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;              <span class="keyword">call </span>mem_reallocate(this%decay, this%dis%nodes, <span class="stringliteral">&#39;DECAY&#39;</span>,         &amp;</div>
+<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;              <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__reallocate.html">mem_reallocate</a>(this%decay, this%dis%nodes, <span class="stringliteral">&#39;DECAY&#39;</span>,         &amp;</div>
 <div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;                                  trim(this%memoryPath))</div>
 <div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;            <span class="keyword">call </span>this%dis%read_grid_array(line, lloc, istart, istop, this%iout,&amp;</div>
 <div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;                                         this%parser%iuactive, this%decay,     &amp;</div>
 <div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;                                         aname(3))</div>
 <div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;            lname(3) = .true.</div>
 <div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;          <span class="keywordflow">case</span> (<span class="stringliteral">&#39;DECAY_SORBED&#39;</span>)</div>
-<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;            <span class="keyword">call </span>mem_reallocate(this%decay_sorbed, this%dis%nodes,             &amp;</div>
+<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;            <span class="keyword">call </span><a class="code" href="interfacememorymanagermodule_1_1mem__reallocate.html">mem_reallocate</a>(this%decay_sorbed, this%dis%nodes,             &amp;</div>
 <div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;                                <span class="stringliteral">&#39;DECAY_SORBED&#39;</span>, trim(this%memoryPath))</div>
 <div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;            <span class="keyword">call </span>this%dis%read_grid_array(line, lloc, istart, istop, this%iout,&amp;</div>
 <div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;                                         this%parser%iuactive,                 &amp;</div>
@@ -1026,7 +1071,7 @@ $(function() {
 <div class="line"><a name="l00954"></a><span class="lineno">  954</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00955"></a><span class="lineno">  955</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00956"></a><span class="lineno">  956</span>&#160;    <span class="comment">! -- calculate the ddterms</span></div>
-<div class="line"><a name="l00957"></a><span class="lineno">  957</span>&#160;    <span class="keyword">call </span>calcddterms(thetaim, vcell, delt, swtpdt, swt, thetamfrac,            &amp;</div>
+<div class="line"><a name="l00957"></a><span class="lineno">  957</span>&#160;    <span class="keyword">call </span><a class="code" href="namespacegwtistmodule.html#a813cfcafe68aa1e5f486b48421e94290">calcddterms</a>(thetaim, vcell, delt, swtpdt, swt, thetamfrac,            &amp;</div>
 <div class="line"><a name="l00958"></a><span class="lineno">  958</span>&#160;                     thetaimfrac, rhob, kd, lambda1im, lambda2im,              &amp;</div>
 <div class="line"><a name="l00959"></a><span class="lineno">  959</span>&#160;                     gamma1im, gamma2im, zetaim, cimt, ddterm, f)</div>
 <div class="line"><a name="l00960"></a><span class="lineno">  960</span>&#160;    <span class="comment">!</span></div>
@@ -1043,8 +1088,8 @@ $(function() {
 <div class="line"><a name="l00971"></a><span class="lineno">  971</span>&#160;    <span class="keywordflow">return</span></div>
 <div class="line"><a name="l00972"></a><span class="lineno">  972</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacegwtistmodule.html#aed0e93e57bfc7dfa37f6fdb77b64e0e7">calcddhcofrhs</a></div>
 <div class="line"><a name="l00973"></a><span class="lineno">  973</span>&#160; </div>
-<div class="line"><a name="l00974"></a><span class="lineno">  974</span>&#160;  <span class="keyword">subroutine </span>calcddbud(this, budterm, cnew)</div>
-<div class="line"><a name="l00975"></a><span class="lineno">  975</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l00974"></a><span class="lineno">  974</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacegwtistmodule.html#a4c7a8e405cd0cd3831efbba2d3eaf866">calcddbud</a>(this, budterm, cnew)</div>
+<div class="line"><a name="l00975"></a><span class="lineno"><a class="line" href="namespacegwtistmodule.html#a4c7a8e405cd0cd3831efbba2d3eaf866">  975</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00976"></a><span class="lineno">  976</span>&#160;<span class="comment">! calcddbud -- calculate the individual budget terms for the immobile domain</span></div>
 <div class="line"><a name="l00977"></a><span class="lineno">  977</span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l00978"></a><span class="lineno">  978</span>&#160;<span class="comment">!</span></div>
@@ -1053,7 +1098,7 @@ $(function() {
 <div class="line"><a name="l00981"></a><span class="lineno">  981</span>&#160;    <span class="comment">! -- modules</span></div>
 <div class="line"><a name="l00982"></a><span class="lineno">  982</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacetdismodule.html">tdismodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespacetdismodule.html#ae9a8dbe15bd2bcb8a85d53d570407ae6">delt</a></div>
 <div class="line"><a name="l00983"></a><span class="lineno">  983</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00984"></a><span class="lineno">  984</span>&#160;    <span class="keywordtype">class</span>(gwtisttype) :: this</div>
+<div class="line"><a name="l00984"></a><span class="lineno">  984</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structgwtistmodule_1_1gwtisttype.html">gwtisttype</a>) :: this</div>
 <div class="line"><a name="l00985"></a><span class="lineno">  985</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">dimension(:, :)</span>, <span class="keywordtype">intent(inout)</span> :: budterm</div>
 <div class="line"><a name="l00986"></a><span class="lineno">  986</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">intent(in)</span> :: cnew</div>
 <div class="line"><a name="l00987"></a><span class="lineno">  987</span>&#160;    <span class="comment">! -- local</span></div>
@@ -1101,7 +1146,7 @@ $(function() {
 <div class="line"><a name="l01029"></a><span class="lineno"> 1029</span>&#160;      <span class="comment">!</span></div>
 <div class="line"><a name="l01030"></a><span class="lineno"> 1030</span>&#160;      <span class="comment">! -- calculate the ddterms</span></div>
 <div class="line"><a name="l01031"></a><span class="lineno"> 1031</span>&#160;      cimt = this%cim(n)</div>
-<div class="line"><a name="l01032"></a><span class="lineno"> 1032</span>&#160;      <span class="keyword">call </span>calcddterms(this%thetaim(n), vcell, <a class="code" href="namespacetdismodule.html#ae9a8dbe15bd2bcb8a85d53d570407ae6">delt</a>, swtpdt, swt, thetamfrac,  &amp;</div>
+<div class="line"><a name="l01032"></a><span class="lineno"> 1032</span>&#160;      <span class="keyword">call </span><a class="code" href="namespacegwtistmodule.html#a813cfcafe68aa1e5f486b48421e94290">calcddterms</a>(this%thetaim(n), vcell, <a class="code" href="namespacetdismodule.html#ae9a8dbe15bd2bcb8a85d53d570407ae6">delt</a>, swtpdt, swt, thetamfrac,  &amp;</div>
 <div class="line"><a name="l01033"></a><span class="lineno"> 1033</span>&#160;                       thetaimfrac, rhob, kd, lambda1im,                       &amp;</div>
 <div class="line"><a name="l01034"></a><span class="lineno"> 1034</span>&#160;                       lambda2im, gamma1im, gamma2im, this%zetaim(n), cimt,    &amp;</div>
 <div class="line"><a name="l01035"></a><span class="lineno"> 1035</span>&#160;                       ddterm, f)</div>
@@ -1172,7 +1217,7 @@ $(function() {
 <div class="line"><a name="l01100"></a><span class="lineno"> 1100</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l01101"></a><span class="lineno"> 1101</span>&#160;    <span class="comment">! -- Return</span></div>
 <div class="line"><a name="l01102"></a><span class="lineno"> 1102</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l01103"></a><span class="lineno"> 1103</span>&#160;  <span class="keyword">end subroutine </span>calcddbud</div>
+<div class="line"><a name="l01103"></a><span class="lineno"> 1103</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacegwtistmodule.html#a4c7a8e405cd0cd3831efbba2d3eaf866">calcddbud</a></div>
 <div class="line"><a name="l01104"></a><span class="lineno"> 1104</span>&#160; </div>
 <div class="line"><a name="l01105"></a><span class="lineno"> 1105</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacegwtistmodule.html#a4bec645b4e0786bef24fa889eef489c8">calccim</a>(this, cim, cnew)</div>
 <div class="line"><a name="l01106"></a><span class="lineno"><a class="line" href="namespacegwtistmodule.html#a4bec645b4e0786bef24fa889eef489c8"> 1106</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
@@ -1185,7 +1230,7 @@ $(function() {
 <div class="line"><a name="l01113"></a><span class="lineno"> 1113</span>&#160;    <span class="comment">! -- modules</span></div>
 <div class="line"><a name="l01114"></a><span class="lineno"> 1114</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacetdismodule.html">tdismodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespacetdismodule.html#ae9a8dbe15bd2bcb8a85d53d570407ae6">delt</a></div>
 <div class="line"><a name="l01115"></a><span class="lineno"> 1115</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l01116"></a><span class="lineno"> 1116</span>&#160;    <span class="keywordtype">class</span>(gwtisttype) :: this</div>
+<div class="line"><a name="l01116"></a><span class="lineno"> 1116</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structgwtistmodule_1_1gwtisttype.html">gwtisttype</a>) :: this</div>
 <div class="line"><a name="l01117"></a><span class="lineno"> 1117</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">intent(inout)</span> :: cim</div>
 <div class="line"><a name="l01118"></a><span class="lineno"> 1118</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">intent(in)</span> :: cnew</div>
 <div class="line"><a name="l01119"></a><span class="lineno"> 1119</span>&#160;    <span class="comment">! -- local</span></div>
@@ -1276,7 +1321,7 @@ $(function() {
 <div class="line"><a name="l01204"></a><span class="lineno"> 1204</span>&#160;    ddconc = <a class="code" href="namespaceconstantsmodule.html#abab5757666b9ddd2726c20ce48dd0050">dzero</a></div>
 <div class="line"><a name="l01205"></a><span class="lineno"> 1205</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l01206"></a><span class="lineno"> 1206</span>&#160;    <span class="comment">! -- calculate the ddterms</span></div>
-<div class="line"><a name="l01207"></a><span class="lineno"> 1207</span>&#160;    <span class="keyword">call </span>calcddterms(thetaim, vcell, delt, swtpdt, swt, thetamfrac,            &amp;</div>
+<div class="line"><a name="l01207"></a><span class="lineno"> 1207</span>&#160;    <span class="keyword">call </span><a class="code" href="namespacegwtistmodule.html#a813cfcafe68aa1e5f486b48421e94290">calcddterms</a>(thetaim, vcell, delt, swtpdt, swt, thetamfrac,            &amp;</div>
 <div class="line"><a name="l01208"></a><span class="lineno"> 1208</span>&#160;                     thetaimfrac, rhob, kd, lambda1im, lambda2im,              &amp;</div>
 <div class="line"><a name="l01209"></a><span class="lineno"> 1209</span>&#160;                     gamma1im, gamma2im, zetaim, cimt, ddterm, f)</div>
 <div class="line"><a name="l01210"></a><span class="lineno"> 1210</span>&#160;    <span class="comment">!</span></div>
@@ -1289,10 +1334,10 @@ $(function() {
 <div class="line"><a name="l01217"></a><span class="lineno"> 1217</span>&#160;    <span class="keywordflow">return</span></div>
 <div class="line"><a name="l01218"></a><span class="lineno"> 1218</span>&#160;  <span class="keyword">end function </span><a class="code" href="namespacegwtistmodule.html#a229c8d99a2eee37a8ab3905149348d10">calcddconc</a></div>
 <div class="line"><a name="l01219"></a><span class="lineno"> 1219</span>&#160;                      </div>
-<div class="line"><a name="l01220"></a><span class="lineno"> 1220</span>&#160;  <span class="keyword">subroutine </span>calcddterms(thetaim, vcell, delt, swtpdt, swt, thetamfrac,        &amp;</div>
+<div class="line"><a name="l01220"></a><span class="lineno"> 1220</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacegwtistmodule.html#a813cfcafe68aa1e5f486b48421e94290">calcddterms</a>(thetaim, vcell, delt, swtpdt, swt, thetamfrac,        &amp;</div>
 <div class="line"><a name="l01221"></a><span class="lineno"> 1221</span>&#160;                         thetaimfrac, rhob, kd, lambda1im, lambda2im,          &amp;</div>
 <div class="line"><a name="l01222"></a><span class="lineno"> 1222</span>&#160;                         gamma1im, gamma2im, zetaim, cimt, ddterm, f)</div>
-<div class="line"><a name="l01223"></a><span class="lineno"> 1223</span>&#160;<span class="comment">! ******************************************************************************</span></div>
+<div class="line"><a name="l01223"></a><span class="lineno"><a class="line" href="namespacegwtistmodule.html#a813cfcafe68aa1e5f486b48421e94290"> 1223</a></span>&#160;<span class="comment">! ******************************************************************************</span></div>
 <div class="line"><a name="l01224"></a><span class="lineno"> 1224</span>&#160;<span class="comment">! calcddterms -- Calculate the terms for the immobile domain mass balance</span></div>
 <div class="line"><a name="l01225"></a><span class="lineno"> 1225</span>&#160;<span class="comment">!   equation.</span></div>
 <div class="line"><a name="l01226"></a><span class="lineno"> 1226</span>&#160;<span class="comment">! ******************************************************************************</span></div>
@@ -1300,25 +1345,25 @@ $(function() {
 <div class="line"><a name="l01228"></a><span class="lineno"> 1228</span>&#160;<span class="comment">!    SPECIFICATIONS:</span></div>
 <div class="line"><a name="l01229"></a><span class="lineno"> 1229</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l01230"></a><span class="lineno"> 1230</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l01231"></a><span class="lineno"> 1231</span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">intent(in)</span> :: thetaim</div>
-<div class="line"><a name="l01232"></a><span class="lineno"> 1232</span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">intent(in)</span> :: vcell</div>
-<div class="line"><a name="l01233"></a><span class="lineno"> 1233</span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">intent(in)</span> :: delt</div>
-<div class="line"><a name="l01234"></a><span class="lineno"> 1234</span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">intent(in)</span> :: swtpdt</div>
-<div class="line"><a name="l01235"></a><span class="lineno"> 1235</span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">intent(in)</span> :: swt</div>
-<div class="line"><a name="l01236"></a><span class="lineno"> 1236</span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">intent(in)</span> :: thetamfrac</div>
-<div class="line"><a name="l01237"></a><span class="lineno"> 1237</span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">intent(in)</span> :: thetaimfrac</div>
-<div class="line"><a name="l01238"></a><span class="lineno"> 1238</span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">intent(in)</span> :: rhob</div>
-<div class="line"><a name="l01239"></a><span class="lineno"> 1239</span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">intent(in)</span> :: kd</div>
-<div class="line"><a name="l01240"></a><span class="lineno"> 1240</span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">intent(in)</span> :: lambda1im</div>
-<div class="line"><a name="l01241"></a><span class="lineno"> 1241</span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">intent(in)</span> :: lambda2im</div>
-<div class="line"><a name="l01242"></a><span class="lineno"> 1242</span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">intent(in)</span> :: gamma1im</div>
-<div class="line"><a name="l01243"></a><span class="lineno"> 1243</span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">intent(in)</span> :: gamma2im</div>
-<div class="line"><a name="l01244"></a><span class="lineno"> 1244</span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">intent(in)</span> :: zetaim</div>
-<div class="line"><a name="l01245"></a><span class="lineno"> 1245</span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">intent(in)</span> :: cimt</div>
-<div class="line"><a name="l01246"></a><span class="lineno"> 1246</span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">intent(inout)</span> :: ddterm</div>
-<div class="line"><a name="l01247"></a><span class="lineno"> 1247</span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">intent(inout)</span> :: f</div>
+<div class="line"><a name="l01231"></a><span class="lineno"> 1231</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">intent(in)</span> :: thetaim</div>
+<div class="line"><a name="l01232"></a><span class="lineno"> 1232</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">intent(in)</span> :: vcell</div>
+<div class="line"><a name="l01233"></a><span class="lineno"> 1233</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">intent(in)</span> :: delt</div>
+<div class="line"><a name="l01234"></a><span class="lineno"> 1234</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">intent(in)</span> :: swtpdt</div>
+<div class="line"><a name="l01235"></a><span class="lineno"> 1235</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">intent(in)</span> :: swt</div>
+<div class="line"><a name="l01236"></a><span class="lineno"> 1236</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">intent(in)</span> :: thetamfrac</div>
+<div class="line"><a name="l01237"></a><span class="lineno"> 1237</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">intent(in)</span> :: thetaimfrac</div>
+<div class="line"><a name="l01238"></a><span class="lineno"> 1238</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">intent(in)</span> :: rhob</div>
+<div class="line"><a name="l01239"></a><span class="lineno"> 1239</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">intent(in)</span> :: kd</div>
+<div class="line"><a name="l01240"></a><span class="lineno"> 1240</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">intent(in)</span> :: lambda1im</div>
+<div class="line"><a name="l01241"></a><span class="lineno"> 1241</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">intent(in)</span> :: lambda2im</div>
+<div class="line"><a name="l01242"></a><span class="lineno"> 1242</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">intent(in)</span> :: gamma1im</div>
+<div class="line"><a name="l01243"></a><span class="lineno"> 1243</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">intent(in)</span> :: gamma2im</div>
+<div class="line"><a name="l01244"></a><span class="lineno"> 1244</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">intent(in)</span> :: zetaim</div>
+<div class="line"><a name="l01245"></a><span class="lineno"> 1245</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">intent(in)</span> :: cimt</div>
+<div class="line"><a name="l01246"></a><span class="lineno"> 1246</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">intent(inout)</span> :: ddterm</div>
+<div class="line"><a name="l01247"></a><span class="lineno"> 1247</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">intent(inout)</span> :: f</div>
 <div class="line"><a name="l01248"></a><span class="lineno"> 1248</span>&#160;    <span class="comment">! -- local</span></div>
-<div class="line"><a name="l01249"></a><span class="lineno"> 1249</span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>) :: tled</div>
+<div class="line"><a name="l01249"></a><span class="lineno"> 1249</span>&#160;<span class="keywordtype">    real</span>(DP) :: tled</div>
 <div class="line"><a name="l01250"></a><span class="lineno"> 1250</span>&#160;<span class="comment">! ------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l01251"></a><span class="lineno"> 1251</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l01252"></a><span class="lineno"> 1252</span>&#160;    <span class="comment">! -- initialize</span></div>
@@ -1340,13 +1385,16 @@ $(function() {
 <div class="line"><a name="l01268"></a><span class="lineno"> 1268</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l01269"></a><span class="lineno"> 1269</span>&#160;    <span class="comment">! -- Return</span></div>
 <div class="line"><a name="l01270"></a><span class="lineno"> 1270</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l01271"></a><span class="lineno"> 1271</span>&#160;  <span class="keyword">end subroutine </span>calcddterms</div>
+<div class="line"><a name="l01271"></a><span class="lineno"> 1271</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacegwtistmodule.html#a813cfcafe68aa1e5f486b48421e94290">calcddterms</a></div>
 <div class="line"><a name="l01272"></a><span class="lineno"> 1272</span>&#160; </div>
 <div class="line"><a name="l01273"></a><span class="lineno"> 1273</span>&#160;<span class="keyword">end module </span>GwtIstModule</div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <div class="ttc" id="anamespacebndmodule_html"><div class="ttname"><a href="namespacebndmodule.html">bndmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_boundary_package_8f90_source.html#l00001">BoundaryPackage.f90:1</a></div></div>
 <div class="ttc" id="anamespacegwtistmodule_html"><div class="ttname"><a href="namespacegwtistmodule.html">gwtistmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="gwt1ist1_8f90_source.html#l00001">gwt1ist1.f90:1</a></div></div>
+<div class="ttc" id="astructgwtfmimodule_1_1gwtfmitype_html"><div class="ttname"><a href="structgwtfmimodule_1_1gwtfmitype.html">gwtfmimodule::gwtfmitype</a></div><div class="ttdef"><b>Definition:</b> <a href="gwt1fmi1_8f90_source.html#l00033">gwt1fmi1.f90:33</a></div></div>
 <div class="ttc" id="anamespacegwtmstmodule_html"><div class="ttname"><a href="namespacegwtmstmodule.html">gwtmstmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="gwt1mst1_8f90_source.html#l00008">gwt1mst1.f90:8</a></div></div>
+<div class="ttc" id="ainterfacememorymanagermodule_1_1mem__reallocate_html"><div class="ttname"><a href="interfacememorymanagermodule_1_1mem__reallocate.html">memorymanagermodule::mem_reallocate</a></div><div class="ttdef"><b>Definition:</b> <a href="_memory_manager_8f90_source.html#l00064">MemoryManager.f90:64</a></div></div>
 <div class="ttc" id="anamespacekindmodule_html"><div class="ttname"><a href="namespacekindmodule.html">kindmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="kind_8f90_source.html#l00001">kind.f90:1</a></div></div>
 <div class="ttc" id="anamespacegwtistmodule_html_a229c8d99a2eee37a8ab3905149348d10"><div class="ttname"><a href="namespacegwtistmodule.html#a229c8d99a2eee37a8ab3905149348d10">gwtistmodule::calcddconc</a></div><div class="ttdeci">real(dp) function calcddconc(thetaim, vcell, delt, swtpdt, swt, thetamfrac, thetaimfrac, rhob, kd, lambda1im, lambda2im, gamma1im, gamma2im, zetaim, cimt, ctpdt)</div><div class="ttdef"><b>Definition:</b> <a href="gwt1ist1_8f90_source.html#l01172">gwt1ist1.f90:1172</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_abab5757666b9ddd2726c20ce48dd0050"><div class="ttname"><a href="namespaceconstantsmodule.html#abab5757666b9ddd2726c20ce48dd0050">constantsmodule::dzero</a></div><div class="ttdeci">real(dp), parameter dzero</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00045">Constants.f90:45</a></div></div>
@@ -1356,45 +1404,64 @@ $(function() {
 <div class="ttc" id="anamespacesimmodule_html_a536cb6f0e13fcd33755e414641ff931a"><div class="ttname"><a href="namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a">simmodule::store_error</a></div><div class="ttdeci">subroutine, public store_error(msg)</div><div class="ttdef"><b>Definition:</b> <a href="_sim_8f90_source.html#l00107">Sim.f90:107</a></div></div>
 <div class="ttc" id="anamespacebudgetmodule_html_a917d4897942de165ea88d0c1f0850d8e"><div class="ttname"><a href="namespacebudgetmodule.html#a917d4897942de165ea88d0c1f0850d8e">budgetmodule::rate_accumulator</a></div><div class="ttdeci">subroutine, public rate_accumulator(flow, rin, rout)</div><div class="ttdef"><b>Definition:</b> <a href="_budget_8f90_source.html#l00641">Budget.f90:641</a></div></div>
 <div class="ttc" id="anamespacebudgetmodule_html_a5d07ccf1026ac718f510c44519685c0f"><div class="ttname"><a href="namespacebudgetmodule.html#a5d07ccf1026ac718f510c44519685c0f">budgetmodule::budget_cr</a></div><div class="ttdeci">subroutine, public budget_cr(this, name_model)</div><div class="ttdef"><b>Definition:</b> <a href="_budget_8f90_source.html#l00061">Budget.f90:61</a></div></div>
+<div class="ttc" id="anamespacegwtistmodule_html_aaec4957a4392e2394289597478328dd0"><div class="ttname"><a href="namespacegwtistmodule.html#aaec4957a4392e2394289597478328dd0">gwtistmodule::ist_ar</a></div><div class="ttdeci">subroutine ist_ar(this)</div><div class="ttdef"><b>Definition:</b> <a href="gwt1ist1_8f90_source.html#l00124">gwt1ist1.f90:124</a></div></div>
 <div class="ttc" id="anamespacesimmodule_html_a4c46e49de78d4498dd4ec106357775e6"><div class="ttname"><a href="namespacesimmodule.html#a4c46e49de78d4498dd4ec106357775e6">simmodule::count_errors</a></div><div class="ttdeci">integer(i4b) function, public count_errors()</div><div class="ttdef"><b>Definition:</b> <a href="_sim_8f90_source.html#l00043">Sim.f90:43</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_a96baa989fd4e29721a7756b985c18b30"><div class="ttname"><a href="namespaceconstantsmodule.html#a96baa989fd4e29721a7756b985c18b30">constantsmodule::lenftype</a></div><div class="ttdeci">integer(i4b), parameter lenftype</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00022">Constants.f90:22</a></div></div>
+<div class="ttc" id="ainterfacememorymanagermodule_1_1mem__reassignptr_html"><div class="ttname"><a href="interfacememorymanagermodule_1_1mem__reassignptr.html">memorymanagermodule::mem_reassignptr</a></div><div class="ttdef"><b>Definition:</b> <a href="_memory_manager_8f90_source.html#l00080">MemoryManager.f90:80</a></div></div>
 <div class="ttc" id="anamespacesimmodule_html"><div class="ttname"><a href="namespacesimmodule.html">simmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_sim_8f90_source.html#l00001">Sim.f90:1</a></div></div>
 <div class="ttc" id="anamespacegwtistmodule_html_abeaca165685a01879fb09532d3e5d9e8"><div class="ttname"><a href="namespacegwtistmodule.html#abeaca165685a01879fb09532d3e5d9e8">gwtistmodule::ist_ot_dv</a></div><div class="ttdeci">subroutine ist_ot_dv(this, idvsave, idvprint)</div><div class="ttdef"><b>Definition:</b> <a href="gwt1ist1_8f90_source.html#l00469">gwt1ist1.f90:469</a></div></div>
+<div class="ttc" id="astructoutputcontroldata_1_1outputcontroldatatype_html"><div class="ttname"><a href="structoutputcontroldata_1_1outputcontroldatatype.html">outputcontroldata::outputcontroldatatype</a></div><div class="ttdef"><b>Definition:</b> <a href="_output_control_data_8f90_source.html#l00012">OutputControlData.f90:12</a></div></div>
 <div class="ttc" id="anamespacegwtistmodule_html_a68d5d648825cc85b757caa72dfcf462a"><div class="ttname"><a href="namespacegwtistmodule.html#a68d5d648825cc85b757caa72dfcf462a">gwtistmodule::ist_create</a></div><div class="ttdeci">subroutine, public ist_create(packobj, id, ibcnum, inunit, iout, namemodel, pakname, fmi, mst)</div><div class="ttdef"><b>Definition:</b> <a href="gwt1ist1_8f90_source.html#l00071">gwt1ist1.f90:71</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_a060d310ded5535ce2dc85bd1ca1afd3d"><div class="ttname"><a href="namespaceconstantsmodule.html#a060d310ded5535ce2dc85bd1ca1afd3d">constantsmodule::linelength</a></div><div class="ttdeci">integer(i4b), parameter linelength</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00028">Constants.f90:28</a></div></div>
 <div class="ttc" id="anamespacegwtistmodule_html_ada17d3ef6a3a0fa2740662cdad8c5e00"><div class="ttname"><a href="namespacegwtistmodule.html#ada17d3ef6a3a0fa2740662cdad8c5e00">gwtistmodule::read_data</a></div><div class="ttdeci">subroutine read_data(this)</div><div class="ttdef"><b>Definition:</b> <a href="gwt1ist1_8f90_source.html#l00727">gwt1ist1.f90:727</a></div></div>
 <div class="ttc" id="astructgwtmstmodule_1_1gwtmsttype_html"><div class="ttname"><a href="structgwtmstmodule_1_1gwtmsttype.html">gwtmstmodule::gwtmsttype</a></div><div class="ttdef"><b>Definition:</b> <a href="gwt1mst1_8f90_source.html#l00028">gwt1mst1.f90:28</a></div></div>
 <div class="ttc" id="anamespacesimmodule_html_a0be97214c1d4fcf42bc4ddc27b111b61"><div class="ttname"><a href="namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61">simmodule::ustop</a></div><div class="ttdeci">subroutine, public ustop(stopmess, ioutlocal)</div><div class="ttdef"><b>Definition:</b> <a href="_sim_8f90_source.html#l00324">Sim.f90:324</a></div></div>
+<div class="ttc" id="ainterfacememorymanagermodule_1_1mem__allocate_html"><div class="ttname"><a href="interfacememorymanagermodule_1_1mem__allocate.html">memorymanagermodule::mem_allocate</a></div><div class="ttdef"><b>Definition:</b> <a href="_memory_manager_8f90_source.html#l00050">MemoryManager.f90:50</a></div></div>
+<div class="ttc" id="anamespacegwtistmodule_html_aacc01093936348bbdb8565f98faad71a"><div class="ttname"><a href="namespacegwtistmodule.html#aacc01093936348bbdb8565f98faad71a">gwtistmodule::ftype</a></div><div class="ttdeci">character(len=lenftype) ftype</div><div class="ttdef"><b>Definition:</b> <a href="gwt1ist1_8f90_source.html#l00017">gwt1ist1.f90:17</a></div></div>
 <div class="ttc" id="anamespaceoutputcontroldata_html"><div class="ttname"><a href="namespaceoutputcontroldata.html">outputcontroldata</a></div><div class="ttdef"><b>Definition:</b> <a href="_output_control_data_8f90_source.html#l00001">OutputControlData.f90:1</a></div></div>
 <div class="ttc" id="anamespacegwtistmodule_html_ad885bba7122d4e3d9b9511ca820f10c8"><div class="ttname"><a href="namespacegwtistmodule.html#ad885bba7122d4e3d9b9511ca820f10c8">gwtistmodule::ist_allocate_arrays</a></div><div class="ttdeci">subroutine ist_allocate_arrays(this)</div><div class="ttdef"><b>Definition:</b> <a href="gwt1ist1_8f90_source.html#l00596">gwt1ist1.f90:596</a></div></div>
 <div class="ttc" id="anamespacegwtistmodule_html_ada94becde756a937e3b9e970a31de656"><div class="ttname"><a href="namespacegwtistmodule.html#ada94becde756a937e3b9e970a31de656">gwtistmodule::ist_cq</a></div><div class="ttdeci">subroutine ist_cq(this, x, flowja, iadv)</div><div class="ttdef"><b>Definition:</b> <a href="gwt1ist1_8f90_source.html#l00293">gwt1ist1.f90:293</a></div></div>
 <div class="ttc" id="anamespacetdismodule_html_a42960ee7de0c530454882fd51c4d8c5c"><div class="ttname"><a href="namespacetdismodule.html#a42960ee7de0c530454882fd51c4d8c5c">tdismodule::nstp</a></div><div class="ttdeci">integer(i4b), dimension(:), pointer, public, contiguous nstp</div><div class="ttdoc">number of time steps in each stress period</div><div class="ttdef"><b>Definition:</b> <a href="tdis_8f90_source.html#l00039">tdis.f90:39</a></div></div>
 <div class="ttc" id="anamespacekindmodule_html_a2f6861418b5e7d3d602b77228232a470"><div class="ttname"><a href="namespacekindmodule.html#a2f6861418b5e7d3d602b77228232a470">kindmodule::i4b</a></div><div class="ttdeci">integer, parameter i4b</div><div class="ttdef"><b>Definition:</b> <a href="kind_8f90_source.html#l00009">kind.f90:9</a></div></div>
+<div class="ttc" id="anamespacegwtistmodule_html_a92661d68c115592344e5e54c62b4ac86"><div class="ttname"><a href="namespacegwtistmodule.html#a92661d68c115592344e5e54c62b4ac86">gwtistmodule::nbditems</a></div><div class="ttdeci">integer(i4b), parameter nbditems</div><div class="ttdef"><b>Definition:</b> <a href="gwt1ist1_8f90_source.html#l00019">gwt1ist1.f90:19</a></div></div>
+<div class="ttc" id="ainterfacememorymanagermodule_1_1mem__setptr_html"><div class="ttname"><a href="interfacememorymanagermodule_1_1mem__setptr.html">memorymanagermodule::mem_setptr</a></div><div class="ttdef"><b>Definition:</b> <a href="_memory_manager_8f90_source.html#l00069">MemoryManager.f90:69</a></div></div>
 <div class="ttc" id="anamespacegwtistmodule_html_a4bec645b4e0786bef24fa889eef489c8"><div class="ttname"><a href="namespacegwtistmodule.html#a4bec645b4e0786bef24fa889eef489c8">gwtistmodule::calccim</a></div><div class="ttdeci">subroutine calccim(this, cim, cnew)</div><div class="ttdef"><b>Definition:</b> <a href="gwt1ist1_8f90_source.html#l01106">gwt1ist1.f90:1106</a></div></div>
 <div class="ttc" id="anamespacegwtfmimodule_html"><div class="ttname"><a href="namespacegwtfmimodule.html">gwtfmimodule</a></div><div class="ttdef"><b>Definition:</b> <a href="gwt1fmi1_8f90_source.html#l00001">gwt1fmi1.f90:1</a></div></div>
 <div class="ttc" id="anamespacebudgetmodule_html"><div class="ttname"><a href="namespacebudgetmodule.html">budgetmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_budget_8f90_source.html#l00019">Budget.f90:19</a></div></div>
+<div class="ttc" id="astructbudgetmodule_1_1budgettype_html"><div class="ttname"><a href="structbudgetmodule_1_1budgettype.html">budgetmodule::budgettype</a></div><div class="ttdef"><b>Definition:</b> <a href="_budget_8f90_source.html#l00031">Budget.f90:31</a></div></div>
+<div class="ttc" id="anamespacegwtistmodule_html_af7dec5c53d3b8bf6e8041f314cd1e4a3"><div class="ttname"><a href="namespacegwtistmodule.html#af7dec5c53d3b8bf6e8041f314cd1e4a3">gwtistmodule::budtxt</a></div><div class="ttdeci">character(len=lenbudtxt), dimension(nbditems) budtxt</div><div class="ttdef"><b>Definition:</b> <a href="gwt1ist1_8f90_source.html#l00020">gwt1ist1.f90:20</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html"><div class="ttname"><a href="namespaceconstantsmodule.html">constantsmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00001">Constants.f90:1</a></div></div>
 <div class="ttc" id="anamespacetdismodule_html"><div class="ttname"><a href="namespacetdismodule.html">tdismodule</a></div><div class="ttdef"><b>Definition:</b> <a href="tdis_8f90_source.html#l00005">tdis.f90:5</a></div></div>
 <div class="ttc" id="anamespacegwtistmodule_html_aaaa3a8e269ee0d09d8d4e33b5eb7391e"><div class="ttname"><a href="namespacegwtistmodule.html#aaaa3a8e269ee0d09d8d4e33b5eb7391e">gwtistmodule::allocate_scalars</a></div><div class="ttdeci">subroutine allocate_scalars(this)</div><div class="ttdef"><b>Definition:</b> <a href="gwt1ist1_8f90_source.html#l00557">gwt1ist1.f90:557</a></div></div>
+<div class="ttc" id="anamespacegwtistmodule_html_a813cfcafe68aa1e5f486b48421e94290"><div class="ttname"><a href="namespacegwtistmodule.html#a813cfcafe68aa1e5f486b48421e94290">gwtistmodule::calcddterms</a></div><div class="ttdeci">subroutine calcddterms(thetaim, vcell, delt, swtpdt, swt, thetamfrac, thetaimfrac, rhob, kd, lambda1im, lambda2im, gamma1im, gamma2im, zetaim, cimt, ddterm, f)</div><div class="ttdef"><b>Definition:</b> <a href="gwt1ist1_8f90_source.html#l01223">gwt1ist1.f90:1223</a></div></div>
+<div class="ttc" id="anamespacegwtistmodule_html_a37c321f840348165c87503d0d1165a6e"><div class="ttname"><a href="namespacegwtistmodule.html#a37c321f840348165c87503d0d1165a6e">gwtistmodule::ist_fc</a></div><div class="ttdeci">subroutine ist_fc(this, rhs, ia, idxglo, amatsln)</div><div class="ttdef"><b>Definition:</b> <a href="gwt1ist1_8f90_source.html#l00215">gwt1ist1.f90:215</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_a2e75f10abe62e57d87d7d468c2bf763d"><div class="ttname"><a href="namespaceconstantsmodule.html#a2e75f10abe62e57d87d7d468c2bf763d">constantsmodule::lenpackagename</a></div><div class="ttdeci">integer(i4b), parameter lenpackagename</div><div class="ttdoc">maximum length of the package name</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00013">Constants.f90:13</a></div></div>
+<div class="ttc" id="ainterfacememorymanagermodule_1_1mem__deallocate_html"><div class="ttname"><a href="interfacememorymanagermodule_1_1mem__deallocate.html">memorymanagermodule::mem_deallocate</a></div><div class="ttdef"><b>Definition:</b> <a href="_memory_manager_8f90_source.html#l00085">MemoryManager.f90:85</a></div></div>
 <div class="ttc" id="anamespacegwtistmodule_html_a0f50268c35442b91ea1d8b895ef7271c"><div class="ttname"><a href="namespacegwtistmodule.html#a0f50268c35442b91ea1d8b895ef7271c">gwtistmodule::ist_da</a></div><div class="ttdeci">subroutine ist_da(this)</div><div class="ttdef"><b>Definition:</b> <a href="gwt1ist1_8f90_source.html#l00512">gwt1ist1.f90:512</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_adda4cd91b9096b31d5e48d2215359311"><div class="ttname"><a href="namespaceconstantsmodule.html#adda4cd91b9096b31d5e48d2215359311">constantsmodule::lenbudtxt</a></div><div class="ttdeci">integer(i4b), parameter lenbudtxt</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00020">Constants.f90:20</a></div></div>
 <div class="ttc" id="anamespacememorymanagermodule_html"><div class="ttname"><a href="namespacememorymanagermodule.html">memorymanagermodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_memory_manager_8f90_source.html#l00001">MemoryManager.f90:1</a></div></div>
 <div class="ttc" id="anamespacekindmodule_html_ae38bd3a7dfaf151094c26e1529259639"><div class="ttname"><a href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">kindmodule::dp</a></div><div class="ttdeci">integer, parameter dp</div><div class="ttdef"><b>Definition:</b> <a href="kind_8f90_source.html#l00007">kind.f90:7</a></div></div>
+<div class="ttc" id="anamespacegwtistmodule_html_aff073c698fc57a0b26f81614665b8e49"><div class="ttname"><a href="namespacegwtistmodule.html#aff073c698fc57a0b26f81614665b8e49">gwtistmodule::text</a></div><div class="ttdeci">character(len=lenpackagename) text</div><div class="ttdef"><b>Definition:</b> <a href="gwt1ist1_8f90_source.html#l00018">gwt1ist1.f90:18</a></div></div>
 <div class="ttc" id="anamespacegwtistmodule_html_a13b194937bbe8fd33ea10a9dd4cfceb5"><div class="ttname"><a href="namespacegwtistmodule.html#a13b194937bbe8fd33ea10a9dd4cfceb5">gwtistmodule::ist_ot_bdsummary</a></div><div class="ttdeci">subroutine ist_ot_bdsummary(this, kstp, kper, iout)</div><div class="ttdef"><b>Definition:</b> <a href="gwt1ist1_8f90_source.html#l00497">gwt1ist1.f90:497</a></div></div>
 <div class="ttc" id="anamespacetdismodule_html_ad3443c7d7da2a67a75174c39c6d40c84"><div class="ttname"><a href="namespacetdismodule.html#ad3443c7d7da2a67a75174c39c6d40c84">tdismodule::kstp</a></div><div class="ttdeci">integer(i4b), pointer, public kstp</div><div class="ttdoc">current time step number</div><div class="ttdef"><b>Definition:</b> <a href="tdis_8f90_source.html#l00025">tdis.f90:25</a></div></div>
 <div class="ttc" id="anamespacetdismodule_html_ae9a8dbe15bd2bcb8a85d53d570407ae6"><div class="ttname"><a href="namespacetdismodule.html#ae9a8dbe15bd2bcb8a85d53d570407ae6">tdismodule::delt</a></div><div class="ttdeci">real(dp), pointer, public delt</div><div class="ttdoc">length of the current time step</div><div class="ttdef"><b>Definition:</b> <a href="tdis_8f90_source.html#l00030">tdis.f90:30</a></div></div>
 <div class="ttc" id="anamespacegwtistmodule_html_af8cd450ab5f646649ed562d52cdda268"><div class="ttname"><a href="namespacegwtistmodule.html#af8cd450ab5f646649ed562d52cdda268">gwtistmodule::read_options</a></div><div class="ttdeci">subroutine read_options(this)</div><div class="ttdef"><b>Definition:</b> <a href="gwt1ist1_8f90_source.html#l00654">gwt1ist1.f90:654</a></div></div>
 <div class="ttc" id="anamespacetdismodule_html_ae84d6ee69d7bba12d20a6255a398935b"><div class="ttname"><a href="namespacetdismodule.html#ae84d6ee69d7bba12d20a6255a398935b">tdismodule::kper</a></div><div class="ttdeci">integer(i4b), pointer, public kper</div><div class="ttdoc">current stress period number</div><div class="ttdef"><b>Definition:</b> <a href="tdis_8f90_source.html#l00024">tdis.f90:24</a></div></div>
+<div class="ttc" id="anamespacegwtistmodule_html_a513b002303b3cb2d9394130bfa927663"><div class="ttname"><a href="namespacegwtistmodule.html#a513b002303b3cb2d9394130bfa927663">gwtistmodule::ist_rp</a></div><div class="ttdeci">subroutine ist_rp(this)</div><div class="ttdef"><b>Definition:</b> <a href="gwt1ist1_8f90_source.html#l00198">gwt1ist1.f90:198</a></div></div>
+<div class="ttc" id="anamespacegwtistmodule_html_a4c7a8e405cd0cd3831efbba2d3eaf866"><div class="ttname"><a href="namespacegwtistmodule.html#a4c7a8e405cd0cd3831efbba2d3eaf866">gwtistmodule::calcddbud</a></div><div class="ttdeci">subroutine calcddbud(this, budterm, cnew)</div><div class="ttdef"><b>Definition:</b> <a href="gwt1ist1_8f90_source.html#l00975">gwt1ist1.f90:975</a></div></div>
 <div class="ttc" id="anamespacegwtistmodule_html_ae29f3d0e014cba69c1aa21c6a74afa89"><div class="ttname"><a href="namespacegwtistmodule.html#ae29f3d0e014cba69c1aa21c6a74afa89">gwtistmodule::ist_bd</a></div><div class="ttdeci">subroutine ist_bd(this, model_budget)</div><div class="ttdef"><b>Definition:</b> <a href="gwt1ist1_8f90_source.html#l00385">gwt1ist1.f90:385</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_a636a1fbcffa24ababa57ac244ee2217f"><div class="ttname"><a href="namespaceconstantsmodule.html#a636a1fbcffa24ababa57ac244ee2217f">constantsmodule::dhnoflo</a></div><div class="ttdeci">real(dp), parameter dhnoflo</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00072">Constants.f90:72</a></div></div>
+<div class="ttc" id="astructgwtistmodule_1_1gwtisttype_html"><div class="ttname"><a href="structgwtistmodule_1_1gwtisttype.html">gwtistmodule::gwtisttype</a></div><div class="ttdef"><b>Definition:</b> <a href="gwt1ist1_8f90_source.html#l00025">gwt1ist1.f90:25</a></div></div>
 <div class="ttc" id="anamespaceoutputcontroldata_html_a225600f84ec8c95252f9f5a9bd305024"><div class="ttname"><a href="namespaceoutputcontroldata.html#a225600f84ec8c95252f9f5a9bd305024">outputcontroldata::ocd_cr</a></div><div class="ttdeci">subroutine, public ocd_cr(ocdobj)</div><div class="ttdef"><b>Definition:</b> <a href="_output_control_data_8f90_source.html#l00038">OutputControlData.f90:38</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_af918ac22cd0b232deea67660bfbc9ce1"><div class="ttname"><a href="namespaceconstantsmodule.html#af918ac22cd0b232deea67660bfbc9ce1">constantsmodule::done</a></div><div class="ttdeci">real(dp), parameter done</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00056">Constants.f90:56</a></div></div>
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_32e188284d239da8bb14ec1dabb0c35f.html">Model</a></li><li class="navelem"><a class="el" href="dir_5ac382e795535087161f2a8b7f95a830.html">GroundWaterTransport</a></li><li class="navelem"><a class="el" href="gwt1ist1_8f90.html">gwt1ist1.f90</a></li>
+    <li class="footer">Generated on Thu Jun 24 2021 19:50:09 for MODFLOW 6 by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
 </body>
 </html>

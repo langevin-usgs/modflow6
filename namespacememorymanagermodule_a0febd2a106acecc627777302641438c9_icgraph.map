@@ -1,0 +1,4 @@
+<map id="memorymanagermodule::allocate_int2d" name="memorymanagermodule::allocate_int2d">
+<area shape="rect" id="node1" title="Allocate a 2&#45;dimensional integer array." alt="" coords="237,5,421,47"/>
+<area shape="rect" id="node2" href="$namespacememorymanagermodule.html#a586f55600a71156ec280dd00027a0b29" title="Make a copy of a 2&#45;dimensional integer array." alt="" coords="5,5,189,47"/>
+</map>

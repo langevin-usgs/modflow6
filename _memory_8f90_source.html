@@ -5,13 +5,22 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MODFLOW 6 Code Documentation: /home/runner/work/modflow6/modflow6/src/Utilities/Memory/Memory.f90 Source File</title>
+<title>MODFLOW 6: /home/runner/work/modflow6/modflow6/src/Utilities/Memory/Memory.f90 Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="CustomDoxygen.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -21,9 +30,12 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="mf6-triangular-grid.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">MODFLOW 6 Code Documentation
+   <div id="projectname">MODFLOW 6
+   &#160;<span id="projectnumber">version 6.2.2</span>
    </div>
+   <div id="projectbrief">MODFLOW 6 Code Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -36,16 +48,54 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Modules</span></a></li>
+      <li><a href="annotated.html"><span>Data&#160;Types&#160;List</span></a></li>
+      <li class="current"><a href="files.html"><span>Files</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('_memory_8f90_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,11 +110,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_ff383ddf1aa4eab0c4ce7910366d05a5.html">Utilities</a></li><li class="navelem"><a class="el" href="dir_21ddf0b5f18acd5e64826f246466c9e1.html">Memory</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">Memory.f90</div>  </div>
@@ -82,39 +127,39 @@ $(function() {
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  </div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <span class="keywordtype">implicit none</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <span class="keywordtype">private</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <span class="keywordtype">public</span> :: memorytype</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <span class="keywordtype">public</span> :: <a class="code" href="structmemorytypemodule_1_1memorytype.html">memorytype</a></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <span class="keyword">type</span> memorytype</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">character(len=LENVARNAME)</span>                              :: name<span class="comment">                   !&lt; name of the array</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">character(len=LENVARNAME)</span>                              :: mastername = <span class="stringliteral">&#39;none&#39;</span><span class="comment">    !&lt; name of the master array</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">character(len=LENMEMPATH)</span>                              :: path<span class="comment">                   !&lt; path to memory object</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">character(len=LENMEMPATH)</span>                              :: masterPath = <span class="stringliteral">&#39;none&#39;</span><span class="comment">    !&lt; path to master memory object</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">character(len=LENMEMTYPE)</span>                              :: memtype<span class="comment">                !&lt; type (INTEGER or DOUBLE)</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">integer(I4B)</span>                                           :: id<span class="comment">                     !&lt; id, not used</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">integer(I4B)</span>                                           :: nrealloc = 0<span class="comment">           !&lt; number of times reallocated</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">integer(I4B)</span>                                           :: isize<span class="comment">                  !&lt; size of the array</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">integer(I4B)</span>                                           :: set_handler_idx = 0<span class="comment">    !&lt; index of side effect handler for external access</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">logical(LGP)</span>                                           :: master = .true.        <span class="comment">!&lt; master copy, others point to this one</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">logical(LGP)</span>, <span class="keywordtype">pointer</span>                                  :: logicalsclr =&gt; null()  <span class="comment">!&lt; pointer to the logical</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">pointer</span>                                  :: intsclr     =&gt; null()  <span class="comment">!&lt; pointer to the integer</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">pointer</span>                                      :: dblsclr     =&gt; null()  <span class="comment">!&lt; pointer to the double</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span>        :: aint1d      =&gt; null()  <span class="comment">!&lt; pointer to 1d integer array</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:, :)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span>     :: aint2d      =&gt; null()  <span class="comment">!&lt; pointer to 2d integer array</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:, :, :)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span>  :: aint3d      =&gt; null()  <span class="comment">!&lt; pointer to 3d integer array</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span>            :: adbl1d      =&gt; null()  <span class="comment">!&lt; pointer to 1d double array</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">dimension(:, :)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span>         :: adbl2d      =&gt; null()  <span class="comment">!&lt; pointer to 2d double array</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">dimension(:, :, :)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span>      :: adbl3d      =&gt; null()  <span class="comment">!&lt; pointer to 3d double array</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="structmemorytypemodule_1_1memorytype.html">   15</a></span>&#160;  <span class="keyword">type</span> <a class="code" href="structmemorytypemodule_1_1memorytype.html">memorytype</a></div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="structmemorytypemodule_1_1memorytype.html#a28b0e66a7ef8a77f2b1b0ecf26b419b0">   16</a></span>&#160;    <span class="keywordtype">character(len=LENVARNAME)</span>                              :: name<span class="comment">                   !&lt; name of the array</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="structmemorytypemodule_1_1memorytype.html#acc09ac2ea419de19b6a94a12ad4f9684">   17</a></span>&#160;    <span class="keywordtype">character(len=LENVARNAME)</span>                              :: mastername = <span class="stringliteral">&#39;none&#39;</span><span class="comment">    !&lt; name of the master array</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="structmemorytypemodule_1_1memorytype.html#af713779b7ae3fcdd20528010b0577e3d">   18</a></span>&#160;    <span class="keywordtype">character(len=LENMEMPATH)</span>                              :: path<span class="comment">                   !&lt; path to memory object</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="structmemorytypemodule_1_1memorytype.html#af49e556a8a1326eb98e94c4d66485ebc">   19</a></span>&#160;    <span class="keywordtype">character(len=LENMEMPATH)</span>                              :: masterpath = <span class="stringliteral">&#39;none&#39;</span><span class="comment">    !&lt; path to master memory object</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="structmemorytypemodule_1_1memorytype.html#a4662c8b2e498429ca5b7eeeed42ca9c8">   20</a></span>&#160;    <span class="keywordtype">character(len=LENMEMTYPE)</span>                              :: memtype<span class="comment">                !&lt; type (INTEGER or DOUBLE)</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="structmemorytypemodule_1_1memorytype.html#ab5a4449c01b199eab9ae20e3d0f96758">   21</a></span>&#160;    <span class="keywordtype">integer(I4B)</span>                                           :: id<span class="comment">                     !&lt; id, not used</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="structmemorytypemodule_1_1memorytype.html#aa25da257d1e9c0c021cf96c51c00cbb2">   22</a></span>&#160;    <span class="keywordtype">integer(I4B)</span>                                           :: nrealloc = 0<span class="comment">           !&lt; number of times reallocated</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="structmemorytypemodule_1_1memorytype.html#a0fb2b6ecafe23b16ab906414fb6e2d34">   23</a></span>&#160;    <span class="keywordtype">integer(I4B)</span>                                           :: isize<span class="comment">                  !&lt; size of the array</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="structmemorytypemodule_1_1memorytype.html#a22c4b8a1e13f310a42279ff22ba727d3">   24</a></span>&#160;    <span class="keywordtype">integer(I4B)</span>                                           :: set_handler_idx = 0<span class="comment">    !&lt; index of side effect handler for external access</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="structmemorytypemodule_1_1memorytype.html#ac30f438d005fc45897a14e34fe59292b">   25</a></span>&#160;    <span class="keywordtype">logical(LGP)</span>                                           :: master = .true.        <span class="comment">!&lt; master copy, others point to this one</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="structmemorytypemodule_1_1memorytype.html#acff7180f38cc0d29e513dd26d2ce45a4">   26</a></span>&#160;    <span class="keywordtype">logical(LGP)</span>, <span class="keywordtype">pointer</span>                                  :: logicalsclr =&gt; null()  <span class="comment">!&lt; pointer to the logical</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="structmemorytypemodule_1_1memorytype.html#a5187f4d821e480ef1c1aad0f190d02ad">   27</a></span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">pointer</span>                                  :: intsclr     =&gt; null()  <span class="comment">!&lt; pointer to the integer</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="structmemorytypemodule_1_1memorytype.html#aaa82277b12c090f9e20dff7ccd8d0f41">   28</a></span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">pointer</span>                                      :: dblsclr     =&gt; null()  <span class="comment">!&lt; pointer to the double</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="structmemorytypemodule_1_1memorytype.html#acb55ec71a9681457e061ba9d36e1e531">   29</a></span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span>        :: aint1d      =&gt; null()  <span class="comment">!&lt; pointer to 1d integer array</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="structmemorytypemodule_1_1memorytype.html#abc86db1bfba678de8bd81eebb0b34585">   30</a></span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:, :)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span>     :: aint2d      =&gt; null()  <span class="comment">!&lt; pointer to 2d integer array</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="structmemorytypemodule_1_1memorytype.html#a5f84a214cbc077ef54a215d31c348733">   31</a></span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">dimension(:, :, :)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span>  :: aint3d      =&gt; null()  <span class="comment">!&lt; pointer to 3d integer array</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="structmemorytypemodule_1_1memorytype.html#a52647d7da1f223b04381258a5e4b72be">   32</a></span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span>            :: adbl1d      =&gt; null()  <span class="comment">!&lt; pointer to 1d double array</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="structmemorytypemodule_1_1memorytype.html#a70bfbbf309a7137946aecab0480fcf94">   33</a></span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">dimension(:, :)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span>         :: adbl2d      =&gt; null()  <span class="comment">!&lt; pointer to 2d double array</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="structmemorytypemodule_1_1memorytype.html#a04b246d6703e169b21b81a0e1e36fcf4">   34</a></span>&#160;<span class="keywordtype">    real</span>(<a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>), <span class="keywordtype">dimension(:, :, :)</span>, <span class="keywordtype">pointer</span>, <span class="keywordtype">contiguous</span>      :: adbl3d      =&gt; null()  <span class="comment">!&lt; pointer to 3d double array</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keyword">contains</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">procedure</span> :: table_entry</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">procedure</span> :: mt_associated</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="structmemorytypemodule_1_1memorytype.html#aeed0aac91dc4d1fc4777de2915b4787e">   36</a></span>&#160;    <span class="keywordtype">procedure</span> :: <a class="code" href="namespacememorytypemodule.html#aadef09c718c031b8a26e0daafa948f43">table_entry</a></div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="structmemorytypemodule_1_1memorytype.html#a24664287b92ca77494a41ef835146062">   37</a></span>&#160;    <span class="keywordtype">procedure</span> :: <a class="code" href="namespacememorytypemodule.html#ac04bf59563d0334cc70f855a49188c59">mt_associated</a></div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="keyword">end type</span></div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  </div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keyword">contains</span></div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keyword">subroutine </span>table_entry(this, memtab)</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="comment">! -- dummy</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">class</span>(MemoryType) :: this</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">type</span>(TableType), <span class="keywordtype">intent(inout)</span> :: memtab</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacememorytypemodule.html#aadef09c718c031b8a26e0daafa948f43">table_entry</a>(this, memtab)</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="namespacememorytypemodule.html#aadef09c718c031b8a26e0daafa948f43">   43</a></span>&#160;    <span class="comment">! -- dummy</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structmemorytypemodule_1_1memorytype.html">memorytype</a>) :: this</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="structtablemodule_1_1tabletype.html">tabletype</a>), <span class="keywordtype">intent(inout)</span> :: memtab</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="comment">! -- local</span></div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">character(len=16)</span> :: cmem</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">character(len=LENMEMADDRESS)</span> :: cptr</div>
@@ -145,10 +190,10 @@ $(function() {
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="comment">!</span></div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="comment">! -- return</span></div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="keyword">end subroutine </span>table_entry</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacememorytypemodule.html#aadef09c718c031b8a26e0daafa948f43">table_entry</a></div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keyword">function </span>mt_associated(this) <span class="keyword">result</span>(al)</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">class</span>(MemoryType) :: this</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keyword">function </span><a class="code" href="namespacememorytypemodule.html#ac04bf59563d0334cc70f855a49188c59">mt_associated</a>(this) <span class="keyword">result</span>(al)</div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="namespacememorytypemodule.html#ac04bf59563d0334cc70f855a49188c59">   79</a></span>&#160;    <span class="keywordtype">class</span>(<a class="code" href="structmemorytypemodule_1_1memorytype.html">memorytype</a>) :: this</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">logical</span> :: al</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    al = .false.</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">if</span>(<span class="keyword">associated</span>(this%logicalsclr)) al = .true.</div>
@@ -160,12 +205,15 @@ $(function() {
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">if</span>(<span class="keyword">associated</span>(this%adbl1d)) al = .true.</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">if</span>(<span class="keyword">associated</span>(this%adbl2d)) al = .true. </div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordflow">if</span>(<span class="keyword">associated</span>(this%adbl3d)) al = .true. </div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <span class="keyword">end function </span>mt_associated</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <span class="keyword">end function </span><a class="code" href="namespacememorytypemodule.html#ac04bf59563d0334cc70f855a49188c59">mt_associated</a></div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  </div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="keyword">end module </span>MemoryTypeModule</div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <div class="ttc" id="anamespacekindmodule_html"><div class="ttname"><a href="namespacekindmodule.html">kindmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="kind_8f90_source.html#l00001">kind.f90:1</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_ae1ec6380bd0e8e6c89a40d3b97306586"><div class="ttname"><a href="namespaceconstantsmodule.html#ae1ec6380bd0e8e6c89a40d3b97306586">constantsmodule::lenmempath</a></div><div class="ttdeci">integer(i4b), parameter lenmempath</div><div class="ttdoc">maximum length of the memory path</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00016">Constants.f90:16</a></div></div>
+<div class="ttc" id="astructmemorytypemodule_1_1memorytype_html"><div class="ttname"><a href="structmemorytypemodule_1_1memorytype.html">memorytypemodule::memorytype</a></div><div class="ttdef"><b>Definition:</b> <a href="_memory_8f90_source.html#l00015">Memory.f90:15</a></div></div>
+<div class="ttc" id="anamespacememorytypemodule_html_aadef09c718c031b8a26e0daafa948f43"><div class="ttname"><a href="namespacememorytypemodule.html#aadef09c718c031b8a26e0daafa948f43">memorytypemodule::table_entry</a></div><div class="ttdeci">subroutine table_entry(this, memtab)</div><div class="ttdef"><b>Definition:</b> <a href="_memory_8f90_source.html#l00043">Memory.f90:43</a></div></div>
 <div class="ttc" id="anamespacememorytypemodule_html"><div class="ttname"><a href="namespacememorytypemodule.html">memorytypemodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_memory_8f90_source.html#l00001">Memory.f90:1</a></div></div>
 <div class="ttc" id="anamespacekindmodule_html_aab86cc631d886fd4042b11df419be9ee"><div class="ttname"><a href="namespacekindmodule.html#aab86cc631d886fd4042b11df419be9ee">kindmodule::lgp</a></div><div class="ttdeci">integer, parameter lgp</div><div class="ttdef"><b>Definition:</b> <a href="kind_8f90_source.html#l00008">kind.f90:8</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_a72b9f98f14e6bc10dae320dfd4f56dfb"><div class="ttname"><a href="namespaceconstantsmodule.html#a72b9f98f14e6bc10dae320dfd4f56dfb">constantsmodule::lentimeseriesname</a></div><div class="ttdeci">integer(i4b), parameter lentimeseriesname</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00025">Constants.f90:25</a></div></div>
@@ -185,11 +233,15 @@ $(function() {
 <div class="ttc" id="anamespaceconstantsmodule_html_a10697c973cf4247fc80392749bcc1af7ad9c2f6c38dd73b6c9b0d4b222072e2c6"><div class="ttname"><a href="namespaceconstantsmodule.html#a10697c973cf4247fc80392749bcc1af7ad9c2f6c38dd73b6c9b0d4b222072e2c6">constantsmodule::tabinteger</a></div><div class="ttdeci">@ tabinteger</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00125">Constants.f90:125</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_a71ca6c4361b908f3fc476b67e1ea3558add793922614b244e637762bb8590cc4a"><div class="ttname"><a href="namespaceconstantsmodule.html#a71ca6c4361b908f3fc476b67e1ea3558add793922614b244e637762bb8590cc4a">constantsmodule::tableft</a></div><div class="ttdeci">@ tableft</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00120">Constants.f90:120</a></div></div>
 <div class="ttc" id="anamespaceconstantsmodule_html_a8a23c620a738ea7c5a9b5c4893b6bfbb"><div class="ttname"><a href="namespaceconstantsmodule.html#a8a23c620a738ea7c5a9b5c4893b6bfbb">constantsmodule::lenvarname</a></div><div class="ttdeci">integer(i4b), parameter lenvarname</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8f90_source.html#l00009">Constants.f90:9</a></div></div>
+<div class="ttc" id="anamespacememorytypemodule_html_ac04bf59563d0334cc70f855a49188c59"><div class="ttname"><a href="namespacememorytypemodule.html#ac04bf59563d0334cc70f855a49188c59">memorytypemodule::mt_associated</a></div><div class="ttdeci">logical function mt_associated(this)</div><div class="ttdef"><b>Definition:</b> <a href="_memory_8f90_source.html#l00079">Memory.f90:79</a></div></div>
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_ff383ddf1aa4eab0c4ce7910366d05a5.html">Utilities</a></li><li class="navelem"><a class="el" href="dir_21ddf0b5f18acd5e64826f246466c9e1.html">Memory</a></li><li class="navelem"><a class="el" href="_memory_8f90.html">Memory.f90</a></li>
+    <li class="footer">Generated on Thu Jun 24 2021 19:50:09 for MODFLOW 6 by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
 </body>
 </html>

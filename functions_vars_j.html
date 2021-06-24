@@ -5,13 +5,22 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MODFLOW 6 Code Documentation: Data Fields - Variables</title>
+<title>MODFLOW 6: Data Fields - Variables</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="CustomDoxygen.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -21,9 +30,12 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="mf6-triangular-grid.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">MODFLOW 6 Code Documentation
+   <div id="projectname">MODFLOW 6
+   &#160;<span id="projectnumber">version 6.2.2</span>
    </div>
+   <div id="projectbrief">MODFLOW 6 Code Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -36,17 +48,93 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Modules</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Data&#160;Types&#160;List</span></a></li>
+      <li><a href="files.html"><span>Files</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Data&#160;Types&#160;List</span></a></li>
+      <li><a href="classes.html"><span>Data&#160;Types</span></a></li>
+      <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li class="current"><a href="functions.html"><span>Data&#160;Fields</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow3" class="tabs2">
+    <ul class="tablist">
+      <li><a href="functions.html"><span>All</span></a></li>
+      <li><a href="functions_func.html"><span>Functions/Subroutines</span></a></li>
+      <li class="current"><a href="functions_vars.html"><span>Variables</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow4" class="tabs3">
+    <ul class="tablist">
+      <li><a href="functions_vars.html#index_a"><span>a</span></a></li>
+      <li><a href="functions_vars_b.html#index_b"><span>b</span></a></li>
+      <li><a href="functions_vars_c.html#index_c"><span>c</span></a></li>
+      <li><a href="functions_vars_d.html#index_d"><span>d</span></a></li>
+      <li><a href="functions_vars_e.html#index_e"><span>e</span></a></li>
+      <li><a href="functions_vars_f.html#index_f"><span>f</span></a></li>
+      <li><a href="functions_vars_g.html#index_g"><span>g</span></a></li>
+      <li><a href="functions_vars_h.html#index_h"><span>h</span></a></li>
+      <li><a href="functions_vars_i.html#index_i"><span>i</span></a></li>
+      <li class="current"><a href="functions_vars_j.html#index_j"><span>j</span></a></li>
+      <li><a href="functions_vars_k.html#index_k"><span>k</span></a></li>
+      <li><a href="functions_vars_l.html#index_l"><span>l</span></a></li>
+      <li><a href="functions_vars_m.html#index_m"><span>m</span></a></li>
+      <li><a href="functions_vars_n.html#index_n"><span>n</span></a></li>
+      <li><a href="functions_vars_o.html#index_o"><span>o</span></a></li>
+      <li><a href="functions_vars_p.html#index_p"><span>p</span></a></li>
+      <li><a href="functions_vars_q.html#index_q"><span>q</span></a></li>
+      <li><a href="functions_vars_r.html#index_r"><span>r</span></a></li>
+      <li><a href="functions_vars_s.html#index_s"><span>s</span></a></li>
+      <li><a href="functions_vars_t.html#index_t"><span>t</span></a></li>
+      <li><a href="functions_vars_u.html#index_u"><span>u</span></a></li>
+      <li><a href="functions_vars_v.html#index_v"><span>v</span></a></li>
+      <li><a href="functions_vars_w.html#index_w"><span>w</span></a></li>
+      <li><a href="functions_vars_x.html#index_x"><span>x</span></a></li>
+      <li><a href="functions_vars_y.html#index_y"><span>y</span></a></li>
+      <li><a href="functions_vars_z.html#index_z"><span>z</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
-</div><!-- top -->
+$(document).ready(function(){initNavTree('functions_vars_j.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -65,11 +153,26 @@ $(function() {
 &#160;
 
 <h3><a id="index_j"></a>- j -</h3><ul>
+<li>j
+: <a class="el" href="structdisvgeom_1_1disvgeomtype.html#aed87ed3a569e7817f49280e558488346">disvgeom::disvgeomtype</a>
+</li>
 <li>ja
-: <a class="el" href="structimslinearmodule_1_1imslineardatatype.html#affdaa0ac28bd893e00ff425c3a9f3115">imslinearmodule::imslineardatatype</a>
+: <a class="el" href="structconnectionsmodule_1_1connectionstype.html#ab1a3093d67408ecf98c9f57ecfbb584f">connectionsmodule::connectionstype</a>
+, <a class="el" href="structgwfhfbmodule_1_1gwfhfbtype.html#a78e7d5100efa016cadd2ca6d2a68a874">gwfhfbmodule::gwfhfbtype</a>
+, <a class="el" href="structimslinearmodule_1_1imslineardatatype.html#affdaa0ac28bd893e00ff425c3a9f3115">imslinearmodule::imslineardatatype</a>
+, <a class="el" href="structnumericalmodelmodule_1_1numericalmodeltype.html#ae2d0dc3d961c43a7e00c607a136a5a46">numericalmodelmodule::numericalmodeltype</a>
+, <a class="el" href="structnumericalsolutionmodule_1_1numericalsolutiontype.html#a13d160e74b734842fde2d5bbaf5d2147">numericalsolutionmodule::numericalsolutiontype</a>
+, <a class="el" href="structsfrmodule_1_1sfrtype.html#a3eac142799d981136f4dd5ba7d7352c9">sfrmodule::sfrtype</a>
+, <a class="el" href="structuzfmodule_1_1uzftype.html#ad70301095ae59f3fa7b2553ab4a4e74a">uzfmodule::uzftype</a>
 </li>
 <li>ja0
 : <a class="el" href="structimslinearmodule_1_1imslineardatatype.html#a9af9e8012ca1e0cef66608c71012199c">imslinearmodule::imslineardatatype</a>
+</li>
+<li>jaindex
+: <a class="el" href="structobservemodule_1_1observetype.html#ab76b412d903182390e219e5c2e7c0ac7">observemodule::observetype</a>
+</li>
+<li>jainp
+: <a class="el" href="structgwfdisumodule_1_1gwfdisutype.html#a8c5144a7e6046e516fb48e1213a67e4d">gwfdisumodule::gwfdisutype</a>
 </li>
 <li>japc
 : <a class="el" href="structimslinearmodule_1_1imslineardatatype.html#a28be3c066ceb15b8e86b01bfe8fb71a4">imslinearmodule::imslineardatatype</a>
@@ -77,22 +180,46 @@ $(function() {
 <li>jaro
 : <a class="el" href="structimslinearmodule_1_1imslineardatatype.html#add481494bda06d7c6d1a823d63cafd94">imslinearmodule::imslineardatatype</a>
 </li>
+<li>jas
+: <a class="el" href="structconnectionsmodule_1_1connectionstype.html#affd132f7b4754754ff696ff869d71708">connectionsmodule::connectionstype</a>
+, <a class="el" href="structgwfhfbmodule_1_1gwfhfbtype.html#af29513e1bf5f55f54d97373388e77b91">gwfhfbmodule::gwfhfbtype</a>
+</li>
+<li>jausr
+: <a class="el" href="structconnectionsmodule_1_1connectionstype.html#a796be797d7f43ffe4e5741006f36a188">connectionsmodule::connectionstype</a>
+</li>
+<li>javert
+: <a class="el" href="structdisvgeom_1_1disvgeomtype.html#abce2a439106a86a44f4d888fe679d641">disvgeom::disvgeomtype</a>
+, <a class="el" href="structgwfdisumodule_1_1gwfdisutype.html#a7a2df3f11554e46f597ceb13a6628259">gwfdisumodule::gwfdisutype</a>
+, <a class="el" href="structgwfdisvmodule_1_1gwfdisvtype.html#afa650821a5076ad4c25cf4586a6737e5">gwfdisvmodule::gwfdisvtype</a>
+</li>
 <li>jax
 : <a class="el" href="structxt3dmodule_1_1xt3dtype.html#aae4db1f839d2b2d485ab6aa53706a3e7">xt3dmodule::xt3dtype</a>
 </li>
+<li>jcol
+: <a class="el" href="structtimeserieslinkmodule_1_1timeserieslinktype.html#aff23e8b66a7d803f666c62c12c74cea4">timeserieslinkmodule::timeserieslinktype</a>
+</li>
 <li>jlu
 : <a class="el" href="structimslinearmodule_1_1imslineardatatype.html#aec3c25d151a33ce75265f611e3e2aff6">imslinearmodule::imslineardatatype</a>
+</li>
+<li>jposinrowm
+: <a class="el" href="structghostnodemodule_1_1ghostnodetype.html#aceb208f1f6c238fd93819b58f706ff42">ghostnodemodule::ghostnodetype</a>
+</li>
+<li>jposinrown
+: <a class="el" href="structghostnodemodule_1_1ghostnodetype.html#a153536529103c6234819cd1f4b2949e7">ghostnodemodule::ghostnodetype</a>
 </li>
 <li>jw
 : <a class="el" href="structimslinearmodule_1_1imslineardatatype.html#a29639b6bd79a067c74f42d8c881a8619">imslinearmodule::imslineardatatype</a>
 </li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated on Thu Jun 24 2021 19:50:24 for MODFLOW 6 by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
 </body>
 </html>

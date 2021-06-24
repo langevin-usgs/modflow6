@@ -1,7 +1,7 @@
 <map id="smoothingmodule::squadratic0spderivative" name="smoothingmodule::squadratic0spderivative">
-<area shape="rect" id="node1" title=" " alt="" coords="475,78,780,105"/>
-<area shape="rect" id="node2" href="$namespacegwfcsubmodule.html#a0d39881d356523dd2fbf75afd55a6044" title="Assemble delay interbed Newton&#45;Raphson formulation coefficients." alt="" coords="245,5,408,47"/>
-<area shape="rect" id="node3" href="$namespacegwfcsubmodule.html#a85b967992eb3ac29fcaa98cad30d52f8" title="@ brief Calculate no&#45;delay interbed compaction" alt="" coords="245,71,408,112"/>
-<area shape="rect" id="node4" href="$namespacemawmodule.html#af39015154df128789df86fce4d63d0d7" title=" " alt="" coords="227,136,427,177"/>
-<area shape="rect" id="node5" href="$namespacemawmodule.html#a8223d4b65bb7f68e2bbece3212d2cead" title=" " alt="" coords="5,136,179,177"/>
+<area shape="rect" id="node1" title=" " alt="" coords="263,111,568,138"/>
+<area shape="rect" id="node2" href="$namespacegwfcsubmodule.html#ad317ed87eb5b8b4ad72359c7cfd0d2c1" title="@ brief Formulate coarse&#45;grained Newton&#45;Raphson terms" alt="" coords="29,5,191,47"/>
+<area shape="rect" id="node3" href="$namespacegwfcsubmodule.html#a0d39881d356523dd2fbf75afd55a6044" title="Assemble delay interbed Newton&#45;Raphson formulation coefficients." alt="" coords="29,71,191,112"/>
+<area shape="rect" id="node4" href="$namespacegwfcsubmodule.html#a99bcf821bdec79c75c9045a455ce9d0b" title="@ brief Formulate the coefficients for a interbed" alt="" coords="29,136,191,177"/>
+<area shape="rect" id="node5" href="$namespacemawmodule.html#a406d86ec10d024754ad0d69663bf2846" title=" " alt="" coords="5,201,215,243"/>
 </map>

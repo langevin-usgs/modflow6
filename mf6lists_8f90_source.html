@@ -5,13 +5,22 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MODFLOW 6 Code Documentation: /home/runner/work/modflow6/modflow6/src/mf6lists.f90 Source File</title>
+<title>MODFLOW 6: /home/runner/work/modflow6/modflow6/src/mf6lists.f90 Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="CustomDoxygen.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -21,9 +30,12 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="mf6-triangular-grid.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">MODFLOW 6 Code Documentation
+   <div id="projectname">MODFLOW 6
+   &#160;<span id="projectnumber">version 6.2.2</span>
    </div>
+   <div id="projectbrief">MODFLOW 6 Code Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -36,16 +48,54 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Modules</span></a></li>
+      <li><a href="annotated.html"><span>Data&#160;Types&#160;List</span></a></li>
+      <li class="current"><a href="files.html"><span>Files</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('mf6lists_8f90_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,11 +110,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">mf6lists.f90</div>  </div>
@@ -76,7 +121,7 @@ $(function() {
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;  <span class="comment">!    BaseExchangeType for use by any MF6 module.</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacekindmodule.html">kindmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="namespacekindmodule.html#ae38bd3a7dfaf151094c26e1529259639">dp</a>, <a class="code" href="namespacekindmodule.html#a2f6861418b5e7d3d602b77228232a470">i4b</a></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacelistmodule.html">listmodule</a>, <span class="keywordtype">only</span>: listtype</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacelistmodule.html">listmodule</a>, <span class="keywordtype">only</span>: <a class="code" href="structlistmodule_1_1listtype.html">listtype</a></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  <span class="keywordtype">implicit none</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  <span class="keywordtype">private</span></div>
@@ -85,16 +130,16 @@ $(function() {
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <span class="keywordtype">public</span> :: <a class="code" href="namespacelistsmodule.html#acfc4a2fee6511bdae3eae6fbf510e46c">lists_da</a></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <span class="comment">! -- list of all models in simulation</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="namespacelistsmodule.html#a3b242f17eecc25a4acea6ab6e3c5ae7b">   16</a></span>&#160;  <span class="keywordtype">type</span>(listtype) :: <a class="code" href="namespacelistsmodule.html#a3b242f17eecc25a4acea6ab6e3c5ae7b">basemodellist</a></div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="namespacelistsmodule.html#a3b242f17eecc25a4acea6ab6e3c5ae7b">   16</a></span>&#160;  <span class="keywordtype">type</span>(<a class="code" href="structlistmodule_1_1listtype.html">listtype</a>) :: <a class="code" href="namespacelistsmodule.html#a3b242f17eecc25a4acea6ab6e3c5ae7b">basemodellist</a></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <span class="comment">! -- list of all solutions in simulation</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="namespacelistsmodule.html#aa1a3cd1509449addb1bb6d6f4ff0b7fb">   19</a></span>&#160;  <span class="keywordtype">type</span>(listtype) :: <a class="code" href="namespacelistsmodule.html#aa1a3cd1509449addb1bb6d6f4ff0b7fb">basesolutionlist</a></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="namespacelistsmodule.html#aa1a3cd1509449addb1bb6d6f4ff0b7fb">   19</a></span>&#160;  <span class="keywordtype">type</span>(<a class="code" href="structlistmodule_1_1listtype.html">listtype</a>) :: <a class="code" href="namespacelistsmodule.html#aa1a3cd1509449addb1bb6d6f4ff0b7fb">basesolutionlist</a></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="comment">! -- list of all solutiongroups in simulation</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="namespacelistsmodule.html#a733280dd05725ffbe3969344a79a964c">   22</a></span>&#160;  <span class="keywordtype">type</span>(listtype) :: <a class="code" href="namespacelistsmodule.html#a733280dd05725ffbe3969344a79a964c">solutiongrouplist</a></div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="namespacelistsmodule.html#a733280dd05725ffbe3969344a79a964c">   22</a></span>&#160;  <span class="keywordtype">type</span>(<a class="code" href="structlistmodule_1_1listtype.html">listtype</a>) :: <a class="code" href="namespacelistsmodule.html#a733280dd05725ffbe3969344a79a964c">solutiongrouplist</a></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="comment">! -- list of all exchanges in simulation</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="namespacelistsmodule.html#a3e857b53bd777fd84ebcc75f2d7fe273">   25</a></span>&#160;  <span class="keywordtype">type</span>(listtype) :: <a class="code" href="namespacelistsmodule.html#a3e857b53bd777fd84ebcc75f2d7fe273">baseexchangelist</a></div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="namespacelistsmodule.html#a3e857b53bd777fd84ebcc75f2d7fe273">   25</a></span>&#160;  <span class="keywordtype">type</span>(<a class="code" href="structlistmodule_1_1listtype.html">listtype</a>) :: <a class="code" href="namespacelistsmodule.html#a3e857b53bd777fd84ebcc75f2d7fe273">baseexchangelist</a></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  </div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keyword">contains</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  </div>
@@ -116,8 +161,10 @@ $(function() {
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keyword">end module </span><a class="code" href="namespacelistsmodule.html">listsmodule</a></div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <div class="ttc" id="anamespacekindmodule_html"><div class="ttname"><a href="namespacekindmodule.html">kindmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="kind_8f90_source.html#l00001">kind.f90:1</a></div></div>
 <div class="ttc" id="anamespacelistsmodule_html_aa1a3cd1509449addb1bb6d6f4ff0b7fb"><div class="ttname"><a href="namespacelistsmodule.html#aa1a3cd1509449addb1bb6d6f4ff0b7fb">listsmodule::basesolutionlist</a></div><div class="ttdeci">type(listtype), public basesolutionlist</div><div class="ttdef"><b>Definition:</b> <a href="mf6lists_8f90_source.html#l00019">mf6lists.f90:19</a></div></div>
+<div class="ttc" id="astructlistmodule_1_1listtype_html"><div class="ttname"><a href="structlistmodule_1_1listtype.html">listmodule::listtype</a></div><div class="ttdef"><b>Definition:</b> <a href="_list_8f90_source.html#l00009">List.f90:9</a></div></div>
 <div class="ttc" id="anamespacelistsmodule_html"><div class="ttname"><a href="namespacelistsmodule.html">listsmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="mf6lists_8f90_source.html#l00001">mf6lists.f90:1</a></div></div>
 <div class="ttc" id="anamespacelistsmodule_html_a3e857b53bd777fd84ebcc75f2d7fe273"><div class="ttname"><a href="namespacelistsmodule.html#a3e857b53bd777fd84ebcc75f2d7fe273">listsmodule::baseexchangelist</a></div><div class="ttdeci">type(listtype), public baseexchangelist</div><div class="ttdef"><b>Definition:</b> <a href="mf6lists_8f90_source.html#l00025">mf6lists.f90:25</a></div></div>
 <div class="ttc" id="anamespacekindmodule_html_a2f6861418b5e7d3d602b77228232a470"><div class="ttname"><a href="namespacekindmodule.html#a2f6861418b5e7d3d602b77228232a470">kindmodule::i4b</a></div><div class="ttdeci">integer, parameter i4b</div><div class="ttdef"><b>Definition:</b> <a href="kind_8f90_source.html#l00009">kind.f90:9</a></div></div>
@@ -127,10 +174,13 @@ $(function() {
 <div class="ttc" id="anamespacelistsmodule_html_a3b242f17eecc25a4acea6ab6e3c5ae7b"><div class="ttname"><a href="namespacelistsmodule.html#a3b242f17eecc25a4acea6ab6e3c5ae7b">listsmodule::basemodellist</a></div><div class="ttdeci">type(listtype), public basemodellist</div><div class="ttdef"><b>Definition:</b> <a href="mf6lists_8f90_source.html#l00016">mf6lists.f90:16</a></div></div>
 <div class="ttc" id="anamespacelistmodule_html"><div class="ttname"><a href="namespacelistmodule.html">listmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_list_8f90_source.html#l00001">List.f90:1</a></div></div>
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="mf6lists_8f90.html">mf6lists.f90</a></li>
+    <li class="footer">Generated on Thu Jun 24 2021 19:50:09 for MODFLOW 6 by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
 </body>
 </html>

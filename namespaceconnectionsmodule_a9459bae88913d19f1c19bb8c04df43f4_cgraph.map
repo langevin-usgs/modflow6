@@ -1,4 +1,6 @@
 <map id="connectionsmodule::disconnections" name="connectionsmodule::disconnections">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,163,47"/>
-<area shape="rect" id="node2" href="$namespaceinputoutputmodule.html#a22620cf6624502feca9621056c5c161a" title=" " alt="" coords="211,5,365,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,71,163,112"/>
+<area shape="rect" id="node2" href="$namespaceconnectionsmodule.html#af8c5d449b3e604c095d4700caab019d3" title=" " alt="" coords="211,5,368,47"/>
+<area shape="rect" id="node3" href="$namespaceconnectionsmodule.html#a84e9340a64579d7b5637f22ea5e7f576" title=" " alt="" coords="211,71,368,112"/>
+<area shape="rect" id="node4" href="$namespaceinputoutputmodule.html#a22620cf6624502feca9621056c5c161a" title=" " alt="" coords="212,136,367,177"/>
 </map>

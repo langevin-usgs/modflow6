@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['z_1816',['z',['../structimslinearmodule_1_1imslineardatatype.html#ab33be6976f951c5d16a2ca5ca190348d',1,'imslinearmodule::imslineardatatype']]]
+  ['yorigin_3717',['yorigin',['../structbasedismodule_1_1disbasetype.html#a1ec5215c95a2aa41a1033cc1158f8e71',1,'basedismodule::disbasetype']]]
 ];
