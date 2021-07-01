@@ -1,5 +1,5 @@
 <map id="simmodule::deprecation_warning" name="simmodule::deprecation_warning">
-<area shape="rect" id="node1" title=" " alt="" coords="275,27,455,69"/>
+<area shape="rect" id="node1" title="Store deprecation warning message." alt="" coords="275,27,455,69"/>
 <area shape="rect" id="node2" href="$namespaceimslinearmodule.html#a6a11a0465c3b3e411da5afab1b06241a" title="@ brief Allocate storage and read data" alt="" coords="5,5,227,32"/>
 <area shape="rect" id="node3" href="$namespacenumericalsolutionmodule.html#abe804dcafea9bef2ef528e68475ac3ec" title="@ brief Allocate and read data" alt="" coords="22,57,210,98"/>
 </map>

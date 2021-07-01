@@ -1,7 +1,7 @@
 <map id="mf6xmi::xmi_prepare_time_step" name="mf6xmi::xmi_prepare_time_step">
 <area shape="rect" id="node1" title="Prepare a single time step." alt="" coords="5,159,168,200"/>
-<area shape="rect" id="node2" href="$namespacemf6coremodule.html#a40b8130d3cf17bc47fcb54c254aada8a" title=" " alt="" coords="216,166,483,193"/>
-<area shape="rect" id="node3" href="$namespacesimmodule.html#a38f8eef6986861e5b90802678e34879c" title=" " alt="" coords="597,5,759,47"/>
+<area shape="rect" id="node2" href="$namespacemf6coremodule.html#a40b8130d3cf17bc47fcb54c254aada8a" title="Read and prepare time step." alt="" coords="216,166,483,193"/>
+<area shape="rect" id="node3" href="$namespacesimmodule.html#a38f8eef6986861e5b90802678e34879c" title="Reset the simulation convergence flag." alt="" coords="597,5,759,47"/>
 <area shape="rect" id="node4" href="$namespacebaseexchangemodule.html#ad92f8ec5d783349adc5a61e4e3d31f4b" title=" " alt="" coords="580,71,776,112"/>
 <area shape="rect" id="node6" href="$namespacebasemodelmodule.html#a79adefc92f4f7d0d032babb551c571f8" title=" " alt="" coords="531,137,825,163"/>
 <area shape="rect" id="node8" href="$namespacebasesolutionmodule.html#ad00fcf57eca44c1f8995e3904b1593de" title=" " alt="" coords="585,188,771,229"/>

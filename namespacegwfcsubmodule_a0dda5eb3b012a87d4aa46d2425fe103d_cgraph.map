@@ -1,12 +1,12 @@
 <map id="gwfcsubmodule::csub_ar" name="gwfcsubmodule::csub_ar">
 <area shape="rect" id="node1" title="@ brief Allocate and read method for package" alt="" coords="5,107,188,133"/>
-<area shape="rect" id="node2" href="$namespacesimmodule.html#a4c46e49de78d4498dd4ec106357775e6" title=" " alt="" coords="243,5,427,32"/>
+<area shape="rect" id="node2" href="$namespacesimmodule.html#a4c46e49de78d4498dd4ec106357775e6" title="Return number of errors." alt="" coords="243,5,427,32"/>
 <area shape="rect" id="node3" href="$namespaceobsmodule.html#a57372fbf202fe90e2d12383ce1b15eee" title=" " alt="" coords="263,56,407,83"/>
-<area shape="rect" id="node4" href="$namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a" title=" " alt="" coords="248,107,423,133"/>
+<area shape="rect" id="node4" href="$namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a" title="Store error message." alt="" coords="248,107,423,133"/>
 <area shape="rect" id="node5" href="$namespacetimeseriesmanagermodule.html#abd6baa3f1522c5c5dff9f8fd8d53fb58" title=" " alt="" coords="236,158,435,199"/>
-<area shape="rect" id="node6" href="$namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61" title=" " alt="" coords="266,224,405,251"/>
-<area shape="rect" id="node7" href="$namespacesimmodule.html#aa04e734eebf95836b2f37839b65bcae9" title=" " alt="" coords="483,183,651,225"/>
+<area shape="rect" id="node6" href="$namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61" title="Stop the simulation." alt="" coords="266,224,405,251"/>
+<area shape="rect" id="node7" href="$namespacesimmodule.html#aa04e734eebf95836b2f37839b65bcae9" title="Print the final messages." alt="" coords="483,183,651,225"/>
 <area shape="rect" id="node10" href="$namespacegenericutilitiesmodule.html#a3af5fcf48dcd06255d9bc07f6a25db59" title=" " alt="" coords="483,249,651,290"/>
-<area shape="rect" id="node8" href="$namespacesimmodule.html#a5feb4a39fb3f3dc66c03cc13b11e2297" title=" " alt="" coords="699,161,893,188"/>
+<area shape="rect" id="node8" href="$namespacesimmodule.html#a5feb4a39fb3f3dc66c03cc13b11e2297" title="Close all open files." alt="" coords="699,161,893,188"/>
 <area shape="rect" id="node9" href="$namespacegenericutilitiesmodule.html#a34492cca79f70174fd015808be8b7ebf" title=" " alt="" coords="712,213,880,254"/>
 </map>

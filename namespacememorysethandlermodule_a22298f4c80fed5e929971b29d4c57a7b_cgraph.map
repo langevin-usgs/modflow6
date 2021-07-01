@@ -1,10 +1,10 @@
 <map id="memorysethandlermodule::mem_register_handler" name="memorysethandlermodule::mem_register_handler">
 <area shape="rect" id="node1" title="Register the event handler and context for this variable." alt="" coords="5,35,200,77"/>
 <area shape="rect" id="node2" href="$namespacememorymanagermodule.html#a8e6f199b7218d6ec1ab68f383cb6e20f" title="@ brief Get a memory type entry from the memory list" alt="" coords="248,35,432,77"/>
-<area shape="rect" id="node3" href="$namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a" title=" " alt="" coords="480,17,655,44"/>
-<area shape="rect" id="node4" href="$namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61" title=" " alt="" coords="498,68,637,95"/>
-<area shape="rect" id="node5" href="$namespacesimmodule.html#aa04e734eebf95836b2f37839b65bcae9" title=" " alt="" coords="703,27,871,69"/>
+<area shape="rect" id="node3" href="$namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a" title="Store error message." alt="" coords="480,17,655,44"/>
+<area shape="rect" id="node4" href="$namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61" title="Stop the simulation." alt="" coords="498,68,637,95"/>
+<area shape="rect" id="node5" href="$namespacesimmodule.html#aa04e734eebf95836b2f37839b65bcae9" title="Print the final messages." alt="" coords="703,27,871,69"/>
 <area shape="rect" id="node8" href="$namespacegenericutilitiesmodule.html#a3af5fcf48dcd06255d9bc07f6a25db59" title=" " alt="" coords="703,93,871,134"/>
-<area shape="rect" id="node6" href="$namespacesimmodule.html#a5feb4a39fb3f3dc66c03cc13b11e2297" title=" " alt="" coords="919,5,1113,32"/>
+<area shape="rect" id="node6" href="$namespacesimmodule.html#a5feb4a39fb3f3dc66c03cc13b11e2297" title="Close all open files." alt="" coords="919,5,1113,32"/>
 <area shape="rect" id="node7" href="$namespacegenericutilitiesmodule.html#a34492cca79f70174fd015808be8b7ebf" title=" " alt="" coords="932,57,1100,98"/>
 </map>

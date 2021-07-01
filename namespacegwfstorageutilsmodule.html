@@ -22,7 +22,6 @@
 /* @license-end */
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="CustomDoxygen.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -117,6 +116,9 @@ $(document).ready(function(){initNavTree('namespacegwfstorageutilsmodule.html','
 <div class="title">gwfstorageutilsmodule Module Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>This module contains the storage capacity subroutines.  
+<a href="namespacegwfstorageutilsmodule.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions/Subroutines</h2></td></tr>
@@ -127,7 +129,9 @@ Functions/Subroutines</h2></td></tr>
 <tr class="memdesc:a472a281b8bb5723a001f761bfe8a51e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the specific yield capacity.  <a href="namespacegwfstorageutilsmodule.html#a472a281b8bb5723a001f761bfe8a51e8">More...</a><br /></td></tr>
 <tr class="separator:a472a281b8bb5723a001f761bfe8a51e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function/Subroutine Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This module contains the subroutines to calculate the specific storage (SC1) and specific yield (SC2) capacities that are used in the storage (STO) package. This module does not depend on the STO package. </p>
+</div><h2 class="groupheader">Function/Subroutine Documentation</h2>
 <a id="ad0a1ef63059b5b016feca7cbb978b3bd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad0a1ef63059b5b016feca7cbb978b3bd">&#9670;&nbsp;</a></span>sscapacity()</h2>
 
@@ -184,26 +188,26 @@ Functions/Subroutines</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_gwf_storage_utils_8f90_source.html#l00021">21</a> of file <a class="el" href="_gwf_storage_utils_8f90_source.html">GwfStorageUtils.f90</a>.</p>
-<div class="fragment"><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="comment">! -- dummy variables</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: istor_coef<span class="comment">  !&lt; flag indicating if ss is the storage coefficient</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">intent(in)</span> :: top<span class="comment">             !&lt; top of cell</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">intent(in)</span> :: bot<span class="comment">             !&lt; bottom of cell</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">intent(in)</span> :: area<span class="comment">            !&lt; horizontal cell area</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">intent(in)</span> :: ss<span class="comment">              !&lt; specific storage or storage coefficient</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="comment">! -- local variables</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keywordtype">    real</span>(DP) :: sc1</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keywordtype">    real</span>(DP) :: thick</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="comment">! -- calculate specific storage capacity</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">if</span> (istor_coef == 0) <span class="keywordflow">then</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;      thick = top - bot</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;      thick = done</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keywordflow">    end if</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    sc1 = ss*thick*area</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="comment">!</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="comment">! -- return</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">return</span></div>
+<p class="definition">Definition at line <a class="el" href="_gwf_storage_utils_8f90_source.html#l00029">29</a> of file <a class="el" href="_gwf_storage_utils_8f90_source.html">GwfStorageUtils.f90</a>.</p>
+<div class="fragment"><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="comment">! -- dummy variables</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">intent(in)</span> :: istor_coef<span class="comment">  !&lt; flag indicating if ss is the storage coefficient</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">intent(in)</span> :: top<span class="comment">             !&lt; top of cell</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">intent(in)</span> :: bot<span class="comment">             !&lt; bottom of cell</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">intent(in)</span> :: area<span class="comment">            !&lt; horizontal cell area</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">intent(in)</span> :: ss<span class="comment">              !&lt; specific storage or storage coefficient</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="comment">! -- local variables</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keywordtype">    real</span>(DP) :: sc1</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keywordtype">    real</span>(DP) :: thick</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="comment">! -- calculate specific storage capacity</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">if</span> (istor_coef == 0) <span class="keywordflow">then</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;      thick = top - bot</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      thick = done</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keywordflow">    end if</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    sc1 = ss*thick*area</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="comment">!</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="comment">! -- return</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">return</span></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -253,17 +257,17 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_gwf_storage_utils_8f90_source.html#l00050">50</a> of file <a class="el" href="_gwf_storage_utils_8f90_source.html">GwfStorageUtils.f90</a>.</p>
-<div class="fragment"><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="comment">! -- dummy variables</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">intent(in)</span> :: area<span class="comment">       !&lt; horizontal cell area</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">intent(in)</span> :: sy<span class="comment">         !&lt; specific yield</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="comment">! -- local variables</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keywordtype">    real</span>(DP) :: sc2</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="comment">! -- calculate specific yield capacity</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    sc2 = sy*area</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="comment">!</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="comment">! -- return</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">return</span></div>
+<p class="definition">Definition at line <a class="el" href="_gwf_storage_utils_8f90_source.html#l00058">58</a> of file <a class="el" href="_gwf_storage_utils_8f90_source.html">GwfStorageUtils.f90</a>.</p>
+<div class="fragment"><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="comment">! -- dummy variables</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">intent(in)</span> :: area<span class="comment">       !&lt; horizontal cell area</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">intent(in)</span> :: sy<span class="comment">         !&lt; specific yield</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="comment">! -- local variables</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keywordtype">    real</span>(DP) :: sc2</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="comment">! -- calculate specific yield capacity</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    sc2 = sy*area</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="comment">!</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="comment">! -- return</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">return</span></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -284,7 +288,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacegwfstorageutilsmodule.html">gwfstorageutilsmodule</a></li>
-    <li class="footer">Generated on Fri Jun 25 2021 16:09:49 for MODFLOW 6 by
+    <li class="footer">Generated on Thu Jul 1 2021 13:26:56 for MODFLOW 6 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

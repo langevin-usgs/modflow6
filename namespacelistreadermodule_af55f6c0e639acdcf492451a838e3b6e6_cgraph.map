@@ -1,16 +1,16 @@
 <map id="listreadermodule::read_ascii" name="listreadermodule::read_ascii">
 <area shape="rect" id="node1" title=" " alt="" coords="5,145,176,186"/>
-<area shape="rect" id="node2" href="$namespacesimmodule.html#a4c46e49de78d4498dd4ec106357775e6" title=" " alt="" coords="224,5,408,32"/>
+<area shape="rect" id="node2" href="$namespacesimmodule.html#a4c46e49de78d4498dd4ec106357775e6" title="Return number of errors." alt="" coords="224,5,408,32"/>
 <area shape="rect" id="node3" href="$namespaceinputoutputmodule.html#a22620cf6624502feca9621056c5c161a" title=" " alt="" coords="239,57,393,98"/>
-<area shape="rect" id="node4" href="$namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a" title=" " alt="" coords="472,236,647,263"/>
+<area shape="rect" id="node4" href="$namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a" title="Store error message." alt="" coords="472,236,647,263"/>
 <area shape="rect" id="node5" href="$namespaceinputoutputmodule.html#a3d64e8296053c71aa0b91118fa940c4d" title=" " alt="" coords="239,174,393,215"/>
-<area shape="rect" id="node8" href="$namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61" title=" " alt="" coords="490,135,629,161"/>
+<area shape="rect" id="node8" href="$namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61" title="Stop the simulation." alt="" coords="490,135,629,161"/>
 <area shape="rect" id="node12" href="$namespaceinputoutputmodule.html#a653efe7e8a111c5e477fea26e0b04fe5" title=" " alt="" coords="239,291,393,333"/>
 <area shape="rect" id="node6" href="$namespaceinputoutputmodule.html#aed168c613cffe0624967b9f66da1901d" title=" " alt="" coords="717,207,872,249"/>
 <area shape="rect" id="node7" href="$namespacegenericutilitiesmodule.html#a34492cca79f70174fd015808be8b7ebf" title=" " alt="" coords="940,207,1108,249"/>
-<area shape="rect" id="node9" href="$namespacesimmodule.html#aa04e734eebf95836b2f37839b65bcae9" title=" " alt="" coords="711,77,879,118"/>
+<area shape="rect" id="node9" href="$namespacesimmodule.html#aa04e734eebf95836b2f37839b65bcae9" title="Print the final messages." alt="" coords="711,77,879,118"/>
 <area shape="rect" id="node11" href="$namespacegenericutilitiesmodule.html#a3af5fcf48dcd06255d9bc07f6a25db59" title=" " alt="" coords="711,142,879,183"/>
-<area shape="rect" id="node10" href="$namespacesimmodule.html#a5feb4a39fb3f3dc66c03cc13b11e2297" title=" " alt="" coords="927,84,1121,111"/>
+<area shape="rect" id="node10" href="$namespacesimmodule.html#a5feb4a39fb3f3dc66c03cc13b11e2297" title="Close all open files." alt="" coords="927,84,1121,111"/>
 <area shape="rect" id="node13" href="$namespaceinputoutputmodule.html#a5d0681efcccbea67f1d521a6729cbb4f" title=" " alt="" coords="482,338,637,379"/>
-<area shape="rect" id="node14" href="$namespacesimmodule.html#a1c78a6fda06b630c738bb654aa6bd816" title=" " alt="" coords="456,404,663,431"/>
+<area shape="rect" id="node14" href="$namespacesimmodule.html#a1c78a6fda06b630c738bb654aa6bd816" title="Store the file unit number." alt="" coords="456,404,663,431"/>
 </map>

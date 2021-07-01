@@ -1,10 +1,10 @@
 <map id="mf6bmiutil::check_mem_address" name="mf6bmiutil::check_mem_address">
 <area shape="rect" id="node1" title="Check if the variable exists in the memory manager." alt="" coords="5,35,187,77"/>
 <area shape="rect" id="node2" href="$namespacememorymanagermodule.html#a8e6f199b7218d6ec1ab68f383cb6e20f" title="@ brief Get a memory type entry from the memory list" alt="" coords="235,35,419,77"/>
-<area shape="rect" id="node3" href="$namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a" title=" " alt="" coords="467,17,641,44"/>
-<area shape="rect" id="node4" href="$namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61" title=" " alt="" coords="485,68,623,95"/>
-<area shape="rect" id="node5" href="$namespacesimmodule.html#aa04e734eebf95836b2f37839b65bcae9" title=" " alt="" coords="689,27,857,69"/>
+<area shape="rect" id="node3" href="$namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a" title="Store error message." alt="" coords="467,17,641,44"/>
+<area shape="rect" id="node4" href="$namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61" title="Stop the simulation." alt="" coords="485,68,623,95"/>
+<area shape="rect" id="node5" href="$namespacesimmodule.html#aa04e734eebf95836b2f37839b65bcae9" title="Print the final messages." alt="" coords="689,27,857,69"/>
 <area shape="rect" id="node8" href="$namespacegenericutilitiesmodule.html#a3af5fcf48dcd06255d9bc07f6a25db59" title=" " alt="" coords="689,93,857,134"/>
-<area shape="rect" id="node6" href="$namespacesimmodule.html#a5feb4a39fb3f3dc66c03cc13b11e2297" title=" " alt="" coords="905,5,1100,32"/>
+<area shape="rect" id="node6" href="$namespacesimmodule.html#a5feb4a39fb3f3dc66c03cc13b11e2297" title="Close all open files." alt="" coords="905,5,1100,32"/>
 <area shape="rect" id="node7" href="$namespacegenericutilitiesmodule.html#a34492cca79f70174fd015808be8b7ebf" title=" " alt="" coords="919,57,1087,98"/>
 </map>

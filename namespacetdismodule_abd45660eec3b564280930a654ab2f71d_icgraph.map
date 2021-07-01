@@ -1,9 +1,9 @@
 <map id="tdismodule::tdis_set_counters" name="tdismodule::tdis_set_counters">
 <area shape="rect" id="node1" title=" " alt="" coords="896,53,1051,94"/>
-<area shape="rect" id="node2" href="$namespacemf6coremodule.html#a40b8130d3cf17bc47fcb54c254aada8a" title=" " alt="" coords="581,60,848,87"/>
-<area shape="rect" id="node3" href="$namespacemf6coremodule.html#a7526420bd1fc4ebd3a09487e8509eff7" title=" " alt="" coords="329,31,533,57"/>
+<area shape="rect" id="node2" href="$namespacemf6coremodule.html#a40b8130d3cf17bc47fcb54c254aada8a" title="Read and prepare time step." alt="" coords="581,60,848,87"/>
+<area shape="rect" id="node3" href="$namespacemf6coremodule.html#a7526420bd1fc4ebd3a09487e8509eff7" title="Run a time step." alt="" coords="329,31,533,57"/>
 <area shape="rect" id="node7" href="$namespacemf6xmi.html#aa078192e78aa3e261fc712bbdf6b38f0" title="Prepare a single time step." alt="" coords="350,82,513,123"/>
 <area shape="rect" id="node4" href="$namespacemf6bmi.html#a91fa63496b27ec97b5e1b689497cd10a" title="Perform a computational time step." alt="" coords="112,5,271,32"/>
-<area shape="rect" id="node5" href="$namespacemf6coremodule.html#a207819c711610066af1b83ec2a8efef0" title=" " alt="" coords="101,56,281,83"/>
-<area shape="rect" id="node6" href="$mf6_8f90.html#aa95bf577752f92b917375902bbb13863" title=" " alt="" coords="5,56,53,83"/>
+<area shape="rect" id="node5" href="$namespacemf6coremodule.html#a207819c711610066af1b83ec2a8efef0" title="Main controller." alt="" coords="101,56,281,83"/>
+<area shape="rect" id="node6" href="$mf6_8f90.html#aa95bf577752f92b917375902bbb13863" title="MODFLOW 6 main entry point." alt="" coords="5,56,53,83"/>
 </map>

@@ -1,7 +1,7 @@
 <map id="definedmacros::get_os" name="definedmacros::get_os">
 <area shape="rect" id="node1" title="Get operating system." alt="" coords="739,35,908,61"/>
-<area shape="rect" id="node2" href="$namespacesimmodule.html#a8caad8ba9aaacfbc94f08b98ab770eea" title=" " alt="" coords="503,35,691,61"/>
-<area shape="rect" id="node3" href="$namespacesimmodule.html#a6c8d05246b2eddf358b9f81a147ebdd8" title=" " alt="" coords="275,27,455,69"/>
+<area shape="rect" id="node2" href="$namespacesimmodule.html#a8caad8ba9aaacfbc94f08b98ab770eea" title="Get the file name." alt="" coords="503,35,691,61"/>
+<area shape="rect" id="node3" href="$namespacesimmodule.html#a6c8d05246b2eddf358b9f81a147ebdd8" title="Store deprecation warning message." alt="" coords="275,27,455,69"/>
 <area shape="rect" id="node4" href="$namespaceimslinearmodule.html#a6a11a0465c3b3e411da5afab1b06241a" title="@ brief Allocate storage and read data" alt="" coords="5,5,227,32"/>
 <area shape="rect" id="node5" href="$namespacenumericalsolutionmodule.html#abe804dcafea9bef2ef528e68475ac3ec" title="@ brief Allocate and read data" alt="" coords="22,57,210,98"/>
 </map>

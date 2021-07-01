@@ -1,6 +1,6 @@
 <map id="mf6coremodule::mf6initialize" name="mf6coremodule::mf6initialize">
-<area shape="rect" id="node1" title=" " alt="" coords="329,31,544,57"/>
+<area shape="rect" id="node1" title="Initialize a simulation." alt="" coords="329,31,544,57"/>
 <area shape="rect" id="node2" href="$namespacemf6bmi.html#aa886df822e4ea66c30a97a9060da5de8" title="Initialize the computational core." alt="" coords="107,5,276,32"/>
-<area shape="rect" id="node3" href="$namespacemf6coremodule.html#a207819c711610066af1b83ec2a8efef0" title=" " alt="" coords="101,56,281,83"/>
-<area shape="rect" id="node4" href="$mf6_8f90.html#aa95bf577752f92b917375902bbb13863" title=" " alt="" coords="5,56,53,83"/>
+<area shape="rect" id="node3" href="$namespacemf6coremodule.html#a207819c711610066af1b83ec2a8efef0" title="Main controller." alt="" coords="101,56,281,83"/>
+<area shape="rect" id="node4" href="$mf6_8f90.html#aa95bf577752f92b917375902bbb13863" title="MODFLOW 6 main entry point." alt="" coords="5,56,53,83"/>
 </map>

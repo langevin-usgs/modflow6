@@ -2,10 +2,10 @@
 <area shape="rect" id="node1" title="Extract the model name from a memory address string." alt="" coords="5,39,153,80"/>
 <area shape="rect" id="node2" href="$namespacememoryhelpermodule.html#a3763883c38e7699a656303cb84f9887d" title="Split a memory address string into memory path and variable name." alt="" coords="201,5,368,47"/>
 <area shape="rect" id="node3" href="$namespacememoryhelpermodule.html#adbac4ae082ee7fe4863792b0342855e5" title="Split the memory path into component(s)" alt="" coords="201,71,368,112"/>
-<area shape="rect" id="node4" href="$namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a" title=" " alt="" coords="416,53,591,79"/>
-<area shape="rect" id="node5" href="$namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61" title=" " alt="" coords="434,103,573,130"/>
-<area shape="rect" id="node6" href="$namespacesimmodule.html#aa04e734eebf95836b2f37839b65bcae9" title=" " alt="" coords="639,63,807,104"/>
+<area shape="rect" id="node4" href="$namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a" title="Store error message." alt="" coords="416,53,591,79"/>
+<area shape="rect" id="node5" href="$namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61" title="Stop the simulation." alt="" coords="434,103,573,130"/>
+<area shape="rect" id="node6" href="$namespacesimmodule.html#aa04e734eebf95836b2f37839b65bcae9" title="Print the final messages." alt="" coords="639,63,807,104"/>
 <area shape="rect" id="node9" href="$namespacegenericutilitiesmodule.html#a3af5fcf48dcd06255d9bc07f6a25db59" title=" " alt="" coords="639,128,807,169"/>
-<area shape="rect" id="node7" href="$namespacesimmodule.html#a5feb4a39fb3f3dc66c03cc13b11e2297" title=" " alt="" coords="855,41,1049,67"/>
+<area shape="rect" id="node7" href="$namespacesimmodule.html#a5feb4a39fb3f3dc66c03cc13b11e2297" title="Close all open files." alt="" coords="855,41,1049,67"/>
 <area shape="rect" id="node8" href="$namespacegenericutilitiesmodule.html#a34492cca79f70174fd015808be8b7ebf" title=" " alt="" coords="868,92,1036,133"/>
 </map>

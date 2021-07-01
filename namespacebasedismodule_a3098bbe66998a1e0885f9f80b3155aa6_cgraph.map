@@ -1,9 +1,9 @@
 <map id="basedismodule::record_srcdst_list_header" name="basedismodule::record_srcdst_list_header">
 <area shape="rect" id="node1" title=" " alt="" coords="5,35,176,77"/>
-<area shape="rect" id="node2" href="$namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a" title=" " alt="" coords="224,17,399,44"/>
-<area shape="rect" id="node3" href="$namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61" title=" " alt="" coords="242,68,381,95"/>
-<area shape="rect" id="node4" href="$namespacesimmodule.html#aa04e734eebf95836b2f37839b65bcae9" title=" " alt="" coords="447,27,615,69"/>
+<area shape="rect" id="node2" href="$namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a" title="Store error message." alt="" coords="224,17,399,44"/>
+<area shape="rect" id="node3" href="$namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61" title="Stop the simulation." alt="" coords="242,68,381,95"/>
+<area shape="rect" id="node4" href="$namespacesimmodule.html#aa04e734eebf95836b2f37839b65bcae9" title="Print the final messages." alt="" coords="447,27,615,69"/>
 <area shape="rect" id="node7" href="$namespacegenericutilitiesmodule.html#a3af5fcf48dcd06255d9bc07f6a25db59" title=" " alt="" coords="447,93,615,134"/>
-<area shape="rect" id="node5" href="$namespacesimmodule.html#a5feb4a39fb3f3dc66c03cc13b11e2297" title=" " alt="" coords="663,5,857,32"/>
+<area shape="rect" id="node5" href="$namespacesimmodule.html#a5feb4a39fb3f3dc66c03cc13b11e2297" title="Close all open files." alt="" coords="663,5,857,32"/>
 <area shape="rect" id="node6" href="$namespacegenericutilitiesmodule.html#a34492cca79f70174fd015808be8b7ebf" title=" " alt="" coords="676,57,844,98"/>
 </map>

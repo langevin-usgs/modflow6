@@ -1,10 +1,10 @@
 <map id="memorymanagermodule::get_mem_type" name="memorymanagermodule::get_mem_type">
 <area shape="rect" id="node1" title="@ brief Get the variable memory type" alt="" coords="5,35,189,77"/>
 <area shape="rect" id="node2" href="$namespacememorymanagermodule.html#a8e6f199b7218d6ec1ab68f383cb6e20f" title="@ brief Get a memory type entry from the memory list" alt="" coords="237,35,421,77"/>
-<area shape="rect" id="node3" href="$namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a" title=" " alt="" coords="469,17,644,44"/>
-<area shape="rect" id="node4" href="$namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61" title=" " alt="" coords="487,68,626,95"/>
-<area shape="rect" id="node5" href="$namespacesimmodule.html#aa04e734eebf95836b2f37839b65bcae9" title=" " alt="" coords="692,27,860,69"/>
+<area shape="rect" id="node3" href="$namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a" title="Store error message." alt="" coords="469,17,644,44"/>
+<area shape="rect" id="node4" href="$namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61" title="Stop the simulation." alt="" coords="487,68,626,95"/>
+<area shape="rect" id="node5" href="$namespacesimmodule.html#aa04e734eebf95836b2f37839b65bcae9" title="Print the final messages." alt="" coords="692,27,860,69"/>
 <area shape="rect" id="node8" href="$namespacegenericutilitiesmodule.html#a3af5fcf48dcd06255d9bc07f6a25db59" title=" " alt="" coords="692,93,860,134"/>
-<area shape="rect" id="node6" href="$namespacesimmodule.html#a5feb4a39fb3f3dc66c03cc13b11e2297" title=" " alt="" coords="908,5,1103,32"/>
+<area shape="rect" id="node6" href="$namespacesimmodule.html#a5feb4a39fb3f3dc66c03cc13b11e2297" title="Close all open files." alt="" coords="908,5,1103,32"/>
 <area shape="rect" id="node7" href="$namespacegenericutilitiesmodule.html#a34492cca79f70174fd015808be8b7ebf" title=" " alt="" coords="921,57,1089,98"/>
 </map>

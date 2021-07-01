@@ -1,10 +1,9 @@
 <map id="bndmodule::bnd_rp" name="bndmodule::bnd_rp">
-<area shape="rect" id="node1" title=" " alt="" coords="5,56,152,83"/>
-<area shape="rect" id="node2" href="$namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a" title=" " alt="" coords="216,5,391,32"/>
-<area shape="rect" id="node3" href="$namespacesimmodule.html#a1c78a6fda06b630c738bb654aa6bd816" title=" " alt="" coords="200,56,407,83"/>
-<area shape="rect" id="node4" href="$namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61" title=" " alt="" coords="234,107,373,133"/>
-<area shape="rect" id="node5" href="$namespacesimmodule.html#aa04e734eebf95836b2f37839b65bcae9" title=" " alt="" coords="455,66,623,107"/>
-<area shape="rect" id="node8" href="$namespacegenericutilitiesmodule.html#a3af5fcf48dcd06255d9bc07f6a25db59" title=" " alt="" coords="455,131,623,173"/>
-<area shape="rect" id="node6" href="$namespacesimmodule.html#a5feb4a39fb3f3dc66c03cc13b11e2297" title=" " alt="" coords="671,44,865,71"/>
-<area shape="rect" id="node7" href="$namespacegenericutilitiesmodule.html#a34492cca79f70174fd015808be8b7ebf" title=" " alt="" coords="684,95,852,137"/>
+<area shape="rect" id="node1" title="@ brief Allocate and read method for package" alt="" coords="5,43,152,69"/>
+<area shape="rect" id="node2" href="$namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a" title="Store error message." alt="" coords="200,17,375,44"/>
+<area shape="rect" id="node3" href="$namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61" title="Stop the simulation." alt="" coords="218,68,357,95"/>
+<area shape="rect" id="node4" href="$namespacesimmodule.html#aa04e734eebf95836b2f37839b65bcae9" title="Print the final messages." alt="" coords="423,27,591,69"/>
+<area shape="rect" id="node7" href="$namespacegenericutilitiesmodule.html#a3af5fcf48dcd06255d9bc07f6a25db59" title=" " alt="" coords="423,93,591,134"/>
+<area shape="rect" id="node5" href="$namespacesimmodule.html#a5feb4a39fb3f3dc66c03cc13b11e2297" title="Close all open files." alt="" coords="639,5,833,32"/>
+<area shape="rect" id="node6" href="$namespacegenericutilitiesmodule.html#a34492cca79f70174fd015808be8b7ebf" title=" " alt="" coords="652,57,820,98"/>
 </map>

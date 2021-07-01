@@ -1,7 +1,7 @@
 <map id="gwfgwtexchangemodule::exg_df" name="gwfgwtexchangemodule::exg_df">
 <area shape="rect" id="node1" title=" " alt="" coords="5,23,188,65"/>
 <area shape="rect" id="node2" href="$namespacebasemodelmodule.html#a79adefc92f4f7d0d032babb551c571f8" title=" " alt="" coords="236,5,531,32"/>
-<area shape="rect" id="node4" href="$namespacebndmodule.html#a7ac2e1c143722a28d1f0ecb4c67a4a0a" title=" " alt="" coords="284,56,483,83"/>
+<area shape="rect" id="node4" href="$namespacebndmodule.html#a7ac2e1c143722a28d1f0ecb4c67a4a0a" title="Get boundary from package list." alt="" coords="284,56,483,83"/>
 <area shape="rect" id="node3" href="$namespacebasemodelmodule.html#a6612a181104601a56b8227e88e5dc8f5" title=" " alt="" coords="579,5,877,32"/>
-<area shape="rect" id="node5" href="$namespacebndmodule.html#ae966cec4d8ca214ecfe519e29adf6b7e" title=" " alt="" coords="627,56,829,83"/>
+<area shape="rect" id="node5" href="$namespacebndmodule.html#ae966cec4d8ca214ecfe519e29adf6b7e" title="Cast as a boundary tyoe." alt="" coords="627,56,829,83"/>
 </map>

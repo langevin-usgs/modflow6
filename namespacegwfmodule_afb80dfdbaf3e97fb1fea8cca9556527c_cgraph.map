@@ -1,5 +1,5 @@
 <map id="gwfmodule::gwf_fc" name="gwfmodule::gwf_fc">
 <area shape="rect" id="node1" title=" " alt="" coords="5,5,152,32"/>
-<area shape="rect" id="node2" href="$namespacebndmodule.html#a7ac2e1c143722a28d1f0ecb4c67a4a0a" title=" " alt="" coords="200,5,399,32"/>
-<area shape="rect" id="node3" href="$namespacebndmodule.html#ae966cec4d8ca214ecfe519e29adf6b7e" title=" " alt="" coords="447,5,649,32"/>
+<area shape="rect" id="node2" href="$namespacebndmodule.html#a7ac2e1c143722a28d1f0ecb4c67a4a0a" title="Get boundary from package list." alt="" coords="200,5,399,32"/>
+<area shape="rect" id="node3" href="$namespacebndmodule.html#ae966cec4d8ca214ecfe519e29adf6b7e" title="Cast as a boundary tyoe." alt="" coords="447,5,649,32"/>
 </map>

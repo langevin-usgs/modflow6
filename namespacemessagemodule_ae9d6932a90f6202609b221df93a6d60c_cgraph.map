@@ -1,5 +1,5 @@
 <map id="messagemodule::print_message" name="messagemodule::print_message">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,173,47"/>
+<area shape="rect" id="node1" title="Print messages." alt="" coords="5,5,173,47"/>
 <area shape="rect" id="node2" href="$namespacegenericutilitiesmodule.html#a34492cca79f70174fd015808be8b7ebf" title=" " alt="" coords="440,5,608,47"/>
-<area shape="rect" id="node3" href="$namespacemessagemodule.html#a87f63a79f6d9b0300cd9f0498571c69c" title=" " alt="" coords="221,35,392,76"/>
+<area shape="rect" id="node3" href="$namespacemessagemodule.html#a87f63a79f6d9b0300cd9f0498571c69c" title="Write messages." alt="" coords="221,35,392,76"/>
 </map>

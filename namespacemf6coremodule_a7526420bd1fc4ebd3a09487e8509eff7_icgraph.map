@@ -1,6 +1,6 @@
 <map id="mf6coremodule::mf6update" name="mf6coremodule::mf6update">
-<area shape="rect" id="node1" title=" " alt="" coords="329,31,533,57"/>
+<area shape="rect" id="node1" title="Run a time step." alt="" coords="329,31,533,57"/>
 <area shape="rect" id="node2" href="$namespacemf6bmi.html#a91fa63496b27ec97b5e1b689497cd10a" title="Perform a computational time step." alt="" coords="112,5,271,32"/>
-<area shape="rect" id="node3" href="$namespacemf6coremodule.html#a207819c711610066af1b83ec2a8efef0" title=" " alt="" coords="101,56,281,83"/>
-<area shape="rect" id="node4" href="$mf6_8f90.html#aa95bf577752f92b917375902bbb13863" title=" " alt="" coords="5,56,53,83"/>
+<area shape="rect" id="node3" href="$namespacemf6coremodule.html#a207819c711610066af1b83ec2a8efef0" title="Main controller." alt="" coords="101,56,281,83"/>
+<area shape="rect" id="node4" href="$mf6_8f90.html#aa95bf577752f92b917375902bbb13863" title="MODFLOW 6 main entry point." alt="" coords="5,56,53,83"/>
 </map>

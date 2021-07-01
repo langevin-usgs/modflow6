@@ -1,7 +1,7 @@
 <map id="mf6coremodule::sim_step_retry" name="mf6coremodule::sim_step_retry">
-<area shape="rect" id="node1" title=" " alt="" coords="5,71,163,112"/>
+<area shape="rect" id="node1" title="Rerun time step." alt="" coords="5,71,163,112"/>
 <area shape="rect" id="node2" href="$namespaceadaptivetimestepmodule.html#ac42ef52366c6713c5f75da5329f87cad" title="@ brief Reset time step because failure has occurred" alt="" coords="211,5,397,47"/>
-<area shape="rect" id="node4" href="$namespacesimmodule.html#a38f8eef6986861e5b90802678e34879c" title=" " alt="" coords="223,71,385,112"/>
+<area shape="rect" id="node4" href="$namespacesimmodule.html#a38f8eef6986861e5b90802678e34879c" title="Reset the simulation convergence flag." alt="" coords="223,71,385,112"/>
 <area shape="rect" id="node5" href="$namespacetdismodule.html#ae74144fd4dafbd8f5ec90936c9c349cc" title=" " alt="" coords="225,136,383,177"/>
 <area shape="rect" id="node3" href="$namespaceadaptivetimestepmodule.html#a95cd63bed2962fac3da7f09aaddbf7de" title="@ brief Determine if period is adaptive" alt="" coords="445,21,632,63"/>
 <area shape="rect" id="node6" href="$namespaceadaptivetimestepmodule.html#a1ef7ceed3d7cd5e91a9f407b788fc92f" title="@ brief Set time step" alt="" coords="445,103,632,144"/>

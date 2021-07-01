@@ -1,12 +1,12 @@
 <map id="gwfdisumodule::read_int_array" name="gwfdisumodule::read_int_array">
 <area shape="rect" id="node1" title=" " alt="" coords="5,115,164,157"/>
-<area shape="rect" id="node2" href="$namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a" title=" " alt="" coords="431,5,605,32"/>
+<area shape="rect" id="node2" href="$namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a" title="Store error message." alt="" coords="431,5,605,32"/>
 <area shape="rect" id="node3" href="$namespaceinputoutputmodule.html#a653efe7e8a111c5e477fea26e0b04fe5" title=" " alt="" coords="212,115,367,157"/>
-<area shape="rect" id="node7" href="$namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61" title=" " alt="" coords="449,224,587,251"/>
+<area shape="rect" id="node7" href="$namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61" title="Stop the simulation." alt="" coords="449,224,587,251"/>
 <area shape="rect" id="node4" href="$namespaceinputoutputmodule.html#a5d0681efcccbea67f1d521a6729cbb4f" title=" " alt="" coords="441,57,595,98"/>
 <area shape="rect" id="node5" href="$namespacegenericutilitiesmodule.html#a34492cca79f70174fd015808be8b7ebf" title=" " alt="" coords="899,115,1067,157"/>
-<area shape="rect" id="node6" href="$namespacesimmodule.html#a1c78a6fda06b630c738bb654aa6bd816" title=" " alt="" coords="415,173,621,200"/>
-<area shape="rect" id="node8" href="$namespacesimmodule.html#aa04e734eebf95836b2f37839b65bcae9" title=" " alt="" coords="669,174,837,215"/>
+<area shape="rect" id="node6" href="$namespacesimmodule.html#a1c78a6fda06b630c738bb654aa6bd816" title="Store the file unit number." alt="" coords="415,173,621,200"/>
+<area shape="rect" id="node8" href="$namespacesimmodule.html#aa04e734eebf95836b2f37839b65bcae9" title="Print the final messages." alt="" coords="669,174,837,215"/>
 <area shape="rect" id="node10" href="$namespacegenericutilitiesmodule.html#a3af5fcf48dcd06255d9bc07f6a25db59" title=" " alt="" coords="669,239,837,281"/>
-<area shape="rect" id="node9" href="$namespacesimmodule.html#a5feb4a39fb3f3dc66c03cc13b11e2297" title=" " alt="" coords="885,181,1080,208"/>
+<area shape="rect" id="node9" href="$namespacesimmodule.html#a5feb4a39fb3f3dc66c03cc13b11e2297" title="Close all open files." alt="" coords="885,181,1080,208"/>
 </map>

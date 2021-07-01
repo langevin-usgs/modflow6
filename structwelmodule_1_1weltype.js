@@ -1,6 +1,7 @@
 var structwelmodule_1_1weltype =
 [
     [ "allocate_scalars", "structwelmodule_1_1weltype.html#afa3f824bc5ba6e1f11f20271403f04fe", null ],
+    [ "bnd_bd_obs", "structwelmodule_1_1weltype.html#af8c7f2b9588120b62dd22fc2472fc5af", null ],
     [ "bnd_cf", "structwelmodule_1_1weltype.html#a38addc7c2d9cfc2757a821e1d44fca02", null ],
     [ "bnd_da", "structwelmodule_1_1weltype.html#a7815754ab2fc61c9a56f309cd375d6fd", null ],
     [ "bnd_df_obs", "structwelmodule_1_1weltype.html#a812230a6047ef2d19e276dfe6bf7a223", null ],

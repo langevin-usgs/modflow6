@@ -1,11 +1,11 @@
 <map id="outputcontrolmodule::oc_rp" name="outputcontrolmodule::oc_rp">
 <area shape="rect" id="node1" title=" " alt="" coords="5,74,164,115"/>
-<area shape="rect" id="node2" href="$namespacesimmodule.html#a4c46e49de78d4498dd4ec106357775e6" title=" " alt="" coords="223,5,407,32"/>
-<area shape="rect" id="node3" href="$namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a" title=" " alt="" coords="228,56,403,83"/>
-<area shape="rect" id="node4" href="$namespacesimmodule.html#a1c78a6fda06b630c738bb654aa6bd816" title=" " alt="" coords="212,107,419,133"/>
-<area shape="rect" id="node5" href="$namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61" title=" " alt="" coords="246,157,385,184"/>
-<area shape="rect" id="node6" href="$namespacesimmodule.html#aa04e734eebf95836b2f37839b65bcae9" title=" " alt="" coords="467,117,635,158"/>
+<area shape="rect" id="node2" href="$namespacesimmodule.html#a4c46e49de78d4498dd4ec106357775e6" title="Return number of errors." alt="" coords="223,5,407,32"/>
+<area shape="rect" id="node3" href="$namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a" title="Store error message." alt="" coords="228,56,403,83"/>
+<area shape="rect" id="node4" href="$namespacesimmodule.html#a1c78a6fda06b630c738bb654aa6bd816" title="Store the file unit number." alt="" coords="212,107,419,133"/>
+<area shape="rect" id="node5" href="$namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61" title="Stop the simulation." alt="" coords="246,157,385,184"/>
+<area shape="rect" id="node6" href="$namespacesimmodule.html#aa04e734eebf95836b2f37839b65bcae9" title="Print the final messages." alt="" coords="467,117,635,158"/>
 <area shape="rect" id="node9" href="$namespacegenericutilitiesmodule.html#a3af5fcf48dcd06255d9bc07f6a25db59" title=" " alt="" coords="467,182,635,223"/>
-<area shape="rect" id="node7" href="$namespacesimmodule.html#a5feb4a39fb3f3dc66c03cc13b11e2297" title=" " alt="" coords="683,95,877,121"/>
+<area shape="rect" id="node7" href="$namespacesimmodule.html#a5feb4a39fb3f3dc66c03cc13b11e2297" title="Close all open files." alt="" coords="683,95,877,121"/>
 <area shape="rect" id="node8" href="$namespacegenericutilitiesmodule.html#a34492cca79f70174fd015808be8b7ebf" title=" " alt="" coords="696,146,864,187"/>
 </map>

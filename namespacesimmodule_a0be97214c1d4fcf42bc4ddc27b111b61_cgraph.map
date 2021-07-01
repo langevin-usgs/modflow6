@@ -1,7 +1,7 @@
 <map id="simmodule::ustop" name="simmodule::ustop">
-<area shape="rect" id="node1" title=" " alt="" coords="5,68,144,95"/>
-<area shape="rect" id="node2" href="$namespacesimmodule.html#aa04e734eebf95836b2f37839b65bcae9" title=" " alt="" coords="192,27,360,69"/>
+<area shape="rect" id="node1" title="Stop the simulation." alt="" coords="5,68,144,95"/>
+<area shape="rect" id="node2" href="$namespacesimmodule.html#aa04e734eebf95836b2f37839b65bcae9" title="Print the final messages." alt="" coords="192,27,360,69"/>
 <area shape="rect" id="node5" href="$namespacegenericutilitiesmodule.html#a3af5fcf48dcd06255d9bc07f6a25db59" title=" " alt="" coords="192,93,360,134"/>
-<area shape="rect" id="node3" href="$namespacesimmodule.html#a5feb4a39fb3f3dc66c03cc13b11e2297" title=" " alt="" coords="408,5,603,32"/>
+<area shape="rect" id="node3" href="$namespacesimmodule.html#a5feb4a39fb3f3dc66c03cc13b11e2297" title="Close all open files." alt="" coords="408,5,603,32"/>
 <area shape="rect" id="node4" href="$namespacegenericutilitiesmodule.html#a34492cca79f70174fd015808be8b7ebf" title=" " alt="" coords="421,57,589,98"/>
 </map>

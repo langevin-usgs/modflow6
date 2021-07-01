@@ -1,11 +1,11 @@
 <map id="mf6xmi::xmi_do_time_step" name="mf6xmi::xmi_do_time_step">
 <area shape="rect" id="node1" title="Perform a single time step." alt="" coords="5,79,207,106"/>
-<area shape="rect" id="node2" href="$namespacemf6coremodule.html#a0e06aa9086d6da08ce7a9a4982905d39" title=" " alt="" coords="255,79,488,106"/>
+<area shape="rect" id="node2" href="$namespacemf6coremodule.html#a0e06aa9086d6da08ce7a9a4982905d39" title="Run time step." alt="" coords="255,79,488,106"/>
 <area shape="rect" id="node3" href="$namespacesolutiongroupmodule.html#a7adf638009121f69976a00aa98c604b5" title=" " alt="" coords="536,23,727,64"/>
-<area shape="rect" id="node5" href="$namespacemf6coremodule.html#aa3df08d0706463a5a6574eac307a6636" title=" " alt="" coords="553,104,710,145"/>
+<area shape="rect" id="node5" href="$namespacemf6coremodule.html#aa3df08d0706463a5a6574eac307a6636" title="Rerun time step." alt="" coords="553,104,710,145"/>
 <area shape="rect" id="node4" href="$namespacesolutiongroupmodule.html#a24edb8f47b612f3c62752756210e9cca" title=" " alt="" coords="775,5,969,47"/>
 <area shape="rect" id="node6" href="$namespaceadaptivetimestepmodule.html#ac42ef52366c6713c5f75da5329f87cad" title="@ brief Reset time step because failure has occurred" alt="" coords="779,71,965,112"/>
-<area shape="rect" id="node8" href="$namespacesimmodule.html#a38f8eef6986861e5b90802678e34879c" title=" " alt="" coords="791,136,953,177"/>
+<area shape="rect" id="node8" href="$namespacesimmodule.html#a38f8eef6986861e5b90802678e34879c" title="Reset the simulation convergence flag." alt="" coords="791,136,953,177"/>
 <area shape="rect" id="node9" href="$namespacetdismodule.html#ae74144fd4dafbd8f5ec90936c9c349cc" title=" " alt="" coords="793,201,951,243"/>
 <area shape="rect" id="node7" href="$namespaceadaptivetimestepmodule.html#a95cd63bed2962fac3da7f09aaddbf7de" title="@ brief Determine if period is adaptive" alt="" coords="1017,87,1204,128"/>
 <area shape="rect" id="node10" href="$namespaceadaptivetimestepmodule.html#a1ef7ceed3d7cd5e91a9f407b788fc92f" title="@ brief Set time step" alt="" coords="1017,168,1204,209"/>

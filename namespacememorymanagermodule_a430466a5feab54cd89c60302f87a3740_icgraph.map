@@ -2,8 +2,8 @@
 <area shape="rect" id="node1" title="Generic function to clean a memory manager table." alt="" coords="1048,35,1232,76"/>
 <area shape="rect" id="node2" href="$namespacememorymanagermodule.html#acf5a8c25e83663c4a7a97b265b6b34a0" title="Create and fill a table with the total allocated memory." alt="" coords="816,5,1000,47"/>
 <area shape="rect" id="node3" href="$namespacememorymanagermodule.html#a3482099aea98afc7340a70d4073de4d9" title="Write memory manager memory usage based on the user&#45;specified memory_print_option." alt="" coords="584,35,768,76"/>
-<area shape="rect" id="node4" href="$namespacemf6coremodule.html#ae17efa5a9e03fd31617a08c08e20ae03" title=" " alt="" coords="329,42,536,69"/>
+<area shape="rect" id="node4" href="$namespacemf6coremodule.html#ae17efa5a9e03fd31617a08c08e20ae03" title="Finalize the simulation." alt="" coords="329,42,536,69"/>
 <area shape="rect" id="node5" href="$namespacemf6bmi.html#ab8397f78e5c3c405656064c227eca26f" title="Clean up the initialized simulation." alt="" coords="111,17,271,43"/>
-<area shape="rect" id="node6" href="$namespacemf6coremodule.html#a207819c711610066af1b83ec2a8efef0" title=" " alt="" coords="101,67,281,94"/>
-<area shape="rect" id="node7" href="$mf6_8f90.html#aa95bf577752f92b917375902bbb13863" title=" " alt="" coords="5,67,53,94"/>
+<area shape="rect" id="node6" href="$namespacemf6coremodule.html#a207819c711610066af1b83ec2a8efef0" title="Main controller." alt="" coords="101,67,281,94"/>
+<area shape="rect" id="node7" href="$mf6_8f90.html#aa95bf577752f92b917375902bbb13863" title="MODFLOW 6 main entry point." alt="" coords="5,67,53,94"/>
 </map>

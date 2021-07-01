@@ -1,5 +1,5 @@
 <map id="bndmodule::save_print_model_flows" name="bndmodule::save_print_model_flows">
-<area shape="rect" id="node1" title=" " alt="" coords="248,39,419,80"/>
-<area shape="rect" id="node2" href="$namespacebndmodule.html#a433859417b7056df12692f3ccad66e16" title=" " alt="" coords="5,5,200,47"/>
+<area shape="rect" id="node1" title="Save and/or print flows for a package." alt="" coords="248,39,419,80"/>
+<area shape="rect" id="node2" href="$namespacebndmodule.html#a433859417b7056df12692f3ccad66e16" title="@ brief Output package flow terms." alt="" coords="5,5,200,47"/>
 <area shape="rect" id="node3" href="$namespaceuzfmodule.html#a9aff2d3a2b8f2ecd729da15c5e39e05e" title=" " alt="" coords="9,71,196,112"/>
 </map>

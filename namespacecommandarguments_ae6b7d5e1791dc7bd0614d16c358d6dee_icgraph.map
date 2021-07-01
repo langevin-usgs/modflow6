@@ -1,5 +1,5 @@
 <map id="commandarguments::getcommandlinearguments" name="commandarguments::getcommandlinearguments">
 <area shape="rect" id="node1" title="Get command line arguments." alt="" coords="329,5,675,32"/>
-<area shape="rect" id="node2" href="$namespacemf6coremodule.html#a207819c711610066af1b83ec2a8efef0" title=" " alt="" coords="101,5,281,32"/>
-<area shape="rect" id="node3" href="$mf6_8f90.html#aa95bf577752f92b917375902bbb13863" title=" " alt="" coords="5,5,53,32"/>
+<area shape="rect" id="node2" href="$namespacemf6coremodule.html#a207819c711610066af1b83ec2a8efef0" title="Main controller." alt="" coords="101,5,281,32"/>
+<area shape="rect" id="node3" href="$mf6_8f90.html#aa95bf577752f92b917375902bbb13863" title="MODFLOW 6 main entry point." alt="" coords="5,5,53,32"/>
 </map>

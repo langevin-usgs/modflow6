@@ -1,5 +1,5 @@
 <map id="simmodule::deprecation_warning" name="simmodule::deprecation_warning">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,185,47"/>
-<area shape="rect" id="node2" href="$namespacesimmodule.html#a8caad8ba9aaacfbc94f08b98ab770eea" title=" " alt="" coords="233,13,421,39"/>
+<area shape="rect" id="node1" title="Store deprecation warning message." alt="" coords="5,5,185,47"/>
+<area shape="rect" id="node2" href="$namespacesimmodule.html#a8caad8ba9aaacfbc94f08b98ab770eea" title="Get the file name." alt="" coords="233,13,421,39"/>
 <area shape="rect" id="node3" href="$namespacedefinedmacros.html#afc9b290c56584c273f369dac8aa026d5" title="Get operating system." alt="" coords="469,13,639,39"/>
 </map>

@@ -1,7 +1,7 @@
 <map id="simmodule::final_message" name="simmodule::final_message">
-<area shape="rect" id="node1" title=" " alt="" coords="584,31,781,57"/>
-<area shape="rect" id="node2" href="$namespacemf6coremodule.html#ae17efa5a9e03fd31617a08c08e20ae03" title=" " alt="" coords="329,31,536,57"/>
+<area shape="rect" id="node1" title="Create final message." alt="" coords="584,31,781,57"/>
+<area shape="rect" id="node2" href="$namespacemf6coremodule.html#ae17efa5a9e03fd31617a08c08e20ae03" title="Finalize the simulation." alt="" coords="329,31,536,57"/>
 <area shape="rect" id="node3" href="$namespacemf6bmi.html#ab8397f78e5c3c405656064c227eca26f" title="Clean up the initialized simulation." alt="" coords="111,5,271,32"/>
-<area shape="rect" id="node4" href="$namespacemf6coremodule.html#a207819c711610066af1b83ec2a8efef0" title=" " alt="" coords="101,56,281,83"/>
-<area shape="rect" id="node5" href="$mf6_8f90.html#aa95bf577752f92b917375902bbb13863" title=" " alt="" coords="5,56,53,83"/>
+<area shape="rect" id="node4" href="$namespacemf6coremodule.html#a207819c711610066af1b83ec2a8efef0" title="Main controller." alt="" coords="101,56,281,83"/>
+<area shape="rect" id="node5" href="$mf6_8f90.html#aa95bf577752f92b917375902bbb13863" title="MODFLOW 6 main entry point." alt="" coords="5,56,53,83"/>
 </map>

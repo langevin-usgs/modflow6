@@ -1,11 +1,11 @@
 <map id="gwtmwtmodule::find_mwt_package" name="gwtmwtmodule::find_mwt_package">
 <area shape="rect" id="node1" title=" " alt="" coords="5,49,161,90"/>
-<area shape="rect" id="node2" href="$namespacebndmodule.html#a7ac2e1c143722a28d1f0ecb4c67a4a0a" title=" " alt="" coords="209,5,408,32"/>
-<area shape="rect" id="node4" href="$namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a" title=" " alt="" coords="221,56,396,83"/>
-<area shape="rect" id="node5" href="$namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61" title=" " alt="" coords="239,107,378,133"/>
-<area shape="rect" id="node3" href="$namespacebndmodule.html#ae966cec4d8ca214ecfe519e29adf6b7e" title=" " alt="" coords="456,5,659,32"/>
-<area shape="rect" id="node6" href="$namespacesimmodule.html#aa04e734eebf95836b2f37839b65bcae9" title=" " alt="" coords="473,78,641,119"/>
+<area shape="rect" id="node2" href="$namespacebndmodule.html#a7ac2e1c143722a28d1f0ecb4c67a4a0a" title="Get boundary from package list." alt="" coords="209,5,408,32"/>
+<area shape="rect" id="node4" href="$namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a" title="Store error message." alt="" coords="221,56,396,83"/>
+<area shape="rect" id="node5" href="$namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61" title="Stop the simulation." alt="" coords="239,107,378,133"/>
+<area shape="rect" id="node3" href="$namespacebndmodule.html#ae966cec4d8ca214ecfe519e29adf6b7e" title="Cast as a boundary tyoe." alt="" coords="456,5,659,32"/>
+<area shape="rect" id="node6" href="$namespacesimmodule.html#aa04e734eebf95836b2f37839b65bcae9" title="Print the final messages." alt="" coords="473,78,641,119"/>
 <area shape="rect" id="node9" href="$namespacegenericutilitiesmodule.html#a3af5fcf48dcd06255d9bc07f6a25db59" title=" " alt="" coords="473,143,641,185"/>
-<area shape="rect" id="node7" href="$namespacesimmodule.html#a5feb4a39fb3f3dc66c03cc13b11e2297" title=" " alt="" coords="707,56,901,83"/>
+<area shape="rect" id="node7" href="$namespacesimmodule.html#a5feb4a39fb3f3dc66c03cc13b11e2297" title="Close all open files." alt="" coords="707,56,901,83"/>
 <area shape="rect" id="node8" href="$namespacegenericutilitiesmodule.html#a34492cca79f70174fd015808be8b7ebf" title=" " alt="" coords="720,107,888,149"/>
 </map>

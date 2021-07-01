@@ -1,6 +1,6 @@
 <map id="sfrmodule::sfr_check_ustrf" name="sfrmodule::sfr_check_ustrf">
 <area shape="rect" id="node1" title=" " alt="" coords="5,49,164,90"/>
-<area shape="rect" id="node2" href="$namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a" title=" " alt="" coords="222,5,397,32"/>
-<area shape="rect" id="node3" href="$namespacesimmodule.html#a0c10520244b0246773a188954a67ec9e" title=" " alt="" coords="212,56,407,83"/>
+<area shape="rect" id="node2" href="$namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a" title="Store error message." alt="" coords="222,5,397,32"/>
+<area shape="rect" id="node3" href="$namespacesimmodule.html#a0c10520244b0246773a188954a67ec9e" title="Store warning message." alt="" coords="212,56,407,83"/>
 <area shape="rect" id="node4" href="$namespacetablemodule.html#a7632d784ec9e94277a76705ef56725f2" title=" " alt="" coords="227,107,391,133"/>
 </map>

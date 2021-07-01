@@ -1,6 +1,6 @@
 <map id="mf6coremodule::mf6preparetimestep" name="mf6coremodule::mf6preparetimestep">
-<area shape="rect" id="node1" title=" " alt="" coords="5,166,272,193"/>
-<area shape="rect" id="node2" href="$namespacesimmodule.html#a38f8eef6986861e5b90802678e34879c" title=" " alt="" coords="386,5,549,47"/>
+<area shape="rect" id="node1" title="Read and prepare time step." alt="" coords="5,166,272,193"/>
+<area shape="rect" id="node2" href="$namespacesimmodule.html#a38f8eef6986861e5b90802678e34879c" title="Reset the simulation convergence flag." alt="" coords="386,5,549,47"/>
 <area shape="rect" id="node3" href="$namespacebaseexchangemodule.html#ad92f8ec5d783349adc5a61e4e3d31f4b" title=" " alt="" coords="369,71,565,112"/>
 <area shape="rect" id="node5" href="$namespacebasemodelmodule.html#a79adefc92f4f7d0d032babb551c571f8" title=" " alt="" coords="320,137,615,163"/>
 <area shape="rect" id="node7" href="$namespacebasesolutionmodule.html#ad00fcf57eca44c1f8995e3904b1593de" title=" " alt="" coords="375,188,560,229"/>

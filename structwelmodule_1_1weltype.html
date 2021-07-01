@@ -22,7 +22,6 @@
 /* @license-end */
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="CustomDoxygen.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -127,7 +126,7 @@ Inheritance diagram for welmodule::weltype:</div>
 <div class="dyncontent">
 <div class="center"><img src="structwelmodule_1_1weltype__inherit__graph.png" border="0" usemap="#welmodule_1_1weltype_inherit__map" alt="Inheritance graph"/></div>
 <map name="welmodule_1_1weltype_inherit__map" id="welmodule_1_1weltype_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,131,179,355"/>
+<area shape="rect" title=" " alt="" coords="5,131,179,369"/>
 <area shape="rect" title=" " alt="" coords="55,5,129,83"/>
 </map>
 </div>
@@ -136,7 +135,7 @@ Collaboration diagram for welmodule::weltype:</div>
 <div class="dyncontent">
 <div class="center"><img src="structwelmodule_1_1weltype__coll__graph.png" border="0" usemap="#welmodule_1_1weltype_coll__map" alt="Collaboration graph"/></div>
 <map name="welmodule_1_1weltype_coll__map" id="welmodule_1_1weltype_coll__map">
-<area shape="rect" title=" " alt="" coords="5,131,179,355"/>
+<area shape="rect" title=" " alt="" coords="5,131,179,369"/>
 <area shape="rect" title=" " alt="" coords="55,5,129,83"/>
 </map>
 </div>
@@ -147,6 +146,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa5bb7dc92efe34722a0b47925c87856a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a812230a6047ef2d19e276dfe6bf7a223"><td class="memItemLeft" align="right" valign="top">procedure, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwelmodule_1_1weltype.html#a812230a6047ef2d19e276dfe6bf7a223">bnd_df_obs</a> =&gt; <a class="el" href="namespacewelmodule.html#aec99ce0e590a8c2633cbbccb6c4d398d">wel_df_obs</a></td></tr>
 <tr class="separator:a812230a6047ef2d19e276dfe6bf7a223"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8c7f2b9588120b62dd22fc2472fc5af"><td class="memItemLeft" align="right" valign="top">procedure, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwelmodule_1_1weltype.html#af8c7f2b9588120b62dd22fc2472fc5af">bnd_bd_obs</a> =&gt; <a class="el" href="namespacewelmodule.html#ac1b19bdc840a0c53b80b5d5c97b4fba8">wel_bd_obs</a></td></tr>
+<tr class="separator:af8c7f2b9588120b62dd22fc2472fc5af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d3307709cdbc989ef41d95f7f3c3699"><td class="memItemLeft" align="right" valign="top">procedure, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwelmodule_1_1weltype.html#a5d3307709cdbc989ef41d95f7f3c3699">bnd_rp_ts</a> =&gt; <a class="el" href="namespacewelmodule.html#a7f31ceeae0141eee8f966866fe44b777">wel_rp_ts</a></td></tr>
 <tr class="separator:a5d3307709cdbc989ef41d95f7f3c3699"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -170,13 +171,15 @@ Private Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a484a9edc8863d90a3563ac0f3fd941fe"><td class="memItemLeft" align="right" valign="top">integer(i4b), pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwelmodule_1_1weltype.html#a484a9edc8863d90a3563ac0f3fd941fe">iflowred</a> =&gt; null()</td></tr>
+<tr class="memdesc:a484a9edc8863d90a3563ac0f3fd941fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">flag indicating if the AUTO_FLOW_REDUCE option is active  <a href="structwelmodule_1_1weltype.html#a484a9edc8863d90a3563ac0f3fd941fe">More...</a><br /></td></tr>
 <tr class="separator:a484a9edc8863d90a3563ac0f3fd941fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae84d8172a635773fa04a74d0c6f1c732"><td class="memItemLeft" align="right" valign="top">real(dp), pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwelmodule_1_1weltype.html#ae84d8172a635773fa04a74d0c6f1c732">flowred</a> =&gt; null()</td></tr>
+<tr class="memdesc:ae84d8172a635773fa04a74d0c6f1c732"><td class="mdescLeft">&#160;</td><td class="mdescRight">AUTO_FLOW_REDUCE variable.  <a href="structwelmodule_1_1weltype.html#ae84d8172a635773fa04a74d0c6f1c732">More...</a><br /></td></tr>
 <tr class="separator:ae84d8172a635773fa04a74d0c6f1c732"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="gwf3wel8_8f90_source.html#l00021">21</a> of file <a class="el" href="gwf3wel8_8f90_source.html">gwf3wel8.f90</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gwf3wel8_8f90_source.html#l00037">37</a> of file <a class="el" href="gwf3wel8_8f90_source.html">gwf3wel8.f90</a>.</p>
 </div><h2 class="groupheader">Member Function/Subroutine Documentation</h2>
 <a id="afa3f824bc5ba6e1f11f20271403f04fe"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afa3f824bc5ba6e1f11f20271403f04fe">&#9670;&nbsp;</a></span>allocate_scalars()</h2>
@@ -198,7 +201,23 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gwf3wel8_8f90_source.html#l00025">25</a> of file <a class="el" href="gwf3wel8_8f90_source.html">gwf3wel8.f90</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gwf3wel8_8f90_source.html#l00041">41</a> of file <a class="el" href="gwf3wel8_8f90_source.html">gwf3wel8.f90</a>.</p>
+
+</div>
+</div>
+<a id="af8c7f2b9588120b62dd22fc2472fc5af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8c7f2b9588120b62dd22fc2472fc5af">&#9670;&nbsp;</a></span>bnd_bd_obs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">procedure, public welmodule::weltype::bnd_bd_obs</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="gwf3wel8_8f90_source.html#l00051">51</a> of file <a class="el" href="gwf3wel8_8f90_source.html">gwf3wel8.f90</a>.</p>
 
 </div>
 </div>
@@ -222,7 +241,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gwf3wel8_8f90_source.html#l00027">27</a> of file <a class="el" href="gwf3wel8_8f90_source.html">gwf3wel8.f90</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gwf3wel8_8f90_source.html#l00043">43</a> of file <a class="el" href="gwf3wel8_8f90_source.html">gwf3wel8.f90</a>.</p>
 
 </div>
 </div>
@@ -246,7 +265,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gwf3wel8_8f90_source.html#l00030">30</a> of file <a class="el" href="gwf3wel8_8f90_source.html">gwf3wel8.f90</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gwf3wel8_8f90_source.html#l00046">46</a> of file <a class="el" href="gwf3wel8_8f90_source.html">gwf3wel8.f90</a>.</p>
 
 </div>
 </div>
@@ -262,7 +281,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gwf3wel8_8f90_source.html#l00034">34</a> of file <a class="el" href="gwf3wel8_8f90_source.html">gwf3wel8.f90</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gwf3wel8_8f90_source.html#l00050">50</a> of file <a class="el" href="gwf3wel8_8f90_source.html">gwf3wel8.f90</a>.</p>
 
 </div>
 </div>
@@ -286,7 +305,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gwf3wel8_8f90_source.html#l00028">28</a> of file <a class="el" href="gwf3wel8_8f90_source.html">gwf3wel8.f90</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gwf3wel8_8f90_source.html#l00044">44</a> of file <a class="el" href="gwf3wel8_8f90_source.html">gwf3wel8.f90</a>.</p>
 
 </div>
 </div>
@@ -310,7 +329,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gwf3wel8_8f90_source.html#l00029">29</a> of file <a class="el" href="gwf3wel8_8f90_source.html">gwf3wel8.f90</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gwf3wel8_8f90_source.html#l00045">45</a> of file <a class="el" href="gwf3wel8_8f90_source.html">gwf3wel8.f90</a>.</p>
 
 </div>
 </div>
@@ -326,7 +345,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gwf3wel8_8f90_source.html#l00033">33</a> of file <a class="el" href="gwf3wel8_8f90_source.html">gwf3wel8.f90</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gwf3wel8_8f90_source.html#l00049">49</a> of file <a class="el" href="gwf3wel8_8f90_source.html">gwf3wel8.f90</a>.</p>
 
 </div>
 </div>
@@ -350,7 +369,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gwf3wel8_8f90_source.html#l00026">26</a> of file <a class="el" href="gwf3wel8_8f90_source.html">gwf3wel8.f90</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gwf3wel8_8f90_source.html#l00042">42</a> of file <a class="el" href="gwf3wel8_8f90_source.html">gwf3wel8.f90</a>.</p>
 
 </div>
 </div>
@@ -366,7 +385,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gwf3wel8_8f90_source.html#l00036">36</a> of file <a class="el" href="gwf3wel8_8f90_source.html">gwf3wel8.f90</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gwf3wel8_8f90_source.html#l00053">53</a> of file <a class="el" href="gwf3wel8_8f90_source.html">gwf3wel8.f90</a>.</p>
 
 </div>
 </div>
@@ -390,7 +409,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gwf3wel8_8f90_source.html#l00031">31</a> of file <a class="el" href="gwf3wel8_8f90_source.html">gwf3wel8.f90</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gwf3wel8_8f90_source.html#l00047">47</a> of file <a class="el" href="gwf3wel8_8f90_source.html">gwf3wel8.f90</a>.</p>
 
 </div>
 </div>
@@ -415,8 +434,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gwf3wel8_8f90_source.html#l00023">23</a> of file <a class="el" href="gwf3wel8_8f90_source.html">gwf3wel8.f90</a>.</p>
-<div class="fragment"><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">pointer</span> :: flowred =&gt; null()</div>
+<p class="definition">Definition at line <a class="el" href="gwf3wel8_8f90_source.html#l00039">39</a> of file <a class="el" href="gwf3wel8_8f90_source.html">gwf3wel8.f90</a>.</p>
+<div class="fragment"><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keywordtype">    real</span>(DP), <span class="keywordtype">pointer</span> :: flowred =&gt; null()         <span class="comment">!&lt; AUTO_FLOW_REDUCE variable</span></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -440,8 +459,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gwf3wel8_8f90_source.html#l00022">22</a> of file <a class="el" href="gwf3wel8_8f90_source.html">gwf3wel8.f90</a>.</p>
-<div class="fragment"><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">pointer</span> :: iflowred =&gt; null()</div>
+<p class="definition">Definition at line <a class="el" href="gwf3wel8_8f90_source.html#l00038">38</a> of file <a class="el" href="gwf3wel8_8f90_source.html">gwf3wel8.f90</a>.</p>
+<div class="fragment"><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">integer(I4B)</span>, <span class="keywordtype">pointer</span> :: iflowred =&gt; null()    <span class="comment">!&lt; flag indicating if the AUTO_FLOW_REDUCE option is active</span></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -454,7 +473,7 @@ Private Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacewelmodule.html">welmodule</a></li><li class="navelem"><a class="el" href="structwelmodule_1_1weltype.html">weltype</a></li>
-    <li class="footer">Generated on Fri Jun 25 2021 16:10:01 for MODFLOW 6 by
+    <li class="footer">Generated on Thu Jul 1 2021 13:27:08 for MODFLOW 6 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

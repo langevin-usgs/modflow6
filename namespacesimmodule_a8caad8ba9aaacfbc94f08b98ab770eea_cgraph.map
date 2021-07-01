@@ -1,4 +1,4 @@
 <map id="simmodule::get_filename" name="simmodule::get_filename">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,193,32"/>
+<area shape="rect" id="node1" title="Get the file name." alt="" coords="5,5,193,32"/>
 <area shape="rect" id="node2" href="$namespacedefinedmacros.html#afc9b290c56584c273f369dac8aa026d5" title="Get operating system." alt="" coords="241,5,411,32"/>
 </map>

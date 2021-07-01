@@ -4,11 +4,11 @@
 <area shape="rect" id="node10" href="$namespacemf6bmigrid.html#a5e0d6dfe9c6e1601a0a7a8b165407f56" title=" " alt="" coords="212,205,407,231"/>
 <area shape="rect" id="node14" href="$namespacemf6bmiutil.html#a1e8692c600f23ba6b0468dff63f2b29b" title="Get the model name from the grid id." alt="" coords="455,263,669,290"/>
 <area shape="rect" id="node3" href="$namespacememoryhelpermodule.html#a5405f58247a0962e5449ebc1e4dcff0f" title="Generic routine to check the length of (parts of) the memory address." alt="" coords="479,67,645,108"/>
-<area shape="rect" id="node4" href="$namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a" title=" " alt="" coords="777,26,952,53"/>
-<area shape="rect" id="node5" href="$namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61" title=" " alt="" coords="795,77,934,103"/>
-<area shape="rect" id="node6" href="$namespacesimmodule.html#aa04e734eebf95836b2f37839b65bcae9" title=" " alt="" coords="1125,5,1293,47"/>
+<area shape="rect" id="node4" href="$namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a" title="Store error message." alt="" coords="777,26,952,53"/>
+<area shape="rect" id="node5" href="$namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61" title="Stop the simulation." alt="" coords="795,77,934,103"/>
+<area shape="rect" id="node6" href="$namespacesimmodule.html#aa04e734eebf95836b2f37839b65bcae9" title="Print the final messages." alt="" coords="1125,5,1293,47"/>
 <area shape="rect" id="node9" href="$namespacegenericutilitiesmodule.html#a3af5fcf48dcd06255d9bc07f6a25db59" title=" " alt="" coords="1125,71,1293,112"/>
-<area shape="rect" id="node7" href="$namespacesimmodule.html#a5feb4a39fb3f3dc66c03cc13b11e2297" title=" " alt="" coords="1407,13,1601,39"/>
+<area shape="rect" id="node7" href="$namespacesimmodule.html#a5feb4a39fb3f3dc66c03cc13b11e2297" title="Close all open files." alt="" coords="1407,13,1601,39"/>
 <area shape="rect" id="node8" href="$namespacegenericutilitiesmodule.html#a34492cca79f70174fd015808be8b7ebf" title=" " alt="" coords="1420,131,1588,172"/>
 <area shape="rect" id="node11" href="$namespacemf6bmiutil.html#a2ef21d868daa6d14dc9b752210e49fae" title="Get the grid type for a named model as a fortran string." alt="" coords="485,132,639,173"/>
 <area shape="rect" id="node17" href="$namespacemf6bmiutil.html#aa74929c0ef09b51a9d623d04322fff96" title="Convert Fortran string to C&#45;style character string." alt="" coords="493,197,631,239"/>

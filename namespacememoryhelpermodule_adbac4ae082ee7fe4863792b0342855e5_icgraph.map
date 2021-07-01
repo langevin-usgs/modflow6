@@ -5,8 +5,8 @@
 <area shape="rect" id="node10" href="$namespacegwfmvrmodule.html#a8670bd8f16ec79d4b34a8e3be8f7266c" title=" " alt="" coords="819,136,1017,177"/>
 <area shape="rect" id="node3" href="$namespacemf6bmigrid.html#ac9eec871303e33d76d78617b4381ab7c" title=" " alt="" coords="584,13,771,39"/>
 <area shape="rect" id="node5" href="$namespacememorymanagermodule.html#a3482099aea98afc7340a70d4073de4d9" title="Write memory manager memory usage based on the user&#45;specified memory_print_option." alt="" coords="585,71,769,112"/>
-<area shape="rect" id="node6" href="$namespacemf6coremodule.html#ae17efa5a9e03fd31617a08c08e20ae03" title=" " alt="" coords="329,78,536,105"/>
+<area shape="rect" id="node6" href="$namespacemf6coremodule.html#ae17efa5a9e03fd31617a08c08e20ae03" title="Finalize the simulation." alt="" coords="329,78,536,105"/>
 <area shape="rect" id="node7" href="$namespacemf6bmi.html#ab8397f78e5c3c405656064c227eca26f" title="Clean up the initialized simulation." alt="" coords="111,53,271,79"/>
-<area shape="rect" id="node8" href="$namespacemf6coremodule.html#a207819c711610066af1b83ec2a8efef0" title=" " alt="" coords="101,103,281,130"/>
-<area shape="rect" id="node9" href="$mf6_8f90.html#aa95bf577752f92b917375902bbb13863" title=" " alt="" coords="5,103,53,130"/>
+<area shape="rect" id="node8" href="$namespacemf6coremodule.html#a207819c711610066af1b83ec2a8efef0" title="Main controller." alt="" coords="101,103,281,130"/>
+<area shape="rect" id="node9" href="$mf6_8f90.html#aa95bf577752f92b917375902bbb13863" title="MODFLOW 6 main entry point." alt="" coords="5,103,53,130"/>
 </map>

@@ -1,4 +1,4 @@
 <map id="bndmodule::bnd_ot_model_flows" name="bndmodule::bnd_ot_model_flows">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,200,47"/>
-<area shape="rect" id="node2" href="$namespacebndmodule.html#ac6de1593cb11aa8aca24e735d5b5d5d2" title=" " alt="" coords="248,5,419,47"/>
+<area shape="rect" id="node1" title="@ brief Output package flow terms." alt="" coords="5,5,200,47"/>
+<area shape="rect" id="node2" href="$namespacebndmodule.html#ac6de1593cb11aa8aca24e735d5b5d5d2" title="Save and/or print flows for a package." alt="" coords="248,5,419,47"/>
 </map>

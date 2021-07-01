@@ -3,7 +3,7 @@
 <area shape="rect" id="node2" href="$namespaceconnectionsmodule.html#ae71d867478877b7cfc5e2fd0a8147d49" title=" " alt="" coords="511,5,669,47"/>
 <area shape="rect" id="node3" href="$namespaceoutputcontrolmodule.html#ab4c21f744ae8f5f98d68147622968261" title=" " alt="" coords="511,71,669,112"/>
 <area shape="rect" id="node4" href="$namespacebasedismodule.html#a66cb0050e8ca0bf34ea6f977a979907b" title=" " alt="" coords="499,136,681,177"/>
-<area shape="rect" id="node5" href="$namespacebndmodule.html#a20ea539a7c70f9999cfb0e133195b1df" title=" " alt="" coords="513,201,667,243"/>
+<area shape="rect" id="node5" href="$namespacebndmodule.html#a20ea539a7c70f9999cfb0e133195b1df" title="@ brief Allocate package scalars" alt="" coords="513,201,667,243"/>
 <area shape="rect" id="node6" href="$namespacegwfnpfmodule.html#ae44de5bba8e892bcfea0585a3afd426b" title=" " alt="" coords="502,267,678,308"/>
 <area shape="rect" id="node7" href="$namespaceapimodule.html#a69610802564ad710cb88863117b38a46" title="@ brief Create a new package object" alt="" coords="507,333,673,359"/>
 <area shape="rect" id="node10" href="$namespacechdmodule.html#a061dea5df09ddd53e4ca09a1fb9168e6" title=" " alt="" coords="503,383,677,410"/>
@@ -33,7 +33,7 @@
 <area shape="rect" id="node36" href="$namespacegwfmvrmodule.html#ae0ac50e0a9d90f08ad8a426368302af7" title=" " alt="" coords="511,1947,669,1988"/>
 <area shape="rect" id="node37" href="$namespacerivmodule.html#aa6ba7718043f5d99029eca2df069afbe" title=" " alt="" coords="509,738,671,765"/>
 <area shape="rect" id="node38" href="$namespacemvrmodule.html#a0240e655e4fbae181c29ec9d0d7cebfd" title=" " alt="" coords="527,2013,653,2039"/>
-<area shape="rect" id="node39" href="$namespacenumericalpackagemodule.html#a80e26900a9855169344cda1ecf7b4f1b" title=" " alt="" coords="495,2064,685,2105"/>
+<area shape="rect" id="node39" href="$namespacenumericalpackagemodule.html#a80e26900a9855169344cda1ecf7b4f1b" title="@ brief Set package names" alt="" coords="495,2064,685,2105"/>
 <area shape="rect" id="node40" href="$namespacesfrmodule.html#acb4a7f609b36b1437fcee3f4ab3b85be" title=" " alt="" coords="504,2129,676,2171"/>
 <area shape="rect" id="node41" href="$namespacesfrmodule.html#a64718b1d9b7025a4763ed4e29ce34578" title=" " alt="" coords="509,789,671,815"/>
 <area shape="rect" id="node42" href="$namespacenumericalsolutionmodule.html#afe1d36406e23aa824de7b49f7a96a543" title="@ brief Create a new solution" alt="" coords="496,2195,684,2236"/>
@@ -41,7 +41,7 @@
 <area shape="rect" id="node45" href="$namespaceuzfmodule.html#a0764d36fe4f87f32f296df00ca21fd0b" title=" " alt="" coords="521,2311,659,2338"/>
 <area shape="rect" id="node46" href="$namespaceuzfmodule.html#a020e710c8d5dfe5896d5c0e3377e03dd" title=" " alt="" coords="507,839,673,866"/>
 <area shape="rect" id="node47" href="$namespaceuzfmodule.html#a7bf7df594c868815c7375023f1c03e82" title=" " alt="" coords="475,2362,705,2389"/>
-<area shape="rect" id="node48" href="$namespacewelmodule.html#aa53ad9f83ba06f1e39d8c0f171961e8d" title=" " alt="" coords="503,890,677,917"/>
+<area shape="rect" id="node48" href="$namespacewelmodule.html#aa53ad9f83ba06f1e39d8c0f171961e8d" title="@ brief Create a new package object" alt="" coords="503,890,677,917"/>
 <area shape="rect" id="node49" href="$namespacext3dmodule.html#ad20f01d9a9fe69c0d007ba046a0435eb" title=" " alt="" coords="512,1042,668,1069"/>
 <area shape="rect" id="node8" href="$namespacegwtmodule.html#af18b6e0a8010b0b5ac1eae25d179c0dd" title=" " alt="" coords="252,325,409,367"/>
 <area shape="rect" id="node9" href="$namespacegwfmodule.html#a9fc339c6daad0503d34ef42f994a98ec" title=" " alt="" coords="252,604,409,645"/>

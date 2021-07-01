@@ -1,18 +1,18 @@
 <map id="mf6coremodule::mf6update" name="mf6coremodule::mf6update">
-<area shape="rect" id="node1" title=" " alt="" coords="5,373,209,399"/>
-<area shape="rect" id="node2" href="$namespacemf6coremodule.html#a0e06aa9086d6da08ce7a9a4982905d39" title=" " alt="" coords="257,143,491,170"/>
-<area shape="rect" id="node12" href="$namespacemf6coremodule.html#aab3891c5763fe8a941e6799fe9c82388" title=" " alt="" coords="540,463,804,490"/>
-<area shape="rect" id="node21" href="$namespacemf6coremodule.html#a40b8130d3cf17bc47fcb54c254aada8a" title=" " alt="" coords="539,373,805,399"/>
+<area shape="rect" id="node1" title="Run a time step." alt="" coords="5,373,209,399"/>
+<area shape="rect" id="node2" href="$namespacemf6coremodule.html#a0e06aa9086d6da08ce7a9a4982905d39" title="Run time step." alt="" coords="257,143,491,170"/>
+<area shape="rect" id="node12" href="$namespacemf6coremodule.html#aab3891c5763fe8a941e6799fe9c82388" title="Finalize time step." alt="" coords="540,463,804,490"/>
+<area shape="rect" id="node21" href="$namespacemf6coremodule.html#a40b8130d3cf17bc47fcb54c254aada8a" title="Read and prepare time step." alt="" coords="539,373,805,399"/>
 <area shape="rect" id="node3" href="$namespacesolutiongroupmodule.html#a7adf638009121f69976a00aa98c604b5" title=" " alt="" coords="577,39,767,80"/>
-<area shape="rect" id="node5" href="$namespacemf6coremodule.html#aa3df08d0706463a5a6574eac307a6636" title=" " alt="" coords="593,136,751,177"/>
+<area shape="rect" id="node5" href="$namespacemf6coremodule.html#aa3df08d0706463a5a6574eac307a6636" title="Rerun time step." alt="" coords="593,136,751,177"/>
 <area shape="rect" id="node4" href="$namespacesolutiongroupmodule.html#a24edb8f47b612f3c62752756210e9cca" title=" " alt="" coords="903,5,1098,47"/>
 <area shape="rect" id="node6" href="$namespaceadaptivetimestepmodule.html#ac42ef52366c6713c5f75da5329f87cad" title="@ brief Reset time step because failure has occurred" alt="" coords="907,136,1094,177"/>
-<area shape="rect" id="node8" href="$namespacesimmodule.html#a38f8eef6986861e5b90802678e34879c" title=" " alt="" coords="919,201,1082,243"/>
+<area shape="rect" id="node8" href="$namespacesimmodule.html#a38f8eef6986861e5b90802678e34879c" title="Reset the simulation convergence flag." alt="" coords="919,201,1082,243"/>
 <area shape="rect" id="node9" href="$namespacetdismodule.html#ae74144fd4dafbd8f5ec90936c9c349cc" title=" " alt="" coords="921,71,1080,112"/>
 <area shape="rect" id="node7" href="$namespaceadaptivetimestepmodule.html#a95cd63bed2962fac3da7f09aaddbf7de" title="@ brief Determine if period is adaptive" alt="" coords="1252,205,1439,247"/>
 <area shape="rect" id="node10" href="$namespaceadaptivetimestepmodule.html#a1ef7ceed3d7cd5e91a9f407b788fc92f" title="@ brief Set time step" alt="" coords="1252,139,1439,180"/>
 <area shape="rect" id="node11" href="$namespaceadaptivetimestepmodule.html#a4ee46460f38cadb79cf7a253368850c0" title="@ brief Set end of period indicator" alt="" coords="1252,72,1439,113"/>
-<area shape="rect" id="node13" href="$namespacesimmodule.html#af24424b2b14a2c21680d1185f3ae84b5" title=" " alt="" coords="919,580,1082,621"/>
+<area shape="rect" id="node13" href="$namespacesimmodule.html#af24424b2b14a2c21680d1185f3ae84b5" title="Simulation convergence check." alt="" coords="919,580,1082,621"/>
 <area shape="rect" id="node15" href="$namespacebaseexchangemodule.html#ad92f8ec5d783349adc5a61e4e3d31f4b" title=" " alt="" coords="903,397,1099,439"/>
 <area shape="rect" id="node17" href="$namespacebasemodelmodule.html#a79adefc92f4f7d0d032babb551c571f8" title=" " alt="" coords="853,463,1148,490"/>
 <area shape="rect" id="node19" href="$namespacebasesolutionmodule.html#ad00fcf57eca44c1f8995e3904b1593de" title=" " alt="" coords="908,515,1093,556"/>

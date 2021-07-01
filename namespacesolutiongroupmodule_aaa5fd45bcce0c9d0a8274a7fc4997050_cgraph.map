@@ -1,11 +1,11 @@
 <map id="solutiongroupmodule::sgp_ca" name="solutiongroupmodule::sgp_ca">
 <area shape="rect" id="node1" title=" " alt="" coords="5,64,165,105"/>
 <area shape="rect" id="node2" href="$namespacebasesolutionmodule.html#ad00fcf57eca44c1f8995e3904b1593de" title=" " alt="" coords="213,5,399,47"/>
-<area shape="rect" id="node4" href="$namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a" title=" " alt="" coords="219,71,393,98"/>
-<area shape="rect" id="node5" href="$namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61" title=" " alt="" coords="237,122,375,149"/>
+<area shape="rect" id="node4" href="$namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a" title="Store error message." alt="" coords="219,71,393,98"/>
+<area shape="rect" id="node5" href="$namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61" title="Stop the simulation." alt="" coords="237,122,375,149"/>
 <area shape="rect" id="node3" href="$namespacebasesolutionmodule.html#afef773355b6646b420b266d7387099d7" title=" " alt="" coords="447,5,635,47"/>
-<area shape="rect" id="node6" href="$namespacesimmodule.html#aa04e734eebf95836b2f37839b65bcae9" title=" " alt="" coords="457,92,625,133"/>
+<area shape="rect" id="node6" href="$namespacesimmodule.html#aa04e734eebf95836b2f37839b65bcae9" title="Print the final messages." alt="" coords="457,92,625,133"/>
 <area shape="rect" id="node9" href="$namespacegenericutilitiesmodule.html#a3af5fcf48dcd06255d9bc07f6a25db59" title=" " alt="" coords="457,157,625,199"/>
-<area shape="rect" id="node7" href="$namespacesimmodule.html#a5feb4a39fb3f3dc66c03cc13b11e2297" title=" " alt="" coords="683,70,877,97"/>
+<area shape="rect" id="node7" href="$namespacesimmodule.html#a5feb4a39fb3f3dc66c03cc13b11e2297" title="Close all open files." alt="" coords="683,70,877,97"/>
 <area shape="rect" id="node8" href="$namespacegenericutilitiesmodule.html#a34492cca79f70174fd015808be8b7ebf" title=" " alt="" coords="696,121,864,163"/>
 </map>

@@ -22,7 +22,6 @@
 /* @license-end */
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="CustomDoxygen.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -420,7 +419,7 @@ Functions/Subroutines</h2></td></tr>
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;      <span class="keyword">call </span><a class="code" href="namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a">store_error</a>(errmsg)</div>
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;      <span class="keyword">write</span>(errmsg, <span class="stringliteral">&#39;(a, i0)&#39;</span>) <span class="stringliteral">&#39;INVALID METHOD CODE DETECTED: &#39;</span>, this%imeth</div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;      <span class="keyword">call </span><a class="code" href="namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a">store_error</a>(errmsg)</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;      <span class="keyword">call </span><a class="code" href="namespacesimmodule.html#a1c78a6fda06b630c738bb654aa6bd816">store_error_unit</a>(this%inunit)</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;      <span class="keyword">call </span>store_error_unit(this%inunit)</div>
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;      <span class="keyword">call </span><a class="code" href="namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61">ustop</a>()</div>
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;<span class="keywordflow">    endif</span></div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="keywordflow">if</span> (iout &gt; 0) <span class="keywordflow">then</span></div>
@@ -447,12 +446,12 @@ Here is the call graph for this function:</div>
 <map name="namespacebudgetfilereadermodule_a1c52a53b6ef352c8314713590dcd9f3a_cgraph" id="namespacebudgetfilereadermodule_a1c52a53b6ef352c8314713590dcd9f3a_cgraph">
 <area shape="rect" title=" " alt="" coords="5,89,184,131"/>
 <area shape="rect" href="namespaceinputoutputmodule.html#a9138018756a22c0480830e247f537fa1" title=" " alt="" coords="258,5,413,47"/>
-<area shape="rect" href="namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a" title=" " alt="" coords="248,71,423,98"/>
-<area shape="rect" href="namespacesimmodule.html#a1c78a6fda06b630c738bb654aa6bd816" title=" " alt="" coords="232,122,439,149"/>
-<area shape="rect" href="namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61" title=" " alt="" coords="266,173,405,199"/>
-<area shape="rect" href="namespacesimmodule.html#aa04e734eebf95836b2f37839b65bcae9" title=" " alt="" coords="487,132,655,173"/>
+<area shape="rect" href="namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a" title="Store error message." alt="" coords="248,71,423,98"/>
+<area shape="rect" href="namespacesimmodule.html#a1c78a6fda06b630c738bb654aa6bd816" title="Store the file unit number." alt="" coords="232,122,439,149"/>
+<area shape="rect" href="namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61" title="Stop the simulation." alt="" coords="266,173,405,199"/>
+<area shape="rect" href="namespacesimmodule.html#aa04e734eebf95836b2f37839b65bcae9" title="Print the final messages." alt="" coords="487,132,655,173"/>
 <area shape="rect" href="namespacegenericutilitiesmodule.html#a3af5fcf48dcd06255d9bc07f6a25db59" title=" " alt="" coords="487,197,655,239"/>
-<area shape="rect" href="namespacesimmodule.html#a5feb4a39fb3f3dc66c03cc13b11e2297" title=" " alt="" coords="703,110,897,137"/>
+<area shape="rect" href="namespacesimmodule.html#a5feb4a39fb3f3dc66c03cc13b11e2297" title="Close all open files." alt="" coords="703,110,897,137"/>
 <area shape="rect" href="namespacegenericutilitiesmodule.html#a34492cca79f70174fd015808be8b7ebf" title=" " alt="" coords="716,161,884,203"/>
 </map>
 </div>
@@ -462,16 +461,15 @@ Here is the call graph for this function:</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="anamespaceinputoutputmodule_html_a9138018756a22c0480830e247f537fa1"><div class="ttname"><a href="namespaceinputoutputmodule.html#a9138018756a22c0480830e247f537fa1">inputoutputmodule::fseek_stream</a></div><div class="ttdeci">subroutine, public fseek_stream(iu, offset, whence, status)</div><div class="ttdef"><b>Definition:</b> <a href="_input_output_8f90_source.html#l02190">InputOutput.f90:2190</a></div></div>
-<div class="ttc" id="anamespacesimmodule_html_a1c78a6fda06b630c738bb654aa6bd816"><div class="ttname"><a href="namespacesimmodule.html#a1c78a6fda06b630c738bb654aa6bd816">simmodule::store_error_unit</a></div><div class="ttdeci">subroutine, public store_error_unit(iunit)</div><div class="ttdef"><b>Definition:</b> <a href="_sim_8f90_source.html#l00177">Sim.f90:177</a></div></div>
-<div class="ttc" id="anamespacesimmodule_html_a536cb6f0e13fcd33755e414641ff931a"><div class="ttname"><a href="namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a">simmodule::store_error</a></div><div class="ttdeci">subroutine, public store_error(msg)</div><div class="ttdef"><b>Definition:</b> <a href="_sim_8f90_source.html#l00107">Sim.f90:107</a></div></div>
-<div class="ttc" id="anamespacesimmodule_html_a0be97214c1d4fcf42bc4ddc27b111b61"><div class="ttname"><a href="namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61">simmodule::ustop</a></div><div class="ttdeci">subroutine, public ustop(stopmess, ioutlocal)</div><div class="ttdef"><b>Definition:</b> <a href="_sim_8f90_source.html#l00324">Sim.f90:324</a></div></div>
+<div class="ttc" id="anamespacesimmodule_html_a536cb6f0e13fcd33755e414641ff931a"><div class="ttname"><a href="namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a">simmodule::store_error</a></div><div class="ttdeci">subroutine, public store_error(msg)</div><div class="ttdoc">Store error message.</div><div class="ttdef"><b>Definition:</b> <a href="_sim_8f90_source.html#l00129">Sim.f90:129</a></div></div>
+<div class="ttc" id="anamespacesimmodule_html_a0be97214c1d4fcf42bc4ddc27b111b61"><div class="ttname"><a href="namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61">simmodule::ustop</a></div><div class="ttdeci">subroutine, public ustop(stopmess, ioutlocal)</div><div class="ttdoc">Stop the simulation.</div><div class="ttdef"><b>Definition:</b> <a href="_sim_8f90_source.html#l00321">Sim.f90:321</a></div></div>
 <div class="ttc" id="anamespaceinputoutputmodule_html"><div class="ttname"><a href="namespaceinputoutputmodule.html">inputoutputmodule</a></div><div class="ttdef"><b>Definition:</b> <a href="_input_output_8f90_source.html#l00003">InputOutput.f90:3</a></div></div>
-<div class="ttc" id="anamespacekindmodule_html_a2f6861418b5e7d3d602b77228232a470"><div class="ttname"><a href="namespacekindmodule.html#a2f6861418b5e7d3d602b77228232a470">kindmodule::i4b</a></div><div class="ttdeci">integer, parameter i4b</div><div class="ttdef"><b>Definition:</b> <a href="kind_8f90_source.html#l00009">kind.f90:9</a></div></div>
+<div class="ttc" id="anamespacekindmodule_html_a2f6861418b5e7d3d602b77228232a470"><div class="ttname"><a href="namespacekindmodule.html#a2f6861418b5e7d3d602b77228232a470">kindmodule::i4b</a></div><div class="ttdeci">integer, parameter i4b</div><div class="ttdoc">Integer kind.</div><div class="ttdef"><b>Definition:</b> <a href="kind_8f90_source.html#l00016">kind.f90:16</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacebudgetfilereadermodule.html">budgetfilereadermodule</a></li>
-    <li class="footer">Generated on Fri Jun 25 2021 16:09:47 for MODFLOW 6 by
+    <li class="footer">Generated on Thu Jul 1 2021 13:26:54 for MODFLOW 6 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

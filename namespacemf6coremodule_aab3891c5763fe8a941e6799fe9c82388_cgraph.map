@@ -1,6 +1,6 @@
 <map id="mf6coremodule::mf6finalizetimestep" name="mf6coremodule::mf6finalizetimestep">
-<area shape="rect" id="node1" title=" " alt="" coords="5,107,269,134"/>
-<area shape="rect" id="node2" href="$namespacesimmodule.html#af24424b2b14a2c21680d1185f3ae84b5" title=" " alt="" coords="383,5,546,47"/>
+<area shape="rect" id="node1" title="Finalize time step." alt="" coords="5,107,269,134"/>
+<area shape="rect" id="node2" href="$namespacesimmodule.html#af24424b2b14a2c21680d1185f3ae84b5" title="Simulation convergence check." alt="" coords="383,5,546,47"/>
 <area shape="rect" id="node4" href="$namespacebaseexchangemodule.html#ad92f8ec5d783349adc5a61e4e3d31f4b" title=" " alt="" coords="367,71,563,112"/>
 <area shape="rect" id="node6" href="$namespacebasemodelmodule.html#a79adefc92f4f7d0d032babb551c571f8" title=" " alt="" coords="317,137,612,163"/>
 <area shape="rect" id="node8" href="$namespacebasesolutionmodule.html#ad00fcf57eca44c1f8995e3904b1593de" title=" " alt="" coords="372,188,557,229"/>

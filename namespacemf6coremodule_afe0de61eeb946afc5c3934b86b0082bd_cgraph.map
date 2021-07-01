@@ -1,10 +1,10 @@
 <map id="mf6coremodule::printinfo" name="mf6coremodule::printinfo">
-<area shape="rect" id="node1" title=" " alt="" coords="5,111,193,138"/>
-<area shape="rect" id="node2" href="$namespacesimmodule.html#a3d864cdd9b024655fbc89f6caea11822" title="Prints the header and initializes messaging" alt="" coords="262,73,402,115"/>
+<area shape="rect" id="node1" title="Print info to screen." alt="" coords="5,111,193,138"/>
+<area shape="rect" id="node2" href="$namespacesimmodule.html#a3d864cdd9b024655fbc89f6caea11822" title="Print the header and initializes messaging" alt="" coords="262,73,402,115"/>
 <area shape="rect" id="node7" href="$namespacetimermodule.html#aabd6b77317f11bb9dd7d89c52317c104" title=" " alt="" coords="241,141,423,167"/>
 <area shape="rect" id="node3" href="$namespaceversionmodule.html#a0eedbf1f3bd80a688acb3f014addc767" title=" " alt="" coords="475,71,635,112"/>
 <area shape="rect" id="node4" href="$namespacecompilerversion.html#a340e9d1856b5f223fa830a94697e6608" title="@ brief Get compiler information" alt="" coords="709,5,865,47"/>
 <area shape="rect" id="node5" href="$namespacegenericutilitiesmodule.html#aa9380deee7f1629af2bda7df7f589714" title=" " alt="" coords="703,71,871,112"/>
-<area shape="rect" id="node6" href="$namespacekindmodule.html#a1e2548b35ac49e2e9bc139b0d96103d7" title=" " alt="" coords="687,137,887,163"/>
+<area shape="rect" id="node6" href="$namespacekindmodule.html#a1e2548b35ac49e2e9bc139b0d96103d7" title="Write variable data types." alt="" coords="687,137,887,163"/>
 <area shape="rect" id="node8" href="$namespacegenericutilitiesmodule.html#a34492cca79f70174fd015808be8b7ebf" title=" " alt="" coords="471,136,639,177"/>
 </map>

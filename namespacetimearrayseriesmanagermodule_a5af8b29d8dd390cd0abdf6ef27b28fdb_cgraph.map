@@ -1,12 +1,12 @@
 <map id="timearrayseriesmanagermodule::tasmgr_ad" name="timearrayseriesmanagermodule::tasmgr_ad">
 <area shape="rect" id="node1" title=" " alt="" coords="5,89,237,131"/>
 <area shape="rect" id="node2" href="$namespacetimearrayserieslinkmodule.html#a1d0b1671976ee395ad8f476bad247a64" title=" " alt="" coords="285,5,515,47"/>
-<area shape="rect" id="node4" href="$namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a" title=" " alt="" coords="313,71,487,98"/>
-<area shape="rect" id="node5" href="$namespacesimmodule.html#a1c78a6fda06b630c738bb654aa6bd816" title=" " alt="" coords="297,122,503,149"/>
-<area shape="rect" id="node6" href="$namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61" title=" " alt="" coords="331,173,469,199"/>
+<area shape="rect" id="node4" href="$namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a" title="Store error message." alt="" coords="313,71,487,98"/>
+<area shape="rect" id="node5" href="$namespacesimmodule.html#a1c78a6fda06b630c738bb654aa6bd816" title="Store the file unit number." alt="" coords="297,122,503,149"/>
+<area shape="rect" id="node6" href="$namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61" title="Stop the simulation." alt="" coords="331,173,469,199"/>
 <area shape="rect" id="node3" href="$namespacetimearrayserieslinkmodule.html#a2aff5d1fb6012e99f7605d855eda56f0" title=" " alt="" coords="563,5,791,47"/>
-<area shape="rect" id="node7" href="$namespacesimmodule.html#aa04e734eebf95836b2f37839b65bcae9" title=" " alt="" coords="593,132,761,173"/>
+<area shape="rect" id="node7" href="$namespacesimmodule.html#aa04e734eebf95836b2f37839b65bcae9" title="Print the final messages." alt="" coords="593,132,761,173"/>
 <area shape="rect" id="node10" href="$namespacegenericutilitiesmodule.html#a3af5fcf48dcd06255d9bc07f6a25db59" title=" " alt="" coords="593,197,761,239"/>
-<area shape="rect" id="node8" href="$namespacesimmodule.html#a5feb4a39fb3f3dc66c03cc13b11e2297" title=" " alt="" coords="839,110,1033,137"/>
+<area shape="rect" id="node8" href="$namespacesimmodule.html#a5feb4a39fb3f3dc66c03cc13b11e2297" title="Close all open files." alt="" coords="839,110,1033,137"/>
 <area shape="rect" id="node9" href="$namespacegenericutilitiesmodule.html#a34492cca79f70174fd015808be8b7ebf" title=" " alt="" coords="852,161,1020,203"/>
 </map>

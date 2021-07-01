@@ -1,7 +1,7 @@
 <map id="simmodule::initial_message" name="simmodule::initial_message">
-<area shape="rect" id="node1" title="Prints the header and initializes messaging" alt="" coords="5,71,145,112"/>
+<area shape="rect" id="node1" title="Print the header and initializes messaging" alt="" coords="5,71,145,112"/>
 <area shape="rect" id="node2" href="$namespaceversionmodule.html#a0eedbf1f3bd80a688acb3f014addc767" title=" " alt="" coords="193,71,353,112"/>
 <area shape="rect" id="node3" href="$namespacecompilerversion.html#a340e9d1856b5f223fa830a94697e6608" title="@ brief Get compiler information" alt="" coords="423,5,579,47"/>
 <area shape="rect" id="node4" href="$namespacegenericutilitiesmodule.html#aa9380deee7f1629af2bda7df7f589714" title=" " alt="" coords="417,71,585,112"/>
-<area shape="rect" id="node5" href="$namespacekindmodule.html#a1e2548b35ac49e2e9bc139b0d96103d7" title=" " alt="" coords="401,137,601,163"/>
+<area shape="rect" id="node5" href="$namespacekindmodule.html#a1e2548b35ac49e2e9bc139b0d96103d7" title="Write variable data types." alt="" coords="401,137,601,163"/>
 </map>

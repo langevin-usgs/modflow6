@@ -1,5 +1,6 @@
 var NAVTREEINDEX22 =
 {
+"structmemorytypemodule_1_1memorytype.html#a4662c8b2e498429ca5b7eeeed42ca9c8":[2,0,70,0,16],
 "structmemorytypemodule_1_1memorytype.html#a5187f4d821e480ef1c1aad0f190d02ad":[2,0,70,0,10],
 "structmemorytypemodule_1_1memorytype.html#a52647d7da1f223b04381258a5e4b72be":[2,0,70,0,2],
 "structmemorytypemodule_1_1memorytype.html#a5f84a214cbc077ef54a215d31c348733":[2,0,70,0,7],
@@ -248,6 +249,5 @@ var NAVTREEINDEX22 =
 "structnumericalsolutionmodule_1_1numericalsolutiontype.html#adc5708ae51a72c12a99fccd4c8e2674d":[2,0,77,0,27],
 "structnumericalsolutionmodule_1_1numericalsolutiontype.html#ade01296342178fc81905e94d23740dea":[2,0,77,0,50],
 "structnumericalsolutionmodule_1_1numericalsolutiontype.html#ade329643f7cab5436eff9ca91e8a7678":[2,0,77,0,3],
-"structnumericalsolutionmodule_1_1numericalsolutiontype.html#ae04065894c2b660320d2194ad3b33719":[2,0,77,0,81],
-"structnumericalsolutionmodule_1_1numericalsolutiontype.html#ae2e0988710126accddc5e77784b63efc":[2,0,77,0,60]
+"structnumericalsolutionmodule_1_1numericalsolutiontype.html#ae04065894c2b660320d2194ad3b33719":[2,0,77,0,81]
 };

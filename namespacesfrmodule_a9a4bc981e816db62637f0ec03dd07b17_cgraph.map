@@ -1,14 +1,14 @@
 <map id="sfrmodule::sfr_read_packagedata" name="sfrmodule::sfr_read_packagedata">
 <area shape="rect" id="node1" title=" " alt="" coords="5,93,155,135"/>
-<area shape="rect" id="node2" href="$namespacesimmodule.html#a4c46e49de78d4498dd4ec106357775e6" title=" " alt="" coords="229,13,413,39"/>
+<area shape="rect" id="node2" href="$namespacesimmodule.html#a4c46e49de78d4498dd4ec106357775e6" title="Return number of errors." alt="" coords="229,13,413,39"/>
 <area shape="rect" id="node3" href="$namespacetimeseriesmanagermodule.html#a2075a4c123cb1167bfbdaaf4ceae7666" title=" " alt="" coords="203,64,439,105"/>
-<area shape="rect" id="node7" href="$namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a" title=" " alt="" coords="499,122,673,149"/>
-<area shape="rect" id="node8" href="$namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61" title=" " alt="" coords="251,181,390,207"/>
+<area shape="rect" id="node7" href="$namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a" title="Store error message." alt="" coords="499,122,673,149"/>
+<area shape="rect" id="node8" href="$namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61" title="Stop the simulation." alt="" coords="251,181,390,207"/>
 <area shape="rect" id="node4" href="$namespacetimeseriesmanagermodule.html#ad1b537cde3acf4d66f1e3db237bdb5c4" title=" " alt="" coords="487,5,685,47"/>
 <area shape="rect" id="node6" href="$namespaceinputoutputmodule.html#a3418ad9e27e9d9caac6f541863e1c522" title=" " alt="" coords="976,35,1131,76"/>
 <area shape="rect" id="node5" href="$namespaceinputoutputmodule.html#a20fd69114074fcbe01dcc8219d4bbd79" title=" " alt="" coords="753,5,908,47"/>
-<area shape="rect" id="node9" href="$namespacesimmodule.html#aa04e734eebf95836b2f37839b65bcae9" title=" " alt="" coords="502,173,670,215"/>
+<area shape="rect" id="node9" href="$namespacesimmodule.html#aa04e734eebf95836b2f37839b65bcae9" title="Print the final messages." alt="" coords="502,173,670,215"/>
 <area shape="rect" id="node12" href="$namespacegenericutilitiesmodule.html#a3af5fcf48dcd06255d9bc07f6a25db59" title=" " alt="" coords="502,239,670,280"/>
-<area shape="rect" id="node10" href="$namespacesimmodule.html#a5feb4a39fb3f3dc66c03cc13b11e2297" title=" " alt="" coords="733,151,928,178"/>
+<area shape="rect" id="node10" href="$namespacesimmodule.html#a5feb4a39fb3f3dc66c03cc13b11e2297" title="Close all open files." alt="" coords="733,151,928,178"/>
 <area shape="rect" id="node11" href="$namespacegenericutilitiesmodule.html#a34492cca79f70174fd015808be8b7ebf" title=" " alt="" coords="747,203,915,244"/>
 </map>

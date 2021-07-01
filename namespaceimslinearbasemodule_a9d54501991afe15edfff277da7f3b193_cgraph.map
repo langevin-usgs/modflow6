@@ -1,10 +1,10 @@
 <map id="imslinearbasemodule::ims_base_calc_order" name="imslinearbasemodule::ims_base_calc_order">
 <area shape="rect" id="node1" title="@ brief Calculate LORDER AND IORDER" alt="" coords="5,197,172,239"/>
-<area shape="rect" id="node2" href="$namespacesimmodule.html#a4c46e49de78d4498dd4ec106357775e6" title=" " alt="" coords="220,65,404,91"/>
+<area shape="rect" id="node2" href="$namespacesimmodule.html#a4c46e49de78d4498dd4ec106357775e6" title="Return number of errors." alt="" coords="220,65,404,91"/>
 <area shape="rect" id="node3" href="$namespaceimsreorderingmodule.html#a2d3e25f92144362bc1987df5f745cc0e" title=" " alt="" coords="231,116,393,157"/>
 <area shape="rect" id="node8" href="$namespaceimsreorderingmodule.html#ae73f7a7ce75cd046272f4e86ac0d1e9e" title=" " alt="" coords="231,197,393,239"/>
-<area shape="rect" id="node14" href="$namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a" title=" " alt="" coords="225,263,399,290"/>
-<area shape="rect" id="node15" href="$namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61" title=" " alt="" coords="243,398,381,425"/>
+<area shape="rect" id="node14" href="$namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a" title="Store error message." alt="" coords="225,263,399,290"/>
+<area shape="rect" id="node15" href="$namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61" title="Stop the simulation." alt="" coords="243,398,381,425"/>
 <area shape="rect" id="node4" href="$namespaceimsreorderingmodule.html#a2deb34b69752848ce8162ac50f930dec" title=" " alt="" coords="455,11,617,52"/>
 <area shape="rect" id="node6" href="$namespaceimsreorderingmodule.html#a5d8da64be84261b64cb4c946f19765c3" title=" " alt="" coords="455,84,617,125"/>
 <area shape="rect" id="node5" href="$namespaceimsreorderingmodule.html#a6b6099ded56613291aa6b21d726c1fe6" title=" " alt="" coords="684,5,847,47"/>
@@ -14,8 +14,8 @@
 <area shape="rect" id="node11" href="$namespaceimsreorderingmodule.html#a082dccd76afafd79bf505871b953e0e2" title=" " alt="" coords="684,201,847,243"/>
 <area shape="rect" id="node12" href="$namespaceimsreorderingmodule.html#a7f3ea5592e9b87ade93e991350b3fc35" title=" " alt="" coords="684,267,847,308"/>
 <area shape="rect" id="node13" href="$namespaceimsreorderingmodule.html#a3b4391890aceaeec329ebe2246434039" title=" " alt="" coords="684,332,847,373"/>
-<area shape="rect" id="node16" href="$namespacesimmodule.html#aa04e734eebf95836b2f37839b65bcae9" title=" " alt="" coords="452,391,620,432"/>
+<area shape="rect" id="node16" href="$namespacesimmodule.html#aa04e734eebf95836b2f37839b65bcae9" title="Print the final messages." alt="" coords="452,391,620,432"/>
 <area shape="rect" id="node19" href="$namespacegenericutilitiesmodule.html#a3af5fcf48dcd06255d9bc07f6a25db59" title=" " alt="" coords="452,456,620,497"/>
-<area shape="rect" id="node17" href="$namespacesimmodule.html#a5feb4a39fb3f3dc66c03cc13b11e2297" title=" " alt="" coords="668,398,863,425"/>
+<area shape="rect" id="node17" href="$namespacesimmodule.html#a5feb4a39fb3f3dc66c03cc13b11e2297" title="Close all open files." alt="" coords="668,398,863,425"/>
 <area shape="rect" id="node18" href="$namespacegenericutilitiesmodule.html#a34492cca79f70174fd015808be8b7ebf" title=" " alt="" coords="681,449,849,491"/>
 </map>

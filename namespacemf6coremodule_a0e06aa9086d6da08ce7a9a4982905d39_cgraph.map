@@ -1,10 +1,10 @@
 <map id="mf6coremodule::mf6dotimestep" name="mf6coremodule::mf6dotimestep">
-<area shape="rect" id="node1" title=" " alt="" coords="5,79,239,106"/>
+<area shape="rect" id="node1" title="Run time step." alt="" coords="5,79,239,106"/>
 <area shape="rect" id="node2" href="$namespacesolutiongroupmodule.html#a7adf638009121f69976a00aa98c604b5" title=" " alt="" coords="287,23,477,64"/>
-<area shape="rect" id="node4" href="$namespacemf6coremodule.html#aa3df08d0706463a5a6574eac307a6636" title=" " alt="" coords="303,104,461,145"/>
+<area shape="rect" id="node4" href="$namespacemf6coremodule.html#aa3df08d0706463a5a6574eac307a6636" title="Rerun time step." alt="" coords="303,104,461,145"/>
 <area shape="rect" id="node3" href="$namespacesolutiongroupmodule.html#a24edb8f47b612f3c62752756210e9cca" title=" " alt="" coords="525,5,720,47"/>
 <area shape="rect" id="node5" href="$namespaceadaptivetimestepmodule.html#ac42ef52366c6713c5f75da5329f87cad" title="@ brief Reset time step because failure has occurred" alt="" coords="529,71,716,112"/>
-<area shape="rect" id="node7" href="$namespacesimmodule.html#a38f8eef6986861e5b90802678e34879c" title=" " alt="" coords="541,136,704,177"/>
+<area shape="rect" id="node7" href="$namespacesimmodule.html#a38f8eef6986861e5b90802678e34879c" title="Reset the simulation convergence flag." alt="" coords="541,136,704,177"/>
 <area shape="rect" id="node8" href="$namespacetdismodule.html#ae74144fd4dafbd8f5ec90936c9c349cc" title=" " alt="" coords="543,201,702,243"/>
 <area shape="rect" id="node6" href="$namespaceadaptivetimestepmodule.html#a95cd63bed2962fac3da7f09aaddbf7de" title="@ brief Determine if period is adaptive" alt="" coords="768,87,955,128"/>
 <area shape="rect" id="node9" href="$namespaceadaptivetimestepmodule.html#a1ef7ceed3d7cd5e91a9f407b788fc92f" title="@ brief Set time step" alt="" coords="768,168,955,209"/>

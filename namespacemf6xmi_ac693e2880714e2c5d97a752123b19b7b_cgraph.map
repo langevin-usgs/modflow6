@@ -1,8 +1,8 @@
 <map id="mf6xmi::xmi_finalize_time_step" name="mf6xmi::xmi_finalize_time_step">
 <area shape="rect" id="node1" title="Finalize the time step." alt="" coords="5,129,165,171"/>
-<area shape="rect" id="node2" href="$namespacemf6coremodule.html#aab3891c5763fe8a941e6799fe9c82388" title=" " alt="" coords="213,107,477,134"/>
+<area shape="rect" id="node2" href="$namespacemf6coremodule.html#aab3891c5763fe8a941e6799fe9c82388" title="Finalize time step." alt="" coords="213,107,477,134"/>
 <area shape="rect" id="node11" href="$namespacemf6bmierror.html#aa84ed04ce427bbe4950da84bbff88db0" title="Sets the last BMI error message and copies it to an exported C&#45;string." alt="" coords="270,159,421,200"/>
-<area shape="rect" id="node3" href="$namespacesimmodule.html#af24424b2b14a2c21680d1185f3ae84b5" title=" " alt="" coords="591,5,754,47"/>
+<area shape="rect" id="node3" href="$namespacesimmodule.html#af24424b2b14a2c21680d1185f3ae84b5" title="Simulation convergence check." alt="" coords="591,5,754,47"/>
 <area shape="rect" id="node5" href="$namespacebaseexchangemodule.html#ad92f8ec5d783349adc5a61e4e3d31f4b" title=" " alt="" coords="575,71,771,112"/>
 <area shape="rect" id="node7" href="$namespacebasemodelmodule.html#a79adefc92f4f7d0d032babb551c571f8" title=" " alt="" coords="525,137,820,163"/>
 <area shape="rect" id="node9" href="$namespacebasesolutionmodule.html#ad00fcf57eca44c1f8995e3904b1593de" title=" " alt="" coords="580,188,765,229"/>

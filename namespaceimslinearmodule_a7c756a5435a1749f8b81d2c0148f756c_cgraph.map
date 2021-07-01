@@ -13,16 +13,16 @@
 <area shape="rect" id="node7" href="$namespaceimslinearbasemodule.html#a4f7df45352607c57a3507642653df7fb" title="@ brief Test for solver convergence" alt="" coords="503,201,665,243"/>
 <area shape="rect" id="node8" href="$namespaceimslinearsparsekitmodule.html#a1a4780608c872605b62bdb68a390eb46" title=" " alt="" coords="488,267,680,308"/>
 <area shape="rect" id="node9" href="$namespacegenericutilitiesmodule.html#aa6f1e09d5f419107a1e51aeecc9c12b4" title=" " alt="" coords="500,332,668,373"/>
-<area shape="rect" id="node12" href="$namespacesimmodule.html#a4c46e49de78d4498dd4ec106357775e6" title=" " alt="" coords="492,565,676,591"/>
+<area shape="rect" id="node12" href="$namespacesimmodule.html#a4c46e49de78d4498dd4ec106357775e6" title="Return number of errors." alt="" coords="492,565,676,591"/>
 <area shape="rect" id="node13" href="$namespaceimslinearbasemodule.html#aa784813372a7873f409d9b39f7bd3dfb" title="@ brief Update the ILU0 preconditioner" alt="" coords="503,616,665,657"/>
 <area shape="rect" id="node14" href="$namespaceimslinearsparsekitmodule.html#af28cbfeb97b98bc2ac1e4acc36250636" title=" " alt="" coords="488,681,680,723"/>
-<area shape="rect" id="node17" href="$namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a" title=" " alt="" coords="497,514,671,541"/>
-<area shape="rect" id="node18" href="$namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61" title=" " alt="" coords="515,463,653,490"/>
+<area shape="rect" id="node17" href="$namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a" title="Store error message." alt="" coords="497,514,671,541"/>
+<area shape="rect" id="node18" href="$namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61" title="Stop the simulation." alt="" coords="515,463,653,490"/>
 <area shape="rect" id="node15" href="$namespaceimslinearsparsekitmodule.html#afd7fc2159572b0323dcf7a1cac17bb55" title=" " alt="" coords="728,623,941,664"/>
 <area shape="rect" id="node16" href="$namespacegenericutilitiesmodule.html#a34492cca79f70174fd015808be8b7ebf" title=" " alt="" coords="1003,597,1171,639"/>
-<area shape="rect" id="node19" href="$namespacesimmodule.html#aa04e734eebf95836b2f37839b65bcae9" title=" " alt="" coords="751,456,919,497"/>
+<area shape="rect" id="node19" href="$namespacesimmodule.html#aa04e734eebf95836b2f37839b65bcae9" title="Print the final messages." alt="" coords="751,456,919,497"/>
 <area shape="rect" id="node21" href="$namespacegenericutilitiesmodule.html#a3af5fcf48dcd06255d9bc07f6a25db59" title=" " alt="" coords="751,521,919,563"/>
-<area shape="rect" id="node20" href="$namespacesimmodule.html#a5feb4a39fb3f3dc66c03cc13b11e2297" title=" " alt="" coords="989,463,1184,490"/>
+<area shape="rect" id="node20" href="$namespacesimmodule.html#a5feb4a39fb3f3dc66c03cc13b11e2297" title="Close all open files." alt="" coords="989,463,1184,490"/>
 <area shape="rect" id="node24" href="$namespaceimsreorderingmodule.html#a920303380562e2a0ac28d74138f9c299" title=" " alt="" coords="503,747,665,788"/>
 <area shape="rect" id="node25" href="$namespaceimsreorderingmodule.html#aa425800b8906fcf1d29adf70aead3f54" title=" " alt="" coords="503,812,665,853"/>
 </map>

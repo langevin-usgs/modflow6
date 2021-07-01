@@ -1,13 +1,13 @@
 <map id="imslinearbasemodule::ims_base_pcu" name="imslinearbasemodule::ims_base_pcu">
 <area shape="rect" id="node1" title="@ brief Update the preconditioner" alt="" coords="5,122,168,163"/>
-<area shape="rect" id="node2" href="$namespacesimmodule.html#a4c46e49de78d4498dd4ec106357775e6" title=" " alt="" coords="220,5,404,32"/>
+<area shape="rect" id="node2" href="$namespacesimmodule.html#a4c46e49de78d4498dd4ec106357775e6" title="Return number of errors." alt="" coords="220,5,404,32"/>
 <area shape="rect" id="node3" href="$namespaceimslinearbasemodule.html#aa784813372a7873f409d9b39f7bd3dfb" title="@ brief Update the ILU0 preconditioner" alt="" coords="231,57,393,98"/>
 <area shape="rect" id="node4" href="$namespaceimslinearsparsekitmodule.html#af28cbfeb97b98bc2ac1e4acc36250636" title=" " alt="" coords="216,122,408,163"/>
-<area shape="rect" id="node7" href="$namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a" title=" " alt="" coords="225,188,399,215"/>
-<area shape="rect" id="node8" href="$namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61" title=" " alt="" coords="243,239,381,265"/>
+<area shape="rect" id="node7" href="$namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a" title="Store error message." alt="" coords="225,188,399,215"/>
+<area shape="rect" id="node8" href="$namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61" title="Stop the simulation." alt="" coords="243,239,381,265"/>
 <area shape="rect" id="node5" href="$namespaceimslinearsparsekitmodule.html#afd7fc2159572b0323dcf7a1cac17bb55" title=" " alt="" coords="456,89,669,130"/>
 <area shape="rect" id="node6" href="$namespacegenericutilitiesmodule.html#a34492cca79f70174fd015808be8b7ebf" title=" " alt="" coords="731,147,899,189"/>
-<area shape="rect" id="node9" href="$namespacesimmodule.html#aa04e734eebf95836b2f37839b65bcae9" title=" " alt="" coords="479,206,647,247"/>
+<area shape="rect" id="node9" href="$namespacesimmodule.html#aa04e734eebf95836b2f37839b65bcae9" title="Print the final messages." alt="" coords="479,206,647,247"/>
 <area shape="rect" id="node11" href="$namespacegenericutilitiesmodule.html#a3af5fcf48dcd06255d9bc07f6a25db59" title=" " alt="" coords="479,271,647,313"/>
-<area shape="rect" id="node10" href="$namespacesimmodule.html#a5feb4a39fb3f3dc66c03cc13b11e2297" title=" " alt="" coords="717,213,912,240"/>
+<area shape="rect" id="node10" href="$namespacesimmodule.html#a5feb4a39fb3f3dc66c03cc13b11e2297" title="Close all open files." alt="" coords="717,213,912,240"/>
 </map>
