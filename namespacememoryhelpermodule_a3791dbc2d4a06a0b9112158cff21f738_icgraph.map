@@ -45,8 +45,8 @@
 <area shape="rect" id="node49" href="$namespacext3dmodule.html#ad20f01d9a9fe69c0d007ba046a0435eb" title=" " alt="" coords="512,1042,668,1069"/>
 <area shape="rect" id="node8" href="$namespacegwtmodule.html#af18b6e0a8010b0b5ac1eae25d179c0dd" title=" " alt="" coords="252,325,409,367"/>
 <area shape="rect" id="node9" href="$namespacegwfmodule.html#a9fc339c6daad0503d34ef42f994a98ec" title=" " alt="" coords="252,604,409,645"/>
-<area shape="rect" id="node13" href="$namespacesimulationcreatemodule.html#a0043d2fa8d8b96e41e5e0fdfecaadae7" title=" " alt="" coords="5,1035,187,1076"/>
-<area shape="rect" id="node27" href="$namespacesimulationcreatemodule.html#abb116763d0b57efd5d804f40a52321ee" title=" " alt="" coords="240,1648,421,1689"/>
-<area shape="rect" id="node43" href="$namespacesimulationcreatemodule.html#aa6d30418b28eb07e46b20c32e8805806" title=" " alt="" coords="240,2195,421,2236"/>
+<area shape="rect" id="node13" href="$namespacesimulationcreatemodule.html#a0043d2fa8d8b96e41e5e0fdfecaadae7" title="Set the models to be used for the simulation." alt="" coords="5,1035,187,1076"/>
+<area shape="rect" id="node27" href="$namespacesimulationcreatemodule.html#abb116763d0b57efd5d804f40a52321ee" title="Set the exchanges to be used for the simulation." alt="" coords="240,1648,421,1689"/>
+<area shape="rect" id="node43" href="$namespacesimulationcreatemodule.html#aa6d30418b28eb07e46b20c32e8805806" title="Set the solution_groups to be used for the simulation." alt="" coords="240,2195,421,2236"/>
 <area shape="rect" id="node50" href="$namespacegwtdspmodule.html#a137ee979ee5781114bb5c5771af433cb" title=" " alt="" coords="246,1042,415,1069"/>
 </map>

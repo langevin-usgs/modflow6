@@ -1,6 +1,6 @@
 <map id="gwtmstmodule::get_freundlich_derivative" name="gwtmstmodule::get_freundlich_derivative">
-<area shape="rect" id="node1" title=" " alt="" coords="523,23,744,65"/>
-<area shape="rect" id="node2" href="$namespacegwtmstmodule.html#a67855ad68874c8c6bf7cdd74dfd3fa14" title=" " alt="" coords="256,31,475,57"/>
-<area shape="rect" id="node3" href="$namespacegwtmstmodule.html#a0fa9bb36f8c226b9ad2d28a5f0a08c3b" title=" " alt="" coords="5,5,208,32"/>
-<area shape="rect" id="node4" href="$namespacegwtmstmodule.html#ae85f0f1a250d1f5ad4d2e3657e2c1aac" title=" " alt="" coords="7,56,206,83"/>
+<area shape="rect" id="node1" title="@ brief Calculate sorption derivative using Freundlich" alt="" coords="523,23,744,65"/>
+<area shape="rect" id="node2" href="$namespacegwtmstmodule.html#a67855ad68874c8c6bf7cdd74dfd3fa14" title="@ brief Calculate sorption terms" alt="" coords="256,31,475,57"/>
+<area shape="rect" id="node3" href="$namespacegwtmstmodule.html#a0fa9bb36f8c226b9ad2d28a5f0a08c3b" title="@ brief Calculate sorption terms for package" alt="" coords="5,5,208,32"/>
+<area shape="rect" id="node4" href="$namespacegwtmstmodule.html#ae85f0f1a250d1f5ad4d2e3657e2c1aac" title="@ brief Fill sorption coefficient method for package" alt="" coords="7,56,206,83"/>
 </map>

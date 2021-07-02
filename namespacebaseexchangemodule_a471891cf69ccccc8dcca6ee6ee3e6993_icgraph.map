@@ -7,8 +7,8 @@
 <area shape="rect" id="node16" href="$namespacemf6coremodule.html#a40b8130d3cf17bc47fcb54c254aada8a" title="Read and prepare time step." alt="" coords="1115,197,1381,224"/>
 <area shape="rect" id="node18" href="$namespacemf6coremodule.html#a622ba9fa9473eb16b9f17553d6483ae9" title="Simulation allocate and read." alt="" coords="592,373,815,400"/>
 <area shape="rect" id="node19" href="$namespacemf6coremodule.html#a55d3318977ea83a1389aec5f42d5a77f" title="Define the simulation." alt="" coords="592,256,815,282"/>
-<area shape="rect" id="node4" href="$namespacesimulationcreatemodule.html#a7d37a8b63b2b0874f875f45b6cf93f03" title=" " alt="" coords="865,307,1064,348"/>
-<area shape="rect" id="node5" href="$namespacesimulationcreatemodule.html#afcbe0fd3c140a3ba4f0a5409e5dc8781" title=" " alt="" coords="613,307,794,348"/>
+<area shape="rect" id="node4" href="$namespacesimulationcreatemodule.html#a7d37a8b63b2b0874f875f45b6cf93f03" title="Read the simulation name file." alt="" coords="865,307,1064,348"/>
+<area shape="rect" id="node5" href="$namespacesimulationcreatemodule.html#afcbe0fd3c140a3ba4f0a5409e5dc8781" title="Read the simulation name file and initialize the models, exchanges." alt="" coords="613,307,794,348"/>
 <area shape="rect" id="node6" href="$namespacemf6coremodule.html#aa847da5116e01f4fad8885b0c4f96757" title="Initialize a simulation." alt="" coords="329,285,544,312"/>
 <area shape="rect" id="node7" href="$namespacemf6bmi.html#aa886df822e4ea66c30a97a9060da5de8" title="Initialize the computational core." alt="" coords="107,285,276,312"/>
 <area shape="rect" id="node8" href="$namespacemf6coremodule.html#a207819c711610066af1b83ec2a8efef0" title="Main controller." alt="" coords="101,113,281,140"/>

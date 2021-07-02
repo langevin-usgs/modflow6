@@ -1,5 +1,5 @@
 <map id="gwtmstmodule::read_data" name="gwtmstmodule::read_data">
-<area shape="rect" id="node1" title=" " alt="" coords="5,81,199,108"/>
+<area shape="rect" id="node1" title="@ brief Read data for package" alt="" coords="5,81,199,108"/>
 <area shape="rect" id="node2" href="$namespacesimmodule.html#a4c46e49de78d4498dd4ec106357775e6" title="Return number of errors." alt="" coords="252,5,436,32"/>
 <area shape="rect" id="node3" href="$namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a" title="Store error message." alt="" coords="257,56,431,83"/>
 <area shape="rect" id="node4" href="$namespacesimmodule.html#a0c10520244b0246773a188954a67ec9e" title="Store warning message." alt="" coords="247,107,441,133"/>

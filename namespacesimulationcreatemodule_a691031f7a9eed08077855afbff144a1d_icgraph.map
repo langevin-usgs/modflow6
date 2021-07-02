@@ -1,5 +1,5 @@
 <map id="simulationcreatemodule::simulation_da" name="simulationcreatemodule::simulation_da">
-<area shape="rect" id="node1" title=" " alt="" coords="584,23,765,65"/>
+<area shape="rect" id="node1" title="Deallocate simulation variables." alt="" coords="584,23,765,65"/>
 <area shape="rect" id="node2" href="$namespacemf6coremodule.html#ae17efa5a9e03fd31617a08c08e20ae03" title="Finalize the simulation." alt="" coords="329,31,536,57"/>
 <area shape="rect" id="node3" href="$namespacemf6bmi.html#ab8397f78e5c3c405656064c227eca26f" title="Clean up the initialized simulation." alt="" coords="111,5,271,32"/>
 <area shape="rect" id="node4" href="$namespacemf6coremodule.html#a207819c711610066af1b83ec2a8efef0" title="Main controller." alt="" coords="101,56,281,83"/>

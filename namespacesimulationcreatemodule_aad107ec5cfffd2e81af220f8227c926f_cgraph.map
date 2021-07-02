@@ -1,5 +1,5 @@
 <map id="simulationcreatemodule::timing_create" name="simulationcreatemodule::timing_create">
-<area shape="rect" id="node1" title=" " alt="" coords="5,559,187,600"/>
+<area shape="rect" id="node1" title="Set the timing module to be used for the simulation." alt="" coords="5,559,187,600"/>
 <area shape="rect" id="node2" href="$namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a" title="Store error message." alt="" coords="909,774,1083,801"/>
 <area shape="rect" id="node3" href="$namespacetdismodule.html#a8c9a06d57dc33ece9ff2351b6ba13d61" title=" " alt="" coords="235,409,381,435"/>
 <area shape="rect" id="node10" href="$namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61" title="Stop the simulation." alt="" coords="927,646,1065,673"/>

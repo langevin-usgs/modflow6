@@ -1,8 +1,8 @@
 <map id="gwtmstmodule::get_freundlich_conc" name="gwtmstmodule::get_freundlich_conc">
-<area shape="rect" id="node1" title=" " alt="" coords="523,78,781,105"/>
-<area shape="rect" id="node2" href="$namespacegwtmstmodule.html#a6a85e819e4468cd47eb01f1eba60e3f6" title=" " alt="" coords="278,5,453,47"/>
-<area shape="rect" id="node3" href="$namespacegwtmstmodule.html#a0d58dd7edd54f0a0286fa5b6f593a41a" title=" " alt="" coords="279,71,451,112"/>
-<area shape="rect" id="node4" href="$namespacegwtmstmodule.html#a67855ad68874c8c6bf7cdd74dfd3fa14" title=" " alt="" coords="256,137,475,163"/>
-<area shape="rect" id="node5" href="$namespacegwtmstmodule.html#a0fa9bb36f8c226b9ad2d28a5f0a08c3b" title=" " alt="" coords="5,111,208,138"/>
-<area shape="rect" id="node6" href="$namespacegwtmstmodule.html#ae85f0f1a250d1f5ad4d2e3657e2c1aac" title=" " alt="" coords="7,162,206,189"/>
+<area shape="rect" id="node1" title="@ brief Calculate sorption concentration using Freundlich" alt="" coords="523,78,781,105"/>
+<area shape="rect" id="node2" href="$namespacegwtmstmodule.html#a6a85e819e4468cd47eb01f1eba60e3f6" title="@ brief Calculate decay&#45;sorption terms for package" alt="" coords="278,5,453,47"/>
+<area shape="rect" id="node3" href="$namespacegwtmstmodule.html#a411dd441b93b747a04ba37f718a0a283" title="@ brief Fill sorption&#45;decay coefficient method for package" alt="" coords="279,71,451,112"/>
+<area shape="rect" id="node4" href="$namespacegwtmstmodule.html#a67855ad68874c8c6bf7cdd74dfd3fa14" title="@ brief Calculate sorption terms" alt="" coords="256,137,475,163"/>
+<area shape="rect" id="node5" href="$namespacegwtmstmodule.html#a0fa9bb36f8c226b9ad2d28a5f0a08c3b" title="@ brief Calculate sorption terms for package" alt="" coords="5,111,208,138"/>
+<area shape="rect" id="node6" href="$namespacegwtmstmodule.html#ae85f0f1a250d1f5ad4d2e3657e2c1aac" title="@ brief Fill sorption coefficient method for package" alt="" coords="7,162,206,189"/>
 </map>

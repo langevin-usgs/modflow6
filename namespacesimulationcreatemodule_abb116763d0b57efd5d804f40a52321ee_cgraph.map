@@ -1,5 +1,5 @@
 <map id="simulationcreatemodule::exchanges_create" name="simulationcreatemodule::exchanges_create">
-<area shape="rect" id="node1" title=" " alt="" coords="5,79,187,120"/>
+<area shape="rect" id="node1" title="Set the exchanges to be used for the simulation." alt="" coords="5,79,187,120"/>
 <area shape="rect" id="node2" href="$namespacegwfgwfexchangemodule.html#a48675d5bb4150882948c0844691ed446" title=" " alt="" coords="235,111,417,152"/>
 <area shape="rect" id="node6" href="$namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a" title="Store error message." alt="" coords="909,144,1084,170"/>
 <area shape="rect" id="node7" href="$namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61" title="Stop the simulation." alt="" coords="927,198,1066,225"/>

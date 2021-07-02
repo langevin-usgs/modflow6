@@ -1,5 +1,5 @@
 <map id="simulationcreatemodule::solution_groups_create" name="simulationcreatemodule::solution_groups_create">
-<area shape="rect" id="node1" title=" " alt="" coords="5,275,187,317"/>
+<area shape="rect" id="node1" title="Set the solution_groups to be used for the simulation." alt="" coords="5,275,187,317"/>
 <area shape="rect" id="node2" href="$namespacenumericalsolutionmodule.html#afe1d36406e23aa824de7b49f7a96a543" title="@ brief Create a new solution" alt="" coords="235,213,423,254"/>
 <area shape="rect" id="node6" href="$namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a" title="Store error message." alt="" coords="904,44,1079,71"/>
 <area shape="rect" id="node7" href="$namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61" title="Stop the simulation." alt="" coords="922,220,1061,247"/>

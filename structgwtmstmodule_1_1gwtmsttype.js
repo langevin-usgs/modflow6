@@ -24,6 +24,8 @@ var structgwtmstmodule_1_1gwtmsttype =
     [ "bulk_density", "structgwtmstmodule_1_1gwtmsttype.html#a474b4085e46d688d079646617cfd7299", null ],
     [ "decay", "structgwtmstmodule_1_1gwtmsttype.html#a30e4204c553fe511e4138542745092a5", null ],
     [ "decay_sorbed", "structgwtmstmodule_1_1gwtmsttype.html#a9ddfd9fd4dee6e4caef94851ae111aeb", null ],
+    [ "decaylast", "structgwtmstmodule_1_1gwtmsttype.html#a8acfbdd6cbfcf102a029512b66513c27", null ],
+    [ "decayslast", "structgwtmstmodule_1_1gwtmsttype.html#a9cfc5353633c8d32858b4e9f1d31315b", null ],
     [ "distcoef", "structgwtmstmodule_1_1gwtmsttype.html#aa0983e384d7976085990b951d0254b88", null ],
     [ "fmi", "structgwtmstmodule_1_1gwtmsttype.html#a90bc8d102763c7db085c31498f29864d", null ],
     [ "ibound", "structgwtmstmodule_1_1gwtmsttype.html#a1a02683778d099a13abd4e6ec56f0675", null ],

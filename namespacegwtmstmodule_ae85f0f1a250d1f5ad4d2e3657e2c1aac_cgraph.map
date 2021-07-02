@@ -1,8 +1,8 @@
 <map id="gwtmstmodule::mst_fc_srb" name="gwtmstmodule::mst_fc_srb">
-<area shape="rect" id="node1" title=" " alt="" coords="5,93,204,120"/>
-<area shape="rect" id="node2" href="$namespacegwtmstmodule.html#a67855ad68874c8c6bf7cdd74dfd3fa14" title=" " alt="" coords="252,93,471,120"/>
-<area shape="rect" id="node3" href="$namespacegwtmstmodule.html#a7677dc12366e5817f6f756c278d02ac5" title=" " alt="" coords="519,5,777,32"/>
-<area shape="rect" id="node4" href="$namespacegwtmstmodule.html#a5b55bd57b61eb65f144034426a8dcf9a" title=" " alt="" coords="537,57,759,98"/>
-<area shape="rect" id="node5" href="$namespacegwtmstmodule.html#aead2e0c98106a0cb499e163e67231295" title=" " alt="" coords="523,123,773,149"/>
-<area shape="rect" id="node6" href="$namespacegwtmstmodule.html#acda372342b5163673cd16cd1fbdd7da9" title=" " alt="" coords="541,174,755,215"/>
+<area shape="rect" id="node1" title="@ brief Fill sorption coefficient method for package" alt="" coords="5,93,204,120"/>
+<area shape="rect" id="node2" href="$namespacegwtmstmodule.html#a67855ad68874c8c6bf7cdd74dfd3fa14" title="@ brief Calculate sorption terms" alt="" coords="252,93,471,120"/>
+<area shape="rect" id="node3" href="$namespacegwtmstmodule.html#a7677dc12366e5817f6f756c278d02ac5" title="@ brief Calculate sorption concentration using Freundlich" alt="" coords="519,5,777,32"/>
+<area shape="rect" id="node4" href="$namespacegwtmstmodule.html#a5b55bd57b61eb65f144034426a8dcf9a" title="@ brief Calculate sorption derivative using Freundlich" alt="" coords="537,57,759,98"/>
+<area shape="rect" id="node5" href="$namespacegwtmstmodule.html#aead2e0c98106a0cb499e163e67231295" title="@ brief Calculate sorption concentration using Langmuir" alt="" coords="523,123,773,149"/>
+<area shape="rect" id="node6" href="$namespacegwtmstmodule.html#acda372342b5163673cd16cd1fbdd7da9" title="@ brief Calculate sorption derivative using Langmuir" alt="" coords="541,174,755,215"/>
 </map>

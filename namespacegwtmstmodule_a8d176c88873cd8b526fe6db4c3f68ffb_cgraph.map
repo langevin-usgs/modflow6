@@ -1,5 +1,5 @@
 <map id="gwtmstmodule::read_options" name="gwtmstmodule::read_options">
-<area shape="rect" id="node1" title=" " alt="" coords="5,35,163,77"/>
+<area shape="rect" id="node1" title="@ brief Read options for package" alt="" coords="5,35,163,77"/>
 <area shape="rect" id="node2" href="$namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a" title="Store error message." alt="" coords="211,17,385,44"/>
 <area shape="rect" id="node3" href="$namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61" title="Stop the simulation." alt="" coords="229,68,367,95"/>
 <area shape="rect" id="node4" href="$namespacesimmodule.html#aa04e734eebf95836b2f37839b65bcae9" title="Print the final messages." alt="" coords="433,27,601,69"/>

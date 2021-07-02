@@ -1,5 +1,6 @@
 var NAVTREEINDEX12 =
 {
+"namespacemawmodule.html":[2,0,66],
 "namespacemawmodule.html":[1,0,79],
 "namespacemembers.html":[1,1,0],
 "namespacemembers.html":[1,1,0,0],
@@ -48,8 +49,8 @@ var NAVTREEINDEX12 =
 "namespacemembers_t.html":[1,1,0,18],
 "namespacemembers_u.html":[1,1,0,19],
 "namespacemembers_v.html":[1,1,0,20],
-"namespacemembers_vars.html":[1,1,2],
 "namespacemembers_vars.html":[1,1,2,0],
+"namespacemembers_vars.html":[1,1,2],
 "namespacemembers_vars_b.html":[1,1,2,1],
 "namespacemembers_vars_c.html":[1,1,2,2],
 "namespacemembers_vars_d.html":[1,1,2,3],
@@ -125,8 +126,8 @@ var NAVTREEINDEX12 =
 "namespacerchmodule.html":[1,0,110],
 "namespacerectangulargeometrymodule.html":[2,0,89],
 "namespacerectangulargeometrymodule.html":[1,0,111],
-"namespacerivmodule.html":[2,0,90],
 "namespacerivmodule.html":[1,0,112],
+"namespacerivmodule.html":[2,0,90],
 "namespaces.html":[1,0],
 "namespacesfrmodule.html":[2,0,91],
 "namespacesfrmodule.html":[1,0,113],
@@ -248,6 +249,5 @@ var NAVTREEINDEX12 =
 "structbasedismodule_1_1disbasetype.html#abfb6978c66299c47023cfbd6c4c42618":[2,0,3,0,5],
 "structbasedismodule_1_1disbasetype.html#ac152f1c6437a2ef9c65462a3ee60c27c":[2,0,3,0,15],
 "structbasedismodule_1_1disbasetype.html#ace29d2b175c4971847dc36effd54bce0":[2,0,3,0,40],
-"structbasedismodule_1_1disbasetype.html#ad08a7463f8765bedb540ba8271efa26b":[2,0,3,0,56],
-"structbasedismodule_1_1disbasetype.html#ad0a36eed8347ba8fe27da8ab54788a21":[2,0,3,0,22]
+"structbasedismodule_1_1disbasetype.html#ad08a7463f8765bedb540ba8271efa26b":[2,0,3,0,56]
 };

@@ -2,9 +2,9 @@
 <area shape="rect" id="node1" title=" " alt="" coords="1703,23,1875,65"/>
 <area shape="rect" id="node2" href="$namespacetdismodule.html#a7a451136daa552e63c867bdbbcaadeda" title=" " alt="" coords="1492,23,1655,65"/>
 <area shape="rect" id="node3" href="$namespacetdismodule.html#a8c9a06d57dc33ece9ff2351b6ba13d61" title=" " alt="" coords="1297,31,1444,57"/>
-<area shape="rect" id="node4" href="$namespacesimulationcreatemodule.html#aad107ec5cfffd2e81af220f8227c926f" title=" " alt="" coords="1068,23,1249,65"/>
-<area shape="rect" id="node5" href="$namespacesimulationcreatemodule.html#a7d37a8b63b2b0874f875f45b6cf93f03" title=" " alt="" coords="821,23,1020,65"/>
-<area shape="rect" id="node6" href="$namespacesimulationcreatemodule.html#afcbe0fd3c140a3ba4f0a5409e5dc8781" title=" " alt="" coords="592,23,773,65"/>
+<area shape="rect" id="node4" href="$namespacesimulationcreatemodule.html#aad107ec5cfffd2e81af220f8227c926f" title="Set the timing module to be used for the simulation." alt="" coords="1068,23,1249,65"/>
+<area shape="rect" id="node5" href="$namespacesimulationcreatemodule.html#a7d37a8b63b2b0874f875f45b6cf93f03" title="Read the simulation name file." alt="" coords="821,23,1020,65"/>
+<area shape="rect" id="node6" href="$namespacesimulationcreatemodule.html#afcbe0fd3c140a3ba4f0a5409e5dc8781" title="Read the simulation name file and initialize the models, exchanges." alt="" coords="592,23,773,65"/>
 <area shape="rect" id="node7" href="$namespacemf6coremodule.html#aa847da5116e01f4fad8885b0c4f96757" title="Initialize a simulation." alt="" coords="329,31,544,57"/>
 <area shape="rect" id="node8" href="$namespacemf6bmi.html#aa886df822e4ea66c30a97a9060da5de8" title="Initialize the computational core." alt="" coords="107,5,276,32"/>
 <area shape="rect" id="node9" href="$namespacemf6coremodule.html#a207819c711610066af1b83ec2a8efef0" title="Main controller." alt="" coords="101,56,281,83"/>

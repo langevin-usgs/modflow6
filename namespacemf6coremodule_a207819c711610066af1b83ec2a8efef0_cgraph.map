@@ -24,7 +24,7 @@
 <area shape="rect" id="node25" href="$namespacelistsmodule.html#acfc4a2fee6511bdae3eae6fbf510e46c" title=" " alt="" coords="905,1134,1061,1160"/>
 <area shape="rect" id="node26" href="$namespacememorymanagermodule.html#a4db1987bf8fd0385f329ac688662ced9" title="Deallocate memory in the memory manager." alt="" coords="891,834,1075,876"/>
 <area shape="rect" id="node28" href="$namespacememorymanagermodule.html#a3482099aea98afc7340a70d4073de4d9" title="Write memory manager memory usage based on the user&#45;specified memory_print_option." alt="" coords="891,1217,1075,1258"/>
-<area shape="rect" id="node36" href="$namespacesimulationcreatemodule.html#a691031f7a9eed08077855afbff144a1d" title=" " alt="" coords="893,1068,1074,1109"/>
+<area shape="rect" id="node36" href="$namespacesimulationcreatemodule.html#a691031f7a9eed08077855afbff144a1d" title="Deallocate simulation variables." alt="" coords="893,1068,1074,1109"/>
 <area shape="rect" id="node37" href="$namespacetdismodule.html#add64b0264997708a5d9019384517696b" title=" " alt="" coords="908,1410,1059,1436"/>
 <area shape="rect" id="node18" href="$namespacebaseexchangemodule.html#a471891cf69ccccc8dcca6ee6ee3e6993" title=" " alt="" coords="1254,782,1453,824"/>
 <area shape="rect" id="node20" href="$namespacebasemodelmodule.html#a6612a181104601a56b8227e88e5dc8f5" title=" " alt="" coords="1204,666,1503,692"/>
@@ -41,7 +41,7 @@
 <area shape="rect" id="node38" href="$namespaceadaptivetimestepmodule.html#ab5bba04bd8165e1beeb8372060811b34" title="@ brief Deallocate variables" alt="" coords="1260,1498,1447,1540"/>
 <area shape="rect" id="node40" href="$namespacemf6coremodule.html#afe0de61eeb946afc5c3934b86b0082bd" title="Print info to screen." alt="" coords="535,39,723,66"/>
 <area shape="rect" id="node43" href="$namespacemf6coremodule.html#a622ba9fa9473eb16b9f17553d6483ae9" title="Simulation allocate and read." alt="" coords="518,624,741,651"/>
-<area shape="rect" id="node44" href="$namespacesimulationcreatemodule.html#afcbe0fd3c140a3ba4f0a5409e5dc8781" title=" " alt="" coords="539,380,720,421"/>
+<area shape="rect" id="node44" href="$namespacesimulationcreatemodule.html#afcbe0fd3c140a3ba4f0a5409e5dc8781" title="Read the simulation name file and initialize the models, exchanges." alt="" coords="539,380,720,421"/>
 <area shape="rect" id="node46" href="$namespacemf6coremodule.html#a55d3318977ea83a1389aec5f42d5a77f" title="Define the simulation." alt="" coords="518,675,741,702"/>
 <area shape="rect" id="node41" href="$namespacesimmodule.html#a3d864cdd9b024655fbc89f6caea11822" title="Print the header and initializes messaging" alt="" coords="913,32,1053,73"/>
 <area shape="rect" id="node42" href="$namespacetimermodule.html#aabd6b77317f11bb9dd7d89c52317c104" title=" " alt="" coords="1561,14,1743,40"/>

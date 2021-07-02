@@ -1,5 +1,5 @@
 <map id="simulationcreatemodule::add_model" name="simulationcreatemodule::add_model">
-<area shape="rect" id="node1" title=" " alt="" coords="5,35,187,77"/>
+<area shape="rect" id="node1" title="Add the model to the list of modelnames, check that the model name is valid." alt="" coords="5,35,187,77"/>
 <area shape="rect" id="node2" href="$namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a" title="Store error message." alt="" coords="235,17,409,44"/>
 <area shape="rect" id="node3" href="$namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61" title="Stop the simulation." alt="" coords="253,68,391,95"/>
 <area shape="rect" id="node4" href="$namespacesimmodule.html#aa04e734eebf95836b2f37839b65bcae9" title="Print the final messages." alt="" coords="457,27,625,69"/>

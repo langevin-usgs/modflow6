@@ -1,5 +1,6 @@
 var NAVTREEINDEX13 =
 {
+"structbasedismodule_1_1disbasetype.html#ad0a36eed8347ba8fe27da8ab54788a21":[2,0,3,0,22],
 "structbasedismodule_1_1disbasetype.html#ad64e46df248ab983d58741b00b4fd2e3":[2,0,3,0,44],
 "structbasedismodule_1_1disbasetype.html#ad67ab56681c4e29836372cd85cbbada4":[2,0,3,0,66],
 "structbasedismodule_1_1disbasetype.html#ad7980892e426ad28babb87623827cd64":[2,0,3,0,43],
@@ -248,6 +249,5 @@ var NAVTREEINDEX13 =
 "structbudgetfilereadermodule_1_1budgetfilereadertype.html#ab6189c2d8f033e677152fbe02ddd0eba":[2,0,11,0,3],
 "structbudgetfilereadermodule_1_1budgetfilereadertype.html#ab70405ea2d566ee6869c0c0a4b27728c":[2,0,11,0,5],
 "structbudgetfilereadermodule_1_1budgetfilereadertype.html#abab28a5fff31f2fef9b1801d23990ec8":[2,0,11,0,15],
-"structbudgetfilereadermodule_1_1budgetfilereadertype.html#ababcbd8af58a4f3ff36ff009cb449521":[2,0,11,0,24],
-"structbudgetfilereadermodule_1_1budgetfilereadertype.html#abe0127cd98d08d768b9ace6d7fdb2917":[2,0,11,0,21]
+"structbudgetfilereadermodule_1_1budgetfilereadertype.html#ababcbd8af58a4f3ff36ff009cb449521":[2,0,11,0,24]
 };
