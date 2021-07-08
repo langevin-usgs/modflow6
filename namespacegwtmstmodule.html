@@ -912,22 +912,29 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l01591"></a><span class="lineno"> 1591</span>&#160;      <span class="keywordflow">if</span> (kiter == 1) <span class="keywordflow">then</span></div>
 <div class="line"><a name="l01592"></a><span class="lineno"> 1592</span>&#160;        decay_rate = min(decay_rate_usr, cold / delt)</div>
 <div class="line"><a name="l01593"></a><span class="lineno"> 1593</span>&#160;      <span class="keywordflow">else</span></div>
-<div class="line"><a name="l01594"></a><span class="lineno"> 1594</span>&#160;        decay_rate = decay_rate_last + cnew / delt</div>
-<div class="line"><a name="l01595"></a><span class="lineno"> 1595</span>&#160;        decay_rate = min(decay_rate_usr, decay_rate)</div>
-<div class="line"><a name="l01596"></a><span class="lineno"> 1596</span>&#160;<span class="keywordflow">      end if</span></div>
-<div class="line"><a name="l01597"></a><span class="lineno"> 1597</span>&#160;      decay_rate = max(decay_rate, <a class="code" href="namespaceconstantsmodule.html#abab5757666b9ddd2726c20ce48dd0050">dzero</a>)</div>
-<div class="line"><a name="l01598"></a><span class="lineno"> 1598</span>&#160;<span class="keywordflow">    end if</span></div>
-<div class="line"><a name="l01599"></a><span class="lineno"> 1599</span>&#160;    <span class="keywordflow">return</span></div>
+<div class="line"><a name="l01594"></a><span class="lineno"> 1594</span>&#160;        decay_rate = decay_rate_last</div>
+<div class="line"><a name="l01595"></a><span class="lineno"> 1595</span>&#160;        <span class="keywordflow">if</span> (cnew &lt; <a class="code" href="namespaceconstantsmodule.html#abab5757666b9ddd2726c20ce48dd0050">dzero</a>) <span class="keywordflow">then</span></div>
+<div class="line"><a name="l01596"></a><span class="lineno"> 1596</span>&#160;          decay_rate = decay_rate_last + cnew / delt</div>
+<div class="line"><a name="l01597"></a><span class="lineno"> 1597</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (cnew &gt; cold) <span class="keywordflow">then</span></div>
+<div class="line"><a name="l01598"></a><span class="lineno"> 1598</span>&#160;          decay_rate = decay_rate_last + cnew / delt</div>
+<div class="line"><a name="l01599"></a><span class="lineno"> 1599</span>&#160;<span class="keywordflow">        end if</span></div>
+<div class="line"><a name="l01600"></a><span class="lineno"> 1600</span>&#160;        decay_rate = min(decay_rate_usr, decay_rate)</div>
+<div class="line"><a name="l01601"></a><span class="lineno"> 1601</span>&#160;<span class="keywordflow">      end if</span></div>
+<div class="line"><a name="l01602"></a><span class="lineno"> 1602</span>&#160;      decay_rate = max(decay_rate, <a class="code" href="namespaceconstantsmodule.html#abab5757666b9ddd2726c20ce48dd0050">dzero</a>)</div>
+<div class="line"><a name="l01603"></a><span class="lineno"> 1603</span>&#160;<span class="keywordflow">    end if</span></div>
+<div class="line"><a name="l01604"></a><span class="lineno"> 1604</span>&#160;    <span class="keywordflow">return</span></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacegwtmstmodule_a2b025361da5a358fd0c7d4c06ea2bf52_icgraph.png" border="0" usemap="#namespacegwtmstmodule_a2b025361da5a358fd0c7d4c06ea2bf52_icgraph" alt=""/></div>
 <map name="namespacegwtmstmodule_a2b025361da5a358fd0c7d4c06ea2bf52_icgraph" id="namespacegwtmstmodule_a2b025361da5a358fd0c7d4c06ea2bf52_icgraph">
-<area shape="rect" title="@ brief Calculate zero&#45;order decay rate and constrain if necessary" alt="" coords="259,86,443,127"/>
-<area shape="rect" href="namespacegwtmstmodule.html#a9bc28b904447d8ef01cebab46e6ab33c" title="@ brief Calculate decay terms for package" alt="" coords="5,5,211,32"/>
-<area shape="rect" href="namespacegwtmstmodule.html#a6a85e819e4468cd47eb01f1eba60e3f6" title="@ brief Calculate decay&#45;sorption terms for package" alt="" coords="21,57,195,98"/>
-<area shape="rect" href="namespacegwtmstmodule.html#ab5df6f8c8ed881ab7378a8cdb61483bd" title="@ brief Fill decay coefficient method for package" alt="" coords="7,123,209,149"/>
-<area shape="rect" href="namespacegwtmstmodule.html#a411dd441b93b747a04ba37f718a0a283" title="@ brief Fill sorption&#45;decay coefficient method for package" alt="" coords="22,174,194,215"/>
+<area shape="rect" title="@ brief Calculate zero&#45;order decay rate and constrain if necessary" alt="" coords="259,129,443,170"/>
+<area shape="rect" href="namespacegwtistmodule.html#ada94becde756a937e3b9e970a31de656" title="@ brief Calculate package flows." alt="" coords="29,5,187,32"/>
+<area shape="rect" href="namespacegwtistmodule.html#a37c321f840348165c87503d0d1165a6e" title="@ brief Fill coefficient method for package" alt="" coords="31,56,185,83"/>
+<area shape="rect" href="namespacegwtmstmodule.html#a9bc28b904447d8ef01cebab46e6ab33c" title="@ brief Calculate decay terms for package" alt="" coords="5,107,211,133"/>
+<area shape="rect" href="namespacegwtmstmodule.html#a6a85e819e4468cd47eb01f1eba60e3f6" title="@ brief Calculate decay&#45;sorption terms for package" alt="" coords="21,158,195,199"/>
+<area shape="rect" href="namespacegwtmstmodule.html#ab5df6f8c8ed881ab7378a8cdb61483bd" title="@ brief Fill decay coefficient method for package" alt="" coords="7,224,209,251"/>
+<area shape="rect" href="namespacegwtmstmodule.html#a411dd441b93b747a04ba37f718a0a283" title="@ brief Fill sorption&#45;decay coefficient method for package" alt="" coords="22,275,194,317"/>
 </map>
 </div>
 
@@ -3312,7 +3319,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacegwtmstmodule.html">gwtmstmodule</a></li>
-    <li class="footer">Generated on Fri Jul 2 2021 15:38:21 for MODFLOW 6 by
+    <li class="footer">Generated on Thu Jul 8 2021 19:04:02 for MODFLOW 6 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

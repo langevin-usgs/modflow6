@@ -1,5 +1,8 @@
 <map id="gwtistmodule::ist_cq" name="gwtistmodule::ist_cq">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,163,32"/>
-<area shape="rect" id="node2" href="$namespacegwtistmodule.html#aed0e93e57bfc7dfa37f6fdb77b64e0e7" title=" " alt="" coords="211,5,420,32"/>
-<area shape="rect" id="node3" href="$namespacegwtistmodule.html#a813cfcafe68aa1e5f486b48421e94290" title=" " alt="" coords="468,5,667,32"/>
+<area shape="rect" id="node1" title="@ brief Calculate package flows." alt="" coords="5,122,163,149"/>
+<area shape="rect" id="node2" href="$namespacegwtistmodule.html#ae1c89f1f938ece51e3858ab650f803de" title="@ brief Calculate the immobile domain budget terms" alt="" coords="211,5,405,47"/>
+<area shape="rect" id="node3" href="$namespacegwtistmodule.html#a51843401d128c303b6b238be12118cb7" title="@ brief Calculate the immobile domain concentration" alt="" coords="211,71,405,98"/>
+<area shape="rect" id="node4" href="$namespacegwtistmodule.html#aba6bb9e373947549332354cfb94457a1" title="@ brief Calculate immobile domain equation terms" alt="" coords="211,122,405,149"/>
+<area shape="rect" id="node5" href="$namespacegwtistmodule.html#a82e8f00f26c4919ec014f2318ac2d60e" title="@ brief Calculate the hcof and rhs terms for immobile domain" alt="" coords="211,173,405,199"/>
+<area shape="rect" id="node6" href="$namespacegwtmstmodule.html#a2b025361da5a358fd0c7d4c06ea2bf52" title="@ brief Calculate zero&#45;order decay rate and constrain if necessary" alt="" coords="216,224,400,265"/>
 </map>

@@ -1,5 +1,5 @@
 <map id="gwtistmodule::read_data" name="gwtistmodule::read_data">
-<area shape="rect" id="node1" title=" " alt="" coords="5,56,189,83"/>
+<area shape="rect" id="node1" title="@ brief Read data for package" alt="" coords="5,56,189,83"/>
 <area shape="rect" id="node2" href="$namespacesimmodule.html#a4c46e49de78d4498dd4ec106357775e6" title="Return number of errors." alt="" coords="237,5,421,32"/>
 <area shape="rect" id="node3" href="$namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a" title="Store error message." alt="" coords="242,56,417,83"/>
 <area shape="rect" id="node4" href="$namespacesimmodule.html#a0be97214c1d4fcf42bc4ddc27b111b61" title="Stop the simulation." alt="" coords="260,107,399,133"/>

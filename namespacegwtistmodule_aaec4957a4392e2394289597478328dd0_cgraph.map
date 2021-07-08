@@ -1,5 +1,5 @@
 <map id="gwtistmodule::ist_ar" name="gwtistmodule::ist_ar">
-<area shape="rect" id="node1" title=" " alt="" coords="5,81,160,108"/>
+<area shape="rect" id="node1" title="@ brief Allocate and read method for package" alt="" coords="5,81,160,108"/>
 <area shape="rect" id="node2" href="$namespacebudgetmodule.html#a5d07ccf1026ac718f510c44519685c0f" title=" " alt="" coords="208,5,396,32"/>
 <area shape="rect" id="node3" href="$namespacesimmodule.html#a4c46e49de78d4498dd4ec106357775e6" title="Return number of errors." alt="" coords="210,56,394,83"/>
 <area shape="rect" id="node4" href="$namespacesimmodule.html#a536cb6f0e13fcd33755e414641ff931a" title="Store error message." alt="" coords="215,107,389,133"/>

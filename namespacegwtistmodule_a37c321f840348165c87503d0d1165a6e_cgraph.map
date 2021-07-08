@@ -1,5 +1,6 @@
 <map id="gwtistmodule::ist_fc" name="gwtistmodule::ist_fc">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,160,32"/>
-<area shape="rect" id="node2" href="$namespacegwtistmodule.html#aed0e93e57bfc7dfa37f6fdb77b64e0e7" title=" " alt="" coords="208,5,417,32"/>
-<area shape="rect" id="node3" href="$namespacegwtistmodule.html#a813cfcafe68aa1e5f486b48421e94290" title=" " alt="" coords="465,5,664,32"/>
+<area shape="rect" id="node1" title="@ brief Fill coefficient method for package" alt="" coords="5,56,160,83"/>
+<area shape="rect" id="node2" href="$namespacegwtistmodule.html#aba6bb9e373947549332354cfb94457a1" title="@ brief Calculate immobile domain equation terms" alt="" coords="208,5,403,32"/>
+<area shape="rect" id="node3" href="$namespacegwtistmodule.html#a82e8f00f26c4919ec014f2318ac2d60e" title="@ brief Calculate the hcof and rhs terms for immobile domain" alt="" coords="208,56,403,83"/>
+<area shape="rect" id="node4" href="$namespacegwtmstmodule.html#a2b025361da5a358fd0c7d4c06ea2bf52" title="@ brief Calculate zero&#45;order decay rate and constrain if necessary" alt="" coords="213,107,397,149"/>
 </map>

@@ -1,5 +1,9 @@
 var NAVTREEINDEX21 =
 {
+"structlakmodule_1_1laktype.html#ab98bdec5bf3df183571e54d7c8ad771e":[2,0,63,1,173],
+"structlakmodule_1_1laktype.html#abbd6865a1e042f6a92be8e94582339fa":[2,0,63,1,119],
+"structlakmodule_1_1laktype.html#abbf18d84c8acd22507915daeab9c6822":[2,0,63,1,92],
+"structlakmodule_1_1laktype.html#abd231744c870307efa77bf4558dcccbd":[2,0,63,1,63],
 "structlakmodule_1_1laktype.html#abdcdaf7930ae4999a2adc140923a1926":[2,0,63,1,112],
 "structlakmodule_1_1laktype.html#abff5c20c31fa0d1aea4aab0d10b0fc19":[2,0,63,1,87],
 "structlakmodule_1_1laktype.html#ac061ba24bd64c2d402a07bfb9c0bab71":[2,0,63,1,105],
@@ -245,9 +249,5 @@ var NAVTREEINDEX21 =
 "structmemorylistmodule_1_1memorylisttype.html#ac6e188150aa5b5a79cfa0ae7d994244a":[2,0,67,0,2],
 "structmemorylistmodule_1_1memorylisttype.html#ae300641307ee76887fe76b51d177cbfe":[2,0,67,0,1],
 "structmemorysethandlermodule_1_1eventhandlerdatatype.html":[2,0,69,0],
-"structmemorysethandlermodule_1_1eventhandlerdatatype.html#a207640ecc05191c064ef27c1d5af58fb":[2,0,69,0,1],
-"structmemorysethandlermodule_1_1eventhandlerdatatype.html#aefaeeadd6f7af988e61765ebc389f2b6":[2,0,69,0,0],
-"structmemorytypemodule_1_1memorytype.html":[2,0,70,0],
-"structmemorytypemodule_1_1memorytype.html#a04b246d6703e169b21b81a0e1e36fcf4":[2,0,70,0,4],
-"structmemorytypemodule_1_1memorytype.html#a0fb2b6ecafe23b16ab906414fb6e2d34":[2,0,70,0,11]
+"structmemorysethandlermodule_1_1eventhandlerdatatype.html#a207640ecc05191c064ef27c1d5af58fb":[2,0,69,0,1]
 };

@@ -1707,16 +1707,21 @@ $(document).ready(function(){initNavTree('gwt1mst1_8f90_source.html',''); initRe
 <div class="line"><a name="l01591"></a><span class="lineno"> 1591</span>&#160;      <span class="keywordflow">if</span> (kiter == 1) <span class="keywordflow">then</span></div>
 <div class="line"><a name="l01592"></a><span class="lineno"> 1592</span>&#160;        decay_rate = min(decay_rate_usr, cold / delt)</div>
 <div class="line"><a name="l01593"></a><span class="lineno"> 1593</span>&#160;      <span class="keywordflow">else</span></div>
-<div class="line"><a name="l01594"></a><span class="lineno"> 1594</span>&#160;        decay_rate = decay_rate_last + cnew / delt</div>
-<div class="line"><a name="l01595"></a><span class="lineno"> 1595</span>&#160;        decay_rate = min(decay_rate_usr, decay_rate)</div>
-<div class="line"><a name="l01596"></a><span class="lineno"> 1596</span>&#160;<span class="keywordflow">      end if</span></div>
-<div class="line"><a name="l01597"></a><span class="lineno"> 1597</span>&#160;      decay_rate = max(decay_rate, <a class="code" href="namespaceconstantsmodule.html#abab5757666b9ddd2726c20ce48dd0050">dzero</a>)</div>
-<div class="line"><a name="l01598"></a><span class="lineno"> 1598</span>&#160;<span class="keywordflow">    end if</span></div>
-<div class="line"><a name="l01599"></a><span class="lineno"> 1599</span>&#160;    <span class="keywordflow">return</span></div>
-<div class="line"><a name="l01600"></a><span class="lineno"> 1600</span>&#160;  <span class="keyword">end function </span><a class="code" href="namespacegwtmstmodule.html#a2b025361da5a358fd0c7d4c06ea2bf52">get_zero_order_decay</a></div>
-<div class="line"><a name="l01601"></a><span class="lineno"> 1601</span>&#160;  </div>
-<div class="line"><a name="l01602"></a><span class="lineno"> 1602</span>&#160;   </div>
-<div class="line"><a name="l01603"></a><span class="lineno"> 1603</span>&#160;<span class="keyword">end module </span>GwtMstModule</div>
+<div class="line"><a name="l01594"></a><span class="lineno"> 1594</span>&#160;        decay_rate = decay_rate_last</div>
+<div class="line"><a name="l01595"></a><span class="lineno"> 1595</span>&#160;        <span class="keywordflow">if</span> (cnew &lt; <a class="code" href="namespaceconstantsmodule.html#abab5757666b9ddd2726c20ce48dd0050">dzero</a>) <span class="keywordflow">then</span></div>
+<div class="line"><a name="l01596"></a><span class="lineno"> 1596</span>&#160;          decay_rate = decay_rate_last + cnew / delt</div>
+<div class="line"><a name="l01597"></a><span class="lineno"> 1597</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (cnew &gt; cold) <span class="keywordflow">then</span></div>
+<div class="line"><a name="l01598"></a><span class="lineno"> 1598</span>&#160;          decay_rate = decay_rate_last + cnew / delt</div>
+<div class="line"><a name="l01599"></a><span class="lineno"> 1599</span>&#160;<span class="keywordflow">        end if</span></div>
+<div class="line"><a name="l01600"></a><span class="lineno"> 1600</span>&#160;        decay_rate = min(decay_rate_usr, decay_rate)</div>
+<div class="line"><a name="l01601"></a><span class="lineno"> 1601</span>&#160;<span class="keywordflow">      end if</span></div>
+<div class="line"><a name="l01602"></a><span class="lineno"> 1602</span>&#160;      decay_rate = max(decay_rate, <a class="code" href="namespaceconstantsmodule.html#abab5757666b9ddd2726c20ce48dd0050">dzero</a>)</div>
+<div class="line"><a name="l01603"></a><span class="lineno"> 1603</span>&#160;<span class="keywordflow">    end if</span></div>
+<div class="line"><a name="l01604"></a><span class="lineno"> 1604</span>&#160;    <span class="keywordflow">return</span></div>
+<div class="line"><a name="l01605"></a><span class="lineno"> 1605</span>&#160;  <span class="keyword">end function </span><a class="code" href="namespacegwtmstmodule.html#a2b025361da5a358fd0c7d4c06ea2bf52">get_zero_order_decay</a></div>
+<div class="line"><a name="l01606"></a><span class="lineno"> 1606</span>&#160;  </div>
+<div class="line"><a name="l01607"></a><span class="lineno"> 1607</span>&#160;   </div>
+<div class="line"><a name="l01608"></a><span class="lineno"> 1608</span>&#160;<span class="keyword">end module </span>GwtMstModule</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="anamespacegwtmstmodule_html_a478b81bdc62688ed1803ff103ad7385d"><div class="ttname"><a href="namespacegwtmstmodule.html#a478b81bdc62688ed1803ff103ad7385d">gwtmstmodule::mst_cq</a></div><div class="ttdeci">subroutine mst_cq(this, nodes, cnew, cold, flowja)</div><div class="ttdoc">@ brief Calculate flows for package</div><div class="ttdef"><b>Definition:</b> <a href="gwt1mst1_8f90_source.html#l00569">gwt1mst1.f90:569</a></div></div>
@@ -1788,7 +1793,7 @@ $(document).ready(function(){initNavTree('gwt1mst1_8f90_source.html',''); initRe
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_32e188284d239da8bb14ec1dabb0c35f.html">Model</a></li><li class="navelem"><a class="el" href="dir_5ac382e795535087161f2a8b7f95a830.html">GroundWaterTransport</a></li><li class="navelem"><a class="el" href="gwt1mst1_8f90.html">gwt1mst1.f90</a></li>
-    <li class="footer">Generated on Fri Jul 2 2021 15:38:18 for MODFLOW 6 by
+    <li class="footer">Generated on Thu Jul 8 2021 19:03:58 for MODFLOW 6 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

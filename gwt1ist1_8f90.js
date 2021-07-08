@@ -1,12 +1,12 @@
 var gwt1ist1_8f90 =
 [
     [ "gwtisttype", "structgwtistmodule_1_1gwtisttype.html", "structgwtistmodule_1_1gwtisttype" ],
+    [ "accumulate_budterm", "gwt1ist1_8f90.html#ae1c89f1f938ece51e3858ab650f803de", null ],
     [ "allocate_scalars", "gwt1ist1_8f90.html#aaaa3a8e269ee0d09d8d4e33b5eb7391e", null ],
-    [ "calccim", "gwt1ist1_8f90.html#a4bec645b4e0786bef24fa889eef489c8", null ],
-    [ "calcddbud", "gwt1ist1_8f90.html#a4c7a8e405cd0cd3831efbba2d3eaf866", null ],
-    [ "calcddconc", "gwt1ist1_8f90.html#a229c8d99a2eee37a8ab3905149348d10", null ],
-    [ "calcddhcofrhs", "gwt1ist1_8f90.html#aed0e93e57bfc7dfa37f6fdb77b64e0e7", null ],
-    [ "calcddterms", "gwt1ist1_8f90.html#a813cfcafe68aa1e5f486b48421e94290", null ],
+    [ "get_ddconc", "gwt1ist1_8f90.html#a51843401d128c303b6b238be12118cb7", null ],
+    [ "get_ddterm", "gwt1ist1_8f90.html#aba6bb9e373947549332354cfb94457a1", null ],
+    [ "get_hcofrhs", "gwt1ist1_8f90.html#a82e8f00f26c4919ec014f2318ac2d60e", null ],
+    [ "ist_ad", "gwt1ist1_8f90.html#ae036b3aa4f13696f131c99e63b8fed7a", null ],
     [ "ist_allocate_arrays", "gwt1ist1_8f90.html#ad885bba7122d4e3d9b9511ca820f10c8", null ],
     [ "ist_ar", "gwt1ist1_8f90.html#aaec4957a4392e2394289597478328dd0", null ],
     [ "ist_bd", "gwt1ist1_8f90.html#ae29f3d0e014cba69c1aa21c6a74afa89", null ],
