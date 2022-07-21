@@ -84,6 +84,7 @@ default_value ((1.0, 1, 1.0),)
 block perioddata
 name perlen
 type double precision
+shape (nper)
 in_record true
 tagged false
 reader urword
@@ -94,6 +95,7 @@ description is the length of a stress period.
 block perioddata
 name nstp
 type integer
+shape (nper)
 in_record true
 tagged false
 reader urword
@@ -104,6 +106,7 @@ description is the number of time steps in a stress period.
 block perioddata
 name tsmult
 type double precision
+shape (nper)
 in_record true
 tagged false
 reader urword
