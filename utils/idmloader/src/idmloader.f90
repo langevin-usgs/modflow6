@@ -40,16 +40,18 @@ program idmloader
   call sim_message(line, skipbefore=1)
   !
   ! -- end of program
-end program idmloader
+  end program idmloader
   
   ! todo: modify program to load all data in a gwf name file?
+  ! todo: a short term goal should be to load a minimum number
+  !       of files necessary to run a model.  This would include:
+  !       TDIS, IMS, DIS, NPF, IC, CHD
   subroutine test_load_from_file()
     use LoadFromFileModule, only: input_from_file
     implicit none
-    call input_from_file('TDIS6', 'modflow_cr.tdis', 'SIM', 'TDIS', 'SIM', 'TDIS')
-    call input_from_file('DIS6', 'modflow_cr.dis', 'GWF', 'DIS', 'MYMODEL', 'DIS')
-    call input_from_file('NPF6', 'modflow_cr.npf', 'GWF', 'NPF', 'MYMODEL', 'NPF')
-    call input_from_file('NPF6', 'test.npf', 'GWF', 'NPF', 'ANOTHERMODEL', 'NPF')
+    call input_from_file('TDIS6', 'mf6.tdis', 'SIM', 'TDIS', 'SIM', 'TDIS')
+    call input_from_file('DIS6', 'mf6.dis', 'GWF', 'DIS', 'MYMODEL', 'DIS')
+    call input_from_file('NPF6', 'mf6.npf', 'GWF', 'NPF', 'MYMODEL', 'NPF')
   end subroutine test_load_from_file
   
   subroutine finalize_data()
