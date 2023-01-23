@@ -1,0 +1,10 @@
+BEGIN GRIDDATA
+  ISEG_ORDER
+    <iseg_order(nodes)> -- READARRAY
+  QOUTFLOW0
+    <qoutflow0(nodes)> -- READARRAY
+  K_COEF
+    <k_coef(nodes)> -- READARRAY
+  X_COEF
+    <x_coef(nodes)> -- READARRAY
+END GRIDDATA

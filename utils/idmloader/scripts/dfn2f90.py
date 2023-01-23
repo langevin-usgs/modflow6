@@ -962,6 +962,46 @@ if __name__ == "__main__":
             DFN_PATH / "sim-nam.dfn",
             SRC_PATH / "simnamidm.f90",
         ],
+        [
+            Path("../../../doc/mf6io/mf6ivar/dfn", "swf-nam.dfn"),
+            Path("../../../src/Model/SurfaceWaterFlow", "swf1idm.f90"),
+        ],
+        [
+            Path("../../../doc/mf6io/mf6ivar/dfn", "swf-disl.dfn"),
+            Path("../../../src/Model/SurfaceWaterFlow", "swf1disl1idm.f90"),
+        ],
+        [
+            Path("../../../doc/mf6io/mf6ivar/dfn", "swf-mmr.dfn"),
+            Path("../../../src/Model/SurfaceWaterFlow", "swf1mmr1idm.f90"),
+        ],
+        [
+            Path("../../../doc/mf6io/mf6ivar/dfn", "swf-mct.dfn"),
+            Path("../../../src/Model/SurfaceWaterFlow", "swf1mct1idm.f90"),
+        ],
+        [
+            Path("../../../doc/mf6io/mf6ivar/dfn", "swf-cxs.dfn"),
+            Path("../../../src/Model/SurfaceWaterFlow", "swf1cxs1idm.f90"),
+        ],
+        [
+            Path("../../../doc/mf6io/mf6ivar/dfn", "swf-dfw.dfn"),
+            Path("../../../src/Model/SurfaceWaterFlow", "swf1dfw1idm.f90"),
+        ],
+        [
+            Path("../../../doc/mf6io/mf6ivar/dfn", "swf-ic.dfn"),
+            Path("../../../src/Model/SurfaceWaterFlow", "swf1ic1idm.f90"),
+        ],
+        [
+            Path("../../../doc/mf6io/mf6ivar/dfn", "swf-chd.dfn"),
+            Path("../../../src/Model/SurfaceWaterFlow", "swf1chd1idm.f90"),
+        ],
+        [
+            Path("../../../doc/mf6io/mf6ivar/dfn", "swf-flw.dfn"),
+            Path("../../../src/Model/SurfaceWaterFlow", "swf1flw1idm.f90"),
+        ],
+        [
+            Path("../../../doc/mf6io/mf6ivar/dfn", "swf-zdg.dfn"),
+            Path("../../../src/Model/SurfaceWaterFlow", "swf1zdg1idm.f90"),
+        ],
     ]
 
     dfn_d = {}

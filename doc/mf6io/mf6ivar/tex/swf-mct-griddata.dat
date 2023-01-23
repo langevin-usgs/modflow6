@@ -1,0 +1,16 @@
+BEGIN GRIDDATA
+  ICALC_ORDER
+    <icalc_order(nodes)> -- READARRAY
+  QOUTFLOW0
+    <qoutflow0(nodes)> -- READARRAY
+  WIDTH
+    <width(nodes)> -- READARRAY
+  MANNINGSN
+    <manningsn(nodes)> -- READARRAY
+  ELEVATION
+    <elevation(nodes)> -- READARRAY
+  SLOPE
+    <slope(nodes)> -- READARRAY
+  IDCXS
+    <idcxs(nodes)> -- READARRAY
+END GRIDDATA

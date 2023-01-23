@@ -9,6 +9,7 @@ module IdmDfnSelectorModule
   use IdmGwtDfnSelectorModule
   use IdmExgDfnSelectorModule
   use IdmSimDfnSelectorModule
+  use IdmSwfDfnSelectorModule
 
   implicit none
   private
@@ -35,6 +36,8 @@ contains
       input_definition => exg_param_definitions(subcomponent)
     case ('SIM')
       input_definition => sim_param_definitions(subcomponent)
+    case ('SWF')
+      input_definition => swf_param_definitions(subcomponent)
     case default
     end select
     return
@@ -54,6 +57,8 @@ contains
       input_definition => exg_aggregate_definitions(subcomponent)
     case ('SIM')
       input_definition => sim_aggregate_definitions(subcomponent)
+    case ('SWF')
+      input_definition => swf_aggregate_definitions(subcomponent)
     case default
     end select
     return
@@ -73,6 +78,8 @@ contains
       input_definition => exg_block_definitions(subcomponent)
     case ('SIM')
       input_definition => sim_block_definitions(subcomponent)
+    case ('SWF')
+      input_definition => swf_block_definitions(subcomponent)
     case default
     end select
     return
@@ -91,6 +98,8 @@ contains
       multi_package = exg_idm_multi_package(subcomponent)
     case ('SIM')
       multi_package = sim_idm_multi_package(subcomponent)
+    case ('SWF')
+      multi_package = swf_idm_multi_package(subcomponent)
     case default
       call store_error('Idm selector component not found; '//&
                        &'component="'//trim(component)//&
@@ -113,6 +122,8 @@ contains
       integrated = exg_idm_integrated(subcomponent)
     case ('SIM')
       integrated = sim_idm_integrated(subcomponent)
+    case ('SWF')
+      integrated = swf_idm_integrated(subcomponent)
     case default
     end select
     return
@@ -130,6 +141,8 @@ contains
     case ('EXG')
       integrated = .true.
     case ('SIM')
+      integrated = .true.
+    case ('SWF')
       integrated = .true.
     case default
     end select
