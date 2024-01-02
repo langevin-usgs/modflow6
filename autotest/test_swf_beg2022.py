@@ -243,7 +243,7 @@ def check_output(idx, test):
     print("evaluating model...")
 
     # get MFSimulation from test
-    sim = next(iter(test.sims.values()))
+    sim = test.sims[0]
 
     makeplot = True
     if make_plot:
@@ -302,7 +302,7 @@ def check_output(idx, test):
     return
 
 
-@pytest.mark.parametrize("idx, name", list(enumerate(cases)))
+@pytest.mark.parametrize("idx, name", enumerate(cases))
 def test_mf6model(idx, name, function_tmpdir, targets):
     test = TestFramework(
         name=name,

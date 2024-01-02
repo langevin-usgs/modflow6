@@ -252,14 +252,10 @@ def check_output(idx, test):
 
     assert np.allclose(qresidual, 0., atol=1.e-5), "Flowja residual > 1.e-5"
 
-    # # example for getting mf6 simulation    
-    # sim = next(iter(test.sims.values()))
-    # print(sim)
-
     return
 
 
-@pytest.mark.parametrize("idx, name", list(enumerate(cases)))
+@pytest.mark.parametrize("idx, name", enumerate(cases))
 def test_mf6model(idx, name, function_tmpdir, targets):
     test = TestFramework(
         name=name,

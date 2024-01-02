@@ -14,7 +14,6 @@ import flopy
 import numpy as np
 import pytest
 from framework import TestFramework
-from simulation import TestSimulation
 
 
 ponce_data = """0 0 50 50
@@ -112,13 +111,13 @@ def get_ponce_data():
     return time_days, qinflow, qoutflow
 
 
-ex = ["thomas01",]
+cases = ["thomas01",]
 
 
-def build_model(idx, dir):
+def build_models(idx, test):
 
-    sim_ws = dir
-    name = ex[idx]
+    sim_ws = test.workspace
+    name = cases[idx]
     sim = flopy.mf6.MFSimulation(
         sim_name=name, version="mf6", exe_name="mf6", sim_ws=sim_ws,
         memory_print_option='all',
@@ -216,26 +215,26 @@ def build_model(idx, dir):
     return sim, None
 
 
-def eval_model(sim):
+def check_output(idx, test):
     print("evaluating model...")
 
     # get back the ponce data for comparison
     time_days, qinflow, qextoutflow = get_ponce_data()
 
     # read the binary grid file
-    name = ex[sim.idxsim]
-    fpth = os.path.join(sim.simpath, f"{name}.disl.grb")
+    name = cases[idx]
+    fpth = os.path.join(test.workspace, f"{name}.disl.grb")
     grb = flopy.mf6.utils.MfGrdFile(fpth)
     ia = grb.ia
     ja = grb.ja
     assert ia.shape[0] == grb.nodes + 1, "ia in grb file is not correct size"
 
     # read the observation output
-    fpth = os.path.join(sim.simpath, f"{name}.mmr.obs.csv")
+    fpth = os.path.join(test.workspace, f"{name}.mmr.obs.csv")
     obsvals = np.genfromtxt(fpth, names=True, delimiter=",")
 
     # read qoutflow file
-    fpth = os.path.join(sim.simpath, f"{name}.qoutflow")
+    fpth = os.path.join(test.workspace, f"{name}.qoutflow")
     qobj = flopy.utils.HeadFile(fpth, precision="double", text="QOUTFLOW")
     qoutflow = qobj.get_alldata()
 
@@ -276,17 +275,13 @@ def eval_model(sim):
     return
 
 
-@pytest.mark.parametrize(
-    "idx, name",
-    list(enumerate(ex)),
-)
+@pytest.mark.parametrize("idx, name", enumerate(cases))
 def test_mf6model(idx, name, function_tmpdir, targets):
-    ws = str(function_tmpdir)
-    test = TestFramework()
-    test.build(build_model, idx, ws)
-    test.run(
-        TestSimulation(
-            name=name, exe_dict=targets, exfunc=eval_model, idxsim=idx
-        ),
-        ws,
+    test = TestFramework(
+        name=name,
+        workspace=function_tmpdir,
+        build=lambda t: build_models(idx, t),
+        check=lambda t: check_output(idx, t),
+        targets=targets,
     )
+    test.run()

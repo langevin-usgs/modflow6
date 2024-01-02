@@ -36,6 +36,7 @@ modflow_sources = files(
     'Exchange' / 'gwfgwtidm.f90',
     'Exchange' / 'gwtgwtidm.f90',
     'Exchange' / 'SwfGwfExchange.f90',
+    'Exchange' / 'swfgwfidm.f90',
     'Model' / 'Connection' / 'ConnectionBuilder.f90',
     'Model' / 'Connection' / 'CellWithNbrs.f90',
     'Model' / 'Connection' / 'CsrUtils.f90',

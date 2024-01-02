@@ -17,9 +17,8 @@ import flopy
 import numpy as np
 import pytest
 from framework import TestFramework
-from simulation import TestSimulation
 
-ex = [f"swf-mct01{a}" for a in ["a", "b", "c", "d", "e"]]
+cases = [f"swf-mct01{a}" for a in ["a", "b", "c", "d", "e"]]
 
 # answers from MCT paper for rectangular cross section simulation with varying slopes
 qmax_answer = [894.68, 879.10, 819.78, 669.53, 423.11]
@@ -29,10 +28,10 @@ def get_inflow_hydrograph(Qbase, Qpeak, Tp, beta, t):
     return Qbase + (Qpeak - Qbase) * (t / Tp * np.exp(1 - t / Tp) ) ** beta
 
 
-def build_model(idx, dir):
+def build_models(idx, test):
 
-    sim_ws = dir
-    name = ex[idx]
+    sim_ws = test.workspace
+    name = cases[idx]
     sim = flopy.mf6.MFSimulation(
         sim_name=name, version="mf6", exe_name="mf6", sim_ws=sim_ws,
         memory_print_option='all',
@@ -142,35 +141,35 @@ def build_model(idx, dir):
     return sim, None
 
 
-def eval_model(sim):
+def check_output(idx, test):
     print("evaluating model...")
 
     # read the observation output
-    name = ex[sim.idxsim]
-    fpth = os.path.join(sim.simpath, f"{name}.mmr.obs.csv")
+    name = cases[idx]
+    fpth = os.path.join(test.workspace, f"{name}.mmr.obs.csv")
     obsvals = np.genfromtxt(fpth, names=True, delimiter=",")
     qoutflow = -obsvals['OUTFLOW'] 
     qms = qoutflow.max()
-    qma = qmax_answer[sim.idxsim]
+    qma = qmax_answer[idx]
     d = abs(qms - qma)
     print(f"Outflow max mf6 ({qms}) and reported ({qma}); diff = {d}")
     dtol = 0.4
     assert d < dtol, f"Sim and reported max outflow too different; diff {d} > dtol {dtol}."
 
     # read the binary grid file
-    fpth = os.path.join(sim.simpath, f"{name}.disl.grb")
+    fpth = os.path.join(test.workspace, f"{name}.disl.grb")
     grb = flopy.mf6.utils.MfGrdFile(fpth)
     ia = grb.ia
     ja = grb.ja
     assert ia.shape[0] == grb.nodes + 1, "ia in grb file is not correct size"
 
     # read qoutflow file
-    fpth = os.path.join(sim.simpath, f"{name}.qoutflow")
+    fpth = os.path.join(test.workspace, f"{name}.qoutflow")
     qobj = flopy.utils.HeadFile(fpth, precision="double", text="QOUTFLOW")
     qoutflow = qobj.get_alldata()
 
     # read the budget file
-    fpth = os.path.join(sim.simpath, f"{name}.bud")
+    fpth = os.path.join(test.workspace, f"{name}.bud")
     budobj = flopy.utils.binaryfile.CellBudgetFile(fpth)
     flowja = budobj.get_data(text="FLOW-JA-FACE")
     qstorage = budobj.get_data(text="STORAGE")
@@ -207,17 +206,13 @@ def eval_model(sim):
     return
 
 
-@pytest.mark.parametrize(
-    "idx, name",
-    list(enumerate(ex)),
-)
+@pytest.mark.parametrize("idx, name", enumerate(cases))
 def test_mf6model(idx, name, function_tmpdir, targets):
-    ws = str(function_tmpdir)
-    test = TestFramework()
-    test.build(build_model, idx, ws)
-    test.run(
-        TestSimulation(
-            name=name, exe_dict=targets, exfunc=eval_model, idxsim=idx
-        ),
-        ws,
+    test = TestFramework(
+        name=name,
+        workspace=function_tmpdir,
+        build=lambda t: build_models(idx, t),
+        check=lambda t: check_output(idx, t),
+        targets=targets,
     )
+    test.run()

@@ -963,44 +963,48 @@ if __name__ == "__main__":
             SRC_PATH / "simnamidm.f90",
         ],
         [
-            Path("../../../doc/mf6io/mf6ivar/dfn", "swf-nam.dfn"),
-            Path("../../../src/Model/SurfaceWaterFlow", "swf1idm.f90"),
+            DFN_PATH / "swf-nam.dfn",
+            SRC_PATH / "Model" / "SurfaceWaterFlow" / "swf1idm.f90",
         ],
         [
-            Path("../../../doc/mf6io/mf6ivar/dfn", "swf-disl.dfn"),
-            Path("../../../src/Model/SurfaceWaterFlow", "swf1disl1idm.f90"),
+            DFN_PATH / "swf-disl.dfn",
+            SRC_PATH / "Model" / "SurfaceWaterFlow" / "swf1disl1idm.f90",
         ],
         [
-            Path("../../../doc/mf6io/mf6ivar/dfn", "swf-mmr.dfn"),
-            Path("../../../src/Model/SurfaceWaterFlow", "swf1mmr1idm.f90"),
+            DFN_PATH / "swf-mmr.dfn",
+            SRC_PATH / "Model" / "SurfaceWaterFlow" / "swf1mmr1idm.f90",
         ],
         [
-            Path("../../../doc/mf6io/mf6ivar/dfn", "swf-mct.dfn"),
-            Path("../../../src/Model/SurfaceWaterFlow", "swf1mct1idm.f90"),
+            DFN_PATH / "swf-mct.dfn",
+            SRC_PATH / "Model" / "SurfaceWaterFlow" / "swf1mct1idm.f90",
         ],
         [
-            Path("../../../doc/mf6io/mf6ivar/dfn", "swf-cxs.dfn"),
-            Path("../../../src/Model/SurfaceWaterFlow", "swf1cxs1idm.f90"),
+            DFN_PATH / "swf-cxs.dfn",
+            SRC_PATH / "Model" / "SurfaceWaterFlow" / "swf1cxs1idm.f90",
         ],
         [
-            Path("../../../doc/mf6io/mf6ivar/dfn", "swf-dfw.dfn"),
-            Path("../../../src/Model/SurfaceWaterFlow", "swf1dfw1idm.f90"),
+            DFN_PATH / "swf-dfw.dfn",
+            SRC_PATH / "Model" / "SurfaceWaterFlow" / "swf1dfw1idm.f90",
         ],
         [
-            Path("../../../doc/mf6io/mf6ivar/dfn", "swf-ic.dfn"),
-            Path("../../../src/Model/SurfaceWaterFlow", "swf1ic1idm.f90"),
+            DFN_PATH / "swf-ic.dfn",
+            SRC_PATH / "Model" / "SurfaceWaterFlow" / "swf1ic1idm.f90",
         ],
         [
-            Path("../../../doc/mf6io/mf6ivar/dfn", "swf-chd.dfn"),
-            Path("../../../src/Model/SurfaceWaterFlow", "swf1chd1idm.f90"),
+            DFN_PATH / "swf-chd.dfn",
+            SRC_PATH / "Model" / "SurfaceWaterFlow" / "swf1chd1idm.f90",
         ],
         [
-            Path("../../../doc/mf6io/mf6ivar/dfn", "swf-flw.dfn"),
-            Path("../../../src/Model/SurfaceWaterFlow", "swf1flw1idm.f90"),
+            DFN_PATH / "swf-flw.dfn",
+            SRC_PATH / "Model" / "SurfaceWaterFlow" / "swf1flw1idm.f90",
         ],
         [
-            Path("../../../doc/mf6io/mf6ivar/dfn", "swf-zdg.dfn"),
-            Path("../../../src/Model/SurfaceWaterFlow", "swf1zdg1idm.f90"),
+            DFN_PATH / "swf-zdg.dfn",
+            SRC_PATH / "Model" / "SurfaceWaterFlow" / "swf1zdg1idm.f90",
+        ],
+        [
+            DFN_PATH / "exg-swfgwf.dfn",
+            SRC_PATH / "Exchange" / "swfgwfidm.f90",
         ],
     ]
 
