@@ -441,7 +441,7 @@ contains
       case ('SWF6-GWF6')
         write (exg_name, '(a,i0)') 'SWF-GWF_', exg_id
         if (both_local) then
-          call swfgwf_cr(fname, exg_name, exg_id, m1_id, m2_id)
+          call swfgwf_cr(fname, exg_name, exg_id, m1_id, m2_id, exg_mempath)
         end if
       case default
         write (errmsg, '(a,a)') &

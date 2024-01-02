@@ -11,8 +11,8 @@ module ExgSwfgwfInputModule
   public exg_swfgwf_multi_package
 
   type ExgSwfgwfParamFoundType
-    logical :: print_input = .false.
-    logical :: print_flows = .false.
+    logical :: ipr_input = .false.
+    logical :: ipr_flow = .false.
     logical :: obs_filerecord = .false.
     logical :: obs6 = .false.
     logical :: filein = .false.
@@ -26,13 +26,13 @@ module ExgSwfgwfInputModule
   logical :: exg_swfgwf_multi_package = .true.
 
   type(InputParamDefinitionType), parameter :: &
-    exgswfgwf_print_input = InputParamDefinitionType &
+    exgswfgwf_ipr_input = InputParamDefinitionType &
     ( &
     'EXG', & ! component
     'SWFGWF', & ! subcomponent
     'OPTIONS', & ! block
     'PRINT_INPUT', & ! tag name
-    'PRINT_INPUT', & ! fortran variable
+    'IPR_INPUT', & ! fortran variable
     'KEYWORD', & ! type
     '', & ! shape
     .false., & ! required
@@ -43,13 +43,13 @@ module ExgSwfgwfInputModule
     )
 
   type(InputParamDefinitionType), parameter :: &
-    exgswfgwf_print_flows = InputParamDefinitionType &
+    exgswfgwf_ipr_flow = InputParamDefinitionType &
     ( &
     'EXG', & ! component
     'SWFGWF', & ! subcomponent
     'OPTIONS', & ! block
     'PRINT_FLOWS', & ! tag name
-    'PRINT_FLOWS', & ! fortran variable
+    'IPR_FLOW', & ! fortran variable
     'KEYWORD', & ! type
     '', & ! shape
     .false., & ! required
@@ -198,8 +198,8 @@ module ExgSwfgwfInputModule
   type(InputParamDefinitionType), parameter :: &
     exg_swfgwf_param_definitions(*) = &
     [ &
-    exgswfgwf_print_input, &
-    exgswfgwf_print_flows, &
+    exgswfgwf_ipr_input, &
+    exgswfgwf_ipr_flow, &
     exgswfgwf_obs_filerecord, &
     exgswfgwf_obs6, &
     exgswfgwf_filein, &
@@ -219,7 +219,7 @@ module ExgSwfgwfInputModule
     'EXCHANGEDATA', & ! tag name
     'EXCHANGEDATA', & ! fortran variable
     'RECARRAY CELLIDM1 CELLIDM2 COND', & ! type
-    '', & ! shape
+    'NEXG', & ! shape
     .true., & ! required
     .false., & ! multi-record
     .false., & ! preserve case

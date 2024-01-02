@@ -8,6 +8,7 @@ reader urword
 optional true
 longname keyword to print input to list file
 description keyword to indicate that the list of exchange entries will be echoed to the listing file immediately after it is read.
+mf6internal ipr_input
 
 block options
 name print_flows
@@ -16,6 +17,7 @@ reader urword
 optional true
 longname keyword to print swfgwf flows to list file
 description keyword to indicate that the list of exchange flow rates will be printed to the listing file for every stress period in which ``SAVE BUDGET'' is specified in Output Control.
+mf6internal ipr_flow
 
 block options
 name obs_filerecord
@@ -76,6 +78,7 @@ description keyword and integer value specifying the number of SWF-GWF exchanges
 block exchangedata
 name exchangedata
 type recarray cellidm1 cellidm2 cond
+shape (nexg)
 reader urword
 optional false
 longname exchange data

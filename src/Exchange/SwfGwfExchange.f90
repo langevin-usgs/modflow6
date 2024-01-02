@@ -9,7 +9,8 @@ module SwfGwfExchangeModule
   use KindModule, only: DP, I4B, LGP
   use ConstantsModule, only: LINELENGTH, DZERO
   use SimVariablesModule, only: errmsg, iout, model_loc_idx
-  use SimModule, only: count_errors, store_error, store_error_unit
+  use SimModule, only: count_errors, store_error, store_error_unit, &
+                       store_error_filename
   use InputOutputModule, only: getunit, openfile
   use MemoryManagerModule, only: mem_allocate
   use BaseModelModule, only: BaseModelType, GetBaseModelFromList
@@ -68,10 +69,10 @@ module SwfGwfExchangeModule
     procedure :: exg_da => swf_gwf_da
     procedure :: allocate_scalars
     procedure :: allocate_arrays
-    procedure :: read_options
-    procedure :: parse_option
-    procedure :: read_dimensions
-    procedure :: read_data
+    procedure :: source_options
+    !procedure :: parse_option
+    procedure :: source_dimensions
+    procedure :: source_data
     procedure :: swf_gwf_calc_simvals
     procedure :: swf_gwf_save_simvals
     procedure :: qcalc
@@ -81,6 +82,9 @@ module SwfGwfExchangeModule
     procedure :: swf_gwf_bdsav
     procedure :: connects_model => swf_gwf_connects_model
 
+    procedure, pass(this) :: noder
+    procedure, pass(this) :: cellstr
+
   end type SwfGwfExchangeType
 
   contains
@@ -89,7 +93,7 @@ module SwfGwfExchangeModule
   !!
   !! Create a new SWF to GWF exchange object.
   !<
-  subroutine swfgwf_cr(filename, name, id, m1_id, m2_id)
+  subroutine swfgwf_cr(filename, name, id, m1_id, m2_id, input_mempath)
     ! -- modules
     ! -- dummy
     character(len=*), intent(in) :: filename !< filename for reading
@@ -97,6 +101,7 @@ module SwfGwfExchangeModule
     integer(I4B), intent(in) :: id !< id for the exchange
     integer(I4B), intent(in) :: m1_id !< id for model 1
     integer(I4B), intent(in) :: m2_id !< id for model 2
+    character(len=*), intent(in) :: input_mempath
     ! -- local
     type(SwfGwfExchangeType), pointer :: exchange
     class(BaseModelType), pointer :: mb
@@ -112,6 +117,7 @@ module SwfGwfExchangeModule
     exchange%id = id
     exchange%name = name
     exchange%memoryPath = create_mem_path(exchange%name)
+    exchange%input_mempath = input_mempath
     !
     ! -- allocate scalars and set defaults
     call exchange%allocate_scalars()
@@ -175,14 +181,9 @@ module SwfGwfExchangeModule
     ! -- dummy
     class(SwfGwfExchangeType) :: this !<  SwfGwfExchangeType
     ! -- local
-    integer(I4B) :: inunit
     !
-    ! -- open the file
-    inunit = getunit()
+    ! -- log the exchange
     write (iout, '(/a,a)') ' Creating exchange: ', this%name
-    call openfile(inunit, iout, this%filename, 'SWF-GWF')
-    !
-    call this%parser%Initialize(inunit, iout)
     !
     ! -- Ensure models are in same solution
     if (associated(this%swfmodel1) .and. associated(this%gwfmodel2)) then
@@ -196,20 +197,17 @@ module SwfGwfExchangeModule
       end if
     end if
     !
-    ! -- read options
-    call this%read_options(iout)
+    ! -- source options
+    call this%source_options(iout)
     !
-    ! -- read dimensions
-    call this%read_dimensions(iout)
+    ! -- source dimensions
+    call this%source_dimensions(iout)
     !
     ! -- allocate arrays
     call this%allocate_arrays()
     !
-    ! -- read exchange data
-    call this%read_data(iout)
-    !
-    ! -- close the file
-    close (inunit)
+    ! -- source exchange data
+    call this%source_data(iout)
     !
     ! -- Store obs
     ! call this%swf_gwf_df_obs()
@@ -410,242 +408,248 @@ module SwfGwfExchangeModule
     return
   end subroutine allocate_arrays
 
-  !> @ brief Read options
+  !> @ brief Source options
   !!
-  !! Read the options block
+  !! Source the options block
   !<
-  subroutine read_options(this, iout)
+  subroutine source_options(this, iout)
     ! -- modules
+    use ConstantsModule, only: LENVARNAME, DEM6
+    use InputOutputModule, only: getunit, openfile
+    use MemoryManagerExtModule, only: mem_set_value
+    use CharacterStringModule, only: CharacterStringType
+    use ExgSwfgwfInputModule, only: ExgSwfgwfParamFoundType
+    use SourceCommonModule, only: filein_fname
     ! -- dummy
-    class(SwfGwfExchangeType) :: this !<  SwfGwfExchangeType
+    class(SwfGwfExchangeType) :: this !<  GwfExchangeType
     integer(I4B), intent(in) :: iout
     ! -- local
-    character(len=LINELENGTH) :: keyword
-    logical :: isfound
-    logical :: endOfBlock
-    integer(I4B) :: ierr
+    type(ExgSwfgwfParamFoundType) :: found
     !
-    ! -- get options block
-    call this%parser%GetBlock('OPTIONS', isfound, ierr, &
-                              supportOpenClose=.true., blockRequired=.false.)
+    ! -- update defaults with idm sourced values
+    call mem_set_value(this%ipr_input, 'IPR_INPUT', this%input_mempath, found%ipr_input)
+    call mem_set_value(this%ipr_flow, 'IPR_FLOW', this%input_mempath, found%ipr_flow)
     !
-    ! -- parse options block if detected
-    if (isfound) then
-      write (iout, '(1x,a)') 'PROCESSING SWF-GWF EXCHANGE OPTIONS'
-      do
-        call this%parser%GetNextLine(endOfBlock)
-        if (endOfBlock) then
-          exit
-        end if
-        call this%parser%GetStringCaps(keyword)
-        !
-        ! parse the option
-        if (this%parse_option(keyword, iout)) then
-          cycle
-        end if
-        !
-        ! unknown option
-        errmsg = "Unknown SWF-GWF exchange option '"//trim(keyword)//"'."
-        call store_error(errmsg)
-        call this%parser%StoreErrorUnit()
-      end do
-      !
-      write (iout, '(1x,a)') 'END OF SWF-GWF EXCHANGE OPTIONS'
+    write (iout, '(1x,a)') 'PROCESSING SWF-GWF EXCHANGE OPTIONS'
+    !
+    if (found%ipr_input) then
+      write (iout, '(4x,a)') &
+        'THE LIST OF EXCHANGES WILL BE PRINTED.'
     end if
     !
-    ! -- Return
-    return
-  end subroutine read_options
-
-  !> @brief parse option from exchange file
-  !<
-  function parse_option(this, keyword, iout) result(parsed)
-    ! -- modules
-    ! -- dummy
-    class(SwfGwfExchangeType) :: this !<  SwfGwfExchangeType
-    character(len=LINELENGTH), intent(in) :: keyword !< the option name
-    integer(I4B), intent(in) :: iout !< for logging
-    logical(LGP) :: parsed !< true when parsed
-    ! -- local
-    character(len=LINELENGTH) :: fname
-    integer(I4B) :: inobs
-    character(len=LINELENGTH) :: subkey
-    character(len=:), allocatable :: line
-    !
-    parsed = .true.
-    !
-    sel_opt:select case(keyword)
-    case ('PRINT_INPUT')
-      this%ipr_input = 1
-      write (iout, '(4x,a)') &
-        'Exchange input data will be written to list file.'
-    case ('PRINT_FLOWS')
-      this%ipr_flow = 1
+    if (found%ipr_flow) then
       write (iout, '(4x,a)') &
         'EXCHANGE FLOWS WILL BE PRINTED TO LIST FILES.'
-    case ('SAVE_FLOWS')
-      ! this%ipakcb = -1
-      ! write (iout, '(4x,a)') &
-      !   'EXCHANGE FLOWS WILL BE SAVED TO BINARY BUDGET FILES.'
-    case ('OBS6')
-      call this%parser%GetStringCaps(subkey)
-      if (subkey /= 'FILEIN') then
-        call store_error('OBS8 keyword must be followed by '// &
-                        '"FILEIN" then by filename.')
-        call this%parser%StoreErrorUnit()
-      end if
-      this%obs%active = .true.
-      call this%parser%GetString(this%obs%inputFilename)
-      inobs = GetUnit()
-      call openfile(inobs, iout, this%obs%inputFilename, 'OBS')
-      this%obs%inUnitObs = inobs
-    case default
-      parsed = .false.
-    end select sel_opt
+    end if
+    !
+    ! -- enforce 0 or 1 OBS6_FILENAME entries in option block
+    ! if (.not. this%is_datacopy) then
+    !   if (filein_fname(this%obs%inputFilename, 'OBS6_FILENAME', &
+    !                    this%input_mempath, this%filename)) then
+    !     this%obs%active = .true.
+    !     this%obs%inUnitObs = GetUnit()
+    !     call openfile(this%obs%inUnitObs, iout, this%obs%inputFilename, 'OBS')
+    !   end if
+    ! end if
+    !
+    write (iout, '(1x,a)') 'END OF SWF-GWF EXCHANGE OPTIONS'
     !
     ! -- Return
     return
-  end function parse_option
-
-  !> @brief Read dimensions from file
+  end subroutine source_options
+  
+  !> @brief Source dimension from input context
   !<
-  subroutine read_dimensions(this, iout)
+  subroutine source_dimensions(this, iout)
+    ! -- modules
+    use MemoryManagerExtModule, only: mem_set_value
+    use ExgSwfgwfInputModule, only: ExgSwfgwfParamFoundType
+    ! -- dummy
+    class(SwfGwfExchangeType) :: this !< instance of exchange object
+    integer(I4B), intent(in) :: iout !< for logging
+    ! -- local
+    type(ExgSwfgwfParamFoundType) :: found
+    !
+    ! -- update defaults with idm sourced values
+    call mem_set_value(this%nexg, 'NEXG', this%input_mempath, found%nexg)
+    !
+    write (iout, '(1x,a)') 'PROCESSING EXCHANGE DIMENSIONS'
+    !
+    if (found%nexg) then
+      write (iout, '(4x,a,i0)') 'NEXG = ', this%nexg
+    end if
+    !
+    write (iout, '(1x,a)') 'END OF EXCHANGE DIMENSIONS'
+    !
+    ! -- return
+    return
+  end subroutine source_dimensions
+
+  !> @brief
+  !<
+  function noder(this, model, cellid, iout)
+    ! -- modules
+    use GeomUtilModule, only: get_node
+    ! -- dummy
+    class(SwfGwfExchangeType) :: this !< instance of exchange object
+    class(NumericalModelType), pointer, intent(in) :: model
+    integer(I4B), dimension(:), pointer, intent(in) :: cellid
+    integer(I4B), intent(in) :: iout !< the output file unit
+    integer(I4B) :: noder, node
+    !
+    if (model%dis%ndim == 1) then
+      node = cellid(1)
+    elseif (model%dis%ndim == 2) then
+      node = get_node(cellid(1), 1, cellid(2), &
+                      model%dis%mshape(1), 1, &
+                      model%dis%mshape(2))
+    else
+      node = get_node(cellid(1), cellid(2), cellid(3), &
+                      model%dis%mshape(1), &
+                      model%dis%mshape(2), &
+                      model%dis%mshape(3))
+    end if
+    noder = model%dis%get_nodenumber(node, 0)
+    !
+    ! -- return
+    return
+  end function noder
+
+  !> @brief
+  !<
+  function cellstr(this, model, cellid, iout)
     ! -- modules
     ! -- dummy
     class(SwfGwfExchangeType) :: this !< instance of exchange object
-    integer(I4B), intent(in) :: iout !< output file unit
-    ! -- local
-    character(len=LINELENGTH) :: keyword
-    integer(I4B) :: ierr
-    logical :: isfound, endOfBlock
+    class(NumericalModelType), pointer, intent(in) :: model
+    integer(I4B), dimension(:), pointer, intent(in) :: cellid
+    integer(I4B), intent(in) :: iout !< the output file unit
+    character(len=20) :: cellstr
+    character(len=*), parameter :: fmtndim1 = &
+                                   "('(',i0,')')"
+    character(len=*), parameter :: fmtndim2 = &
+                                   "('(',i0,',',i0,')')"
+    character(len=*), parameter :: fmtndim3 = &
+                                   "('(',i0,',',i0,',',i0,')')"
     !
-    ! get dimensions block
-    call this%parser%GetBlock('DIMENSIONS', isfound, ierr, &
-                              supportOpenClose=.true.)
+    cellstr = ''
     !
-    ! parse NEXG
-    if (isfound) then
-      write (iout, '(1x,a)') 'PROCESSING EXCHANGE DIMENSIONS'
-      do
-        call this%parser%GetNextLine(endOfBlock)
-        if (endOfBlock) exit
-        call this%parser%GetStringCaps(keyword)
-        select case (keyword)
-        case ('NEXG')
-          this%nexg = this%parser%GetInteger()
-          write (iout, '(4x,a,i0)') 'NEXG = ', this%nexg
-        case default
-          errmsg = "Unknown dimension '"//trim(keyword)//"'."
-          call store_error(errmsg)
-          call this%parser%StoreErrorUnit()
-        end select
-      end do
-      write (iout, '(1x,a)') 'END OF EXCHANGE DIMENSIONS'
-    else
-      call store_error('Required dimensions block not found.')
-      call this%parser%StoreErrorUnit()
-    end if
+    select case (model%dis%ndim)
+    case (1)
+      write (cellstr, fmtndim1) cellid(1)
+    case (2)
+      write (cellstr, fmtndim2) cellid(1), cellid(2)
+    case (3)
+      write (cellstr, fmtndim3) cellid(1), cellid(2), cellid(3)
+    case default
+    end select
     !
-    ! -- Return
+    ! -- return
     return
-  end subroutine read_dimensions
+  end function cellstr
 
-  !> @brief Read exchange data block from file
+  !> @brief Source exchange data from input context
   !<
-  subroutine read_data(this, iout)
+  subroutine source_data(this, iout)
     ! -- modules
+    use MemoryManagerModule, only: mem_setptr
     ! -- dummy
     class(SwfGwfExchangeType) :: this !< instance of exchange object
     integer(I4B), intent(in) :: iout !< the output file unit
     ! -- local
-    character(len=20) :: cellid1, cellid2
+    integer(I4B), dimension(:, :), contiguous, pointer :: cellidm1
+    integer(I4B), dimension(:, :), contiguous, pointer :: cellidm2
+    real(DP), dimension(:), contiguous, pointer :: cond
+    character(len=20) :: cellstr1, cellstr2
     character(len=2) :: cnfloat
-    integer(I4B) :: lloc, ierr, nerr, iaux
+    integer(I4B) :: nerr, iaux
     integer(I4B) :: iexg, nodem1, nodem2
-    logical :: isfound, endOfBlock
     ! -- format
-    character(len=*), parameter :: fmtexglabel = "(5x, 2a10, 1(a16))"
+    character(len=*), parameter :: fmtexglabel = "(1x, 3a10, 50(a16))"
     character(len=*), parameter :: fmtexgdata = &
-                                   "(5x, a9, 1x, a10 ,1(1pg16.6))"
+                                   "(5x, a, 1x, a ,50(1pg16.6))"
     character(len=40) :: fmtexgdata2
     !
-    ! get data block
-    call this%parser%GetBlock('EXCHANGEDATA', isfound, ierr, &
-                              supportOpenClose=.true.)
-    if (isfound) then
-      write (iout, '(1x,a)') 'PROCESSING EXCHANGEDATA'
-      if (this%ipr_input /= 0) then
-        write (iout, fmtexglabel) 'NODEM1', 'NODEM2', 'COND'
-      end if
-      do iexg = 1, this%nexg
-        call this%parser%GetNextLine(endOfBlock)
-        lloc = 1
+    call mem_setptr(cellidm1, 'CELLIDM1', this%input_mempath)
+    call mem_setptr(cellidm2, 'CELLIDM2', this%input_mempath)
+    call mem_setptr(cond, 'COND', this%input_mempath)
+    !
+    write (iout, '(1x,a)') 'PROCESSING EXCHANGEDATA'
+    !
+    if (this%ipr_input /= 0) then
+      write (iout, fmtexglabel) 'NODEM1', 'NODEM2', 'COND'
+    end if
+    !
+    do iexg = 1, this%nexg
+      !
+      if (associated(this%model1)) then
         !
-        ! -- Read and check node 1
-        ! call this%parser%GetCellid(this%model1%dis%ndim, cellid1, &
-        !                            flag_string=.true.)
-        ! nodem1 = this%model1%dis%noder_from_cellid(cellid1, &
-        !                                            this%parser%iuactive, &
-        !                                            iout, flag_string=.true.)
-        ! this%nodem1(iexg) = nodem1
-        ! TODO: hardwired for single integer since it is SWF
-        nodem1 = this%parser%GetInteger()
+        ! -- Determine user node number
+        nodem1 = this%noder(this%model1, cellidm1(:, iexg), iout)
         this%nodem1(iexg) = nodem1
-        write(cellid1, '(i0)') nodem1
         !
-        ! -- Read and check node 2
-        call this%parser%GetCellid(this%model2%dis%ndim, cellid2, &
-                                   flag_string=.true.)
-        nodem2 = this%model2%dis%noder_from_cellid(cellid2, &
-                                                   this%parser%iuactive, &
-                                                   iout, flag_string=.true.)
+      else
+        this%nodem1(iexg) = -1
+      end if
+      !
+      if (associated(this%model2)) then
+        !
+        ! -- Determine user node number
+        nodem2 = this%noder(this%model2, cellidm2(:, iexg), iout)
         this%nodem2(iexg) = nodem2
         !
-        ! -- Read rest of input line
-        this%cond(iexg) = this%parser%GetDouble()
-        !
-        ! -- Write the data to listing file if requested
-        if (this%ipr_input /= 0) then
-          write (iout, fmtexgdata) trim(cellid1), trim(cellid2), &
+      else
+        this%nodem2(iexg) = -1
+      end if
+      !
+      ! -- Read rest of input line
+      this%cond(iexg) = cond(iexg)
+      !
+      ! -- Write the data to listing file if requested
+      if (this%ipr_input /= 0) then
+        cellstr1 = this%cellstr(this%model1, cellidm1(:, iexg), iout)
+        cellstr2 = this%cellstr(this%model2, cellidm2(:, iexg), iout)
+          write (iout, fmtexgdata) trim(cellstr1), trim(cellstr2), &
             this%cond(iexg)
-        end if
-        !
-        ! -- Check to see if nodem1 is outside of active domain
+      end if
+      !
+      ! -- Check to see if nodem1 is outside of active domain
+      if (associated(this%model1)) then
         if (nodem1 <= 0) then
+          cellstr1 = this%cellstr(this%model1, cellidm1(:, iexg), iout)
           write (errmsg, *) &
             trim(adjustl(this%model1%name))// &
             ' Cell is outside active grid domain ('// &
-            trim(adjustl(cellid1))//').'
+            trim(adjustl(cellstr1))//').'
           call store_error(errmsg)
         end if
-        !
-        ! -- Check to see if nodem2 is outside of active domain
+      end if
+      !
+      ! -- Check to see if nodem2 is outside of active domain
+      if (associated(this%model2)) then
         if (nodem2 <= 0) then
+          cellstr2 = this%cellstr(this%model2, cellidm2(:, iexg), iout)
           write (errmsg, *) &
             trim(adjustl(this%model2%name))// &
             ' Cell is outside active grid domain ('// &
-            trim(adjustl(cellid2))//').'
+            trim(adjustl(cellstr2))//').'
           call store_error(errmsg)
         end if
-      end do
-      !
-      ! -- Stop if errors
-      nerr = count_errors()
-      if (nerr > 0) then
-        call store_error('Errors encountered in exchange input file.')
-        call this%parser%StoreErrorUnit()
       end if
-      !
-      write (iout, '(1x,a)') 'END OF EXCHANGEDATA'
-    else
-      errmsg = 'Required exchangedata block not found.'
-      call store_error(errmsg)
-      call this%parser%StoreErrorUnit()
+    end do
+    !
+    write (iout, '(1x,a)') 'END OF EXCHANGEDATA'
+    !
+    ! -- Stop if errors
+    nerr = count_errors()
+    if (nerr > 0) then
+      call store_error('Errors encountered in exchange input file.')
+      call store_error_filename(this%filename)
     end if
     !
     ! -- Return
     return
-  end subroutine read_data
+  end subroutine source_data
 
   !> @brief Calculate flow rates for the exchanges and store them in a member
   !! array
