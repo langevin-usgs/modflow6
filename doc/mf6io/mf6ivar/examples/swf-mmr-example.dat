@@ -1,0 +1,17 @@
+BEGIN OPTIONS
+  SAVE_FLOWS
+  PRINT_FLOWS
+  OBS6  FILEIN  swf.mmr.obs
+END OPTIONS
+
+BEGIN GRIDDATA
+  iseg_order
+    INTERNAL  FACTOR  1
+    1  2  3  4
+  qoutflow0
+    CONSTANT       0.00000000
+  k_coef
+    CONSTANT       0.00100000
+  x_coef
+    CONSTANT       0.20000000
+END GRIDDATA
