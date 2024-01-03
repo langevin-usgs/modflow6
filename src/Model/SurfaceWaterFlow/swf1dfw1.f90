@@ -701,12 +701,12 @@ module SwfDfwModule
     dx = DHALF * this%disl%reach_length(n)
 
     roughc = this%cxs%get_roughness(this%idcxs(n), width, depth, rough, &
-                                    slope, this%unitconv)
+                                    slope)
     a = this%cxs%get_area(this%idcxs(n), width, depth)
     r = this%cxs%get_hydraulic_radius(this%idcxs(n), width, depth, area=a)
 
-    ! todo: unit convert
-    c = a * r ** DTWOTHIRDS / roughc / absdhdx / dx
+    ! -- conductance from manning's equation
+    c = this%unitconv * a * r ** DTWOTHIRDS / roughc / absdhdx / dx
 
   end function get_cond_n
     

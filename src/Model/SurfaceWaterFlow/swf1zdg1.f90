@@ -387,7 +387,7 @@ contains
     rough = this%rough(i)
     slope = this%slope(i)
     roughc = this%cxs%get_roughness(idcxs, width, depth, rough, &
-                                    slope, unitconv)
+                                    slope)
     a = this%cxs%get_area(idcxs, width, depth)
     r = this%cxs%get_hydraulic_radius(idcxs, width, depth, area=a)
 

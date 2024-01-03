@@ -544,7 +544,7 @@ module SwfCxsModule
   end function get_area
 
   function get_roughness(this, idcxs, width, depth, rough, &
-                         slope, unitconv) result(roughc)
+                         slope) result(roughc)
     ! -- modules
     use SwfCxsUtilsModule, only: calc_composite_roughness
     ! -- dummy
@@ -554,7 +554,6 @@ module SwfCxsModule
     real(DP), intent(in) :: depth !< stage in reach
     real(DP), intent(in) :: rough !< mannings value provided for the reach
     real(DP), intent(in) :: slope !< slope value provided for the reach
-    real(DP), intent(in) :: unitconv !< unit conversion for mannings equation
     ! -- local
     real(DP) :: roughc !< calculated composite roughness
     integer(I4B) :: i0
@@ -573,7 +572,6 @@ module SwfCxsModule
                                         this%xfraction(i0:i1), &
                                         this%height(i0:i1), &
                                         this%manfraction(i0:i1), &
-                                        unitconv, &
                                         icalcmeth)
     end if
   end function get_roughness

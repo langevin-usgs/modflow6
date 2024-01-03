@@ -288,8 +288,7 @@ contains
 
       npts = size(cxs_xf)
       rough_composite = calc_composite_roughness(npts, depth, width, rough, slope, &
-                                                 cxs_xf, cxs_h, cxs_rf, unitconv, &
-                                                 linmeth)
+                                                 cxs_xf, cxs_h, cxs_rf, linmeth)
       wp = get_wetted_perimeter(npts, cxs_xf, cxs_h, width, depth)
       aw = get_cross_section_area(npts, cxs_xf, cxs_h, width, depth)
       if (wp > DZERO) then
@@ -307,7 +306,7 @@ contains
   end function calc_qman_composite
 
   function calc_composite_roughness(npts, depth, width, rough, slope, &
-                                    cxs_xf, cxs_h, cxs_rf, unitconv, &
+                                    cxs_xf, cxs_h, cxs_rf, &
                                     linmeth) result(rc)
     ! -- dummy variables
     integer(I4B), intent(in) :: npts
@@ -318,7 +317,6 @@ contains
     real(DP), dimension(:), intent(in) :: cxs_xf ! xfraction distances for this cross section
     real(DP), dimension(:), intent(in) :: cxs_h ! heights for this cross section
     real(DP), dimension(:), intent(in) :: cxs_rf ! mannings fractions for this cross section
-    real(DP), intent(in) :: unitconv !< conversion unit numerator in mannings equation
     integer(I4B), intent(in) :: linmeth !< method for composite calculation; linear 0 or nonlinear 1
 
     ! return value
@@ -369,9 +367,6 @@ contains
       end if
 
     end if
-    !
-    ! -- convert roughness using unitconv
-    rc = rc * unitconv
     !
     ! -- return
     return
