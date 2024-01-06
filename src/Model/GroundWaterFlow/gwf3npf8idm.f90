@@ -40,6 +40,7 @@ module GwfNpfInputModule
     logical :: inwtupw = .false.
     logical :: satmin = .false.
     logical :: satomega = .false.
+    logical :: izeta = .false.
     logical :: icelltype = .false.
     logical :: k = .false.
     logical :: k22 = .false.
@@ -546,6 +547,23 @@ module GwfNpfInputModule
     )
 
   type(InputParamDefinitionType), parameter :: &
+    gwfnpf_izeta = InputParamDefinitionType &
+    ( &
+    'GWF', & ! component
+    'NPF', & ! subcomponent
+    'OPTIONS', & ! block
+    'DEV_ZETA', & ! tag name
+    'IZETA', & ! fortran variable
+    'KEYWORD', & ! type
+    '', & ! shape
+    .false., & ! required
+    .false., & ! multi-record
+    .false., & ! preserve case
+    .false., & ! layered
+    .false. & ! timeseries
+    )
+
+  type(InputParamDefinitionType), parameter :: &
     gwfnpf_icelltype = InputParamDefinitionType &
     ( &
     'GWF', & ! component
@@ -713,6 +731,7 @@ module GwfNpfInputModule
     gwfnpf_inwtupw, &
     gwfnpf_satmin, &
     gwfnpf_satomega, &
+    gwfnpf_izeta, &
     gwfnpf_icelltype, &
     gwfnpf_k, &
     gwfnpf_k22, &

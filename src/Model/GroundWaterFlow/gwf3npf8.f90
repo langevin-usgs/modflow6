@@ -19,6 +19,7 @@ module GwfNpfModule
   use MemoryManagerModule, only: mem_allocate, mem_reallocate, &
                                  mem_deallocate, mem_setptr, &
                                  mem_reassignptr
+  use MemoryHelperModule, only: create_mem_path
   use MatrixBaseModule
 
   implicit none
@@ -103,6 +104,9 @@ module GwfNpfModule
     integer(I4B), pointer :: kchangeper => null() ! last stress period in which any node K (or K22, or K33) values were changed (0 if unchanged from start of simulation)
     integer(I4B), pointer :: kchangestp => null() ! last time step in which any node K (or K22, or K33) values were changed (0 if unchanged from start of simulation)
     integer(I4B), dimension(:), pointer, contiguous :: nodekchange => null() ! grid array of flags indicating for each node whether its K (or K22, or K33) value changed (1) at (kchangeper, kchangestp) or not (0)
+    !
+    integer(I4B), pointer :: izeta => null() !< allocate and use zeta for aquifer bottom calculations
+    real(DP), dimension(:), pointer, contiguous :: zeta => null() !< aquifer bottom elevation; points to dis%bot unless izeta is 1
 
   contains
 
@@ -814,13 +818,31 @@ contains
     integer(I4B), intent(in) :: n
     real(DP), intent(in) :: hn
     real(DP), intent(inout) :: thksat
+    real(DP) :: bt, bb, zeta
     !
     ! -- Standard Formulation
-    if (hn >= this%dis%top(n)) then
-      thksat = DONE
+    
+    ! -- calculate elevation of top of aquifer (bt)
+    if (hn > this%dis%top(n)) then
+      bt = this%dis%top(n)
+    else if (hn < this%dis%bot(n)) then
+      bt = this%dis%bot(n)
     else
-      thksat = (hn - this%dis%bot(n)) / (this%dis%top(n) - this%dis%bot(n))
+      bt = hn
     end if
+
+    ! -- calculate elevation of bottom of aquifer (bb)
+    zeta = this%zeta(n)
+    if (zeta > this%dis%top(n)) then
+      bb = this%dis%top(n)
+    else if (zeta < this%dis%bot(n)) then
+      bb = this%dis%bot(n)
+    else
+      bb = zeta
+    end if
+
+    thksat = (bt - bb) / (this%dis%top(n) - this%dis%bot(n))
+
     !
     ! -- Newton-Raphson Formulation
     if (this%inewton /= 0) then
@@ -1053,6 +1075,7 @@ contains
     call mem_deallocate(this%invsc)
     call mem_deallocate(this%kchangeper)
     call mem_deallocate(this%kchangestp)
+    call mem_deallocate(this%izeta)
     !
     ! -- Deallocate arrays
     deallocate (this%aname)
@@ -1075,6 +1098,7 @@ contains
     call mem_deallocate(this%propsedge)
     call mem_deallocate(this%spdis)
     call mem_deallocate(this%nodekchange)
+    call mem_deallocate(this%zeta)
     !
     ! -- deallocate parent
     call this%NumericalPackageType%da()
@@ -1090,7 +1114,6 @@ contains
   !<
   subroutine allocate_scalars(this)
     ! -- modules
-    use MemoryHelperModule, only: create_mem_path
     ! -- dummy
     class(GwfNpftype) :: this
     !
@@ -1134,6 +1157,7 @@ contains
     call mem_allocate(this%invsc, 'INVSC', this%memoryPath)
     call mem_allocate(this%kchangeper, 'KCHANGEPER', this%memoryPath)
     call mem_allocate(this%kchangestp, 'KCHANGESTP', this%memoryPath)
+    call mem_allocate(this%izeta, 'IZETA', this%memoryPath)
     !
     ! -- set pointer to inewtonur
     call mem_setptr(this%igwfnewtonur, 'INEWTONUR', &
@@ -1176,6 +1200,7 @@ contains
     this%invsc = 0
     this%kchangeper = 0
     this%kchangestp = 0
+    this%izeta = 0
     !
     ! -- If newton is on, then NPF creates asymmetric matrix
     this%iasym = this%inewton
@@ -1266,6 +1291,18 @@ contains
       this%nodekchange(n) = DZERO
     end do
     !
+    ! -- Point zeta to dis%bot or allocate new memory for zeta and initialize
+    !    it with dis%bot
+    call mem_allocate(this%zeta, ncells, 'ZETA', this%memoryPath)
+    if (this%izeta == 0) then
+      call mem_reassignptr(this%zeta, 'ZETA', this%memoryPath, &
+                           'BOT', create_mem_path(this%name_model, 'DIS'))
+    else
+      do n = 1, ncells
+        this%zeta(n) = this%dis%bot(n)
+      end do
+    end if
+    !
     ! -- allocate variable names
     allocate (this%aname(this%iname))
     this%aname = ['               ICELLTYPE', '                       K', &
@@ -1352,6 +1389,9 @@ contains
     if (found%ihdwet) &
       write (this%iout, '(4x,a,i5)') &
       'Head rewet equation (IHDWET) has been set to: ', this%ihdwet
+    if (found%izeta) &
+      write (this%iout, '(4x,a)') &
+      'Zeta aquifer bottom (IZETA) functionality has been activated.'
     write (this%iout, '(1x,a,/)') 'End Setting NPF Options'
     !
     ! -- Return
@@ -1409,6 +1449,7 @@ contains
     call mem_set_value(this%wetfct, 'WETFCT', this%input_mempath, found%wetfct)
     call mem_set_value(this%iwetit, 'IWETIT', this%input_mempath, found%iwetit)
     call mem_set_value(this%ihdwet, 'IHDWET', this%input_mempath, found%ihdwet)
+    call mem_set_value(this%izeta, 'IZETA', this%input_mempath, found%izeta)
     !
     ! -- save flows option active
     if (found%ipakcb) this%ipakcb = -1

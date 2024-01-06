@@ -271,6 +271,15 @@ longname set saturation omega value
 description set saturation omega value
 mf6internal satomega
 
+block options
+name dev_zeta
+type keyword
+reader urword
+optional true
+longname use zeta array for bottom of freshwater in a cell
+description use zeta array for bottom of freshwater in a cell
+mf6internal izeta
+
 # --------------------- gwf npf griddata ---------------------
 
 block griddata
