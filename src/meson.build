@@ -87,6 +87,8 @@ modflow_sources = files(
     'Model' / 'GroundWaterFlow' / 'gwf3riv8idm.f90',
     'Model' / 'GroundWaterFlow' / 'gwf3sfr8.f90',
     'Model' / 'GroundWaterFlow' / 'gwf3sto8.f90',
+    'Model' / 'GroundWaterFlow' / 'gwf3swi8.f90',
+    'Model' / 'GroundWaterFlow' / 'gwf3swi8idm.f90',
     'Model' / 'GroundWaterFlow' / 'gwf3tvbase8.f90',
     'Model' / 'GroundWaterFlow' / 'gwf3tvk8.f90',
     'Model' / 'GroundWaterFlow' / 'gwf3tvs8.f90',

@@ -911,6 +911,10 @@ if __name__ == "__main__":
             SRC_PATH / "Model" / "GroundWaterFlow" / "gwf3riv8idm.f90",
         ],
         [
+            DFN_PATH / "gwf-swi.dfn",
+            SRC_PATH / "Model" / "GroundWaterFlow" / "gwf3swi8idm.f90",
+        ],
+        [
             DFN_PATH / "gwf-wel.dfn",
             SRC_PATH / "Model" / "GroundWaterFlow" / "gwf3wel8idm.f90",
         ],

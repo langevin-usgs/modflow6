@@ -1,0 +1,11 @@
+# --------------------- gwf ic griddata ---------------------
+
+block griddata
+name zeta
+type double precision
+shape (nodes)
+reader readarray
+layered true
+longname starting zeta
+description is the initial (starting) zeta surface---that is, interface elevation at the beginning of the GWF Model simulation.
+default_value 1.0

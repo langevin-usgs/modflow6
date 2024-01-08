@@ -17,6 +17,7 @@ module GwfModule
   use GwfStoModule, only: GwfStoType
   use GwfCsubModule, only: GwfCsubType
   use GwfMvrModule, only: GwfMvrType
+  use GwfSwiModule, only: GwfSwiType
   use BudgetModule, only: BudgetType
   use GwfOcModule, only: GwfOcType
   use GhostNodeModule, only: GhostNodeType, gnc_cr
@@ -48,6 +49,7 @@ module GwfModule
     type(GhostNodeType), pointer :: gnc => null() ! ghost node correction package
     type(GwfHfbType), pointer :: hfb => null() ! horizontal flow barrier package
     type(GwfMvrType), pointer :: mvr => null() ! water mover package
+    type(GwfSwiType), pointer :: swi => null() ! seawater intrusion package
     type(GwfObsType), pointer :: obs => null() ! observation package
     type(BudgetType), pointer :: budget => null() ! budget object
     integer(I4B), pointer :: inic => null() ! unit number IC
@@ -58,6 +60,7 @@ module GwfModule
     integer(I4B), pointer :: insto => null() ! unit number STO
     integer(I4B), pointer :: incsub => null() ! unit number CSUB
     integer(I4B), pointer :: inmvr => null() ! unit number MVR
+    integer(I4B), pointer :: inswi => null() ! unit number SWI
     integer(I4B), pointer :: inhfb => null() ! unit number HFB
     integer(I4B), pointer :: ingnc => null() ! unit number GNC
     integer(I4B), pointer :: inobs => null() ! unit number OBS
@@ -110,7 +113,7 @@ module GwfModule
   character(len=LENPACKAGETYPE), dimension(GWF_NBASEPKG) :: GWF_BASEPKG
   data GWF_BASEPKG/'DIS6 ', 'DISV6', 'DISU6', '     ', '     ', & !  5
                   &'NPF6 ', 'BUY6 ', 'VSC6 ', 'GNC6 ', '     ', & ! 10
-                  &'HFB6 ', 'STO6 ', 'IC6  ', '     ', '     ', & ! 15
+                  &'HFB6 ', 'STO6 ', 'IC6  ', 'SWI6 ', '     ', & ! 15
                   &'MVR6 ', 'OC6  ', 'OBS6 ', '     ', '     ', & ! 20
                   &30*'     '/ ! 50
 
@@ -236,6 +239,7 @@ contains
     if (this%inbuy > 0) call this%buy%buy_df(this%dis)
     if (this%invsc > 0) call this%vsc%vsc_df(this%dis)
     if (this%ingnc > 0) call this%gnc%gnc_df(this)
+    if (this%inswi > 0) call this%swi%swi_df()
     !
     ! -- Assign or point model members to dis members
     !    this%neq will be incremented if packages add additional unknowns
@@ -349,6 +353,7 @@ contains
     if (this%insto > 0) call this%sto%sto_ar(this%dis, this%ibound)
     if (this%incsub > 0) call this%csub%csub_ar(this%dis, this%ibound)
     if (this%inmvr > 0) call this%mvr%mvr_ar()
+    if (this%inswi > 0) call this%swi%swi_ar()
     if (this%inobs > 0) call this%obs%gwf_obs_ar(this%ic, this%x, this%flowja)
     !
     ! -- Call dis_ar to write binary grid file
@@ -537,6 +542,11 @@ contains
                              this%idxglo, this%rhs)
     end if
     if (this%inmvr > 0) call this%mvr%mvr_fc()
+    ! -- swi
+    if (this%inswi > 0) then
+      call this%swi%swi_fc(kiter, this%xold, this%x, matrix_sln, &
+                           this%idxglo, this%rhs)
+    end if
     do ip = 1, this%bndlist%Count()
       packobj => GetBndFromList(this%bndlist, ip)
       call packobj%bnd_fc(this%rhs, this%ia, this%idxglo, matrix_sln)
@@ -1124,6 +1134,9 @@ contains
     call this%budget%budget_da()
     call this%hfb%hfb_da()
     call this%mvr%mvr_da()
+    if (this%inswi > 0) then
+      call this%swi%swi_da()
+    end if
     call this%oc%oc_da()
     call this%obs%obs_da()
     !
@@ -1160,6 +1173,7 @@ contains
     call mem_deallocate(this%insto)
     call mem_deallocate(this%incsub)
     call mem_deallocate(this%inmvr)
+    call mem_deallocate(this%inswi)
     call mem_deallocate(this%inhfb)
     call mem_deallocate(this%ingnc)
     call mem_deallocate(this%iss)
@@ -1253,6 +1267,7 @@ contains
     call mem_allocate(this%insto, 'INSTO', this%memoryPath)
     call mem_allocate(this%incsub, 'INCSUB', this%memoryPath)
     call mem_allocate(this%inmvr, 'INMVR', this%memoryPath)
+    call mem_allocate(this%inswi, 'INSWI', this%memoryPath)
     call mem_allocate(this%inhfb, 'INHFB', this%memoryPath)
     call mem_allocate(this%ingnc, 'INGNC', this%memoryPath)
     call mem_allocate(this%inobs, 'INOBS', this%memoryPath)
@@ -1267,6 +1282,7 @@ contains
     this%insto = 0
     this%incsub = 0
     this%inmvr = 0
+    this%inswi = 0
     this%inhfb = 0
     this%ingnc = 0
     this%inobs = 0
@@ -1505,6 +1521,7 @@ contains
     use GwfMvrModule, only: mvr_cr
     use GwfHfbModule, only: hfb_cr
     use GwfIcModule, only: ic_cr
+    use GwfSwiModule, only: swi_cr
     use GwfOcModule, only: oc_cr
     ! -- dummy
     class(GwfModelType) :: this
@@ -1527,6 +1544,7 @@ contains
     integer(I4B) :: indis = 0 ! DIS enabled flag
     character(len=LENMEMPATH) :: mempathnpf = ''
     character(len=LENMEMPATH) :: mempathic = ''
+    character(len=LENMEMPATH) :: mempathswi = ''
     !
     ! -- set input model memory path
     model_mempath = create_mem_path(component=this%name, context=idm_context)
@@ -1576,6 +1594,9 @@ contains
         mempathic = mempath
       case ('MVR6')
         this%inmvr = inunit
+      case ('SWI6')
+        this%inswi = 1
+        mempathswi = mempath
       case ('OC6')
         this%inoc = inunit
       case ('OBS6')
@@ -1602,6 +1623,10 @@ contains
                  this%incsub, this%iout)
     call ic_cr(this%ic, this%name, mempathic, this%inic, this%iout, this%dis)
     call mvr_cr(this%mvr, this%name, this%inmvr, this%iout, this%dis)
+    if (this%inswi > 0) then
+      call swi_cr(this%swi, this%name, mempathswi, this%inswi, this%iout, &
+                  this%dis)
+    end if
     call oc_cr(this%oc, this%name, this%inoc, this%iout)
     call gwf_obs_cr(this%obs, this%inobs)
     !
