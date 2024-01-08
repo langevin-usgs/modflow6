@@ -1,7 +1,7 @@
 module GwfSwiModule
 
   use KindModule, only: DP, I4B, LGP
-  use ConstantsModule, only: LINELENGTH, DONE, DZERO
+  use ConstantsModule, only: LINELENGTH, DONE, DZERO, LENBUDTXT
   use SimVariablesModule, only: errmsg
   use SimModule, only: store_error
   use NumericalPackageModule, only: NumericalPackageType
@@ -16,17 +16,24 @@ module GwfSwiModule
   public :: GwfSwiType
   public :: swi_cr
 
+  character(len=LENBUDTXT), dimension(1) :: budtxt = & !< text labels for budget terms
+    &['         STORAGE']
+
   type, extends(NumericalPackageType) :: GwfSwiType
 
-    integer(I4B), pointer :: iss => null() !< steady state flag: 1 = steady, 0 = transient
-    integer(I4B), pointer :: insto => null() !< flag to indicate storage package is active
     real(DP), dimension(:), pointer, contiguous :: zeta => null() ! starting head
+    real(DP), dimension(:), pointer, contiguous :: hcof => null() !< hcof contribution to amat
+    real(DP), dimension(:), pointer, contiguous :: rhs => null() !< rhs contribution
+    real(DP), dimension(:), pointer, contiguous :: storage => null() !< calculated swi storage
 
   contains
 
     procedure :: swi_df
     procedure :: swi_ar
     procedure :: swi_fc
+    procedure :: swi_cq
+    procedure :: swi_bd
+    procedure :: swi_save_model_flows
     procedure :: swi_da
     procedure, private :: swi_load
     procedure, private :: allocate_arrays
@@ -75,8 +82,8 @@ contains
       write (swi%iout, fmtswi) input_mempath
     end if
     !
-    ! -- set pointer to gwf insto
-    call mem_setptr(swi%insto, 'INSTO', create_mem_path(swi%name_model))
+    ! -- return
+    return
   end subroutine swi_cr
 
   !> @brief Allocate arrays, load from IDM, and assign head
@@ -91,6 +98,9 @@ contains
     !
     ! -- load from IDM
     call this%swi_load()
+    !
+    ! -- return
+    return
   end subroutine swi_df
 
   !> @brief Allocate arrays, load from IDM, and assign head
@@ -100,8 +110,8 @@ contains
     class(GwfSwiType) :: this
     ! -- local
     !
-    ! -- set pointer to gwf iss
-    call mem_setptr(this%iss, 'ISS', create_mem_path(this%name_model))
+    ! -- return
+    return
   end subroutine swi_ar
 
   !> @ brief Fill A and right-hand side for the package
@@ -111,7 +121,6 @@ contains
   !<
   subroutine swi_fc(this, kiter, hold, hnew, matrix_sln, idxglo, rhs)
     ! -- modules
-    use TdisModule, only: delt
     ! -- dummy variables
     class(GwfSwiType) :: this !< GwfSwiType object
     integer(I4B), intent(in) :: kiter !< outer iteration number
@@ -123,115 +132,125 @@ contains
     ! -- local variables
     integer(I4B) :: n
     integer(I4B) :: idiag
-    real(DP) :: tled
-    real(DP) :: sc1
-    real(DP) :: sc2
-    real(DP) :: rho1
-    real(DP) :: rho2
-    real(DP) :: sc1old
-    real(DP) :: sc2old
-    real(DP) :: rho1old
-    real(DP) :: rho2old
-    real(DP) :: tp
-    real(DP) :: bt
-    real(DP) :: snold
-    real(DP) :: snnew
-    real(DP) :: aterm
-    real(DP) :: rhsterm
     ! -- formats
-    character(len=*), parameter :: fmtsperror = &
-      &"('Detected time-step length of zero.  GWF SWI package cannot be ', &
-      &'used unless time-step length is non-zero.')"
     !
-    ! -- test if steady-state stress period
-    if (this%iss /= 0) return
-    !
-    ! -- Ensure time step length is not zero
-    if (delt == DZERO) then
-      write (errmsg, fmtsperror)
-      call store_error(errmsg, terminate=.TRUE.)
-    end if
-    !
-    ! -- set variables
-    tled = DONE / delt
-    !
-    ! -- loop through and calculate storage contribution to hcof and rhs
-!     do n = 1, this%dis%nodes
-!       idiag = this%dis%con%ia(n)
-!       if (this%ibound(n) < 1) cycle
-!       !
-!       ! -- aquifer elevations and thickness
-!       tp = this%dis%top(n)
-!       bt = this%dis%bot(n)
-!       !
-!       ! -- aquifer saturation
-!       if (this%iconvert(n) == 0) then
-!         snold = DONE
-!         snnew = DONE
-!       else
-!         snold = sQuadraticSaturation(tp, bt, hold(n), this%satomega)
-!         snnew = sQuadraticSaturation(tp, bt, hnew(n), this%satomega)
-!       end if
-!       !
-!       ! -- storage coefficients
-!       sc1 = SsCapacity(this%istor_coef, tp, bt, this%dis%area(n), this%ss(n))
-!       rho1 = sc1 * tled
-!       !
-!       if (this%integratechanges /= 0) then
-!         ! -- Integration of storage changes (e.g. when using TVS):
-!         !    separate the old (start of time step) and new (end of time step)
-!         !    primary storage capacities
-!         sc1old = SsCapacity(this%istor_coef, tp, bt, this%dis%area(n), &
-!                             this%oldss(n))
-!         rho1old = sc1old * tled
-!       else
-!         ! -- No integration of storage changes: old and new values are
-!         !    identical => normal MF6 storage formulation
-!         rho1old = rho1
-!       end if
-!       !
-!       ! -- calculate specific storage terms
-!       call SsTerms(this%iconvert(n), this%iorig_ss, this%iconf_ss, tp, bt, &
-!                    rho1, rho1old, snnew, snold, hnew(n), hold(n), &
-!                    aterm, rhsterm)
-!       !
-!       ! -- add specific storage terms to amat and rhs
-!       call matrix_sln%add_value_pos(idxglo(idiag), aterm)
-!       rhs(n) = rhs(n) + rhsterm
-!       !
-!       ! -- specific yield
-!       if (this%iconvert(n) /= 0) then
-!         rhsterm = DZERO
-!         !
-!         ! -- secondary storage coefficient
-!         sc2 = SyCapacity(this%dis%area(n), this%sy(n))
-!         rho2 = sc2 * tled
-!         !
-!         if (this%integratechanges /= 0) then
-!           ! -- Integration of storage changes (e.g. when using TVS):
-!           !    separate the old (start of time step) and new (end of time step)
-!           !    secondary storage capacities
-!           sc2old = SyCapacity(this%dis%area(n), this%oldsy(n))
-!           rho2old = sc2old * tled
-!         else
-!           ! -- No integration of storage changes: old and new values are
-!           !    identical => normal MF6 storage formulation
-!           rho2old = rho2
-!         end if
-!         !
-!         ! -- calculate specific storage terms
-!         call SyTerms(tp, bt, rho2, rho2old, snnew, snold, &
-!                      aterm, rhsterm)
-! !
-!         ! -- add specific yield terms to amat and rhs
-!         call matrix_sln%add_value_pos(idxglo(idiag), aterm)
-!         rhs(n) = rhs(n) + rhsterm
-!       end if
-!     end do
+    ! -- Add hcof and rhs terms
+    do n = 1, this%dis%nodes
+      idiag = this%dis%con%ia(n)
+      call matrix_sln%add_value_pos(idxglo(idiag), this%hcof(n))
+      rhs(n) = rhs(n) + this%rhs(n)
+    end do
     !
     ! -- return
     return
   end subroutine swi_fc
+
+  !> @ brief Calculate flows for package
+  !!
+  !!  Flow calculation for the STO package components. Components include
+  !!  specific storage and specific yield storage.
+  !!
+  !<
+  subroutine swi_cq(this, flowja, hnew, hold)
+    ! -- modules
+    ! -- dummy variables
+    class(GwfSwiType) :: this !< GwfStoType object
+    real(DP), dimension(:), contiguous, intent(inout) :: flowja !< connection flows
+    real(DP), dimension(:), contiguous, intent(in) :: hnew !< current head
+    real(DP), dimension(:), contiguous, intent(in) :: hold !< previous head
+    ! -- local variables
+    integer(I4B) :: n
+    integer(I4B) :: idiag
+    real(DP) :: rate
+    !
+    ! -- initialize strg arrays
+    do n = 1, this%dis%nodes
+      this%storage(n) = DZERO
+    end do
+    !
+    ! Loop through cells
+    do n = 1, this%dis%nodes
+      !
+      ! -- Calculate change in freshwater storage
+      rate = this%hcof(n) * hnew(n) - this%rhs(n)
+      this%storage(n) = rate
+      !
+      ! -- Add storage term to flowja
+      idiag = this%dis%con%ia(n)
+      flowja(idiag) = flowja(idiag) + rate
+    end do
+    !
+    ! -- return
+    return
+  end subroutine swi_cq
+
+  !> @ brief Model budget calculation for package
+  !!
+  !!  Budget calculation for the STO package components. Components include
+  !!  specific storage and specific yield storage.
+  !!
+  !<
+  subroutine swi_bd(this, isuppress_output, model_budget)
+    ! -- modules
+    use TdisModule, only: delt
+    use BudgetModule, only: BudgetType, rate_accumulator
+    ! -- dummy variables
+    class(GwfSwiType) :: this !< GwfSwiType object
+    integer(I4B), intent(in) :: isuppress_output !< flag to suppress model output
+    type(BudgetType), intent(inout) :: model_budget !< model budget object
+    ! -- local variables
+    real(DP) :: rin
+    real(DP) :: rout
+    !
+    ! -- Add swi storage rates to model budget
+    call rate_accumulator(this%storage, rin, rout)
+    call model_budget%addentry(rin, rout, delt, budtxt(1), &
+                               isuppress_output, '     SWI')
+    !
+    ! -- return
+    return
+  end subroutine swi_bd
+
+  !> @ brief Save model flows for package
+  !!
+  !!  Save cell-by-cell budget terms for the STO package.
+  !!
+  !<
+  subroutine swi_save_model_flows(this, icbcfl, icbcun)
+    ! -- dummy variables
+    class(GwfSwiType) :: this !< GwfSwiType object
+    integer(I4B), intent(in) :: icbcfl !< flag to output budget data
+    integer(I4B), intent(in) :: icbcun !< cell-by-cell file unit number
+    ! -- local variables
+    integer(I4B) :: ibinun
+    integer(I4B) :: iprint, nvaluesp, nwidthp
+    character(len=1) :: cdatafmp = ' ', editdesc = ' '
+    real(DP) :: dinact
+    !
+    ! -- Set unit number for binary output
+    if (this%ipakcb < 0) then
+      ibinun = icbcun
+    elseif (this%ipakcb == 0) then
+      ibinun = 0
+    else
+      ibinun = this%ipakcb
+    end if
+    if (icbcfl == 0) ibinun = 0
+    !
+    ! -- Record the storage rates if requested
+    if (ibinun /= 0) then
+      iprint = 0
+      dinact = DZERO
+      !
+      ! -- swi storage
+      call this%dis%record_array(this%storage, this%iout, iprint, -ibinun, &
+                                 budtxt(1), cdatafmp, nvaluesp, &
+                                 nwidthp, editdesc, dinact)
+    end if
+    !
+    ! -- return
+    return
+  end subroutine swi_save_model_flows
 
   !> @brief Deallocate
   !<
@@ -248,9 +267,15 @@ contains
     !
     ! -- deallocate arrays
     call mem_deallocate(this%zeta)
+    call mem_deallocate(this%hcof)
+    call mem_deallocate(this%rhs)
+    call mem_deallocate(this%storage)
     !
     ! -- deallocate parent
     call this%NumericalPackageType%da()
+    !
+    ! -- return
+    return
   end subroutine swi_da
 
   !> @brief Load data from IDM into package
@@ -262,6 +287,9 @@ contains
     class(GwfSwiType) :: this
     !
     call this%source_griddata()
+    !
+    ! -- return
+    return
   end subroutine swi_load
 
   !> @brief Allocate arrays
@@ -272,9 +300,25 @@ contains
     ! -- dummy
     class(GwfSwiType) :: this
     integer(I4B), intent(in) :: nodes
+    ! -- local
+    integer(I4B) :: n
     !
     ! -- Allocate
     call mem_allocate(this%zeta, nodes, 'ZETA', this%memoryPath)
+    call mem_allocate(this%hcof, nodes, 'HCOF', this%memoryPath)
+    call mem_allocate(this%rhs, nodes, 'RHS', this%memoryPath)
+    call mem_allocate(this%storage, nodes, 'STORAGE', this%memoryPath)
+    !
+    ! -- initialize
+    do n = 1, nodes
+      this%zeta(n) = DZERO
+      this%hcof(n) = DZERO
+      this%rhs(n) = DZERO
+      this%storage(n) = DZERO
+    end do
+    !
+    ! -- return
+    return
   end subroutine allocate_arrays
 
   !> @brief Copy grid data from IDM into package
@@ -287,7 +331,6 @@ contains
     ! -- dummy
     class(GwfSwiType) :: this
     ! -- local
-    character(len=LINELENGTH) :: errmsg
     type(GwfSwiParamFoundType) :: found
     integer(I4B), dimension(:), pointer, contiguous :: map
     !
@@ -306,6 +349,9 @@ contains
     else if (this%iout > 0) then
       write (this%iout, '(4x,a)') 'ZETA set from input file'
     end if
+    !
+    ! -- return
+    return
   end subroutine source_griddata
 
 end module GwfSwiModule

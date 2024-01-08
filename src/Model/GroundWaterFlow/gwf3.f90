@@ -825,6 +825,7 @@ contains
     if (this%incsub > 0) call this%csub%csub_cq(this%dis%nodes, this%x, &
                                                 this%xold, isuppress_output, &
                                                 this%flowja)
+    if (this%inswi > 0) call this%swi%swi_cq(this%flowja, this%x, this%xold)
     !
     ! -- Go through packages and call cq routines.  cf() routines are called
     !    first to regenerate non-linear terms to be consistent with the final
@@ -873,6 +874,7 @@ contains
     if (this%insto > 0) call this%sto%sto_bd(isuppress_output, this%budget)
     if (this%incsub > 0) call this%csub%csub_bd(isuppress_output, this%budget)
     if (this%inmvr > 0) call this%mvr%mvr_bd()
+    if (this%inswi > 0) call this%swi%swi_bd(isuppress_output, this%budget)
     do ip = 1, this%bndlist%Count()
       packobj => GetBndFromList(this%bndlist, ip)
       call packobj%bnd_bd(this%budget)
@@ -994,7 +996,10 @@ contains
       packobj => GetBndFromList(this%bndlist, ip)
       call packobj%bnd_ot_model_flows(icbcfl=icbcfl, ibudfl=0, icbcun=icbcun)
     end do
-
+    if (this%inswi > 0) then
+      call this%swi%swi_save_model_flows(icbcfl, icbcun)
+    end if
+    !
     ! -- Save advanced package flows
     do ip = 1, this%bndlist%Count()
       packobj => GetBndFromList(this%bndlist, ip)
