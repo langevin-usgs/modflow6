@@ -62,6 +62,7 @@ module GwfNpfModule
     integer(I4B), pointer :: icellavg => null() !< harmonic(0), logarithmic(1), or arithmetic thick-log K (2)
     real(DP), pointer :: wetfct => null() !< wetting factor
     real(DP), pointer :: hdry => null() !< default is -1.d30
+    real(DP), pointer :: derv_mult => null() !< multiplier for quadratic saturation derivative default is 1.0
     integer(I4B), dimension(:), pointer, contiguous :: icelltype => null() !< confined (0) or convertible (1)
     integer(I4B), dimension(:), pointer, contiguous :: ithickstartflag => null() !< array of flags for handling the thickstrt option
     !
@@ -140,6 +141,8 @@ module GwfNpfModule
     procedure, private :: preprocess_input
     procedure, private :: calc_condsat
     procedure, private :: calc_initial_sat
+    procedure, private :: calc_effective_top
+    procedure, private :: calc_effective_bot
     procedure, public :: rewet_check
     procedure, public :: hy_eff
     procedure, public :: calc_spdis
@@ -623,6 +626,8 @@ contains
     real(DP) :: botup
     real(DP) :: topdn
     real(DP) :: botdn
+    real(DP) :: bb
+    real(DP) :: thksat
     !
     ! -- add newton terms to solution matrix
     nodes = this%dis%nodes
@@ -674,13 +679,21 @@ contains
               afac = DTWO / (DONE + (topdn - botdn) / (topup - botup))
               cond = cond * afac
             end if
+            ! 
+            ! -- calculate elevation of bottom of aquifer (bb)
+            bb = this%calc_effective_bot(iups, this%zeta(iups))
+            !
+            ! -- calculate the saturated thickness
+            thksat = sQuadraticSaturation(topup, botup, hnew(iups), &
+                                          this%satomega, this%satmin, bb)
             !
             ! compute additional term
             consterm = -cond * (hnew(iups) - hnew(idn)) !needs to use hwadi instead of hnew(idn)
             !filledterm = cond
             filledterm = matrix_sln%get_value_pos(idxglo(ii))
             derv = sQuadraticSaturationDerivative(topup, botup, hnew(iups), &
-                                                  this%satomega, this%satmin)
+                                                  this%satomega, this%satmin, bb)
+            derv = this%derv_mult * derv
             idiagm = this%dis%con%ia(m)
             ! fill jacobian for n being the upstream node
             if (iups == n) then
@@ -822,37 +835,24 @@ contains
     integer(I4B), intent(in) :: n
     real(DP), intent(in) :: hn
     real(DP), intent(inout) :: thksat
-    real(DP) :: bt, bb, zeta
+    real(DP) :: bt
+    real(DP) :: bb
     !
     ! -- Standard Formulation
-    
+    !
     ! -- calculate elevation of top of aquifer (bt)
-    if (hn > this%dis%top(n)) then
-      bt = this%dis%top(n)
-    else if (hn < this%dis%bot(n)) then
-      bt = this%dis%bot(n)
-    else
-      bt = hn
-    end if
-
+    bt = this%calc_effective_top(n, hn)
+    !
     ! -- calculate elevation of bottom of aquifer (bb)
-    zeta = this%zeta(n)
-    if (zeta > this%dis%top(n)) then
-      bb = this%dis%top(n)
-    else if (zeta < this%dis%bot(n)) then
-      bb = this%dis%bot(n)
-    else
-      bb = zeta
-    end if
-
+    bb = this%calc_effective_bot(n, this%zeta(n))
+    !
+    ! -- calculate the saturated thickness
     thksat = (bt - bb) / (this%dis%top(n) - this%dis%bot(n))
-
     !
     ! -- Newton-Raphson Formulation
     if (this%inewton /= 0) then
       thksat = sQuadraticSaturation(this%dis%top(n), this%dis%bot(n), hn, &
-                                    this%satomega, this%satmin)
-      !if (thksat < this%satmin) thksat = this%satmin
+                                    this%satomega, this%satmin, bb)
     end if
     !
     ! -- Return
@@ -1048,6 +1048,7 @@ contains
     call mem_deallocate(this%satomega)
     call mem_deallocate(this%hnoflo)
     call mem_deallocate(this%hdry)
+    call mem_deallocate(this%derv_mult)
     call mem_deallocate(this%icellavg)
     call mem_deallocate(this%iavgkeff)
     call mem_deallocate(this%ik22)
@@ -1129,6 +1130,7 @@ contains
     call mem_allocate(this%satomega, 'SATOMEGA', this%memoryPath)
     call mem_allocate(this%hnoflo, 'HNOFLO', this%memoryPath)
     call mem_allocate(this%hdry, 'HDRY', this%memoryPath)
+    call mem_allocate(this%derv_mult, 'DERV_MULT', this%memoryPath)
     call mem_allocate(this%icellavg, 'ICELLAVG', this%memoryPath)
     call mem_allocate(this%iavgkeff, 'IAVGKEFF', this%memoryPath)
     call mem_allocate(this%ik22, 'IK22', this%memoryPath)
@@ -1171,6 +1173,7 @@ contains
     this%satomega = DZERO
     this%hnoflo = DHNOFLO !1.d30
     this%hdry = DHDRY !-1.d30
+    this%derv_mult = DONE
     this%icellavg = 0
     this%iavgkeff = 0
     this%ik22 = 0
@@ -2244,6 +2247,55 @@ contains
     return
   end function calc_initial_sat
 
+  !> @brief Calculate effective top for the given node and elevation
+  !!
+  !! Calculate effective top for the given node given the specified elevation.
+  !!
+  !<
+  function calc_effective_top(this, n, z) result(efftop)
+    ! -- dummy variables
+    class(GwfNpfType) :: this
+    integer(I4B), intent(in) :: n !< node
+    real(DP), intent(in) :: z !< elevation
+    ! -- Return
+    real(DP) :: efftop 
+    !
+    if (z > this%dis%top(n)) then
+      efftop = this%dis%top(n)
+    else if (z < this%dis%bot(n)) then
+      efftop = this%dis%bot(n)
+    else
+      efftop = z
+    end if
+    !
+    return
+  end function calc_effective_top
+
+  !> @brief Calculate effective bottom for the given node and elevation
+  !!
+  !! Calculate effective bottom for the given node given the specified elevation.
+  !!
+  !<
+  function calc_effective_bot(this, n, z) result(effbot)
+    ! -- dummy variables
+    class(GwfNpfType) :: this
+    integer(I4B), intent(in) :: n !< node
+    real(DP), intent(in) :: z !< elevation
+    ! -- Return
+    real(DP) :: effbot
+    !
+    if (z > this%dis%top(n)) then
+      effbot = this%dis%top(n)
+    else if (z < this%dis%bot(n)) then
+      effbot = this%dis%bot(n)
+    else
+      effbot = z
+    end if
+    !
+    return
+  end function calc_effective_bot
+ 
+
   !> @brief Perform wetting and drying
   !<
   subroutine sgwf_npf_wetdry(this, kiter, hnew)
@@ -2653,8 +2705,10 @@ contains
           sn = sQuadraticSaturation(top, bot, hn, satomega, satmin)
           sm = sQuadraticSaturation(top, bot, hm, satomega, satmin)
         else
-          sn = sQuadraticSaturation(topn, botn, hn, satomega, satmin)
-          sm = sQuadraticSaturation(topm, botm, hm, satomega, satmin)
+          ! sn = sQuadraticSaturation(topn, botn, hn, satomega, satmin)
+          ! sm = sQuadraticSaturation(topm, botm, hm, satomega, satmin)
+          sn = satn
+          sm = satm
         end if
         !
         if (hn > hm) then
