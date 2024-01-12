@@ -7,7 +7,7 @@ module GwfSwiModule
   use NumericalPackageModule, only: NumericalPackageType
   use BlockParserModule, only: BlockParserType
   use BaseDisModule, only: DisBaseType
-  use MemoryManagerModule, only: mem_setptr
+  use MemoryManagerModule, only: mem_setptr, mem_allocate
   use MemoryHelperModule, only: create_mem_path
   use MatrixBaseModule
 
@@ -21,7 +21,8 @@ module GwfSwiModule
 
   type, extends(NumericalPackageType) :: GwfSwiType
 
-    real(DP), dimension(:), pointer, contiguous :: zeta => null() ! starting head
+    integer(I4B), pointer :: isaltwater => null() !< 0 is freshwater, 1 is saltwater
+    real(DP), dimension(:), pointer, contiguous :: zeta => null() !< starting head
     real(DP), dimension(:), pointer, contiguous :: hcof => null() !< hcof contribution to amat
     real(DP), dimension(:), pointer, contiguous :: rhs => null() !< rhs contribution
     real(DP), dimension(:), pointer, contiguous :: storage => null() !< calculated swi storage
@@ -36,6 +37,9 @@ module GwfSwiModule
     procedure :: swi_save_model_flows
     procedure :: swi_da
     procedure, private :: swi_load
+    procedure, private :: source_options
+    procedure, private :: log_options
+    procedure :: allocate_scalars
     procedure, private :: allocate_arrays
     procedure, private :: source_griddata
 
@@ -103,12 +107,26 @@ contains
     return
   end subroutine swi_df
 
-  !> @brief Allocate arrays, load from IDM, and assign head
+  !> @brief Setup pointers
   !<
-  subroutine swi_ar(this)
+  subroutine swi_ar(this, effective_top, effective_bot)
     ! -- dummy
     class(GwfSwiType) :: this
+    real(DP), dimension(:), contiguous, pointer :: effective_top
+    real(DP), dimension(:), contiguous, pointer :: effective_bot
     ! -- local
+    !
+    ! -- If freshwater model, point effective_bot to zeta; otherwise
+    !    if a saltwater model, then point effective_top to zeta
+    if (this%isaltwater == 0) then
+      ! -- freshwater model: set bot to zeta
+      call mem_setptr(effective_bot, 'ZETA', &
+                      create_mem_path(this%name_model, 'SWI'))
+    else
+      ! -- saltwater model; set top to zeta
+      call mem_setptr(effective_top, 'ZETA', &
+                      create_mem_path(this%name_model, 'SWI'))
+    end if
     !
     ! -- return
     return
@@ -271,6 +289,9 @@ contains
     call mem_deallocate(this%rhs)
     call mem_deallocate(this%storage)
     !
+    ! -- deallocate scalars
+    call mem_deallocate(this%isaltwater)
+    !
     ! -- deallocate parent
     call this%NumericalPackageType%da()
     !
@@ -286,11 +307,35 @@ contains
     ! -- dummy
     class(GwfSwiType) :: this
     !
+    call this%source_options()
     call this%source_griddata()
     !
     ! -- return
     return
   end subroutine swi_load
+
+  !> @ brief Allocate scalars
+  !!
+  !! Allocate and initialize scalars for the VSC package. The base model
+  !! allocate scalars method is also called.
+  !<
+  subroutine allocate_scalars(this)
+    ! -- modules
+    ! -- dummy
+    class(GwfSwiType) :: this
+    !
+    ! -- allocate scalars in NumericalPackageType
+    call this%NumericalPackageType%allocate_scalars()
+    !
+    ! -- Allocate scalars
+    call mem_allocate(this%isaltwater, 'ISALTWATER', this%memoryPath)
+    !
+    ! -- Initialize value
+    this%isaltwater = 0
+    !
+    ! -- Return
+    return
+  end subroutine allocate_scalars
 
   !> @brief Allocate arrays
   !<
@@ -320,6 +365,54 @@ contains
     ! -- return
     return
   end subroutine allocate_arrays
+
+  !> @brief Update simulation options from input mempath
+  !<
+  subroutine source_options(this)
+    ! -- modules
+    use SimModule, only: store_error, store_error_filename
+    use MemoryManagerModule, only: mem_setptr, get_isize
+    use MemoryManagerExtModule, only: mem_set_value
+    use CharacterStringModule, only: CharacterStringType
+    use GwfSwiInputModule, only: GwfSwiParamFoundType
+    use SourceCommonModule, only: filein_fname
+    ! -- dummy
+    class(GwfSwiType) :: this
+    ! -- locals
+    type(GwfSwiParamFoundType) :: found
+    !
+    ! -- update defaults with idm sourced values
+    call mem_set_value(this%isaltwater, 'ISALTWATER', this%input_mempath, found%isaltwater)
+    !
+    ! -- log options
+    if (this%iout > 0) then
+      call this%log_options(found)
+    end if
+    !
+    ! -- Return
+    return
+  end subroutine source_options
+
+  !> @brief Log options sourced from the input mempath
+  !<
+  subroutine log_options(this, found)
+    ! -- modules
+    use KindModule, only: LGP
+    use GwfSwiInputModule, only: GwfSwiParamFoundType
+    ! -- dummy
+    class(GwfSwiType) :: this
+    ! -- locals
+    type(GwfSwiParamFoundType), intent(in) :: found
+    !
+    write (this%iout, '(1x,a)') 'Setting SWI Options'
+    if (found%isaltwater) &
+      write (this%iout, '(4x,a)') 'This model has been designated as a &
+                                  &saltwater model.'
+    write (this%iout, '(1x,a,/)') 'End Setting SWI Options'
+    !
+    ! -- Return
+    return
+  end subroutine log_options
 
   !> @brief Copy grid data from IDM into package
   !<

@@ -11,10 +11,28 @@ module GwfSwiInputModule
   public gwf_swi_multi_package
 
   type GwfSwiParamFoundType
+    logical :: isaltwater = .false.
     logical :: zeta = .false.
   end type GwfSwiParamFoundType
 
   logical :: gwf_swi_multi_package = .false.
+
+  type(InputParamDefinitionType), parameter :: &
+    gwfswi_isaltwater = InputParamDefinitionType &
+    ( &
+    'GWF', & ! component
+    'SWI', & ! subcomponent
+    'OPTIONS', & ! block
+    'SALTWATER', & ! tag name
+    'ISALTWATER', & ! fortran variable
+    'KEYWORD', & ! type
+    '', & ! shape
+    .false., & ! required
+    .false., & ! multi-record
+    .false., & ! preserve case
+    .false., & ! layered
+    .false. & ! timeseries
+    )
 
   type(InputParamDefinitionType), parameter :: &
     gwfswi_zeta = InputParamDefinitionType &
@@ -36,6 +54,7 @@ module GwfSwiInputModule
   type(InputParamDefinitionType), parameter :: &
     gwf_swi_param_definitions(*) = &
     [ &
+    gwfswi_isaltwater, &
     gwfswi_zeta &
     ]
 

@@ -106,7 +106,9 @@ module GwfNpfModule
     integer(I4B), pointer :: kchangestp => null() ! last time step in which any node K (or K22, or K33) values were changed (0 if unchanged from start of simulation)
     integer(I4B), dimension(:), pointer, contiguous :: nodekchange => null() ! grid array of flags indicating for each node whether its K (or K22, or K33) value changed (1) at (kchangeper, kchangestp) or not (0)
     !
-    real(DP), dimension(:), pointer, contiguous :: zeta => null() !< aquifer bottom elevation; points to dis%bot unless izeta is 1
+    !real(DP), dimension(:), pointer, contiguous :: zeta => null() !< aquifer bottom elevation; points to dis%bot unless izeta is 1
+    real(DP), dimension(:), pointer, contiguous :: effective_top => null() !< aquifer top elevation; points to dis%top unless repointed by swi
+    real(DP), dimension(:), pointer, contiguous :: effective_bot => null() !< aquifer bottom elevation; points to dis%bot unless repointed by swi
 
   contains
 
@@ -153,7 +155,6 @@ module GwfNpfModule
     procedure, public :: calcSatThickness
     procedure, public :: initialize_surfaces
 
-    
   end type
 
 contains
@@ -626,6 +627,7 @@ contains
     real(DP) :: botup
     real(DP) :: topdn
     real(DP) :: botdn
+    real(DP) :: bt
     real(DP) :: bb
     real(DP) :: thksat
     !
@@ -679,20 +681,23 @@ contains
               afac = DTWO / (DONE + (topdn - botdn) / (topup - botup))
               cond = cond * afac
             end if
-            ! 
-            ! -- calculate elevation of bottom of aquifer (bb)
-            bb = this%calc_effective_bot(iups, this%zeta(iups))
+            !
+            ! -- calculate elevation of top (bt) and bottom (bb) of aquifer
+            bt = this%calc_effective_top(iups, hnew(iups))
+            bb = this%calc_effective_bot(iups, this%effective_bot(iups))
             !
             ! -- calculate the saturated thickness
             thksat = sQuadraticSaturation(topup, botup, hnew(iups), &
-                                          this%satomega, this%satmin, bb)
+                                          this%satomega, this%satmin, &
+                                          bt, bb)
             !
             ! compute additional term
             consterm = -cond * (hnew(iups) - hnew(idn)) !needs to use hwadi instead of hnew(idn)
             !filledterm = cond
             filledterm = matrix_sln%get_value_pos(idxglo(ii))
             derv = sQuadraticSaturationDerivative(topup, botup, hnew(iups), &
-                                                  this%satomega, this%satmin, bb)
+                                                  this%satomega, this%satmin, &
+                                                  bt, bb)
             derv = this%derv_mult * derv
             idiagm = this%dis%con%ia(m)
             ! fill jacobian for n being the upstream node
@@ -844,15 +849,17 @@ contains
     bt = this%calc_effective_top(n, hn)
     !
     ! -- calculate elevation of bottom of aquifer (bb)
-    bb = this%calc_effective_bot(n, this%zeta(n))
+    bb = this%calc_effective_bot(n, this%effective_bot(n))
     !
     ! -- calculate the saturated thickness
     thksat = (bt - bb) / (this%dis%top(n) - this%dis%bot(n))
+
     !
     ! -- Newton-Raphson Formulation
     if (this%inewton /= 0) then
       thksat = sQuadraticSaturation(this%dis%top(n), this%dis%bot(n), hn, &
-                                    this%satomega, this%satmin, bb)
+                                    this%satomega, this%satmin, &
+                                    bt, bb)
     end if
     !
     ! -- Return
@@ -1305,26 +1312,19 @@ contains
     return
   end subroutine allocate_arrays
 
+  !> @brief Initialize the effective top/bot surfaces
+  !<
   subroutine initialize_surfaces(this)
     ! -- dummy
     class(GwfNpftype) :: this
-    integer(I4B), pointer :: inswi
     !
-    ! -- Check if swi is active
-    call mem_setptr(inswi, 'INSWI', &
-                    create_mem_path(this%name_model))
-    if (inswi > 0) then
-      ! -- If swi is active then point zeta to swi%zeta
-      call mem_setptr(this%zeta, 'ZETA', &
-                      create_mem_path(this%name_model, 'SWI'))
-    else
-      ! -- Point zeta to dis%bot
-      call mem_setptr(this%zeta, 'BOT', &
-                      create_mem_path(this%name_model, 'DIS'))
-    end if
-
+    ! -- Set effective top/bot pointers
+    call mem_setptr(this%effective_top, 'TOP', &
+                    create_mem_path(this%name_model, 'DIS'))
+    call mem_setptr(this%effective_bot, 'BOT', &
+                    create_mem_path(this%name_model, 'DIS'))
+    return
   end subroutine initialize_surfaces
-
 
   !> @brief Log npf options sourced from the input mempath
   !<
@@ -2258,14 +2258,16 @@ contains
     integer(I4B), intent(in) :: n !< node
     real(DP), intent(in) :: z !< elevation
     ! -- Return
-    real(DP) :: efftop 
+    real(DP) :: efftop
+    real(DP) :: zeval
     !
-    if (z > this%dis%top(n)) then
+    zeval = min(z, this%effective_top(n))
+    if (zeval > this%dis%top(n)) then
       efftop = this%dis%top(n)
-    else if (z < this%dis%bot(n)) then
+    else if (zeval < this%dis%bot(n)) then
       efftop = this%dis%bot(n)
     else
-      efftop = z
+      efftop = zeval
     end if
     !
     return
@@ -2294,7 +2296,6 @@ contains
     !
     return
   end function calc_effective_bot
- 
 
   !> @brief Perform wetting and drying
   !<
@@ -2705,8 +2706,6 @@ contains
           sn = sQuadraticSaturation(top, bot, hn, satomega, satmin)
           sm = sQuadraticSaturation(top, bot, hm, satomega, satmin)
         else
-          ! sn = sQuadraticSaturation(topn, botn, hn, satomega, satmin)
-          ! sm = sQuadraticSaturation(topm, botm, hm, satomega, satmin)
           sn = satn
           sm = satm
         end if

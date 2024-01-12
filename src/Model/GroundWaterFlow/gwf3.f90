@@ -353,7 +353,8 @@ contains
     if (this%insto > 0) call this%sto%sto_ar(this%dis, this%ibound)
     if (this%incsub > 0) call this%csub%csub_ar(this%dis, this%ibound)
     if (this%inmvr > 0) call this%mvr%mvr_ar()
-    if (this%inswi > 0) call this%swi%swi_ar()
+    if (this%inswi > 0) call this%swi%swi_ar(this%npf%effective_top, &
+                                             this%npf%effective_bot)
     if (this%inobs > 0) call this%obs%gwf_obs_ar(this%ic, this%x, this%flowja)
     !
     ! -- Call dis_ar to write binary grid file

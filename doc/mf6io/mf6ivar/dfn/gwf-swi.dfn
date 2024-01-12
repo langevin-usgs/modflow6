@@ -1,3 +1,15 @@
+# --------------------- gwf swi options ---------------------
+
+block options
+name saltwater
+type keyword
+reader urword
+optional true
+longname keyword to indicate saltwater model
+description keyword to indicate that this model is a saltwater model
+mf6internal isaltwater
+
+
 # --------------------- gwf ic griddata ---------------------
 
 block griddata
