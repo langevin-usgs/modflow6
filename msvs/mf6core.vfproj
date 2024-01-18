@@ -108,7 +108,9 @@
 		<File RelativePath="..\src\Exchange\gwfgwtidm.f90"/>
 		<File RelativePath="..\src\Exchange\GwtGwtExchange.f90"/>
 		<File RelativePath="..\src\Exchange\gwtgwtidm.f90"/>
-		<File RelativePath="..\src\Exchange\NumericalExchange.f90"/></Filter>
+		<File RelativePath="..\src\Exchange\NumericalExchange.f90"/>
+		<File RelativePath="..\src\Exchange\SwiSwiExchange.f90"/>
+		<File RelativePath="..\src\Exchange\swiswiidm.f90"/></Filter>
 		<Filter Name="Model">
 		<Filter Name="Connection">
 		<File RelativePath="..\src\Model\Connection\CellWithNbrs.f90"/>
