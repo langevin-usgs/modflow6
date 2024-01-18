@@ -963,6 +963,10 @@ if __name__ == "__main__":
             SRC_PATH / "Exchange" / "gwtgwtidm.f90",
         ],
         [
+            DFN_PATH / "exg-swiswi.dfn",
+            SRC_PATH / "Exchange" / "swiswiidm.f90",
+        ],
+        [
             DFN_PATH / "sim-nam.dfn",
             SRC_PATH / "simnamidm.f90",
         ],
