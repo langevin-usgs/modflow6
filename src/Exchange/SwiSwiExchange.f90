@@ -216,7 +216,7 @@ contains
 
   !> @ brief Add connections
   !!
-  !! Override parent exg_ac so that gnc can add connections here.
+  !! Override parent exg_ac so that connections can be added here.
   !<
   subroutine swi_swi_ac(this, sparse)
     ! -- modules

@@ -353,7 +353,7 @@ contains
     if (this%insto > 0) call this%sto%sto_ar(this%dis, this%ibound)
     if (this%incsub > 0) call this%csub%csub_ar(this%dis, this%ibound)
     if (this%inmvr > 0) call this%mvr%mvr_ar()
-    if (this%inswi > 0) call this%swi%swi_ar(this%npf%effective_top, &
+    if (this%inswi > 0) call this%swi%swi_ar(this%ibound, this%npf%effective_top, &
                                              this%npf%effective_bot)
     if (this%inobs > 0) call this%obs%gwf_obs_ar(this%ic, this%x, this%flowja)
     !
@@ -631,6 +631,11 @@ contains
       call this%csub%csub_cc(innertot, kiter, iend, icnvgmod, &
                              this%dis%nodes, this%x, this%xold, &
                              cpak, ipak, dpak)
+    end if
+    !
+    ! -- If swi is on, then recalculate zeta
+    if (this%inswi > 0) then
+      call this%swi%swi_cc()
     end if
     !
     ! -- Call package cc routines
@@ -1048,6 +1053,11 @@ contains
     ! -- save viscosity to binary file
     if (this%invsc > 0) then
       call this%vsc%vsc_ot_dv(idvsave)
+    end if
+    !
+    ! -- save density to binary file
+    if (this%inswi > 0) then
+      call this%swi%swi_ot_dv(idvsave)
     end if
     !
     ! -- Print advanced package dependent variables

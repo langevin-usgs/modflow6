@@ -12,7 +12,11 @@ module GwfSwiInputModule
 
   type GwfSwiParamFoundType
     logical :: isaltwater = .false.
+    logical :: zeta_filerecord = .false.
     logical :: zeta = .false.
+    logical :: fileout = .false.
+    logical :: zetafile = .false.
+    logical :: zetastrt = .false.
   end type GwfSwiParamFoundType
 
   logical :: gwf_swi_multi_package = .false.
@@ -35,13 +39,81 @@ module GwfSwiInputModule
     )
 
   type(InputParamDefinitionType), parameter :: &
+    gwfswi_zeta_filerecord = InputParamDefinitionType &
+    ( &
+    'GWF', & ! component
+    'SWI', & ! subcomponent
+    'OPTIONS', & ! block
+    'ZETA_FILERECORD', & ! tag name
+    'ZETA_FILERECORD', & ! fortran variable
+    'RECORD ZETA FILEOUT ZETAFILE', & ! type
+    '', & ! shape
+    .false., & ! required
+    .false., & ! multi-record
+    .false., & ! preserve case
+    .false., & ! layered
+    .false. & ! timeseries
+    )
+
+  type(InputParamDefinitionType), parameter :: &
     gwfswi_zeta = InputParamDefinitionType &
     ( &
     'GWF', & ! component
     'SWI', & ! subcomponent
-    'GRIDDATA', & ! block
+    'OPTIONS', & ! block
     'ZETA', & ! tag name
     'ZETA', & ! fortran variable
+    'KEYWORD', & ! type
+    '', & ! shape
+    .true., & ! required
+    .true., & ! multi-record
+    .false., & ! preserve case
+    .false., & ! layered
+    .false. & ! timeseries
+    )
+
+  type(InputParamDefinitionType), parameter :: &
+    gwfswi_fileout = InputParamDefinitionType &
+    ( &
+    'GWF', & ! component
+    'SWI', & ! subcomponent
+    'OPTIONS', & ! block
+    'FILEOUT', & ! tag name
+    'FILEOUT', & ! fortran variable
+    'KEYWORD', & ! type
+    '', & ! shape
+    .true., & ! required
+    .true., & ! multi-record
+    .false., & ! preserve case
+    .false., & ! layered
+    .false. & ! timeseries
+    )
+
+  type(InputParamDefinitionType), parameter :: &
+    gwfswi_zetafile = InputParamDefinitionType &
+    ( &
+    'GWF', & ! component
+    'SWI', & ! subcomponent
+    'OPTIONS', & ! block
+    'ZETAFILE', & ! tag name
+    'ZETAFILE', & ! fortran variable
+    'STRING', & ! type
+    '', & ! shape
+    .true., & ! required
+    .true., & ! multi-record
+    .true., & ! preserve case
+    .false., & ! layered
+    .false. & ! timeseries
+    )
+
+  type(InputParamDefinitionType), parameter :: &
+    gwfswi_zetastrt = InputParamDefinitionType &
+    ( &
+    'GWF', & ! component
+    'SWI', & ! subcomponent
+    'GRIDDATA', & ! block
+    'ZETASTRT', & ! tag name
+    'ZETASTRT', & ! fortran variable
     'DOUBLE1D', & ! type
     'NODES', & ! shape
     .true., & ! required
@@ -55,7 +127,11 @@ module GwfSwiInputModule
     gwf_swi_param_definitions(*) = &
     [ &
     gwfswi_isaltwater, &
-    gwfswi_zeta &
+    gwfswi_zeta_filerecord, &
+    gwfswi_zeta, &
+    gwfswi_fileout, &
+    gwfswi_zetafile, &
+    gwfswi_zetastrt &
     ]
 
   type(InputParamDefinitionType), parameter :: &

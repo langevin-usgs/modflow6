@@ -105,6 +105,7 @@ module GwfNpfModule
     integer(I4B), pointer :: kchangeper => null() ! last stress period in which any node K (or K22, or K33) values were changed (0 if unchanged from start of simulation)
     integer(I4B), pointer :: kchangestp => null() ! last time step in which any node K (or K22, or K33) values were changed (0 if unchanged from start of simulation)
     integer(I4B), dimension(:), pointer, contiguous :: nodekchange => null() ! grid array of flags indicating for each node whether its K (or K22, or K33) value changed (1) at (kchangeper, kchangestp) or not (0)
+    integer(I4B), pointer :: iforce_cond => null() ! force recalculation of condsat in cf
     !
     !real(DP), dimension(:), pointer, contiguous :: zeta => null() !< aquifer bottom elevation; points to dis%bot unless izeta is 1
     real(DP), dimension(:), pointer, contiguous :: effective_top => null() !< aquifer top elevation; points to dis%top unless repointed by swi
@@ -141,6 +142,7 @@ module GwfNpfModule
     procedure, private :: check_options
     procedure, private :: prepcheck
     procedure, private :: preprocess_input
+    procedure, private :: calc_all_condsat
     procedure, private :: calc_condsat
     procedure, private :: calc_initial_sat
     procedure, private :: calc_effective_top
@@ -469,6 +471,11 @@ contains
     ! -- local
     integer(I4B) :: n
     real(DP) :: satn
+    !
+    ! -- Force recalculation of condsat
+    if (this%iforce_cond == 1) then
+      call this%calc_all_condsat()
+    end if
     !
     ! -- Perform wetting and drying
     if (this%inewton /= 1) then
@@ -1087,6 +1094,7 @@ contains
     call mem_deallocate(this%invsc)
     call mem_deallocate(this%kchangeper)
     call mem_deallocate(this%kchangestp)
+    call mem_deallocate(this%iforce_cond)
     !
     ! -- Deallocate arrays
     deallocate (this%aname)
@@ -1168,6 +1176,7 @@ contains
     call mem_allocate(this%invsc, 'INVSC', this%memoryPath)
     call mem_allocate(this%kchangeper, 'KCHANGEPER', this%memoryPath)
     call mem_allocate(this%kchangestp, 'KCHANGESTP', this%memoryPath)
+    call mem_allocate(this%iforce_cond, 'IFORCE_COND', this%memoryPath)
     !
     ! -- set pointer to inewtonur
     call mem_setptr(this%igwfnewtonur, 'INEWTONUR', &
@@ -1211,6 +1220,7 @@ contains
     this%invsc = 0
     this%kchangeper = 0
     this%kchangestp = 0
+    this%iforce_cond = 0
     !
     ! -- If newton is on, then NPF creates asymmetric matrix
     this%iasym = this%inewton
@@ -2078,9 +2088,7 @@ contains
       ! -- Calculate the saturated conductance for all connections assuming
       !    that saturation is 1 (except for case where icelltype was entered
       !    as a negative value and THCKSTRT option in effect)
-      do n = 1, this%dis%nodes
-        call this%calc_condsat(n, .true.)
-      end do
+      call this%calc_all_condsat()
       !
     end if
     !
@@ -2128,6 +2136,23 @@ contains
     return
   end subroutine preprocess_input
 
+  !> @brief Calculate CONDSAT array entries for the entire grid
+  !<
+  subroutine calc_all_condsat(this)
+    ! -- dummy
+    class(GwfNpfType) :: this !< the instance of the NPF package
+    ! -- local
+    integer(I4B) :: n
+    !
+    ! -- Go through each node and calculate saturated conductance
+    do n = 1, this%dis%nodes
+      call this%calc_condsat(n, .true.)
+    end do
+    !
+    ! -- Return
+    return
+  end subroutine calc_all_condsat
+
   !> @brief Calculate CONDSAT array entries for the given node
   !!
   !! Calculate saturated conductances for all connections of the given node,
@@ -2145,8 +2170,11 @@ contains
     !
     satnode = this%calc_initial_sat(node)
     !
+    ! -- find effective top and bot for node in question
     topnode = this%dis%top(node)
-    botnode = this%dis%bot(node)
+    botnode = this%effective_bot(node)
+    topnode = this%calc_effective_top(node, topnode)
+    botnode = this%calc_effective_bot(node, botnode)
     !
     ! -- Go through the connecting cells
     do ii = this%dis%con%ia(node) + 1, this%dis%con%ia(node + 1) - 1
@@ -2164,7 +2192,9 @@ contains
         botm = botnode
         satm = satnode
         topn = this%dis%top(n)
-        botn = this%dis%bot(n)
+        botn = this%effective_bot(n)
+        topn = this%calc_effective_top(n, topn)
+        botn = this%calc_effective_bot(n, botn)
         satn = this%calc_initial_sat(n)
       else
         ! n => node, m => neighbour
@@ -2173,7 +2203,9 @@ contains
         botn = botnode
         satn = satnode
         topm = this%dis%top(m)
-        botm = this%dis%bot(m)
+        botm = this%effective_bot(m)
+        topm = this%calc_effective_top(m, topm)
+        botm = this%calc_effective_bot(m, botm)
         satm = this%calc_initial_sat(m)
       end if
       !
