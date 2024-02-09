@@ -280,18 +280,22 @@ contains
   !!
   !! Nonlinear quadratic saturation function returns value between 0-1
   !<
-  function sQuadraticSaturation(top, bot, x, eps, bmin) result(y)
+  function sQuadraticSaturation(top, bot, x, eps, bmin, efftop, effbot) result(y)
     ! -- return
     real(DP) :: y
     ! -- dummy variables
-    real(DP), intent(in) :: top
-    real(DP), intent(in) :: bot
-    real(DP), intent(in) :: x
-    real(DP), optional, intent(in) :: eps
-    real(DP), optional, intent(in) :: bmin
+    real(DP), intent(in) :: top !< cell top
+    real(DP), intent(in) :: bot !< cell bottom
+    real(DP), intent(in) :: x !< dependent variable
+    real(DP), optional, intent(in) :: eps !< smoothing interval (omega)
+    real(DP), optional, intent(in) :: bmin !< minimum cell thickness
+    real(DP), optional, intent(in) :: efftop !< effective top
+    real(DP), optional, intent(in) :: effbot !< effective bottom
     ! -- local
     real(DP) :: teps
     real(DP) :: tbmin
+    real(DP) :: xtop
+    real(DP) :: xbot
     real(DP) :: b
     real(DP) :: br
     real(DP) :: bri
@@ -308,14 +312,24 @@ contains
     else
       tbmin = DZERO
     end if
+    if (present(efftop)) then
+      xtop = efftop
+    else
+      xtop = x
+    end if
+    if (present(effbot)) then
+      xbot = effbot
+    else
+      xbot = bot
+    end if
     b = top - bot
     if (b > DZERO) then
-      if (x < bot) then
+      if (xtop < bot) then
         br = DZERO
-      else if (x > top) then
+      else if (xtop > top) then
         br = DONE
       else
-        br = (x - bot) / b
+        br = (xtop - xbot) / b
       end if
       av = DONE / (DONE - teps)
       bri = DONE - br
@@ -381,18 +395,23 @@ contains
   !!
   !! Derivative of nonlinear smoothing function returns value between 0-1;
   !<
-  function sQuadraticSaturationDerivative(top, bot, x, eps, bmin) result(y)
+  function sQuadraticSaturationDerivative(top, bot, x, eps, bmin, &
+                                          efftop, effbot) result(y)
     ! -- return
     real(DP) :: y
     ! -- dummy variables
-    real(DP), intent(in) :: top
-    real(DP), intent(in) :: bot
-    real(DP), intent(in) :: x
-    real(DP), optional, intent(in) :: eps
-    real(DP), optional, intent(in) :: bmin
+    real(DP), intent(in) :: top !< cell top
+    real(DP), intent(in) :: bot !< cell bottom
+    real(DP), intent(in) :: x !< dependent variable
+    real(DP), optional, intent(in) :: eps !< smoothing interval (omega)
+    real(DP), optional, intent(in) :: bmin !< minimum thickness
+    real(DP), optional, intent(in) :: efftop !< effective top
+    real(DP), optional, intent(in) :: effbot !< effective bottom
     ! -- local
     real(DP) :: teps
     real(DP) :: tbmin
+    real(DP) :: xtop
+    real(DP) :: xbot
     real(DP) :: b
     real(DP) :: br
     real(DP) :: bri
@@ -409,13 +428,23 @@ contains
     else
       tbmin = DZERO
     end if
+    if (present(efftop)) then
+      xtop = efftop
+    else
+      xtop = x
+    end if
+    if (present(effbot)) then
+      xbot = effbot
+    else
+      xbot = bot
+    end if
     b = top - bot
-    if (x < bot) then
+    if (xtop < bot) then
       br = DZERO
-    else if (x > top) then
+    else if (xtop > top) then
       br = DONE
     else
-      br = (x - bot) / b
+      br = (xtop - xbot) / b
     end if
     av = DONE / (DONE - teps)
     bri = DONE - br

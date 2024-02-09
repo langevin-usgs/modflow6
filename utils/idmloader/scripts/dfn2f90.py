@@ -911,6 +911,10 @@ if __name__ == "__main__":
             SRC_PATH / "Model" / "GroundWaterFlow" / "gwf-rividm.f90",
         ],
         [
+            DFN_PATH / "gwf-swi.dfn",
+            SRC_PATH / "Model" / "GroundWaterFlow" / "gwf-swiidm.f90",
+        ],
+        [
             DFN_PATH / "gwf-wel.dfn",
             SRC_PATH / "Model" / "GroundWaterFlow" / "gwf-welidm.f90",
         ],
@@ -957,6 +961,10 @@ if __name__ == "__main__":
         [
             DFN_PATH / "exg-gwtgwt.dfn",
             SRC_PATH / "Exchange" / "exg-gwtgwtidm.f90",
+        ],
+        [
+            DFN_PATH / "exg-swiswi.dfn",
+            SRC_PATH / "Exchange" / "swiswiidm.f90",
         ],
         [
             DFN_PATH / "sim-nam.dfn",

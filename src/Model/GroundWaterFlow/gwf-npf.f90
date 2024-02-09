@@ -114,7 +114,9 @@ module GwfNpfModule
     procedure :: npf_ad
     procedure :: npf_cf
     procedure :: npf_fc
+    procedure :: npf_fc_swi
     procedure :: npf_fn
+    procedure :: npf_fn_swi
     procedure :: npf_cq
     procedure :: npf_save_model_flows
     procedure :: npf_nur
@@ -588,6 +590,128 @@ contains
     return
   end subroutine npf_fc
 
+  !> @brief Add swi correction term
+  !<
+  subroutine npf_fc_swi(this, kiter, matrix_sln, idxglo, rhs, hnew, zeta)
+    ! -- modules
+    use ConstantsModule, only: DONE
+    ! -- dummy
+    class(GwfNpfType) :: this
+    integer(I4B) :: kiter
+    class(MatrixBaseType), pointer :: matrix_sln
+    integer(I4B), intent(in), dimension(:) :: idxglo
+    real(DP), intent(inout), dimension(:) :: rhs
+    real(DP), intent(inout), dimension(:) :: hnew
+    real(DP), intent(inout), dimension(:) :: zeta
+    ! -- local
+    integer(I4B) :: n, m, ii, idiag, ihc
+    integer(I4B) :: isymcon, idiagm
+    real(DP) :: hyn, hym
+    real(DP) :: cond
+    real(DP) :: satn, satm
+    integer(I4B) :: ictn, ictm
+    !
+    ! -- Calculate conductance and put into amat
+    !
+    ! if (this%ixt3d /= 0) then
+    !   call this%xt3d%xt3d_fc(kiter, matrix_sln, idxglo, rhs, hnew)
+    ! else
+    ictn = 1
+    ictm = 1
+!
+      do n = 1, this%dis%nodes
+        do ii = this%dis%con%ia(n) + 1, this%dis%con%ia(n + 1) - 1
+          if (this%dis%con%mask(ii) == 0) cycle
+
+          m = this%dis%con%ja(ii)
+          !
+          ! -- Calculate conductance only for upper triangle but insert into
+          !    upper and lower parts of amat.
+          if (m < n) cycle
+          ihc = this%dis%con%ihc(this%dis%con%jas(ii))
+          if (ihc == 0) cycle
+          hyn = this%hy_eff(n, m, ihc, ipos=ii)
+          hym = this%hy_eff(m, n, ihc, ipos=ii)
+          !
+          ! -- Vertical connection
+          ! if (ihc == 0) then
+          !   !
+          !   ! -- Calculate vertical conductance
+          !   cond = vcond(this%ibound(n), this%ibound(m), &
+          !                this%icelltype(n), this%icelltype(m), this%inewton, &
+          !                this%ivarcv, this%idewatcv, &
+          !                this%condsat(this%dis%con%jas(ii)), hnew(n), hnew(m), &
+          !                hyn, hym, &
+          !                this%sat(n), this%sat(m), &
+          !                this%dis%top(n), this%dis%top(m), &
+          !                this%dis%bot(n), this%dis%bot(m), &
+          !                this%dis%con%hwva(this%dis%con%jas(ii)))
+          !   !
+          !   ! -- Vertical flow for perched conditions
+          !   if (this%iperched /= 0) then
+          !     if (this%icelltype(m) /= 0) then
+          !       if (hnew(m) < this%dis%top(m)) then
+          !         !
+          !         ! -- Fill row n
+          !         idiag = this%dis%con%ia(n)
+          !         rhs(n) = rhs(n) - cond * this%dis%bot(n)
+          !         call matrix_sln%add_value_pos(idxglo(idiag), -cond)
+          !         !
+          !         ! -- Fill row m
+          !         isymcon = this%dis%con%isym(ii)
+          !         call matrix_sln%add_value_pos(idxglo(isymcon), cond)
+          !         rhs(m) = rhs(m) + cond * this%dis%bot(n)
+          !         !
+          !         ! -- cycle the connection loop
+          !         cycle
+          !       end if
+          !     end if
+          !   end if
+          !   !
+          ! else
+            !
+            ! -- Horizontal conductance
+            ! calculate saturation based on zeta, so that hcond is for the
+            ! region from zeta down to bottom; hnew is passed in so that 
+            ! upstream is based on head and not zeta
+            call this%thksat(n, zeta(n), satn)
+            call this%thksat(m, zeta(m), satm)
+            cond = hcond(this%ibound(n), this%ibound(m), &
+                         ictn, ictm, &
+                         this%inewton, this%inewton, &
+                         this%dis%con%ihc(this%dis%con%jas(ii)), &
+                         this%icellavg, this%iusgnrhc, this%inwtupw, &
+                         this%condsat(this%dis%con%jas(ii)), &
+                         hnew(n), hnew(m), &
+                         satn, satm, &
+                         hyn, hym, &
+                         this%dis%top(n), this%dis%top(m), &
+                         this%dis%bot(n), this%dis%bot(m), &
+                         this%dis%con%cl1(this%dis%con%jas(ii)), &
+                         this%dis%con%cl2(this%dis%con%jas(ii)), &
+                         this%dis%con%hwva(this%dis%con%jas(ii)), &
+                         this%satomega, this%satmin)
+          ! end if
+          !
+          ! -- Fill row n, Note signs are flipped for this SWI routine
+          idiag = this%dis%con%ia(n)
+          call matrix_sln%add_value_pos(idxglo(ii), -cond)
+          call matrix_sln%add_value_pos(idxglo(idiag), cond)
+          !
+          ! -- Fill row m, Note signs are flipped for this SWI routine
+          isymcon = this%dis%con%isym(ii)
+          idiagm = this%dis%con%ia(m)
+          call matrix_sln%add_value_pos(idxglo(isymcon), -cond)
+          call matrix_sln%add_value_pos(idxglo(idiagm), cond)
+        end do
+      end do
+      !
+    ! end if
+    !
+    ! -- Return
+    return
+  end subroutine npf_fc_swi
+
   !> @brief Fill newton terms
   !<
   subroutine npf_fn(this, kiter, matrix_sln, idxglo, rhs, hnew)
@@ -726,6 +850,156 @@ contains
     ! -- Return
     return
   end subroutine npf_fn
+
+  !> @brief Fill newton terms
+  !<
+  subroutine npf_fn_swi(this, kiter, matrix_sln, idxglo, rhs, hnew, zeta, dzetadh)
+    ! -- dummy
+    class(GwfNpfType) :: this
+    integer(I4B) :: kiter
+    class(MatrixBaseType), pointer :: matrix_sln
+    integer(I4B), intent(in), dimension(:) :: idxglo
+    real(DP), intent(inout), dimension(:) :: rhs
+    real(DP), intent(inout), dimension(:) :: hnew
+    real(DP), intent(inout), dimension(:) :: zeta
+    real(DP), intent(in) :: dzetadh
+    ! -- local
+    integer(I4B) :: nodes, nja
+    integer(I4B) :: n, m, ii, idiag
+    integer(I4B) :: isymcon, idiagm
+    integer(I4B) :: iups
+    integer(I4B) :: idn
+    real(DP) :: cond
+    real(DP) :: consterm
+    real(DP) :: filledterm
+    real(DP) :: derv
+    real(DP) :: hds
+    real(DP) :: term
+    real(DP) :: afac
+    real(DP) :: topup
+    real(DP) :: botup
+    real(DP) :: topdn
+    real(DP) :: botdn
+    !
+    ! -- add newton terms to solution matrix
+    nodes = this%dis%nodes
+    nja = this%dis%con%nja
+    if (this%ixt3d /= 0) then
+      call this%xt3d%xt3d_fn(kiter, nodes, nja, matrix_sln, idxglo, rhs, hnew)
+    else
+      !
+      do n = 1, nodes
+        idiag = this%dis%con%ia(n)
+        do ii = this%dis%con%ia(n) + 1, this%dis%con%ia(n + 1) - 1
+          if (this%dis%con%mask(ii) == 0) cycle
+
+          m = this%dis%con%ja(ii)
+          isymcon = this%dis%con%isym(ii)
+          ! work on upper triangle
+          if (m < n) cycle
+          if (this%dis%con%ihc(this%dis%con%jas(ii)) == 0 .and. &
+              this%ivarcv == 0) then
+            !call this%vcond(n,m,hnew(n),hnew(m),ii,cond)
+            ! do nothing
+          else
+            ! determine upstream node
+            iups = m
+            if (hnew(m) < hnew(n)) iups = n
+            idn = n
+            if (iups == n) idn = m
+            !
+            ! -- no newton terms if upstream cell is confined
+            ! for swi, always do newton
+            !if (this%icelltype(iups) == 0) cycle
+            !
+            ! -- Set the upstream top and bot, and then recalculate for a
+            !    vertically staggered horizontal connection
+            topup = this%dis%top(iups)
+            botup = this%dis%bot(iups)
+            if (this%dis%con%ihc(this%dis%con%jas(ii)) == 2) then
+              topup = min(this%dis%top(n), this%dis%top(m))
+              botup = max(this%dis%bot(n), this%dis%bot(m))
+            end if
+            !
+            ! get saturated conductivity for derivative
+            cond = this%condsat(this%dis%con%jas(ii))
+            !
+            ! -- if using MODFLOW-NWT upstream weighting option apply
+            !    factor to remove average thickness
+            if (this%inwtupw /= 0) then
+              topdn = this%dis%top(idn)
+              botdn = this%dis%bot(idn)
+              afac = DTWO / (DONE + (topdn - botdn) / (topup - botup))
+              cond = cond * afac
+            end if
+            !
+            ! compute additional term
+            consterm = -cond * (hnew(iups) - hnew(idn)) !needs to use hwadi instead of hnew(idn)
+            !filledterm = cond
+            filledterm = matrix_sln%get_value_pos(idxglo(ii))
+            ! use zeta in derivative
+            derv = sQuadraticSaturationDerivative(topup, botup, zeta(iups), &
+                                                  this%satomega, this%satmin)
+            derv = derv * dzetadh
+            idiagm = this%dis%con%ia(m)
+            ! fill jacobian for n being the upstream node
+            if (iups == n) then
+              hds = hnew(m)
+              !isymcon =  this%dis%con%isym(ii)
+              term = consterm * derv
+              ! flip signs for swi correction
+              rhs(n) = rhs(n) - term * hnew(n) !+ amat(idxglo(isymcon)) * (dwadi * hds - hds) !need to add dwadi
+              rhs(m) = rhs(m) + term * hnew(n) !- amat(idxglo(isymcon)) * (dwadi * hds - hds) !need to add dwadi
+              ! fill in row of n
+              ! flip sign for swi correction
+              call matrix_sln%add_value_pos(idxglo(idiag), -term)
+              ! fill newton term in off diagonal if active cell
+              if (this%ibound(n) > 0) then
+                filledterm = matrix_sln%get_value_pos(idxglo(ii))
+                call matrix_sln%set_value_pos(idxglo(ii), filledterm) !* dwadi !need to add dwadi
+              end if
+              !fill row of m
+              filledterm = matrix_sln%get_value_pos(idxglo(idiagm))
+              call matrix_sln%set_value_pos(idxglo(idiagm), filledterm) !- filledterm * (dwadi - DONE) !need to add dwadi
+              ! fill newton term in off diagonal if active cell
+              if (this%ibound(m) > 0) then
+                ! flip sign for swi correction
+                call matrix_sln%add_value_pos(idxglo(isymcon), term)
+              end if
+              ! fill jacobian for m being the upstream node
+            else
+              hds = hnew(n)
+              term = -consterm * derv
+              ! flip sign for swi correction
+              rhs(n) = rhs(n) - term * hnew(m) !+ amat(idxglo(ii)) * (dwadi * hds - hds) !need to add dwadi
+              rhs(m) = rhs(m) + term * hnew(m) !- amat(idxglo(ii)) * (dwadi * hds - hds) !need to add dwadi
+              ! fill in row of n
+              filledterm = matrix_sln%get_value_pos(idxglo(idiag))
+              call matrix_sln%set_value_pos(idxglo(idiag), filledterm) !- filledterm * (dwadi - DONE) !need to add dwadi
+              ! fill newton term in off diagonal if active cell
+              if (this%ibound(n) > 0) then
+                ! flip sign for swi correction
+                call matrix_sln%add_value_pos(idxglo(ii), -term)
+              end if
+              !fill row of m
+              ! flip sign for swi correction
+              call matrix_sln%add_value_pos(idxglo(idiagm), term)
+              ! fill newton term in off diagonal if active cell
+              if (this%ibound(m) > 0) then
+                filledterm = matrix_sln%get_value_pos(idxglo(isymcon))
+                call matrix_sln%set_value_pos(idxglo(isymcon), filledterm) !* dwadi  !need to add dwadi
+              end if
+            end if
+          end if
+
+        end do
+      end do
+      !
+    end if
+    !
+    ! -- Return
+    return
+  end subroutine npf_fn_swi
 
   !> @brief Under-relaxation
   !!
@@ -2604,11 +2878,14 @@ contains
             top = topn
             bot = botn
           end if
+          ! todo: should these both just be satn and satm?
           sn = sQuadraticSaturation(top, bot, hn, satomega, satmin)
           sm = sQuadraticSaturation(top, bot, hm, satomega, satmin)
         else
-          sn = sQuadraticSaturation(topn, botn, hn, satomega, satmin)
-          sm = sQuadraticSaturation(topm, botm, hm, satomega, satmin)
+          sn = satn
+          sm = satm
+          ! sn = sQuadraticSaturation(topn, botn, hn, satomega, satmin)
+          ! sm = sQuadraticSaturation(topm, botm, hm, satomega, satmin)
         end if
         !
         if (hn > hm) then
