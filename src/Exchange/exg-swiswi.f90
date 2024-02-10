@@ -331,8 +331,8 @@ contains
     real(DP), dimension(:), intent(inout) :: rhs_sln
     integer(I4B), optional, intent(in) :: inwtflag
     ! -- local
-    integer(I4B) :: inwt, iexg
-    integer(I4B) :: i, nodem1sln, nodem2sln
+    ! integer(I4B) :: inwt, iexg
+    ! integer(I4B) :: i, nodem1sln, nodem2sln
     !
 
     ! -- TODO: Since these terms are all Newton, do they go on the
@@ -388,8 +388,6 @@ contains
   !<
   subroutine swi_swi_ot(this)
     ! -- modules
-    use SimVariablesModule, only: iout
-    use ConstantsModule, only: DZERO
     ! -- dummy
     class(SwiExchangeType) :: this !<  SwiExchangeType
     ! -- local
@@ -492,14 +490,12 @@ contains
     real(DP), dimension(:), contiguous, pointer :: amat_salt
     real(DP), dimension(:), contiguous, pointer :: rhs_salt
     character(len=20) :: cellstr1, cellstr2
-    character(len=2) :: cnfloat
-    integer(I4B) :: nerr, iaux
+    integer(I4B) :: nerr
     integer(I4B) :: iexg, nodem1, nodem2
     ! -- format
     character(len=*), parameter :: fmtexglabel = "(1x, 3a10, 50(a16))"
     character(len=*), parameter :: fmtexgdata = &
                                    "(5x, a, 1x, a ,I10, 50(1pg16.6))"
-    character(len=40) :: fmtexgdata2
     !
     call mem_setptr(cellidm1, 'CELLIDM1', this%input_mempath)
     call mem_setptr(cellidm2, 'CELLIDM2', this%input_mempath)
@@ -656,8 +652,7 @@ contains
     ! -- dummy
     class(SwiExchangeType) :: this !<  SwiExchangeType
     ! -- local
-    character(len=LINELENGTH) :: text
-    integer(I4B) :: ntabcol, i
+    integer(I4B) :: i
     !
     call mem_allocate(this%nodem1, this%nexg, 'NODEM1', this%memoryPath)
     call mem_allocate(this%nodem2, this%nexg, 'NODEM2', this%memoryPath)
