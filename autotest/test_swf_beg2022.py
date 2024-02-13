@@ -4,7 +4,10 @@ Model based on Beg et al. 2022.  It consists of a single
 segment discretized into 21 reaches.  There is inflow into
 reach 1 based on time series input and outflow to a constant
 stage cell in reach 21.  The simulation is for one day using
-time steps of 600 seconds (144 time steps). 
+time steps of 600 seconds (144 time steps).  The results are
+compared to a mf2005 run using the SWR package.  A plot can
+optionally be created, which will also show results from a 
+HEC-RAS simulation.
 
 """
 
@@ -12,37 +15,42 @@ import os
 
 import flopy
 import numpy as np
+import pandas as pd
 import pytest
+
 from conftest import project_root_path
 from framework import TestFramework
 
-cases = ["swf-beg2022",]
+cases = [
+    "swf-beg2022",
+]
 data_path = project_root_path / "autotest/data/beg2022/"
+
 
 def build_models(idx, test):
 
     sim_ws = test.workspace
     name = "swfmodel"
     sim = flopy.mf6.MFSimulation(
-        sim_name=name, version="mf6", exe_name="mf6", sim_ws=sim_ws,
-        memory_print_option='all',
+        sim_name=name,
+        version="mf6",
+        exe_name="mf6",
+        sim_ws=sim_ws,
+        memory_print_option="all",
     )
 
-    hr2sec = 60. * 60.
-    dt = 600 # seconds
+    hr2sec = 60.0 * 60.0
+    dt = 600  # seconds
     perlen = 24 * hr2sec
     nstp = perlen / dt
     perioddata = [(0.0, 1, 1.0), (perlen, nstp, 1.0)]
     tdis = flopy.mf6.ModflowTdis(
-        sim,
-        time_units="SECONDS",
-        nper=len(perioddata),
-        perioddata=perioddata
+        sim, time_units="SECONDS", nper=len(perioddata), perioddata=perioddata
     )
     ims = flopy.mf6.ModflowIms(
-        sim, 
+        sim,
         # no_ptcrecord=True,
-        print_option="all", 
+        print_option="all",
         # under_relaxation="DBD",
         # under_relaxation_theta=0.9,
         # under_relaxation_kappa=0.0001,
@@ -52,16 +60,16 @@ def build_models(idx, test):
         # backtracking_reduction_factor=0.2,
         # backtracking_residual_limit=1.0,
         linear_acceleration="BICGSTAB",
-        outer_dvclose=1.e-4,
-        inner_dvclose=1.e-4
+        outer_dvclose=1.0e-4,
+        inner_dvclose=1.0e-4,
     )
     swf = flopy.mf6.ModflowSwf(sim, modelname=name, save_flows=True)
 
     total_length = 21000
-    dx = 1000.
+    dx = 1000.0
     nreach = int(total_length / dx)
     vertices = []
-    vertices = [[j, j * dx, 0., 0.] for j in range(nreach + 1)]
+    vertices = [[j, j * dx, 0.0, 0.0] for j in range(nreach + 1)]
     cell2d = []
     for j in range(nreach):
         cell2d.append([j, 0.5, 2, j, j + 1])
@@ -69,29 +77,29 @@ def build_models(idx, test):
     nodes = len(cell2d)
     nvert = len(vertices)
 
-    slope = 1./10000.
+    slope = 1.0 / 10000.0
     x = np.linspace(dx / 2, total_length - dx / 2, nreach)
     z = (total_length - x) * slope
 
     disl = flopy.mf6.ModflowSwfdisl(
-        swf, 
-        nodes=nodes, 
+        swf,
+        nodes=nodes,
         nvert=nvert,
         reach_length=dx,
         reach_bottom=z,
-        #toreach=toreach,   # -1 gives 0 in one-based, which means outflow cell
-        idomain=1, 
-        vertices=vertices, 
+        # toreach=toreach,   # -1 gives 0 in one-based, which means outflow cell
+        idomain=1,
+        vertices=vertices,
         cell2d=cell2d,
     )
-    
+
     dfw = flopy.mf6.ModflowSwfdfw(
-        swf, 
+        swf,
         central_in_space=True,
         print_flows=True,
         save_flows=True,
-        width=40., 
-        manningsn=1./80.,
+        width=40.0,
+        manningsn=1.0 / 80.0,
         slope=slope,
         idcxs=0,
     )
@@ -107,10 +115,10 @@ def build_models(idx, test):
     strt = z + water_depth
     ic = flopy.mf6.ModflowSwfic(swf, strt=strt)
 
-    xfraction = np.array([0., 0., 10., 15., 25., 30., 40., 40.]) / 40.
-    height = [40., 10., 10., 0., 0., 10., 10., 40.]
+    xfraction = np.array([0.0, 0.0, 10.0, 15.0, 25.0, 30.0, 40.0, 40.0]) / 40.0
+    height = [40.0, 10.0, 10.0, 0.0, 0.0, 10.0, 10.0, 40.0]
     npts = len(height)
-    mannfraction = npts * [1.]
+    mannfraction = npts * [1.0]
     cxsdata = list(zip(xfraction, height, mannfraction))
     cxs = flopy.mf6.ModflowSwfcxs(
         swf,
@@ -125,14 +133,19 @@ def build_models(idx, test):
         swf,
         budget_filerecord=f"{name}.bud",
         stage_filerecord=f"{name}.stage",
-        saverecord=[("STAGE", "ALL"), ("BUDGET", "ALL"), ],
-        printrecord=[("STAGE", "LAST"),("BUDGET", "ALL"), ],
+        saverecord=[
+            ("STAGE", "ALL"),
+            ("BUDGET", "ALL"),
+        ],
+        printrecord=[
+            ("STAGE", "LAST"),
+            ("BUDGET", "ALL"),
+        ],
     )
-
 
     # time, reach1 (cms)
     reach_inflow = [
-        (0, 20.),
+        (0, 20.0),
         (2 * hr2sec, 20),
         (3 * hr2sec, 25),
         (4 * hr2sec, 20),
@@ -163,7 +176,7 @@ def build_models(idx, test):
         maxbound=1,
         print_input=True,
         print_flows=True,
-        stress_period_data=[(nreach - 1, z[-1] + water_depth)]
+        stress_period_data=[(nreach - 1, z[-1] + water_depth)],
     )
 
     return sim, None
@@ -172,7 +185,6 @@ def build_models(idx, test):
 def make_plot(test, mfsim):
     print("making plots...")
     import matplotlib.pyplot as plt
-    import pandas as pd
 
     hecras = data_path / "hecras0125.csv"
     df_hecras = pd.read_csv(hecras, index_col=False)
@@ -180,7 +192,8 @@ def make_plot(test, mfsim):
 
     swrdata = data_path / "mfswr0125.csv"
     df_mfswr = pd.read_csv(swrdata, index_col=False)
-    df_mfswr = df_mfswr.loc[df_mfswr['RCHGRP'] == 21]
+    df_mfswr = df_mfswr.loc[df_mfswr["RCHGRP"] == 21]
+    df_mfswr = df_mfswr.loc[df_mfswr["TOTTIME"] > 86400]
     print(df_mfswr)
 
     fpth = os.path.join(test.workspace, f"swfmodel.bud")
@@ -193,7 +206,7 @@ def make_plot(test, mfsim):
     qoutflow = []
     times = np.array(budobj.times)
     for ra in qchd:
-        q = - ra[0]["q"]
+        q = -ra[0]["q"]
         qoutflow.append(q)
 
     qinflow = []
@@ -204,13 +217,18 @@ def make_plot(test, mfsim):
     # plot upstream and downstream flow
     fig = plt.figure(figsize=(8, 6))
     ax = fig.add_subplot(1, 1, 1)
-    ax.plot(times / 60. / 60., qinflow, 'r-', label="Inflow")
-    ax.plot(times / 60. / 60., df_hecras["Flow Flow (CMS)"], 'b-', label="HEC-RAS")
-    x = df_mfswr["TOTTIME"] - 86400.
-    x = x / 60. / 60.
-    ax.plot(x, -df_mfswr["QCRFLOW"], 'go', mfc="none", label="MODFLOW-SWR")
-    ax.plot(times / 60. / 60., qoutflow, 'bo', mfc="none", label="MODFLOW 6")
-    ax.set_xlim(0, 24.)
+    ax.plot(times / 60.0 / 60.0, qinflow, "r-", label="Inflow")
+    ax.plot(
+        times / 60.0 / 60.0,
+        df_hecras["Flow Flow (CMS)"],
+        "b-",
+        label="HEC-RAS",
+    )
+    x = df_mfswr["TOTTIME"] - 86400.0
+    x = x / 60.0 / 60.0
+    ax.plot(x, -df_mfswr["QCRFLOW"], "go", mfc="none", label="MODFLOW-SWR")
+    ax.plot(times / 60.0 / 60.0, qoutflow, "bo", mfc="none", label="MODFLOW 6")
+    ax.set_xlim(0, 24.0)
     ax.set_ylim(19, 26)
     plt.xlabel("time, in hours")
     plt.ylabel("flow, in meters cubed per second")
@@ -225,8 +243,14 @@ def make_plot(test, mfsim):
 
     fig = plt.figure(figsize=(10, 10))
     ax = fig.add_subplot(1, 1, 1)
-    ax.plot(times / 60. / 60., stage[:, 0, 0, 0], 'r-', label="Upstream")
-    ax.plot(times / 60. / 60., stage[:, 0, 0, -1], 'bo', mfc="none", label="Downstream")
+    ax.plot(times / 60.0 / 60.0, stage[:, 0, 0, 0], "r-", label="Upstream")
+    ax.plot(
+        times / 60.0 / 60.0,
+        stage[:, 0, 0, -1],
+        "bo",
+        mfc="none",
+        label="Downstream",
+    )
     # ax.set_xlim(0, 24.)
     # ax.set_ylim(19, 26)
     plt.xlabel("time, in hours")
@@ -234,7 +258,6 @@ def make_plot(test, mfsim):
     plt.legend()
     fname = os.path.join(test.workspace, "swfmodel.stage.png")
     plt.savefig(fname)
-
 
     return
 
@@ -245,8 +268,8 @@ def check_output(idx, test):
     # get MFSimulation from test
     sim = test.sims[0]
 
-    makeplot = True
-    if make_plot:
+    makeplot = False
+    if makeplot:
         make_plot(test, sim)
 
     # assign name
@@ -259,12 +282,12 @@ def check_output(idx, test):
     ja = grb.ja
     assert ia.shape[0] == grb.nodes + 1, "ia in grb file is not correct size"
 
-    # read stage file
+    # check to make sure stage file can be read
     fpth = os.path.join(test.workspace, f"{name}.stage")
     qobj = flopy.utils.HeadFile(fpth, precision="double", text="STAGE")
     stage = qobj.get_alldata()
 
-    # read the budget file
+    # check to make sure budget file can be read
     fpth = os.path.join(test.workspace, f"{name}.bud")
     budobj = flopy.utils.binaryfile.CellBudgetFile(fpth, precision="double")
     flowja = budobj.get_data(text="FLOW-JA-FACE")
@@ -273,31 +296,25 @@ def check_output(idx, test):
     qchd = budobj.get_data(text="CHD")
     qresidual = np.zeros(grb.nodes)
 
-    # # check budget terms
-    # for itime in range(len(flowja)):
-    #     print (f"evaluating timestep {itime}")
+    # compare the mf6 swr outflow to the mf2005 swr outflow
+    swrdata = data_path / "mfswr0125.csv"
+    df_mfswr = pd.read_csv(swrdata, index_col=False)
+    df_mfswr = df_mfswr.loc[df_mfswr["RCHGRP"] == 21]
+    df_mfswr = df_mfswr.loc[df_mfswr["TOTTIME"] >= 86400]
+    qoutflow_mf2005 = -df_mfswr["QCRFLOW"].to_numpy()
 
-    #     fja = flowja[itime].flatten()
-    #     for n in range(grb.nodes):
-    #         ipos = ia[n]
-    #         qresidual[n] = fja[ipos]
-    #     assert np.allclose(qresidual, 0.), "residual in flowja diagonal is not zero"
+    # create a list of outflows from mf6 simulation
+    qoutflow_mf6 = []
+    for ra in qchd:
+        q = -ra[0]["q"]
+        qoutflow_mf6.append(q)
 
-    #     for n in range(grb.nodes):
-    #         qs = qstorage[itime].flatten()[n]
-    #         if n + 1 in qflw[itime]["node"]:
-    #             idx, = np.where(qflw[itime]["node"] == n + 1)
-    #             idx = idx[0]
-    #             qf = qflw[itime].flatten()["q"][idx]
-    #         else:
-    #             qf = 0.
-    #         qe = qextoutflow[itime].flatten()[n]
-    #         qdiag = fja[ia[n]]
-    #         print(f"{n=} {qs=} {qf=} {qe=} {qdiag=}")
-    #         for ipos in range(ia[n] + 1, ia[n + 1]):
-    #             j = ja[ipos]
-    #             q = fja[ipos]
-    #             print(f"  {ipos=} {j=} {q=}")        
+    # check to make sure the difference in outflow bewteen mf6 and
+    # mf2005 is less than atol
+    diff = np.abs(qoutflow_mf6 - qoutflow_mf2005)
+    print(diff)
+    print(f"max difference is: {diff.max()}")
+    assert np.allclose(qoutflow_mf6, qoutflow_mf2005, atol=0.15)
 
     return
 
