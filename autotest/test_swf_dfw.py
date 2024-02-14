@@ -22,9 +22,12 @@ import os
 import flopy
 import numpy as np
 import pytest
+
 from framework import TestFramework
 
-cases = ["swf-dfw01",]
+cases = [
+    "swf-dfw01",
+]
 
 
 def build_models(idx, test):
@@ -32,23 +35,28 @@ def build_models(idx, test):
     sim_ws = test.workspace
     name = cases[idx]
     sim = flopy.mf6.MFSimulation(
-        sim_name=name, version="mf6", exe_name="mf6", sim_ws=sim_ws,
-        memory_print_option='all',
+        sim_name=name,
+        version="mf6",
+        exe_name="mf6",
+        sim_ws=sim_ws,
+        memory_print_option="all",
     )
 
     tdis = flopy.mf6.ModflowTdis(sim)
-    ims = flopy.mf6.ModflowIms(sim, 
-                               print_option="all", 
-                               linear_acceleration="BICGSTAB",
-                               outer_dvclose=1.e-7,
-                               inner_dvclose=1.e-8)
+    ims = flopy.mf6.ModflowIms(
+        sim,
+        print_option="all",
+        linear_acceleration="BICGSTAB",
+        outer_dvclose=1.0e-7,
+        inner_dvclose=1.0e-8,
+    )
     swf = flopy.mf6.ModflowSwf(sim, modelname=name, save_flows=True)
 
-    dx = 1000.
+    dx = 1000.0
     nreach = 3
     total_length = dx * nreach
     vertices = []
-    vertices = [[j, j * dx, 0., 0.] for j in range(nreach + 1)]
+    vertices = [[j, j * dx, 0.0, 0.0] for j in range(nreach + 1)]
     cell2d = []
     for j in range(nreach):
         cell2d.append([j, 0.5, 2, j, j + 1])
@@ -57,22 +65,22 @@ def build_models(idx, test):
     nvert = len(vertices)
 
     disl = flopy.mf6.ModflowSwfdisl(
-        swf, 
-        nodes=nodes, 
+        swf,
+        nodes=nodes,
         nvert=nvert,
         reach_length=dx,
         reach_bottom=0.0,
-        toreach=toreach,   # -1 gives 0 in one-based, which means outflow cell
-        idomain=1, 
-        vertices=vertices, 
+        toreach=toreach,  # -1 gives 0 in one-based, which means outflow cell
+        idomain=1,
+        vertices=vertices,
         cell2d=cell2d,
     )
-    
+
     dfw = flopy.mf6.ModflowSwfdfw(
-        swf, 
+        swf,
         print_flows=True,
         save_flows=True,
-        width=50., 
+        width=50.0,
         manningsn=0.035,
         slope=0.001,
         idcxs=0,
@@ -85,9 +93,9 @@ def build_models(idx, test):
 
     ic = flopy.mf6.ModflowSwfic(swf, strt=1.0)
 
-    xfraction = [0., 0., 1., 1.]
-    height = [100., 0., 0., 100.]
-    mannfraction = [1., 1., 1., 1.]
+    xfraction = [0.0, 0.0, 1.0, 1.0]
+    height = [100.0, 0.0, 0.0, 100.0]
+    mannfraction = [1.0, 1.0, 1.0, 1.0]
     cxsdata = list(zip(xfraction, height, mannfraction))
     cxs = flopy.mf6.ModflowSwfcxs(
         swf,
@@ -102,16 +110,24 @@ def build_models(idx, test):
         swf,
         budget_filerecord=f"{name}.bud",
         stage_filerecord=f"{name}.stage",
-        saverecord=[("STAGE", "ALL"), ("BUDGET", "ALL"), ],
-        printrecord=[("STAGE", "LAST"),("BUDGET", "ALL"), ],
+        saverecord=[
+            ("STAGE", "ALL"),
+            ("BUDGET", "ALL"),
+        ],
+        printrecord=[
+            ("STAGE", "LAST"),
+            ("BUDGET", "ALL"),
+        ],
     )
 
     # Save to external binary file or into flw package depending on binary keyword
     binary = True
-    flw_list = [(1, 100), ] # one-based cell numbers here
+    flw_list = [
+        (1, 100),
+    ]  # one-based cell numbers here
     maxbound = len(flw_list)
     if binary:
-        ra = np.array(flw_list, dtype=[('irch', '<i4'), ('q', '<f8')])
+        ra = np.array(flw_list, dtype=[("irch", "<i4"), ("q", "<f8")])
         ra.tofile(os.path.join(sim_ws, "flw0.bin"))
         flw_spd = {
             0: {
@@ -135,7 +151,7 @@ def build_models(idx, test):
         maxbound=1,
         print_input=True,
         print_flows=True,
-        stress_period_data=[(2, 1.0)]
+        stress_period_data=[(2, 1.0)],
     )
 
     return sim, None
@@ -192,7 +208,7 @@ def check_output(idx, test):
     #         for ipos in range(ia[n] + 1, ia[n + 1]):
     #             j = ja[ipos]
     #             q = fja[ipos]
-    #             print(f"  {ipos=} {j=} {q=}")        
+    #             print(f"  {ipos=} {j=} {q=}")
 
     return
 

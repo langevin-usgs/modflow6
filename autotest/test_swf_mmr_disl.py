@@ -30,9 +30,12 @@ import os
 import flopy
 import numpy as np
 import pytest
+
 from framework import TestFramework
 
-cases = ["swf-mmr01",]
+cases = [
+    "swf-mmr01",
+]
 
 
 def build_models(idx, test):
@@ -40,8 +43,11 @@ def build_models(idx, test):
     sim_ws = test.workspace
     name = cases[idx]
     sim = flopy.mf6.MFSimulation(
-        sim_name=name, version="mf6", exe_name="mf6", sim_ws=sim_ws,
-        memory_print_option='all',
+        sim_name=name,
+        version="mf6",
+        exe_name="mf6",
+        sim_ws=sim_ws,
+        memory_print_option="all",
     )
 
     tdis = flopy.mf6.ModflowTdis(sim)
@@ -49,11 +55,11 @@ def build_models(idx, test):
     swf = flopy.mf6.ModflowSwf(sim, modelname=name, save_flows=True)
 
     vertices = [
-        [0, 0., 0., 0.], 
-        [1, 0., 1., 0.],
-        [2, 1., 0., 0.],
-        [3, 2., 0., 0.],
-        [4, 3., 0., 0.],
+        [0, 0.0, 0.0, 0.0],
+        [1, 0.0, 1.0, 0.0],
+        [2, 1.0, 0.0, 0.0],
+        [3, 2.0, 0.0, 0.0],
+        [4, 3.0, 0.0, 0.0],
     ]
     # icell1d fdc ncvert icvert
     cell2d = [
@@ -67,17 +73,22 @@ def build_models(idx, test):
     nvert = len(vertices)
 
     disl = flopy.mf6.ModflowSwfdisl(
-        swf, 
-        nodes=nodes, 
+        swf,
+        nodes=nodes,
         nvert=nvert,
         reach_length=1000.0,
-        reach_bottom=0.,
-        toreach=[2, 2, 3, -1],   # -1 gives 0 in one-based, which means outflow cell
-        idomain=1, 
-        vertices=vertices, 
+        reach_bottom=0.0,
+        toreach=[
+            2,
+            2,
+            3,
+            -1,
+        ],  # -1 gives 0 in one-based, which means outflow cell
+        idomain=1,
+        vertices=vertices,
         cell2d=cell2d,
     )
-    
+
     # note: for specifying zero-based reach number, put reach number in tuple
     fname = f"{name}.mmr.obs.csv"
     mmr_obs = {
@@ -88,14 +99,14 @@ def build_models(idx, test):
     }
 
     mmr = flopy.mf6.ModflowSwfmmr(
-        swf, 
+        swf,
         observations=mmr_obs,
         print_flows=True,
         save_flows=True,
         iseg_order=list(range(nodes)),
         qoutflow0=0.0,
-        k_coef=0.001, 
-        x_coef=0.2
+        k_coef=0.001,
+        x_coef=0.2,
     )
 
     # output control
@@ -103,16 +114,22 @@ def build_models(idx, test):
         swf,
         budget_filerecord=f"{name}.bud",
         qoutflow_filerecord=f"{name}.qoutflow",
-        saverecord=[("QOUTFLOW", "ALL"), ("BUDGET", "ALL"), ],
-        printrecord=[("QOUTFLOW", "LAST"),("BUDGET", "ALL"), ],
+        saverecord=[
+            ("QOUTFLOW", "ALL"),
+            ("BUDGET", "ALL"),
+        ],
+        printrecord=[
+            ("QOUTFLOW", "LAST"),
+            ("BUDGET", "ALL"),
+        ],
     )
 
     # Save to external binary file or into flw package depending on binary keyword
     binary = True
-    flw_list = [(1, 1000), (2, 500.)] # one-based cell numbers here
+    flw_list = [(1, 1000), (2, 500.0)]  # one-based cell numbers here
     maxbound = len(flw_list)
     if binary:
-        ra = np.array(flw_list, dtype=[('irch', '<i4'), ('q', '<f8')])
+        ra = np.array(flw_list, dtype=[("irch", "<i4"), ("q", "<f8")])
         ra.tofile(os.path.join(sim_ws, "flw0.bin"))
         flw_spd = {
             0: {
@@ -165,29 +182,31 @@ def check_output(idx, test):
 
     # check budget terms
     for itime in range(len(flowja)):
-        print (f"evaluating timestep {itime}")
+        print(f"evaluating timestep {itime}")
 
         fja = flowja[itime].flatten()
         for n in range(grb.nodes):
             ipos = ia[n]
             qresidual[n] = fja[ipos]
-        assert np.allclose(qresidual, 0.), "residual in flowja diagonal is not zero"
+        assert np.allclose(
+            qresidual, 0.0
+        ), "residual in flowja diagonal is not zero"
 
         for n in range(grb.nodes):
             qs = qstorage[itime].flatten()[n]
             if n + 1 in qflw[itime]["node"]:
-                idx, = np.where(qflw[itime]["node"] == n + 1)
+                (idx,) = np.where(qflw[itime]["node"] == n + 1)
                 idx = idx[0]
                 qf = qflw[itime].flatten()["q"][idx]
             else:
-                qf = 0.
+                qf = 0.0
             qe = qextoutflow[itime].flatten()[n]
             qdiag = fja[ia[n]]
             print(f"{n=} {qs=} {qf=} {qe=} {qdiag=}")
             for ipos in range(ia[n] + 1, ia[n + 1]):
                 j = ja[ipos]
                 q = fja[ipos]
-                print(f"  {ipos=} {j=} {q=}")        
+                print(f"  {ipos=} {j=} {q=}")
 
     return
 

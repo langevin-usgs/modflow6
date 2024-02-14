@@ -10,8 +10,8 @@ import os
 import flopy
 import numpy as np
 import pytest
-from framework import TestFramework
 
+from framework import TestFramework
 
 # data from ponce Table 9-1
 # time(d) coi2(m4/s) c1i1(m3/s) c2i1(m3/s) outflow(m3/s)
@@ -55,7 +55,9 @@ def get_ponce_data():
     return time_days, qinflow, qoutflow
 
 
-cases = ["ponce01",]
+cases = [
+    "ponce01",
+]
 
 
 def build_models(idx, test):
@@ -63,11 +65,14 @@ def build_models(idx, test):
     sim_ws = test.workspace
     name = cases[idx]
     sim = flopy.mf6.MFSimulation(
-        sim_name=name, version="mf6", exe_name="mf6", sim_ws=sim_ws,
-        memory_print_option='all',
+        sim_name=name,
+        version="mf6",
+        exe_name="mf6",
+        sim_ws=sim_ws,
+        memory_print_option="all",
     )
     nper = 25
-    tdis_rc = [(1., 1, 1.0) for ispd in range(nper)]
+    tdis_rc = [(1.0, 1, 1.0) for ispd in range(nper)]
     tdis = flopy.mf6.ModflowTdis(sim, nper=nper, perioddata=tdis_rc)
     ems = flopy.mf6.ModflowEms(sim)
     swf = flopy.mf6.ModflowSwf(sim, modelname=name, save_flows=True)
@@ -77,27 +82,28 @@ def build_models(idx, test):
     nvert = None
 
     nodes = 1
-    channel_length = 500. # miles
-    channel_length = channel_length * 5280. / 3.2808 # meters
-    reach_length = channel_length * 5280. / nodes
+    channel_length = 500.0  # miles
+    channel_length = channel_length * 5280.0 / 3.2808  # meters
+    reach_length = channel_length * 5280.0 / nodes
 
-    k_coef = 2. # days
-    x_coef = 0.1 # dimensionless
+    k_coef = 2.0  # days
+    x_coef = 0.1  # dimensionless
 
     time_days, qinflow, qoutflow = get_ponce_data()
 
     disl = flopy.mf6.ModflowSwfdisl(
-        swf, 
-        nodes=nodes, 
+        swf,
+        nodes=nodes,
         nvert=nvert,
         reach_length=reach_length,
-        reach_bottom=0.,
-        toreach=[(-1,)],   # (-1,) gives 0 in one-based, which means outflow cell
+        reach_bottom=0.0,
+        toreach=[
+            (-1,)
+        ],  # (-1,) gives 0 in one-based, which means outflow cell
         idomain=1,
-        vertices=vertices, 
+        vertices=vertices,
         cell2d=cell2d,
     )
-    
 
     # note: for specifying reach number, use fortran indexing!
     fname = f"{name}.mmr.obs.csv"
@@ -109,13 +115,13 @@ def build_models(idx, test):
     }
 
     mmr = flopy.mf6.ModflowSwfmmr(
-        swf, 
+        swf,
         print_flows=True,
         observations=mmr_obs,
         iseg_order=list(range(nodes)),
         qoutflow0=qinflow[0],
-        k_coef=k_coef, 
-        x_coef=x_coef
+        k_coef=k_coef,
+        x_coef=x_coef,
     )
 
     # output control
@@ -123,8 +129,13 @@ def build_models(idx, test):
         swf,
         qoutflow_filerecord=f"{name}.qoutflow",
         budget_filerecord=f"{name}.bud",
-        saverecord=[("QOUTFLOW", "ALL"), ("BUDGET", "ALL"), ],
-        printrecord=[("BUDGET", "ALL"), ],
+        saverecord=[
+            ("QOUTFLOW", "ALL"),
+            ("BUDGET", "ALL"),
+        ],
+        printrecord=[
+            ("BUDGET", "ALL"),
+        ],
     )
 
     inflow = qinflow[1:]

@@ -13,8 +13,8 @@ import os
 import flopy
 import numpy as np
 import pytest
-from framework import TestFramework
 
+from framework import TestFramework
 
 ponce_data = """0 0 50 50
 1 3 51.441 50
@@ -111,7 +111,9 @@ def get_ponce_data():
     return time_days, qinflow, qoutflow
 
 
-cases = ["thomas01",]
+cases = [
+    "thomas01",
+]
 
 
 def build_models(idx, test):
@@ -119,13 +121,18 @@ def build_models(idx, test):
     sim_ws = test.workspace
     name = cases[idx]
     sim = flopy.mf6.MFSimulation(
-        sim_name=name, version="mf6", exe_name="mf6", sim_ws=sim_ws,
-        memory_print_option='all',
+        sim_name=name,
+        version="mf6",
+        exe_name="mf6",
+        sim_ws=sim_ws,
+        memory_print_option="all",
     )
-    delta_t = 60 * 60 * 3 # seconds = 3 hours
+    delta_t = 60 * 60 * 3  # seconds = 3 hours
     nper = 80
     tdis_rc = [(delta_t, 1, 1.0) for ispd in range(nper)]
-    tdis = flopy.mf6.ModflowTdis(sim, nper=nper, perioddata=tdis_rc, time_units="seconds")
+    tdis = flopy.mf6.ModflowTdis(
+        sim, nper=nper, perioddata=tdis_rc, time_units="seconds"
+    )
     ems = flopy.mf6.ModflowEms(sim)
     swf = flopy.mf6.ModflowSwf(sim, modelname=name, save_flows=True)
 
@@ -134,44 +141,46 @@ def build_models(idx, test):
     nvert = None
 
     nodes = 20  # can run 200,000 reaches in less than a second and 2 million reaches in 4 seconds
-    channel_length = 500 * 5280.  # meters
+    channel_length = 500 * 5280.0  # meters
     reach_length = channel_length / nodes
 
-    qp = 200 # cfs = peak discharge
-    qb = 50 # cfs = base discharge
+    qp = 200  # cfs = peak discharge
+    qb = 50  # cfs = base discharge
     qa = (qp + qb) / 2
 
-    beta = 5. / 3.
+    beta = 5.0 / 3.0
     rating_coefficient = 0.688
-    depth_a = 2.
+    depth_a = 2.0
     # solve for reference depth from rating equation
     # reference depth is the depth when flow is reference flow qa
     depth_a = (qa / rating_coefficient) ** (1 / beta)
     v_mean = qa / depth_a  # mean velocity at peak discharge
-    wave_celerity = beta * v_mean # 4.0 # m/s calculated as beta * v
-    q0 = qa # flow per unit width based on average discharge
-    S0 = 1. / 5280. # channel bottom slope, 1 ft/mi converted to ft/ft
+    wave_celerity = beta * v_mean  # 4.0 # m/s calculated as beta * v
+    q0 = qa  # flow per unit width based on average discharge
+    S0 = 1.0 / 5280.0  # channel bottom slope, 1 ft/mi converted to ft/ft
 
     print(f"{depth_a=} ft")
     print(f"{v_mean=} ft/s")
     print(f"{wave_celerity=} ft/s")
 
-    k_coef = reach_length / wave_celerity # seconds
-    x_coef = 0.5 * (1 - q0 / S0 / wave_celerity / reach_length) # dimensionless
+    k_coef = reach_length / wave_celerity  # seconds
+    x_coef = 0.5 * (
+        1 - q0 / S0 / wave_celerity / reach_length
+    )  # dimensionless
 
     time_days, qinflow, qoutflow = get_ponce_data()
 
     toreach = [(irch,) for irch in range(1, nodes)] + [(-1,)]
     disl = flopy.mf6.ModflowSwfdisl(
-        swf, 
+        swf,
         length_units="feet",
-        nodes=nodes, 
+        nodes=nodes,
         nvert=nvert,
         reach_length=reach_length,
-        reach_bottom=0.,
-        toreach=toreach,   # (-1,) gives 0 in one-based, which means outflow cell
+        reach_bottom=0.0,
+        toreach=toreach,  # (-1,) gives 0 in one-based, which means outflow cell
         idomain=1,
-        vertices=vertices, 
+        vertices=vertices,
         cell2d=cell2d,
     )
 
@@ -185,13 +194,13 @@ def build_models(idx, test):
     }
 
     mmr = flopy.mf6.ModflowSwfmmr(
-        swf, 
+        swf,
         print_flows=False,
         observations=mmr_obs,
         iseg_order=list(range(nodes)),
         qoutflow0=qinflow[0],
-        k_coef=k_coef, 
-        x_coef=x_coef
+        k_coef=k_coef,
+        x_coef=x_coef,
     )
 
     # output control
@@ -199,10 +208,15 @@ def build_models(idx, test):
         swf,
         qoutflow_filerecord=f"{name}.qoutflow",
         budget_filerecord=f"{name}.bud",
-        saverecord=[("QOUTFLOW", "ALL"), ("BUDGET", "ALL"), ],
-        printrecord=[("BUDGET", "ALL"), ],
+        saverecord=[
+            ("QOUTFLOW", "ALL"),
+            ("BUDGET", "ALL"),
+        ],
+        printrecord=[
+            ("BUDGET", "ALL"),
+        ],
     )
-    
+
     inflow = qinflow[1:]
     flw_spd = {ispd: [[0, inflow[ispd]]] for ispd in range(nper)}
     flw = flopy.mf6.ModflowSwfflw(
@@ -258,7 +272,7 @@ def check_output(idx, test):
     assert success
 
     # ensure obs compares with binary outflow
-    atol = 1.e-6
+    atol = 1.0e-6
     for i, t in enumerate(time_days):
         qoutflow_obs = -obsvals["OUTFLOW"][i]
         qoutflow_bin = qoutflow[i].flatten()[grb.nodes - 1]

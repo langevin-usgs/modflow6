@@ -16,6 +16,7 @@ import os
 import flopy
 import numpy as np
 import pytest
+
 from framework import TestFramework
 
 cases = [
@@ -27,8 +28,8 @@ def build_models(idx, test):
     dx = 500.0
     nreach = 11
     nper = 1
-    perlen = [5040 * 2 * 60.]  # 7 days (in seconds)
-    nstp = [50] #In SWR report nstp = [5040] and tsmult is 1.
+    perlen = [5040 * 2 * 60.0]  # 7 days (in seconds)
+    nstp = [50]  # In SWR report nstp = [5040] and tsmult is 1.
     tsmult = [1.2]
 
     tdis_rc = []
@@ -103,7 +104,7 @@ def build_models(idx, test):
         save_flows=True,
         width=dx,
         manningsn=0.30,
-        slope=0.05 / 500.,
+        slope=0.05 / 500.0,
         idcxs=None,
     )
 
@@ -148,7 +149,7 @@ def build_models(idx, test):
         maxbound=1,
         print_input=True,
         print_flows=True,
-        stress_period_data=[(nreach - 1, 1.05)]
+        stress_period_data=[(nreach - 1, 1.05)],
     )
 
     obs_data = {
@@ -179,9 +180,17 @@ def make_plot(test, mfsim):
     fig = plt.figure(figsize=(10, 10))
     ax = fig.add_subplot(1, 1, 1)
     for irch in [1, 2, 3]:
-        ax.plot(obsvals["time"] / 3600., obsvals[f"OBS{irch}"], marker="o", mfc="none", mec="k", lw=0., label=f"MF6 reach {irch}")
-        #ax.plot(obsvals["time"], answer[f"STAGE00000000{irch:02d}"], "k-", label=f"SWR Reach {irch}")
-    ax.set_xlim(0, 30.)
+        ax.plot(
+            obsvals["time"] / 3600.0,
+            obsvals[f"OBS{irch}"],
+            marker="o",
+            mfc="none",
+            mec="k",
+            lw=0.0,
+            label=f"MF6 reach {irch}",
+        )
+        # ax.plot(obsvals["time"], answer[f"STAGE00000000{irch:02d}"], "k-", label=f"SWR Reach {irch}")
+    ax.set_xlim(0, 30.0)
     ax.set_ylim(1.2, 2.4)
     plt.xlabel("time, in hours")
     plt.ylabel("stage, in meters")
@@ -211,7 +220,10 @@ def check_output(idx, test):
     # at end of simulation, water depth should be 1.0 for all reaches
     swf = mfsim.get_model(swfname)
     depth = stage_all[-1] - swf.disl.reach_bottom.array
-    np.allclose(depth, 1.0), f"Simulated depth at end should be 1, but found {depth}"
+    np.allclose(
+        depth, 1.0
+    ), f"Simulated depth at end should be 1, but found {depth}"
+
 
 @pytest.mark.parametrize("idx, name", enumerate(cases))
 def test_mf6model(idx, name, function_tmpdir, targets):

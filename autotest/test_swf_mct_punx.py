@@ -26,6 +26,7 @@ import os
 import flopy
 import numpy as np
 import pytest
+
 from framework import TestFramework
 
 cases = [f"swf-mct-punx"]
@@ -209,12 +210,15 @@ cxs_data = """0 35.1
 def get_flow_data():
     s = [line for line in hec_hms_results.split("\n")]
     s = [line.split(" ") for line in s]
-    s = [(date, time, float(inflow), float(outflow), float(obs)) for date, time, inflow, outflow, obs in s]
+    s = [
+        (date, time, float(inflow), float(outflow), float(obs))
+        for date, time, inflow, outflow, obs in s
+    ]
     date, time, inflow, hec_hms_outflow, obs = zip(*s)
     inflow_hydrograph = np.array(inflow)
     hec_hms_outflow = np.array(hec_hms_outflow)
     outflow_hydrograph = np.array(obs)
-    dt = 15 * 60 # 15 mins converted to seconds
+    dt = 15 * 60  # 15 mins converted to seconds
     total_time = inflow_hydrograph.shape[0] * dt
     sample_times = np.arange(0, total_time, dt)
     return sample_times, inflow_hydrograph, outflow_hydrograph
@@ -231,9 +235,9 @@ def get_cross_section_data():
     bank_n = 0.15
     r = np.array(8 * [bank_n] + 11 * [channel_n] + 8 * [bank_n] + [0])
     cross_section_data = {
-    "x": x,  # feet
-    "h": h,  # feet
-    "r": r,  # mannings n in feet units
+        "x": x,  # feet
+        "h": h,  # feet
+        "r": r,  # mannings n in feet units
     }
     return cross_section_data
 
@@ -243,8 +247,11 @@ def build_models(idx, test):
     sim_ws = test.workspace
     name = cases[idx]
     sim = flopy.mf6.MFSimulation(
-        sim_name=name, version="mf6", exe_name="mf6", sim_ws=sim_ws,
-        memory_print_option='all',
+        sim_name=name,
+        version="mf6",
+        exe_name="mf6",
+        sim_ws=sim_ws,
+        memory_print_option="all",
     )
 
     # get data
@@ -252,7 +259,7 @@ def build_models(idx, test):
     cross_section_data = get_cross_section_data()
 
     # spatial discretization
-    stream_length = 68861.
+    stream_length = 68861.0
     nreach = 8
     dx = stream_length / nreach
 
@@ -261,15 +268,14 @@ def build_models(idx, test):
     nstp = 72
     dt = total_time / nstp
 
-    tdis = flopy.mf6.ModflowTdis(sim, 
-        nper=1, 
-        perioddata=[(total_time, nstp, 1.0)], 
-        time_units="seconds")
+    tdis = flopy.mf6.ModflowTdis(
+        sim, nper=1, perioddata=[(total_time, nstp, 1.0)], time_units="seconds"
+    )
     ems = flopy.mf6.ModflowEms(sim)
     swf = flopy.mf6.ModflowSwf(sim, modelname=name, save_flows=True)
 
     vertices = []
-    vertices = [[j, j * dx, 0., 0.] for j in range(nreach + 1)]
+    vertices = [[j, j * dx, 0.0, 0.0] for j in range(nreach + 1)]
     cell2d = []
     for j in range(nreach):
         cell2d.append([j, 0.5, 2, j, j + 1])
@@ -278,17 +284,17 @@ def build_models(idx, test):
     nvert = nreach + 1
 
     disl = flopy.mf6.ModflowSwfdisl(
-        swf, 
-        nodes=nodes, 
+        swf,
+        nodes=nodes,
         nvert=nvert,
         reach_length=dx,
-        toreach=toreach,   # -1 gives 0 in one-based, which means outflow cell
-        reach_bottom=0.,
-        idomain=1, 
-        vertices=vertices, 
+        toreach=toreach,  # -1 gives 0 in one-based, which means outflow cell
+        reach_bottom=0.0,
+        idomain=1,
+        vertices=vertices,
         cell2d=cell2d,
     )
-    
+
     # note: for specifying zero-based reach number, put reach number in tuple
     fname = f"{name}.mmr.obs.csv"
     mmr_obs = {
@@ -306,9 +312,9 @@ def build_models(idx, test):
         save_flows=True,
         icalc_order=list(range(nreach)),
         qoutflow0=inflow_hydrograph[0],
-        width=1.,
+        width=1.0,
         manningsn=1.0,
-        elevation=0.,
+        elevation=0.0,
         slope=0.0012,
         idcxs=0,
     )
@@ -331,8 +337,14 @@ def build_models(idx, test):
         swf,
         budget_filerecord=f"{name}.bud",
         qoutflow_filerecord=f"{name}.qoutflow",
-        saverecord=[("QOUTFLOW", "ALL"), ("BUDGET", "ALL"), ],
-        printrecord=[("QOUTFLOW", "LAST"),("BUDGET", "ALL"), ],
+        saverecord=[
+            ("QOUTFLOW", "ALL"),
+            ("BUDGET", "ALL"),
+        ],
+        printrecord=[
+            ("QOUTFLOW", "LAST"),
+            ("BUDGET", "ALL"),
+        ],
     )
 
     # Create flw package with time series input
@@ -365,10 +377,12 @@ def check_output(idx, test):
     name = cases[idx]
     fpth = os.path.join(test.workspace, f"{name}.mmr.obs.csv")
     obsvals = np.genfromtxt(fpth, names=True, delimiter=",")
-    qoutflow = -obsvals['OUTFLOW']
-    dtol = 800.
+    qoutflow = -obsvals["OUTFLOW"]
+    dtol = 800.0
     diff = qoutflow.max() - outflow_hydrograph.max()
-    assert abs(diff) < dtol, f"Sim and reported max outflow are too different: {diff}"
+    assert (
+        abs(diff) < dtol
+    ), f"Sim and reported max outflow are too different: {diff}"
 
     # read the binary grid file
     fpth = os.path.join(test.workspace, f"{name}.disl.grb")
@@ -393,29 +407,31 @@ def check_output(idx, test):
 
     # check budget terms
     for itime in range(len(flowja)):
-        print (f"evaluating timestep {itime}")
+        print(f"evaluating timestep {itime}")
 
         fja = flowja[itime].flatten()
         for n in range(grb.nodes):
             ipos = ia[n]
             qresidual[n] = fja[ipos]
-        assert np.allclose(qresidual, 0.), "residual in flowja diagonal is not zero"
+        assert np.allclose(
+            qresidual, 0.0
+        ), "residual in flowja diagonal is not zero"
 
         for n in range(grb.nodes):
             qs = qstorage[itime].flatten()[n]
             if n + 1 in qflw[itime]["node"]:
-                idx, = np.where(qflw[itime]["node"] == n + 1)
+                (idx,) = np.where(qflw[itime]["node"] == n + 1)
                 idx = idx[0]
                 qf = qflw[itime].flatten()["q"][idx]
             else:
-                qf = 0.
+                qf = 0.0
             qe = qextoutflow[itime].flatten()[n]
             qdiag = fja[ia[n]]
             print(f"{n=} {qs=} {qf=} {qe=} {qdiag=}")
             for ipos in range(ia[n] + 1, ia[n + 1]):
                 j = ja[ipos]
                 q = fja[ipos]
-                print(f"  {ipos=} {j=} {q=}")        
+                print(f"  {ipos=} {j=} {q=}")
 
     return
 
@@ -430,4 +446,3 @@ def test_mf6model(idx, name, function_tmpdir, targets):
         targets=targets,
     )
     test.run()
-

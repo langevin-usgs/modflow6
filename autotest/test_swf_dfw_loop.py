@@ -9,9 +9,12 @@ import os
 import flopy
 import numpy as np
 import pytest
+
 from framework import TestFramework
 
-cases = ["swf-dfw-loop",]
+cases = [
+    "swf-dfw-loop",
+]
 
 fpth = "./data/swr04/SWRSample04_Stage.csv"
 answer = np.genfromtxt(fpth, names=True, delimiter=",")
@@ -21,27 +24,29 @@ fpth = "./data/swr04/SWRFlows.csv"
 answer_flow = np.genfromtxt(fpth, names=True, delimiter=",")
 print(answer_flow)
 
+
 def build_models(idx, test):
 
     sim_ws = test.workspace
     name = cases[idx]
     sim = flopy.mf6.MFSimulation(
-        sim_name=name, 
-        version="mf6", 
-        exe_name="mf6", 
+        sim_name=name,
+        version="mf6",
+        exe_name="mf6",
         sim_ws=sim_ws,
-        memory_print_option='all',
+        memory_print_option="all",
     )
 
     tdis = flopy.mf6.ModflowTdis(
-        sim, nper=1, perioddata=[(604800., 336, 1.0)], time_units="SECONDS")
+        sim, nper=1, perioddata=[(604800.0, 336, 1.0)], time_units="SECONDS"
+    )
     ims = flopy.mf6.ModflowIms(
-        sim, 
+        sim,
         outer_maximum=100,
         inner_maximum=50,
-        print_option="all", 
-        outer_dvclose=1.e-6,
-        inner_dvclose=1.e-6,
+        print_option="all",
+        outer_dvclose=1.0e-6,
+        inner_dvclose=1.0e-6,
         linear_acceleration="BICGSTAB",
         backtracking_number=5,
         backtracking_tolerance=1.0,
@@ -49,33 +54,32 @@ def build_models(idx, test):
         backtracking_residual_limit=100.0,
     )
     swf = flopy.mf6.ModflowSwf(
-        sim, 
-        modelname=name, 
+        sim,
+        modelname=name,
         save_flows=True,
     )
 
     vertices = [
-        [0, 500., 6000., 0.],
-        [1, 500., 5000., 0.],
-        [2, 500., 4500., 0.],
-        [3, 1000., 4500., 0.],
-        [4, 2000., 4500., 0.],
-        [5, 3000., 4500., 0.],
-        [6, 3500., 4500., 0.],
-        [7, 3500., 4000., 0.],
-        [8, 3500., 3000., 0.],
-        [9, 3500., 2500., 0.],
-        [10, 3500., 2000., 0.],
-        [11, 3500., 1000., 0.],
-        [12, 3500., 500., 0.],
-        [13, 4000., 500., 0.],
-        [14, 5000., 500., 0.],
-        [15, 6000., 500., 0.],
-
-        [16, 500., 4000., 0.],
-        [17, 1000., 3000., 0.],
-        [18, 2000., 2500., 0.],
-        [19, 3000., 2500., 0.],
+        [0, 500.0, 6000.0, 0.0],
+        [1, 500.0, 5000.0, 0.0],
+        [2, 500.0, 4500.0, 0.0],
+        [3, 1000.0, 4500.0, 0.0],
+        [4, 2000.0, 4500.0, 0.0],
+        [5, 3000.0, 4500.0, 0.0],
+        [6, 3500.0, 4500.0, 0.0],
+        [7, 3500.0, 4000.0, 0.0],
+        [8, 3500.0, 3000.0, 0.0],
+        [9, 3500.0, 2500.0, 0.0],
+        [10, 3500.0, 2000.0, 0.0],
+        [11, 3500.0, 1000.0, 0.0],
+        [12, 3500.0, 500.0, 0.0],
+        [13, 4000.0, 500.0, 0.0],
+        [14, 5000.0, 500.0, 0.0],
+        [15, 6000.0, 500.0, 0.0],
+        [16, 500.0, 4000.0, 0.0],
+        [17, 1000.0, 3000.0, 0.0],
+        [18, 2000.0, 2500.0, 0.0],
+        [19, 3000.0, 2500.0, 0.0],
     ]
 
     cell2d = [
@@ -99,52 +103,48 @@ def build_models(idx, test):
         [17, 0.5, 2, 14, 15],
     ]
 
-    toreach = [
-        1, 2, 3, 4, 5, 6, 7, 
-        13, 9, 10, 11, 12, 13, 14, 15, 
-        16, 17, -1
-    ]
+    toreach = [1, 2, 3, 4, 5, 6, 7, 13, 9, 10, 11, 12, 13, 14, 15, 16, 17, -1]
 
     reach_length = [
-        1000.,
-        500.,
-        500.,
-        1000.,
-        1000.,
-        1000.,
-        1000.,
-        500.,
-        500.,
-        1118.,
-        1118.,
-        1000.,
-        500.,
-        500.,
-        1000.,
-        1000.,
-        1000.,
-        1000.,          
+        1000.0,
+        500.0,
+        500.0,
+        1000.0,
+        1000.0,
+        1000.0,
+        1000.0,
+        500.0,
+        500.0,
+        1118.0,
+        1118.0,
+        1000.0,
+        500.0,
+        500.0,
+        1000.0,
+        1000.0,
+        1000.0,
+        1000.0,
     ]
 
     width = [
-        10.,
-        10.,
-        20.,
-        20.,
-        20.,
-        20.,
-        20.,
-        20.,
-        10.,
-        10.,
-        10.,
-        10.,
-        10.,
-        15.,
-        15.,
-        15.,
-        15.,
-        15.,
+        10.0,
+        10.0,
+        20.0,
+        20.0,
+        20.0,
+        20.0,
+        20.0,
+        20.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        15.0,
+        15.0,
+        15.0,
+        15.0,
+        15.0,
     ]
 
     reach_bottom = [
@@ -162,12 +162,11 @@ def build_models(idx, test):
         1.17,
         1.0,
         1.0,
-        .75,
-        .50,
-        .25,
-        .0
+        0.75,
+        0.50,
+        0.25,
+        0.0,
     ]
-
 
     idcxs = [
         0,
@@ -225,26 +224,26 @@ def build_models(idx, test):
     nvert = len(vertices)
 
     disl = flopy.mf6.ModflowSwfdisl(
-        swf, 
-        nodes=nodes, 
+        swf,
+        nodes=nodes,
         nvert=nvert,
         reach_length=reach_length,
         reach_bottom=reach_bottom,
-        #toreach=toreach,   # -1 gives 0 in one-based, which means outflow cell
-        idomain=1, 
-        vertices=vertices, 
+        # toreach=toreach,   # -1 gives 0 in one-based, which means outflow cell
+        idomain=1,
+        vertices=vertices,
         cell2d=cell2d,
     )
 
     stage0 = np.array(14 * [3] + 4 * [2])
     ic = flopy.mf6.ModflowSwfic(swf, strt=stage0)
-    
+
     dfw = flopy.mf6.ModflowSwfdfw(
         swf,
         central_in_space=True,
         print_flows=True,
         save_flows=True,
-        width=1.0, # cross sections defined explicitly (not fractions)
+        width=1.0,  # cross sections defined explicitly (not fractions)
         manningsn=0.03,
         slope=0.001,
         idcxs=idcxs,
@@ -255,9 +254,19 @@ def build_models(idx, test):
         save_flows=True,
     )
 
-    xfraction = [0., 10., 20., 30.] + [0, 20., 40., 60.] + [0., 15., 30., 45.]
-    height = [10., 0., 0., 10.] + [20., 0., 0., 20.] + [15., 0., 0., 15.]
-    mannfraction = [1., 1., 1., 1.] + [1., 1., 1., 1.] + [1., 1., 1., 1.] 
+    xfraction = (
+        [0.0, 10.0, 20.0, 30.0]
+        + [0, 20.0, 40.0, 60.0]
+        + [0.0, 15.0, 30.0, 45.0]
+    )
+    height = (
+        [10.0, 0.0, 0.0, 10.0]
+        + [20.0, 0.0, 0.0, 20.0]
+        + [15.0, 0.0, 0.0, 15.0]
+    )
+    mannfraction = (
+        [1.0, 1.0, 1.0, 1.0] + [1.0, 1.0, 1.0, 1.0] + [1.0, 1.0, 1.0, 1.0]
+    )
 
     cxsdata = list(zip(xfraction, height, mannfraction))
     cxs = flopy.mf6.ModflowSwfcxs(
@@ -273,8 +282,14 @@ def build_models(idx, test):
         swf,
         budget_filerecord=f"{name}.bud",
         stage_filerecord=f"{name}.stage",
-        saverecord=[("STAGE", "ALL"), ("BUDGET", "ALL"), ],
-        printrecord=[("STAGE", "LAST"),("BUDGET", "ALL"), ],
+        saverecord=[
+            ("STAGE", "ALL"),
+            ("BUDGET", "ALL"),
+        ],
+        printrecord=[
+            ("STAGE", "LAST"),
+            ("BUDGET", "ALL"),
+        ],
     )
 
     flwlist = [
@@ -304,7 +319,7 @@ def build_models(idx, test):
         maxbound=1,
         print_input=True,
         print_flows=True,
-        stress_period_data=[(17, 2.0)]
+        stress_period_data=[(17, 2.0)],
     )
 
     obs_data = {
@@ -345,8 +360,21 @@ def make_plot(test):
     fig = plt.figure(figsize=(10, 10))
     ax = fig.add_subplot(1, 1, 1)
     for irch in [1, 4, 15, 18]:
-        ax.plot(obsvals["time"], obsvals[f"REACH{irch}"], marker="o", mfc="none", mec="k", lw=0., label=f"MF6 reach {irch}")
-        ax.plot(obsvals["time"], answer[f"STAGE00000000{irch:02d}"], "k-", label=f"SWR Reach {irch}")
+        ax.plot(
+            obsvals["time"],
+            obsvals[f"REACH{irch}"],
+            marker="o",
+            mfc="none",
+            mec="k",
+            lw=0.0,
+            label=f"MF6 reach {irch}",
+        )
+        ax.plot(
+            obsvals["time"],
+            answer[f"STAGE00000000{irch:02d}"],
+            "k-",
+            label=f"SWR Reach {irch}",
+        )
     ax.set_xscale("log")
     plt.xlabel("time, in seconds")
     plt.ylabel("stage, in meters")
@@ -356,11 +384,31 @@ def make_plot(test):
 
     fig = plt.figure(figsize=(10, 10))
     ax = fig.add_subplot(1, 1, 1)
-    ax.plot(obsvals["time"], obsvals["FLOW45"], marker="o", mfc="none", mec="b", lw=0., label="MF6 Gauge 4")
-    ax.plot(obsvals["time"], obsvals["FLOW56"], marker="o", mfc="none", mec="g", lw=0., label="MF6 Gauge 5")
-    ax.plot(answer_flow["TOTIME"], answer_flow["FLOW45"], "b-", label="SWR Gauge 4")
-    ax.plot(answer_flow["TOTIME"], answer_flow["FLOW56"], "g-", label="SWR Gauge 5")
-    #ax.plot(obsvals["time"], answer["STAGE0000000014"], marker="o", mfc="none", mec="k", lw=0., label="swr")
+    ax.plot(
+        obsvals["time"],
+        obsvals["FLOW45"],
+        marker="o",
+        mfc="none",
+        mec="b",
+        lw=0.0,
+        label="MF6 Gauge 4",
+    )
+    ax.plot(
+        obsvals["time"],
+        obsvals["FLOW56"],
+        marker="o",
+        mfc="none",
+        mec="g",
+        lw=0.0,
+        label="MF6 Gauge 5",
+    )
+    ax.plot(
+        answer_flow["TOTIME"], answer_flow["FLOW45"], "b-", label="SWR Gauge 4"
+    )
+    ax.plot(
+        answer_flow["TOTIME"], answer_flow["FLOW56"], "g-", label="SWR Gauge 5"
+    )
+    # ax.plot(obsvals["time"], answer["STAGE0000000014"], marker="o", mfc="none", mec="k", lw=0., label="swr")
     ax.set_xscale("log")
     plt.xlabel("time, in seconds")
     plt.ylabel("flow, in cubic meters per second")
@@ -384,9 +432,11 @@ def check_output(idx, test):
     obsvals = np.genfromtxt(fpth, names=True, delimiter=",")
 
     diff = obsvals["REACH14"] - answer["STAGE0000000014"]
-    print (diff)
-    print (diff.max(), diff.min())
-    assert np.allclose(diff, 0., atol=0.0035), f"Max diff with sfr is {diff.min(), diff.max()}"
+    print(diff)
+    print(diff.max(), diff.min())
+    assert np.allclose(
+        diff, 0.0, atol=0.0035
+    ), f"Max diff with sfr is {diff.min(), diff.max()}"
 
     # read the binary grid file
     fpth = os.path.join(test.workspace, f"{name}.disl.grb")
@@ -409,16 +459,20 @@ def check_output(idx, test):
 
     # check budget terms
     for itime in range(len(flowja)):
-        print (f"evaluating timestep {itime}")
+        print(f"evaluating timestep {itime}")
 
         fja = flowja[itime].flatten()
         qresidual = fja[ia[:-1]]
         atol = 0.03
         for n in range(grb.nodes):
-            passfail = 'FAIL' if abs(qresidual[n]) > atol else ''
-            print(f"residual for cell {n + 1} is {qresidual[n]} "
-                  f"in position {ia[n] + 1} {passfail}")
-        assert np.allclose(qresidual, 0., atol=atol), f"residual in flowja diagonal is not zero"
+            passfail = "FAIL" if abs(qresidual[n]) > atol else ""
+            print(
+                f"residual for cell {n + 1} is {qresidual[n]} "
+                f"in position {ia[n] + 1} {passfail}"
+            )
+        assert np.allclose(
+            qresidual, 0.0, atol=atol
+        ), f"residual in flowja diagonal is not zero"
 
     return
 

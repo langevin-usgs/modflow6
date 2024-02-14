@@ -17,6 +17,7 @@ import os
 import flopy
 import numpy as np
 import pytest
+
 from framework import TestFramework
 
 cases = [
@@ -27,7 +28,7 @@ cases = [
 inflow_location = ["middle", "left"]
 
 strt = [0.0, 1, 2, 1, 0, 1, 2, 1, 0.0]  # start with dry bowl
-#strt = [0.0, 1, 2, 2, 2, 2, 2, 1, 0.] # start bowl filled
+# strt = [0.0, 1, 2, 2, 2, 2, 2, 1, 0.] # start bowl filled
 reach_bottom = [0.0, 1, 2, 1, 0, 1, 2, 1, 0.0]
 
 
@@ -58,8 +59,8 @@ def build_models(idx, test):
     # surface water model
     swfname = f"{name}_model"
     swf = flopy.mf6.ModflowSwf(
-        sim, 
-        modelname=swfname, 
+        sim,
+        modelname=swfname,
         save_flows=True,
     )
 
@@ -127,9 +128,9 @@ def build_models(idx, test):
         "digits": 10,
     }
 
-    idcxs = 0 # use cross section 0
+    idcxs = 0  # use cross section 0
     width = 1.0
-    slope = 1. / dx
+    slope = 1.0 / dx
     rough = 0.035
     spd = [((nreach - 1,), idcxs, width, slope, rough)]
     if inflow_location[idx] == "middle":
@@ -210,7 +211,7 @@ def check_output(idx, test):
     atol = 1.0e-6
     # This isn't working right now because the obs file is missing an E
     # when the numbers are very small.
-    #if inflow_location[sim.idxsim] == "middle":
+    # if inflow_location[sim.idxsim] == "middle":
     #    assert np.allclose(diff, 0., atol=atol), f"{diff}"
 
     # read binary stage file

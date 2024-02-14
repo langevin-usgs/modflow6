@@ -14,36 +14,60 @@ test the SWF DFW implementation.
 import os
 
 import flopy
-from cross_section_functions import qtodepth
 import numpy as np
 import pytest
+
+from cross_section_functions import qtodepth
 from framework import TestFramework
 
 cases = [f"swf-tod{i}" for i in range(20)]
 
 # cross section data
-xfraction = [0., 0., 1., 1.]
-height = [100., 0., 0., 100.]
-mannfraction = [1., 1., 1., 1.]
+xfraction = [0.0, 0.0, 1.0, 1.0]
+height = [100.0, 0.0, 0.0, 100.0]
+mannfraction = [1.0, 1.0, 1.0, 1.0]
 cxsdata = list(zip(xfraction, height, mannfraction))
 
 # answers from MCT paper for rectangular cross section simulation with varying slopes
-qmax_answer = [894.68, 879.10, 819.78, 669.53, 423.11,
-               873.19, 801.63, 669.53, 630.09, 505.99,
-               669.51, 669.53, 669.62, 675.69, 675.92,
-               669.65, 669.53, 669.15, 669.55, 668.43]
+qmax_answer = [
+    894.68,
+    879.10,
+    819.78,
+    669.53,
+    423.11,
+    873.19,
+    801.63,
+    669.53,
+    630.09,
+    505.99,
+    669.51,
+    669.53,
+    669.62,
+    675.69,
+    675.92,
+    669.65,
+    669.53,
+    669.15,
+    669.55,
+    668.43,
+]
 
-base_parameters = {"slope": 0.00025, "manning": 0.035, "dx": 2000., "dt": 1800}
+base_parameters = {
+    "slope": 0.00025,
+    "manning": 0.035,
+    "dx": 2000.0,
+    "dt": 1800,
+}
 slope_test = [0.002, 0.001, 0.0005, 0.00025, 0.0001]
 manning_test = [0.01, 0.02, 0.035, 0.04, 0.06]
-dx_test = [1000., 2000., 4000., 6000., 8000.]
-dt_test = [900., 1800., 3600., 5400., 7200.]
+dx_test = [1000.0, 2000.0, 4000.0, 6000.0, 8000.0]
+dt_test = [900.0, 1800.0, 3600.0, 5400.0, 7200.0]
 test_dict = {}
 params = [
-    ("slope", slope_test), 
-    ("manning", manning_test), 
-    ("dx", dx_test), 
-    ("dt", dt_test)
+    ("slope", slope_test),
+    ("manning", manning_test),
+    ("dx", dx_test),
+    ("dt", dt_test),
 ]
 itest = 0
 for param_name, param in params:
@@ -53,8 +77,9 @@ for param_name, param in params:
         test_dict[itest] = d
         itest += 1
 
+
 def get_inflow_hydrograph(Qbase, Qpeak, Tp, beta, t):
-    return Qbase + (Qpeak - Qbase) * (t / Tp * np.exp(1 - t / Tp) ) ** beta
+    return Qbase + (Qpeak - Qbase) * (t / Tp * np.exp(1 - t / Tp)) ** beta
 
 
 def build_models(idx, test):
@@ -68,29 +93,33 @@ def build_models(idx, test):
     sim_ws = test.workspace
     name = cases[idx]
     sim = flopy.mf6.MFSimulation(
-        sim_name=name, version="mf6", exe_name="mf6", sim_ws=sim_ws,
-        memory_print_option='all', print_input=True,
+        sim_name=name,
+        version="mf6",
+        exe_name="mf6",
+        sim_ws=sim_ws,
+        memory_print_option="all",
+        print_input=True,
     )
 
     # timing
-    #dt = 1800. # seconds
-    perlen = 345600.
+    # dt = 1800. # seconds
+    perlen = 345600.0
     total_time = perlen
     nstp = int(total_time / dt)
 
     # inflow hydrograph
     beta = 16
-    Qbase = 100 # m^3/s
-    Qpeak = 900 # m^3/s
-    Tp = 24 * 60 * 60 # seconds
+    Qbase = 100  # m^3/s
+    Qpeak = 900  # m^3/s
+    Tp = 24 * 60 * 60  # seconds
     times = np.arange(0, total_time + dt, dt)
     inflow_hydrograph = get_inflow_hydrograph(Qbase, Qpeak, Tp, beta, times)
 
-    #dx = 2000.
-    total_length = 50 * 2000.
+    # dx = 2000.
+    total_length = 50 * 2000.0
     nreach = int(total_length / dx)
     vertices = []
-    vertices = [[j, j * dx, 0., 0.] for j in range(nreach + 1)]
+    vertices = [[j, j * dx, 0.0, 0.0] for j in range(nreach + 1)]
     cell2d = []
     for j in range(nreach):
         cell2d.append([j, 0.5, 2, j, j + 1])
@@ -104,8 +133,8 @@ def build_models(idx, test):
         reach_bottom[n] = reach_bottom[n - 1] - dx * slope
 
     # depth0 needs to be calculated to give flow of 100.
-    initial_flow = 100.
-    width = 50.
+    initial_flow = 100.0
+    width = 50.0
     depth0 = qtodepth(
         np.array(xfraction) * width,
         np.array(height),
@@ -115,25 +144,26 @@ def build_models(idx, test):
     )
     stage0 = reach_bottom + depth0
 
-    tdis = flopy.mf6.ModflowTdis(sim, nper=1, perioddata=[(perlen, nstp, 1.0)], 
-                                 time_units="seconds")
-    
+    tdis = flopy.mf6.ModflowTdis(
+        sim, nper=1, perioddata=[(perlen, nstp, 1.0)], time_units="seconds"
+    )
+
     for routing_package in ["dfw", "mct"]:
 
         name = f"model_{routing_package}"
 
         if routing_package == "dfw":
             ims_dfw = flopy.mf6.ModflowIms(
-                sim, 
+                sim,
                 filename=f"{name}.ims",
                 outer_maximum=300,
                 outer_dvclose=0.001,
-                inner_dvclose=1.e-6,
+                inner_dvclose=1.0e-6,
                 linear_acceleration="BICGSTAB",
                 print_option="ALL",
-                relaxation_factor=0.
-                )
-            
+                relaxation_factor=0.0,
+            )
+
         elif routing_package == "mct":
             ems_mct = flopy.mf6.ModflowEms(
                 sim,
@@ -141,38 +171,35 @@ def build_models(idx, test):
             )
 
         swf = flopy.mf6.ModflowSwf(
-            sim, 
-            modelname=name, 
-            save_flows=True,
-            print_flows=True)
+            sim, modelname=name, save_flows=True, print_flows=True
+        )
 
-        if routing_package == "dfw":        
+        if routing_package == "dfw":
             sim.register_ims_package(ims_dfw, [name])
         elif routing_package == "mct":
             sim.register_ims_package(ems_mct, [name])
 
-
         disl = flopy.mf6.ModflowSwfdisl(
-            swf, 
+            swf,
             filename=f"{name}.disl",
-            nodes=nodes, 
+            nodes=nodes,
             nvert=nvert,
             reach_length=dx,
             reach_bottom=reach_bottom,
             toreach=None if routing_package == "dfw" else toreach,
-            idomain=1, 
-            vertices=vertices, 
+            idomain=1,
+            vertices=vertices,
             cell2d=cell2d,
         )
-    
+
         if routing_package == "dfw":
 
             dfw = flopy.mf6.ModflowSwfdfw(
-                swf, 
+                swf,
                 filename=f"{name}.dfw",
                 print_flows=True,
                 save_flows=True,
-                width=50., 
+                width=50.0,
                 manningsn=manning,
                 slope=slope,
                 idcxs=0,
@@ -185,8 +212,8 @@ def build_models(idx, test):
                 ],
                 "digits": 10,
             }
-            idcxs = 0 # first cross section
-            width = 50.
+            idcxs = 0  # first cross section
+            width = 50.0
             slope = slope
             rough = manning
             spd = [((nreach - 1,), idcxs, width, slope, rough)]
@@ -203,9 +230,7 @@ def build_models(idx, test):
             )
 
             ic = flopy.mf6.ModflowSwfic(
-                swf, 
-                filename=f"{name}.ic",
-                strt=stage0
+                swf, filename=f"{name}.ic", strt=stage0
             )
 
         elif routing_package == "mct":
@@ -218,16 +243,16 @@ def build_models(idx, test):
                 "digits": 10,
             }
             mct = flopy.mf6.ModflowSwfmct(
-                swf, 
+                swf,
                 filename=f"{name}.mct",
                 observations=routing_obs,
                 print_flows=True,
                 save_flows=True,
                 icalc_order=list(range(nodes)),
                 qoutflow0=inflow_hydrograph[0],
-                width=50.,
+                width=50.0,
                 manningsn=manning,
-                elevation=0.,
+                elevation=0.0,
                 slope=slope,
                 idcxs=0,
             )
@@ -238,7 +263,7 @@ def build_models(idx, test):
             npoints=4,
             packagedata=[(0, 4)],
             crosssectiondata=cxsdata,
-            filename=f"{name}.cxs"
+            filename=f"{name}.cxs",
         )
 
         if routing_package == "dfw":
@@ -247,8 +272,14 @@ def build_models(idx, test):
                 filename=f"{name}.oc",
                 budget_filerecord=f"{name}.bud",
                 stage_filerecord=f"{name}.stage",
-                saverecord=[("STAGE", "ALL"), ("BUDGET", "ALL"), ],
-                printrecord=[("STAGE", "ALL"),("BUDGET", "ALL"), ],
+                saverecord=[
+                    ("STAGE", "ALL"),
+                    ("BUDGET", "ALL"),
+                ],
+                printrecord=[
+                    ("STAGE", "ALL"),
+                    ("BUDGET", "ALL"),
+                ],
             )
         else:
             oc = flopy.mf6.ModflowSwfoc(
@@ -256,10 +287,15 @@ def build_models(idx, test):
                 filename=f"{name}.oc",
                 budget_filerecord=f"{name}.bud",
                 qoutflow_filerecord=f"{name}.qoutflow",
-                saverecord=[("QOUTFLOW", "ALL"), ("BUDGET", "ALL"), ],
-                printrecord=[("QOUTFLOW", "ALL"),("BUDGET", "ALL"), ],
+                saverecord=[
+                    ("QOUTFLOW", "ALL"),
+                    ("BUDGET", "ALL"),
+                ],
+                printrecord=[
+                    ("QOUTFLOW", "ALL"),
+                    ("BUDGET", "ALL"),
+                ],
             )
-
 
         flw = flopy.mf6.ModflowSwfflw(
             swf,
@@ -312,7 +348,7 @@ def make_plot(idx, test):
     ax = fig.add_subplot(1, 1, 1)
     ax.plot(qoutflow_dfw["time"], -qoutflow_dfw["OUTFLOW"], "k-", label="DFW")
     ax.plot(qoutflow_mct["time"], -qoutflow_mct["OUTFLOW"], "b-", label="MCT")
-    #ax.plot(times, inflow_hydrograph, "g-", label="Inflow")
+    # ax.plot(times, inflow_hydrograph, "g-", label="Inflow")
     plt.xlabel("time, in seconds")
     plt.ylabel("flow, in cms")
     plt.legend()
@@ -333,14 +369,13 @@ def check_output(idx, test):
     name = "model_dfw"
     fpth = os.path.join(test.workspace, f"{name}.zdg.obs.csv")
     obsvals = np.genfromtxt(fpth, names=True, delimiter=",")
-    qoutflow = -obsvals['OUTFLOW'] 
+    qoutflow = -obsvals["OUTFLOW"]
     qms = qoutflow.max()
     qma = qmax_answer[idx]
     d = abs(qms - qma)
     print(f"qout mf6 ({qms}) todini ({qma}); diff = {d}")
-    dtol = 20.
-    assert d < dtol, (f"qoutflow; diff {d} > dtol {dtol}."
-                      f"  {qms} /= {qma}")
+    dtol = 20.0
+    assert d < dtol, f"qoutflow; diff {d} > dtol {dtol}." f"  {qms} /= {qma}"
 
     # read the binary grid file
     fpth = os.path.join(test.workspace, f"{name}.disl.grb")
@@ -387,7 +422,7 @@ def check_output(idx, test):
     #         for ipos in range(ia[n] + 1, ia[n + 1]):
     #             j = ja[ipos]
     #             q = fja[ipos]
-    #             print(f"  {ipos=} {j=} {q=}")        
+    #             print(f"  {ipos=} {j=} {q=}")
 
     return
 

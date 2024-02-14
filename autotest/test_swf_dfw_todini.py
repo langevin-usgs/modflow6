@@ -16,6 +16,7 @@ import os
 import flopy
 import numpy as np
 import pytest
+
 from framework import TestFramework
 
 cases = [f"swf-dfwtod{a}" for a in ["a", "b", "c", "d", "e"]]
@@ -24,15 +25,16 @@ cases = [f"swf-dfwtod{a}" for a in ["a", "b", "c", "d", "e"]]
 qmax_answer = [894.68, 879.10, 819.78, 669.53, 423.11]
 slope_test = [0.002, 0.001, 0.0005, 0.00025, 0.0001]
 depth0 = [
-    1.335960088822219, 
+    1.335960088822219,
     1.6526425510917875,
     2.0466190530314066,
     2.53789174596335,
     3.3813983488855115,
 ]
 
+
 def get_inflow_hydrograph(Qbase, Qpeak, Tp, beta, t):
-    return Qbase + (Qpeak - Qbase) * (t / Tp * np.exp(1 - t / Tp) ) ** beta
+    return Qbase + (Qpeak - Qbase) * (t / Tp * np.exp(1 - t / Tp)) ** beta
 
 
 def build_models(idx, test):
@@ -40,44 +42,47 @@ def build_models(idx, test):
     sim_ws = test.workspace
     name = cases[idx]
     sim = flopy.mf6.MFSimulation(
-        sim_name=name, version="mf6", exe_name="mf6", sim_ws=sim_ws,
-        memory_print_option='all', print_input=True,
+        sim_name=name,
+        version="mf6",
+        exe_name="mf6",
+        sim_ws=sim_ws,
+        memory_print_option="all",
+        print_input=True,
     )
 
-    dt = 1800. # seconds
-    perlen = 345600.
+    dt = 1800.0  # seconds
+    perlen = 345600.0
     total_time = perlen
     nstp = int(total_time / dt)
 
     beta = 16
-    Qbase = 100 # m^3/s
-    Qpeak = 900 # m^3/s
-    Tp = 24 * 60 * 60 # seconds
+    Qbase = 100  # m^3/s
+    Qpeak = 900  # m^3/s
+    Tp = 24 * 60 * 60  # seconds
     times = np.arange(0, total_time + dt, dt)
     inflow_hydrograph = get_inflow_hydrograph(Qbase, Qpeak, Tp, beta, times)
 
-    tdis = flopy.mf6.ModflowTdis(sim, nper=1, perioddata=[(perlen, nstp, 1.0)], 
-                                 time_units="seconds")
+    tdis = flopy.mf6.ModflowTdis(
+        sim, nper=1, perioddata=[(perlen, nstp, 1.0)], time_units="seconds"
+    )
     ims = flopy.mf6.ModflowIms(
-        sim, 
+        sim,
         outer_maximum=300,
         outer_dvclose=0.001,
-        inner_dvclose=1.e-6,
+        inner_dvclose=1.0e-6,
         linear_acceleration="BICGSTAB",
         print_option="ALL",
-        relaxation_factor=0.
-        )
+        relaxation_factor=0.0,
+    )
     swf = flopy.mf6.ModflowSwf(
-        sim, 
-        modelname=name, 
-        save_flows=True,
-        print_flows=True)
+        sim, modelname=name, save_flows=True, print_flows=True
+    )
 
-    dx = 2000.
+    dx = 2000.0
     nreach = 50
     total_length = dx * nreach
     vertices = []
-    vertices = [[j, j * dx, 0., 0.] for j in range(nreach + 1)]
+    vertices = [[j, j * dx, 0.0, 0.0] for j in range(nreach + 1)]
     cell2d = []
     for j in range(nreach):
         cell2d.append([j, 0.5, 2, j, j + 1])
@@ -93,22 +98,22 @@ def build_models(idx, test):
     stage0 = elevation + depth0[idx]
 
     disl = flopy.mf6.ModflowSwfdisl(
-        swf, 
-        nodes=nodes, 
+        swf,
+        nodes=nodes,
         nvert=nvert,
         reach_length=dx,
-        reach_bottom = elevation,
-        #toreach=toreach,   # -1 gives 0 in one-based, which means outflow cell
-        idomain=1, 
-        vertices=vertices, 
+        reach_bottom=elevation,
+        # toreach=toreach,   # -1 gives 0 in one-based, which means outflow cell
+        idomain=1,
+        vertices=vertices,
         cell2d=cell2d,
     )
-    
+
     dfw = flopy.mf6.ModflowSwfdfw(
-        swf, 
+        swf,
         print_flows=True,
         save_flows=True,
-        width=50., 
+        width=50.0,
         manningsn=0.035,
         slope=slope_test[idx],
         idcxs=0,
@@ -123,8 +128,8 @@ def build_models(idx, test):
         "digits": 10,
     }
 
-    idcxs = -1 # no cross section
-    width = 50.
+    idcxs = -1  # no cross section
+    width = 50.0
     slope = slope_test[idx]
     rough = 0.035
     spd = [((nreach - 1,), idcxs, width, slope, rough)]
@@ -142,9 +147,9 @@ def build_models(idx, test):
 
     ic = flopy.mf6.ModflowSwfic(swf, strt=stage0)
 
-    xfraction = [0., 0., 1., 1.]
-    height = [100., 0., 0., 100.]
-    mannfraction = [1., 1., 1., 1.]
+    xfraction = [0.0, 0.0, 1.0, 1.0]
+    height = [100.0, 0.0, 0.0, 100.0]
+    mannfraction = [1.0, 1.0, 1.0, 1.0]
     cxsdata = list(zip(xfraction, height, mannfraction))
     cxs = flopy.mf6.ModflowSwfcxs(
         swf,
@@ -159,8 +164,14 @@ def build_models(idx, test):
         swf,
         budget_filerecord=f"{name}.bud",
         stage_filerecord=f"{name}.stage",
-        saverecord=[("STAGE", "ALL"), ("BUDGET", "ALL"), ],
-        printrecord=[("STAGE", "ALL"),("BUDGET", "ALL"), ],
+        saverecord=[
+            ("STAGE", "ALL"),
+            ("BUDGET", "ALL"),
+        ],
+        printrecord=[
+            ("STAGE", "ALL"),
+            ("BUDGET", "ALL"),
+        ],
     )
 
     # Create flw package with time series for inflow into reach 1
@@ -232,14 +243,16 @@ def check_output(idx, test):
     name = cases[idx]
     fpth = os.path.join(test.workspace, f"{name}.zdg.obs.csv")
     obsvals = np.genfromtxt(fpth, names=True, delimiter=",")
-    qoutflow = -obsvals['OUTFLOW'] 
+    qoutflow = -obsvals["OUTFLOW"]
     qms = qoutflow.max()
     qma = qmax_answer[idx]
     d = abs(qms - qma)
     print(f"Outflow max mf6 ({qms}) and reported ({qma}); diff = {d}")
     dtol = 0.4
-    assert d < dtol, (f"Sim and reported max outflow too different; diff {d} > dtol {dtol}."
-                      f"  {qms} /= {qma}")
+    assert d < dtol, (
+        f"Sim and reported max outflow too different; diff {d} > dtol {dtol}."
+        f"  {qms} /= {qma}"
+    )
 
     # read the binary grid file
     fpth = os.path.join(test.workspace, f"{name}.disl.grb")

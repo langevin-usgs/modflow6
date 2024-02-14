@@ -16,6 +16,7 @@ import os
 import flopy
 import numpy as np
 import pytest
+
 from framework import TestFramework
 
 cases = [f"swf-mct01{a}" for a in ["a", "b", "c", "d", "e"]]
@@ -24,8 +25,9 @@ cases = [f"swf-mct01{a}" for a in ["a", "b", "c", "d", "e"]]
 qmax_answer = [894.68, 879.10, 819.78, 669.53, 423.11]
 slope_test = [0.002, 0.001, 0.0005, 0.00025, 0.0001]
 
+
 def get_inflow_hydrograph(Qbase, Qpeak, Tp, beta, t):
-    return Qbase + (Qpeak - Qbase) * (t / Tp * np.exp(1 - t / Tp) ) ** beta
+    return Qbase + (Qpeak - Qbase) * (t / Tp * np.exp(1 - t / Tp)) ** beta
 
 
 def build_models(idx, test):
@@ -33,32 +35,36 @@ def build_models(idx, test):
     sim_ws = test.workspace
     name = cases[idx]
     sim = flopy.mf6.MFSimulation(
-        sim_name=name, version="mf6", exe_name="mf6", sim_ws=sim_ws,
-        memory_print_option='all',
+        sim_name=name,
+        version="mf6",
+        exe_name="mf6",
+        sim_ws=sim_ws,
+        memory_print_option="all",
     )
 
-    dt = 1800. # seconds
-    perlen = 345600.
+    dt = 1800.0  # seconds
+    perlen = 345600.0
     total_time = perlen
     nstp = int(total_time / dt)
 
     beta = 16
-    Qbase = 100 # m^3/s
-    Qpeak = 900 # m^3/s
-    Tp = 24 * 60 * 60 # seconds
+    Qbase = 100  # m^3/s
+    Qpeak = 900  # m^3/s
+    Tp = 24 * 60 * 60  # seconds
     times = np.arange(0, total_time + dt, dt)
     inflow_hydrograph = get_inflow_hydrograph(Qbase, Qpeak, Tp, beta, times)
 
-    tdis = flopy.mf6.ModflowTdis(sim, nper=1, perioddata=[(perlen, nstp, 1.0)], 
-                                 time_units="seconds")
+    tdis = flopy.mf6.ModflowTdis(
+        sim, nper=1, perioddata=[(perlen, nstp, 1.0)], time_units="seconds"
+    )
     ems = flopy.mf6.ModflowEms(sim)
     swf = flopy.mf6.ModflowSwf(sim, modelname=name, save_flows=True)
 
-    dx = 2000.
+    dx = 2000.0
     nreach = 50
     total_length = dx * nreach
     vertices = []
-    vertices = [[j, j * dx, 0., 0.] for j in range(nreach + 1)]
+    vertices = [[j, j * dx, 0.0, 0.0] for j in range(nreach + 1)]
     cell2d = []
     for j in range(nreach):
         cell2d.append([j, 0.5, 2, j, j + 1])
@@ -67,17 +73,17 @@ def build_models(idx, test):
     nvert = len(vertices)
 
     disl = flopy.mf6.ModflowSwfdisl(
-        swf, 
-        nodes=nodes, 
+        swf,
+        nodes=nodes,
         nvert=nvert,
         reach_length=dx,
-        reach_bottom=0.,
-        toreach=toreach,   # -1 gives 0 in one-based, which means outflow cell
-        idomain=1, 
-        vertices=vertices, 
+        reach_bottom=0.0,
+        toreach=toreach,  # -1 gives 0 in one-based, which means outflow cell
+        idomain=1,
+        vertices=vertices,
         cell2d=cell2d,
     )
-    
+
     # note: for specifying zero-based reach number, put reach number in tuple
     fname = f"{name}.mmr.obs.csv"
     mmr_obs = {
@@ -88,22 +94,22 @@ def build_models(idx, test):
     }
 
     mct = flopy.mf6.ModflowSwfmct(
-        swf, 
+        swf,
         observations=mmr_obs,
         print_flows=True,
         save_flows=True,
         icalc_order=list(range(nodes)),
         qoutflow0=inflow_hydrograph[0],
-        width=50.,
+        width=50.0,
         manningsn=0.035,
-        elevation=0.,
+        elevation=0.0,
         slope=slope_test[idx],
         idcxs=0,
     )
 
-    xfraction = [0., 0., 1., 1.]
-    height = [100., 0., 0., 100.]
-    mannfraction = [1., 1., 1., 1.]
+    xfraction = [0.0, 0.0, 1.0, 1.0]
+    height = [100.0, 0.0, 0.0, 100.0]
+    mannfraction = [1.0, 1.0, 1.0, 1.0]
     cxsdata = list(zip(xfraction, height, mannfraction))
     cxs = flopy.mf6.ModflowSwfcxs(
         swf,
@@ -118,8 +124,14 @@ def build_models(idx, test):
         swf,
         budget_filerecord=f"{name}.bud",
         qoutflow_filerecord=f"{name}.qoutflow",
-        saverecord=[("QOUTFLOW", "ALL"), ("BUDGET", "ALL"), ],
-        printrecord=[("QOUTFLOW", "LAST"),("BUDGET", "ALL"), ],
+        saverecord=[
+            ("QOUTFLOW", "ALL"),
+            ("BUDGET", "ALL"),
+        ],
+        printrecord=[
+            ("QOUTFLOW", "LAST"),
+            ("BUDGET", "ALL"),
+        ],
     )
 
     # Create flw package with time series input
@@ -148,13 +160,15 @@ def check_output(idx, test):
     name = cases[idx]
     fpth = os.path.join(test.workspace, f"{name}.mmr.obs.csv")
     obsvals = np.genfromtxt(fpth, names=True, delimiter=",")
-    qoutflow = -obsvals['OUTFLOW'] 
+    qoutflow = -obsvals["OUTFLOW"]
     qms = qoutflow.max()
     qma = qmax_answer[idx]
     d = abs(qms - qma)
     print(f"Outflow max mf6 ({qms}) and reported ({qma}); diff = {d}")
     dtol = 0.4
-    assert d < dtol, f"Sim and reported max outflow too different; diff {d} > dtol {dtol}."
+    assert (
+        d < dtol
+    ), f"Sim and reported max outflow too different; diff {d} > dtol {dtol}."
 
     # read the binary grid file
     fpth = os.path.join(test.workspace, f"{name}.disl.grb")
@@ -179,29 +193,31 @@ def check_output(idx, test):
 
     # check budget terms
     for itime in range(len(flowja)):
-        print (f"evaluating timestep {itime}")
+        print(f"evaluating timestep {itime}")
 
         fja = flowja[itime].flatten()
         for n in range(grb.nodes):
             ipos = ia[n]
             qresidual[n] = fja[ipos]
-        assert np.allclose(qresidual, 0.), "residual in flowja diagonal is not zero"
+        assert np.allclose(
+            qresidual, 0.0
+        ), "residual in flowja diagonal is not zero"
 
         for n in range(grb.nodes):
             qs = qstorage[itime].flatten()[n]
             if n + 1 in qflw[itime]["node"]:
-                idx, = np.where(qflw[itime]["node"] == n + 1)
+                (idx,) = np.where(qflw[itime]["node"] == n + 1)
                 idx = idx[0]
                 qf = qflw[itime].flatten()["q"][idx]
             else:
-                qf = 0.
+                qf = 0.0
             qe = qextoutflow[itime].flatten()[n]
             qdiag = fja[ia[n]]
             print(f"{n=} {qs=} {qf=} {qe=} {qdiag=}")
             for ipos in range(ia[n] + 1, ia[n + 1]):
                 j = ja[ipos]
                 q = fja[ipos]
-                print(f"  {ipos=} {j=} {q=}")        
+                print(f"  {ipos=} {j=} {q=}")
 
     return
 
