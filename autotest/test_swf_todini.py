@@ -361,7 +361,7 @@ def make_plot(idx, test):
 def check_output(idx, test):
     print("evaluating model...")
 
-    makeplot = True
+    makeplot = False
     if makeplot:
         make_plot(idx, test)
 

@@ -10,17 +10,19 @@ import flopy
 import numpy as np
 import pytest
 
+from conftest import project_root_path
 from framework import TestFramework
 
 cases = [
     "swf-dfw-loop",
 ]
 
-fpth = "./data/swr04/SWRSample04_Stage.csv"
+data_path = project_root_path / "autotest/data/swr04/"
+fpth = data_path / "SWRSample04_Stage.csv"
 answer = np.genfromtxt(fpth, names=True, delimiter=",")
 print(answer)
 
-fpth = "./data/swr04/SWRFlows.csv"
+fpth = data_path / "SWRFlows.csv"
 answer_flow = np.genfromtxt(fpth, names=True, delimiter=",")
 print(answer_flow)
 
