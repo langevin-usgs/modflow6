@@ -32,7 +32,7 @@ import numpy as np
 import pytest
 from framework import TestFramework
 
-cases = ["swf-disl01",]
+cases = ["swf-mmr01",]
 
 
 def build_models(idx, test):

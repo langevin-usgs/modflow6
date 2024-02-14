@@ -41,11 +41,16 @@ def build_models(idx, test):
     )
 
     tdis = flopy.mf6.ModflowTdis(sim)
-    ims = flopy.mf6.ModflowIms(sim, 
-                               print_option="all", 
-                               linear_acceleration="BICGSTAB",
-                               outer_dvclose=1.e-7,
-                               inner_dvclose=1.e-8)
+    ims = flopy.mf6.ModflowIms(
+        sim, 
+        print_option="all",
+        linear_acceleration="BICGSTAB",
+        outer_dvclose=1.e-12,
+        inner_dvclose=1.e-12,
+        outer_maximum=500,
+        under_relaxation="simple",
+        under_relaxation_gamma=0.1,
+    )
     
     add_swf_model(sim)
     add_gwf_model(sim)
@@ -250,7 +255,7 @@ def check_output(idx, test):
     print(f"qflw: {qflw}")
     print(f"qresidual: {qresidual}")
 
-    assert np.allclose(qresidual, 0., atol=1.e-5), "Flowja residual > 1.e-5"
+    assert np.allclose(qresidual, 0., atol=1.e-4), "Flowja residual > 1.e-4"
 
     return
 

@@ -196,26 +196,26 @@ def build_models(idx, test):
     return sim, None
 
 
-def make_plot(test):
+def make_plot(idx, test):
     print("making plots...")
     import matplotlib.pyplot as plt
 
     name = test.name
-    ws = test.simpath
+    ws = test.workspace
     mfsim = flopy.mf6.MFSimulation.load(sim_ws=ws)
     swf = mfsim.get_model(name)
 
-    fpth = os.path.join(test.workspace, f"{name}.zdg.obs.csv")
+    fpth = ws / f"{name}.zdg.obs.csv"
     simvals = np.genfromtxt(fpth, names=True, delimiter=",")
 
     fig = plt.figure(figsize=(10, 10))
     ax = fig.add_subplot(1, 1, 1)
     ax.plot(simvals["time"], -simvals["OUTFLOW"], "k-", label="mf6")
-    ax.plot((0, simvals["time"][-1]), 2 * [qmax_answer[sim.idxsim]], label="Todini")
+    ax.plot((0, simvals["time"][-1]), 2 * [qmax_answer[idx]], label="Todini")
     plt.xlabel("time, in seconds")
     plt.ylabel("flow, in cms")
     plt.legend()
-    fname = os.path.join(ws, f"{name}.{sim.idxsim}.obs.png")
+    fname = ws / f"{name}.{idx}.obs.png"
     plt.savefig(fname)
 
     return
@@ -226,7 +226,7 @@ def check_output(idx, test):
 
     makeplot = False
     if makeplot:
-        make_plot(test)
+        make_plot(idx, test)
 
     # read the observation output
     name = cases[idx]
@@ -261,32 +261,6 @@ def check_output(idx, test):
     qflw = budobj.get_data(text="FLW")
     qextoutflow = budobj.get_data(text="EXT-OUTFLOW")
     qresidual = np.zeros(grb.nodes)
-
-    # check budget terms
-    # for itime in range(len(flowja)):
-    #     print (f"evaluating timestep {itime}")
-
-    #     fja = flowja[itime].flatten()
-    #     for n in range(grb.nodes):
-    #         ipos = ia[n]
-    #         qresidual[n] = fja[ipos]
-    #     assert np.allclose(qresidual, 0.), "residual in flowja diagonal is not zero"
-
-    #     for n in range(grb.nodes):
-    #         qs = qstorage[itime].flatten()[n]
-    #         if n + 1 in qflw[itime]["node"]:
-    #             idx, = np.where(qflw[itime]["node"] == n + 1)
-    #             idx = idx[0]
-    #             qf = qflw[itime].flatten()["q"][idx]
-    #         else:
-    #             qf = 0.
-    #         qe = qextoutflow[itime].flatten()[n]
-    #         qdiag = fja[ia[n]]
-    #         print(f"{n=} {qs=} {qf=} {qe=} {qdiag=}")
-    #         for ipos in range(ia[n] + 1, ia[n + 1]):
-    #             j = ja[ipos]
-    #             q = fja[ipos]
-    #             print(f"  {ipos=} {j=} {q=}")        
 
     return
 

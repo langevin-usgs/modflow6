@@ -420,22 +420,6 @@ def check_output(idx, test):
                   f"in position {ia[n] + 1} {passfail}")
         assert np.allclose(qresidual, 0., atol=atol), f"residual in flowja diagonal is not zero"
 
-    #     for n in range(grb.nodes):
-    #         qs = qstorage[itime].flatten()[n]
-    #         if n + 1 in qflw[itime]["node"]:
-    #             idx, = np.where(qflw[itime]["node"] == n + 1)
-    #             idx = idx[0]
-    #             qf = qflw[itime].flatten()["q"][idx]
-    #         else:
-    #             qf = 0.
-    #         qe = qextoutflow[itime].flatten()[n]
-    #         qdiag = fja[ia[n]]
-    #         print(f"{n=} {qs=} {qf=} {qe=} {qdiag=}")
-    #         for ipos in range(ia[n] + 1, ia[n + 1]):
-    #             j = ja[ipos]
-    #             q = fja[ipos]
-    #             print(f"  {ipos=} {j=} {q=}")        
-
     return
 
 
