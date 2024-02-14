@@ -71,7 +71,7 @@ contains
     !
     ! -- check if ic is enabled
     if (inunit > 0) then
-      
+
       ! -- Print a message identifying the package.
       write (iout, fmtheader) input_mempath
 
@@ -189,7 +189,7 @@ contains
     ! -- Return
     return
   end subroutine source_griddata
-    
+
   !> @brief log griddata to list file
   !<
   subroutine log_griddata(this, found)
@@ -220,7 +220,5 @@ contains
     ! -- Return
     return
   end subroutine allocate_arrays
-
-
 
 end module SwfIcModule

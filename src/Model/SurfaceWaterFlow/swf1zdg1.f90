@@ -331,23 +331,23 @@ contains
       end if
 
       ! -- calculate terms and add to hcof and rhs
-      absdhdxsq = this%slope(i) ** DHALF
+      absdhdxsq = this%slope(i)**DHALF
       depth = this%xnew(node) - this%disl%reach_bottom(node)
 
       ! -- calculate unperturbed q
       cond = this%get_cond(i, depth, absdhdxsq, this%unitconv)
-      q = - cond * this%slope(i)
+      q = -cond * this%slope(i)
 
       ! -- calculate perturbed q
       cond = this%get_cond(i, depth + eps, absdhdxsq, this%unitconv)
-      qeps = - cond * this%slope(i)
+      qeps = -cond * this%slope(i)
 
       ! -- calculate derivative
       derv = (qeps - q) / eps
 
       ! -- add terms to hcof and rhs
       this%hcof(i) = derv
-      this%rhs(i) = - q + derv * this%xnew(node)
+      this%rhs(i) = -q + derv * this%xnew(node)
 
     end do
     !
@@ -358,7 +358,7 @@ contains
   !!
   !! Conductance normally has a dx term in the denominator
   !! but that is not included here, as the flow is calculated
-  !! using Q = C * slope.  The returned c value from this 
+  !! using Q = C * slope.  The returned c value from this
   !! function has dimensions of L3/T.
   !!
   !<
@@ -390,10 +390,10 @@ contains
     r = this%cxs%get_hydraulic_radius(idcxs, width, depth, area=a)
 
     ! todo: unit convert?
-    c = a * r ** DTWOTHIRDS / roughc / absdhdxsq
+    c = a * r**DTWOTHIRDS / roughc / absdhdxsq
 
   end function get_cond
-    
+
   !> @ brief Copy hcof and rhs terms into solution.
   !!
   !!  Add the hcof and rhs terms for the ZDG package to the

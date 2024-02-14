@@ -2,7 +2,7 @@
 !!
 !! This module solves one-dimensional flow routing using a linear Muskingum
 !! approach.
-!! 
+!!
 !<
 module SwfMctModule
 
@@ -95,7 +95,7 @@ module SwfMctModule
 
   end type SwfMctType
 
-  contains
+contains
 
   !> @brief create package
   !<
@@ -150,7 +150,7 @@ module SwfMctModule
 
     ! -- check if mct is enabled
     if (inunit > 0) then
-      
+
       ! -- Print a message identifying the package.
       write (iout, fmtheader) input_mempath
 
@@ -201,25 +201,40 @@ module SwfMctModule
     integer(I4B) :: n
     !
     ! -- user-provided input
-    call mem_allocate(this%icalc_order, this%dis%nodes, 'ICALC_ORDER', this%memoryPath)
-    call mem_allocate(this%qoutflow0, this%dis%nodes, 'QOUTFLOW0', this%memoryPath)
-    call mem_allocate(this%width, this%dis%nodes, 'WIDTH', this%memoryPath)
-    call mem_allocate(this%manningsn, this%dis%nodes, 'MANNINGSN', this%memoryPath)
-    call mem_allocate(this%elevation, this%dis%nodes, 'ELEVATION', this%memoryPath)
-    call mem_allocate(this%slope, this%dis%nodes, 'SLOPE', this%memoryPath)
-    call mem_allocate(this%idcxs, this%dis%nodes, 'IDCXS', this%memoryPath)
+    call mem_allocate(this%icalc_order, this%dis%nodes, &
+                      'ICALC_ORDER', this%memoryPath)
+    call mem_allocate(this%qoutflow0, this%dis%nodes, &
+                      'QOUTFLOW0', this%memoryPath)
+    call mem_allocate(this%width, this%dis%nodes, &
+                      'WIDTH', this%memoryPath)
+    call mem_allocate(this%manningsn, this%dis%nodes, &
+                      'MANNINGSN', this%memoryPath)
+    call mem_allocate(this%elevation, this%dis%nodes, &
+                      'ELEVATION', this%memoryPath)
+    call mem_allocate(this%slope, this%dis%nodes, &
+                      'SLOPE', this%memoryPath)
+    call mem_allocate(this%idcxs, this%dis%nodes, &
+                      'IDCXS', this%memoryPath)
 
     ! -- input arguments to calc_mct routine
-    call mem_allocate(this%qinflow_old, this%dis%nodes, 'QINFLOW_OLD', this%memoryPath)
-    call mem_allocate(this%qinflow, this%dis%nodes, 'QINFLOW', this%memoryPath)
-    call mem_allocate(this%qoutflow_old, this%dis%nodes, 'QOUTFLOW_OLD', this%memoryPath)
-    call mem_allocate(this%qoutflow, this%dis%nodes, 'QOUTFLOW', this%memoryPath)
-    call mem_allocate(this%cstar_old, this%dis%nodes, 'CSTAR_OLD', this%memoryPath)
-    call mem_allocate(this%dstar_old, this%dis%nodes, 'DSTAR_OLD', this%memoryPath)
+    call mem_allocate(this%qinflow_old, this%dis%nodes, &
+                      'QINFLOW_OLD', this%memoryPath)
+    call mem_allocate(this%qinflow, this%dis%nodes, &
+                      'QINFLOW', this%memoryPath)
+    call mem_allocate(this%qoutflow_old, this%dis%nodes, &
+                      'QOUTFLOW_OLD', this%memoryPath)
+    call mem_allocate(this%qoutflow, this%dis%nodes, &
+                      'QOUTFLOW', this%memoryPath)
+    call mem_allocate(this%cstar_old, this%dis%nodes, &
+                      'CSTAR_OLD', this%memoryPath)
+    call mem_allocate(this%dstar_old, this%dis%nodes, &
+                      'DSTAR_OLD', this%memoryPath)
 
     ! -- budgeting variables
-    call mem_allocate(this%qextoutflow, this%dis%nodes, 'QEXTOUTFLOW', this%memoryPath)
-    call mem_allocate(this%qsto, this%dis%nodes, 'QSTO', this%memoryPath)
+    call mem_allocate(this%qextoutflow, this%dis%nodes, &
+                      'QEXTOUTFLOW', this%memoryPath)
+    call mem_allocate(this%qsto, this%dis%nodes, &
+                      'QSTO', this%memoryPath)
 
     do n = 1, this%dis%nodes
 
@@ -230,7 +245,7 @@ module SwfMctModule
       this%elevation(n) = DZERO
       this%slope(n) = DZERO
       this%idcxs(n) = DZERO
-      
+
       this%qinflow_old(n) = DZERO
       this%qinflow(n) = DZERO
       this%qoutflow_old(n) = DZERO
@@ -246,7 +261,7 @@ module SwfMctModule
     ! -- Return
     return
   end subroutine allocate_arrays
-    
+
   !> @brief load data from IDM to package
   !<
   subroutine mct_load(this)
@@ -280,9 +295,12 @@ module SwfMctModule
       contiguous :: obs6_fnames
     !
     ! -- update defaults with idm sourced values
-    call mem_set_value(this%unitconv, 'UNITCONV', this%input_mempath, found%unitconv)
-    call mem_set_value(this%iprflow, 'IPRFLOW', this%input_mempath, found%iprflow)
-    call mem_set_value(this%ipakcb, 'IPAKCB', this%input_mempath, found%ipakcb)
+    call mem_set_value(this%unitconv, 'UNITCONV', &
+                       this%input_mempath, found%unitconv)
+    call mem_set_value(this%iprflow, 'IPRFLOW', &
+                       this%input_mempath, found%iprflow)
+    call mem_set_value(this%ipakcb, 'IPAKCB', &
+                       this%input_mempath, found%ipakcb)
     !
     ! -- save flows option active
     if (found%ipakcb) this%ipakcb = -1
@@ -377,13 +395,20 @@ module SwfMctModule
     if (this%dis%nodes < this%dis%nodesuser) map => this%dis%nodeuser
     !
     ! -- update defaults with idm sourced values
-    call mem_set_value(this%icalc_order, 'ICALC_ORDER', idmMemoryPath, map, found%icalc_order)
-    call mem_set_value(this%qoutflow0, 'QOUTFLOW0', idmMemoryPath, map, found%qoutflow0)
-    call mem_set_value(this%width, 'WIDTH', idmMemoryPath, map, found%width)
-    call mem_set_value(this%manningsn, 'MANNINGSN', idmMemoryPath, map, found%manningsn)
-    call mem_set_value(this%elevation, 'ELEVATION', idmMemoryPath, map, found%elevation)
-    call mem_set_value(this%slope, 'SLOPE', idmMemoryPath, map, found%slope)
-    call mem_set_value(this%idcxs, 'IDCXS', idmMemoryPath, map, found%idcxs)
+    call mem_set_value(this%icalc_order, 'ICALC_ORDER', &
+                       idmMemoryPath, map, found%icalc_order)
+    call mem_set_value(this%qoutflow0, 'QOUTFLOW0', &
+                       idmMemoryPath, map, found%qoutflow0)
+    call mem_set_value(this%width, 'WIDTH', &
+                       idmMemoryPath, map, found%width)
+    call mem_set_value(this%manningsn, 'MANNINGSN', &
+                       idmMemoryPath, map, found%manningsn)
+    call mem_set_value(this%elevation, 'ELEVATION', &
+                       idmMemoryPath, map, found%elevation)
+    call mem_set_value(this%slope, 'SLOPE', &
+                       idmMemoryPath, map, found%slope)
+    call mem_set_value(this%idcxs, 'IDCXS', &
+                       idmMemoryPath, map, found%idcxs)
     !
     ! -- ensure ICALC_ORDER was found
     if (.not. found%icalc_order) then
@@ -435,7 +460,7 @@ module SwfMctModule
     ! -- Return
     return
   end subroutine source_griddata
-    
+
   !> @brief log griddata to list file
   !<
   subroutine log_griddata(this, found)
@@ -582,7 +607,7 @@ module SwfMctModule
     real(DP), dimension(:), intent(in) :: rhs !< right-hand-side vector of boundary package inflows
     ! -- local
     integer(I4B) :: icalcmeth = 1 !< 0 is composite linear, 1 is by section, 2 is composite nonlinear
-   
+
     !call calc_muskingum(this%disl%toreach, this%icalc_order, this%qinflow_old, &
     !                    this%qoutflow_old, this%qinflow, this%qoutflow, &
     !                    this%c0, this%c1, this%c2, -rhs)
@@ -741,7 +766,7 @@ module SwfMctModule
       call this%dis%record_array(this%qextoutflow, this%iout, iprint, -ibinun, &
                                  budtxt(2), cdatafmp, nvaluesp, &
                                  nwidthp, editdesc, dinact)
-  
+
     end if
     !
     ! -- Return
@@ -885,7 +910,7 @@ module SwfMctModule
     ! -- Calculate the number of upstream reaches connected to each reach,
     !    which is then used in the subsequent section to initialize the
     !    flow conditions
-    allocate(nupreaches(this%dis%nodes))
+    allocate (nupreaches(this%dis%nodes))
     do n = 1, this%dis%nodes
       nupreaches(n) = 0
     end do
@@ -963,7 +988,7 @@ module SwfMctModule
       qin_new = qinflow(j) !+ qsource(j)
 
       !qout_new = c0(j) * qin_new + c1(j) * qinflow_old(j) + c2(j) * qoutflow_old(j)
-      
+
       ! -- If the cross section id is 0, then it is a hydraulically wide channel,
       !    and only width and rough are needed (not xfraction, height, and manfraction)
       id = idcxs(j)
@@ -988,11 +1013,11 @@ module SwfMctModule
                           width(j), rough(j), slope(j), unitconv, &
                           reach_length(j), delt, icalcmeth, &
                           qout_new, cstar_new, dstar_new)
-      
+
       qoutflow(j) = qout_new
       i = itoreach(j)
       if (i > 0) then
-          qinflow(i) = qinflow(i) + qout_new
+        qinflow(i) = qinflow(i) + qout_new
       end if
 
       cstar_old(j) = cstar_new
@@ -1034,9 +1059,9 @@ module SwfMctModule
 
     ! TODO: MAKE THIS MORE EFFICIENT
     ! calculate cstar_old and dstar_old
-    call calc_mct_parameters(qin_old, qout_old, cxs_xf, cxs_h, cxs_rf, & 
-                              width, rough, slope, unitconv, dx, dt, &
-                              icalcmeth, cstar_old, dstar_old, depth)
+    call calc_mct_parameters(qin_old, qout_old, cxs_xf, cxs_h, cxs_rf, &
+                             width, rough, slope, unitconv, dx, dt, &
+                             icalcmeth, cstar_old, dstar_old, depth)
 
     ! estimate qout_iter from known ins and outs
     qout_iter = qout_old + (qin_new - qin_old)
@@ -1045,7 +1070,7 @@ module SwfMctModule
     do kiter = 1, niter
 
       ! calculate cstar and dstar
-      call calc_mct_parameters(qin_new, qout_iter, cxs_xf, cxs_h, cxs_rf, & 
+      call calc_mct_parameters(qin_new, qout_iter, cxs_xf, cxs_h, cxs_rf, &
                                width, rough, slope, unitconv, dx, dt, &
                                icalcmeth, cstar_new, dstar_new, depth)
 
@@ -1099,7 +1124,7 @@ module SwfMctModule
     real(DP) :: celerity
     real(DP) :: wa
     real(DP) :: tw
-    
+
     ! flow average
     fa = DHALF * (qin + qout)
 
@@ -1184,9 +1209,9 @@ module SwfMctModule
     flow_plus = calc_qman(depth + deps, width, rough, slope, &
                           cxs_xf, cxs_h, cxs_rf, unitconv, icalcmeth)
     flow_minus = calc_qman(depth - deps, width, rough, slope, &
-                          cxs_xf, cxs_h, cxs_rf, unitconv, icalcmeth)
+                           cxs_xf, cxs_h, cxs_rf, unitconv, icalcmeth)
     celerity = (flow_plus - flow_minus) / deps / DTWO / top_width
-    
+
     return
   end function calc_celerity
 
@@ -1238,7 +1263,6 @@ module SwfMctModule
     return
   end subroutine mct_df_obs
 
-
   subroutine mctobsidprocessor(obsrv, dis, inunitobs, iout)
     ! -- dummy
     type(ObserveType), intent(inout) :: obsrv
@@ -1251,7 +1275,7 @@ module SwfMctModule
     !
     ! -- Initialize variables
     strng = obsrv%IDstring
-    read(strng, *) n
+    read (strng, *) n
     !
     if (n > 0) then
       obsrv%NodeNumber = n
@@ -1263,7 +1287,6 @@ module SwfMctModule
     !
     return
   end subroutine mctobsidprocessor
-
 
   !> @brief Save observations for the package
   !!

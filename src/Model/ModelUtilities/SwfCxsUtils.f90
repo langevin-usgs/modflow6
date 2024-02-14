@@ -52,13 +52,13 @@ contains
     if (icalcmeth == 1) then
       ! slower but robust bisection method
       depth = calc_depth_from_q_bisect(qrch, width, rough, slope, &
-                                      cxs_xf, cxs_h, cxs_rf, unitconv, &
-                                      icalcmeth)
+                                       cxs_xf, cxs_h, cxs_rf, unitconv, &
+                                       icalcmeth)
     else
       ! faster but less forgiving newton-raphson method
       depth = calc_depth_from_q_nr(qrch, width, rough, slope, &
-                                  cxs_xf, cxs_h, cxs_rf, unitconv, &
-                                  icalcmeth)
+                                   cxs_xf, cxs_h, cxs_rf, unitconv, &
+                                   icalcmeth)
     end if
     !
     ! -- return
@@ -215,7 +215,7 @@ contains
   !<
   function calc_qman(depth, width, rough, slope, &
                      cxs_xf, cxs_h, cxs_rf, unitconv, icalcmeth) result(qman)
-    
+
     ! -- dummy variables
     real(DP), intent(in) :: depth !< reach depth
     real(DP), intent(in) :: width !< reach width
@@ -229,20 +229,20 @@ contains
 
     ! return value
     real(DP) :: qman !< calculated mannings flow
-    
+
     ! -- local variables
     integer(I4B) :: linmeth
 
-    select case(icalcmeth)
-    case(0) ! composite linear
+    select case (icalcmeth)
+    case (0) ! composite linear
       linmeth = 0
       qman = calc_qman_composite(depth, width, rough, slope, &
                                  cxs_xf, cxs_h, cxs_rf, unitconv, &
                                  linmeth)
-    case(1) ! by section
+    case (1) ! by section
       qman = calc_qman_by_section(depth, width, rough, slope, &
                                   cxs_xf, cxs_h, cxs_rf, unitconv)
-    case(2) ! composite nonlinear
+    case (2) ! composite nonlinear
       linmeth = 1
       qman = calc_qman_composite(depth, width, rough, slope, &
                                  cxs_xf, cxs_h, cxs_rf, unitconv, &
@@ -256,7 +256,7 @@ contains
   function calc_qman_composite(depth, width, rough, slope, &
                                cxs_xf, cxs_h, cxs_rf, unitconv, &
                                linmeth) result(qman)
-    
+
     ! -- dummy variables
     real(DP), intent(in) :: depth !< reach depth
     real(DP), intent(in) :: width !< reach width
@@ -270,7 +270,7 @@ contains
 
     ! return value
     real(DP) :: qman !< calculated mannings flow
-    
+
     ! -- local variables
     integer(I4B) :: npts
     real(DP) :: sat
@@ -287,8 +287,10 @@ contains
     if (depth > DZERO) then
 
       npts = size(cxs_xf)
-      rough_composite = calc_composite_roughness(npts, depth, width, rough, slope, &
-                                                 cxs_xf, cxs_h, cxs_rf, linmeth)
+      rough_composite = calc_composite_roughness(npts, depth, width, &
+                                                 rough, slope, &
+                                                 cxs_xf, cxs_h, cxs_rf, &
+                                                 linmeth)
       wp = get_wetted_perimeter(npts, cxs_xf, cxs_h, width, depth)
       aw = get_cross_section_area(npts, cxs_xf, cxs_h, width, depth)
       if (wp > DZERO) then
@@ -321,7 +323,7 @@ contains
 
     ! return value
     real(DP) :: rc !< composite roughness
-    
+
     ! -- local variables
     integer(I4B) :: n
     real(DP) :: wp
@@ -336,11 +338,11 @@ contains
     end do
     !
     ! -- select method
-    select case(linmeth)
-    case(0) ! linear
+    select case (linmeth)
+    case (0) ! linear
       exp1 = DONE
       exp2 = DONE
-    case(1) ! nonlinear
+    case (1) ! nonlinear
       exp1 = 1.5D0
       exp2 = DTWO / DTHREE
     end select
@@ -356,11 +358,11 @@ contains
         wp = DZERO
         rc = DZERO
         do n = 1, npts - 1
-          rc = rc + (rough * cxs_rf(n)) ** exp1 * perimeters(n)
+          rc = rc + (rough * cxs_rf(n))**exp1 * perimeters(n)
           wp = wp + perimeters(n)
         end do
         if (wp > DZERO) then
-          rc = (rc / wp) ** exp2
+          rc = (rc / wp)**exp2
         else
           rc = rough
         end if
@@ -374,7 +376,7 @@ contains
 
   function calc_qman_by_section(depth, width, rough, slope, &
                                 cxs_xf, cxs_h, cxs_rf, unitconv) result(qman)
-    
+
     ! -- dummy variables
     real(DP), intent(in) :: depth !< reach depth
     real(DP), intent(in) :: width !< reach width
@@ -387,7 +389,7 @@ contains
 
     ! return value
     real(DP) :: qman !< calculated mannings flow
-    
+
     ! -- local variables
     integer(I4B) :: npts
     real(DP) :: sat
@@ -422,7 +424,7 @@ contains
                                     slope, &
                                     depth)
       else
-        
+
         ! hydraulically wide channel (only 1 point is defined)
         aw = width * depth
         wp = width

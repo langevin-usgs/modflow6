@@ -25,7 +25,7 @@ module SwfGwfExchangeModule
   use SwfModule, only: SwfModelType
   use MatrixBaseModule
   use TableModule, only: TableType, table_cr
-  
+
   private
   public :: swfgwf_cr
 
@@ -39,7 +39,7 @@ module SwfGwfExchangeModule
     character(len=LINELENGTH), pointer :: filename => null() !< name of the input file
     integer(I4B), pointer :: ipr_input => null() !< flag to print input
     integer(I4B), pointer :: ipr_flow => null() !< print flag for cell by cell flows
- 
+
     integer(I4B), pointer :: nexg => null() !< number of exchanges
     integer(I4B), dimension(:), pointer, contiguous :: nodem1 => null() !< node numbers in model 1
     integer(I4B), dimension(:), pointer, contiguous :: nodem2 => null() !< node numbers in model 2
@@ -87,7 +87,7 @@ module SwfGwfExchangeModule
 
   end type SwfGwfExchangeType
 
-  contains
+contains
 
   !> @ brief Create SWF GWF exchange
   !!
@@ -426,8 +426,10 @@ module SwfGwfExchangeModule
     type(ExgSwfgwfParamFoundType) :: found
     !
     ! -- update defaults with idm sourced values
-    call mem_set_value(this%ipr_input, 'IPR_INPUT', this%input_mempath, found%ipr_input)
-    call mem_set_value(this%ipr_flow, 'IPR_FLOW', this%input_mempath, found%ipr_flow)
+    call mem_set_value(this%ipr_input, 'IPR_INPUT', &
+                       this%input_mempath, found%ipr_input)
+    call mem_set_value(this%ipr_flow, 'IPR_FLOW', &
+                       this%input_mempath, found%ipr_flow)
     !
     write (iout, '(1x,a)') 'PROCESSING SWF-GWF EXCHANGE OPTIONS'
     !
@@ -456,7 +458,7 @@ module SwfGwfExchangeModule
     ! -- Return
     return
   end subroutine source_options
-  
+
   !> @brief Source dimension from input context
   !<
   subroutine source_dimensions(this, iout)
@@ -606,8 +608,8 @@ module SwfGwfExchangeModule
       if (this%ipr_input /= 0) then
         cellstr1 = this%cellstr(this%model1, cellidm1(:, iexg), iout)
         cellstr2 = this%cellstr(this%model2, cellidm2(:, iexg), iout)
-          write (iout, fmtexgdata) trim(cellstr1), trim(cellstr2), &
-            this%cond(iexg)
+        write (iout, fmtexgdata) trim(cellstr1), trim(cellstr2), &
+          this%cond(iexg)
       end if
       !
       ! -- Check to see if nodem1 is outside of active domain
@@ -736,7 +738,7 @@ module SwfGwfExchangeModule
     ! -- Return
     return
   end subroutine swf_gwf_add_to_flowja
-  
+
   !> @ brief Budget
   !!
   !! Accumulate budget terms
@@ -847,7 +849,6 @@ module SwfGwfExchangeModule
     ! -- Return
     return
   end subroutine swf_gwf_chd_bd
-
 
   !> @ brief Budget save
   !!
@@ -1161,9 +1162,7 @@ module SwfGwfExchangeModule
     return
   end function
 
-
 end module SwfGwfExchangeModule
-
 
 ! module SwfGwfExchangeModule
 

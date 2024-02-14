@@ -27,7 +27,7 @@ module SwfCxsModule
     real(DP), dimension(:), pointer, contiguous :: xfraction => null() !< cross-section relative x distance, of size npoints
     real(DP), dimension(:), pointer, contiguous :: height => null() !< cross-section heights, of size npoints
     real(DP), dimension(:), pointer, contiguous :: manfraction => null() !< cross-section roughness data, of size npoints
-    
+
     ! calculated from input
     integer(I4B), dimension(:), pointer, contiguous :: iacross => null() !< pointers to cross-section data for each section, of size nsections + 1
 
@@ -51,7 +51,7 @@ module SwfCxsModule
 
   end type SwfCxsType
 
-  contains
+contains
 
   !> @brief create package
   !<
@@ -93,7 +93,7 @@ module SwfCxsModule
 
     ! -- check if package is enabled
     if (inunit > 0) then
-      
+
       ! -- Print a message identifying the package.
       write (iout, fmtheader) input_mempath
 
@@ -102,16 +102,16 @@ module SwfCxsModule
 
       ! -- source dimensions
       call pobj%source_dimensions()
-      
+
       ! -- allocate arrays
       call pobj%allocate_arrays()
 
       ! -- source dimensions
       call pobj%source_packagedata()
-      
+
       ! -- source dimensions
       call pobj%source_crosssectiondata()
-      
+
     end if
 
     ! -- Return
@@ -264,12 +264,18 @@ module SwfCxsModule
     integer(I4B) :: n
     !
     ! -- arrays allocation
-    call mem_allocate(this%idcxs, this%nsections, 'IDCXS', this%memoryPath)
-    call mem_allocate(this%nxspoints, this%nsections, 'NXSPOINTS', this%memoryPath)
-    call mem_allocate(this%xfraction, this%npoints, 'XFRACTION', this%memoryPath)
-    call mem_allocate(this%height, this%npoints, 'HEIGHT', this%memoryPath)
-    call mem_allocate(this%manfraction, this%npoints, 'MANFRACTION', this%memoryPath)
-    call mem_allocate(this%iacross, this%nsections+1, 'IACROSS', this%memoryPath)
+    call mem_allocate(this%idcxs, this%nsections, &
+                      'IDCXS', this%memoryPath)
+    call mem_allocate(this%nxspoints, this%nsections, &
+                      'NXSPOINTS', this%memoryPath)
+    call mem_allocate(this%xfraction, this%npoints, &
+                      'XFRACTION', this%memoryPath)
+    call mem_allocate(this%height, this%npoints, &
+                      'HEIGHT', this%memoryPath)
+    call mem_allocate(this%manfraction, this%npoints, &
+                      'MANFRACTION', this%memoryPath)
+    call mem_allocate(this%iacross, this%nsections + 1, &
+                      'IACROSS', this%memoryPath)
 
     ! -- initialization
     do n = 1, this%nsections
@@ -288,7 +294,7 @@ module SwfCxsModule
     ! -- Return
     return
   end subroutine allocate_arrays
-    
+
   !> @brief Copy options from IDM into package
   !<
   subroutine source_packagedata(this)
@@ -396,19 +402,22 @@ module SwfCxsModule
     !
     ! -- ensure xfraction was found
     if (.not. found%xfraction) then
-      write (errmsg, '(a)') 'Error in CROSSSECTIONDATA block: xfraction not found.'
+      write (errmsg, '(a)') &
+        'Error in CROSSSECTIONDATA block: xfraction not found.'
       call store_error(errmsg)
     end if
     !
     ! -- ensure height was found
     if (.not. found%height) then
-      write (errmsg, '(a)') 'Error in CROSSSECTIONDATA block: HEIGHT not found.'
+      write (errmsg, '(a)') &
+        'Error in CROSSSECTIONDATA block: HEIGHT not found.'
       call store_error(errmsg)
     end if
     !
     ! -- ensure manfraction was found
     if (.not. found%manfraction) then
-      write (errmsg, '(a)') 'Error in CROSSSECTIONDATA block: MANFRACTION not found.'
+      write (errmsg, '(a)') &
+        'Error in CROSSSECTIONDATA block: MANFRACTION not found.'
       call store_error(errmsg)
     end if
     !

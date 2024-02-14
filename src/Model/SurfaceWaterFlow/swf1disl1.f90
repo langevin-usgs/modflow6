@@ -17,10 +17,10 @@ module SwfDislModule
   public :: disl_cr
   public :: SwfDislType
 
-  type, extends(DisBaseType) :: SwfDislType  
+  type, extends(DisBaseType) :: SwfDislType
     integer(I4B), pointer :: nvert => null() !< number of x,y vertices
     real(DP), pointer :: convlength => null() !< conversion factor for length
-    real(DP), pointer :: convtime => null() !< conversion factor for time  
+    real(DP), pointer :: convtime => null() !< conversion factor for time
     real(DP), dimension(:), pointer, contiguous :: reach_length => null() !< length of each reach
     real(DP), dimension(:), pointer, contiguous :: reach_bottom => null() !< reach bottom elevation
     integer(I4B), dimension(:), pointer, contiguous :: toreach => null() !< downstream reach index (nodes)
@@ -56,7 +56,7 @@ module SwfDislModule
     procedure :: nodeu_to_string
     procedure :: nodeu_from_string
 
-  end type SwfDislType 
+  end type SwfDislType
 
 contains
 
@@ -85,7 +85,7 @@ contains
     !
     ! -- set name of input file
     call mem_set_value(dis%input_fname, 'INPUT_FNAME', dis%input_mempath, &
-                        found_fname)
+                       found_fname)
     !
     ! -- If dis enabled
     if (inunit > 0) then
@@ -103,13 +103,13 @@ contains
     ! -- Return
     return
   end subroutine disl_cr
-  
+
   !> @brief Allocate scalar variables
   !<
   subroutine allocate_scalars(this, name_model, input_mempath)
     ! -- modules
     use MemoryManagerModule, only: mem_allocate
-    use ConstantsModule,   only: DONE
+    use ConstantsModule, only: DONE
     ! -- dummy
     class(SwfDislType) :: this
     character(len=*), intent(in) :: name_model
@@ -132,7 +132,7 @@ contains
     ! -- Return
     return
   end subroutine allocate_scalars
-    
+
   subroutine disl_load(this)
     ! -- dummy
     class(SwfDislType) :: this
@@ -179,14 +179,20 @@ contains
     idmMemoryPath = create_mem_path(this%name_model, 'DISL', idm_context)
     !
     ! -- update defaults with idm sourced values
-    call mem_set_value(this%lenuni, 'LENGTH_UNITS', idmMemoryPath, lenunits, &
-                        found%length_units)
-    call mem_set_value(this%convlength, 'CONVLENGTH', idmMemoryPath, found%length_convert)
-    call mem_set_value(this%convtime, 'CONVTIME', idmMemoryPath, found%time_convert)
-    call mem_set_value(this%nogrb, 'NOGRB', idmMemoryPath, found%nogrb)
-    call mem_set_value(this%xorigin, 'XORIGIN', idmMemoryPath, found%xorigin)
-    call mem_set_value(this%yorigin, 'YORIGIN', idmMemoryPath, found%yorigin)
-    call mem_set_value(this%angrot, 'ANGROT', idmMemoryPath, found%angrot)
+    call mem_set_value(this%lenuni, 'LENGTH_UNITS', &
+                       idmMemoryPath, lenunits, found%length_units)
+    call mem_set_value(this%convlength, 'CONVLENGTH', &
+                       idmMemoryPath, found%length_convert)
+    call mem_set_value(this%convtime, 'CONVTIME', &
+                       idmMemoryPath, found%time_convert)
+    call mem_set_value(this%nogrb, 'NOGRB', &
+                       idmMemoryPath, found%nogrb)
+    call mem_set_value(this%xorigin, 'XORIGIN', &
+                       idmMemoryPath, found%xorigin)
+    call mem_set_value(this%yorigin, 'YORIGIN', &
+                       idmMemoryPath, found%yorigin)
+    call mem_set_value(this%angrot, 'ANGROT', &
+                       idmMemoryPath, found%angrot)
     !
     ! -- log values to list file
     if (this%iout > 0) then
@@ -279,20 +285,27 @@ contains
       call store_warning( &
         'NVERT was not specified or was specified as zero.  The &
         &VERTICES and CELL2D blocks will not be read for the DISL6 &
-        &Package in model ' // trim(this%memoryPath) // '.')
+        &Package in model '//trim(this%memoryPath)//'.')
     end if
     !
     ! -- Allocate non-reduced vectors for disl
-    call mem_allocate(this%reach_length, this%nodesuser, 'REACH_LENGTH', this%memoryPath)
-    call mem_allocate(this%reach_bottom, this%nodesuser, 'REACH_BOTTOM', this%memoryPath)
-    call mem_allocate(this%toreach, this%nodesuser, 'TOREACH', this%memoryPath)
-    call mem_allocate(this%idomain, this%nodesuser, 'IDOMAIN', this%memoryPath)
+    call mem_allocate(this%reach_length, this%nodesuser, &
+                      'REACH_LENGTH', this%memoryPath)
+    call mem_allocate(this%reach_bottom, this%nodesuser, &
+                      'REACH_BOTTOM', this%memoryPath)
+    call mem_allocate(this%toreach, this%nodesuser, &
+                      'TOREACH', this%memoryPath)
+    call mem_allocate(this%idomain, this%nodesuser, &
+                      'IDOMAIN', this%memoryPath)
     !
     ! -- Allocate vertices array
     if (this%nvert > 0) then
-      call mem_allocate(this%vertices, 3, this%nvert, 'VERTICES', this%memoryPath)
-      call mem_allocate(this%fdc, this%nodesuser, 'FDC', this%memoryPath)
-      call mem_allocate(this%cellxyz, 3, this%nodesuser, 'CELLXYZ', this%memoryPath)
+      call mem_allocate(this%vertices, 3, this%nvert, &
+                        'VERTICES', this%memoryPath)
+      call mem_allocate(this%fdc, this%nodesuser, &
+                        'FDC', this%memoryPath)
+      call mem_allocate(this%cellxyz, 3, this%nodesuser, &
+                        'CELLXYZ', this%memoryPath)
     end if
     !
     ! -- initialize all cells to be active (idomain = 1)
@@ -301,7 +314,7 @@ contains
       this%reach_bottom(n) = DZERO
       this%toreach(n) = 0
       this%idomain(n) = 1
-    end do    
+    end do
     !
     ! -- Return
     return
@@ -441,7 +454,7 @@ contains
     ! -- Return
     return
   end subroutine source_vertices
-    
+
   !> @brief Copy cell2d information from input data context
   !! to model context
   !<
@@ -551,9 +564,9 @@ contains
   subroutine calculate_cellxyz(vertices, fdc, iavert, javert, cellxyz)
     ! -- dummy
     real(DP), dimension(:, :), intent(in) :: vertices !< 2d array of vertices with x, y, and z as columns
-    real(DP), dimension(:), intent(in) :: fdc  !< fractional distance to reach midpoint (normally 0.5)
-    integer(I4B), dimension(:), intent(in) :: iavert  !< csr mapping of vertices to cell reaches
-    integer(I4B), dimension(:), intent(in) :: javert  !< csr mapping of vertices to cell reaches
+    real(DP), dimension(:), intent(in) :: fdc !< fractional distance to reach midpoint (normally 0.5)
+    integer(I4B), dimension(:), intent(in) :: iavert !< csr mapping of vertices to cell reaches
+    integer(I4B), dimension(:), intent(in) :: javert !< csr mapping of vertices to cell reaches
     real(DP), dimension(:, :), intent(inout) :: cellxyz !< 2d array of reach midpoint with x, y, and z as columns
     ! -- local
     integer(I4B) :: nodes !< number of nodes
@@ -575,7 +588,7 @@ contains
       reach_length = DZERO
       do j = iavert(n), iavert(n + 1) - 2
         reach_length = reach_length + &
-                         calcdist(vertices, javert(j), javert(j + 1))
+                       calcdist(vertices, javert(j), javert(j + 1))
       end do
 
       ! find vertices that span midpoint
@@ -600,7 +613,7 @@ contains
       ! find x, y, z position of point on line
       do ixyz = 1, 3
         cellxyz(ixyz, n) = (DONE - fd) * vertices(ixyz, iv0) + &
-                        fd * vertices(ixyz, iv1)
+                           fd * vertices(ixyz, iv1)
       end do
 
     end do
@@ -611,30 +624,23 @@ contains
   subroutine grid_finalize(this)
     ! -- modules
     use SimModule, only: ustop, count_errors, store_error
-    use ConstantsModule,   only: LINELENGTH, DZERO, DONE
+    use ConstantsModule, only: LINELENGTH, DZERO, DONE
     ! -- dummy
     class(SwfDislType) :: this
     ! -- locals
     integer(I4B) :: node, noder, k
     ! -- formats
-    character(len=*), parameter :: fmtdz = &
-      "('ERROR. CELL (',i0,',',i0,') THICKNESS <= 0. ', " //             &
-      "'TOP, BOT: ',2(1pg24.15))"
-    character(len=*), parameter :: fmtnr = &
-      "(/1x, 'THE SPECIFIED IDOMAIN RESULTS IN A REDUCED NUMBER OF CELLS.'," // &
-      "/1x, 'NUMBER OF USER NODES: ',I7," // &
-      "/1X, 'NUMBER OF NODES IN SOLUTION: ', I7, //)"
     ! -- data
     !
     ! -- count active cells
     this%nodes = 0
     do k = 1, this%nodesuser
-      if(this%idomain(k) > 0) this%nodes = this%nodes + 1
-    enddo
+      if (this%idomain(k) > 0) this%nodes = this%nodes + 1
+    end do
     !
     ! -- Check to make sure nodes is a valid number
     if (this%nodes == 0) then
-      call store_error('ERROR.  MODEL DOES NOT HAVE ANY ACTIVE NODES.')
+      call store_error('MODEL DOES NOT HAVE ANY ACTIVE NODES.')
       call store_error('MAKE SURE IDOMAIN ARRAY HAS SOME VALUES GREATER &
         &THAN ZERO.')
       call this%parser%StoreErrorUnit()
@@ -644,7 +650,7 @@ contains
     if (count_errors() > 0) then
       call this%parser%StoreErrorUnit()
       call ustop()
-    endif
+    end if
     !
     ! -- Array size is now known, so allocate
     call this%allocate_arrays()
@@ -653,34 +659,34 @@ contains
     !    a negative number to indicate it is a pass-through cell, or
     !    a zero to indicate that the cell is excluded from the
     !    solution.
-    if(this%nodes < this%nodesuser) then
+    if (this%nodes < this%nodesuser) then
       node = 1
       noder = 1
       do k = 1, this%nodesuser
-        if(this%idomain(k) > 0) then
+        if (this%idomain(k) > 0) then
           this%nodereduced(node) = noder
           noder = noder + 1
-        elseif(this%idomain(k) < 0) then
+        elseif (this%idomain(k) < 0) then
           this%nodereduced(node) = -1
         else
           this%nodereduced(node) = 0
-        endif
+        end if
         node = node + 1
-      enddo
-    endif
+      end do
+    end if
     !
     ! -- allocate and fill nodeuser if a reduced grid
-    if(this%nodes < this%nodesuser) then
+    if (this%nodes < this%nodesuser) then
       node = 1
       noder = 1
       do k = 1, this%nodesuser
-        if(this%idomain(k) > 0) then
+        if (this%idomain(k) > 0) then
           this%nodeuser(noder) = node
           noder = noder + 1
-        endif
-          node = node + 1
-      enddo
-    endif
+        end if
+        node = node + 1
+      end do
+    end if
 
     ! -- Return
     return
@@ -697,21 +703,21 @@ contains
     call this%DisBaseType%allocate_arrays()
     !
     ! -- Allocate arrays
-    if(this%nodes < this%nodesuser) then
+    if (this%nodes < this%nodesuser) then
       call mem_allocate(this%nodeuser, this%nodes, 'NODEUSER', this%memoryPath)
-      call mem_allocate(this%nodereduced, this%nodesuser, 'NODEREDUCED',       &
+      call mem_allocate(this%nodereduced, this%nodesuser, 'NODEREDUCED', &
                         this%memoryPath)
     else
       call mem_allocate(this%nodeuser, 1, 'NODEUSER', this%memoryPath)
       call mem_allocate(this%nodereduced, 1, 'NODEREDUCED', this%memoryPath)
-    endif
+    end if
     !
     ! -- Initialize
     this%mshape(1) = this%nodesuser
     !
     ! -- Return
     return
-  end subroutine allocate_arrays  
+  end subroutine allocate_arrays
 
   subroutine create_connections(this)
     ! -- modules
@@ -722,10 +728,10 @@ contains
     !
     ! -- create and fill the connections object
     nrsize = 0
-    if(this%nodes < this%nodesuser) nrsize = this%nodes
+    if (this%nodes < this%nodesuser) nrsize = this%nodes
     !
     ! -- Allocate connections object
-    allocate(this%con)
+    allocate (this%con)
     !
     ! -- Create connectivity
     if (this%toreachConnectivity) then
@@ -739,7 +745,6 @@ contains
                                           this%javert, this%cellxyz, this%fdc, &
                                           this%nodereduced, this%nodeuser)
     end if
-
 
     this%nja = this%con%nja
     this%njas = this%con%njas
@@ -874,8 +879,8 @@ contains
   end subroutine write_grb
 
   !>
-  !! Return a nodenumber from the user specified node number with an 
-  !! option to perform a check.  This subroutine can be overridden by 
+  !! Return a nodenumber from the user specified node number with an
+  !! option to perform a check.  This subroutine can be overridden by
   !! child classes to perform mapping to a model node number
   !<
   function get_nodenumber_idx1(this, nodeu, icheck) result(nodenumber)
@@ -1022,7 +1027,6 @@ contains
     ! -- Return
     return
   end subroutine disl_da
-
 
   !> @brief Record a double precision array
   !!

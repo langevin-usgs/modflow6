@@ -2,7 +2,7 @@
 !!
 !! This module solves one-dimensional flow routing using a diffusive
 !! wave approach.
-!! 
+!!
 !<
 
 ! todo:
@@ -13,7 +13,7 @@
 !   Is slope input parameter needed?
 !   Parameterize the smoothing depth?
 !   test ATS
-!   
+!
 module SwfDfwModule
 
   use KindModule, only: DP, I4B, LGP
@@ -94,7 +94,7 @@ module SwfDfwModule
 
   end type SwfDfwType
 
-  contains
+contains
 
   !> @brief create package
   !<
@@ -152,7 +152,7 @@ module SwfDfwModule
 
     ! -- check if dfw is enabled
     if (inunit > 0) then
-      
+
       ! -- Print a message identifying the package.
       write (iout, fmtheader) input_mempath
 
@@ -207,11 +207,16 @@ module SwfDfwModule
     integer(I4B) :: n
     !
     ! -- user-provided input
-    call mem_allocate(this%width, this%dis%nodes, 'WIDTH', this%memoryPath)
-    call mem_allocate(this%manningsn, this%dis%nodes, 'MANNINGSN', this%memoryPath)
-    call mem_allocate(this%slope, this%dis%nodes, 'SLOPE', this%memoryPath)
-    call mem_allocate(this%idcxs, this%dis%nodes, 'IDCXS', this%memoryPath)
-    call mem_allocate(this%icelltype, this%dis%nodes, 'ICELLTYPE', this%memoryPath)
+    call mem_allocate(this%width, this%dis%nodes, &
+                      'WIDTH', this%memoryPath)
+    call mem_allocate(this%manningsn, this%dis%nodes, &
+                      'MANNINGSN', this%memoryPath)
+    call mem_allocate(this%slope, this%dis%nodes, &
+                      'SLOPE', this%memoryPath)
+    call mem_allocate(this%idcxs, this%dis%nodes, &
+                      'IDCXS', this%memoryPath)
+    call mem_allocate(this%icelltype, this%dis%nodes, &
+                      'ICELLTYPE', this%memoryPath)
 
     do n = 1, this%dis%nodes
       this%width(n) = DZERO
@@ -224,7 +229,7 @@ module SwfDfwModule
     ! -- Return
     return
   end subroutine allocate_arrays
-    
+
   !> @brief load data from IDM to package
   !<
   subroutine dfw_load(this)
@@ -258,18 +263,23 @@ module SwfDfwModule
       contiguous :: obs6_fnames
     !
     ! -- update defaults with idm sourced values
-    call mem_set_value(this%icentral, 'ICENTRAL', this%input_mempath, found%icentral)
-    call mem_set_value(this%lengthconv, 'LENGTHCONV', this%input_mempath, found%lengthconv)
-    call mem_set_value(this%timeconv, 'TIMECONV', this%input_mempath, found%timeconv)
-    call mem_set_value(this%iprflow, 'IPRFLOW', this%input_mempath, found%iprflow)
-    call mem_set_value(this%ipakcb, 'IPAKCB', this%input_mempath, found%ipakcb)
+    call mem_set_value(this%icentral, 'ICENTRAL', &
+                       this%input_mempath, found%icentral)
+    call mem_set_value(this%lengthconv, 'LENGTHCONV', &
+                       this%input_mempath, found%lengthconv)
+    call mem_set_value(this%timeconv, 'TIMECONV', &
+                       this%input_mempath, found%timeconv)
+    call mem_set_value(this%iprflow, 'IPRFLOW', &
+                       this%input_mempath, found%iprflow)
+    call mem_set_value(this%ipakcb, 'IPAKCB', &
+                       this%input_mempath, found%ipakcb)
     !
     ! -- save flows option active
     if (found%icentral) this%icentral = 1
     if (found%ipakcb) this%ipakcb = -1
     !
     ! -- calculate unit conversion
-    this%unitconv = this%lengthconv ** DONETHIRD
+    this%unitconv = this%lengthconv**DONETHIRD
     this%unitconv = this%unitconv * this%timeconv
     !
     ! -- check for obs6_filename
@@ -374,7 +384,8 @@ module SwfDfwModule
     !
     ! -- update defaults with idm sourced values
     call mem_set_value(this%width, 'WIDTH', idmMemoryPath, map, found%width)
-    call mem_set_value(this%manningsn, 'MANNINGSN', idmMemoryPath, map, found%manningsn)
+    call mem_set_value(this%manningsn, 'MANNINGSN', &
+                       idmMemoryPath, map, found%manningsn)
     call mem_set_value(this%slope, 'SLOPE', idmMemoryPath, map, found%slope)
     call mem_set_value(this%idcxs, 'IDCXS', idmMemoryPath, map, found%idcxs)
     !
@@ -404,7 +415,7 @@ module SwfDfwModule
     ! -- Return
     return
   end subroutine source_griddata
-    
+
   !> @brief log griddata to list file
   !<
   subroutine log_griddata(this, found)
@@ -550,13 +561,13 @@ module SwfDfwModule
         !
         ! -- Derivative calculation and fill of n terms
         qeps = this%qcalc(n, m, stage(n) + eps, stage(m))
-        derv = (qeps - qnm) / eps  
+        derv = (qeps - qnm) / eps
         call matrix_sln%add_value_pos(idxglo(idiag), derv)
         rhs(n) = rhs(n) + derv * stage(n)
         !
         ! -- Derivative calculation and fill of m terms
         qeps = this%qcalc(n, m, stage(n), stage(m) + eps)
-        derv = (qeps - qnm) / eps  
+        derv = (qeps - qnm) / eps
         call matrix_sln%add_value_pos(idxglo(ii), derv)
         rhs(n) = rhs(n) + derv * stage(m)
 
@@ -623,14 +634,14 @@ module SwfDfwModule
     real(DP) :: cm
     !
     ! we are using a harmonic conductance approach here; however
-    ! the SWR Process for MODFLOW-2005/NWT uses length-weighted 
+    ! the SWR Process for MODFLOW-2005/NWT uses length-weighted
     ! average areas and hydraulic radius instead.
     !
     denom = DHALF * this%disl%reach_length(n) + &
             DHALF * this%disl%reach_length(m)
     cond = DZERO
     if (denom > DZERO) then
-      absdhdxsqr = abs((stage_n - stage_m) / denom) ** DHALF
+      absdhdxsqr = abs((stage_n - stage_m) / denom)**DHALF
       if (absdhdxsqr == DZERO) then
         absdhdxsqr = 1.e-7
       end if
@@ -698,10 +709,10 @@ module SwfDfwModule
     r = this%cxs%get_hydraulic_radius(this%idcxs(n), width, depth, area=a)
 
     ! -- conductance from manning's equation
-    c = this%unitconv * a * r ** DTWOTHIRDS / roughc / absdhdx / dx
+    c = this%unitconv * a * r**DTWOTHIRDS / roughc / absdhdx / dx
 
   end function get_cond_n
-    
+
   !> @ brief Newton under relaxation
   !!
   !!  If stage is below the bottom, then pull it up a bit
@@ -768,7 +779,7 @@ module SwfDfwModule
         flowja(this%dis%con%isym(ipos)) = -qnm
       end do
     end do
-    
+
     !
     ! -- Return
     return
@@ -823,7 +834,7 @@ module SwfDfwModule
       !
       ! -- flowja
       call this%dis%record_connection_array(flowja, ibinun, this%iout)
-  
+
     end if
     !
     ! -- Return
@@ -932,7 +943,6 @@ module SwfDfwModule
     return
   end subroutine dfw_df_obs
 
-
   subroutine dfwobsidprocessor(obsrv, dis, inunitobs, iout)
     ! -- dummy
     type(ObserveType), intent(inout) :: obsrv
@@ -945,7 +955,7 @@ module SwfDfwModule
     !
     ! -- Initialize variables
     strng = obsrv%IDstring
-    read(strng, *) n
+    read (strng, *) n
     !
     if (n > 0) then
       obsrv%NodeNumber = n
@@ -957,7 +967,6 @@ module SwfDfwModule
     !
     return
   end subroutine dfwobsidprocessor
-
 
   !> @brief Save observations for the package
   !!

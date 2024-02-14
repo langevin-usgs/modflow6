@@ -10,7 +10,7 @@ module DislGeom
   type DislGeomType
     integer(I4B) :: nodesuser
     logical :: reduced
-    integer(I4B) :: nodes                                                        ! number of reduced nodes;
+    integer(I4B) :: nodes ! number of reduced nodes;
     real(DP), pointer, dimension(:) :: cellfdc => null()
     integer(I4B), pointer, dimension(:) :: iavert => null()
     integer(I4B), pointer, dimension(:) :: javert => null()
@@ -31,7 +31,7 @@ module DislGeom
     procedure :: vertccdist
   end type DislGeomType
 
-  contains
+contains
 
   subroutine init(this, nodesuser, nodes, cellfdc, iavert, javert, &
                   iavertcells, javertcells, vertices, cellcenters, &
@@ -63,11 +63,11 @@ module DislGeom
     this%centerverts => centerverts
     this%nodereduced => nodereduced
     this%nodeuser => nodeuser
-    if(nodes < nodesuser) then
+    if (nodes < nodesuser) then
       this%reduced = .true.
     else
       this%reduced = .false.
-    endif
+    end if
   end subroutine init
 
   subroutine cprops(this, cell1, cell2, hwva, cl1, cl2)
@@ -83,12 +83,13 @@ module DislGeom
     integer(I4B) :: shared_vert
     character(len=300) :: ermsg
     character(len=*), parameter :: fmtvert = &
-      "('ERROR. CELLS ', I0, ' AND ', i0, ' DO NOT SHARE A VERTEX ')"
+                          "('CELLS ', I0, ' AND ', i0, ' &
+                          &DO NOT SHARE A VERTEX ')"
 
     ! find shared vertex
     call this%shared_vertex(cell1, cell2, shared_vert)
     if (shared_vert == 0) then
-      write(ermsg, fmtvert) cell1, cell2
+      write (ermsg, fmtvert) cell1, cell2
       call store_error(ermsg)
       call ustop()
     end if
@@ -117,26 +118,27 @@ module DislGeom
     ! find shared vertex
     shared_vert = 0
     ! loop through all vertices in cell1
-    outer: do v = this%iavert(cell1), this%iavert(cell1+1) - 1
+    outer: do v = this%iavert(cell1), this%iavert(cell1 + 1) - 1
       ! loop through all cells that share vertex v
       test1 = this%javert(v)
       test3 = this%iavertcells(this%javert(v))
-      test4 = this%iavertcells(this%javert(v)+1)
-      do n = this%iavertcells(this%javert(v)), this%iavertcells(this%javert(v)+1) - 1
+      test4 = this%iavertcells(this%javert(v) + 1)
+      do n = this%iavertcells(this%javert(v)), &
+        this%iavertcells(this%javert(v) + 1) - 1
         ! if cell2 has shared vertex v
         test5 = this%javertcells(n)
         if (cell2 == this%javertcells(n)) then
-            ! save shared vertex and exit
-            shared_vert = this%javert(v)
-            exit outer
+          ! save shared vertex and exit
+          shared_vert = this%javert(v)
+          exit outer
         end if
       end do
     end do outer
     return
   end subroutine shared_vertex
 
-  subroutine connection_vector(this, cell1, cell2, nozee, xcomp,        &
-    ycomp, zcomp, conlen)
+  subroutine connection_vector(this, cell1, cell2, nozee, xcomp, &
+                               ycomp, zcomp, conlen)
     ! return the x y and z components of a unit vector that points
     ! from the center of this to the center of cell2, and the
     ! straight-line connection length
@@ -165,7 +167,7 @@ module DislGeom
       z1 = this%cellcenters(3, cell1)
       z2 = this%cellcenters(3, cell2)
     end if
-    call line_unit_vector(x1, y1, z1, x2, y2, z2, xcomp, ycomp, zcomp,       &
+    call line_unit_vector(x1, y1, z1, x2, y2, z2, xcomp, ycomp, zcomp, &
                           conlen)
     return
   end subroutine connection_vector
@@ -185,30 +187,30 @@ module DislGeom
     logical :: cellcenter, vertex
     character(len=300) :: ermsg
     character(len=*), parameter :: novert = &
-      "('ERROR. VERTEX ', I0, ' NOT FOUND IN NODE ', i0, '.')"
+                                   "('VERTEX ', I0, ' NOT IN NODE ', i0, '.')"
     character(len=*), parameter :: cellcent = &
-      "('ERROR. CELL CENTER NOT FOUND FOR NODE ', I0, '.')"
-
+                                   "('CELL CENTER NOT FOUND FOR &
+                                   &NODE ', I0, '.')"
 ! ------------------------------------------------------------------------------
     ! initialize
     j = this%iavert(nodenum)
     if (this%javert(j) == vertnum) then
       vertex = .true.
       if (this%containscenter(nodenum, this%javert(j), &
-        this%javert(j+1)) .eqv. .true.) then
+                              this%javert(j + 1)) .eqv. .true.) then
         cellcenter = .true.
         dist = this%vertccdist(nodenum, this%javert(j))
         return
       else
         cellcenter = .false.
-        dist = calcdist(this%vertices, this%javert(j), this%javert(j+1))
+        dist = calcdist(this%vertices, this%javert(j), this%javert(j + 1))
       end if
     else
       vertex = .false.
       if (this%containscenter(nodenum, this%javert(j), &
-        this%javert(j+1)) .eqv. .true.) then
+                              this%javert(j + 1)) .eqv. .true.) then
         cellcenter = .true.
-        dist = this%vertccdist(nodenum, this%javert(j+1))
+        dist = this%vertccdist(nodenum, this%javert(j + 1))
       else
         cellcenter = .false.
         dist = 0.0
@@ -216,14 +218,14 @@ module DislGeom
     end if
 
     ! loop through cell's vertices
-    loop: do j = this%iavert(nodenum)+1, this%iavert(nodenum+1) - 1
+    loop: do j = this%iavert(nodenum) + 1, this%iavert(nodenum + 1) - 1
       if (this%javert(j) == vertnum) then
         vertex = .true.
         if (cellcenter .eqv. .true.) then
           exit loop
         else
-          if (this%containscenter(nodenum, this%javert(j),  &
-            this%javert(j+1)) .eqv. .true.) then
+          if (this%containscenter(nodenum, this%javert(j), &
+                                  this%javert(j + 1)) .eqv. .true.) then
             cellcenter = .true.
             ! add the distance from this vertex to the cell center
             dist = dist + this%vertccdist(nodenum, this%javert(j))
@@ -231,11 +233,11 @@ module DislGeom
           else
             ! add the distance between this vertex and the next
             dist = dist + calcdist(this%vertices, this%javert(j), &
-              this%javert(j+1))
+                                   this%javert(j + 1))
           end if
         end if
       else if (this%containscenter(nodenum, this%javert(j), &
-        this%javert(j+1)) .eqv. .true.) then
+                                   this%javert(j + 1)) .eqv. .true.) then
         cellcenter = .true.
         if (vertex .eqv. .true.) then
           ! add the remaining distance from the current vertex to the cell center
@@ -243,21 +245,21 @@ module DislGeom
           exit loop
         else
           ! add the distance from the cell center to the next vertex
-          dist = dist + this%vertccdist(nodenum, this%javert(j+1))
+          dist = dist + this%vertccdist(nodenum, this%javert(j + 1))
         end if
       else if ((vertex .eqv. .true.) .or. (cellcenter .eqv. .true.)) then
         ! add the distance between this vertex and the next
         dist = dist + calcdist(this%vertices, this%javert(j), &
-          this%javert(j+1))
+                               this%javert(j + 1))
       end if
     end do loop
 
     if (vertex .eqv. .false.) then
-      write(ermsg, novert) vertnum, nodenum
+      write (ermsg, novert) vertnum, nodenum
       call store_error(ermsg)
       call ustop()
     else if (cellcenter .eqv. .false.) then
-      write(ermsg, cellcent) nodenum
+      write (ermsg, cellcent) nodenum
       call store_error(ermsg)
       call ustop()
     end if
@@ -291,9 +293,9 @@ module DislGeom
     else
       ! cell center is between two vertices
       if (((this%centerverts(1, nodenum) == vert1) .or. &
-        (this%centerverts(1, nodenum) == vert2)) .and. &
-        ((this%centerverts(2, nodenum) == vert1) .or. &
-        (this%centerverts(2, nodenum) == vert2))) then
+           (this%centerverts(1, nodenum) == vert2)) .and. &
+          ((this%centerverts(2, nodenum) == vert1) .or. &
+           (this%centerverts(2, nodenum) == vert2))) then
         l = .true.
       else
         l = .false.
@@ -381,8 +383,8 @@ module DislGeom
     return
   end function partialdist
 
-  subroutine line_unit_vector(x0, y0, z0, x1, y1, z1,                        &
-    xcomp, ycomp, zcomp, vmag)
+  subroutine line_unit_vector(x0, y0, z0, x1, y1, z1, &
+                              xcomp, ycomp, zcomp, vmag)
 ! ******************************************************************************
 ! line_unit_vector -- Calculate the vector components (xcomp, ycomp, and zcomp)
 !   for a line defined by two points, (x0, y0, z0), (x1, y1, z1). Also return
@@ -405,12 +407,11 @@ module DislGeom
     dx = x1 - x0
     dy = y1 - y0
     dz = z1 - z0
-    vmag = sqrt(dx ** 2 + dy ** 2 + dz ** 2)
+    vmag = sqrt(dx**2 + dy**2 + dz**2)
     xcomp = dx / vmag
     ycomp = dy / vmag
     zcomp = dz / vmag
     return
   end subroutine line_unit_vector
-
 
 end module DislGeom

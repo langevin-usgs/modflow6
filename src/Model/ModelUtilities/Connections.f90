@@ -997,7 +997,7 @@ contains
     call filljas(this%nodes, this%nja, this%ia, this%ja, this%isym, this%jas)
     !
     ! -- If reduced system, then need to build iausr and jausr, otherwise point
-    !    them to ia and ja.  
+    !    them to ia and ja.
     ! TODO: not handled yet for reduced system
     !this%iausr => this%ia
     !this%jausr => this%ja
@@ -1017,9 +1017,10 @@ contains
   !! and only unreduced disl grids are allowed at the moment
   !!
   !<
-  subroutine dislconnections_verts(this, name_model, nodes, nodesuser, nrsize, nvert,   &
-                             vertices, iavert, javert,  &
-                             cellxyz, cellfdc, nodereduced, nodeuser)
+  subroutine dislconnections_verts(this, name_model, nodes, nodesuser, &
+                                   nrsize, nvert, &
+                                   vertices, iavert, javert, &
+                                   cellxyz, cellfdc, nodereduced, nodeuser)
     ! -- modules
     use ConstantsModule, only: DHALF, DZERO, DTHREE, DTWO, DPI
     use SparseModule, only: sparsematrix
@@ -1059,21 +1060,21 @@ contains
     ! call geol%init(nodesuser, nodes, cellfdc, iavert, javert, iavertcells,     &
     !                javertcells, vertices, cellxyz, centerverts,          &
     !                nodereduced, nodeuser)
-                   
+
     ! -- Create a sparse matrix array with a row for each vertex.  The columns
     !    in the sparse matrix contains the cells that include that vertex.
     !    This array will be used to determine horizontal cell connectivity.
-    allocate(itemp(nvert))
+    allocate (itemp(nvert))
     do i = 1, nvert
       itemp(i) = 4
-    enddo
+    end do
     call vertcellspm%init(nvert, nodes, itemp)
-    deallocate(itemp)
+    deallocate (itemp)
     do j = 1, nodes
       do i = iavert(j), iavert(j + 1) - 1
         call vertcellspm%addconnection(javert(i), j, 1)
-      enddo
-    enddo
+      end do
+    end do
     call vertcellspm%sort()
     allocate (iavertcells(nvert + 1))
     allocate (javertcells(vertcellspm%nnz))
@@ -1089,8 +1090,8 @@ contains
     this%njas = (this%nja - this%nodes) / 2
     !
     ! -- cleanup memory
-    deallocate(iavertcells)
-    deallocate(javertcells)
+    deallocate (iavertcells)
+    deallocate (javertcells)
     !
     ! -- Allocate index arrays of size nja and symmetric arrays
     call this%allocate_arrays()
@@ -1426,8 +1427,8 @@ contains
 
   !> @brief Routine to make cell connections from vertices
   !<
-  subroutine vertexconnectl(nodes, nrsize, maxnnz, nodeuser, sparse,          &
-                            iavertcells, javertcells,            &
+  subroutine vertexconnectl(nodes, nrsize, maxnnz, nodeuser, sparse, &
+                            iavertcells, javertcells, &
                             nodereduced)
     ! -- modules
     use SparseModule, only: sparsematrix
@@ -1447,20 +1448,20 @@ contains
     integer(I4B) :: con
     !
     ! -- Allocate and fill the ia and ja arrays
-    allocate(rowmaxnnz(nodes))
+    allocate (rowmaxnnz(nodes))
     do i = 1, nodes
       rowmaxnnz(i) = maxnnz
-    enddo
+    end do
     call sparse%init(nodes, nodes, rowmaxnnz)
-    deallocate(rowmaxnnz)
+    deallocate (rowmaxnnz)
     do nr = 1, nodes
       !
       ! -- Process diagonal
       mr = nr
-      if(nrsize > 0) mr = nodereduced(mr)
-      if(mr <= 0) cycle
+      if (nrsize > 0) mr = nodereduced(mr)
+      if (mr <= 0) cycle
       call sparse%addconnection(mr, mr, 1)
-    enddo
+    end do
     !
     ! -- Go through each vertex and connect up all the cells that use
     !    this vertex in their definition.
@@ -1468,20 +1469,20 @@ contains
 
     do i = 1, nvert
       ! loop through cells that share the vertex
-      do k = iavertcells(i), iavertcells(i+1) - 2
+      do k = iavertcells(i), iavertcells(i + 1) - 2
         ! loop again through connected cells that share vertex
-        do con = k + 1, iavertcells(i+1) - 1
+        do con = k + 1, iavertcells(i + 1) - 1
           nr = javertcells(k)
-          if(nrsize > 0) nr = nodereduced(nr)
-          if(nr <= 0) cycle
+          if (nrsize > 0) nr = nodereduced(nr)
+          if (nr <= 0) cycle
           mr = javertcells(con)
-          if(nrsize > 0) mr = nodereduced(mr)
-          if(mr <= 0) cycle
+          if (nrsize > 0) mr = nodereduced(mr)
+          if (mr <= 0) cycle
           call sparse%addconnection(nr, mr, 1)
           call sparse%addconnection(mr, nr, 1)
-        enddo
-      enddo
-    enddo
+        end do
+      end do
+    end do
     !
     ! -- return
     return

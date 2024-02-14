@@ -2,7 +2,7 @@
 !!
 !! This module solves one-dimensional flow routing using a linear Muskingum
 !! approach.
-!! 
+!!
 !<
 module SwfMmrModule
 
@@ -25,7 +25,6 @@ module SwfMmrModule
   implicit none
   private
   public :: SwfMmrType, mmr_cr
-
 
   character(len=LENBUDTXT), dimension(2) :: budtxt = & !< text labels for budget terms
     &['         STORAGE', '     EXT-OUTFLOW']
@@ -57,7 +56,7 @@ module SwfMmrModule
     ! -- observation data
     integer(I4B), pointer :: inobspkg => null() !< unit number for obs package
     type(ObsType), pointer :: obs => null() !< observation package
-    
+
   contains
 
     procedure :: allocate_scalars
@@ -83,7 +82,7 @@ module SwfMmrModule
 
   end type SwfMmrType
 
-  contains
+contains
 
   !> @brief create package
   !<
@@ -136,7 +135,7 @@ module SwfMmrModule
 
     ! -- check if mmr is enabled
     if (inunit > 0) then
-      
+
       ! -- Print a message identifying the package.
       write (iout, fmtheader) input_mempath
 
@@ -183,23 +182,36 @@ module SwfMmrModule
     integer(I4B) :: n
     !
     ! -- user-provided input
-    call mem_allocate(this%iseg_order, this%dis%nodes, 'ISEG_ORDER', this%memoryPath)
-    call mem_allocate(this%qoutflow0, this%dis%nodes, 'QOUTFLOW0', this%memoryPath)
-    call mem_allocate(this%k_coef, this%dis%nodes, 'K_COEF', this%memoryPath)
-    call mem_allocate(this%x_coef, this%dis%nodes, 'X_COEF', this%memoryPath)
+    call mem_allocate(this%iseg_order, this%dis%nodes, &
+                      'ISEG_ORDER', this%memoryPath)
+    call mem_allocate(this%qoutflow0, this%dis%nodes, &
+                      'QOUTFLOW0', this%memoryPath)
+    call mem_allocate(this%k_coef, this%dis%nodes, &
+                      'K_COEF', this%memoryPath)
+    call mem_allocate(this%x_coef, this%dis%nodes, &
+                      'X_COEF', this%memoryPath)
 
     ! -- input arguments to calc_muskingum_mann routine
-    call mem_allocate(this%qinflow_old, this%dis%nodes, 'QINFLOW_OLD', this%memoryPath)
-    call mem_allocate(this%qinflow, this%dis%nodes, 'QINFLOW', this%memoryPath)
-    call mem_allocate(this%qoutflow_old, this%dis%nodes, 'QOUTFLOW_OLD', this%memoryPath)
-    call mem_allocate(this%qoutflow, this%dis%nodes, 'QOUTFLOW', this%memoryPath)
-    call mem_allocate(this%c0, this%dis%nodes, 'C0', this%memoryPath)
-    call mem_allocate(this%c1, this%dis%nodes, 'C1', this%memoryPath)
-    call mem_allocate(this%c2, this%dis%nodes, 'C2', this%memoryPath)
+    call mem_allocate(this%qinflow_old, this%dis%nodes, &
+                      'QINFLOW_OLD', this%memoryPath)
+    call mem_allocate(this%qinflow, this%dis%nodes, &
+                      'QINFLOW', this%memoryPath)
+    call mem_allocate(this%qoutflow_old, this%dis%nodes, &
+                      'QOUTFLOW_OLD', this%memoryPath)
+    call mem_allocate(this%qoutflow, this%dis%nodes, &
+                      'QOUTFLOW', this%memoryPath)
+    call mem_allocate(this%c0, this%dis%nodes, &
+                      'C0', this%memoryPath)
+    call mem_allocate(this%c1, this%dis%nodes, &
+                      'C1', this%memoryPath)
+    call mem_allocate(this%c2, this%dis%nodes, &
+                      'C2', this%memoryPath)
 
     ! -- budgeting variables
-    call mem_allocate(this%qextoutflow, this%dis%nodes, 'QEXTOUTFLOW', this%memoryPath)
-    call mem_allocate(this%qsto, this%dis%nodes, 'QSTO', this%memoryPath)
+    call mem_allocate(this%qextoutflow, this%dis%nodes, &
+                      'QEXTOUTFLOW', this%memoryPath)
+    call mem_allocate(this%qsto, this%dis%nodes, &
+                      'QSTO', this%memoryPath)
 
     do n = 1, this%dis%nodes
 
@@ -224,7 +236,7 @@ module SwfMmrModule
     ! -- Return
     return
   end subroutine allocate_arrays
-    
+
   !> @brief load data from IDM to package
   !<
   subroutine mmr_load(this)
@@ -314,7 +326,6 @@ module SwfMmrModule
                                   &to listing file whenever ICBCFL is not zero.'
     end if
 
-
     write (this%iout, '(1x,a,/)') 'End Setting MMR Options'
 
   end subroutine log_options
@@ -345,10 +356,14 @@ module SwfMmrModule
     if (this%dis%nodes < this%dis%nodesuser) map => this%dis%nodeuser
     !
     ! -- update defaults with idm sourced values
-    call mem_set_value(this%iseg_order, 'ISEG_ORDER', idmMemoryPath, map, found%iseg_order)
-    call mem_set_value(this%qoutflow0, 'QOUTFLOW0', idmMemoryPath, map, found%qoutflow0)
-    call mem_set_value(this%k_coef, 'K_COEF', idmMemoryPath, map, found%k_coef)
-    call mem_set_value(this%x_coef, 'X_COEF', idmMemoryPath, map, found%x_coef)
+    call mem_set_value(this%iseg_order, 'ISEG_ORDER', &
+                       idmMemoryPath, map, found%iseg_order)
+    call mem_set_value(this%qoutflow0, 'QOUTFLOW0', &
+                       idmMemoryPath, map, found%qoutflow0)
+    call mem_set_value(this%k_coef, 'K_COEF', &
+                       idmMemoryPath, map, found%k_coef)
+    call mem_set_value(this%x_coef, 'X_COEF', &
+                       idmMemoryPath, map, found%x_coef)
     !
     ! -- ensure ISEG_ORDER was found
     if (.not. found%iseg_order) then
@@ -382,7 +397,7 @@ module SwfMmrModule
     ! -- Return
     return
   end subroutine source_griddata
-    
+
   !> @brief log griddata to list file
   !<
   subroutine log_griddata(this, found)
@@ -615,7 +630,7 @@ module SwfMmrModule
       call this%dis%record_array(this%qextoutflow, this%iout, iprint, -ibinun, &
                                  budtxt(2), cdatafmp, nvaluesp, &
                                  nwidthp, editdesc, dinact)
-  
+
     end if
     !
     ! -- Return
@@ -742,7 +757,7 @@ module SwfMmrModule
     ! -- Calculate the number of upstream reaches connected to each reach,
     !    which is then used in the subsequent section to initialize the
     !    flow conditions
-    allocate(nupreaches(this%dis%nodes))
+    allocate (nupreaches(this%dis%nodes))
     do n = 1, this%dis%nodes
       nupreaches(n) = 0
     end do
@@ -775,7 +790,7 @@ module SwfMmrModule
     real(DP), dimension(:), intent(in) :: k_coef !< Muskingum K coefficient
     real(DP), dimension(:), intent(in) :: x_coef !< Muskingum K coefficient
     real(DP), dimension(:), intent(inout) :: c0 !< Muskingum coefficient on inflow_new
-    real(DP), dimension(:), intent(inout) :: c1 !< Muskingum coefficient on inflow_old 
+    real(DP), dimension(:), intent(inout) :: c1 !< Muskingum coefficient on inflow_old
     real(DP), dimension(:), intent(inout) :: c2 !< Muskingum coefficient on outflow_old
     ! -- local
     integer(I4B) :: n
@@ -851,7 +866,7 @@ module SwfMmrModule
       qoutflow(j) = qout
       i = itoreach(j)
       if (i > 0) then
-          qinflow(i) = qinflow(i) + qout
+        qinflow(i) = qinflow(i) + qout
       end if
     end do
 
@@ -877,7 +892,6 @@ module SwfMmrModule
     return
   end subroutine mmr_df_obs
 
-
   subroutine mmrobsidprocessor(obsrv, dis, inunitobs, iout)
     ! -- dummy
     type(ObserveType), intent(inout) :: obsrv
@@ -890,7 +904,7 @@ module SwfMmrModule
     !
     ! -- Initialize variables
     strng = obsrv%IDstring
-    read(strng, *) n
+    read (strng, *) n
     !
     if (n > 0) then
       obsrv%NodeNumber = n
@@ -902,7 +916,6 @@ module SwfMmrModule
     !
     return
   end subroutine mmrobsidprocessor
-
 
   !> @brief Save observations for the package
   !!

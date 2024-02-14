@@ -35,7 +35,7 @@
 !!   SWF-SWF Exchange
 !!   SWF-SWF Exchange in parallel
 !!   Create QGW package for leakage into or out of groundwater
-!! 
+!!
 !<
 module SwfModule
 
@@ -155,7 +155,7 @@ module SwfModule
   ! -- size of supported model package arrays
   integer(I4B), parameter :: NIUNIT_SWF = SWF_NBASEPKG + SWF_NMULTIPKG
 
-  contains
+contains
 
   !> @brief Create a new stream network flow model object
   !!
@@ -413,7 +413,7 @@ module SwfModule
 
     ! -- need temporary integer variable to pass to dis_ar
     ! -- TODO: this should be generalized so dis_ar doesn't have to have it
-    allocate(itemp(this%dis%nodes))
+    allocate (itemp(this%dis%nodes))
     !
     ! -- Call dis_ar to write binary grid file
     call this%dis%dis_ar(itemp)
@@ -422,7 +422,7 @@ module SwfModule
     if (this%inmct > 0) call this%mct%mct_ar()
     if (this%insto > 0) call this%sto%sto_ar(this%dis, this%ibound)
     if (this%inobs > 0) call this%obs%swf_obs_ar(this%ic, this%x, this%flowja)
-    deallocate(itemp)
+    deallocate (itemp)
     !
     ! -- set up output control
     if (this%indfw > 0) then

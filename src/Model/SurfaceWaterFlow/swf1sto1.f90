@@ -315,7 +315,7 @@ contains
       idiag = this%dis%con%ia(n)
       call matrix_sln%add_value_pos(idxglo(idiag), -derv)
       rhs(n) = rhs(n) + qsto - derv * stage_new(n)
-      
+
     end do
     !
     ! -- Return
