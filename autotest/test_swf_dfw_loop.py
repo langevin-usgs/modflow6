@@ -18,11 +18,11 @@ cases = [
 ]
 
 data_path = project_root_path / "autotest/data/swr04/"
-fpth = data_path / "SWRSample04_Stage.csv"
+fpth = data_path / "SWRSample04_Stage.csv.cmp"
 answer = np.genfromtxt(fpth, names=True, delimiter=",")
 print(answer)
 
-fpth = data_path / "SWRFlows.csv"
+fpth = data_path / "SWRFlows.csv.cmp"
 answer_flow = np.genfromtxt(fpth, names=True, delimiter=",")
 print(answer_flow)
 

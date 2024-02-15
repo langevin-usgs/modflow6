@@ -186,11 +186,11 @@ def make_plot(test, mfsim):
     print("making plots...")
     import matplotlib.pyplot as plt
 
-    hecras = data_path / "hecras0125.csv"
+    hecras = data_path / "hecras0125.csv.cmp"
     df_hecras = pd.read_csv(hecras, index_col=False)
     print(df_hecras)
 
-    swrdata = data_path / "mfswr0125.csv"
+    swrdata = data_path / "mfswr0125.csv.cmp"
     df_mfswr = pd.read_csv(swrdata, index_col=False)
     df_mfswr = df_mfswr.loc[df_mfswr["RCHGRP"] == 21]
     df_mfswr = df_mfswr.loc[df_mfswr["TOTTIME"] > 86400]
@@ -297,7 +297,7 @@ def check_output(idx, test):
     qresidual = np.zeros(grb.nodes)
 
     # compare the mf6 swr outflow to the mf2005 swr outflow
-    swrdata = data_path / "mfswr0125.csv"
+    swrdata = data_path / "mfswr0125.csv.cmp"
     df_mfswr = pd.read_csv(swrdata, index_col=False)
     df_mfswr = df_mfswr.loc[df_mfswr["RCHGRP"] == 21]
     df_mfswr = df_mfswr.loc[df_mfswr["TOTTIME"] >= 86400]
