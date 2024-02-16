@@ -219,7 +219,7 @@ def check_output(idx, test):
     mfsim = flopy.mf6.MFSimulation.load(sim_ws=ws)
 
     makeplot = False
-    if make_plot:
+    if makeplot:
         make_plot(test, mfsim)
 
     # read binary stage file
