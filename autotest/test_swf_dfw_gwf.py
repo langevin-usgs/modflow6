@@ -236,19 +236,19 @@ def check_output(idx, test):
     name = "swfmodel"
 
     # read the binary grid file
-    fpth = os.path.join(test.workspace, f"{name}.disl.grb")
+    fpth = test.workspace / f"{name}.disl.grb"
     grb = flopy.mf6.utils.MfGrdFile(fpth)
     ia = grb.ia
     ja = grb.ja
     assert ia.shape[0] == grb.nodes + 1, "ia in grb file is not correct size"
 
     # read stage file
-    fpth = os.path.join(test.workspace, f"{name}.stage")
+    fpth = test.workspace / f"{name}.stage"
     qobj = flopy.utils.HeadFile(fpth, precision="double", text="STAGE")
     stage = qobj.get_alldata()
 
     # read the budget file
-    fpth = os.path.join(test.workspace, f"{name}.bud")
+    fpth = test.workspace / f"{name}.bud"
     budobj = flopy.utils.binaryfile.CellBudgetFile(fpth)
     flowja = budobj.get_data(text="FLOW-JA-FACE")[0].flatten()
     qstorage = budobj.get_data(text="STORAGE")

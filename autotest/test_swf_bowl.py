@@ -205,7 +205,7 @@ def check_output(idx, test):
     swfname = "swf_model"
 
     # ensure outflow on left and right is the same
-    fpth = os.path.join(test.workspace, f"{swfname}.zdg.obs.csv")
+    fpth = test.workspace / f"{swfname}.zdg.obs.csv"
     obsvals = np.genfromtxt(fpth, names=True, delimiter=",")
     diff = obsvals["OUTFLOW1"] - obsvals["OUTFLOW9"]
     atol = 1.0e-6
@@ -215,7 +215,7 @@ def check_output(idx, test):
     #    assert np.allclose(diff, 0., atol=atol), f"{diff}"
 
     # read binary stage file
-    fpth = os.path.join(test.workspace, f"{swfname}.stage")
+    fpth = test.workspace / f"{swfname}.stage"
     sobj = flopy.utils.HeadFile(fpth, precision="double", text="STAGE")
     stage_all = sobj.get_alldata()
     for kstp, stage in enumerate(stage_all):

@@ -196,7 +196,7 @@ def make_plot(test, mfsim):
     df_mfswr = df_mfswr.loc[df_mfswr["TOTTIME"] > 86400]
     print(df_mfswr)
 
-    fpth = os.path.join(test.workspace, f"swfmodel.bud")
+    fpth = test.workspace / f"swfmodel.bud"
     budobj = flopy.utils.binaryfile.CellBudgetFile(fpth, precision="double")
     flowja = budobj.get_data(text="FLOW-JA-FACE")
     qstorage = budobj.get_data(text="STORAGE")
@@ -233,11 +233,11 @@ def make_plot(test, mfsim):
     plt.xlabel("time, in hours")
     plt.ylabel("flow, in meters cubed per second")
     plt.legend()
-    fname = os.path.join(test.workspace, "swfmodel.flow.png")
+    fname = test.workspace / "swfmodel.flow.png"
     plt.savefig(fname)
 
     # read and plot stages
-    fpth = os.path.join(test.workspace, "swfmodel.stage")
+    fpth = test.workspace / "swfmodel.stage"
     qobj = flopy.utils.HeadFile(fpth, precision="double", text="STAGE")
     stage = qobj.get_alldata()
 
@@ -256,7 +256,7 @@ def make_plot(test, mfsim):
     plt.xlabel("time, in hours")
     plt.ylabel("stage, in meters")
     plt.legend()
-    fname = os.path.join(test.workspace, "swfmodel.stage.png")
+    fname = test.workspace / "swfmodel.stage.png"
     plt.savefig(fname)
 
     return
@@ -276,19 +276,19 @@ def check_output(idx, test):
     name = "swfmodel"
 
     # read the binary grid file
-    fpth = os.path.join(test.workspace, f"{name}.disl.grb")
+    fpth = test.workspace / f"{name}.disl.grb"
     grb = flopy.mf6.utils.MfGrdFile(fpth)
     ia = grb.ia
     ja = grb.ja
     assert ia.shape[0] == grb.nodes + 1, "ia in grb file is not correct size"
 
     # check to make sure stage file can be read
-    fpth = os.path.join(test.workspace, f"{name}.stage")
+    fpth = test.workspace / f"{name}.stage"
     qobj = flopy.utils.HeadFile(fpth, precision="double", text="STAGE")
     stage = qobj.get_alldata()
 
     # check to make sure budget file can be read
-    fpth = os.path.join(test.workspace, f"{name}.bud")
+    fpth = test.workspace / f"{name}.bud"
     budobj = flopy.utils.binaryfile.CellBudgetFile(fpth, precision="double")
     flowja = budobj.get_data(text="FLOW-JA-FACE")
     qstorage = budobj.get_data(text="STORAGE")

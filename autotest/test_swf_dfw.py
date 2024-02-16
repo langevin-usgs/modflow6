@@ -164,51 +164,25 @@ def check_output(idx, test):
     name = cases[idx]
 
     # read the binary grid file
-    fpth = os.path.join(test.workspace, f"{name}.disl.grb")
+    fpth = test.workspace / f"{name}.disl.grb"
     grb = flopy.mf6.utils.MfGrdFile(fpth)
     ia = grb.ia
     ja = grb.ja
     assert ia.shape[0] == grb.nodes + 1, "ia in grb file is not correct size"
 
     # read stage file
-    fpth = os.path.join(test.workspace, f"{name}.stage")
+    fpth = test.workspace / f"{name}.stage"
     qobj = flopy.utils.HeadFile(fpth, precision="double", text="STAGE")
     stage = qobj.get_alldata()
 
     # read the budget file
-    fpth = os.path.join(test.workspace, f"{name}.bud")
+    fpth = test.workspace / f"{name}.bud"
     budobj = flopy.utils.binaryfile.CellBudgetFile(fpth)
     flowja = budobj.get_data(text="FLOW-JA-FACE")
     qstorage = budobj.get_data(text="STORAGE")
     qflw = budobj.get_data(text="FLW")
     qchd = budobj.get_data(text="CHD")
     qresidual = np.zeros(grb.nodes)
-
-    # # check budget terms
-    # for itime in range(len(flowja)):
-    #     print (f"evaluating timestep {itime}")
-
-    #     fja = flowja[itime].flatten()
-    #     for n in range(grb.nodes):
-    #         ipos = ia[n]
-    #         qresidual[n] = fja[ipos]
-    #     assert np.allclose(qresidual, 0.), "residual in flowja diagonal is not zero"
-
-    #     for n in range(grb.nodes):
-    #         qs = qstorage[itime].flatten()[n]
-    #         if n + 1 in qflw[itime]["node"]:
-    #             idx, = np.where(qflw[itime]["node"] == n + 1)
-    #             idx = idx[0]
-    #             qf = qflw[itime].flatten()["q"][idx]
-    #         else:
-    #             qf = 0.
-    #         qe = qextoutflow[itime].flatten()[n]
-    #         qdiag = fja[ia[n]]
-    #         print(f"{n=} {qs=} {qf=} {qe=} {qdiag=}")
-    #         for ipos in range(ia[n] + 1, ia[n + 1]):
-    #             j = ja[ipos]
-    #             q = fja[ipos]
-    #             print(f"  {ipos=} {j=} {q=}")
 
     return
 

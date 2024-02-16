@@ -184,7 +184,7 @@ def make_plot(test, mfsim):
     print("making plots...")
     import matplotlib.pyplot as plt
 
-    fpth = os.path.join(test.workspace, f"swf_model.obs.csv")
+    fpth = test.workspace / f"swf_model.obs.csv"
     obsvals = np.genfromtxt(fpth, names=True, delimiter=",")
 
     fig = plt.figure(figsize=(10, 10))
@@ -205,7 +205,7 @@ def make_plot(test, mfsim):
     plt.xlabel("time, in hours")
     plt.ylabel("stage, in meters")
     plt.legend()
-    fname = os.path.join(test.workspace, "swf_model.obs.1.png")
+    fname = test.workspace / "swf_model.obs.1.png"
     plt.savefig(fname)
 
     return
@@ -223,7 +223,7 @@ def check_output(idx, test):
         make_plot(test, mfsim)
 
     # read binary stage file
-    fpth = os.path.join(test.workspace, f"{swfname}.stage")
+    fpth = test.workspace / f"{swfname}.stage"
     sobj = flopy.utils.HeadFile(fpth, precision="double", text="STAGE")
     stage_all = sobj.get_alldata()
     # for kstp, stage in enumerate(stage_all):

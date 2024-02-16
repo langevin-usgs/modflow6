@@ -356,7 +356,7 @@ def make_plot(test):
     mfsim = flopy.mf6.MFSimulation.load(sim_ws=ws)
     swf = mfsim.get_model(name)
 
-    fpth = os.path.join(test.workspace, f"{name}.obs.csv")
+    fpth = test.workspace / f"{name}.obs.csv"
     obsvals = np.genfromtxt(fpth, names=True, delimiter=",")
 
     fig = plt.figure(figsize=(10, 10))
@@ -381,7 +381,7 @@ def make_plot(test):
     plt.xlabel("time, in seconds")
     plt.ylabel("stage, in meters")
     plt.legend()
-    fname = os.path.join(ws, name + ".obs.1.png")
+    fname = ws / f"{name}.obs.1.png"
     plt.savefig(fname)
 
     fig = plt.figure(figsize=(10, 10))
@@ -415,7 +415,7 @@ def make_plot(test):
     plt.xlabel("time, in seconds")
     plt.ylabel("flow, in cubic meters per second")
     plt.legend()
-    fname = os.path.join(ws, name + ".obs.2.png")
+    fname = ws / f"{name}.obs.2.png"
     plt.savefig(fname)
 
     return
@@ -430,7 +430,7 @@ def check_output(idx, test):
 
     # read the observation output
     name = cases[idx]
-    fpth = os.path.join(test.workspace, f"{name}.obs.csv")
+    fpth = test.workspace / f"{name}.obs.csv"
     obsvals = np.genfromtxt(fpth, names=True, delimiter=",")
 
     diff = obsvals["REACH14"] - answer["STAGE0000000014"]
@@ -441,18 +441,18 @@ def check_output(idx, test):
     ), f"Max diff with sfr is {diff.min(), diff.max()}"
 
     # read the binary grid file
-    fpth = os.path.join(test.workspace, f"{name}.disl.grb")
+    fpth = test.workspace / f"{name}.disl.grb"
     grb = flopy.mf6.utils.MfGrdFile(fpth)
     ia = grb.ia
     assert ia.shape[0] == grb.nodes + 1, "ia in grb file is not correct size"
 
     # read stage file
-    fpth = os.path.join(test.workspace, f"{name}.stage")
+    fpth = test.workspace / f"{name}.stage"
     qobj = flopy.utils.HeadFile(fpth, precision="double", text="STAGE")
     stage = qobj.get_alldata()
 
     # read the budget file
-    fpth = os.path.join(test.workspace, f"{name}.bud")
+    fpth = test.workspace / f"{name}.bud"
     budobj = flopy.utils.binaryfile.CellBudgetFile(fpth)
     flowja = budobj.get_data(text="FLOW-JA-FACE")
     qstorage = budobj.get_data(text="STORAGE")
