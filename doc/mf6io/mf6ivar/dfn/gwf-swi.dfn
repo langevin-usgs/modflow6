@@ -1,0 +1,107 @@
+# --------------------- gwf swi options ---------------------
+
+block options
+name zeta_filerecord
+type record zeta fileout zetafile
+shape
+reader urword
+tagged true
+optional true
+longname
+description
+
+block options
+name zeta
+type keyword
+shape
+in_record true
+reader urword
+tagged true
+optional false
+longname zeta keyword
+description keyword to specify that record corresponds to zeta.
+
+block options
+name fileout
+type keyword
+shape
+in_record true
+reader urword
+tagged true
+optional false
+longname file keyword
+description keyword to specify that an output filename is expected next.
+
+block options
+name zetafile
+type string
+preserve_case true
+shape
+in_record true
+reader urword
+tagged false
+optional false
+longname file keyword
+description name of the binary output file to write zeta information.
+
+block options
+name tva6_filerecord
+type record tva6 filein tva6_filename
+reader urword
+tagged true
+optional true
+longname
+description
+
+block options
+name tva6
+type keyword
+in_record true
+reader urword
+tagged true
+optional false
+longname grid package component
+description keyword to specify that record corresponds to a time varying array input file.
+
+block options
+name filein
+type keyword
+in_record true
+reader urword
+tagged true
+optional false
+longname file keyword
+description keyword to specify that an input filename is expected next.
+
+block options
+name tva6_filename
+type string
+preserve_case true
+in_record true
+reader urword
+tagged false
+optional false
+longname file keyword
+description name of the time varying array input file.
+
+block options
+name saltwater_head
+type double precision
+reader urword
+optional true
+longname saltwater head
+description specified saltwater head value.  If not specified then the default is zero.
+mf6internal hsalt_user
+
+
+# --------------------- gwf swi griddata ---------------------
+
+block griddata
+name zetastrt
+type double precision
+shape (nodes)
+reader readarray
+layered true
+longname starting zeta
+description is the initial (starting) zeta surface---that is, interface elevation at the beginning of the GWF Model simulation.
+default_value 1.0
