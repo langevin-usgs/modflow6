@@ -1,0 +1,4 @@
+BEGIN GRIDDATA
+  ZETASTRT [LAYERED]
+    <zetastrt(nodes)> -- READARRAY
+END GRIDDATA
