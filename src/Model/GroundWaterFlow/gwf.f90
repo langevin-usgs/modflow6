@@ -513,7 +513,7 @@ contains
     ! -- swi
     if (this%inswi > 0) then
       call this%swi%swi_fc(kiter, this%xold, this%x, matrix_sln, &
-                           this%idxglo, this%rhs, this%npf)
+                           this%idxglo, this%rhs, this%npf, this%sto)
     end if
     do ip = 1, this%bndlist%Count()
       packobj => GetBndFromList(this%bndlist, ip)
@@ -557,7 +557,7 @@ contains
     if (this%inswi > 0) then
       if (inwt /= 0) then
         call this%swi%swi_fn(kiter, matrix_sln, this%idxglo, &
-                             this%rhs, this%x, this%npf)
+                             this%rhs, this%x, this%xold, this%npf, this%sto)
       end if
     end if
     !
@@ -788,7 +788,8 @@ contains
     if (this%incsub > 0) call this%csub%csub_cq(this%dis%nodes, this%x, &
                                                 this%xold, isuppress_output, &
                                                 this%flowja)
-    if (this%inswi > 0) call this%swi%swi_cq(this%flowja, this%x, this%xold)
+    if (this%inswi > 0) call this%swi%swi_cq(this%x, this%xold, this%flowja, &
+                                             this%npf, this%sto)
     !
     ! -- Go through packages and call cq routines.  cf() routines are called
     !    first to regenerate non-linear terms to be consistent with the final
