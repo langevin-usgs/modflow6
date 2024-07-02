@@ -9,6 +9,7 @@ module GwfSwiInputModule
   public gwf_swi_block_definitions
   public GwfSwiParamFoundType
   public gwf_swi_multi_package
+  public gwf_swi_subpackages
 
   type GwfSwiParamFoundType
     logical :: isaltwater = .false.
@@ -21,6 +22,12 @@ module GwfSwiInputModule
 
   logical :: gwf_swi_multi_package = .false.
 
+  character(len=16), parameter :: &
+    gwf_swi_subpackages(*) = &
+    [ &
+    '                ' &
+    ]
+
   type(InputParamDefinitionType), parameter :: &
     gwfswi_isaltwater = InputParamDefinitionType &
     ( &
@@ -31,6 +38,7 @@ module GwfSwiInputModule
     'ISALTWATER', & ! fortran variable
     'KEYWORD', & ! type
     '', & ! shape
+    'keyword to indicate saltwater model', & ! longname
     .false., & ! required
     .false., & ! multi-record
     .false., & ! preserve case
@@ -48,6 +56,7 @@ module GwfSwiInputModule
     'ZETA_FILERECORD', & ! fortran variable
     'RECORD ZETA FILEOUT ZETAFILE', & ! type
     '', & ! shape
+    '', & ! longname
     .false., & ! required
     .false., & ! multi-record
     .false., & ! preserve case
@@ -65,6 +74,7 @@ module GwfSwiInputModule
     'ZETA', & ! fortran variable
     'KEYWORD', & ! type
     '', & ! shape
+    'zeta keyword', & ! longname
     .true., & ! required
     .true., & ! multi-record
     .false., & ! preserve case
@@ -82,6 +92,7 @@ module GwfSwiInputModule
     'FILEOUT', & ! fortran variable
     'KEYWORD', & ! type
     '', & ! shape
+    'file keyword', & ! longname
     .true., & ! required
     .true., & ! multi-record
     .false., & ! preserve case
@@ -99,6 +110,7 @@ module GwfSwiInputModule
     'ZETAFILE', & ! fortran variable
     'STRING', & ! type
     '', & ! shape
+    'file keyword', & ! longname
     .true., & ! required
     .true., & ! multi-record
     .true., & ! preserve case
@@ -116,6 +128,7 @@ module GwfSwiInputModule
     'ZETASTRT', & ! fortran variable
     'DOUBLE1D', & ! type
     'NODES', & ! shape
+    'starting zeta', & ! longname
     .true., & ! required
     .false., & ! multi-record
     .false., & ! preserve case
@@ -146,6 +159,7 @@ module GwfSwiInputModule
     '', & ! fortran variable
     '', & ! type
     '', & ! shape
+    '', & ! longname
     .false., & ! required
     .false., & ! multi-record
     .false., & ! preserve case

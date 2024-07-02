@@ -513,7 +513,7 @@ contains
     ! -- swi
     if (this%inswi > 0) then
       call this%swi%swi_fc(kiter, this%xold, this%x, matrix_sln, &
-                           this%idxglo, this%rhs, this%npf, this%sto)
+                           this%idxglo, this%rhs, this%npf, this%sto, inwt)
     end if
     do ip = 1, this%bndlist%Count()
       packobj => GetBndFromList(this%bndlist, ip)

@@ -2,7 +2,7 @@ module GwfSwiModule
 
   use KindModule, only: DP, I4B, LGP
   use ConstantsModule, only: LINELENGTH, DONE, DZERO, LENBUDTXT, &
-                             MNORMAL, DHNOFLO, C3D_VERTICAL
+                             MNORMAL, DHNOFLO, C3D_VERTICAL, LENMODELNAME
   use SimVariablesModule, only: errmsg
   use SimModule, only: store_error
   use NumericalPackageModule, only: NumericalPackageType
@@ -26,6 +26,9 @@ module GwfSwiModule
     &['         STORAGE']
 
   type, extends(NumericalPackageType) :: GwfSwiType
+
+    character(len=LENMODELNAME) :: freshwater_model_name = ""
+    character(len=LENMODELNAME) :: saltwater_model_name = ""
 
     integer(I4B), pointer :: iuseapi => null() !< 1 is flag to indicate terms will be filled by api
     integer(I4B), pointer :: isaltwater => null() !< 0 is freshwater, 1 is saltwater
@@ -184,7 +187,7 @@ contains
   !!  Fill the coefficient matrix and right-hand side
   !!
   !<
-  subroutine swi_fc(this, kiter, hold, hnew, matrix_sln, idxglo, rhs, npf, sto)
+  subroutine swi_fc(this, kiter, hold, hnew, matrix_sln, idxglo, rhs, npf, sto, inwt)
     ! -- modules
     ! -- dummy variables
     class(GwfSwiType) :: this !< GwfSwiType object
@@ -199,6 +202,7 @@ contains
     ! -- local variables
     integer(I4B) :: n
     integer(I4B) :: idiag
+    integer(I4B) :: inwt    
     ! -- formats
     !
     call npf_fc_swi(npf, kiter, matrix_sln, idxglo, &
@@ -210,7 +214,8 @@ contains
     ! -- Calculate fresh storage terms and put in hcof/rhs
     if (this%iuseapi == 0) then
       if (this%isaltwater == 0) then
-        call this%swi_fc_freshstorage(kiter, hold, hnew, matrix_sln, idxglo, rhs,sto)
+        call this%swi_fc_freshstorage(kiter, hold, hnew, matrix_sln, idxglo, &
+                                      rhs, sto, inwt)
       end if
     end if
     !
@@ -227,7 +232,8 @@ contains
 
   !> @ brief Calculate fresh storage terms
   !<
-  subroutine swi_fc_freshstorage(this, kiter, hold, hnew, matrix_sln, idxglo, rhs,sto)
+  subroutine swi_fc_freshstorage(this, kiter, hold, hnew, matrix_sln, idxglo, &
+                                 rhs, sto, inwt)
     ! -- modules
     use TdisModule, only: delt
     use GwfStorageUtilsModule, only: SsCapacity, SyCapacity, SsTerms, SyTerms
@@ -241,6 +247,7 @@ contains
     class(MatrixBaseType), pointer :: matrix_sln !< A matrix
     integer(I4B), intent(in), dimension(:) :: idxglo !< global index model to solution
     real(DP), intent(inout), dimension(:) :: rhs !< right-hand side
+    integer(I4B) :: inwt    
     ! -- local variables
     integer(I4B) :: n
     integer(I4B) :: idiag
@@ -286,8 +293,8 @@ contains
         snold = DONE
         snnew = DONE
       else
-        snold = sQuadraticSaturation(tp, bt, zetaold, sto%satomega)
-        snnew = sQuadraticSaturation(tp, bt, zetanew, sto%satomega)
+        snold = sQuadraticSaturation(tp, bt, hold(n), sto%satomega)
+        snnew = sQuadraticSaturation(tp, bt, hnew(n), sto%satomega)
       end if
       !
       ! -- storage coefficients
@@ -309,8 +316,14 @@ contains
       !
       ! -- calculate specific storage terms
       call SsTerms(sto%iconvert(n), sto%iorig_ss, sto%iconf_ss, tp, bt, &
-                   rho1, rho1old, snnew, snold, zetanew, zetaold, &
+                   rho1, rho1old, snnew, snold, hnew(n), hold(n), &
                    aterm, rhsterm)
+      !
+      ! -- scale down the saltwater part
+      snnew = sQuadraticSaturation(tp, bt, zetanew, sto%satomega)
+      aterm = aterm * snnew
+      rhsterm = rhsterm * snnew
+      
       !
       ! -- add specific storage terms to amat and rhs - subtract out aterm and rhsterm
       idiag = this%dis%con%ia(n)      
@@ -320,6 +333,8 @@ contains
       ! -- specific yield
       if (sto%iconvert(n) /= 0) then
         rhsterm = DZERO
+        snold = sQuadraticSaturation(tp, bt, zetaold, sto%satomega)
+        snnew = sQuadraticSaturation(tp, bt, zetanew, sto%satomega)        
         !
         ! -- secondary storage coefficient
         sc2 = SyCapacity(this%dis%area(n), this%sy(n))
@@ -337,19 +352,38 @@ contains
           rho2old = rho2
         end if
         !
-        ! -- calculate specific storage terms
-        call SyTerms(tp, bt, rho2, rho2old, snnew, snold, &
+        ! -- calculate specific storage terms from bot to zeta
+        if (inwt /=0) then
+          call SyTerms(tp, bt, rho2, rho2old, snnew, snold, &
                      aterm, rhsterm)
 !
-        ! -- add specific yield terms to amat and rhs - subtract out aterm and rhsterm
-        call matrix_sln%add_value_pos(idxglo(idiag), -aterm)
-        rhs(n) = rhs(n) - rhsterm
+          ! -- add specific yield terms to amat and rhs - subtract out aterm and rhsterm
+           idiag = this%dis%con%ia(n)  
+          call matrix_sln%add_value_pos(idxglo(idiag), -aterm)
+          rhs(n) = rhs(n) - rhsterm
+        else
  !csp*** old way of storage term commented out here       
-     ! sc2 = SyCapacity(this%dis%area(n), this%sy(n))
-     ! rho2 = -this%alphaf * sc2 * tled
-     !   ! new and old zeta above bottom
-     !   this%hcof(n) = rho2
-     !   this%rhs(n) = rho2 * hold(n)
+ !sp***     sc2 = SyCapacity(this%dis%area(n), this%sy(n))
+ !sp***     rho2 = -this%alphaf * sc2 * tled
+        ! new and old zeta above bottom
+ !sp***       this%hcof(n) = rho2
+ !sp***       this%rhs(n) = rho2 * hold(n)
+          rho2 = -rho2 * this%alphaf  
+          rho2old = - rho2old  * this%alphaf
+          if (zetanew > this%dis%bot(n) .and. zetaold > this%dis%bot(n)) then
+            ! new and old zeta above bottom
+            this%hcof(n) = rho2
+            this%rhs(n) = rho2 * hold(n)
+          else if (zetanew > this%dis%bot(n) .and. zetaold < this%dis%bot(n)) then
+            ! zetanew above bottom but zetaold is not
+            this%hcof(n) = rho2
+            this%rhs(n) = -rho2 * this%dis%bot(n) / this%alphaf
+          else if (zetanew < this%dis%bot(n) .and. zetaold > this%dis%bot(n)) then
+            ! zetanew is below bottom, zetaold above bottom
+            this%hcof(n) = DZERO
+            this%rhs(n) = rho2 * (this%dis%bot(n) / this%alphaf + hold(n))
+          end if        
+        endif
   !  
       endif
       !
@@ -471,8 +505,8 @@ contains
           else
             drterm = -(rho1 * derv * h)
           end if
-          call matrix_sln%add_value_pos(idxglo(idiag), drterm)
-          rhs(n) = rhs(n) + drterm * h
+ !sp**         call matrix_sln%add_value_pos(idxglo(idiag), drterm)
+ !sp**         rhs(n) = rhs(n) + drterm * h
         end if
         !
         ! -- newton terms for specific yield
@@ -639,8 +673,8 @@ contains
           snold = DONE
           snnew = DONE
         else
-          snold = sQuadraticSaturation(tp, bt, zetaold, sto%satomega)
-          snnew = sQuadraticSaturation(tp, bt, zetanew, sto%satomega)
+          snold = sQuadraticSaturation(tp, bt, hold(n), sto%satomega)
+          snnew = sQuadraticSaturation(tp, bt, hnew(n), sto%satomega)
         end if
         !
         ! -- primary storage coefficient
@@ -662,8 +696,10 @@ contains
         !
         ! -- calculate specific storage terms and rate
         call SsTerms(sto%iconvert(n), sto%iorig_ss, sto%iconf_ss, tp, bt, &
-                     rho1, rho1old, snnew, snold, zetanew, zetaold, &
+                     rho1, rho1old, snnew, snold,  hnew(n), hold(n), &
                      aterm, rhsterm, rate)
+        snnew = sQuadraticSaturation(tp, bt, zetanew, sto%satomega)
+        rate = snnew * rate
         !
         ! -- subtract rate in saltwater part from total
         sto%strgss(n) = sto%strgss(n) - rate
@@ -674,35 +710,47 @@ contains
         !
         ! -- specific yield
         rate = DZERO
-        if (sto%iconvert(n) /= 0) then
-          !
-          ! -- secondary storage coefficient
-          sc2 = SyCapacity(this%dis%area(n), this%sy(n))
-          rho2 = sc2 * tled
-          !
-          if (sto%integratechanges /= 0) then
-            ! -- Integration of storage changes (e.g. when using TVS):
-            !    separate the old (start of time step) and new (end of time
-            !    step) secondary storage capacities
-            sc2old = SyCapacity(this%dis%area(n), this%oldsy(n))
-            rho2old = sc2old * tled
-          else
-            ! -- No integration of storage changes: old and new values are
-            !    identical => normal MF6 storage formulation
-            rho2old = rho2
-          end if
-          !
-          ! -- calculate specific yield storage terms and rate
-          call SyTerms(tp, bt, rho2, rho2old, snnew, snold, &
+        snold = sQuadraticSaturation(tp, bt, zetaold, sto%satomega)
+        snnew = sQuadraticSaturation(tp, bt, zetanew, sto%satomega)        
+        if (sto%inewton /=0) then
+          if (sto%iconvert(n) /= 0) then
+            !
+            ! -- secondary storage coefficient
+            sc2 = SyCapacity(this%dis%area(n), this%sy(n))
+            rho2 = sc2 * tled
+            !
+            if (sto%integratechanges /= 0) then
+              ! -- Integration of storage changes (e.g. when using TVS):
+              !    separate the old (start of time step) and new (end of time
+              !    step) secondary storage capacities
+              sc2old = SyCapacity(this%dis%area(n), this%oldsy(n))
+              rho2old = sc2old * tled
+            else
+              ! -- No integration of storage changes: old and new values are
+              !    identical => normal MF6 storage formulation
+              rho2old = rho2
+            end if
+            !
+            ! -- calculate specific yield storage terms and rate
+            call SyTerms(tp, bt, rho2, rho2old, snnew, snold, &
                        aterm, rhsterm, rate)
-
-        end if
-        ! -- subtract rate in saltwater part from total        
-        sto%strgsy(n) = sto%strgsy(n) - rate
-        !
-        ! -- add storage term to flowja - subtract out saltwater part
-        idiag = this%dis%con%ia(n)
-        flowja(idiag) = flowja(idiag) - rate
+          end if
+          ! -- subtract rate in saltwater part from total        
+          sto%strgsy(n) = sto%strgsy(n) - rate
+          !
+          ! -- add storage term to flowja - subtract out saltwater part
+          idiag = this%dis%con%ia(n)
+          flowja(idiag) = flowja(idiag) - rate
+      !   
+        else 
+      ! -- Calculate change in freshwater storage for Picard way
+          rate = this%hcof(n) * hnew(n) - this%rhs(n)
+          this%storage(n) = rate
+          !
+          ! -- Add storage term to flowja
+          idiag = this%dis%con%ia(n)
+          flowja(idiag) = flowja(idiag) + rate
+        endif  
       end do
     end if
     !
@@ -881,13 +929,13 @@ contains
   subroutine swi_da(this)
     ! -- modules
     use MemoryManagerModule, only: mem_deallocate
-    use MemoryManagerExtModule, only: memorylist_remove
+    use MemoryManagerExtModule, only: memorystore_remove
     use SimVariablesModule, only: idm_context
     ! -- dummy
     class(GwfSwiType) :: this
     !
     ! -- deallocate IDM memory
-    call memorylist_remove(this%name_model, 'SWI', idm_context)
+    call memorystore_remove(this%name_model, 'SWI', idm_context)
     !
     ! -- deallocate arrays
     call mem_deallocate(this%zeta)
