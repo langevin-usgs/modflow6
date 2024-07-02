@@ -264,6 +264,8 @@ contains
       call set_subpkg_pointer(subpackages, gwf_riv_subpackages)
     case ('STO')
       call set_subpkg_pointer(subpackages, gwf_sto_subpackages)
+    case ('SWI')
+      call set_subpkg_pointer(subpackages, gwf_swi_subpackages)
     case ('WEL')
       call set_subpkg_pointer(subpackages, gwf_wel_subpackages)
     case default
