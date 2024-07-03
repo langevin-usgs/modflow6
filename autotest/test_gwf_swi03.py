@@ -78,7 +78,9 @@ def build_gwf_model(sim, is_saltwater):
     cghb = 1. * delr * delc / 10.
     ghb = flopy.mf6.ModflowGwfghb(gwf, stress_period_data=[[0, 0, 0, h0, cghb],
                                                         [0, 0, ncol - 1, h1, cghb]])
-    rch = flopy.mf6.ModflowGwfrcha(gwf, recharge=recharge)
+    if not is_saltwater:
+        rch = flopy.mf6.ModflowGwfrcha(gwf, recharge=recharge)
+        
     budget_file = name + '.bud'
     head_file = name + '.hds'
     oc = flopy.mf6.ModflowGwfoc(
