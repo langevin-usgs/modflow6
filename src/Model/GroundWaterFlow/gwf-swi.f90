@@ -42,6 +42,8 @@ module GwfSwiModule
     real(DP), pointer :: alphas => null() !< rhos / (rhos - rhof), default is 41
     real(DP), dimension(:), pointer, contiguous :: hfresh => null() !< head of freshwater
     real(DP), dimension(:), pointer, contiguous :: hsalt => null() !< head of saltwater
+    real(DP), dimension(:), pointer, contiguous :: hfreshold => null() !< old head of freshwater
+    real(DP), dimension(:), pointer, contiguous :: hsaltold => null() !< old head of saltwater
     integer(I4B), dimension(:), pointer, contiguous :: ibound => null() !< pointer to model ibound
 
     ! pointers for transient simulations
@@ -73,6 +75,8 @@ module GwfSwiModule
     procedure, private :: swi_fn_freshstorage
     procedure :: set_as_saltmodel
     procedure :: set_head_pointers
+    procedure :: get_zetanew
+    procedure :: get_zetaold
 
   end type GwfSwiType
 
@@ -168,9 +172,10 @@ contains
       call mem_setptr(this%hfresh, 'X', &
                       create_mem_path(this%name_model))
     end if
-
-    ! update zeta
-    call this%update_zeta()
+    if (.not. associated(this%hfreshold)) then
+      call mem_setptr(this%hfreshold, 'XOLD', &
+                      create_mem_path(this%name_model))
+    end if
 
   end subroutine swi_ar
 
@@ -258,10 +263,10 @@ contains
     real(DP) :: rhsterm
     real(DP) :: zetanew
     real(DP) :: zetaold
-    !
+
     ! set variables
     tled = DONE / delt
-    !
+
     ! Calculate storage terms for freshwater model by subtracting out saltwater side
     do n = 1, this%dis%nodes
 
@@ -272,8 +277,9 @@ contains
       if (this%ibound(n) < 1) cycle
 
       ! calculate zetanew and zetaold
-      zetanew = calc_zeta(this%alphaf, hnew(n))
-      zetaold = calc_zeta(this%alphaf, hold(n))
+      zetanew = this%get_zetanew(n)
+      zetaold = this%get_zetaold(n)
+
       ! aquifer elevations and thickness
       tp = this%dis%top(n)
       bt = this%dis%bot(n)
@@ -453,8 +459,8 @@ contains
       if (this%ibound(n) <= 0) cycle
       !
       ! calculate zetanew and zetaold
-      zetanew = calc_zeta(this%alphaf, hnew(n))
-      zetaold = calc_zeta(this%alphaf, hold(n))
+      zetanew = this%get_zetanew(n)
+      zetaold = this%get_zetaold(n)
       !      
       ! aquifer elevations and thickness
       tp = this%dis%top(n)
@@ -481,7 +487,7 @@ contains
         !
         sew = sQuadraticSaturation(tp, bt, zetanew, sto%satomega)
         dereps = 1e-6
-        zetanew = calc_zeta(this%alphaf, hnew(n)+dereps)
+        zetanew = this%get_zetanew(n, eps_fresh=dereps)
         derv = sQuadraticSaturation(tp, bt, zetanew, sto%satomega)
         derv = (derv-sew)/dereps
         !
@@ -645,8 +651,9 @@ contains
         if (this%ibound(n) <= 0) cycle
         
         ! calculate zetanew and zetaold
-        zetanew = calc_zeta(this%alphaf, hnew(n))
-        zetaold = calc_zeta(this%alphaf, hold(n))
+        zetanew = this%get_zetanew(n)
+        zetaold = this%get_zetaold(n)
+
         ! aquifer elevations and thickness
         tp = this%dis%top(n)
         bt = this%dis%bot(n)
@@ -938,6 +945,8 @@ contains
     ! nullify pointers
     nullify(this%hfresh)
     nullify(this%hsalt)
+    nullify(this%hfreshold)
+    nullify(this%hsaltold)
 
   end subroutine swi_da
 
@@ -1114,13 +1123,98 @@ contains
   !! This will likely be called from the SWI-SWI exchange
   !! which has access to both fresh and salt models.
   !<
-  subroutine set_head_pointers(this, hfresh, hsalt)
+  subroutine set_head_pointers(this, hfresh, hsalt, hfreshold, hsaltold)
     class(GwfSwiType) :: this
     real(DP), dimension(:), target, intent(in) :: hfresh
     real(DP), dimension(:), target, intent(in) :: hsalt
+    real(DP), dimension(:), target, intent(in) :: hfreshold
+    real(DP), dimension(:), target, intent(in) :: hsaltold
     this%hfresh => hfresh
     this%hsalt => hsalt
+    this%hfreshold => hfreshold
+    this%hsaltold => hsaltold
   end subroutine set_head_pointers
+
+  !> @brief Get new value for zeta
+  !!
+  !! Include hsalt contribution if available and use perturbations if
+  !! provided.
+  !!
+  !<
+  function get_zetanew(this, n, eps_fresh, eps_salt) result(zetanew)
+    ! modules
+    ! dummy
+    class(GwfSwiType) :: this !< this instance
+    integer(I4B) :: n !< cell number
+    real(DP), optional, intent(in) :: eps_fresh !< perturbation for fresh head
+    real(DP), optional, intent(in) :: eps_salt !< perturbation for salt head
+    ! return
+    real(DP) :: zetanew
+    ! locals
+    real(DP) :: eps_f
+    real(DP) :: eps_s
+    if (present(eps_fresh)) then
+      eps_f = eps_fresh
+    else
+      eps_f = DZERO
+    end if
+    if (present(eps_salt)) then
+      eps_s = eps_salt
+    else
+      eps_s = DZERO
+    end if
+    if (associated(this%hsalt)) then
+      ! two-model swi with fresh and salt
+      zetanew = calc_zeta(this%alphaf, & 
+                          this%hfresh(n)+eps_f, &
+                          this%alphas, & 
+                          this%hsalt(n)+eps_s)
+    else
+      ! freshwater only simulation
+      zetanew = calc_zeta(this%alphaf, this%hfresh(n)+eps_f)
+    end if
+  end function get_zetanew
+
+  !> @brief Get old value for zeta
+  !!
+  !! Include hsalt contribution if available and use perturbations if
+  !! provided, though may be able to eliminate perturbations as they
+  !! are probably not needed.
+  !!
+  !<
+  function get_zetaold(this, n, eps_fresh, eps_salt) result(zetaold)
+    ! modules
+    ! dummy
+    class(GwfSwiType) :: this !< this instance
+    integer(I4B) :: n !< cell number
+    real(DP), optional, intent(in) :: eps_fresh !< perturbation for fresh head
+    real(DP), optional, intent(in) :: eps_salt !< perturbation for salt head
+    ! return
+    real(DP) :: zetaold
+    ! locals
+    real(DP) :: eps_f
+    real(DP) :: eps_s
+    if (present(eps_fresh)) then
+      eps_f = eps_fresh
+    else
+      eps_f = DZERO
+    end if
+    if (present(eps_salt)) then
+      eps_s = eps_salt
+    else
+      eps_s = DZERO
+    end if
+    if (associated(this%hsaltold)) then
+      ! two-model swi with fresh and salt
+      zetaold = calc_zeta(this%alphaf, &
+                          this%hfreshold(n)+eps_f, &
+                          this%alphas, &
+                          this%hsaltold(n)+eps_s)
+    else
+      ! freshwater only simulation
+      zetaold = calc_zeta(this%alphaf, this%hfreshold(n)+eps_f)
+    end if
+  end function get_zetaold
 
   !> @brief Calculate zeta surface
   !<
@@ -1130,11 +1224,6 @@ contains
     class(GwfSwiType) :: this
     ! locals
     integer(I4B) :: n
-    logical :: hs_avail
-
-    ! Check if there is a saltwater model, and use hsalt
-    !    otherwise, assume hsalt is zero.
-    hs_avail = associated(this%hsalt)
 
     ! Loop through each node and calculate zeta
     do n = 1, this%dis%nodes
@@ -1142,12 +1231,7 @@ contains
       if (this%ibound(n) == 0) cycle
 
       ! Calculate zeta
-      if (hs_avail) then
-        this%zeta(n) = calc_zeta(this%alphaf, this%hfresh(n), &
-                                 this%alphas, this%hsalt(n))
-      else
-        this%zeta(n) = calc_zeta(this%alphaf, this%hfresh(n))
-      end if
+      this%zeta(n) = this%get_zetanew(n)
 
       ! todo: Do we want to constrain zeta to top and
       !    bot of cell?
