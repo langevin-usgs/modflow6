@@ -284,9 +284,14 @@ module SwiSwiExchangeModule
     ! Set head pointers for fresh and salt model swi packages.  This
     ! cannot be done in AR because the head vectors (x) aren't allocated
     ! until after the connections are all established.
-    call this%gwf_fresh%swi%set_head_pointers(this%gwf_fresh%x, this%gwf_salt%x)
-    call this%gwf_salt%swi%set_head_pointers(this%gwf_fresh%x, this%gwf_salt%x)
-
+    call this%gwf_fresh%swi%set_head_pointers(this%gwf_fresh%x, &
+                                              this%gwf_salt%x, &
+                                              this%gwf_fresh%xold, &
+                                              this%gwf_salt%xold)
+    call this%gwf_salt%swi%set_head_pointers(this%gwf_fresh%x, &
+                                              this%gwf_salt%x, &
+                                              this%gwf_fresh%xold, &
+                                              this%gwf_salt%xold)
   end subroutine swi_swi_ar
 
   !> @ brief Read and prepare
