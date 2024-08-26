@@ -341,7 +341,7 @@ def build_models(idx, test):
     return sim, None
 
 
-def make_plot(test):
+def make_plot(test, modelname):
     print("making plots...")
     import matplotlib.pyplot as plt
 
@@ -412,16 +412,29 @@ def make_plot(test):
     fname = ws / f"{name}.obs.2.png"
     plt.savefig(fname)
 
+    fpth = test.workspace / f"{modelname}.disv1d.grb"
+    grb = flopy.mf6.utils.MfGrdFile(fpth)
+    cellx = grb._datadict["CELLX"]
+    celly = grb._datadict["CELLY"]
+
     fig = plt.figure(figsize=(6, 6))
     ax = fig.add_subplot(1, 1, 1)
     ax.set_xlim(-100, 6100)
     ax.set_ylim(-100, 6100)
     pmv = flopy.plot.PlotMapView(model=chf, ax=ax)
     pmv.plot_grid()
+
+    # plot vertices
     vertices = chf.disv1d.vertices.get_data()
     ax.plot(vertices["xv"], vertices["yv"], "bo")
     for iv, x, y in vertices:
-        ax.text(x, y, f"{iv + 1}")
+        ax.text(x, y, f"v{iv + 1}", color="blue")
+
+    # plot cell centers
+    ax.plot(cellx, celly, "rx")
+    for icell, (x, y) in enumerate(zip(cellx, celly)):
+        ax.text(x, y, f"c{icell + 1}", color="red")
+
     fname = ws / "grid.png"
     plt.savefig(fname)
 
@@ -431,12 +444,13 @@ def make_plot(test):
 def check_output(idx, test):
     print("evaluating model...")
 
-    makeplot = False
+    name = cases[idx]
+
+    makeplot = True
     if makeplot:
-        make_plot(test)
+        make_plot(test, name)
 
     # read the observation output
-    name = cases[idx]
     fpth = test.workspace / f"{name}.obs.csv"
     obsvals = np.genfromtxt(fpth, names=True, delimiter=",")
 
