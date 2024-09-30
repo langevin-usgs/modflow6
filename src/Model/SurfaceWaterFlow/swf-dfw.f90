@@ -723,7 +723,7 @@ contains
 
     ! calculate flow between n and m
     qnm = DZERO
-    select case(this%iformulation)
+    select case (this%iformulation)
     case (DIFFUSION_WAVE)
       dz = stage_m - stage_n
     case (KINEMATIC_WAVE)
@@ -779,7 +779,7 @@ contains
 
       ! assign gradients
       if (this%is2d == 0) then
-        select case(this%iformulation)
+        select case (this%iformulation)
         case (DIFFUSION_WAVE)
           dz = abs(stage_m - stage_n)
         case (KINEMATIC_WAVE)
@@ -795,7 +795,7 @@ contains
       ! Assign upstream depth, if not central
       if (this%icentral == 0) then
         ! use upstream weighting
-        select case(this%iformulation)
+        select case (this%iformulation)
         case (DIFFUSION_WAVE)
           if (stage_n > stage_m) then
             depth_m = depth_n
