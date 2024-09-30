@@ -12,6 +12,7 @@ module ChfDfwInputModule
   public chf_dfw_subpackages
 
   type ChfDfwParamFoundType
+    logical :: formulation = .false.
     logical :: icentral = .false.
     logical :: lengthconv = .false.
     logical :: timeconv = .false.
@@ -35,6 +36,24 @@ module ChfDfwInputModule
     [ &
     '                ' &
     ]
+
+  type(InputParamDefinitionType), parameter :: &
+    chfdfw_formulation = InputParamDefinitionType &
+    ( &
+    'CHF', & ! component
+    'DFW', & ! subcomponent
+    'OPTIONS', & ! block
+    'FORMULATION', & ! tag name
+    'FORMULATION', & ! fortran variable
+    'STRING', & ! type
+    '', & ! shape
+    'formulation for surface water flow', & ! longname
+    .false., & ! required
+    .false., & ! multi-record
+    .false., & ! preserve case
+    .false., & ! layered
+    .false. & ! timeseries
+    )
 
   type(InputParamDefinitionType), parameter :: &
     chfdfw_icentral = InputParamDefinitionType &
@@ -291,6 +310,7 @@ module ChfDfwInputModule
   type(InputParamDefinitionType), parameter :: &
     chf_dfw_param_definitions(*) = &
     [ &
+    chfdfw_formulation, &
     chfdfw_icentral, &
     chfdfw_lengthconv, &
     chfdfw_timeconv, &

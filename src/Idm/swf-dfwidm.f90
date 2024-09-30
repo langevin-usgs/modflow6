@@ -12,6 +12,7 @@ module SwfDfwInputModule
   public swf_dfw_subpackages
 
   type SwfDfwParamFoundType
+    logical :: formulation = .false.
     logical :: icentral = .false.
     logical :: lengthconv = .false.
     logical :: timeconv = .false.
@@ -35,6 +36,24 @@ module SwfDfwInputModule
     [ &
     '                ' &
     ]
+
+  type(InputParamDefinitionType), parameter :: &
+    swfdfw_formulation = InputParamDefinitionType &
+    ( &
+    'SWF', & ! component
+    'DFW', & ! subcomponent
+    'OPTIONS', & ! block
+    'FORMULATION', & ! tag name
+    'FORMULATION', & ! fortran variable
+    'STRING', & ! type
+    '', & ! shape
+    'formulation for surface water flow', & ! longname
+    .false., & ! required
+    .false., & ! multi-record
+    .false., & ! preserve case
+    .false., & ! layered
+    .false. & ! timeseries
+    )
 
   type(InputParamDefinitionType), parameter :: &
     swfdfw_icentral = InputParamDefinitionType &
@@ -291,6 +310,7 @@ module SwfDfwInputModule
   type(InputParamDefinitionType), parameter :: &
     swf_dfw_param_definitions(*) = &
     [ &
+    swfdfw_formulation, &
     swfdfw_icentral, &
     swfdfw_lengthconv, &
     swfdfw_timeconv, &

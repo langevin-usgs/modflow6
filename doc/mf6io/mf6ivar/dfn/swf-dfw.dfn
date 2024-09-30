@@ -1,6 +1,14 @@
 # --------------------- swf dfw options ---------------------
 
 block options
+name formulation
+type string
+reader urword
+optional true
+longname formulation for surface water flow
+description is the formulation used for representing surface water flow.  Values can be ``KINEMATIC'', ``DIFFUSION'', or ``DYNAMIC''.  If not specified, the default is ``DIFFUSION''.
+
+block options
 name central_in_space
 type keyword
 reader urword

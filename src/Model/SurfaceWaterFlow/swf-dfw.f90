@@ -27,9 +27,14 @@ module SwfDfwModule
   private
   public :: SwfDfwType, dfw_cr
 
+  integer(I4B), parameter :: KINEMATIC_WAVE = 1
+  integer(I4B), parameter :: DIFFUSION_WAVE = 2
+  integer(I4B), parameter :: DYNAMIC_WAVE = 3
+
   type, extends(NumericalPackageType) :: SwfDfwType
 
     ! user-provided input
+    integer(I4B), pointer :: iformulation => null() !< flag to indicate flow formulation; kinematic, diffusion or dynamic
     integer(I4B), pointer :: is2d => null() !< flag to indicate this model is 2D overland flow and not 1d channel flow
     integer(I4B), pointer :: icentral => null() !< flag to use central in space weighting (default is upstream weighting)
     integer(I4B), pointer :: iswrcond => null() !< flag to activate the dev SWR conductance formulation
@@ -208,6 +213,7 @@ contains
     call this%NumericalPackageType%allocate_scalars()
     !
     ! Allocate scalars
+    call mem_allocate(this%iformulation, 'IFORMULATION', this%memoryPath)
     call mem_allocate(this%is2d, 'IS2D', this%memoryPath)
     call mem_allocate(this%icentral, 'ICENTRAL', this%memoryPath)
     call mem_allocate(this%iswrcond, 'ISWRCOND', this%memoryPath)
@@ -220,6 +226,7 @@ contains
     call mem_allocate(this%nedges, 'NEDGES', this%memoryPath)
     call mem_allocate(this%lastedge, 'LASTEDGE', this%memoryPath)
 
+    this%iformulation = DIFFUSION_WAVE
     this%is2d = 0
     this%icentral = 0
     this%iswrcond = 0
@@ -307,10 +314,14 @@ contains
     ! locals
     integer(I4B) :: isize
     type(SwfDfwParamFoundType) :: found
+    character(len=LENVARNAME), dimension(3) :: formulation = &
+      &[character(len=LENVARNAME) :: 'KINEMATIC', 'DIFFUSION', 'DYNAMIC']
     type(CharacterStringType), dimension(:), pointer, &
       contiguous :: obs6_fnames
 
     ! update defaults with idm sourced values
+    call mem_set_value(this%iformulation, 'FORMULATION', this%input_mempath, &
+                       formulation, found%formulation)
     call mem_set_value(this%icentral, 'ICENTRAL', &
                        this%input_mempath, found%icentral)
     call mem_set_value(this%iswrcond, 'ISWRCOND', &
@@ -375,6 +386,14 @@ contains
     type(SwfDfwParamFoundType), intent(in) :: found
 
     write (this%iout, '(1x,a)') 'Setting DFW Options'
+
+    if (found%formulation) then
+      write (this%iout, '(4x,a,i0)') 'Formulation for surface water flow &
+      & [1=KINEMATIC, 2=DIFFUSION, 3=DYNAMIC] set as ', this%iformulation
+    else
+      write (this%iout, '(4x, a)') 'Formulation for surface water flow &
+      &is set to the default of DIFFUSION'
+    end if
 
     if (found%lengthconv) then
       write (this%iout, '(4x,a, G0)') 'Mannings length conversion value &
@@ -683,6 +702,7 @@ contains
     real(DP) :: cond
     real(DP) :: cl1
     real(DP) :: cl2
+    real(DP) :: dz
 
     ! Set connection lengths
     isympos = this%dis%con%jas(ipos)
@@ -702,7 +722,14 @@ contains
     end if
 
     ! calculate flow between n and m
-    qnm = cond * (stage_m - stage_n)
+    qnm = DZERO
+    select case(this%iformulation)
+    case (DIFFUSION_WAVE)
+      dz = stage_m - stage_n
+    case (KINEMATIC_WAVE)
+      dz = this%dis%bot(m) - this%dis%bot(n)
+    end select
+    qnm = cond * dz
 
   end function qcalc
 
@@ -732,6 +759,7 @@ contains
     real(DP) :: width_m
     real(DP) :: range = 1.d-6
     real(DP) :: dydx
+    real(DP) :: dz
     real(DP) :: smooth_factor
     real(DP) :: length_nm
     real(DP) :: cond
@@ -751,7 +779,13 @@ contains
 
       ! assign gradients
       if (this%is2d == 0) then
-        dhds_n = abs(stage_m - stage_n) / (cln + clm)
+        select case(this%iformulation)
+        case (DIFFUSION_WAVE)
+          dz = abs(stage_m - stage_n)
+        case (KINEMATIC_WAVE)
+          dz = abs(this%dis%bot(m) - this%dis%bot(n))
+        end select
+        dhds_n = dz / length_nm
         dhds_m = dhds_n
       else
         dhds_n = this%grad_dhds_mag(n)
@@ -761,11 +795,20 @@ contains
       ! Assign upstream depth, if not central
       if (this%icentral == 0) then
         ! use upstream weighting
-        if (stage_n > stage_m) then
-          depth_m = depth_n
-        else
-          depth_n = depth_m
-        end if
+        select case(this%iformulation)
+        case (DIFFUSION_WAVE)
+          if (stage_n > stage_m) then
+            depth_m = depth_n
+          else
+            depth_n = depth_m
+          end if
+        case (KINEMATIC_WAVE)
+          if (this%dis%bot(n) > this%dis%bot(m)) then
+            depth_m = depth_n
+          else
+            depth_n = depth_m
+          end if
+        end select
       end if
 
       ! Calculate a smoothed depth that goes to zero over
@@ -858,6 +901,7 @@ contains
     real(DP) :: width_m
     real(DP) :: range = 1.d-6
     real(DP) :: dydx
+    real(DP) :: dz
     real(DP) :: smooth_factor
     real(DP) :: length_nm
     real(DP) :: cond
@@ -923,12 +967,28 @@ contains
 
       ! average gradient
       if (this%is2d == 0) then
-        dhds_nm = abs(stage_m - stage_n) / (length_nm)
+
+        ! For the 1D channel case, calculate the gradient
+        ! as dz / dl
+        select case (this%iformulation)
+        case (DIFFUSION_WAVE)
+          dz = abs(stage_m - stage_n)
+        case (KINEMATIC_WAVE)
+          dz = abs(this%dis%bot(m) - this%dis%bot(n))
+        end select
+        dhds_nm = dz / length_nm
+
       else
+
+        ! For the 2D overland case, calculate the gradient
+        ! using the results from the xt3d interpolation
         dhds_n = this%grad_dhds_mag(n)
         dhds_m = this%grad_dhds_mag(m)
         dhds_nm = weight_n * dhds_n + weight_m * dhds_m
+
       end if
+
+      ! calculate square root of gradient
       dhds_sqr = dhds_nm**DHALF
       if (dhds_sqr < DEM10) then
         dhds_sqr = DEM10
@@ -1041,6 +1101,8 @@ contains
     integer(I4B) :: isympos
     real(DP) :: cl1
     real(DP) :: cl2
+    real(DP) :: length_nm
+    real(DP) :: dz
 
     do n = 1, this%dis%nodes
       this%grad_dhds_mag(n) = DZERO
@@ -1059,8 +1121,15 @@ contains
 
         ! store for n < m in upper right triangular part of symmetric dhdsja array
         if (n < m) then
-          if (cl1 + cl2 > DPREC) then
-            this%dhdsja(isympos) = (this%hnew(m) - this%hnew(n)) / (cl1 + cl2)
+          length_nm = cl1 + cl2
+          if (length_nm > DPREC) then
+            select case (this%iformulation)
+            case (DIFFUSION_WAVE)
+              dz = this%hnew(m) - this%hnew(n)
+            case (KINEMATIC_WAVE)
+              dz = this%dis%bot(m) - this%dis%bot(n)
+            end select
+            this%dhdsja(isympos) = dz / length_nm
           else
             this%dhdsja(isympos) = DZERO
           end if
@@ -1257,6 +1326,7 @@ contains
     end if
 
     ! Scalars
+    call mem_deallocate(this%iformulation)
     call mem_deallocate(this%is2d)
     call mem_deallocate(this%icentral)
     call mem_deallocate(this%iswrcond)

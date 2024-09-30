@@ -12,6 +12,7 @@ module OlfDfwInputModule
   public olf_dfw_subpackages
 
   type OlfDfwParamFoundType
+    logical :: formulation = .false.
     logical :: icentral = .false.
     logical :: lengthconv = .false.
     logical :: timeconv = .false.
@@ -35,6 +36,24 @@ module OlfDfwInputModule
     [ &
     '                ' &
     ]
+
+  type(InputParamDefinitionType), parameter :: &
+    olfdfw_formulation = InputParamDefinitionType &
+    ( &
+    'OLF', & ! component
+    'DFW', & ! subcomponent
+    'OPTIONS', & ! block
+    'FORMULATION', & ! tag name
+    'FORMULATION', & ! fortran variable
+    'STRING', & ! type
+    '', & ! shape
+    'formulation for surface water flow', & ! longname
+    .false., & ! required
+    .false., & ! multi-record
+    .false., & ! preserve case
+    .false., & ! layered
+    .false. & ! timeseries
+    )
 
   type(InputParamDefinitionType), parameter :: &
     olfdfw_icentral = InputParamDefinitionType &
@@ -291,6 +310,7 @@ module OlfDfwInputModule
   type(InputParamDefinitionType), parameter :: &
     olf_dfw_param_definitions(*) = &
     [ &
+    olfdfw_formulation, &
     olfdfw_icentral, &
     olfdfw_lengthconv, &
     olfdfw_timeconv, &
