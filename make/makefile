@@ -1,51 +1,51 @@
-# makefile created by pymake (version 1.2.10.dev0) for the 'mf6' executable.
+# makefile created by pymake (version 1.2.11.dev0) for the 'mf6' executable.
 
 
 include ./makedefaults
 
 # Define the source file directories
 SOURCEDIR1=../src
-SOURCEDIR2=../src/Distributed
-SOURCEDIR3=../src/Exchange
-SOURCEDIR4=../src/Idm
-SOURCEDIR5=../src/Idm/selector
-SOURCEDIR6=../src/Model
-SOURCEDIR7=../src/Model/ChannelFlow
-SOURCEDIR8=../src/Model/Connection
-SOURCEDIR9=../src/Model/Discretization
-SOURCEDIR10=../src/Model/Geometry
-SOURCEDIR11=../src/Model/GroundWaterEnergy
-SOURCEDIR12=../src/Model/GroundWaterFlow
-SOURCEDIR13=../src/Model/GroundWaterFlow/submodules
-SOURCEDIR14=../src/Model/GroundWaterTransport
-SOURCEDIR15=../src/Model/ModelUtilities
-SOURCEDIR16=../src/Model/OverlandFlow
-SOURCEDIR17=../src/Model/ParticleTracking
-SOURCEDIR18=../src/Model/SurfaceWaterFlow
-SOURCEDIR19=../src/Model/TransportModel
-SOURCEDIR20=../src/Solution
-SOURCEDIR21=../src/Solution/LinearMethods
-SOURCEDIR22=../src/Solution/ParticleTracker
-SOURCEDIR23=../src/Solution/PETSc
-SOURCEDIR24=../src/Timing
-SOURCEDIR25=../src/Utilities
-SOURCEDIR26=../src/Utilities/ArrayRead
-SOURCEDIR27=../src/Utilities/Export
-SOURCEDIR28=../src/Utilities/Idm
-SOURCEDIR29=../src/Utilities/Idm/mf6blockfile
-SOURCEDIR30=../src/Utilities/Idm/netcdf
-SOURCEDIR31=../src/Utilities/Libraries
-SOURCEDIR32=../src/Utilities/Libraries/blas
-SOURCEDIR33=../src/Utilities/Libraries/daglib
-SOURCEDIR34=../src/Utilities/Libraries/rcm
-SOURCEDIR35=../src/Utilities/Libraries/sparsekit
-SOURCEDIR36=../src/Utilities/Libraries/sparskit2
-SOURCEDIR37=../src/Utilities/Matrix
-SOURCEDIR38=../src/Utilities/Memory
-SOURCEDIR39=../src/Utilities/Observation
-SOURCEDIR40=../src/Utilities/OutputControl
-SOURCEDIR41=../src/Utilities/TimeSeries
-SOURCEDIR42=../src/Utilities/Vector
+SOURCEDIR2=../src/Idm
+SOURCEDIR3=../src/Idm/selector
+SOURCEDIR4=../src/Exchange
+SOURCEDIR5=../src/Distributed
+SOURCEDIR6=../src/Solution
+SOURCEDIR7=../src/Solution/LinearMethods
+SOURCEDIR8=../src/Solution/ParticleTracker
+SOURCEDIR9=../src/Solution/PETSc
+SOURCEDIR10=../src/Timing
+SOURCEDIR11=../src/Utilities
+SOURCEDIR12=../src/Utilities/Idm
+SOURCEDIR13=../src/Utilities/Idm/mf6blockfile
+SOURCEDIR14=../src/Utilities/Idm/netcdf
+SOURCEDIR15=../src/Utilities/TimeSeries
+SOURCEDIR16=../src/Utilities/Memory
+SOURCEDIR17=../src/Utilities/OutputControl
+SOURCEDIR18=../src/Utilities/ArrayRead
+SOURCEDIR19=../src/Utilities/Libraries
+SOURCEDIR20=../src/Utilities/Libraries/rcm
+SOURCEDIR21=../src/Utilities/Libraries/blas
+SOURCEDIR22=../src/Utilities/Libraries/sparskit2
+SOURCEDIR23=../src/Utilities/Libraries/daglib
+SOURCEDIR24=../src/Utilities/Libraries/sparsekit
+SOURCEDIR25=../src/Utilities/Export
+SOURCEDIR26=../src/Utilities/Vector
+SOURCEDIR27=../src/Utilities/Matrix
+SOURCEDIR28=../src/Utilities/Observation
+SOURCEDIR29=../src/Model
+SOURCEDIR30=../src/Model/Connection
+SOURCEDIR31=../src/Model/ChannelFlow
+SOURCEDIR32=../src/Model/OverlandFlow
+SOURCEDIR33=../src/Model/ParticleTracking
+SOURCEDIR34=../src/Model/SurfaceWaterFlow
+SOURCEDIR35=../src/Model/GroundWaterTransport
+SOURCEDIR36=../src/Model/ModelUtilities
+SOURCEDIR37=../src/Model/GroundWaterFlow
+SOURCEDIR38=../src/Model/GroundWaterFlow/submodules
+SOURCEDIR39=../src/Model/Discretization
+SOURCEDIR40=../src/Model/TransportModel
+SOURCEDIR41=../src/Model/Geometry
+SOURCEDIR42=../src/Model/GroundWaterEnergy
 
 VPATH = \
 ${SOURCEDIR1} \
@@ -161,6 +161,7 @@ $(OBJDIR)/gwt-disuidm.o \
 $(OBJDIR)/gwt-disidm.o \
 $(OBJDIR)/gwt-cncidm.o \
 $(OBJDIR)/gwf-welidm.o \
+$(OBJDIR)/gwf-swiidm.o \
 $(OBJDIR)/gwf-stoidm.o \
 $(OBJDIR)/gwf-rividm.o \
 $(OBJDIR)/gwf-rchidm.o \
@@ -183,6 +184,7 @@ $(OBJDIR)/gwe-disuidm.o \
 $(OBJDIR)/gwe-disidm.o \
 $(OBJDIR)/gwe-ctpidm.o \
 $(OBJDIR)/gwe-cndidm.o \
+$(OBJDIR)/exg-swiswiidm.o \
 $(OBJDIR)/exg-olfgwfidm.o \
 $(OBJDIR)/exg-gwtgwtidm.o \
 $(OBJDIR)/exg-gwfprtidm.o \
@@ -292,8 +294,8 @@ $(OBJDIR)/NumericalModel.o \
 $(OBJDIR)/OutputControlData.o \
 $(OBJDIR)/gwf-ic.o \
 $(OBJDIR)/UzfEtUtil.o \
-$(OBJDIR)/Xt3dAlgorithm.o \
 $(OBJDIR)/TvBase.o \
+$(OBJDIR)/Xt3dAlgorithm.o \
 $(OBJDIR)/gwf-sfr.o \
 $(OBJDIR)/gwf-riv.o \
 $(OBJDIR)/gwf-maw.o \
@@ -317,6 +319,8 @@ $(OBJDIR)/OutputControl.o \
 $(OBJDIR)/tsp-ic.o \
 $(OBJDIR)/TspAdvOptions.o \
 $(OBJDIR)/UzfCellGroup.o \
+$(OBJDIR)/gwf-tvs.o \
+$(OBJDIR)/GwfStorageUtils.o \
 $(OBJDIR)/Xt3dInterface.o \
 $(OBJDIR)/gwf-tvk.o \
 $(OBJDIR)/HGeoUtil.o \
@@ -348,12 +352,11 @@ $(OBJDIR)/gwf-uzf.o \
 $(OBJDIR)/tsp-apt.o \
 $(OBJDIR)/gwt-mst.o \
 $(OBJDIR)/GwtDspOptions.o \
-$(OBJDIR)/gwf-tvs.o \
-$(OBJDIR)/GwfStorageUtils.o \
+$(OBJDIR)/gwf-sto.o \
+$(OBJDIR)/gwf-npf.o \
 $(OBJDIR)/Mover.o \
 $(OBJDIR)/GwfMvrPeriodData.o \
 $(OBJDIR)/ImsLinearMisc.o \
-$(OBJDIR)/gwf-npf.o \
 $(OBJDIR)/GwfBuyInputData.o \
 $(OBJDIR)/GweCndOptions.o \
 $(OBJDIR)/VirtualSolution.o \
@@ -390,7 +393,7 @@ $(OBJDIR)/gwt-cnc.o \
 $(OBJDIR)/gwf-api.o \
 $(OBJDIR)/gwf-wel.o \
 $(OBJDIR)/gwf-rch.o \
-$(OBJDIR)/gwf-sto.o \
+$(OBJDIR)/gwf-swi.o \
 $(OBJDIR)/gwf-oc.o \
 $(OBJDIR)/gwf-obs.o \
 $(OBJDIR)/gwf-mvr.o \
@@ -480,6 +483,7 @@ $(OBJDIR)/VirtualGwtExchange.o \
 $(OBJDIR)/VirtualGwfExchange.o \
 $(OBJDIR)/VirtualGweModel.o \
 $(OBJDIR)/VirtualGweExchange.o \
+$(OBJDIR)/exg-swiswi.o \
 $(OBJDIR)/SolutionGroup.o \
 $(OBJDIR)/SolutionFactory.o \
 $(OBJDIR)/exg-olfgwf.o \
