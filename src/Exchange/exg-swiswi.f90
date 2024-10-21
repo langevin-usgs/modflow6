@@ -10,7 +10,7 @@ module SwiSwiExchangeModule
   use ConstantsModule, only: DZERO, LINELENGTH
   use SimModule, only: count_errors, store_error, store_error_filename, &
                        store_error_unit
-  use SimVariablesModule, only: errmsg, model_loc_idx  
+  use SimVariablesModule, only: errmsg, model_loc_idx
   use MemoryHelperModule, only: create_mem_path
   use BaseModelModule, only: BaseModelType, GetBaseModelFromList
   use BaseExchangeModule, only: BaseExchangeType, AddBaseExchangeToList
@@ -76,7 +76,7 @@ module SwiSwiExchangeModule
 
   end type SwiSwiExchangeType
 
-  contains
+contains
 
   subroutine swiswi_cr(filename, name, id, m1_id, m2_id, input_mempath)
     ! dummy
@@ -181,20 +181,20 @@ module SwiSwiExchangeModule
 
     ! Ensure fresh model has active SWI Package
     if (this%gwf_fresh%inswi == 0) then
-      call store_error(&
+      call store_error( &
         'A SWI-SWI exchange is active, but the freshwater GWF model &
         &does not have an active Seawater Intrusion (Package).  Activate &
         &the SWI Package for the freshwater GWF model.')
-        call store_error_filename(this%filename)
+      call store_error_filename(this%filename)
     end if
 
     ! Ensure salt model has active SWI Package
     if (this%gwf_salt%inswi == 0) then
-      call store_error(&
+      call store_error( &
         'A SWI-SWI exchange is active, but the saltwater GWF model &
         &does not have an active Seawater Intrusion (Package).  Activate &
         &the SWI Package for the saltwater GWF model.')
-        call store_error_filename(this%filename)
+      call store_error_filename(this%filename)
     end if
 
     ! Set the saltwater flag in the SWI Package for the saltwater model
@@ -202,15 +202,15 @@ module SwiSwiExchangeModule
 
     ! Check to make sure fresh and salt models have same number of nodes
     if (this%gwf_fresh%dis%nodes /= this%gwf_salt%dis%nodes) then
-      call store_error(&
+      call store_error( &
         'A SWI-SWI exchange is active, but the fresh GWF model &
         &does not have the same number of nodes as the salt &
         &GWF model.  Both models must have the same discretization &
         & properties.')
-        call store_error_filename(this%filename)
+      call store_error_filename(this%filename)
     end if
 
-    ! Set the number of exchanges equal to the number of equations in 
+    ! Set the number of exchanges equal to the number of equations in
     ! the fresh or saltwater models
     this%nexg = this%gwf_fresh%dis%nodes
 
@@ -289,9 +289,9 @@ module SwiSwiExchangeModule
                                               this%gwf_fresh%xold, &
                                               this%gwf_salt%xold)
     call this%gwf_salt%swi%set_head_pointers(this%gwf_fresh%x, &
-                                              this%gwf_salt%x, &
-                                              this%gwf_fresh%xold, &
-                                              this%gwf_salt%xold)
+                                             this%gwf_salt%x, &
+                                             this%gwf_fresh%xold, &
+                                             this%gwf_salt%xold)
   end subroutine swi_swi_ar
 
   !> @ brief Read and prepare
@@ -420,8 +420,10 @@ module SwiSwiExchangeModule
     type(ExgSwiswiParamFoundType) :: found
     !
     ! -- update defaults with idm sourced values
-    call mem_set_value(this%ipr_input, 'IPR_INPUT', this%input_mempath, found%ipr_input)
-    call mem_set_value(this%ipr_flow, 'IPR_FLOW', this%input_mempath, found%ipr_flow)
+    call mem_set_value(this%ipr_input, 'IPR_INPUT', this%input_mempath, &
+                       found%ipr_input)
+    call mem_set_value(this%ipr_flow, 'IPR_FLOW', this%input_mempath, &
+                       found%ipr_flow)
     !
     write (iout, '(1x,a)') 'Processing SWI-SWI exchange options'
     !

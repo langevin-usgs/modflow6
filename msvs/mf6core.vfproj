@@ -225,6 +225,8 @@
 		<File RelativePath="..\src\Idm\utl-hpcidm.f90"/>
 		<File RelativePath="..\src\Idm\utl-ncfidm.f90"/></Filter>
 		<Filter Name="Model">
+		<Filter Name="ChannelFlow">
+		<File RelativePath="..\src\Model\ChannelFlow\chf.f90"/></Filter>
 		<Filter Name="Connection">
 		<File RelativePath="..\src\Model\Connection\CellWithNbrs.f90"/>
 		<File RelativePath="..\src\Model\Connection\ConnectionBuilder.f90"/>
@@ -265,8 +267,7 @@
 		<Filter Name="submodules">
 		<File RelativePath="..\src\Model\GroundWaterFlow\submodules\gwf-sfr-constant.f90"/>
 		<File RelativePath="..\src\Model\GroundWaterFlow\submodules\gwf-sfr-steady.f90"/>
-	  <File RelativePath="..\src\Model\GroundWaterFlow\submodules\gwf-sfr-transient.f90"/>
-		<File RelativePath="..\src\Model\GroundWaterFlow\submodules\gwf-sfr-steady.f90"/></Filter>
+		<File RelativePath="..\src\Model\GroundWaterFlow\submodules\gwf-sfr-transient.f90"/></Filter>
 		<File RelativePath="..\src\Model\GroundWaterFlow\gwf-api.f90"/>
 		<File RelativePath="..\src\Model\GroundWaterFlow\gwf-buy.f90"/>
 		<File RelativePath="..\src\Model\GroundWaterFlow\gwf-chd.f90"/>
@@ -323,7 +324,6 @@
 		<File RelativePath="..\src\Model\ModelUtilities\GwfStorageUtils.f90"/>
 		<File RelativePath="..\src\Model\ModelUtilities\GwfVscInputData.f90"/>
 		<File RelativePath="..\src\Model\ModelUtilities\GwtDspOptions.f90"/>
-		<File RelativePath="..\src\Model\ModelUtilities\TspSpc.f90"/>
 		<File RelativePath="..\src\Model\ModelUtilities\ModelPackageInput.f90"/>
 		<File RelativePath="..\src\Model\ModelUtilities\Mover.f90"/>
 		<File RelativePath="..\src\Model\ModelUtilities\PackageMover.f90"/>
@@ -336,13 +336,12 @@
 		<File RelativePath="..\src\Model\ModelUtilities\TrackFile.f90"/>
 		<File RelativePath="..\src\Model\ModelUtilities\TrackControl.f90"/>
 		<File RelativePath="..\src\Model\ModelUtilities\TspAdvOptions.f90"/>
+		<File RelativePath="..\src\Model\ModelUtilities\TspSpc.f90"/>
 		<File RelativePath="..\src\Model\ModelUtilities\UzfCellGroup.f90"/>
 		<File RelativePath="..\src\Model\ModelUtilities\UzfEtUtil.f90"/>
 		<File RelativePath="..\src\Model\ModelUtilities\VectorInterpolation.f90"/>
 		<File RelativePath="..\src\Model\ModelUtilities\Xt3dAlgorithm.f90"/>
 		<File RelativePath="..\src\Model\ModelUtilities\Xt3dInterface.f90"/></Filter>
-		<Filter Name="ChannelFlow">
-		<File RelativePath="..\src\Model\ChannelFlow\chf.f90"/></Filter>
 		<Filter Name="OverlandFlow">
 		<File RelativePath="..\src\Model\OverlandFlow\olf.f90"/></Filter>
 		<Filter Name="ParticleTracking">
