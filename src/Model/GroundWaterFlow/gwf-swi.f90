@@ -71,8 +71,9 @@ module GwfSwiModule
     procedure, private :: allocate_arrays
     procedure, private :: source_griddata
     procedure, private :: update_zeta
-    procedure, private :: swi_fc_freshstorage
-    procedure, private :: swi_fn_freshstorage
+    procedure, private :: swi_fc_storage
+    procedure, private :: swi_fn_storage
+
     procedure :: set_as_saltmodel
     procedure :: set_head_pointers
     procedure :: get_zetanew
@@ -184,8 +185,7 @@ contains
   !!  Fill the coefficient matrix and right-hand side
   !!
   !<
-  subroutine swi_fc(this, kiter, hold, hnew, matrix_sln, idxglo, rhs, npf, &
-                    sto, inwt)
+  subroutine swi_fc(this, kiter, hold, hnew, matrix_sln, idxglo, rhs, npf, sto, inwt)
     ! modules
     ! dummy variables
     class(GwfSwiType) :: this !< GwfSwiType object
@@ -198,22 +198,43 @@ contains
     type(GwfNpfType), intent(in) :: npf
     type(GwfStoType), intent(in) :: sto
     ! local variables
-    integer(I4B) :: n
+    integer(I4B) :: n,nja,nodes,ii
     integer(I4B) :: idiag
-    integer(I4B) :: inwt
+    integer(I4B) :: inwt    
+    real(DP):: value
     ! formats
     !
+    !fill zeta
+    do n=1,this%dis%nodes
+      this%zeta(n) = this%get_zetanew(n)   
+    enddo
+    !
+    !-----------------------------------------------------------------------Dont zero out
+    ! If saltwater equation then clear AMAT and RHS of solution
+    !if (this%isaltwater == 1) then
+    !  value = 0.0d0  
+    !  nodes = npf%dis%nodes
+    !  do n = 1, nodes
+    !    do ii = npf%dis%con%ia(n) + 1, npf%dis%con%ia(n + 1) - 1
+    !      idiag = npf%dis%con%ia(n)
+    !      call matrix_sln%set_value_pos(idxglo(ii), value)
+    !      call matrix_sln%set_value_pos(idxglo(idiag), value) 
+    !      rhs(n) = value
+    !    enddo  
+    !  enddo  
+    !endif    
+    !-----------------------------------------------------------------------
+    !
+    ! fill swi Picard term
     call npf_fc_swi(npf, kiter, matrix_sln, idxglo, &
-                    rhs, hnew, this%zeta)
+                    rhs, hnew, this%zeta, this%isaltwater)
     !
     ! test if steady-state stress period
     if (this%iss /= 0) return
     !
-    ! Calculate fresh storage terms and put in hcof/rhs
-    if (this%isaltwater == 0) then
-      call this%swi_fc_freshstorage(kiter, hold, hnew, matrix_sln, idxglo, &
-                                    rhs, sto, inwt)
-    end if
+    ! Calculate storage terms and put in hcof/rhs
+      call this%swi_fc_storage(kiter, hold, hnew, matrix_sln, idxglo, &
+                                    rhs, sto, inwt, this%isaltwater)
     !
     ! Add hcof and rhs terms
     do n = 1, this%dis%nodes
@@ -228,13 +249,13 @@ contains
 
   !> @ brief Calculate fresh storage terms
   !<
-  subroutine swi_fc_freshstorage(this, kiter, hold, hnew, matrix_sln, idxglo, &
-                                 rhs, sto, inwt)
+  subroutine swi_fc_storage(this, kiter, hold, hnew, matrix_sln, idxglo, &
+                                 rhs, sto, inwt, isaltwater)
     ! modules
     use TdisModule, only: delt
     use GwfStorageUtilsModule, only: SsCapacity, SyCapacity, SsTerms, SyTerms
-    !
-    class(GwfStoType) :: sto
+    ! 
+    class(GwfStoType) :: sto    
     ! dummy variables
     class(GwfSwiType) :: this !< GwfSwiType object
     integer(I4B), intent(in) :: kiter !< outer iteration number
@@ -243,7 +264,7 @@ contains
     class(MatrixBaseType), pointer :: matrix_sln !< A matrix
     integer(I4B), intent(in), dimension(:) :: idxglo !< global index model to solution
     real(DP), intent(inout), dimension(:) :: rhs !< right-hand side
-    integer(I4B) :: inwt
+    integer(I4B) :: inwt, isaltwater    
     ! local variables
     integer(I4B) :: n
     integer(I4B) :: idiag
@@ -286,13 +307,18 @@ contains
       bt = this%dis%bot(n)
       !
       ! aquifer saturation
-      if (sto%iconvert(n) == 0) then
-        snold = DONE
-        snnew = DONE
+      if(isaltwater == 0) then 
+        if (sto%iconvert(n) == 0) then
+          snold = DONE
+          snnew = DONE
+        else
+          snold = sQuadraticSaturation(tp, bt, hold(n), sto%satomega)
+          snnew = sQuadraticSaturation(tp, bt, hnew(n), sto%satomega)
+        end if
       else
-        snold = sQuadraticSaturation(tp, bt, hold(n), sto%satomega)
-        snnew = sQuadraticSaturation(tp, bt, hnew(n), sto%satomega)
-      end if
+        snold = sQuadraticSaturation(tp, bt, zetaold, sto%satomega)
+        snnew = sQuadraticSaturation(tp, bt, zetanew, sto%satomega) 
+      endif    
       !
       ! storage coefficients
       sc1 = SsCapacity(sto%istor_coef, tp, bt, this%dis%area(n), sto%ss(n))
@@ -320,10 +346,17 @@ contains
       snnew = sQuadraticSaturation(tp, bt, zetanew, sto%satomega)
       aterm = aterm * snnew
       rhsterm = rhsterm * snnew
-
+      
       !
-      ! add specific storage terms to amat and rhs - subtract out aterm and rhsterm
-      idiag = this%dis%con%ia(n)
+      ! add specific storage terms to amat and rhs - 
+      ! subtract out aterm and rhsterm from the saltwater zone for freshwater
+      !
+      ! THEREFORE, for saltwater, flip sign on aterm and rhsterm
+      if(isaltwater.eq.1)then 
+        aterm = -aterm
+        rhsterm = -rhsterm
+      endif    
+      idiag = this%dis%con%ia(n)      
       call matrix_sln%add_value_pos(idxglo(idiag), -aterm)
       rhs(n) = rhs(n) - rhsterm
       !
@@ -331,7 +364,7 @@ contains
       if (sto%iconvert(n) /= 0) then
         rhsterm = DZERO
         snold = sQuadraticSaturation(tp, bt, zetaold, sto%satomega)
-        snnew = sQuadraticSaturation(tp, bt, zetanew, sto%satomega)
+        snnew = sQuadraticSaturation(tp, bt, zetanew, sto%satomega)        
         !
         ! secondary storage coefficient
         sc2 = SyCapacity(this%dis%area(n), this%sy(n))
@@ -350,23 +383,35 @@ contains
         end if
         !
         ! calculate specific storage terms from bot to zeta
-        if (inwt /= 0) then
+        if (inwt /=0) then
           call SyTerms(tp, bt, rho2, rho2old, snnew, snold, &
-                       aterm, rhsterm)
+                     aterm, rhsterm)
 !
-          ! add specific yield terms to amat and rhs - subtract out aterm and rhsterm
-          idiag = this%dis%con%ia(n)
+          ! add specific yield terms to amat and rhs - 
+          !subtract out aterm and rhsterm from the saltwater zone for freshwater
+          !
+          ! THEREFORE, for saltwater, flip sign on aterm and rhsterm
+          if(isaltwater.eq.1)then 
+            aterm = -aterm
+            rhsterm = -rhsterm
+          endif              
+          !-------------------------------------------------------------
+           idiag = this%dis%con%ia(n)  
           call matrix_sln%add_value_pos(idxglo(idiag), -aterm)
           rhs(n) = rhs(n) - rhsterm
         else
-          !csp*** old way of storage term commented out here
-          !sp***     sc2 = SyCapacity(this%dis%area(n), this%sy(n))
-          !sp***     rho2 = -this%alphaf * sc2 * tled
-          ! new and old zeta above bottom
-          !sp***       this%hcof(n) = rho2
-          !sp***       this%rhs(n) = rho2 * hold(n)
-          rho2 = -rho2 * this%alphaf
-          rho2old = -rho2old * this%alphaf
+ ! 
+          rho2 = -rho2 * this%alphaf  
+          rho2old = - rho2old  * this%alphaf
+          ! add specific yield terms to hcof and rhs - 
+          !subtract out terms from the saltwater zone for freshwater
+          !
+          ! THEREFORE, for saltwater, flip sign on terms
+          if(isaltwater.eq.1)then 
+            rho2 = -rho2
+            rho2old = -rho2old
+          endif              
+          !-------------------------------------------------------------          
           if (zetanew > this%dis%bot(n) .and. zetaold > this%dis%bot(n)) then
             ! new and old zeta above bottom
             this%hcof(n) = rho2
@@ -379,16 +424,16 @@ contains
             ! zetanew is below bottom, zetaold above bottom
             this%hcof(n) = DZERO
             this%rhs(n) = rho2 * (this%dis%bot(n) / this%alphaf + hold(n))
-          end if
-        end if
-        !
-      end if
+          end if        
+        endif
+  !  
+      endif
       !
     end do
     !
     ! return
     return
-  end subroutine swi_fc_freshstorage
+  end subroutine swi_fc_storage
 
   subroutine swi_fn(this, kiter, matrix_sln, idxglo, rhs, hnew, hold, npf, sto)
     ! dummy
@@ -401,30 +446,33 @@ contains
     real(DP), intent(inout), dimension(:) :: hold
     type(GwfNpfType) :: npf
     type(GwfStoType) :: sto
-
+    ! local variables
+    real(DP) :: dssdh
+    !
+    dssdh = -this%alphaf  ! derivative of saltwater saturation with respect to freshwater head
+    if(this%isaltwater == 1) dssdh = this%alphas ! derivative of saltwater saturation with respect to saltwater head
+    !
     call npf_fn_swi(npf, kiter, matrix_sln, idxglo, rhs, hnew, &
-                    this%zeta, -this%alphaf)
-
-    ! test if steady-state stress period
+                    this%zeta, dssdh,this%isaltwater)
+  ! 
+  ! test if steady-state stress period
     if (this%iss /= 0) return
+  !
+  ! Calculate fresh storage Newton terms and put in hcof/rhs
+      call this%swi_fn_storage(kiter, hold, hnew, matrix_sln, idxglo, rhs, sto,dssdh,this%isaltwater)
 
-    ! Calculate fresh storage Newton terms and put in hcof/rhs
-    if (this%isaltwater == 0) then
-      call this%swi_fn_freshstorage(kiter, hold, hnew, matrix_sln, idxglo, rhs, &
-                                    sto)
-    end if
+  !
 
   end subroutine swi_fn
-
+ 
   !> @ brief Calculate fresh storage terms
   !<
-  subroutine swi_fn_freshstorage(this, kiter, hold, hnew, matrix_sln, idxglo, &
-                                 rhs, sto)
+  subroutine swi_fn_storage(this, kiter, hold, hnew, matrix_sln, idxglo, rhs, sto,dssdh,isaltwater)
     ! modules
     use TdisModule, only: delt
     use GwfStorageUtilsModule, only: SsCapacity, SyCapacity, SsTerms, SyTerms
-    !
-    class(GwfStoType) :: sto
+    ! 
+    class(GwfStoType) :: sto    
     ! dummy variables
     class(GwfSwiType) :: this !< GwfSwiType object
     integer(I4B), intent(in) :: kiter !< outer iteration number
@@ -433,6 +481,8 @@ contains
     class(MatrixBaseType), pointer :: matrix_sln !< A matrix
     integer(I4B), intent(in), dimension(:) :: idxglo !< global index model to solution
     real(DP), intent(inout), dimension(:) :: rhs !< right-hand side
+    integer(I4B), intent(in) :: isaltwater !< index for saltwater equation   
+    real(DP) :: dssdh
     ! local variables
     integer(I4B) :: n
     integer(I4B) :: idiag
@@ -451,7 +501,7 @@ contains
     real(DP) :: drterm
     real(DP) :: zetanew
     real(DP) :: zetaold
-    real(DP) :: sew, dereps
+    real(DP) :: sew,dereps
     !
     ! set variables
     tled = DONE / delt
@@ -464,7 +514,7 @@ contains
       ! calculate zetanew and zetaold
       zetanew = this%get_zetanew(n)
       zetaold = this%get_zetaold(n)
-      !
+      !      
       ! aquifer elevations and thickness
       tp = this%dis%top(n)
       bt = this%dis%bot(n)
@@ -483,16 +533,27 @@ contains
       ! calculate newton terms for specific storage
       !    and specific yield
       if (sto%iconvert(n) /= 0) then
-        !
+        ! ----------------------------------------------------
         ! calculate saturation derivative as dS/dzeta * dzeta/dh_fresh
-        derv = sQuadraticSaturationDerivative(tp, bt, zetanew)
-        derv = derv * this%alphaf
-        !
-        sew = sQuadraticSaturation(tp, bt, zetanew, sto%satomega)
-        dereps = 1e-6
-        zetanew = this%get_zetanew(n, eps_fresh=dereps)
-        derv = sQuadraticSaturation(tp, bt, zetanew, sto%satomega)
-        derv = (derv - sew) / dereps
+    !    derv = sQuadraticSaturationDerivative(tp, bt, zetanew)
+    !    derv = derv * dssdh
+        ! -----------------------------------------------------  
+        ! calculate saturation derivative directly as dS / dh
+    !    sew = sQuadraticSaturation(tp, bt, zetanew, sto%satomega)
+    !    dereps = 1e-6
+    !    if (isaltwater == 0) then
+    !      zetanew = this%get_zetanew(n, eps_fresh=dereps)
+    !    else
+    !      zetanew = this%get_zetanew(n, eps_salt=dereps)    
+    !    endif    
+    !    derv = sQuadraticSaturation(tp, bt, zetanew, sto%satomega)
+    !    derv = (derv-sew)/dereps
+        ! ----------------------------------------------------
+        ! calculate saturation derivative for saltwater as rhof/(rhos-rhof)/TOTTHICK and freshwater as rhos/(rhos-rhof)/TOTTHICK 
+          derv = dssdh/tthk
+    !      if(isaltwater.eq.0) derv = -0.5
+    !      if(isaltwater.eq.1) derv = 0.5125
+        ! ----------------------------------------------------
         !
         ! newton terms for specific storage
         if (sto%iconf_ss == 0) then
@@ -501,8 +562,8 @@ contains
           else
             drterm = -(rho1 * derv * h)
           end if
-          !sp**         call matrix_sln%add_value_pos(idxglo(idiag), drterm)
-          !sp**         rhs(n) = rhs(n) + drterm * h
+ !sp**         call matrix_sln%add_value_pos(idxglo(idiag), drterm)
+ !sp**         rhs(n) = rhs(n) + drterm * h
         end if
         !
         ! newton terms for specific yield
@@ -513,17 +574,28 @@ contains
           if (snnew > DZERO) then
             rterm = -rho2 * tthk * snnew
             drterm = -rho2 * tthk * derv
+            ! swi correction on freshwater flips sign so for saltwater equation flip sign back
+            if (isaltwater == 1) then
+              rterm = -rterm   
+              drterm = - drterm
+              rho2 = - rho2
+            endif 
             ! subtract saltwater part from total flow terms
             call matrix_sln%add_value_pos(idxglo(idiag), -drterm - rho2)
-            rhs(n) = rhs(n) - (-rterm + drterm * hnew(n) + rho2 * bt)
+            !     rhs(n) = rhs(n) -(- rterm + drterm * hnew(n) + rho2 * bt)  !csp**** check with single equation
+            rhs(n) = rhs(n) -(- rterm + drterm * hnew(n) + rho2 * bt)
           end if
         end if
       end if
-    end do
+    end do  
     !
     ! return
     return
-  end subroutine swi_fn_freshstorage
+  end subroutine swi_fn_storage  
+  !
+  !
+
+  !-----------------------------------------------
   !
   !> @brief convergence check
   !<
@@ -583,18 +655,18 @@ contains
   !<
   subroutine swi_cq(this, hnew, hold, flowja, npf, sto)
     ! modules
-    use TdisModule, only: delt
+    use TdisModule, only: delt  
     use GwfStorageUtilsModule, only: SsCapacity, SyCapacity, SsTerms, SyTerms
     !
     ! dummy variables
     class(GwfSwiType) :: this !< GwfSwiType object
     real(DP), intent(in), dimension(:) :: hnew
-    real(DP), dimension(:), contiguous, intent(in) :: hold !< previous head
+    real(DP), dimension(:), contiguous, intent(in) :: hold !< previous head    
     real(DP), dimension(:), contiguous, intent(inout) :: flowja !< connection flows
     type(GwfNpfType), intent(in) :: npf
     type(GwfStoType), intent(in) :: sto
     ! local variables
-    integer(I4B) :: n, ii, m, ictn, ictm
+    integer(I4B) :: n, ii, m, ictn, ictm 
     integer(I4B) :: idiag
     real(DP) :: qnm
     !  for storage terms
@@ -613,10 +685,10 @@ contains
     real(DP) :: snold
     real(DP) :: snnew
     real(DP) :: aterm
-    real(DP) :: rhsterm
+    real(DP) :: rhsterm    
     real(DP) :: zetanew
     real(DP) :: zetaold
-
+    
     !
     ! todo: need to issue error if xt3d is active
     ! if (npf%ixt3d /= 0) then
@@ -634,10 +706,13 @@ contains
         ! upper and lower parts of amat.
         m = npf%dis%con%ja(ii)
         if (m < n) cycle
-        !
-        call swi_qcalc(npf, n, m, ii, ictn, ictm, hnew(n), hnew(m), qnm, &
-                       this%zeta)
-        !       change sign to subtract out qnm from salt side
+    !
+        call swi_qcalc(npf, n, m, ii, ictn, ictm, hnew(n), hnew(m), qnm, this%zeta)
+    !
+    ! For saltwater equation, flip sign on rate to just add it
+        if(this%isaltwater.eq.1) qnm = -qnm 
+    !
+    !       change sign to subtract out qnm from salt side
         flowja(ii) = flowja(ii) - qnm
         flowja(this%dis%con%isym(ii)) = flowja(this%dis%con%isym(ii)) + qnm
       end do
@@ -653,7 +728,12 @@ contains
       ! Calculate storage change
       do n = 1, this%dis%nodes
         if (this%ibound(n) <= 0) cycle
-
+        !----saltwater array was not initialized as sto_cq is skipped
+        if(this%isaltwater.eq.1) then 
+          sto%strgss(n) = 0.0
+          sto%strgsy(n) = 0.0
+        endif  
+        !
         ! calculate zetanew and zetaold
         zetanew = this%get_zetanew(n)
         zetaold = this%get_zetaold(n)
@@ -690,10 +770,13 @@ contains
         !
         ! calculate specific storage terms and rate
         call SsTerms(sto%iconvert(n), sto%iorig_ss, sto%iconf_ss, tp, bt, &
-                     rho1, rho1old, snnew, snold, hnew(n), hold(n), &
+                     rho1, rho1old, snnew, snold,  hnew(n), hold(n), &
                      aterm, rhsterm, rate)
         snnew = sQuadraticSaturation(tp, bt, zetanew, sto%satomega)
         rate = snnew * rate
+        !
+        ! For saltwater equation, flip sign on rate to just add it
+        if(this%isaltwater.eq.1) rate = -rate         
         !
         ! subtract rate in saltwater part from total
         sto%strgss(n) = sto%strgss(n) - rate
@@ -705,8 +788,8 @@ contains
         ! specific yield
         rate = DZERO
         snold = sQuadraticSaturation(tp, bt, zetaold, sto%satomega)
-        snnew = sQuadraticSaturation(tp, bt, zetanew, sto%satomega)
-        if (sto%inewton /= 0) then
+        snnew = sQuadraticSaturation(tp, bt, zetanew, sto%satomega)        
+        if (sto%inewton /=0) then
           if (sto%iconvert(n) /= 0) then
             !
             ! secondary storage coefficient
@@ -727,24 +810,32 @@ contains
             !
             ! calculate specific yield storage terms and rate
             call SyTerms(tp, bt, rho2, rho2old, snnew, snold, &
-                         aterm, rhsterm, rate)
+                       aterm, rhsterm, rate)
           end if
-          ! subtract rate in saltwater part from total
+          !
+          ! For saltwater equation, flip sign on rate to just add it
+          if(this%isaltwater.eq.1) rate = -rate           
+          !
+          ! subtract rate in saltwater part from total        
           sto%strgsy(n) = sto%strgsy(n) - rate
           !
           ! add storage term to flowja - subtract out saltwater part
           idiag = this%dis%con%ia(n)
           flowja(idiag) = flowja(idiag) - rate
-          !
-        else
-          ! Calculate change in freshwater storage for Picard way
+      !   
+        else 
+      ! Calculate change in freshwater storage for Picard way
           rate = this%hcof(n) * hnew(n) - this%rhs(n)
+      !
+      ! For saltwater equation, flip sign on rate to just add it
+          if(this%isaltwater.eq.1) rate = -rate          
+      !    
           this%storage(n) = rate
           !
           ! Add storage term to flowja
           idiag = this%dis%con%ia(n)
           flowja(idiag) = flowja(idiag) + rate
-        end if
+        endif  
       end do
     end if
     !
@@ -752,22 +843,23 @@ contains
     return
   end subroutine swi_cq
 
+
   !> @ brief Calculate flows for SWI package and adjust flowja
   !!
   !<
-  subroutine swi_qcalc(npf, n, m, ii, ictn, ictm, hn, hm, qnm, zeta)
+  subroutine swi_qcalc(npf, n, m, ii, ictn, ictm, hn, hm,qnm, zeta)
     ! modules
     use ConstantsModule, only: DONE
     ! dummy
     class(GwfNpfType) :: npf
-    integer(I4B) :: n, m, ii, ihc, ictn, ictm
+    integer(I4B) :: n, m, ii, ihc, ictn, ictm 
     real(DP), intent(in) :: hn
     real(DP), intent(in) :: hm
     real(DP), intent(out) :: qnm
     real(DP), intent(in), dimension(:) :: zeta
     ! local
     real(DP) :: hyn, hym
-    real(DP) :: cond
+    real(DP) :: cond 
     real(DP) :: satn, satm
 
     ! --Calculate freshwater flow between nodes n and m on the saltwater side
@@ -946,10 +1038,10 @@ contains
     call this%NumericalPackageType%da()
 
     ! nullify pointers
-    nullify (this%hfresh)
-    nullify (this%hsalt)
-    nullify (this%hfreshold)
-    nullify (this%hsaltold)
+    nullify(this%hfresh)
+    nullify(this%hsalt)
+    nullify(this%hfreshold)
+    nullify(this%hsaltold)
 
   end subroutine swi_da
 
@@ -1113,7 +1205,7 @@ contains
 
   !> @brief Set this model as the saltwater model.
   !! This can be called from an exchange, such as the
-  !! SwiSwi exchange, which knows which model/swi package
+  !! SwiSwi exchange, which knows which model/swi package 
   !! is the saltwater model.
   !<
   subroutine set_as_saltmodel(this)
@@ -1168,13 +1260,13 @@ contains
     end if
     if (associated(this%hsalt)) then
       ! two-model swi with fresh and salt
-      zetanew = calc_zeta(this%alphaf, &
-                          this%hfresh(n) + eps_f, &
-                          this%alphas, &
-                          this%hsalt(n) + eps_s)
+      zetanew = calc_zeta(this%alphaf, & 
+                          this%hfresh(n)+eps_f, &
+                          this%alphas, & 
+                          this%hsalt(n)+eps_s)
     else
       ! freshwater only simulation
-      zetanew = calc_zeta(this%alphaf, this%hfresh(n) + eps_f)
+      zetanew = calc_zeta(this%alphaf, this%hfresh(n)+eps_f)
     end if
   end function get_zetanew
 
@@ -1210,12 +1302,12 @@ contains
     if (associated(this%hsaltold)) then
       ! two-model swi with fresh and salt
       zetaold = calc_zeta(this%alphaf, &
-                          this%hfreshold(n) + eps_f, &
+                          this%hfreshold(n)+eps_f, &
                           this%alphas, &
-                          this%hsaltold(n) + eps_s)
+                          this%hsaltold(n)+eps_s)
     else
       ! freshwater only simulation
-      zetaold = calc_zeta(this%alphaf, this%hfreshold(n) + eps_f)
+      zetaold = calc_zeta(this%alphaf, this%hfreshold(n)+eps_f)
     end if
   end function get_zetaold
 
@@ -1265,7 +1357,7 @@ contains
   !!
   !! This is a retooling of the npf_fc to subtract the saltwater flow
   !> that would occur below zeta.
-  subroutine npf_fc_swi(npf, kiter, matrix_sln, idxglo, rhs, hnew, zeta)
+  subroutine npf_fc_swi(npf, kiter, matrix_sln, idxglo, rhs, hnew, zeta, isaltwater)
     ! modules
     use ConstantsModule, only: DONE
     ! dummy
@@ -1277,7 +1369,7 @@ contains
     real(DP), intent(in), dimension(:) :: hnew
     real(DP), intent(in), dimension(:) :: zeta
     ! local
-    integer(I4B) :: n, m, ii, idiag, ihc
+    integer(I4B) :: n, m, ii, idiag, ihc, isaltwater
     integer(I4B) :: isymcon, idiagm
     real(DP) :: hyn, hym
     real(DP) :: cond
@@ -1338,7 +1430,11 @@ contains
                      npf%dis%con%hwva(npf%dis%con%jas(ii)))
 
         ! Fill row n, Note signs are flipped in order to
-        ! subtract the flow from the saltwater zone
+        ! subtract the flow from the saltwater zone for freshwater
+        !
+        ! THEREFORE, for saltwater, flip sign on cond
+        if(isaltwater.eq.1) cond = -cond 
+        !
         idiag = npf%dis%con%ia(n)
         call matrix_sln%add_value_pos(idxglo(ii), -cond)
         call matrix_sln%add_value_pos(idxglo(idiag), cond)
@@ -1355,7 +1451,7 @@ contains
 
   !> @brief Fill newton terms
   !<
-  subroutine npf_fn_swi(npf, kiter, matrix_sln, idxglo, rhs, hnew, zeta, dzetadh)
+  subroutine npf_fn_swi(npf, kiter, matrix_sln, idxglo, rhs, hnew, zeta, dzetadh,isaltwater)
     ! dummy
     type(GwfNpfType) :: npf
     integer(I4B) :: kiter
@@ -1365,6 +1461,7 @@ contains
     real(DP), intent(inout), dimension(:) :: hnew
     real(DP), intent(inout), dimension(:) :: zeta
     real(DP), intent(in) :: dzetadh
+    integer(I4B), intent(in) :: isaltwater !< index for saltwater equation      
     ! local
     integer(I4B) :: nodes, nja
     integer(I4B) :: n, m, ii, idiag
@@ -1388,105 +1485,110 @@ contains
     !if (npf%ixt3d /= 0) then
     !  call npf%xt3d%xt3d_fn(kiter, nodes, nja, matrix_sln, idxglo, rhs, hnew)
     !else
-    !
-    do n = 1, nodes
-      idiag = npf%dis%con%ia(n)
-      do ii = npf%dis%con%ia(n) + 1, npf%dis%con%ia(n + 1) - 1
-        if (npf%dis%con%mask(ii) == 0) cycle
+      !
+      do n = 1, nodes
+        idiag = npf%dis%con%ia(n)
+        do ii = npf%dis%con%ia(n) + 1, npf%dis%con%ia(n + 1) - 1
+          if (npf%dis%con%mask(ii) == 0) cycle
 
-        m = npf%dis%con%ja(ii)
-        isymcon = npf%dis%con%isym(ii)
-        ! work on upper triangle
-        if (m < n) cycle
-        if (npf%dis%con%ihc(npf%dis%con%jas(ii)) == 0 .and. &
-            npf%ivarcv == 0) then
-          !call npf%vcond(n,m,hnew(n),hnew(m),ii,cond)
-          ! do nothing
-        else
-          ! determine upstream node
-          iups = m
-          if (hnew(m) < hnew(n)) iups = n
-          idn = n
-          if (iups == n) idn = m
-          !
-          ! no newton terms if upstream cell is confined
-          ! for swi, always do newton
-          !if (npf%icelltype(iups) == 0) cycle
-          !
-          ! Set the upstream top and bot, and then recalculate for a
-          !    vertically staggered horizontal connection
-          topup = npf%dis%top(iups)
-          botup = npf%dis%bot(iups)
-          if (npf%dis%con%ihc(npf%dis%con%jas(ii)) == 2) then
-            topup = min(npf%dis%top(n), npf%dis%top(m))
-            botup = max(npf%dis%bot(n), npf%dis%bot(m))
-          end if
-          !
-          ! get saturated conductivity for derivative
-          cond = npf%condsat(npf%dis%con%jas(ii))
-          !
-          ! compute additional term
-          consterm = -cond * (hnew(iups) - hnew(idn)) !needs to use hwadi instead of hnew(idn)
-          !filledterm = cond
-          filledterm = matrix_sln%get_value_pos(idxglo(ii))
-          ! use zeta in derivative
-          derv = sQuadraticSaturationDerivative(topup, botup, zeta(iups), &
-                                                npf%satomega)
-          derv = derv * dzetadh
-          idiagm = npf%dis%con%ia(m)
-          ! fill jacobian for n being the upstream node
-          if (iups == n) then
-            hds = hnew(m)
-            !isymcon =  npf%dis%con%isym(ii)
-            term = consterm * derv
-            ! flip signs for swi correction
-            rhs(n) = rhs(n) - term * hnew(n) !+ amat(idxglo(isymcon)) * (dwadi * hds - hds) !need to add dwadi
-            rhs(m) = rhs(m) + term * hnew(n) !- amat(idxglo(isymcon)) * (dwadi * hds - hds) !need to add dwadi
-            ! fill in row of n
-            ! flip sign for swi correction
-            call matrix_sln%add_value_pos(idxglo(idiag), -term)
-            ! fill newton term in off diagonal if active cell
-            if (npf%ibound(n) > 0) then
-              filledterm = matrix_sln%get_value_pos(idxglo(ii))
-              call matrix_sln%set_value_pos(idxglo(ii), filledterm) !* dwadi !need to add dwadi
-            end if
-            !fill row of m
-            filledterm = matrix_sln%get_value_pos(idxglo(idiagm))
-            call matrix_sln%set_value_pos(idxglo(idiagm), filledterm) !- filledterm * (dwadi - DONE) !need to add dwadi
-            ! fill newton term in off diagonal if active cell
-            if (npf%ibound(m) > 0) then
-              ! flip sign for swi correction
-              call matrix_sln%add_value_pos(idxglo(isymcon), term)
-            end if
-            ! fill jacobian for m being the upstream node
+          m = npf%dis%con%ja(ii)
+          isymcon = npf%dis%con%isym(ii)
+          ! work on upper triangle
+          if (m < n) cycle
+          if (npf%dis%con%ihc(npf%dis%con%jas(ii)) == 0 .and. &
+              npf%ivarcv == 0) then
+            !call npf%vcond(n,m,hnew(n),hnew(m),ii,cond)
+            ! do nothing
           else
-            hds = hnew(n)
-            term = -consterm * derv
-            ! flip sign for swi correction
-            rhs(n) = rhs(n) - term * hnew(m) !+ amat(idxglo(ii)) * (dwadi * hds - hds) !need to add dwadi
-            rhs(m) = rhs(m) + term * hnew(m) !- amat(idxglo(ii)) * (dwadi * hds - hds) !need to add dwadi
-            ! fill in row of n
-            filledterm = matrix_sln%get_value_pos(idxglo(idiag))
-            call matrix_sln%set_value_pos(idxglo(idiag), filledterm) !- filledterm * (dwadi - DONE) !need to add dwadi
-            ! fill newton term in off diagonal if active cell
-            if (npf%ibound(n) > 0) then
-              ! flip sign for swi correction
-              call matrix_sln%add_value_pos(idxglo(ii), -term)
+            ! determine upstream node
+            iups = m
+            if (hnew(m) < hnew(n)) iups = n
+            idn = n
+            if (iups == n) idn = m
+            !
+            ! no newton terms if upstream cell is confined
+            ! for swi, always do newton
+            !if (npf%icelltype(iups) == 0) cycle
+            !
+            ! Set the upstream top and bot, and then recalculate for a
+            !    vertically staggered horizontal connection
+            topup = npf%dis%top(iups)
+            botup = npf%dis%bot(iups)
+            if (npf%dis%con%ihc(npf%dis%con%jas(ii)) == 2) then
+              topup = min(npf%dis%top(n), npf%dis%top(m))
+              botup = max(npf%dis%bot(n), npf%dis%bot(m))
             end if
-            !fill row of m
-            ! flip sign for swi correction
-            call matrix_sln%add_value_pos(idxglo(idiagm), term)
-            ! fill newton term in off diagonal if active cell
-            if (npf%ibound(m) > 0) then
-              filledterm = matrix_sln%get_value_pos(idxglo(isymcon))
-              call matrix_sln%set_value_pos(idxglo(isymcon), filledterm) !* dwadi  !need to add dwadi
+            !
+            ! get saturated conductivity for derivative
+            cond = npf%condsat(npf%dis%con%jas(ii))
+            !
+            ! compute additional term
+            consterm = -cond * (hnew(iups) - hnew(idn)) !needs to use hwadi instead of hnew(idn)
+            !filledterm = cond
+            filledterm = matrix_sln%get_value_pos(idxglo(ii))
+            ! use zeta in derivative
+            derv = sQuadraticSaturationDerivative(topup, botup, zeta(iups), &
+                                                  npf%satomega)
+            !   derv = 1.25e-2 ! will always be this on linear part where saturation is not near 0 or 1 (away from smoothing)
+            derv = derv * dzetadh
+            idiagm = npf%dis%con%ia(m)
+            ! fill jacobian for n being the upstream node
+            if (iups == n) then
+              hds = hnew(m)
+              !isymcon =  npf%dis%con%isym(ii)
+              term = consterm * derv
+              ! swi correction on freshwater flips sign so for saltwater equation flip sign back
+              if(isaltwater == 1) term = -term  
+              ! flip signs for swi correction
+              rhs(n) = rhs(n) - term * hnew(n) !+ amat(idxglo(isymcon)) * (dwadi * hds - hds) !need to add dwadi
+              rhs(m) = rhs(m) + term * hnew(n) !- amat(idxglo(isymcon)) * (dwadi * hds - hds) !need to add dwadi
+              ! fill in row of n
+              ! flip sign for swi correction
+              call matrix_sln%add_value_pos(idxglo(idiag), -term)
+              ! fill newton term in off diagonal if active cell
+              if (npf%ibound(n) > 0) then
+                filledterm = matrix_sln%get_value_pos(idxglo(ii))
+                call matrix_sln%set_value_pos(idxglo(ii), filledterm) !* dwadi !need to add dwadi
+              end if
+              !fill row of m
+              filledterm = matrix_sln%get_value_pos(idxglo(idiagm))
+              call matrix_sln%set_value_pos(idxglo(idiagm), filledterm) !- filledterm * (dwadi - DONE) !need to add dwadi
+              ! fill newton term in off diagonal if active cell
+              if (npf%ibound(m) > 0) then
+                ! flip sign for swi correction
+                call matrix_sln%add_value_pos(idxglo(isymcon), term)
+              end if
+              ! fill jacobian for m being the upstream node
+            else
+              hds = hnew(n)
+              term = -consterm * derv
+              ! swi correction on freshwater flips sign so for saltwater equation flip sign back
+              if(isaltwater == 1) term = -term               
+              ! flip sign for swi correction
+              rhs(n) = rhs(n) - term * hnew(m) !+ amat(idxglo(ii)) * (dwadi * hds - hds) !need to add dwadi
+              rhs(m) = rhs(m) + term * hnew(m) !- amat(idxglo(ii)) * (dwadi * hds - hds) !need to add dwadi
+              ! fill in row of n
+              filledterm = matrix_sln%get_value_pos(idxglo(idiag))
+              call matrix_sln%set_value_pos(idxglo(idiag), filledterm) !- filledterm * (dwadi - DONE) !need to add dwadi
+              ! fill newton term in off diagonal if active cell
+              if (npf%ibound(n) > 0) then
+                ! flip sign for swi correction
+                call matrix_sln%add_value_pos(idxglo(ii), -term)
+              end if
+              !fill row of m
+              ! flip sign for swi correction
+              call matrix_sln%add_value_pos(idxglo(idiagm), term)
+              ! fill newton term in off diagonal if active cell
+              if (npf%ibound(m) > 0) then
+                filledterm = matrix_sln%get_value_pos(idxglo(isymcon))
+                call matrix_sln%set_value_pos(idxglo(isymcon), filledterm) !* dwadi  !need to add dwadi
+              end if
             end if
           end if
-        end if
 
+        end do
       end do
-    end do
-    !
+      !
 !    end if
     !
     ! Return
