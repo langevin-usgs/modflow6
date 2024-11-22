@@ -110,6 +110,7 @@ def build_models(idx, test):
     ims = flopy.mf6.ModflowIms(
         sim,
         print_option="all",
+        no_ptcrecord=True,
         outer_maximum=50,
         linear_acceleration="bicgstab",
     )

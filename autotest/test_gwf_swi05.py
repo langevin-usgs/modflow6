@@ -12,32 +12,23 @@ import pytest
 from framework import TestFramework
 
 cases = [
-    "swi04a",
-    "swi04b",
+    "swi05a",
+    "swi05b",
 ]
-saltwater_head = [0.0, 1.0]
+saltwater_head = [0.0, 40.0]
 
-dmax = -20. # deepest ocean bottom elevation
-dmin = -1. # shallowest ocean bottom elevation
-Lx_coast = 3000. # x position of coastline from the left
-Lx_edge = 10000. # x position of right edge of model domain
+Lx = 10000. # x position of right edge of model domain
 delr = 100.
 delc = 1.
 nlay = 1
 nrow = 1
-ncol = int(Lx_edge / delr)
-top_island = 10.
-botm_aquifer = -200.
-recharge = 0.001
+ncol = int(Lx / delr)
+top_island = 50.
+botm_aquifer = -50.
+recharge = 0.0001
 hydraulic_conductivity = 100.0
-ghb_cond_fact = 0.001
+ghb_cond_fact = 1.0
 
-dx = Lx_edge / ncol 
-x = np.linspace(dx / 2., Lx_edge - dx / 2, ncol)
-slope = (dmin - dmax) / Lx_coast
-top = dmax + x * slope
-top[x>Lx_coast] = top_island
-top = top.reshape((nrow, ncol))
 
 def build_models(idx, test):
     ws = test.workspace
@@ -70,7 +61,7 @@ def build_models(idx, test):
         ncol=ncol,
         delr=delr,
         delc=delc,
-        top=top,
+        top=top_island,
         botm=botm_aquifer,
     )
     ic = flopy.mf6.ModflowGwfic(gwf, strt=0)
@@ -87,14 +78,12 @@ def build_models(idx, test):
         gwf, 
         zeta_filerecord=zeta_file,
         saltwater_head=h0,
-        zetastrt=-1,
+        zetastrt=-10,
     )
     cghb = hydraulic_conductivity * ghb_cond_fact * delr * delc / 1
-    jcol_ghb = np.where(x < Lx_coast)[0]
     ghb_list = []
-    for j in jcol_ghb:
-        freshwater_head = h0 + (h0 - top[0, j]) * 0.025
-        # freshwater_head = h0
+    for j in [0, ncol - 1]:
+        freshwater_head = h0
         ghb_list.append([0, 0, j, freshwater_head, cghb])
 
     ghb = flopy.mf6.ModflowGwfghb(
@@ -115,7 +104,7 @@ def build_models(idx, test):
     return sim, None
 
 
-def make_cross_section_plot(test, sim, idx, title):
+def make_cross_section_plot(test, sim, idx):
     import matplotlib.pyplot as plt
 
     ws = pl.Path(sim.sim_path)
@@ -123,18 +112,16 @@ def make_cross_section_plot(test, sim, idx, title):
     ws = sim.sim_path
     head = gwf.output.head().get_data().flatten()
     zeta = gwf.swi.output.zeta().get_data().flatten()
+    volume_fresh = (head - zeta) * delr
+    volume_fresh = volume_fresh.sum()
     pxs = flopy.plot.PlotCrossSection(gwf, line={"row": 0})
     ax = pxs.ax
-
-    import matplotlib.patches
-    h0 = saltwater_head[idx]
-    rect = matplotlib.patches.Rectangle((0, botm_aquifer), Lx_edge, h0 - botm_aquifer, fc="red")
-    ax.add_patch(rect)
 
     colors = ["cyan", "red"]
     pxs.plot_fill_between(zeta, head=head, colors=colors, ax=ax, edgecolors="none")
 
     pxs.plot_grid()
+    title = f"saltwater head = {saltwater_head[idx]}; Fresh volume = {volume_fresh:0.2f}"
     ax.set_title(title)
     ax.set_ylim(botm_aquifer, top_island)
     plt.savefig(ws / "zeta.png")
@@ -147,8 +134,7 @@ def check_output(idx, test):
 
     makeplot = False
     if makeplot:
-        title = f"saltwater head = {saltwater_head[idx]}"
-        make_cross_section_plot(test, sim, idx, title)
+        make_cross_section_plot(test, sim, idx)
 
 
 @pytest.mark.parametrize("idx, name", enumerate(cases))

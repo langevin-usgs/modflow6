@@ -40,6 +40,7 @@ module GwfSwiModule
     ! information needed for full implementation
     real(DP), pointer :: alphaf => null() !< rhof / (rhos - rhof), default is 40
     real(DP), pointer :: alphas => null() !< rhos / (rhos - rhof), default is 41
+    real(DP), pointer :: hsalt_user => null() !< user specified head of saltwater (zero by default)
     real(DP), dimension(:), pointer, contiguous :: hfresh => null() !< head of freshwater
     real(DP), dimension(:), pointer, contiguous :: hsalt => null() !< head of saltwater
     real(DP), dimension(:), pointer, contiguous :: hfreshold => null() !< old head of freshwater
@@ -1033,6 +1034,7 @@ contains
     call mem_deallocate(this%izetaout)
     call mem_deallocate(this%alphaf)
     call mem_deallocate(this%alphas)
+    call mem_deallocate(this%hsalt_user)
 
     ! deallocate parent
     call this%NumericalPackageType%da()
@@ -1077,12 +1079,14 @@ contains
     call mem_allocate(this%izetaout, 'IZETAOUT', this%memoryPath)
     call mem_allocate(this%alphaf, 'ALPHAF', this%memoryPath)
     call mem_allocate(this%alphas, 'ALPHAS', this%memoryPath)
+    call mem_allocate(this%hsalt_user, 'HSALT_USER', this%memoryPath)
 
     ! Initialize value
     this%isaltwater = 0
     this%izetaout = 0
     this%alphaf = 40.D0
     this%alphas = 41.D0
+    this%hsalt_user = DZERO
 
   end subroutine allocate_scalars
 
@@ -1134,6 +1138,8 @@ contains
     zeta_fname = ''
     call mem_set_value(zeta_fname, 'ZETAFILE', this%input_mempath, &
                        found%zetafile)
+    call mem_set_value(this%hsalt_user, 'HSALT_USER', this%input_mempath, &
+                       found%hsalt_user)
 
     ! open zeta file
     if (zeta_fname /= '') then
@@ -1166,6 +1172,10 @@ contains
     if (found%zetafile) then
       write (this%iout, '(4x,a)') &
         'Zeta will be written to a binary output file.'
+    end if
+    if (found%hsalt_user) then
+      write (this%iout, '(4x,a,G0,a)') &
+        'Saltwater head was set to ', this%hsalt_user, '.'
     end if
     write (this%iout, '(1x,a,/)') 'End Setting SWI Options'
 
@@ -1266,7 +1276,8 @@ contains
                           this%hsalt(n)+eps_s)
     else
       ! freshwater only simulation
-      zetanew = calc_zeta(this%alphaf, this%hfresh(n)+eps_f)
+      zetanew = calc_zeta(this%alphaf, this%hfresh(n)+eps_f, &
+                          this%alphas, this%hsalt_user)
     end if
   end function get_zetanew
 
@@ -1307,7 +1318,8 @@ contains
                           this%hsaltold(n)+eps_s)
     else
       ! freshwater only simulation
-      zetaold = calc_zeta(this%alphaf, this%hfreshold(n)+eps_f)
+      zetaold = calc_zeta(this%alphaf, this%hfreshold(n)+eps_f, &
+                          this%alphas, this%hsalt_user)
     end if
   end function get_zetaold
 
@@ -1344,13 +1356,10 @@ contains
   function calc_zeta(alphaf, hf, alphas, hs) result(zeta)
     real(DP), intent(in) :: alphaf
     real(DP), intent(in) :: hf
-    real(DP), intent(in), optional :: alphas
-    real(DP), intent(in), optional :: hs
+    real(DP), intent(in) :: alphas
+    real(DP), intent(in) :: hs
     real(DP) :: zeta
-    zeta = -alphaf * hf
-    if (present(alphas) .and. present(hs)) then
-      zeta = zeta + alphas * hs
-    end if
+    zeta = -alphaf * hf + alphas * hs
   end function calc_zeta
 
   !> @brief Add swi correction term

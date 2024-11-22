@@ -44,9 +44,16 @@ optional false
 longname file keyword
 description name of the binary output file to write zeta information.
 
+block options
+name saltwater_head
+type double precision
+reader urword
+optional true
+longname saltwater head
+description specified saltwater head value.  If not specified then the default is zero.
+mf6internal hsalt_user
 
-
-# --------------------- gwf ic griddata ---------------------
+# --------------------- gwf swi griddata ---------------------
 
 block griddata
 name zetastrt

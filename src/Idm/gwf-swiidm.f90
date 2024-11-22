@@ -12,11 +12,11 @@ module GwfSwiInputModule
   public gwf_swi_subpackages
 
   type GwfSwiParamFoundType
-    logical :: isaltwater = .false.
     logical :: zeta_filerecord = .false.
     logical :: zeta = .false.
     logical :: fileout = .false.
     logical :: zetafile = .false.
+    logical :: hsalt_user = .false.
     logical :: zetastrt = .false.
   end type GwfSwiParamFoundType
 
@@ -27,24 +27,6 @@ module GwfSwiInputModule
     [ &
     '                ' &
     ]
-
-  type(InputParamDefinitionType), parameter :: &
-    gwfswi_isaltwater = InputParamDefinitionType &
-    ( &
-    'GWF', & ! component
-    'SWI', & ! subcomponent
-    'OPTIONS', & ! block
-    'SALTWATER', & ! tag name
-    'ISALTWATER', & ! fortran variable
-    'KEYWORD', & ! type
-    '', & ! shape
-    'keyword to indicate saltwater model', & ! longname
-    .false., & ! required
-    .false., & ! multi-record
-    .false., & ! preserve case
-    .false., & ! layered
-    .false. & ! timeseries
-    )
 
   type(InputParamDefinitionType), parameter :: &
     gwfswi_zeta_filerecord = InputParamDefinitionType &
@@ -119,6 +101,24 @@ module GwfSwiInputModule
     )
 
   type(InputParamDefinitionType), parameter :: &
+    gwfswi_hsalt_user = InputParamDefinitionType &
+    ( &
+    'GWF', & ! component
+    'SWI', & ! subcomponent
+    'OPTIONS', & ! block
+    'SALTWATER_HEAD', & ! tag name
+    'HSALT_USER', & ! fortran variable
+    'DOUBLE', & ! type
+    '', & ! shape
+    'saltwater head', & ! longname
+    .false., & ! required
+    .false., & ! multi-record
+    .false., & ! preserve case
+    .false., & ! layered
+    .false. & ! timeseries
+    )
+
+  type(InputParamDefinitionType), parameter :: &
     gwfswi_zetastrt = InputParamDefinitionType &
     ( &
     'GWF', & ! component
@@ -139,11 +139,11 @@ module GwfSwiInputModule
   type(InputParamDefinitionType), parameter :: &
     gwf_swi_param_definitions(*) = &
     [ &
-    gwfswi_isaltwater, &
     gwfswi_zeta_filerecord, &
     gwfswi_zeta, &
     gwfswi_fileout, &
     gwfswi_zetafile, &
+    gwfswi_hsalt_user, &
     gwfswi_zetastrt &
     ]
 
