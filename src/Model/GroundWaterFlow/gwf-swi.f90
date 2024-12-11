@@ -159,9 +159,10 @@ contains
       call this%tva_reader%initialize(this%dis, this%dis%nodesuser, &
                                       this%intva, this%iout, &
                                       this%name_model, 'SWI')
-      if (.not. this%tva_reader%has('HSALT')) then
-        write (errmsg, '(a)') 'TVA Input file does not have HSALT variable.  &
-          &Specify HSALT as a time variable input array in the TVA input file.'
+      if (.not. this%tva_reader%has('SALTWATER_HEAD')) then
+        write (errmsg, '(a)') 'TVA Input file does not have SALTWATER_HEAD &
+          &variable.  Specify SALTWATER_HEAD as a time variable input array in &
+          &the TVA input file.'
         call store_error(errmsg, terminate=.false.)
         call store_error_filename(this%input_fname)
       end if
@@ -266,7 +267,7 @@ contains
     if (this%intva > 0) then
       call this%tva_reader%tva_ad()
       if (this%iconfiguration == FRESHWATER_ONE_FLUID) then
-        call this%tva_reader%fill(this%hsalt, 'HSALT')
+        call this%tva_reader%fill(this%hsalt, 'SALTWATER_HEAD')
       end if
     end if
 

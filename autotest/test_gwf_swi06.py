@@ -89,7 +89,7 @@ def build_models(idx, test):
     for kper in range(nper):
         # this list has 2 entries, one for hsalt and one for myauxvar
         aux[kper] = [sl[kper], np.ones((nlay, nrow, ncol))]
-    swi.tva.initialize(auxiliary=["hsalt", "myauxvar"], aux=aux)
+    swi.tva.initialize(auxiliary=["saltwater_head", "myauxvar"], aux=aux)
 
     cghb = hydraulic_conductivity * ghb_cond_fact * delr * delc / 1
     ghbspd = {}

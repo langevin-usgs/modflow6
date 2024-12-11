@@ -1,0 +1,10 @@
+BEGIN options
+  ZETA  FILEOUT  mymodel.zta
+  TVA6  FILEIN  mymodel.swi.tva
+  SALTWATER_HEAD 0.5
+END options
+
+BEGIN griddata
+  zetastrt
+    CONSTANT     -10.00000000
+END griddata

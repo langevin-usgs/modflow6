@@ -480,6 +480,7 @@ contains
     class(BndType), pointer :: packobj
     integer(I4B) :: ip
     integer(I4B) :: inwt, inwtsto, inwtcsub, inwtpak
+    logical :: is_fresh
     !
     ! -- newton flags
     inwt = inwtflag
@@ -494,7 +495,11 @@ contains
     end if
     !
     ! -- Fill standard conductance terms
-    if (this%swi%isaltwater /= 1) then   
+    is_fresh = .true.
+    if (this%inswi > 0) then
+      if (this%swi%isaltwater == 1) is_fresh = .false.
+    end if
+    if (is_fresh) then   
       if (this%innpf > 0) call this%npf%npf_fc(kiter, matrix_sln, this%idxglo, &
                                              this%rhs, this%x)
     endif  
@@ -504,7 +509,7 @@ contains
                                              this%rhs, this%x)
     if (this%ingnc > 0) call this%gnc%gnc_fc(kiter, matrix_sln)
     ! -- storage
-    if (this%swi%isaltwater /= 1) then   
+    if (is_fresh) then   
     if (this%insto > 0) then      
       call this%sto%sto_fc(kiter, this%xold, this%x, matrix_sln, &
                            this%idxglo, this%rhs)
@@ -531,7 +536,7 @@ contains
     !--Fill newton terms
     if (this%innpf > 0) then
       if (inwt /= 0) then
-      if (this%swi%isaltwater /= 1) then    
+      if (is_fresh) then    
         call this%npf%npf_fn(kiter, matrix_sln, this%idxglo, this%rhs, this%x)
       endif
       end if
@@ -540,7 +545,7 @@ contains
     ! -- Fill newton terms for ghost nodes
     if (this%ingnc > 0) then
       if (inwt /= 0) then
-      if (this%swi%isaltwater /= 1) then            
+      if (is_fresh) then            
         call this%gnc%gnc_fn(kiter, matrix_sln, this%npf%condsat, &
                              ivarcv_opt=this%npf%ivarcv, &
                              ictm1_opt=this%npf%icelltype, &
@@ -552,7 +557,7 @@ contains
     ! -- Fill newton terms for storage
     if (this%insto > 0) then
       if (inwtsto /= 0) then
-      if (this%swi%isaltwater /= 1) then            
+      if (is_fresh) then            
         call this%sto%sto_fn(kiter, this%xold, this%x, matrix_sln, &
                              this%idxglo, this%rhs)
       end if
@@ -785,6 +790,14 @@ contains
     integer(I4B) :: i
     integer(I4B) :: ip
     class(BndType), pointer :: packobj
+    logical :: is_fresh
+    
+    ! initialize
+    is_fresh = .true.
+    if (this%inswi > 0) then
+      if (this%swi%isaltwater == 1) is_fresh = .false.
+    end if
+
     !
     ! -- Construct the flowja array.  Flowja is calculated each time, even if
     !    output is suppressed.  (flowja is positive into a cell.)  The diagonal
@@ -794,13 +807,13 @@ contains
     do i = 1, this%nja
       this%flowja(i) = DZERO
     end do
-    if (this%swi%isaltwater /= 1) then 
+    if (is_fresh) then 
       if (this%innpf > 0) call this%npf%npf_cq(this%x, this%flowja)
     endif
     if (this%inbuy > 0) call this%buy%buy_cq(this%x, this%flowja)
     if (this%inhfb > 0) call this%hfb%hfb_cq(this%x, this%flowja)
     if (this%ingnc > 0) call this%gnc%gnc_cq(this%flowja)
-    if (this%swi%isaltwater /= 1) then 
+    if (is_fresh) then 
       if (this%insto > 0) call this%sto%sto_cq(this%flowja, this%x, this%xold)
     endif  
     if (this%incsub > 0) call this%csub%csub_cq(this%dis%nodes, this%x, &
